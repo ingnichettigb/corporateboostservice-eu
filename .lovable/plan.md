@@ -1,31 +1,23 @@
-# Firma nelle email + nuova app "PedFlow"
+## Obiettivo
 
-## 1. Firma "Corporate Boost Service" nelle email
-Nella pagina Corsi, i bottoni "Iscriviti" aprono una mail precompilata. Aggiungo la firma in fondo al corpo del messaggio.
+Sostituire titolo e descrizione SEO attuali con versioni brevi, professionali e mirate a corsi online, privacy/GDPR, sicurezza e soluzioni digitali.
 
-- File: `src/routes/corsi.tsx`
-- Nel testo del corpo (`buildMailto`), dopo `Grazie,` aggiungo una riga con la firma:
-  ```text
-  Grazie,
-  Corporate Boost Service
-  ```
+## Testi proposti
 
-## 2. Nuova app "PedFlow" nella pagina Applicazioni
-Aggiungo PedFlow come **prima** card, con l'icona allegata. Tutte le altre app scorrono sotto mantenendo l'ordine: **PedFlow → Smart Maintenance → MiniFAT → FAT → SAT → LP**.
+**Titolo** (≤60 caratteri):
+`Corsi GDPR, Privacy e Soluzioni Digitali Aziendali` (50 caratteri)
 
-Dati card:
-- Titolo: **PedFlow**
-- Descrizione: **"Verifica il fluido se appartiene al Gruppo 1 o 2 della CE PED in un Click"**
-- Icona: l'immagine caricata (boccetta rossa)
-- Stato: attiva (non "in costruzione")
+**Descrizione** (≤150 caratteri):
+`Corsi online su GDPR, privacy e sicurezza, più applicazioni digitali su misura per imprese e professionisti.` (108 caratteri)
 
-### Modifiche
-- **Icona**: carico l'immagine `PED FLOW ICONA rossa con tappo.png` come asset CDN e creo il pointer in `src/assets/gps/` (o `src/assets/`).
-- **`src/data/site.ts`**: aggiungo `pedFlow` come primo elemento dell'array `applicazioni`, con `image` puntata all'icona e `wip: false`. L'ordine finale resta quello richiesto.
-- **`src/i18n/locales/it.json`** e **`en.json`**: aggiungo le chiavi `app.items.pedFlow.title` e `app.items.pedFlow.desc` (testo identico in IT/EN per il titolo, descrizione tradotta in EN).
+Alternative titolo, se preferisci:
+- `Corsi Online GDPR, Privacy e Sicurezza Aziendale` (49)
+- `Formazione GDPR e Soluzioni Digitali per Imprese` (48)
 
-Nessuna modifica al layout: la pagina Applicazioni già renderizza dinamicamente le card dall'array, quindi mostrare PedFlow per primo e far slittare le altre avviene automaticamente cambiando l'ordine nell'array.
+## Dove applicarli (dettaglio tecnico)
 
-## Note tecniche
-- La griglia in `applicazioni.tsx` gestisce già card con immagine (come Smart Maintenance) e card senza, quindi l'icona di PedFlow viene mostrata nel riquadro immagine.
-- Verifico l'aspetto della nuova card e l'apertura corretta della mail con firma dopo l'implementazione.
+Aggiornare il `head()` della home in `src/routes/index.tsx` (campi `title` e `description`, più `og:title`/`og:description` se presenti) e le chiavi `home.pageTitle` / `home.pageDesc` in `src/i18n/locales/it.json` ed `en.json` per coerenza.
+
+## Nota
+
+Modifiche solo ai testi SEO; nessun impatto su layout o funzionalità.
