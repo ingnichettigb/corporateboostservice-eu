@@ -7,7 +7,7 @@ import { corsi } from "@/data/site";
 import { ArrowRight, Clock, Award, Users } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
-const EMAIL = "supporto@corporateboostservice.it";
+const EMAIL = "supporto@corporateboostservice.eu";
 
 function buildMailto(corso: string) {
   const subject = corso;
@@ -29,7 +29,7 @@ function buildMailto(corso: string) {
 export const Route = createFileRoute("/corsi")({
   head: () => ({
     meta: [
-      { title: "Corsi Online — CorporateBoostService.IT" },
+      { title: "Corsi Online — CorporateBoostService.eu" },
       { name: "description", content: "Corsi online su privacy, GDPR, sicurezza sul lavoro e aggiornamenti normativi." },
     ],
   }),

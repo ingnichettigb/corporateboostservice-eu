@@ -18,7 +18,7 @@ export function SiteFooter() {
           <p className="inline-flex items-start gap-2"><MapPin className="h-5 w-5 mt-0.5 shrink-0" aria-hidden /><span><span className="sr-only">{t("footer.address")}: </span>Soresina (CR), Italia</span></p>
           <p className="inline-flex items-center gap-2"><Phone className="h-5 w-5 shrink-0" aria-hidden /><a href="tel:+393396344660" className="hover:underline focus-visible:underline font-semibold"><span className="sr-only">{t("footer.phone")}: </span>339 634 4660</a></p>
           <p className="inline-flex items-center gap-2"><FileText className="h-5 w-5 shrink-0" aria-hidden /><span>{t("footer.vat")}: IT 01235350194</span></p>
-          <p className="inline-flex items-center gap-2"><Mail className="h-5 w-5 shrink-0" aria-hidden /><a href="mailto:supporto@corporateboostservice.it" className="hover:underline focus-visible:underline">supporto@corporateboostservice.it</a></p>
+          <p className="inline-flex items-center gap-2"><Mail className="h-5 w-5 shrink-0" aria-hidden /><a href="mailto:supporto@corporateboostservice.eu" className="hover:underline focus-visible:underline">supporto@corporateboostservice.eu</a></p>
         </address>
 
         <nav className="flex flex-col gap-2 md:items-end" aria-label="Footer">

@@ -1,5 +1,5 @@
 {
-  "brand": "CorporateBoostService.IT",
+  "brand": "CorporateBoostService.eu",
   "motto": "I DO IT ALL",
   "skip": "Skip to content",
   "nav": {
@@ -100,7 +100,7 @@
     "address": "Address"
   },
   "home": {
-    "pageTitle": "CorporateBoostService.IT — I do it all",
+    "pageTitle": "CorporateBoostService.eu — I do it all",
     "pageDesc": "Online courses on Privacy, GDPR, Safety and professional applications for companies."
   }
 }
