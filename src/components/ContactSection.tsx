@@ -16,8 +16,8 @@ export function ContactSection() {
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-foreground">{t("contact.title")}</h2>
           <p className="mt-4 text-foreground/85 max-w-xl mx-auto text-lg">{t("contact.subtitle")}</p>
           <div className="mt-6 flex flex-wrap items-center justify-center gap-6">
-            <a href="mailto:supporto@corporateboostservice.it" className="inline-flex items-center gap-2 text-primary font-bold hover:underline focus-visible:underline">
-              <Mail className="h-5 w-5" aria-hidden /><span>supporto@corporateboostservice.it</span>
+            <a href="mailto:supporto@corporateboostservice.eu" className="inline-flex items-center gap-2 text-primary font-bold hover:underline focus-visible:underline">
+              <Mail className="h-5 w-5" aria-hidden /><span>supporto@corporateboostservice.eu</span>
             </a>
             <a href="tel:+393396344660" className="inline-flex items-center gap-2 text-primary font-bold hover:underline focus-visible:underline">
               <Phone className="h-5 w-5" aria-hidden /><span>339 634 4660</span>

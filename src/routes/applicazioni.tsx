@@ -10,7 +10,7 @@ import { useTranslation } from "react-i18next";
 export const Route = createFileRoute("/applicazioni")({
   head: () => ({
     meta: [
-      { title: "Applicazioni per Imprese — CorporateBoostService.IT" },
+      { title: "Applicazioni per Imprese — CorporateBoostService.eu" },
       { name: "description", content: "Applicazioni professionali per gestire adempimenti, formazione e processi aziendali." },
     ],
   }),

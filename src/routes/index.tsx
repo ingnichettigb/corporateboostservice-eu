@@ -11,7 +11,7 @@ import { corsi, applicazioni } from "@/data/site";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "CorporateBoostService.IT — Faccio tutto io" },
+      { title: "CorporateBoostService.eu — Faccio tutto io" },
       { name: "description", content: "Corsi online su Privacy, GDPR, Sicurezza e applicazioni professionali per imprese. Faccio tutto io." },
     ],
   }),
