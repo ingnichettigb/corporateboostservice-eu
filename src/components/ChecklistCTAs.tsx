@@ -1,4 +1,5 @@
 import { ClipboardCheck, FileCheck2, ArrowRight } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 export const FORM_AUTOVALUTAZIONE =
   "https://docs.google.com/forms/d/e/1FAIpQLSflM2xH_wCxKb51Ne_95sabvKBGaS9UgcEMMYYrf_AXvR9EtQ/viewform";
@@ -25,6 +26,7 @@ export function ChecklistCTAs({
   variant?: "light" | "dark";
   className?: string;
 }) {
+  const { t } = useTranslation();
   const isDark = variant === "dark";
   const handleClick = (url: string) => (e: React.MouseEvent) => {
     e.preventDefault();
@@ -40,14 +42,14 @@ export function ChecklistCTAs({
       <a href={FORM_AUTOVALUTAZIONE} onClick={handleClick(FORM_AUTOVALUTAZIONE)} className={`${base} ${theme}`}>
         <ClipboardCheck className="h-5 w-5 shrink-0" aria-hidden />
         <span className="flex-1 text-sm md:text-base leading-tight text-left">
-          Autovalutazione Privacy 1996 — Gratis, in 9 domande
+          {t("checklist.autovalutazione")}
         </span>
         <ArrowRight className="h-4 w-4 shrink-0 transition-transform group-hover:translate-x-0.5" aria-hidden />
       </a>
       <a href={FORM_VERIFICA} onClick={handleClick(FORM_VERIFICA)} className={`${base} ${theme}`}>
         <FileCheck2 className="h-5 w-5 shrink-0" aria-hidden />
         <span className="flex-1 text-sm md:text-base leading-tight text-left">
-          Verifica la tua conformità GDPR — Gratis, in 10 domande
+          {t("checklist.verifica")}
         </span>
         <ArrowRight className="h-4 w-4 shrink-0 transition-transform group-hover:translate-x-0.5" aria-hidden />
       </a>
