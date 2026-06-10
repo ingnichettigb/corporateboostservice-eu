@@ -40,10 +40,22 @@
     "feat3": "For companies and individuals",
     "iscriviti": "Enroll",
     "items": {
-      "privacy": { "title": "Privacy & Data Protection", "desc": "Privacy regulation principles applied to daily work." },
-      "gdpr": { "title": "GDPR for Companies", "desc": "Obligations, processing records and roles under EU Reg. 2016/679." },
-      "sicurezza": { "title": "Workplace Safety", "desc": "Training under D.Lgs. 81/08 for workers, supervisors and employers." },
-      "news": { "title": "Regulatory News", "desc": "Continuous updates on privacy, safety and legislative changes." }
+      "privacy": {
+        "title": "Privacy & Data Protection",
+        "desc": "Privacy regulation principles applied to daily work."
+      },
+      "gdpr": {
+        "title": "GDPR for Companies",
+        "desc": "Obligations, processing records and roles under EU Reg. 2016/679."
+      },
+      "sicurezza": {
+        "title": "Workplace Safety",
+        "desc": "Training under D.Lgs. 81/08 for workers, supervisors and employers."
+      },
+      "news": {
+        "title": "Regulatory News",
+        "desc": "Continuous updates on privacy, safety and legislative changes."
+      }
     }
   },
   "app": {
@@ -58,12 +70,30 @@
     "feat2": "Secure and compliant",
     "feat3": "Continuous updates",
     "items": {
-      "pedFlow": { "title": "PedFlow", "desc": "Check whether the fluid belongs to Group 1 or 2 of the EC PED in one Click." },
-      "smartMaintenance": { "title": "Smart Maintenance", "desc": "The digital assistant for maintenance and on-site inspections: captures photos and videos, turns voice notes into text and organizes everything into ready-to-share reports." },
-      "miniFat": { "title": "MiniFAT", "desc": "MiniFAT is an application that optimizes acceptance tests by preparing in advance the documentation needed for the FAT inspection." },
-      "fat": { "title": "FAT — Factory Acceptance Test", "desc": "Digital management of factory acceptance tests: checklists, photo evidence and signed reports." },
-      "sat": { "title": "SAT — Site Acceptance Test", "desc": "Step-by-step on-site acceptance tests with outcome tracking and non-conformities." },
-      "lp": { "title": "LP — Lesson Plan", "desc": "Plan lessons and training paths with objectives, materials and assessments." }
+      "pedFlow": {
+        "title": "PedFlow",
+        "desc": "Check whether the fluid belongs to Group 1 or 2 of the EC PED in one Click."
+      },
+      "smartMaintenance": {
+        "title": "Smart Maintenance",
+        "desc": "The digital assistant for maintenance and on-site inspections: captures photos and videos, turns voice notes into text and organizes everything into ready-to-share reports."
+      },
+      "miniFat": {
+        "title": "MiniFAT",
+        "desc": "MiniFAT is an application that optimizes acceptance tests by preparing in advance the documentation needed for the FAT inspection."
+      },
+      "fat": {
+        "title": "FAT — Factory Acceptance Test",
+        "desc": "Digital management of factory acceptance tests: checklists, photo evidence and signed reports."
+      },
+      "sat": {
+        "title": "SAT — Site Acceptance Test",
+        "desc": "Step-by-step on-site acceptance tests with outcome tracking and non-conformities."
+      },
+      "lp": {
+        "title": "LP — Lesson Plan",
+        "desc": "Plan lessons and training paths with objectives, materials and assessments."
+      }
     },
     "wip": "Under construction"
   },
@@ -106,5 +136,197 @@
   "checklist": {
     "autovalutazione": "Privacy 1996 Self-Assessment — Free, in 9 questions",
     "verifica": "Check your GDPR compliance — Free, in 10 questions"
+  },
+  "minifat": {
+    "metaTitle": "MiniFAT — Create professional FAT dossiers in minutes",
+    "metaDescription": "MiniFAT automatically generates cover page, index, document pages and bilingual PDF for your Factory Acceptance Tests, directly on your device.",
+    "ogTitle": "MiniFAT — Professional FAT dossiers in one app",
+    "ogDescription": "The simplest way to create professional FAT dossiers. Bilingual PDFs generated locally, no data sent to external servers.",
+    "backToApps": "Back to applications",
+    "heroBadge": "MiniFAT · Factory Acceptance Test",
+    "heroH1a": "The simplest way to create",
+    "heroH1b": "professional FAT dossiers",
+    "heroDesc": "MiniFAT automatically generates cover page, index, document pages and bilingual PDF directly on your device.",
+    "heroCta": "Activate MiniFAT – €19/month",
+    "heroDemo": "Try the Demo",
+    "heroNote": "PDF generated locally · No data sent to external servers",
+    "heroImgAlt": "MiniFAT app on tablet and smartphone with a professional FAT dossier",
+    "featuresSectionLabel": "What MiniFAT does",
+    "featuresH2": "The entire FAT dossier in a single app",
+    "features": [
+      {
+        "title": "Manufacturer & Client Data",
+        "desc": "Complete registry management, with reusable templates for every project."
+      },
+      {
+        "title": "Guided FAT subject",
+        "desc": "Step-by-step entry of the test subject, so nothing gets missed."
+      },
+      {
+        "title": "Document selection",
+        "desc": "Choose the required documents: certificates, declarations and attachments."
+      },
+      {
+        "title": "Automatic generation",
+        "desc": "Cover page, index and document pages created automatically, always consistent."
+      },
+      {
+        "title": "Bilingual support",
+        "desc": "Documentation ready in IT / EN / DE / ES with a single tap."
+      },
+      {
+        "title": "Save & archive",
+        "desc": "Store your FATs and find them in a tidy, always-available archive."
+      },
+      {
+        "title": "PDF export",
+        "desc": "Generate and export the complete PDF directly from your device."
+      }
+    ],
+    "stepsSectionLabel": "How it works",
+    "stepsH2": "Your FAT in 4 steps",
+    "steps": [
+      {
+        "title": "Enter the data",
+        "desc": "Fill in the Manufacturer and Client registries."
+      },
+      {
+        "title": "Fill in the FAT subject",
+        "desc": "Define the machine, scope and details of the acceptance test."
+      },
+      {
+        "title": "Select the documents",
+        "desc": "Choose the required certificates, declarations and attachments."
+      },
+      {
+        "title": "Generate & download",
+        "desc": "Create the complete PDF and download it to your device."
+      }
+    ],
+    "screenshotsSectionLabel": "Inside the app",
+    "screenshotsH2": "Simple, clear, professional",
+    "screenshots": [
+      {
+        "caption": "Main screen"
+      },
+      {
+        "caption": "Document list"
+      },
+      {
+        "caption": "PDF preview"
+      },
+      {
+        "caption": "FAT archive"
+      }
+    ],
+    "methodSectionLabel": "The MiniFAT method",
+    "methodH2": "Prepare the FAT one step ahead",
+    "methodP1": "MiniFAT lets you prepare the FAT dossier in advance, with a clear and professional structure. You compile it, generate it and send it to the manufacturer with all chapters already set up. They insert their documents directly behind yours, following the structure you defined.",
+    "methodP2": "A few days before the FAT they send everything back complete: you can review it calmly, request additions and clarify any critical points. When you arrive on site, there is nothing left to wait for — everything is already ready.",
+    "methodCards1": [
+      {
+        "title": "Optimise your day",
+        "desc": "You will arrive on site and find everything already prepared, so you can focus solely on the machine."
+      },
+      {
+        "title": "Reduce unnecessary waiting",
+        "desc": "Documents will be ready when you arrive and you can get straight to the technical work."
+      },
+      {
+        "title": "Walk in and start working",
+        "desc": "Zero time wasted: everything is organised and you can move directly to the machine inspection."
+      }
+    ],
+    "methodP3": "MiniFAT eliminates confusion, disorganised PDFs, missing documents and last-minute rushes. It lets you arrive at the FAT with a complete, verified dossier with all administrative parts already approved.",
+    "methodCards2": [
+      {
+        "title": "Maximise every minute",
+        "desc": "The paperwork is already sorted — you focus only on the inspection and operational oversight."
+      },
+      {
+        "title": "Arrive and get straight down to business",
+        "desc": "Documents ready, procedures already aligned: only the machine evaluation remains."
+      },
+      {
+        "title": "Work one step ahead",
+        "desc": "Everything prepared in advance, so you can immediately dedicate yourself to what really matters."
+      }
+    ],
+    "methodCalloutLine1": "MiniFAT is not just an app:",
+    "methodCalloutLine2": "it is a new way to manage the FAT — faster, cleaner, more professional.",
+    "benefitsSectionLabel": "Why MiniFAT is essential",
+    "benefitsH2": "Arrive and get straight down to business",
+    "benefitsSubtitle": "Documents ready, procedures aligned: only the machine evaluation remains.",
+    "benefits": [
+      {
+        "title": "Standardise the FAT process",
+        "desc": "A unique, repeatable method for every acceptance test, always compliant."
+      },
+      {
+        "title": "Avoid errors and delays",
+        "desc": "No missing or forgotten documents: the procedure guides you every step."
+      },
+      {
+        "title": "Professional documentation",
+        "desc": "Polished, well-organised dossiers ready to present to the client."
+      },
+      {
+        "title": "Optimise your day",
+        "desc": "You arrive on site to find everything already prepared — focus solely on the machine."
+      },
+      {
+        "title": "Walk in and start working",
+        "desc": "Zero time wasted: everything is organised and you move directly to the inspection."
+      },
+      {
+        "title": "Works anywhere",
+        "desc": "Even on site: the PDF is generated locally on your device."
+      }
+    ],
+    "pricingSectionLabel": "Pricing",
+    "pricingH2": "One plan, everything included",
+    "pricingPlanName": "MiniFAT",
+    "pricingMonth": "/month",
+    "planFeatures": [
+      "Full access",
+      "Save to your device",
+      "Unlimited PDFs",
+      "Manufacturer / client templates",
+      "Bilingual support IT / EN / DE / ES",
+      "Updates included"
+    ],
+    "pricingCta": "Activate now",
+    "pricingNote": "Secure payment via Paddle",
+    "faqH2": "Frequently asked questions",
+    "faq": [
+      {
+        "q": "What is a FAT?",
+        "a": "A FAT (Factory Acceptance Test) is the factory acceptance inspection: the verification that a machine or system meets agreed requirements before shipment to the client. MiniFAT helps you document it professionally."
+      },
+      {
+        "q": "Does MiniFAT work offline?",
+        "a": "Yes. MiniFAT generates the documentation and PDF directly on your device, so you can work on site without a connection. Cloud saving is optional."
+      },
+      {
+        "q": "Can I export bilingual PDFs?",
+        "a": "Yes. MiniFAT supports IT, EN, DE and ES: cover page, index and document pages are generated in the chosen language."
+      },
+      {
+        "q": "Is my data saved on my device?",
+        "a": "Yes. PDFs are generated locally and your data stays on the device. Nothing is sent to external servers."
+      },
+      {
+        "q": "Can I edit an already created FAT?",
+        "a": "Yes. You can reopen a saved FAT, update data and documents, and regenerate the PDF at any time."
+      },
+      {
+        "q": "Can I add custom documents?",
+        "a": "Yes. In addition to standard certificates, declarations and attachments, you can include custom documents in the dossier."
+      }
+    ],
+    "ctaH2": "Ready to create your next FAT dossier?",
+    "ctaDesc": "PDF generated locally, no data sent to external servers.",
+    "ctaCta": "Activate MiniFAT – €19/month",
+    "ctaDemo": "Try the Demo"
   }
 }

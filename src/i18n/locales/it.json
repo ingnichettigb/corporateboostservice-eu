@@ -40,10 +40,22 @@
     "feat3": "Per aziende e privati",
     "iscriviti": "Iscriviti",
     "items": {
-      "privacy": { "title": "Privacy & Protezione Dati", "desc": "I principi della normativa privacy applicati al lavoro quotidiano." },
-      "gdpr": { "title": "GDPR per le Imprese", "desc": "Adempimenti, registri dei trattamenti e ruoli secondo il Reg. UE 2016/679." },
-      "sicurezza": { "title": "Sicurezza sul Lavoro", "desc": "Formazione D.Lgs. 81/08 per lavoratori, preposti e datori di lavoro." },
-      "news": { "title": "News Normative", "desc": "Aggiornamenti continui su privacy, sicurezza e novità legislative." }
+      "privacy": {
+        "title": "Privacy & Protezione Dati",
+        "desc": "I principi della normativa privacy applicati al lavoro quotidiano."
+      },
+      "gdpr": {
+        "title": "GDPR per le Imprese",
+        "desc": "Adempimenti, registri dei trattamenti e ruoli secondo il Reg. UE 2016/679."
+      },
+      "sicurezza": {
+        "title": "Sicurezza sul Lavoro",
+        "desc": "Formazione D.Lgs. 81/08 per lavoratori, preposti e datori di lavoro."
+      },
+      "news": {
+        "title": "News Normative",
+        "desc": "Aggiornamenti continui su privacy, sicurezza e novità legislative."
+      }
     }
   },
   "app": {
@@ -58,12 +70,30 @@
     "feat2": "Sicure e conformi",
     "feat3": "Aggiornamenti continui",
     "items": {
-      "pedFlow": { "title": "PedFlow", "desc": "Verifica il fluido se appartiene al Gruppo 1 o 2 della CE PED in un Click." },
-      "smartMaintenance": { "title": "Smart Maintenance", "desc": "L'assistente digitale per manutenzioni e sopralluoghi: acquisisce immagini e video, trasforma le note vocali in testo e organizza tutto in report pronti da condividere." },
-      "miniFat": { "title": "MiniFAT", "desc": "MiniFAT è un'applicazione che ottimizza i collaudi preparando in anticipo la documentazione necessaria per il sopralluogo FAT." },
-      "fat": { "title": "FAT — Factory Acceptance Test", "desc": "Gestione digitale dei collaudi in fabbrica: checklist, evidenze fotografiche e verbali firmati." },
-      "sat": { "title": "SAT — Site Acceptance Test", "desc": "Collaudi in cantiere guidati passo-passo, con tracciamento esiti e non conformità." },
-      "lp": { "title": "LP — Lesson Plan", "desc": "Pianificazione lezioni e percorsi formativi con obiettivi, materiali e verifiche." }
+      "pedFlow": {
+        "title": "PedFlow",
+        "desc": "Verifica il fluido se appartiene al Gruppo 1 o 2 della CE PED in un Click."
+      },
+      "smartMaintenance": {
+        "title": "Smart Maintenance",
+        "desc": "L'assistente digitale per manutenzioni e sopralluoghi: acquisisce immagini e video, trasforma le note vocali in testo e organizza tutto in report pronti da condividere."
+      },
+      "miniFat": {
+        "title": "MiniFAT",
+        "desc": "MiniFAT è un'applicazione che ottimizza i collaudi preparando in anticipo la documentazione necessaria per il sopralluogo FAT."
+      },
+      "fat": {
+        "title": "FAT — Factory Acceptance Test",
+        "desc": "Gestione digitale dei collaudi in fabbrica: checklist, evidenze fotografiche e verbali firmati."
+      },
+      "sat": {
+        "title": "SAT — Site Acceptance Test",
+        "desc": "Collaudi in cantiere guidati passo-passo, con tracciamento esiti e non conformità."
+      },
+      "lp": {
+        "title": "LP — Lesson Plan",
+        "desc": "Pianificazione lezioni e percorsi formativi con obiettivi, materiali e verifiche."
+      }
     },
     "wip": "In costruzione"
   },
@@ -106,5 +136,197 @@
   "checklist": {
     "autovalutazione": "Autovalutazione Privacy 1996 — Gratis, in 9 domande",
     "verifica": "Verifica la tua conformità GDPR — Gratis, in 10 domande"
+  },
+  "minifat": {
+    "metaTitle": "MiniFAT — Crea dossier FAT professionali in pochi minuti",
+    "metaDescription": "MiniFAT genera automaticamente copertina, indice, pagine documentali e PDF bilingue per i tuoi Factory Acceptance Test, direttamente dal tuo dispositivo.",
+    "ogTitle": "MiniFAT — Dossier FAT professionali in un'app",
+    "ogDescription": "Il modo più semplice per creare dossier FAT professionali. PDF bilingue generati localmente, nessun invio dati a server esterni.",
+    "backToApps": "Torna alle applicazioni",
+    "heroBadge": "MiniFAT · Factory Acceptance Test",
+    "heroH1a": "Il modo più semplice per creare",
+    "heroH1b": "dossier FAT professionali",
+    "heroDesc": "MiniFAT genera automaticamente copertina, indice, pagine documentali e PDF bilingue direttamente dal tuo dispositivo.",
+    "heroCta": "Attiva MiniFAT – 19€/mese",
+    "heroDemo": "Prova la Demo",
+    "heroNote": "PDF generato localmente · Nessun invio dati a server esterni",
+    "heroImgAlt": "App MiniFAT su tablet e smartphone con un dossier FAT professionale",
+    "featuresSectionLabel": "Cosa fa MiniFAT",
+    "featuresH2": "Tutto il dossier FAT in un'unica app",
+    "features": [
+      {
+        "title": "Dati Costruttore e Cliente",
+        "desc": "Gestione completa delle anagrafiche, con template riutilizzabili per ogni progetto."
+      },
+      {
+        "title": "Oggetto FAT guidato",
+        "desc": "Compilazione passo-passo dell'oggetto del collaudo, senza dimenticare nulla."
+      },
+      {
+        "title": "Selezione documenti",
+        "desc": "Scegli i documenti richiesti: certificati, dichiarazioni e allegati."
+      },
+      {
+        "title": "Generazione automatica",
+        "desc": "Copertina, indice e pagine documentali create in automatico, sempre coerenti."
+      },
+      {
+        "title": "Supporto bilingue",
+        "desc": "Documentazione pronta in IT / EN / DE / ES con un solo tocco."
+      },
+      {
+        "title": "Salvataggio e archivio",
+        "desc": "Conserva i tuoi FAT e ritrovali in un archivio ordinato e sempre disponibile."
+      },
+      {
+        "title": "Esportazione PDF",
+        "desc": "Genera ed esporta il PDF completo direttamente dal tuo dispositivo."
+      }
+    ],
+    "stepsSectionLabel": "Come funziona",
+    "stepsH2": "Il tuo FAT in 4 step",
+    "steps": [
+      {
+        "title": "Inserisci i dati",
+        "desc": "Compila le anagrafiche di Costruttore e Cliente."
+      },
+      {
+        "title": "Compila l'oggetto FAT",
+        "desc": "Definisci macchinario, scopo e dettagli del collaudo."
+      },
+      {
+        "title": "Seleziona i documenti",
+        "desc": "Scegli certificati, dichiarazioni e allegati richiesti."
+      },
+      {
+        "title": "Genera e scarica",
+        "desc": "Crea il PDF completo e scaricalo sul dispositivo."
+      }
+    ],
+    "screenshotsSectionLabel": "Dentro l'app",
+    "screenshotsH2": "Semplice, chiara, professionale",
+    "screenshots": [
+      {
+        "caption": "Schermata principale"
+      },
+      {
+        "caption": "Lista documenti"
+      },
+      {
+        "caption": "Anteprima PDF"
+      },
+      {
+        "caption": "Archivio FAT"
+      }
+    ],
+    "methodSectionLabel": "Il metodo MiniFAT",
+    "methodH2": "Prepara il FAT con un passo avanti",
+    "methodP1": "MiniFAT ti permette di preparare il dossier FAT in anticipo, con una struttura chiara e professionale. Lo compili, lo generi e lo invii al costruttore con tutti i capitoli già predisposti. Lui inserisce i suoi documenti direttamente dietro ai tuoi, seguendo la struttura che hai definito.",
+    "methodP2": "Qualche giorno prima del FAT ti rimanda tutto completo: tu puoi verificare con calma, chiedere integrazioni, chiarire eventuali punti critici. Quando arrivi in cantiere, non devi più aspettare nulla: trovi già tutto pronto.",
+    "methodCards1": [
+      {
+        "title": "Ottimizza la tua giornata",
+        "desc": "Arriverai in cantiere e troverai già tutto predisposto, così potrai concentrarti solo sul macchinario."
+      },
+      {
+        "title": "Riduci le attese inutili",
+        "desc": "I documenti saranno pronti al tuo arrivo e tu potrai dedicarti subito alla parte tecnica."
+      },
+      {
+        "title": "Entra e lavora subito",
+        "desc": "Zero perdite di tempo: trovi tutto organizzato e puoi passare direttamente alla verifica del macchinario."
+      }
+    ],
+    "methodP3": "MiniFAT elimina la confusione, i PDF disordinati, i documenti mancanti e le corse dell'ultimo minuto. Ti permette di arrivare al FAT con un dossier completo, verificato e già approvato nelle parti burocratiche.",
+    "methodCards2": [
+      {
+        "title": "Massimizza ogni minuto",
+        "desc": "La burocrazia è già sistemata, tu ti concentri solo sulla visione e sul controllo operativo."
+      },
+      {
+        "title": "Arrivi e inizi a fare sul serio",
+        "desc": "Documenti pronti, procedure già allineate: resta solo da valutare il macchinario."
+      },
+      {
+        "title": "Lavora con un passo avanti",
+        "desc": "Tutto predisposto in anticipo, così puoi dedicarti subito alla parte che conta davvero."
+      }
+    ],
+    "methodCalloutLine1": "MiniFAT non è solo un'app:",
+    "methodCalloutLine2": "è un nuovo modo di gestire il FAT, più rapido, più pulito, più professionale.",
+    "benefitsSectionLabel": "Perché MiniFAT è indispensabile",
+    "benefitsH2": "Arrivi e inizi a fare sul serio",
+    "benefitsSubtitle": "Documenti pronti, procedure allineate: resta solo da valutare il macchinario.",
+    "benefits": [
+      {
+        "title": "Standardizza il processo FAT",
+        "desc": "Un metodo unico e ripetibile per ogni collaudo, sempre conforme."
+      },
+      {
+        "title": "Evita errori e ritardi",
+        "desc": "Niente documenti mancanti o dimenticati: la procedura ti guida."
+      },
+      {
+        "title": "Documentazione professionale",
+        "desc": "Dossier curati, ordinati e pronti da presentare al cliente."
+      },
+      {
+        "title": "Ottimizza la tua giornata",
+        "desc": "Arrivi in cantiere e trovi già tutto predisposto: ti concentri solo sul macchinario."
+      },
+      {
+        "title": "Entra e lavora subito",
+        "desc": "Zero perdite di tempo: trovi tutto organizzato e passi direttamente alla verifica."
+      },
+      {
+        "title": "Funziona ovunque",
+        "desc": "Anche in cantiere: il PDF viene generato localmente sul tuo dispositivo."
+      }
+    ],
+    "pricingSectionLabel": "Prezzi",
+    "pricingH2": "Un unico piano, tutto incluso",
+    "pricingPlanName": "MiniFAT",
+    "pricingMonth": "/mese",
+    "planFeatures": [
+      "Accesso completo",
+      "Salvataggio sul tuo dispositivo",
+      "PDF illimitati",
+      "Template costruttore / cliente",
+      "Supporto bilingue IT / EN / DE / ES",
+      "Aggiornamenti inclusi"
+    ],
+    "pricingCta": "Attiva ora",
+    "pricingNote": "Pagamento sicuro tramite Paddle",
+    "faqH2": "Domande frequenti",
+    "faq": [
+      {
+        "q": "Cos'è un FAT?",
+        "a": "Il FAT (Factory Acceptance Test) è il collaudo di accettazione in fabbrica: la verifica che un macchinario o impianto rispetti i requisiti concordati prima della spedizione al cliente. MiniFAT ti aiuta a documentarlo in modo professionale."
+      },
+      {
+        "q": "MiniFAT funziona offline?",
+        "a": "Sì. MiniFAT genera la documentazione e il PDF direttamente sul tuo dispositivo, quindi puoi lavorare anche in cantiere senza connessione. Il salvataggio nel cloud è opzionale."
+      },
+      {
+        "q": "Posso esportare PDF bilingue?",
+        "a": "Sì. MiniFAT supporta IT, EN, DE ed ES: copertina, indice e pagine documentali vengono generati nella lingua scelta."
+      },
+      {
+        "q": "I dati sono salvati sul mio dispositivo?",
+        "a": "Sì. I PDF vengono generati localmente e i tuoi dati restano sul dispositivo. Nessun invio a server esterni."
+      },
+      {
+        "q": "Posso modificare un FAT già creato?",
+        "a": "Sì. Puoi riprendere un FAT salvato, aggiornare dati e documenti e rigenerare il PDF in qualsiasi momento."
+      },
+      {
+        "q": "Posso aggiungere documenti personalizzati?",
+        "a": "Sì. Oltre a certificati, dichiarazioni e allegati standard puoi inserire documenti personalizzati nel dossier."
+      }
+    ],
+    "ctaH2": "Pronto a creare il tuo prossimo dossier FAT?",
+    "ctaDesc": "PDF generato localmente, nessun invio dati a server esterni.",
+    "ctaCta": "Attiva MiniFAT – 19€/mese",
+    "ctaDemo": "Prova la Demo"
   }
 }
