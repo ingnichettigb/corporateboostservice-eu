@@ -18,6 +18,8 @@ export const pedflow = {
     heroCaption: "Database CLP con oltre 4.400 sostanze · Calcolo Art. 13 automatico · Multilingua",
     heroImgAlt:
       "PedFlow — applicazione per la classificazione dei fluidi secondo la Direttiva PED",
+    processImgAlt:
+      "Processo PedFlow in 6 passaggi: introduzione, inserimento dati, condizioni operative, identificazione fluido, calcolo automatico, PDF e registro",
 
     whatLabel: "Cos'è PedFlow",
     whatH2: "La classificazione PED, semplice e tracciabile",
@@ -184,6 +186,8 @@ export const pedflow = {
     heroCtaSecondary: "Request demo",
     heroCaption: "CLP database with over 4,400 substances · Automatic Art. 13 calculation · Multilingual",
     heroImgAlt: "PedFlow — application for fluid classification under the PED Directive",
+    processImgAlt:
+      "PedFlow process in 6 steps: introduction, document data entry, operating conditions, fluid identification, automatic calculation, PDF and registry",
 
     whatLabel: "What is PedFlow",
     whatH2: "PED classification, simple and traceable",

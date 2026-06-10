@@ -32,11 +32,13 @@ import {
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import logoAsset from "@/assets/apps/pedflow.png.asset.json";
+import processAsset from "@/assets/pedflow/pedflow-process-en.png.asset.json";
 import { useTranslation } from "react-i18next";
 import i18n from "@/i18n";
 import { pedflow as pedflowLocale } from "@/i18n/locales/pages/pedflow";
 
 const logoImg = logoAsset.url;
+const processImg = processAsset.url;
 
 // Register translations
 const lang = i18n.language?.startsWith("en") ? "en" : "it";
@@ -120,6 +122,14 @@ function PedFlowPage() {
               <p className="mt-5 text-lg md:text-xl text-foreground/85 max-w-xl mx-auto lg:mx-0">
                 {t("heroP")}
               </p>
+              <img
+                src={processImg}
+                alt={t("processImgAlt")}
+                className="mt-8 w-full rounded-2xl border-2 border-primary/15 shadow-lg bg-white"
+                loading="lazy"
+                width={1402}
+                height={765}
+              />
               <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
                 <Button variant="hero" size="lg" className="h-12 px-7 text-base" asChild>
                   <a href={buildMailto(`PedFlow — ${t("heroCtaPrimary")}`)}>
