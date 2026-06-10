@@ -146,15 +146,20 @@ function SmartMaintenancePage() {
                 {t("smartMaintenance.heroSubtitle")}
               </p>
               <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
-                <Button variant="hero" size="lg" className="h-12 px-7 text-base">
-                  {t("smartMaintenance.heroCta")}
+                <Button variant="hero" size="lg" className="h-12 px-7 text-base" asChild>
+                  <a href={buildMailto(`Smart Maintenance — ${t("smartMaintenance.heroCta")}`)}>
+                    {t("smartMaintenance.heroCta")}
+                  </a>
                 </Button>
                 <Button
                   variant="outline"
                   size="lg"
                   className="h-12 px-7 text-base border-2 border-primary/40"
+                  asChild
                 >
-                  <PlayCircle className="h-5 w-5" aria-hidden /> {t("smartMaintenance.heroDemoCta")}
+                  <a href={buildMailto(`Smart Maintenance — ${t("smartMaintenance.heroDemoCta")}`)}>
+                    <PlayCircle className="h-5 w-5" aria-hidden /> {t("smartMaintenance.heroDemoCta")}
+                  </a>
                 </Button>
               </div>
               <figure className="mt-8 m-0">
