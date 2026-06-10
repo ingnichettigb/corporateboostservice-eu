@@ -38,6 +38,7 @@ import i18n from "@/i18n";
 import { pedflow as pedflowLocale } from "@/i18n/locales/pages/pedflow";
 
 const logoImg = logoAsset.url;
+const processImg = processAsset.url;
 
 // Register translations
 const lang = i18n.language?.startsWith("en") ? "en" : "it";
