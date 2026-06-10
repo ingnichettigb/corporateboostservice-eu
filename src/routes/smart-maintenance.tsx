@@ -405,8 +405,11 @@ function SmartMaintenancePage() {
                 size="lg"
                 variant="outline"
                 className="h-12 px-7 text-base border-2 border-white/60 bg-transparent text-white hover:bg-white/10 hover:text-white"
+                asChild
               >
-                <ArrowRight className="h-5 w-5" aria-hidden /> {t("smartMaintenance.ctaQuote")}
+                <a href={buildMailto(`Smart Maintenance — ${t("smartMaintenance.ctaQuote")}`)}>
+                  <ArrowRight className="h-5 w-5" aria-hidden /> {t("smartMaintenance.ctaQuote")}
+                </a>
               </Button>
             </div>
           </div>
