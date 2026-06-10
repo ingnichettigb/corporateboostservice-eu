@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useTranslation } from "react-i18next";
 import i18n from "@/i18n";
 import { Button } from "@/components/ui/button";
+import { buildMailto } from "@/lib/contact";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
   Accordion,
@@ -99,15 +100,20 @@ function MiniFatPage() {
                 {t("minifat.heroDesc")}
               </p>
               <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
-                <Button variant="hero" size="lg" className="h-12 px-7 text-base">
-                  {t("minifat.heroCta")}
+                <Button variant="hero" size="lg" className="h-12 px-7 text-base" asChild>
+                  <a href={buildMailto(`MiniFAT — ${t("minifat.heroCta")}`)}>
+                    {t("minifat.heroCta")}
+                  </a>
                 </Button>
                 <Button
                   variant="outline"
                   size="lg"
                   className="h-12 px-7 text-base border-2 border-primary/40"
+                  asChild
                 >
-                  <PlayCircle className="h-5 w-5" aria-hidden /> {t("minifat.heroDemo")}
+                  <a href={buildMailto(`MiniFAT — ${t("minifat.heroDemo")}`)}>
+                    <PlayCircle className="h-5 w-5" aria-hidden /> {t("minifat.heroDemo")}
+                  </a>
                 </Button>
               </div>
               <p className="mt-4 text-sm text-foreground/65">
@@ -346,8 +352,10 @@ function MiniFatPage() {
                     </li>
                   ))}
                 </ul>
-                <Button variant="hero" size="lg" className="w-full h-12 mt-7 text-base">
-                  {t("minifat.pricingCta")} <ArrowRight className="ml-1 h-4 w-4" aria-hidden />
+                <Button variant="hero" size="lg" className="w-full h-12 mt-7 text-base" asChild>
+                  <a href={buildMailto(`MiniFAT — ${t("minifat.pricingCta")}`)}>
+                    {t("minifat.pricingCta")} <ArrowRight className="ml-1 h-4 w-4" aria-hidden />
+                  </a>
                 </Button>
                 <p className="mt-3 text-center text-xs text-foreground/60">
                   {t("minifat.pricingNote")}
@@ -389,15 +397,21 @@ function MiniFatPage() {
               <Button
                 size="lg"
                 className="h-12 px-7 text-base bg-yellow-400 text-black hover:bg-yellow-300 border-2 border-black"
+                asChild
               >
-                {t("minifat.ctaCta")}
+                <a href={buildMailto(`MiniFAT — ${t("minifat.ctaCta")}`)}>
+                  {t("minifat.ctaCta")}
+                </a>
               </Button>
               <Button
                 size="lg"
                 variant="outline"
                 className="h-12 px-7 text-base border-2 border-white/60 bg-transparent text-white hover:bg-white/10 hover:text-white"
+                asChild
               >
-                <PlayCircle className="h-5 w-5" aria-hidden /> {t("minifat.ctaDemo")}
+                <a href={buildMailto(`MiniFAT — ${t("minifat.ctaDemo")}`)}>
+                  <PlayCircle className="h-5 w-5" aria-hidden /> {t("minifat.ctaDemo")}
+                </a>
               </Button>
             </div>
           </div>

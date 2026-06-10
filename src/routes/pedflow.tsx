@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
+import { buildMailto } from "@/lib/contact";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
   Accordion,
@@ -120,15 +121,20 @@ function PedFlowPage() {
                 {t("heroP")}
               </p>
               <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
-                <Button variant="hero" size="lg" className="h-12 px-7 text-base">
-                  {t("heroCtaPrimary")}
+                <Button variant="hero" size="lg" className="h-12 px-7 text-base" asChild>
+                  <a href={buildMailto(`PedFlow — ${t("heroCtaPrimary")}`)}>
+                    {t("heroCtaPrimary")}
+                  </a>
                 </Button>
                 <Button
                   variant="outline"
                   size="lg"
                   className="h-12 px-7 text-base border-2 border-primary/40"
+                  asChild
                 >
-                  <PlayCircle className="h-5 w-5" aria-hidden /> {t("heroCtaSecondary")}
+                  <a href={buildMailto(`PedFlow — ${t("heroCtaSecondary")}`)}>
+                    <PlayCircle className="h-5 w-5" aria-hidden /> {t("heroCtaSecondary")}
+                  </a>
                 </Button>
               </div>
               <p className="mt-6 text-sm text-foreground/65">
@@ -371,15 +377,21 @@ function PedFlowPage() {
               <Button
                 size="lg"
                 className="h-12 px-7 text-base bg-yellow-400 text-black hover:bg-yellow-300 border-2 border-black"
+                asChild
               >
-                {t("ctaPrimary")}
+                <a href={buildMailto(`PedFlow — ${t("ctaPrimary")}`)}>
+                  {t("ctaPrimary")}
+                </a>
               </Button>
               <Button
                 size="lg"
                 variant="outline"
                 className="h-12 px-7 text-base border-2 border-white/60 bg-transparent text-white hover:bg-white/10 hover:text-white"
+                asChild
               >
-                <ArrowRight className="h-5 w-5" aria-hidden /> {t("ctaSecondary")}
+                <a href={buildMailto(`PedFlow — ${t("ctaSecondary")}`)}>
+                  <ArrowRight className="h-5 w-5" aria-hidden /> {t("ctaSecondary")}
+                </a>
               </Button>
             </div>
           </div>

@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useTranslation } from "react-i18next";
 import i18n from "@/i18n";
 import { Button } from "@/components/ui/button";
+import { buildMailto } from "@/lib/contact";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
   Accordion,
@@ -145,15 +146,20 @@ function SmartMaintenancePage() {
                 {t("smartMaintenance.heroSubtitle")}
               </p>
               <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
-                <Button variant="hero" size="lg" className="h-12 px-7 text-base">
-                  {t("smartMaintenance.heroCta")}
+                <Button variant="hero" size="lg" className="h-12 px-7 text-base" asChild>
+                  <a href={buildMailto(`Smart Maintenance — ${t("smartMaintenance.heroCta")}`)}>
+                    {t("smartMaintenance.heroCta")}
+                  </a>
                 </Button>
                 <Button
                   variant="outline"
                   size="lg"
                   className="h-12 px-7 text-base border-2 border-primary/40"
+                  asChild
                 >
-                  <PlayCircle className="h-5 w-5" aria-hidden /> {t("smartMaintenance.heroDemoCta")}
+                  <a href={buildMailto(`Smart Maintenance — ${t("smartMaintenance.heroDemoCta")}`)}>
+                    <PlayCircle className="h-5 w-5" aria-hidden /> {t("smartMaintenance.heroDemoCta")}
+                  </a>
                 </Button>
               </div>
               <figure className="mt-8 m-0">
@@ -399,8 +405,11 @@ function SmartMaintenancePage() {
                 size="lg"
                 variant="outline"
                 className="h-12 px-7 text-base border-2 border-white/60 bg-transparent text-white hover:bg-white/10 hover:text-white"
+                asChild
               >
-                <ArrowRight className="h-5 w-5" aria-hidden /> {t("smartMaintenance.ctaQuote")}
+                <a href={buildMailto(`Smart Maintenance — ${t("smartMaintenance.ctaQuote")}`)}>
+                  <ArrowRight className="h-5 w-5" aria-hidden /> {t("smartMaintenance.ctaQuote")}
+                </a>
               </Button>
             </div>
           </div>
