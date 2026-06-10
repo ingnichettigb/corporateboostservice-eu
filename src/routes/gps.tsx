@@ -1,4 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { useTranslation } from "react-i18next";
+import i18n from "@/i18n";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
@@ -30,106 +32,89 @@ import regolamentoImg from "@/assets/gps/copilot2.png";
 export const Route = createFileRoute("/gps")({
   head: () => ({
     meta: [
-      { title: "Privacy GPS Satellitari — Denuncia Impianto e GDPR | Privacy 1996" },
+      { title: i18n.t("gps.metaTitle") },
       {
         name: "description",
-        content:
-          "Assistenza completa per impianti GPS satellitari: denuncia impianto, regolamento interno, consulenza GDPR e conformità privacy. Faccio tutto io.",
+        content: i18n.t("gps.metaDesc"),
       },
     ],
   }),
   component: GpsPage,
 });
 
-const servizi = [
-  {
-    icon: FileText,
-    title: "Denuncia Impianto",
-    desc: "Pensiamo noi alla burocrazia per il tuo impianto di GPS satellitare. Zero pensieri per te.",
-  },
-  {
-    icon: ClipboardList,
-    title: "Regolamento Interno",
-    desc: "Creiamo un regolamento su misura che rispetti ogni norma sulla privacy. Semplice e chiaro.",
-  },
-  {
-    icon: ShieldCheck,
-    title: "Consulenza GDPR",
-    desc: "Navighiamo insieme le complessità del GDPR per il tuo GPS satellitare. Conformità garantita.",
-  },
-];
-
-const motivi = [
-  {
-    icon: BookOpen,
-    title: "Esperienza",
-    desc: "Conosco le leggi sulla privacy e sui GPS satellitari come le mie tasche. Affidati a chi sa cosa fare.",
-  },
-  {
-    icon: ShieldCheck,
-    title: "Tranquillità",
-    desc: "Dormi sonni tranquilli sapendo che il tuo impianto è a norma e non ti esporrà a rischi inutili.",
-  },
-  {
-    icon: Gauge,
-    title: "Risparmio",
-    desc: "Evita multe salate e costi legali imprevisti. La conformità oggi è un investimento intelligente.",
-  },
-  {
-    icon: Lightbulb,
-    title: "Chiarezza",
-    desc: "Ti spiego tutto in modo semplice e diretto, senza tecnicismi inutili. Capirai ogni passaggio.",
-  },
-  {
-    icon: Clock,
-    title: "Velocità",
-    desc: "Agisco rapidamente per mettere il tuo impianto in regola, perché il tempo è denaro e la tranquillità non ha prezzo.",
-  },
-];
-
-const testimonianze = [
-  {
-    text: "Marco ha reso la conformità GDPR un gioco da ragazzi! Servizio impeccabile e veloce. Consigliatissimo!",
-    author: "Luca Bianchi, Proprietario Ristorante 'La Buona Forchetta'",
-  },
-  {
-    text: "Finalmente un professionista che capisce le nostre esigenze. La denuncia dell'impianto è stata gestita alla perfezione.",
-    author: "Anna Verdi, Amministratore Condominio 'Residenza Sole'",
-  },
-  {
-    text: "Servizio completo e professionale. Le informative e i documenti sono chiari e conformi. Ottimo lavoro!",
-    author: "Giovanni Neri, Titolare Palestra 'Fitness Mania'",
-  },
-];
-
-const faq = [
-  {
-    q: "Cosa include la denuncia dell'impianto?",
-    a: "Mi occupo di tutta la trafila burocratica per denunciare il tuo impianto GPS satellitare alle autorità competenti, liberandoti da scartoffie e procedure noiose.",
-  },
-  {
-    q: "Quanto tempo ci vuole per essere in regola?",
-    a: "Generalmente la procedura richiede pochi giorni lavorativi una volta raccolti tutti i documenti necessari. Ti terrò aggiornato in ogni fase.",
-  },
-  {
-    q: "È indispensabile la presenza fisica sul posto?",
-    a: "Non è strettamente necessaria, ma la tua presenza può aiutare a chiarire dubbi specifici sulla tua situazione. Possiamo anche fare tutto online.",
-  },
-  {
-    q: "E se non mi adeguo?",
-    a: "Le sanzioni per la mancata conformità possono essere molto salate. Meglio prevenire che curare, e io sono qui proprio per questo.",
-  },
-  {
-    q: "Quali problemi può causare un impianto GPS senza documentazione privacy?",
-    a: "Può portare a sanzioni amministrative e penali, contestazioni legali e obbligo di rimozione. Senza regolamento e denuncia l'impianto risulta irregolare. Mi occupo io di tutto: denuncia, documenti, conformità GDPR.",
-  },
-  {
-    q: "Cosa succede se si ignora la trasparenza nella gestione del GPS satellitare?",
-    a: "Si rischia di trasformare uno strumento utile in fonte di problemi e contestazioni. Con il giusto metodo e il rispetto delle norme, tutto resta sotto controllo e protetto.",
-  },
-];
-
 function GpsPage() {
+  const { t } = useTranslation();
+
+  const servizi = [
+    {
+      icon: FileText,
+      title: t("gps.servizio1Title"),
+      desc: t("gps.servizio1Desc"),
+    },
+    {
+      icon: ClipboardList,
+      title: t("gps.servizio2Title"),
+      desc: t("gps.servizio2Desc"),
+    },
+    {
+      icon: ShieldCheck,
+      title: t("gps.servizio3Title"),
+      desc: t("gps.servizio3Desc"),
+    },
+  ];
+
+  const motivi = [
+    {
+      icon: BookOpen,
+      title: t("gps.motivo1Title"),
+      desc: t("gps.motivo1Desc"),
+    },
+    {
+      icon: ShieldCheck,
+      title: t("gps.motivo2Title"),
+      desc: t("gps.motivo2Desc"),
+    },
+    {
+      icon: Gauge,
+      title: t("gps.motivo3Title"),
+      desc: t("gps.motivo3Desc"),
+    },
+    {
+      icon: Lightbulb,
+      title: t("gps.motivo4Title"),
+      desc: t("gps.motivo4Desc"),
+    },
+    {
+      icon: Clock,
+      title: t("gps.motivo5Title"),
+      desc: t("gps.motivo5Desc"),
+    },
+  ];
+
+  const testimonianze = [
+    {
+      text: t("gps.test1Text"),
+      author: t("gps.test1Author"),
+    },
+    {
+      text: t("gps.test2Text"),
+      author: t("gps.test2Author"),
+    },
+    {
+      text: t("gps.test3Text"),
+      author: t("gps.test3Author"),
+    },
+  ];
+
+  const faq = [
+    { q: t("gps.faq1Q"), a: t("gps.faq1A") },
+    { q: t("gps.faq2Q"), a: t("gps.faq2A") },
+    { q: t("gps.faq3Q"), a: t("gps.faq3A") },
+    { q: t("gps.faq4Q"), a: t("gps.faq4A") },
+    { q: t("gps.faq5Q"), a: t("gps.faq5A") },
+    { q: t("gps.faq6Q"), a: t("gps.faq6A") },
+  ];
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       <SiteHeader />
@@ -138,7 +123,7 @@ function GpsPage() {
         <div className="container mx-auto px-4 max-w-5xl">
           <Button variant="ghost" size="sm" asChild className="mb-4">
             <Link to="/">
-              <ArrowLeft className="h-4 w-4" /> Torna alla home
+              <ArrowLeft className="h-4 w-4" /> {t("gps.backHome")}
             </Link>
           </Button>
         </div>
@@ -147,28 +132,27 @@ function GpsPage() {
         <section className="pb-16 [background:var(--gradient-section-hero)]">
           <div className="container mx-auto px-4 max-w-5xl text-center">
             <div className="inline-flex items-center gap-2 rounded-full border-2 border-primary/30 bg-white px-4 py-2 text-sm font-semibold mb-6">
-              <MapPin className="h-4 w-4 text-primary" aria-hidden /> GPS Satellitari &amp; Privacy
+              <MapPin className="h-4 w-4 text-primary" aria-hidden /> {t("gps.heroBadge")}
             </div>
             <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-tight">
-              GPS satellitare a norma, <span className="text-primary">senza stress</span>
+              {t("gps.heroTitle")} <span className="text-primary">{t("gps.heroTitleHighlight")}</span>
             </h1>
             <p className="mt-5 text-lg md:text-xl text-foreground/85 max-w-2xl mx-auto">
-              Pratiche obbligatorie, soluzioni semplici. La tua privacy è la mia missione:
-              non trasformare uno strumento utile in una fonte di problemi. Ci penso a tutto io.
+              {t("gps.heroDesc")}
             </p>
             <p className="mt-3 text-base text-foreground/75 max-w-2xl mx-auto font-semibold">
-              Verifica gratuitamente se devi fare qualcosa per il tuo impianto GPS satellitare.
+              {t("gps.heroSubDesc")}
             </p>
             <ChecklistCTAs />
             <div className="mt-6">
               <Button variant="hero" size="lg" className="h-12 px-8" asChild>
-                <a href="#contatti">Richiedi un preventivo</a>
+                <a href="#contatti">{t("gps.heroBtn")}</a>
               </Button>
             </div>
             <div className="mt-12 max-w-3xl mx-auto">
               <img
                 src={heroImg}
-                alt="Flotta di veicoli con tracciamento GPS satellitare a norma di legge"
+                alt={t("gps.heroImgAlt")}
                 className="w-full rounded-2xl border-2 border-primary/15 shadow-lg"
                 width={1280}
                 height={800}
@@ -182,32 +166,18 @@ function GpsPage() {
           <div className="container mx-auto px-4 max-w-6xl grid md:grid-cols-2 gap-10 items-center">
             <div>
               <p className="text-sm font-bold text-primary uppercase tracking-wider mb-2">
-                Ci penso io
+                {t("gps.denunciaLabel")}
               </p>
-              <h2 className="text-3xl md:text-4xl font-bold">Denuncia Impianto: Fatto!</h2>
+              <h2 className="text-3xl md:text-4xl font-bold">{t("gps.denunciaTitle")}</h2>
               <div className="mt-5 space-y-4 text-foreground/85 text-lg leading-relaxed">
-                <p>
-                  Hai installato dei GPS satellitari e ora ti chiedi come fare per la denuncia?
-                  Tranquillo, ci penso io! La denuncia dell'impianto GPS satellitare è un
-                  passaggio obbligatorio per essere in regola con la legge. Non lasciare che
-                  la burocrazia ti fermi.
-                </p>
-                <p>
-                  Mi occupo di tutto il processo, dalla raccolta dei dati alla presentazione
-                  della documentazione necessaria. Il mio obiettivo è rendere questo compito
-                  il più semplice e veloce possibile per te, liberandoti da ogni
-                  preoccupazione.
-                </p>
-                <p>
-                  Con la mia assistenza, avrai la certezza che il tuo impianto GPS satellitare
-                  sia correttamente registrato e conforme alle normative vigenti. Un piccolo
-                  passo per te, un grande passo per la tua tranquillità.
-                </p>
+                <p>{t("gps.denunciaP1")}</p>
+                <p>{t("gps.denunciaP2")}</p>
+                <p>{t("gps.denunciaP3")}</p>
               </div>
             </div>
             <img
               src={denunciaImg}
-              alt="Tracciamento GPS satellitare e documentazione per la denuncia impianto"
+              alt={t("gps.denunciaImgAlt")}
               className="w-full rounded-2xl border-2 border-primary/15 shadow-lg"
               width={1096}
               height={1096}
@@ -221,9 +191,9 @@ function GpsPage() {
           <div className="container mx-auto px-4 max-w-6xl">
             <div className="text-center mb-12">
               <p className="text-sm font-bold text-primary uppercase tracking-wider mb-2">
-                I miei servizi
+                {t("gps.serviziLabel")}
               </p>
-              <h2 className="text-3xl md:text-4xl font-bold">Tutto quello che ti serve</h2>
+              <h2 className="text-3xl md:text-4xl font-bold">{t("gps.serviziTitle")}</h2>
             </div>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {servizi.map(({ icon: Icon, title, desc }) => (
@@ -251,31 +221,19 @@ function GpsPage() {
           <div className="container mx-auto px-4 max-w-6xl grid md:grid-cols-2 gap-10 items-center">
             <img
               src={regolamentoImg}
-              alt="Regolamento interno per la gestione del GPS satellitare"
+              alt={t("gps.regolamentoImgAlt")}
               className="w-full max-w-sm mx-auto rounded-2xl border-2 border-primary/15 shadow-lg order-last md:order-first"
               loading="lazy"
             />
             <div>
               <p className="text-sm font-bold text-primary uppercase tracking-wider mb-2">
-                La tua guida
+                {t("gps.regolamentoLabel")}
               </p>
-              <h2 className="text-3xl md:text-4xl font-bold">Regolamento Interno</h2>
+              <h2 className="text-3xl md:text-4xl font-bold">{t("gps.regolamentoTitle")}</h2>
               <div className="mt-5 space-y-4 text-foreground/85 text-lg leading-relaxed">
-                <p>
-                  Creare un regolamento interno per i sistemi GPS satellitari non è un
-                  optional, è un obbligo. Ti aiuto a redigere un documento chiaro e completo
-                  che definisca le regole d'uso, le finalità e le modalità di gestione del tuo
-                  impianto, mettendo tutti al riparo da sorprese.
-                </p>
-                <p>
-                  Questo documento è fondamentale per dimostrare la tua attenzione alla
-                  privacy e per gestire correttamente i dati raccolti dal GPS satellitare.
-                  Senza di esso, rischi sanzioni salate e mal di testa legali.
-                </p>
-                <p>
-                  Pensa a me come al tuo architetto della conformità: costruiamo insieme le
-                  fondamenta legali del tuo sistema GPS satellitare, un articolo alla volta.
-                </p>
+                <p>{t("gps.regolamentoP1")}</p>
+                <p>{t("gps.regolamentoP2")}</p>
+                <p>{t("gps.regolamentoP3")}</p>
               </div>
             </div>
           </div>
@@ -285,7 +243,7 @@ function GpsPage() {
         <section className="py-20 [background:var(--gradient-section-corsi)] border-y-2 border-primary/15">
           <div className="container mx-auto px-4 max-w-6xl">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold">Perché scegliermi</h2>
+              <h2 className="text-3xl md:text-4xl font-bold">{t("gps.motiwiTitle")}</h2>
             </div>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {motivi.map(({ icon: Icon, title, desc }) => (
@@ -310,19 +268,19 @@ function GpsPage() {
           <div className="container mx-auto px-4 max-w-5xl grid sm:grid-cols-3 gap-8 text-center">
             <div>
               <div className="text-5xl font-bold">99%</div>
-              <p className="mt-2 text-white/90">Conformità garantita</p>
+              <p className="mt-2 text-white/90">{t("gps.stat1")}</p>
             </div>
             <div>
               <div className="text-5xl font-bold">100%</div>
-              <p className="mt-2 text-white/90">Clienti soddisfatti</p>
+              <p className="mt-2 text-white/90">{t("gps.stat2")}</p>
             </div>
             <div>
               <div className="text-5xl font-bold">24/7</div>
-              <p className="mt-2 text-white/90">Supporto dedicato</p>
+              <p className="mt-2 text-white/90">{t("gps.stat3")}</p>
             </div>
             <div className="sm:col-span-3 mt-6">
               <p className="text-white/95 text-lg font-semibold mb-2">
-                Scopri subito se il tuo GPS satellitare è a norma — gratis e senza impegno
+                {t("gps.statsCTA")}
               </p>
               <ChecklistCTAs variant="dark" />
             </div>
@@ -333,14 +291,14 @@ function GpsPage() {
         <section className="py-20 [background:var(--gradient-section-corsi)] border-y-2 border-primary/15">
           <div className="container mx-auto px-4 max-w-6xl">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold">Clienti soddisfatti</h2>
+              <h2 className="text-3xl md:text-4xl font-bold">{t("gps.testimonianze")}</h2>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-              {testimonianze.map((t) => (
-                <Card key={t.author} className="border-2 border-primary/20">
+              {testimonianze.map((item) => (
+                <Card key={item.author} className="border-2 border-primary/20">
                   <CardContent className="pt-6">
-                    <p className="text-foreground/85 italic">"{t.text}"</p>
-                    <p className="mt-4 text-sm font-semibold text-primary">— {t.author}</p>
+                    <p className="text-foreground/85 italic">"{item.text}"</p>
+                    <p className="mt-4 text-sm font-semibold text-primary">— {item.author}</p>
                   </CardContent>
                 </Card>
               ))}
@@ -352,7 +310,7 @@ function GpsPage() {
         <section className="py-20 bg-background">
           <div className="container mx-auto px-4 max-w-3xl">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-10">
-              Domande frequenti
+              {t("gps.faqTitle")}
             </h2>
             <Accordion type="single" collapsible className="w-full">
               {faq.map((item, i) => (
@@ -376,9 +334,9 @@ function GpsPage() {
         >
           <div className="container mx-auto px-4 max-w-5xl">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold">Contattami</h2>
+              <h2 className="text-3xl md:text-4xl font-bold">{t("gps.contattiTitle")}</h2>
               <p className="mt-3 text-foreground/80">
-                Mettiamo in regola il tuo impianto GPS satellitare. Ci penso io a tutto.
+                {t("gps.contattiDesc")}
               </p>
               <ChecklistCTAs />
             </div>
@@ -386,7 +344,7 @@ function GpsPage() {
               <Card className="border-2 border-primary/20">
                 <CardContent className="pt-6 text-center">
                   <Phone className="h-8 w-8 mx-auto text-primary mb-3" />
-                  <p className="font-bold mb-1">Telefono</p>
+                  <p className="font-bold mb-1">{t("gps.contactPhone")}</p>
                   <a href="tel:+393396344660" className="text-foreground/80 hover:text-primary">
                     +39 339 63 44 660
                   </a>
@@ -395,7 +353,7 @@ function GpsPage() {
               <Card className="border-2 border-primary/20">
                 <CardContent className="pt-6 text-center">
                   <Mail className="h-8 w-8 mx-auto text-primary mb-3" />
-                  <p className="font-bold mb-1">Email</p>
+                  <p className="font-bold mb-1">{t("gps.contactEmail")}</p>
                   <a
                     href="mailto:nichettiprivacy@gmail.com"
                     className="text-foreground/80 hover:text-primary break-all"
@@ -407,7 +365,7 @@ function GpsPage() {
               <Card className="border-2 border-primary/20">
                 <CardContent className="pt-6 text-center">
                   <MapPin className="h-8 w-8 mx-auto text-primary mb-3" />
-                  <p className="font-bold mb-1">Sede</p>
+                  <p className="font-bold mb-1">{t("gps.contactAddress")}</p>
                   <p className="text-foreground/80 text-sm">
                     Via Foscolo, 28<br />26015 Soresina (CR)<br />PI 01235350194
                   </p>
@@ -416,15 +374,15 @@ function GpsPage() {
               <Card className="border-2 border-primary/20">
                 <CardContent className="pt-6 text-center">
                   <Clock className="h-8 w-8 mx-auto text-primary mb-3" />
-                  <p className="font-bold mb-1">Orari</p>
-                  <p className="text-foreground/80">9:00 — 18:00</p>
+                  <p className="font-bold mb-1">{t("gps.contactHours")}</p>
+                  <p className="text-foreground/80">{t("gps.contactHoursText")}</p>
                 </CardContent>
               </Card>
             </div>
             <div className="mt-10 text-center">
               <Button variant="outline" asChild>
                 <Link to="/">
-                  <ArrowLeft className="h-4 w-4" /> Torna alla home
+                  <ArrowLeft className="h-4 w-4" /> {t("gps.backHome")}
                 </Link>
               </Button>
             </div>
