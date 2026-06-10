@@ -121,15 +121,20 @@ function PedFlowPage() {
                 {t("heroP")}
               </p>
               <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
-                <Button variant="hero" size="lg" className="h-12 px-7 text-base">
-                  {t("heroCtaPrimary")}
+                <Button variant="hero" size="lg" className="h-12 px-7 text-base" asChild>
+                  <a href={buildMailto(`PedFlow — ${t("heroCtaPrimary")}`)}>
+                    {t("heroCtaPrimary")}
+                  </a>
                 </Button>
                 <Button
                   variant="outline"
                   size="lg"
                   className="h-12 px-7 text-base border-2 border-primary/40"
+                  asChild
                 >
-                  <PlayCircle className="h-5 w-5" aria-hidden /> {t("heroCtaSecondary")}
+                  <a href={buildMailto(`PedFlow — ${t("heroCtaSecondary")}`)}>
+                    <PlayCircle className="h-5 w-5" aria-hidden /> {t("heroCtaSecondary")}
+                  </a>
                 </Button>
               </div>
               <p className="mt-6 text-sm text-foreground/65">
