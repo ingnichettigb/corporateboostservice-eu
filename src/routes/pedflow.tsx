@@ -122,6 +122,14 @@ function PedFlowPage() {
             <p className="mt-5 text-lg md:text-xl text-foreground/85 max-w-xl mx-auto">
               {t("heroP")}
             </p>
+            <img
+              src={processImg}
+              alt={t("processImgAlt")}
+              className="mt-8 w-full rounded-2xl border-2 border-primary/15 shadow-lg bg-white"
+              loading="lazy"
+              width={1402}
+              height={765}
+            />
             <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
               <Button variant="hero" size="lg" className="h-12 px-7 text-base" asChild>
                 <a href={buildMailto(`PedFlow — ${t("heroCtaPrimary")}`)}>
