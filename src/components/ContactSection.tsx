@@ -6,8 +6,33 @@ import { Mail, Send, Phone } from "lucide-react";
 import { toast } from "sonner";
 import { useTranslation } from "react-i18next";
 
+const CONTACT_EMAIL = "team@corporateboostservice.eu";
+
 export function ContactSection() {
   const { t } = useTranslation();
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const form = e.currentTarget;
+    const data = new FormData(form);
+    const name = String(data.get("name") ?? "").trim();
+    const email = String(data.get("email") ?? "").trim();
+    const subject = String(data.get("subject") ?? "").trim() || t("contact.title");
+    const message = String(data.get("message") ?? "").trim();
+
+    const body = [
+      `${t("contact.name")}: ${name}`,
+      `${t("contact.email")}: ${email}`,
+      "",
+      message,
+    ].join("\n");
+
+    const mailto = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailto;
+    toast.success(t("contact.sent"));
+    form.reset();
+  };
+
   return (
     <section id="contatti" className="py-24 [background:var(--gradient-section-contact)] border-t-2 border-primary/20">
       <div className="container mx-auto px-4 max-w-4xl">
