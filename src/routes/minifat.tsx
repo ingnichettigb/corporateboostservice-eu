@@ -352,8 +352,10 @@ function MiniFatPage() {
                     </li>
                   ))}
                 </ul>
-                <Button variant="hero" size="lg" className="w-full h-12 mt-7 text-base">
-                  {t("minifat.pricingCta")} <ArrowRight className="ml-1 h-4 w-4" aria-hidden />
+                <Button variant="hero" size="lg" className="w-full h-12 mt-7 text-base" asChild>
+                  <a href={buildMailto(`MiniFAT — ${t("minifat.pricingCta")}`)}>
+                    {t("minifat.pricingCta")} <ArrowRight className="ml-1 h-4 w-4" aria-hidden />
+                  </a>
                 </Button>
                 <p className="mt-3 text-center text-xs text-foreground/60">
                   {t("minifat.pricingNote")}
