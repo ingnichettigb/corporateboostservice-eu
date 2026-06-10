@@ -6,15 +6,26 @@ export const CONTACT_EMAIL = "team@corporateboostservice.eu";
 export function defaultQuoteBody() {
   const isEn = i18n.language?.startsWith("en");
   return isEn
-    ? "Dear CorporateBoostService, I would like a quote for no. ___ applications related to the service in subject. Thank you"
-    : "Spettabile CorporateBoostService, chiedo preventivo per n. ___ applicazioni relative al servizio in oggetto. Grazie";
+    ? [
+        "Dear CorporateBoostService,",
+        "",
+        "I would like a quote for no. ___ applications related to the service in subject.",
+        "",
+        "Thank you",
+      ].join("\n")
+    : [
+        "Spettabile CorporateBoostService,",
+        "",
+        "chiedo preventivo per n. ___ applicazioni relative al servizio in oggetto.",
+        "",
+        "Grazie",
+      ].join("\n");
 }
 
 /** Build a mailto: href targeting the official inbox. */
 export function buildMailto(subject: string, body?: string) {
-  const params = new URLSearchParams();
-  if (subject) params.set("subject", subject);
-  params.set("body", body ?? defaultQuoteBody());
-  const query = params.toString();
-  return `mailto:${CONTACT_EMAIL}${query ? `?${query}` : ""}`;
+  const parts: string[] = [];
+  if (subject) parts.push(`subject=${encodeURIComponent(subject)}`);
+  parts.push(`body=${encodeURIComponent(body ?? defaultQuoteBody())}`);
+  return `mailto:${CONTACT_EMAIL}?${parts.join("&")}`;
 }
