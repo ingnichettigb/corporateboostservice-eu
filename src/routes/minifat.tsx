@@ -397,15 +397,21 @@ function MiniFatPage() {
               <Button
                 size="lg"
                 className="h-12 px-7 text-base bg-yellow-400 text-black hover:bg-yellow-300 border-2 border-black"
+                asChild
               >
-                {t("minifat.ctaCta")}
+                <a href={buildMailto(`MiniFAT — ${t("minifat.ctaCta")}`)}>
+                  {t("minifat.ctaCta")}
+                </a>
               </Button>
               <Button
                 size="lg"
                 variant="outline"
                 className="h-12 px-7 text-base border-2 border-white/60 bg-transparent text-white hover:bg-white/10 hover:text-white"
+                asChild
               >
-                <PlayCircle className="h-5 w-5" aria-hidden /> {t("minifat.ctaDemo")}
+                <a href={buildMailto(`MiniFAT — ${t("minifat.ctaDemo")}`)}>
+                  <PlayCircle className="h-5 w-5" aria-hidden /> {t("minifat.ctaDemo")}
+                </a>
               </Button>
             </div>
           </div>
