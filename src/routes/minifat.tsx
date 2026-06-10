@@ -337,7 +337,7 @@ function MiniFatPage() {
               <div className="[background:var(--gradient-hero)] text-primary-foreground text-center py-7 px-6">
                 <p className="text-lg font-semibold">{t("minifat.pricingPlanName")}</p>
                 <p className="mt-1">
-                  <span className="text-5xl font-extrabold">19€</span>
+                  <span className="text-5xl font-extrabold">50€</span>
                   <span className="text-lg font-medium">{t("minifat.pricingMonth")}</span>
                 </p>
               </div>
