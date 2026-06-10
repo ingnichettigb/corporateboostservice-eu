@@ -7,7 +7,7 @@ import { corsi } from "@/data/site";
 import { ArrowRight, Clock, Award, Users } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
-const EMAIL = "supporto@corporateboostservice.eu";
+const EMAIL = "team@corporateboostservice.eu";
 
 function buildMailto(corso: string) {
   const subject = corso;

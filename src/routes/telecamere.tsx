@@ -312,10 +312,10 @@ function TelecamerePage() {
                   <Mail className="h-8 w-8 mx-auto text-primary mb-3" />
                   <p className="font-bold mb-1">{t("telecamere.contattiEmail")}</p>
                   <a
-                    href="mailto:nichettiprivacy@gmail.com"
+                    href="mailto:team@corporateboostservice.eu"
                     className="text-foreground/80 hover:text-primary break-all"
                   >
-                    nichettiprivacy@gmail.com
+                    team@corporateboostservice.eu
                   </a>
                 </CardContent>
               </Card>
