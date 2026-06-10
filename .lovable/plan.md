@@ -1,17 +1,16 @@
 ## Obiettivo
-Rimuovere dalla landing page **PedFlow** l'immagine del logo della beuta NGB (quella nella tua schermata), che ho confermato essere visualizzata nell'area hero.
+Rimettere il **diagramma di processo PedFlow** nella sua posizione originale, sopra i pulsanti CTA del hero. Non serve riallegare nulla: l'immagine è già nel progetto (`src/assets/pedflow/pedflow-process-en.png.asset.json`).
 
-## Cosa ho individuato
-- File: `src/routes/pedflow.tsx`
-- L'immagine è renderizzata nel blocco `<figure>` accanto al titolo hero (righe 145-153), tramite `src={logoImg}` → `@/assets/apps/pedflow.png.asset.json`.
-- È esattamente l'icona beuta NGB cerchiata di rosso che hai allegato.
+## Cosa ripristino in `src/routes/pedflow.tsx`
+1. **Import** del pointer asset:
+   `import processAsset from "@/assets/pedflow/pedflow-process-en.png.asset.json";`
+2. **Variabile** URL: `const processImg = processAsset.url;`
+3. **`<img>` del diagramma** dentro l'hero, subito sopra il blocco dei pulsanti, con alt `t("processImgAlt")` (chiave di traduzione già esistente).
 
-## Modifiche previste
-1. **Rimuovere il blocco `<figure>` con l'immagine** dall'hero (righe 145-153).
-2. **Adattare il layout hero**: attualmente l'hero è una griglia a 2 colonne (`grid lg:grid-cols-2`). Senza l'immagine a destra, lo trasformo in colonna singola centrata/allineata così il testo non resta sbilanciato.
+## Nota sul layout
+L'hero ora è a colonna singola centrata (dopo la rimozione del logo beuta). Inserisco il diagramma centrato a piena larghezza del contenitore, così resta coerente con l'allineamento attuale.
 
 ## Cosa NON tocco
-- Il logo resta usato come `og:image` / `twitter:image` (metadati di condivisione) e nella pagina elenco applicazioni: lo lascio lì, a meno che tu non voglia rimuoverlo anche da quei punti.
-- Nessuna modifica ai pulsanti o all'invio mail.
+- Niente modifiche a pulsanti, invio mail o al logo beuta (che resta rimosso dall'hero).
 
-Confermi che devo procedere così?
+Procedo così?
