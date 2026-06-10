@@ -102,5 +102,9 @@
   "home": {
     "pageTitle": "Corsi GDPR, Privacy e Soluzioni Digitali Aziendali",
     "pageDesc": "Corsi online su GDPR, privacy e sicurezza, più applicazioni digitali su misura per imprese e professionisti."
+  },
+  "checklist": {
+    "autovalutazione": "Autovalutazione Privacy 1996 — Gratis, in 9 domande",
+    "verifica": "Verifica la tua conformità GDPR — Gratis, in 10 domande"
   }
 }

@@ -102,5 +102,9 @@
   "home": {
     "pageTitle": "GDPR, Privacy & Digital Solutions Courses",
     "pageDesc": "Online courses on GDPR, privacy and safety, plus tailored digital applications for companies and professionals."
+  },
+  "checklist": {
+    "autovalutazione": "Privacy 1996 Self-Assessment — Free, in 9 questions",
+    "verifica": "Check your GDPR compliance — Free, in 10 questions"
   }
 }
