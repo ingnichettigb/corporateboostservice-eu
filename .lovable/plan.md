@@ -1,23 +1,17 @@
 ## Obiettivo
+Rimuovere dalla landing page **PedFlow** l'immagine del logo della beuta NGB (quella nella tua schermata), che ho confermato essere visualizzata nell'area hero.
 
-Sostituire titolo e descrizione SEO attuali con versioni brevi, professionali e mirate a corsi online, privacy/GDPR, sicurezza e soluzioni digitali.
+## Cosa ho individuato
+- File: `src/routes/pedflow.tsx`
+- L'immagine è renderizzata nel blocco `<figure>` accanto al titolo hero (righe 145-153), tramite `src={logoImg}` → `@/assets/apps/pedflow.png.asset.json`.
+- È esattamente l'icona beuta NGB cerchiata di rosso che hai allegato.
 
-## Testi proposti
+## Modifiche previste
+1. **Rimuovere il blocco `<figure>` con l'immagine** dall'hero (righe 145-153).
+2. **Adattare il layout hero**: attualmente l'hero è una griglia a 2 colonne (`grid lg:grid-cols-2`). Senza l'immagine a destra, lo trasformo in colonna singola centrata/allineata così il testo non resta sbilanciato.
 
-**Titolo** (≤60 caratteri):
-`Corsi GDPR, Privacy e Soluzioni Digitali Aziendali` (50 caratteri)
+## Cosa NON tocco
+- Il logo resta usato come `og:image` / `twitter:image` (metadati di condivisione) e nella pagina elenco applicazioni: lo lascio lì, a meno che tu non voglia rimuoverlo anche da quei punti.
+- Nessuna modifica ai pulsanti o all'invio mail.
 
-**Descrizione** (≤150 caratteri):
-`Corsi online su GDPR, privacy e sicurezza, più applicazioni digitali su misura per imprese e professionisti.` (108 caratteri)
-
-Alternative titolo, se preferisci:
-- `Corsi Online GDPR, Privacy e Sicurezza Aziendale` (49)
-- `Formazione GDPR e Soluzioni Digitali per Imprese` (48)
-
-## Dove applicarli (dettaglio tecnico)
-
-Aggiornare il `head()` della home in `src/routes/index.tsx` (campi `title` e `description`, più `og:title`/`og:description` se presenti) e le chiavi `home.pageTitle` / `home.pageDesc` in `src/i18n/locales/it.json` ed `en.json` per coerenza.
-
-## Nota
-
-Modifiche solo ai testi SEO; nessun impatto su layout o funzionalità.
+Confermi che devo procedere così?
