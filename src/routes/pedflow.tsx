@@ -110,49 +110,39 @@ function PedFlowPage() {
 
         {/* HERO */}
         <section className="pb-16 [background:var(--gradient-section-hero)]">
-          <div className="container mx-auto px-4 max-w-6xl grid lg:grid-cols-2 gap-10 items-center">
-            <div className="text-center lg:text-left">
-              <div className="inline-flex items-center gap-2 rounded-full border-2 border-primary/30 bg-white px-4 py-2 text-sm font-semibold mb-6">
-                <FlaskConical className="h-4 w-4 text-primary" aria-hidden /> {t("heroBadge")}
-              </div>
-              <h1 className="text-3xl md:text-5xl font-bold tracking-tight leading-tight">
-                {t("heroH1a")} <span className="text-primary">{t("heroH1b")}</span>
-              </h1>
-              <p className="mt-5 text-lg md:text-xl text-foreground/85 max-w-xl mx-auto lg:mx-0">
-                {t("heroP")}
-              </p>
-              <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
-                <Button variant="hero" size="lg" className="h-12 px-7 text-base" asChild>
-                  <a href={buildMailto(`PedFlow — ${t("heroCtaPrimary")}`)}>
-                    {t("heroCtaPrimary")}
-                  </a>
-                </Button>
-                <Button
-                  variant="outline"
-                  size="lg"
-                  className="h-12 px-7 text-base border-2 border-primary/40"
-                  asChild
-                >
-                  <a href={buildMailto(`PedFlow — ${t("heroCtaSecondary")}`)}>
-                    <PlayCircle className="h-5 w-5" aria-hidden /> {t("heroCtaSecondary")}
-                  </a>
-                </Button>
-              </div>
-              <p className="mt-6 text-sm text-foreground/65">
-                {t("heroCaption")}
-              </p>
+          <div className="container mx-auto px-4 max-w-3xl text-center">
+            <div className="inline-flex items-center gap-2 rounded-full border-2 border-primary/30 bg-white px-4 py-2 text-sm font-semibold mb-6">
+              <FlaskConical className="h-4 w-4 text-primary" aria-hidden /> {t("heroBadge")}
             </div>
-            <figure className="m-0 flex justify-center">
-              <img
-                src={logoImg}
-                alt={t("heroImgAlt")}
-                className="w-2/3 max-w-xs rounded-2xl border-2 border-primary/15 shadow-lg bg-white"
-                width={512}
-                height={512}
-              />
-            </figure>
+            <h1 className="text-3xl md:text-5xl font-bold tracking-tight leading-tight">
+              {t("heroH1a")} <span className="text-primary">{t("heroH1b")}</span>
+            </h1>
+            <p className="mt-5 text-lg md:text-xl text-foreground/85 max-w-xl mx-auto">
+              {t("heroP")}
+            </p>
+            <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
+              <Button variant="hero" size="lg" className="h-12 px-7 text-base" asChild>
+                <a href={buildMailto(`PedFlow — ${t("heroCtaPrimary")}`)}>
+                  {t("heroCtaPrimary")}
+                </a>
+              </Button>
+              <Button
+                variant="outline"
+                size="lg"
+                className="h-12 px-7 text-base border-2 border-primary/40"
+                asChild
+              >
+                <a href={buildMailto(`PedFlow — ${t("heroCtaSecondary")}`)}>
+                  <PlayCircle className="h-5 w-5" aria-hidden /> {t("heroCtaSecondary")}
+                </a>
+              </Button>
+            </div>
+            <p className="mt-6 text-sm text-foreground/65">
+              {t("heroCaption")}
+            </p>
           </div>
         </section>
+
 
         {/* COS'È */}
         <section className="py-20 bg-background">
