@@ -32,7 +32,7 @@ import {
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import logoAsset from "@/assets/apps/pedflow.png.asset.json";
-import processAsset from "@/assets/pedflow/pedflow-process-en.png.asset.json";
+
 import { useTranslation } from "react-i18next";
 import i18n from "@/i18n";
 import { pedflow as pedflowLocale } from "@/i18n/locales/pages/pedflow";
