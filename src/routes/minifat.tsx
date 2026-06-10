@@ -1,4 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { useTranslation } from "react-i18next";
+import i18n from "@/i18n";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
@@ -37,165 +39,38 @@ import screenArchive from "@/assets/minifat/screen-archive.jpg";
 export const Route = createFileRoute("/minifat")({
   head: () => ({
     meta: [
-      { title: "MiniFAT — Crea dossier FAT professionali in pochi minuti" },
+      { title: i18n.t("minifat.metaTitle") },
       {
         name: "description",
-        content:
-          "MiniFAT genera automaticamente copertina, indice, pagine documentali e PDF bilingue per i tuoi Factory Acceptance Test, direttamente dal tuo dispositivo.",
+        content: i18n.t("minifat.metaDescription"),
       },
-      { property: "og:title", content: "MiniFAT — Dossier FAT professionali in un'app" },
+      { property: "og:title", content: i18n.t("minifat.ogTitle") },
       {
         property: "og:description",
-        content:
-          "Il modo più semplice per creare dossier FAT professionali. PDF bilingue generati localmente, nessun invio dati a server esterni.",
+        content: i18n.t("minifat.ogDescription"),
       },
     ],
   }),
   component: MiniFatPage,
 });
 
-const features = [
-  {
-    icon: Building2,
-    title: "Dati Costruttore e Cliente",
-    desc: "Gestione completa delle anagrafiche, con template riutilizzabili per ogni progetto.",
-  },
-  {
-    icon: ClipboardList,
-    title: "Oggetto FAT guidato",
-    desc: "Compilazione passo-passo dell'oggetto del collaudo, senza dimenticare nulla.",
-  },
-  {
-    icon: FileCheck2,
-    title: "Selezione documenti",
-    desc: "Scegli i documenti richiesti: certificati, dichiarazioni e allegati.",
-  },
-  {
-    icon: FileStack,
-    title: "Generazione automatica",
-    desc: "Copertina, indice e pagine documentali create in automatico, sempre coerenti.",
-  },
-  {
-    icon: Languages,
-    title: "Supporto bilingue",
-    desc: "Documentazione pronta in IT / EN / DE / ES con un solo tocco.",
-  },
-  {
-    icon: CloudUpload,
-    title: "Salvataggio e archivio",
-    desc: "Conserva i tuoi FAT e ritrovali in un archivio ordinato e sempre disponibile.",
-  },
-  {
-    icon: FileDown,
-    title: "Esportazione PDF",
-    desc: "Genera ed esporta il PDF completo direttamente dal tuo dispositivo.",
-  },
-];
-
-const steps = [
-  {
-    n: "1",
-    icon: Building2,
-    title: "Inserisci i dati",
-    desc: "Compila le anagrafiche di Costruttore e Cliente.",
-  },
-  {
-    n: "2",
-    icon: ClipboardList,
-    title: "Compila l'oggetto FAT",
-    desc: "Definisci macchinario, scopo e dettagli del collaudo.",
-  },
-  {
-    n: "3",
-    icon: FileCheck2,
-    title: "Seleziona i documenti",
-    desc: "Scegli certificati, dichiarazioni e allegati richiesti.",
-  },
-  {
-    n: "4",
-    icon: FileDown,
-    title: "Genera e scarica",
-    desc: "Crea il PDF completo e scaricalo sul dispositivo.",
-  },
-];
-
-const screenshots = [
-  { img: screenMain, caption: "Schermata principale" },
-  { img: screenDocs, caption: "Lista documenti" },
-  { img: screenPdf, caption: "Anteprima PDF" },
-  { img: screenArchive, caption: "Archivio FAT" },
-];
-
-const benefits = [
-  {
-    icon: ShieldCheck,
-    title: "Standardizza il processo FAT",
-    desc: "Un metodo unico e ripetibile per ogni collaudo, sempre conforme.",
-  },
-  {
-    icon: CheckCircle2,
-    title: "Evita errori e ritardi",
-    desc: "Niente documenti mancanti o dimenticati: la procedura ti guida.",
-  },
-  {
-    icon: Award,
-    title: "Documentazione professionale",
-    desc: "Dossier curati, ordinati e pronti da presentare al cliente.",
-  },
-  {
-    icon: Clock,
-    title: "Ottimizza la tua giornata",
-    desc: "Arrivi in cantiere e trovi già tutto predisposto: ti concentri solo sul macchinario.",
-  },
-  {
-    icon: Zap,
-    title: "Entra e lavora subito",
-    desc: "Zero perdite di tempo: trovi tutto organizzato e passi direttamente alla verifica.",
-  },
-  {
-    icon: Wifi,
-    title: "Funziona ovunque",
-    desc: "Anche in cantiere: il PDF viene generato localmente sul tuo dispositivo.",
-  },
-];
-
-const planFeatures = [
-  "Accesso completo",
-  "Salvataggio sul tuo dispositivo",
-  "PDF illimitati",
-  "Template costruttore / cliente",
-  "Supporto bilingue IT / EN / DE / ES",
-  "Aggiornamenti inclusi",
-];
-
-const faq = [
-  {
-    q: "Cos'è un FAT?",
-    a: "Il FAT (Factory Acceptance Test) è il collaudo di accettazione in fabbrica: la verifica che un macchinario o impianto rispetti i requisiti concordati prima della spedizione al cliente. MiniFAT ti aiuta a documentarlo in modo professionale.",
-  },
-  {
-    q: "MiniFAT funziona offline?",
-    a: "Sì. MiniFAT genera la documentazione e il PDF direttamente sul tuo dispositivo, quindi puoi lavorare anche in cantiere senza connessione. Il salvataggio nel cloud è opzionale.",
-  },
-  {
-    q: "Posso esportare PDF bilingue?",
-    a: "Sì. MiniFAT supporta IT, EN, DE ed ES: copertina, indice e pagine documentali vengono generati nella lingua scelta.",
-  },
-  {
-    q: "I dati sono salvati sul mio dispositivo?",
-    a: "Sì. I PDF vengono generati localmente e i tuoi dati restano sul dispositivo. Nessun invio a server esterni.",
-  },
-  {
-    q: "Posso modificare un FAT già creato?",
-    a: "Sì. Puoi riprendere un FAT salvato, aggiornare dati e documenti e rigenerare il PDF in qualsiasi momento.",
-  },
-  {
-    q: "Posso aggiungere documenti personalizzati?",
-    a: "Sì. Oltre a certificati, dichiarazioni e allegati standard puoi inserire documenti personalizzati nel dossier.",
-  },
-];
+const featureIcons = [Building2, ClipboardList, FileCheck2, FileStack, Languages, CloudUpload, FileDown];
+const stepIcons = [Building2, ClipboardList, FileCheck2, FileDown];
+const benefitIcons = [ShieldCheck, CheckCircle2, Award, Clock, Zap, Wifi];
+const screenshotImgs = [screenMain, screenDocs, screenPdf, screenArchive];
 
 function MiniFatPage() {
+  const { t } = useTranslation();
+
+  const features = (t("minifat.features", { returnObjects: true }) as { title: string; desc: string }[]);
+  const steps = (t("minifat.steps", { returnObjects: true }) as { title: string; desc: string }[]);
+  const screenshots = (t("minifat.screenshots", { returnObjects: true }) as { caption: string }[]);
+  const benefits = (t("minifat.benefits", { returnObjects: true }) as { title: string; desc: string }[]);
+  const planFeatures = (t("minifat.planFeatures", { returnObjects: true }) as string[]);
+  const faq = (t("minifat.faq", { returnObjects: true }) as { q: string; a: string }[]);
+  const methodCards1 = (t("minifat.methodCards1", { returnObjects: true }) as { title: string; desc: string }[]);
+  const methodCards2 = (t("minifat.methodCards2", { returnObjects: true }) as { title: string; desc: string }[]);
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       <SiteHeader />
@@ -204,7 +79,7 @@ function MiniFatPage() {
         <div className="container mx-auto px-4 max-w-6xl">
           <Button variant="ghost" size="sm" asChild className="mb-4">
             <Link to="/applicazioni">
-              <ArrowLeft className="h-4 w-4" /> Torna alle applicazioni
+              <ArrowLeft className="h-4 w-4" /> {t("minifat.backToApps")}
             </Link>
           </Button>
         </div>
@@ -214,35 +89,34 @@ function MiniFatPage() {
           <div className="container mx-auto px-4 max-w-6xl grid lg:grid-cols-2 gap-10 items-center">
             <div className="text-center lg:text-left">
               <div className="inline-flex items-center gap-2 rounded-full border-2 border-primary/30 bg-white px-4 py-2 text-sm font-semibold mb-6">
-                <FileCheck2 className="h-4 w-4 text-primary" aria-hidden /> MiniFAT · Factory Acceptance Test
+                <FileCheck2 className="h-4 w-4 text-primary" aria-hidden /> {t("minifat.heroBadge")}
               </div>
               <h1 className="text-3xl md:text-5xl font-bold tracking-tight leading-tight">
-                Il modo più semplice per creare{" "}
-                <span className="text-primary">dossier FAT professionali</span>
+                {t("minifat.heroH1a")}{" "}
+                <span className="text-primary">{t("minifat.heroH1b")}</span>
               </h1>
               <p className="mt-5 text-lg md:text-xl text-foreground/85 max-w-xl mx-auto lg:mx-0">
-                MiniFAT genera automaticamente copertina, indice, pagine documentali e PDF
-                bilingue direttamente dal tuo dispositivo.
+                {t("minifat.heroDesc")}
               </p>
               <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
                 <Button variant="hero" size="lg" className="h-12 px-7 text-base">
-                  Attiva MiniFAT – 19€/mese
+                  {t("minifat.heroCta")}
                 </Button>
                 <Button
                   variant="outline"
                   size="lg"
                   className="h-12 px-7 text-base border-2 border-primary/40"
                 >
-                  <PlayCircle className="h-5 w-5" aria-hidden /> Prova la Demo
+                  <PlayCircle className="h-5 w-5" aria-hidden /> {t("minifat.heroDemo")}
                 </Button>
               </div>
               <p className="mt-4 text-sm text-foreground/65">
-                PDF generato localmente · Nessun invio dati a server esterni
+                {t("minifat.heroNote")}
               </p>
             </div>
             <img
               src={heroAsset.url}
-              alt="App MiniFAT su tablet e smartphone con un dossier FAT professionale"
+              alt={t("minifat.heroImgAlt")}
               className="w-full rounded-2xl border-2 border-primary/15 shadow-lg"
               width={1280}
               height={896}
@@ -255,26 +129,29 @@ function MiniFatPage() {
           <div className="container mx-auto px-4 max-w-6xl">
             <div className="text-center mb-12">
               <p className="text-sm font-bold text-primary uppercase tracking-wider mb-2">
-                Cosa fa MiniFAT
+                {t("minifat.featuresSectionLabel")}
               </p>
               <h2 className="text-3xl md:text-4xl font-bold">
-                Tutto il dossier FAT in un'unica app
+                {t("minifat.featuresH2")}
               </h2>
             </div>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-              {features.map(({ icon: Icon, title, desc }) => (
-                <Card key={title} className="border-2 border-primary/20">
-                  <CardHeader>
-                    <div className="h-12 w-12 rounded-lg [background:var(--gradient-hero)] text-primary-foreground flex items-center justify-center mb-3">
-                      <Icon className="h-6 w-6" aria-hidden />
-                    </div>
-                    <CardTitle className="text-lg">{title}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-foreground/80">{desc}</p>
-                  </CardContent>
-                </Card>
-              ))}
+              {features.map(({ title, desc }, i) => {
+                const Icon = featureIcons[i];
+                return (
+                  <Card key={title} className="border-2 border-primary/20">
+                    <CardHeader>
+                      <div className="h-12 w-12 rounded-lg [background:var(--gradient-hero)] text-primary-foreground flex items-center justify-center mb-3">
+                        <Icon className="h-6 w-6" aria-hidden />
+                      </div>
+                      <CardTitle className="text-lg">{title}</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-foreground/80">{desc}</p>
+                    </CardContent>
+                  </Card>
+                );
+              })}
             </div>
           </div>
         </section>
@@ -284,27 +161,31 @@ function MiniFatPage() {
           <div className="container mx-auto px-4 max-w-6xl">
             <div className="text-center mb-12">
               <p className="text-sm font-bold text-primary uppercase tracking-wider mb-2">
-                Come funziona
+                {t("minifat.stepsSectionLabel")}
               </p>
-              <h2 className="text-3xl md:text-4xl font-bold">Il tuo FAT in 4 step</h2>
+              <h2 className="text-3xl md:text-4xl font-bold">{t("minifat.stepsH2")}</h2>
             </div>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-              {steps.map(({ n, icon: Icon, title, desc }) => (
-                <Card key={n} className="relative border-2 border-primary/20 overflow-hidden">
-                  <span className="absolute top-4 right-4 text-5xl font-extrabold text-primary/10 leading-none">
-                    {n}
-                  </span>
-                  <CardHeader>
-                    <div className="h-12 w-12 rounded-lg bg-yellow-400 text-black flex items-center justify-center mb-3 border-2 border-black">
-                      <Icon className="h-6 w-6" aria-hidden />
-                    </div>
-                    <CardTitle className="text-lg">{title}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-foreground/80">{desc}</p>
-                  </CardContent>
-                </Card>
-              ))}
+              {steps.map(({ title, desc }, i) => {
+                const Icon = stepIcons[i];
+                const n = String(i + 1);
+                return (
+                  <Card key={n} className="relative border-2 border-primary/20 overflow-hidden">
+                    <span className="absolute top-4 right-4 text-5xl font-extrabold text-primary/10 leading-none">
+                      {n}
+                    </span>
+                    <CardHeader>
+                      <div className="h-12 w-12 rounded-lg bg-yellow-400 text-black flex items-center justify-center mb-3 border-2 border-black">
+                        <Icon className="h-6 w-6" aria-hidden />
+                      </div>
+                      <CardTitle className="text-lg">{title}</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-foreground/80">{desc}</p>
+                    </CardContent>
+                  </Card>
+                );
+              })}
             </div>
           </div>
         </section>
@@ -314,16 +195,16 @@ function MiniFatPage() {
           <div className="container mx-auto px-4 max-w-6xl">
             <div className="text-center mb-12">
               <p className="text-sm font-bold text-primary uppercase tracking-wider mb-2">
-                Dentro l'app
+                {t("minifat.screenshotsSectionLabel")}
               </p>
-              <h2 className="text-3xl md:text-4xl font-bold">Semplice, chiara, professionale</h2>
+              <h2 className="text-3xl md:text-4xl font-bold">{t("minifat.screenshotsH2")}</h2>
             </div>
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-5">
-              {screenshots.map(({ img, caption }, i) => (
+              {screenshots.map(({ caption }, i) => (
                 <figure key={caption} className="text-center">
                   <div className="rounded-2xl border-2 border-primary/15 bg-secondary overflow-hidden shadow-[var(--shadow-card)]">
                     <img
-                      src={img}
+                      src={screenshotImgs[i]}
                       alt={`MiniFAT — ${caption}`}
                       className="w-full h-full object-cover"
                       width={768}
@@ -348,43 +229,20 @@ function MiniFatPage() {
           <div className="container mx-auto px-4 max-w-4xl">
             <div className="text-center mb-12">
               <p className="text-sm font-bold text-primary uppercase tracking-wider mb-2">
-                Il metodo MiniFAT
+                {t("minifat.methodSectionLabel")}
               </p>
               <h2 className="text-3xl md:text-4xl font-bold">
-                Prepara il FAT con un passo avanti
+                {t("minifat.methodH2")}
               </h2>
             </div>
 
             <div className="space-y-5 text-lg text-foreground/85 leading-relaxed">
-              <p>
-                MiniFAT ti permette di preparare il dossier FAT in anticipo, con una
-                struttura chiara e professionale. Lo compili, lo generi e lo invii al
-                costruttore con tutti i capitoli già predisposti. Lui inserisce i suoi
-                documenti direttamente dietro ai tuoi, seguendo la struttura che hai
-                definito.
-              </p>
-              <p>
-                Qualche giorno prima del FAT ti rimanda tutto completo: tu puoi verificare
-                con calma, chiedere integrazioni, chiarire eventuali punti critici. Quando
-                arrivi in cantiere, non devi più aspettare nulla: trovi già tutto pronto.
-              </p>
+              <p>{t("minifat.methodP1")}</p>
+              <p>{t("minifat.methodP2")}</p>
             </div>
 
             <div className="grid sm:grid-cols-3 gap-5 mt-10">
-              {[
-                {
-                  title: "Ottimizza la tua giornata",
-                  desc: "Arriverai in cantiere e troverai già tutto predisposto, così potrai concentrarti solo sul macchinario.",
-                },
-                {
-                  title: "Riduci le attese inutili",
-                  desc: "I documenti saranno pronti al tuo arrivo e tu potrai dedicarti subito alla parte tecnica.",
-                },
-                {
-                  title: "Entra e lavora subito",
-                  desc: "Zero perdite di tempo: trovi tutto organizzato e puoi passare direttamente alla verifica del macchinario.",
-                },
-              ].map(({ title, desc }) => (
+              {methodCards1.map(({ title, desc }) => (
                 <Card key={title} className="border-2 border-primary/20">
                   <CardHeader>
                     <CardTitle className="text-lg">{title}</CardTitle>
@@ -397,28 +255,11 @@ function MiniFatPage() {
             </div>
 
             <div className="space-y-5 text-lg text-foreground/85 leading-relaxed mt-12">
-              <p>
-                MiniFAT elimina la confusione, i PDF disordinati, i documenti mancanti e le
-                corse dell'ultimo minuto. Ti permette di arrivare al FAT con un dossier
-                completo, verificato e già approvato nelle parti burocratiche.
-              </p>
+              <p>{t("minifat.methodP3")}</p>
             </div>
 
             <div className="grid sm:grid-cols-3 gap-5 mt-10">
-              {[
-                {
-                  title: "Massimizza ogni minuto",
-                  desc: "La burocrazia è già sistemata, tu ti concentri solo sulla visione e sul controllo operativo.",
-                },
-                {
-                  title: "Arrivi e inizi a fare sul serio",
-                  desc: "Documenti pronti, procedure già allineate: resta solo da valutare il macchinario.",
-                },
-                {
-                  title: "Lavora con un passo avanti",
-                  desc: "Tutto predisposto in anticipo, così puoi dedicarti subito alla parte che conta davvero.",
-                },
-              ].map(({ title, desc }) => (
+              {methodCards2.map(({ title, desc }) => (
                 <Card key={title} className="border-2 border-primary/20">
                   <CardHeader>
                     <CardTitle className="text-lg">{title}</CardTitle>
@@ -432,10 +273,10 @@ function MiniFatPage() {
 
             <div className="mt-12 rounded-2xl border-2 border-primary/30 [background:var(--gradient-section-corsi)] p-8 text-center">
               <p className="text-xl md:text-2xl font-bold">
-                MiniFAT non è solo un'app:
+                {t("minifat.methodCalloutLine1")}
               </p>
               <p className="mt-2 text-lg text-foreground/85">
-                è un nuovo modo di gestire il FAT, più rapido, più pulito, più professionale.
+                {t("minifat.methodCalloutLine2")}
               </p>
             </div>
           </div>
@@ -447,29 +288,32 @@ function MiniFatPage() {
           <div className="container mx-auto px-4 max-w-6xl">
             <div className="text-center mb-12">
               <p className="text-sm font-bold text-primary uppercase tracking-wider mb-2">
-                Perché MiniFAT è indispensabile
+                {t("minifat.benefitsSectionLabel")}
               </p>
               <h2 className="text-3xl md:text-4xl font-bold">
-                Arrivi e inizi a fare sul serio
+                {t("minifat.benefitsH2")}
               </h2>
               <p className="mt-3 text-foreground/80 max-w-2xl mx-auto">
-                Documenti pronti, procedure allineate: resta solo da valutare il macchinario.
+                {t("minifat.benefitsSubtitle")}
               </p>
             </div>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-              {benefits.map(({ icon: Icon, title, desc }) => (
-                <Card key={title} className="border-2 border-primary/20">
-                  <CardHeader>
-                    <div className="h-12 w-12 rounded-lg [background:var(--gradient-hero)] text-primary-foreground flex items-center justify-center mb-3">
-                      <Icon className="h-6 w-6" aria-hidden />
-                    </div>
-                    <CardTitle className="text-lg">{title}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-foreground/80">{desc}</p>
-                  </CardContent>
-                </Card>
-              ))}
+              {benefits.map(({ title, desc }, i) => {
+                const Icon = benefitIcons[i];
+                return (
+                  <Card key={title} className="border-2 border-primary/20">
+                    <CardHeader>
+                      <div className="h-12 w-12 rounded-lg [background:var(--gradient-hero)] text-primary-foreground flex items-center justify-center mb-3">
+                        <Icon className="h-6 w-6" aria-hidden />
+                      </div>
+                      <CardTitle className="text-lg">{title}</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-foreground/80">{desc}</p>
+                    </CardContent>
+                  </Card>
+                );
+              })}
             </div>
           </div>
         </section>
@@ -479,16 +323,16 @@ function MiniFatPage() {
           <div className="container mx-auto px-4 max-w-md">
             <div className="text-center mb-10">
               <p className="text-sm font-bold text-primary uppercase tracking-wider mb-2">
-                Prezzi
+                {t("minifat.pricingSectionLabel")}
               </p>
-              <h2 className="text-3xl md:text-4xl font-bold">Un unico piano, tutto incluso</h2>
+              <h2 className="text-3xl md:text-4xl font-bold">{t("minifat.pricingH2")}</h2>
             </div>
             <Card className="border-2 border-primary/30 shadow-[var(--shadow-elegant)] overflow-hidden">
               <div className="[background:var(--gradient-hero)] text-primary-foreground text-center py-7 px-6">
-                <p className="text-lg font-semibold">MiniFAT</p>
+                <p className="text-lg font-semibold">{t("minifat.pricingPlanName")}</p>
                 <p className="mt-1">
                   <span className="text-5xl font-extrabold">19€</span>
-                  <span className="text-lg font-medium">/mese</span>
+                  <span className="text-lg font-medium">{t("minifat.pricingMonth")}</span>
                 </p>
               </div>
               <CardContent className="pt-6">
@@ -503,10 +347,10 @@ function MiniFatPage() {
                   ))}
                 </ul>
                 <Button variant="hero" size="lg" className="w-full h-12 mt-7 text-base">
-                  Attiva ora <ArrowRight className="ml-1 h-4 w-4" aria-hidden />
+                  {t("minifat.pricingCta")} <ArrowRight className="ml-1 h-4 w-4" aria-hidden />
                 </Button>
                 <p className="mt-3 text-center text-xs text-foreground/60">
-                  Pagamento sicuro tramite Paddle
+                  {t("minifat.pricingNote")}
                 </p>
               </CardContent>
             </Card>
@@ -517,7 +361,7 @@ function MiniFatPage() {
         <section className="py-20 [background:var(--gradient-section-corsi)] border-y-2 border-primary/15">
           <div className="container mx-auto px-4 max-w-3xl">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-10">
-              Domande frequenti
+              {t("minifat.faqH2")}
             </h2>
             <Accordion type="single" collapsible className="w-full">
               {faq.map((item, i) => (
@@ -536,24 +380,24 @@ function MiniFatPage() {
         <section className="py-20 [background:var(--gradient-section-about)] text-white">
           <div className="container mx-auto px-4 max-w-3xl text-center">
             <h2 className="text-3xl md:text-4xl font-bold">
-              Pronto a creare il tuo prossimo dossier FAT?
+              {t("minifat.ctaH2")}
             </h2>
             <p className="mt-4 text-white/90 text-lg">
-              PDF generato localmente, nessun invio dati a server esterni.
+              {t("minifat.ctaDesc")}
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
               <Button
                 size="lg"
                 className="h-12 px-7 text-base bg-yellow-400 text-black hover:bg-yellow-300 border-2 border-black"
               >
-                Attiva MiniFAT – 19€/mese
+                {t("minifat.ctaCta")}
               </Button>
               <Button
                 size="lg"
                 variant="outline"
                 className="h-12 px-7 text-base border-2 border-white/60 bg-transparent text-white hover:bg-white/10 hover:text-white"
               >
-                <PlayCircle className="h-5 w-5" aria-hidden /> Prova la Demo
+                <PlayCircle className="h-5 w-5" aria-hidden /> {t("minifat.ctaDemo")}
               </Button>
             </div>
           </div>
