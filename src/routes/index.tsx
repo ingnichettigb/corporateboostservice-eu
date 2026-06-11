@@ -101,6 +101,7 @@ function Home() {
                 const wip = "wip" in item ? item.wip : false;
                 const routeMap: Record<string, string> = {
                   pedFlow: "/pedflow",
+                  mocaSerbatoi: "/moca-serbatoi",
                   miniFat: "/minifat",
                   smartMaintenance: "/smart-maintenance",
                 };

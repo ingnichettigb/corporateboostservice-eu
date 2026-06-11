@@ -74,6 +74,10 @@
         "title": "PedFlow",
         "desc": "Verifica il fluido se appartiene al Gruppo 1 o 2 della CE PED in un Click."
       },
+      "mocaSerbatoi": {
+        "title": "MOCA Serbatoi Inox",
+        "desc": "Regolarizzazione e certificazione MOCA dei serbatoi inox datati: idoneità alimentare dimostrata con metodologia ufficiale."
+      },
       "smartMaintenance": {
         "title": "Smart Maintenance",
         "desc": "L'assistente digitale per manutenzioni e sopralluoghi: acquisisce immagini e video, trasforma le note vocali in testo e organizza tutto in report pronti da condividere."
