@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, GraduationCap, Layers, CheckCircle2, ShieldCheck, FileLock, Video, MapPin, LifeBuoy, Construction, Gift } from "lucide-react";
+import { ArrowRight, GraduationCap, Layers, CheckCircle2, ShieldCheck, FileLock, Video, MapPin, LifeBuoy, Construction, Gift, Container } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
