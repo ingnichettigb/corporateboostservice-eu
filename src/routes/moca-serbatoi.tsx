@@ -45,6 +45,28 @@ i18n.addResourceBundle("en", "mocaSerbatoi", mocaLocale.en, true, false);
 const whenIcons = [Clock, ScrollText, Building2, ClipboardCheck, ShieldCheck, Database, FileCheck2];
 const whyIcons = [Award, Gauge, ScrollText, Microscope, Smartphone, UserCheck, CheckCircle2];
 
+function SectionCtas({ t }: { t: (k: string) => string }) {
+  return (
+    <div className="mt-10 flex flex-col sm:flex-row gap-3 justify-center">
+      <Button variant="hero" size="lg" className="h-12 px-7 text-base" asChild>
+        <a href={buildMailto(t("heroCtaPrimary"))}>
+          <CalendarCheck className="h-5 w-5" aria-hidden /> {t("heroCtaPrimary")}
+        </a>
+      </Button>
+      <Button
+        variant="outline"
+        size="lg"
+        className="h-12 px-7 text-base border-2 border-primary/40 bg-white"
+        asChild
+      >
+        <a href={buildMailto(t("heroCtaSecondary"))}>
+          <Phone className="h-5 w-5" aria-hidden /> {t("heroCtaSecondary")}
+        </a>
+      </Button>
+    </div>
+  );
+}
+
 export const Route = createFileRoute("/moca-serbatoi")({
   head: () => ({
     meta: [
