@@ -45,6 +45,28 @@ i18n.addResourceBundle("en", "mocaSerbatoi", mocaLocale.en, true, false);
 const whenIcons = [Clock, ScrollText, Building2, ClipboardCheck, ShieldCheck, Database, FileCheck2];
 const whyIcons = [Award, Gauge, ScrollText, Microscope, Smartphone, UserCheck, CheckCircle2];
 
+function SectionCtas({ t }: { t: (k: string) => string }) {
+  return (
+    <div className="mt-10 flex flex-col sm:flex-row gap-3 justify-center">
+      <Button variant="hero" size="lg" className="h-12 px-7 text-base" asChild>
+        <a href={buildMailto(t("heroCtaPrimary"))}>
+          <CalendarCheck className="h-5 w-5" aria-hidden /> {t("heroCtaPrimary")}
+        </a>
+      </Button>
+      <Button
+        variant="outline"
+        size="lg"
+        className="h-12 px-7 text-base border-2 border-primary/40 bg-white"
+        asChild
+      >
+        <a href={buildMailto(t("heroCtaSecondary"))}>
+          <Phone className="h-5 w-5" aria-hidden /> {t("heroCtaSecondary")}
+        </a>
+      </Button>
+    </div>
+  );
+}
+
 export const Route = createFileRoute("/moca-serbatoi")({
   head: () => ({
     meta: [
@@ -131,6 +153,7 @@ function MocaSerbatoiPage() {
             <p className="text-xl md:text-2xl font-medium text-center leading-relaxed text-foreground/90">
               {t("reassure")}
             </p>
+            <SectionCtas t={t} />
           </div>
         </section>
 
@@ -156,6 +179,7 @@ function MocaSerbatoiPage() {
               <p className="text-lg font-semibold text-foreground">{t("problemHighlight")}</p>
             </div>
             <p className="text-lg font-bold text-primary">{t("problemMessage")}</p>
+            <SectionCtas t={t} />
           </div>
         </section>
 
@@ -183,6 +207,7 @@ function MocaSerbatoiPage() {
                 );
               })}
             </div>
+            <SectionCtas t={t} />
           </div>
         </section>
 
@@ -221,6 +246,7 @@ function MocaSerbatoiPage() {
               </div>
             </div>
             <p className="mt-8 text-center text-lg font-bold text-primary">{t("solutionRepeat")}</p>
+            <SectionCtas t={t} />
           </div>
         </section>
 
@@ -247,6 +273,7 @@ function MocaSerbatoiPage() {
                 </li>
               ))}
             </ol>
+            <SectionCtas t={t} />
           </div>
         </section>
 
@@ -278,6 +305,7 @@ function MocaSerbatoiPage() {
               ))}
             </div>
             <p className="mt-8 text-center text-lg font-medium text-foreground/85">{t("workNote")}</p>
+            <SectionCtas t={t} />
           </div>
         </section>
 
@@ -308,6 +336,7 @@ function MocaSerbatoiPage() {
             <p className="mt-10 text-center text-lg font-bold text-primary max-w-3xl mx-auto">
               {t("whyClose")}
             </p>
+            <SectionCtas t={t} />
           </div>
         </section>
 
@@ -330,6 +359,7 @@ function MocaSerbatoiPage() {
               ))}
             </div>
             <p className="mt-8 text-lg text-foreground/85">{t("normP")}</p>
+            <SectionCtas t={t} />
           </div>
         </section>
 
@@ -347,6 +377,7 @@ function MocaSerbatoiPage() {
                 </AccordionItem>
               ))}
             </Accordion>
+            <SectionCtas t={t} />
           </div>
         </section>
 
