@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as TelecamereRouteImport } from './routes/telecamere'
 import { Route as SmartMaintenanceRouteImport } from './routes/smart-maintenance'
 import { Route as PedflowRouteImport } from './routes/pedflow'
+import { Route as MocaSerbatoiRouteImport } from './routes/moca-serbatoi'
 import { Route as MinifatRouteImport } from './routes/minifat'
 import { Route as GpsRouteImport } from './routes/gps'
 import { Route as CorsiRouteImport } from './routes/corsi'
@@ -33,6 +34,11 @@ const SmartMaintenanceRoute = SmartMaintenanceRouteImport.update({
 const PedflowRoute = PedflowRouteImport.update({
   id: '/pedflow',
   path: '/pedflow',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MocaSerbatoiRoute = MocaSerbatoiRouteImport.update({
+  id: '/moca-serbatoi',
+  path: '/moca-serbatoi',
   getParentRoute: () => rootRouteImport,
 } as any)
 const MinifatRoute = MinifatRouteImport.update({
@@ -79,6 +85,7 @@ export interface FileRoutesByFullPath {
   '/corsi': typeof CorsiRoute
   '/gps': typeof GpsRoute
   '/minifat': typeof MinifatRoute
+  '/moca-serbatoi': typeof MocaSerbatoiRoute
   '/pedflow': typeof PedflowRoute
   '/smart-maintenance': typeof SmartMaintenanceRoute
   '/telecamere': typeof TelecamereRoute
@@ -91,6 +98,7 @@ export interface FileRoutesByTo {
   '/corsi': typeof CorsiRoute
   '/gps': typeof GpsRoute
   '/minifat': typeof MinifatRoute
+  '/moca-serbatoi': typeof MocaSerbatoiRoute
   '/pedflow': typeof PedflowRoute
   '/smart-maintenance': typeof SmartMaintenanceRoute
   '/telecamere': typeof TelecamereRoute
@@ -104,6 +112,7 @@ export interface FileRoutesById {
   '/corsi': typeof CorsiRoute
   '/gps': typeof GpsRoute
   '/minifat': typeof MinifatRoute
+  '/moca-serbatoi': typeof MocaSerbatoiRoute
   '/pedflow': typeof PedflowRoute
   '/smart-maintenance': typeof SmartMaintenanceRoute
   '/telecamere': typeof TelecamereRoute
@@ -118,6 +127,7 @@ export interface FileRouteTypes {
     | '/corsi'
     | '/gps'
     | '/minifat'
+    | '/moca-serbatoi'
     | '/pedflow'
     | '/smart-maintenance'
     | '/telecamere'
@@ -130,6 +140,7 @@ export interface FileRouteTypes {
     | '/corsi'
     | '/gps'
     | '/minifat'
+    | '/moca-serbatoi'
     | '/pedflow'
     | '/smart-maintenance'
     | '/telecamere'
@@ -142,6 +153,7 @@ export interface FileRouteTypes {
     | '/corsi'
     | '/gps'
     | '/minifat'
+    | '/moca-serbatoi'
     | '/pedflow'
     | '/smart-maintenance'
     | '/telecamere'
@@ -155,6 +167,7 @@ export interface RootRouteChildren {
   CorsiRoute: typeof CorsiRoute
   GpsRoute: typeof GpsRoute
   MinifatRoute: typeof MinifatRoute
+  MocaSerbatoiRoute: typeof MocaSerbatoiRoute
   PedflowRoute: typeof PedflowRoute
   SmartMaintenanceRoute: typeof SmartMaintenanceRoute
   TelecamereRoute: typeof TelecamereRoute
@@ -181,6 +194,13 @@ declare module '@tanstack/react-router' {
       path: '/pedflow'
       fullPath: '/pedflow'
       preLoaderRoute: typeof PedflowRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/moca-serbatoi': {
+      id: '/moca-serbatoi'
+      path: '/moca-serbatoi'
+      fullPath: '/moca-serbatoi'
+      preLoaderRoute: typeof MocaSerbatoiRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/minifat': {
@@ -243,6 +263,7 @@ const rootRouteChildren: RootRouteChildren = {
   CorsiRoute: CorsiRoute,
   GpsRoute: GpsRoute,
   MinifatRoute: MinifatRoute,
+  MocaSerbatoiRoute: MocaSerbatoiRoute,
   PedflowRoute: PedflowRoute,
   SmartMaintenanceRoute: SmartMaintenanceRoute,
   TelecamereRoute: TelecamereRoute,

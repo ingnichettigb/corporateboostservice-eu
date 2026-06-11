@@ -6,6 +6,7 @@
     "home": "Home",
     "corsi": "Courses",
     "applicazioni": "Applications",
+    "moca": "MOCA Tanks",
     "contatti": "Contact me",
     "assistenza": "GDPR, Privacy, CCTV, GPS Support"
   },
@@ -73,6 +74,10 @@
       "pedFlow": {
         "title": "PedFlow",
         "desc": "Check whether the fluid belongs to Group 1 or 2 of the EC PED in one Click."
+      },
+      "mocaSerbatoi": {
+        "title": "MOCA Stainless Steel Tanks",
+        "desc": "Regularisation and MOCA certification of aged stainless steel tanks: food-contact suitability proven with an official methodology."
       },
       "smartMaintenance": {
         "title": "Smart Maintenance",
