@@ -361,7 +361,7 @@ function MocaSerbatoiPage() {
                 className="h-12 px-7 text-base bg-yellow-400 text-black hover:bg-yellow-300 border-2 border-black"
                 asChild
               >
-                <a href={buildMailto(`MOCA Serbatoi — ${t("ctaPrimary")}`)}>
+                <a href={buildMailto(t("ctaPrimary"))}>
                   <Phone className="h-5 w-5" aria-hidden /> {t("ctaPrimary")}
                 </a>
               </Button>
