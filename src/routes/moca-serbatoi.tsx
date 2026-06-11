@@ -153,6 +153,7 @@ function MocaSerbatoiPage() {
             <p className="text-xl md:text-2xl font-medium text-center leading-relaxed text-foreground/90">
               {t("reassure")}
             </p>
+            <SectionCtas t={t} />
           </div>
         </section>
 
@@ -178,6 +179,7 @@ function MocaSerbatoiPage() {
               <p className="text-lg font-semibold text-foreground">{t("problemHighlight")}</p>
             </div>
             <p className="text-lg font-bold text-primary">{t("problemMessage")}</p>
+            <SectionCtas t={t} />
           </div>
         </section>
 
@@ -205,6 +207,7 @@ function MocaSerbatoiPage() {
                 );
               })}
             </div>
+            <SectionCtas t={t} />
           </div>
         </section>
 
@@ -243,6 +246,7 @@ function MocaSerbatoiPage() {
               </div>
             </div>
             <p className="mt-8 text-center text-lg font-bold text-primary">{t("solutionRepeat")}</p>
+            <SectionCtas t={t} />
           </div>
         </section>
 
@@ -269,6 +273,7 @@ function MocaSerbatoiPage() {
                 </li>
               ))}
             </ol>
+            <SectionCtas t={t} />
           </div>
         </section>
 
@@ -300,6 +305,7 @@ function MocaSerbatoiPage() {
               ))}
             </div>
             <p className="mt-8 text-center text-lg font-medium text-foreground/85">{t("workNote")}</p>
+            <SectionCtas t={t} />
           </div>
         </section>
 
@@ -330,6 +336,7 @@ function MocaSerbatoiPage() {
             <p className="mt-10 text-center text-lg font-bold text-primary max-w-3xl mx-auto">
               {t("whyClose")}
             </p>
+            <SectionCtas t={t} />
           </div>
         </section>
 
@@ -352,6 +359,7 @@ function MocaSerbatoiPage() {
               ))}
             </div>
             <p className="mt-8 text-lg text-foreground/85">{t("normP")}</p>
+            <SectionCtas t={t} />
           </div>
         </section>
 
@@ -369,6 +377,7 @@ function MocaSerbatoiPage() {
                 </AccordionItem>
               ))}
             </Accordion>
+            <SectionCtas t={t} />
           </div>
         </section>
 
