@@ -46,6 +46,9 @@ function Home() {
               <Button variant="outline" size="lg" className="h-12 w-full border-2 border-primary text-primary font-semibold" asChild>
                 <Link to="/applicazioni"><Layers className="mr-1" aria-hidden /> {t("hero.ctaApp")}</Link>
               </Button>
+              <Button variant="outline" size="lg" className="h-12 w-full border-2 border-primary text-primary font-semibold" asChild>
+                <Link to="/moca-serbatoi"><Container className="mr-1" aria-hidden /> {t("nav.moca")}</Link>
+              </Button>
               <Button variant="hero" size="lg" className="h-12 w-full" asChild>
                 <Link to="/" hash="assistenza"><LifeBuoy className="mr-1" aria-hidden /> {t("nav.assistenza")}</Link>
               </Button>
