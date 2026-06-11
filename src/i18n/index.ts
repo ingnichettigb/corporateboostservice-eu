@@ -8,6 +8,7 @@ import { smartMaintenance } from "./locales/pages/smart-maintenance";
 import { telecamere } from "./locales/pages/telecamere";
 import { controlli } from "./locales/pages/controlli-gratuiti";
 import { pedflow } from "./locales/pages/pedflow";
+import { mocaSerbatoi } from "./locales/pages/moca-serbatoi";
 
 if (!i18n.isInitialized) {
   i18n.use(initReactI18next).init({
@@ -22,6 +23,7 @@ if (!i18n.isInitialized) {
           controlli: controlli.it,
         },
         pedflow: pedflow.it,
+        mocaSerbatoi: mocaSerbatoi.it,
       },
       en: {
         translation: {
@@ -33,11 +35,12 @@ if (!i18n.isInitialized) {
           controlli: controlli.en,
         },
         pedflow: pedflow.en,
+        mocaSerbatoi: mocaSerbatoi.en,
       },
     },
     lng: "it",
     fallbackLng: "it",
-    ns: ["translation", "pedflow"],
+    ns: ["translation", "pedflow", "mocaSerbatoi"],
     defaultNS: "translation",
     interpolation: { escapeValue: false },
     react: { useSuspense: false },
