@@ -41,6 +41,11 @@
     "feat3": "For companies and individuals",
     "iscriviti": "Enroll",
     "items": {
+      "gdprAddetto": {
+        "title": "GDPR and Data Protection",
+        "subtitle": "Practical guide for the privacy officer",
+        "desc": "Everything the privacy officer needs to know and do every day."
+      },
       "privacy": {
         "title": "Privacy & Data Protection",
         "desc": "Privacy regulation principles applied to daily work."
@@ -57,7 +62,8 @@
         "title": "Regulatory News",
         "desc": "Continuous updates on privacy, safety and legislative changes."
       }
-    }
+    },
+    "wip": "Under construction"
   },
   "app": {
     "kicker": "Digital Solutions",
