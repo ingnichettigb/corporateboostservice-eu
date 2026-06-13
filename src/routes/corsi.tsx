@@ -7,24 +7,6 @@ import { corsi } from "@/data/site";
 import { ArrowRight, Clock, Award, Users, Construction } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
-const EMAIL = "team@corporateboostservice.eu";
-
-function buildMailto(corso: string) {
-  const subject = corso;
-  const body = [
-    `Salve,`,
-    ``,
-    `desidero ricevere maggiori informazioni sul corso "${corso}".`,
-    ``,
-    `La mia email di contatto è: [inserisci qui la tua email]`,
-    `Nome e cognome: `,
-    `Telefono: `,
-    ``,
-    `Grazie,`,
-    `Corporate Boost Service`,
-  ].join("\n");
-  return `mailto:${EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-}
 
 export const Route = createFileRoute("/corsi")({
   head: () => ({
