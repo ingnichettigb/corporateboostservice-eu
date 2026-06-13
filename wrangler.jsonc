@@ -4,7 +4,10 @@
   "compatibility_date": "2025-09-24",
   "compatibility_flags": ["nodejs_compat"],
   "main": "dist/server/server.js",
-  "assets": "dist/client/assets",
+
+  "assets": "dist/client",
+  "assets_base_url": "/assets",
+
   "routes": [
     {
       "pattern": "corporateboostservice.eu/*",
