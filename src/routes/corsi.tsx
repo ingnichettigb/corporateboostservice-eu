@@ -4,8 +4,10 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { ContactSection } from "@/components/ContactSection";
 import { corsi } from "@/data/site";
-import { ArrowRight, Clock, Award, Users, Construction } from "lucide-react";
+import { buildMailto } from "@/lib/contact";
+import { ArrowRight, Clock, Award, Users, Construction, Mail, FileText } from "lucide-react";
 import { useTranslation } from "react-i18next";
+
 
 
 export const Route = createFileRoute("/corsi")({
@@ -59,9 +61,22 @@ function CorsiPage() {
                   <p className="text-lg font-bold text-foreground mb-2">{t(`corsi.items.${key}.subtitle`)}</p>
                 )}
                 <p className="text-foreground/85 leading-relaxed mb-6">{t(`corsi.items.${key}.desc`)}</p>
-                <Button variant="hero" size="default" className="h-11" disabled>
-                  {t("corsi.iscriviti")} <ArrowRight className="ml-1 h-4 w-4" aria-hidden />
-                </Button>
+                <div className="flex flex-wrap items-center gap-3">
+                  <Button variant="hero" size="default" className="h-11" disabled>
+                    {t("corsi.iscriviti")} <ArrowRight className="ml-1 h-4 w-4" aria-hidden />
+                  </Button>
+                  <Button asChild variant="outline" size="default" className="h-11">
+                    <a href={buildMailto(t(`corsi.items.${key}.title`), t("corsi.infoBody"))}>
+                      <Mail className="mr-1 h-4 w-4" aria-hidden /> {t("corsi.infoLabel")}
+                    </a>
+                  </Button>
+                  <Button asChild variant="outline" size="default" className="h-11">
+                    <a href={buildMailto(t(`corsi.items.${key}.title`), t("corsi.preventivoBody"))}>
+                      <FileText className="mr-1 h-4 w-4" aria-hidden /> {t("corsi.preventivoLabel")}
+                    </a>
+                  </Button>
+                </div>
+
               </article>
               );
             })}
