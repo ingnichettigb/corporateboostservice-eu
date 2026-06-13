@@ -61,21 +61,22 @@ function CorsiPage() {
                   <p className="text-lg font-bold text-foreground mb-2">{t(`corsi.items.${key}.subtitle`)}</p>
                 )}
                 <p className="text-foreground/85 leading-relaxed mb-6">{t(`corsi.items.${key}.desc`)}</p>
-                <div className="flex flex-wrap items-center gap-3">
-                  <Button variant="hero" size="default" className="h-11" disabled>
+                <div className="flex flex-col items-center gap-3 max-w-xs mx-auto">
+                  <Button variant="hero" size="default" className="h-11 w-full" disabled>
                     {t("corsi.iscriviti")} <ArrowRight className="ml-1 h-4 w-4" aria-hidden />
                   </Button>
-                  <Button asChild variant="outline" size="default" className="h-11">
+                  <Button asChild variant="outline" size="default" className="h-11 w-full">
                     <a href={buildMailto(t(`corsi.items.${key}.title`), t("corsi.infoBody"))}>
                       <Mail className="mr-1 h-4 w-4" aria-hidden /> {t("corsi.infoLabel")}
                     </a>
                   </Button>
-                  <Button asChild variant="outline" size="default" className="h-11">
+                  <Button asChild variant="outline" size="default" className="h-11 w-full">
                     <a href={buildMailto(t(`corsi.items.${key}.title`), t("corsi.preventivoBody"))}>
                       <FileText className="mr-1 h-4 w-4" aria-hidden /> {t("corsi.preventivoLabel")}
                     </a>
                   </Button>
                 </div>
+
 
               </article>
               );
