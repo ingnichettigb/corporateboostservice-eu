@@ -4,8 +4,10 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { ContactSection } from "@/components/ContactSection";
 import { corsi } from "@/data/site";
-import { ArrowRight, Clock, Award, Users, Construction } from "lucide-react";
+import { buildMailto } from "@/lib/contact";
+import { ArrowRight, Clock, Award, Users, Construction, Mail, FileText } from "lucide-react";
 import { useTranslation } from "react-i18next";
+
 
 
 export const Route = createFileRoute("/corsi")({
