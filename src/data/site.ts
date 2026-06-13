@@ -5,10 +5,11 @@ import minifatLogo from "@/assets/apps/minifat.png.asset.json";
 import mocaSerbatoiLogo from "@/assets/apps/moca-serbatoi.png.asset.json";
 
 export const corsi = [
-  { icon: FileLock, key: "privacy" },
-  { icon: ShieldCheck, key: "gdpr" },
-  { icon: HardHat, key: "sicurezza" },
-  { icon: Newspaper, key: "news" },
+  { icon: ShieldCheck, key: "gdprAddetto", wip: false, hasSubtitle: true },
+  { icon: FileLock, key: "privacy", wip: true },
+  { icon: ShieldCheck, key: "gdpr", wip: true },
+  { icon: HardHat, key: "sicurezza", wip: true },
+  { icon: Newspaper, key: "news", wip: true },
 ] as const;
 
 export const applicazioni = [
