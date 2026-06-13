@@ -59,15 +59,9 @@ function CorsiPage() {
                   <p className="text-lg font-bold text-foreground mb-2">{t(`corsi.items.${key}.subtitle`)}</p>
                 )}
                 <p className="text-foreground/85 leading-relaxed mb-6">{t(`corsi.items.${key}.desc`)}</p>
-                {wip ? (
-                  <Button variant="hero" size="default" className="h-11" disabled>
-                    {t("corsi.iscriviti")} <ArrowRight className="ml-1 h-4 w-4" aria-hidden />
-                  </Button>
-                ) : (
-                  <Button variant="hero" size="default" className="h-11" disabled>
-                    {t("corsi.iscriviti")} <ArrowRight className="ml-1 h-4 w-4" aria-hidden />
-                  </Button>
-                )}
+                <Button variant="hero" size="default" className="h-11" disabled>
+                  {t("corsi.iscriviti")} <ArrowRight className="ml-1 h-4 w-4" aria-hidden />
+                </Button>
               </article>
               );
             })}
