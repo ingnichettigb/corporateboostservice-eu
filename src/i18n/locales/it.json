@@ -41,6 +41,11 @@
     "feat3": "Per aziende e privati",
     "iscriviti": "Iscriviti",
     "items": {
+      "gdprAddetto": {
+        "title": "GDPR e protezione dei dati",
+        "subtitle": "Guida pratica per l'addetto",
+        "desc": "Tutto quello che l'addetto privacy deve sapere e fare ogni giorno."
+      },
       "privacy": {
         "title": "Privacy & Protezione Dati",
         "desc": "I principi della normativa privacy applicati al lavoro quotidiano."
@@ -57,7 +62,8 @@
         "title": "News Normative",
         "desc": "Aggiornamenti continui su privacy, sicurezza e novità legislative."
       }
-    }
+    },
+    "wip": "In costruzione"
   },
   "app": {
     "kicker": "Soluzioni Digitali",
