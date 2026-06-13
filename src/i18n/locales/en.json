@@ -40,6 +40,10 @@
     "feat2": "Final certificate",
     "feat3": "For companies and individuals",
     "iscriviti": "Enroll",
+    "infoLabel": "Information",
+    "preventivoLabel": "Quote",
+    "infoBody": "Hello,\n\nI would like to receive more information about the training course indicated in the subject. Could you kindly provide me with details on contents, format and timing?\n\nThank you.\n\n[Signature]",
+    "preventivoBody": "Hello,\n\nI am interested in the training course indicated in the subject and would like to receive a quote for the purchase of the certificate. I look forward to your kind reply.\n\nThank you.\n\n[Signature]",
     "items": {
       "gdprAddetto": {
         "title": "GDPR and Data Protection",
