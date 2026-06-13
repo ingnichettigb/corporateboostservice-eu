@@ -4,7 +4,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { ContactSection } from "@/components/ContactSection";
 import { corsi } from "@/data/site";
-import { ArrowRight, Clock, Award, Users } from "lucide-react";
+import { ArrowRight, Clock, Award, Users, Construction } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 const EMAIL = "team@corporateboostservice.eu";
