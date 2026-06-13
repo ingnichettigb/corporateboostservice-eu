@@ -58,20 +58,37 @@ function CorsiPage() {
 
         <section className="py-20 [background:var(--gradient-section-corsi)]">
           <div className="container mx-auto px-4 grid sm:grid-cols-2 gap-6 max-w-5xl">
-            {corsi.map(({ icon: Icon, key }) => (
-              <article key={key} className="p-8 rounded-2xl border-2 border-primary/20 bg-white shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-elegant)] transition-all">
+            {corsi.map((item) => {
+              const { icon: Icon, key } = item;
+              const wip = "wip" in item ? item.wip : false;
+              const hasSubtitle = "hasSubtitle" in item ? item.hasSubtitle : false;
+              return (
+              <article key={key} className="relative p-8 rounded-2xl border-2 border-primary/20 bg-white shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-elegant)] transition-all">
+                {wip && (
+                  <span className="absolute top-3 right-3 inline-flex items-center gap-1 rounded-full bg-yellow-400 text-black px-2.5 py-1 text-xs font-bold uppercase tracking-wider border-2 border-black">
+                    <Construction className="h-3.5 w-3.5" aria-hidden /> {t("corsi.wip")}
+                  </span>
+                )}
                 <div className="h-14 w-14 rounded-xl bg-primary text-primary-foreground flex items-center justify-center mb-5">
                   <Icon className="h-7 w-7" aria-hidden />
                 </div>
-                <h2 className="text-xl font-bold mb-2 text-foreground">{t(`corsi.items.${key}.title`)}</h2>
+                <h2 className="text-xl font-bold mb-1 text-foreground">{t(`corsi.items.${key}.title`)}</h2>
+                {hasSubtitle && (
+                  <p className="text-lg font-bold text-foreground mb-2">{t(`corsi.items.${key}.subtitle`)}</p>
+                )}
                 <p className="text-foreground/85 leading-relaxed mb-6">{t(`corsi.items.${key}.desc`)}</p>
-                <Button asChild variant="hero" size="default" className="h-11">
-                  <a href={buildMailto(t(`corsi.items.${key}.title`))}>
+                {wip ? (
+                  <Button variant="hero" size="default" className="h-11" disabled>
                     {t("corsi.iscriviti")} <ArrowRight className="ml-1 h-4 w-4" aria-hidden />
-                  </a>
-                </Button>
+                  </Button>
+                ) : (
+                  <Button variant="hero" size="default" className="h-11" disabled>
+                    {t("corsi.iscriviti")} <ArrowRight className="ml-1 h-4 w-4" aria-hidden />
+                  </Button>
+                )}
               </article>
-            ))}
+              );
+            })}
           </div>
         </section>
 
