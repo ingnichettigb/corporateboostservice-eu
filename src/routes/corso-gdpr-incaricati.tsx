@@ -29,9 +29,7 @@ import {
 } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
-import heroImgAsset from "@/assets/gdpr-incaricati/hero.jpg.asset.json";
-
-const heroImg = heroImgAsset.url;
+import heroImg from "@/assets/gdpr-incaricati/hero.jpg";
 
 export const Route = createFileRoute("/corso-gdpr-incaricati")({
   head: () => ({
