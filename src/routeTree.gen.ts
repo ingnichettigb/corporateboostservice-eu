@@ -15,6 +15,7 @@ import { Route as PedflowRouteImport } from './routes/pedflow'
 import { Route as MocaSerbatoiRouteImport } from './routes/moca-serbatoi'
 import { Route as MinifatRouteImport } from './routes/minifat'
 import { Route as GpsRouteImport } from './routes/gps'
+import { Route as CorsoGdprIncaricatiRouteImport } from './routes/corso-gdpr-incaricati'
 import { Route as CorsiRouteImport } from './routes/corsi'
 import { Route as ControlliGratuitiRouteImport } from './routes/controlli-gratuiti'
 import { Route as AssistenzaGdprRouteImport } from './routes/assistenza-gdpr'
@@ -51,6 +52,11 @@ const GpsRoute = GpsRouteImport.update({
   path: '/gps',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CorsoGdprIncaricatiRoute = CorsoGdprIncaricatiRouteImport.update({
+  id: '/corso-gdpr-incaricati',
+  path: '/corso-gdpr-incaricati',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const CorsiRoute = CorsiRouteImport.update({
   id: '/corsi',
   path: '/corsi',
@@ -83,6 +89,7 @@ export interface FileRoutesByFullPath {
   '/assistenza-gdpr': typeof AssistenzaGdprRoute
   '/controlli-gratuiti': typeof ControlliGratuitiRoute
   '/corsi': typeof CorsiRoute
+  '/corso-gdpr-incaricati': typeof CorsoGdprIncaricatiRoute
   '/gps': typeof GpsRoute
   '/minifat': typeof MinifatRoute
   '/moca-serbatoi': typeof MocaSerbatoiRoute
@@ -96,6 +103,7 @@ export interface FileRoutesByTo {
   '/assistenza-gdpr': typeof AssistenzaGdprRoute
   '/controlli-gratuiti': typeof ControlliGratuitiRoute
   '/corsi': typeof CorsiRoute
+  '/corso-gdpr-incaricati': typeof CorsoGdprIncaricatiRoute
   '/gps': typeof GpsRoute
   '/minifat': typeof MinifatRoute
   '/moca-serbatoi': typeof MocaSerbatoiRoute
@@ -110,6 +118,7 @@ export interface FileRoutesById {
   '/assistenza-gdpr': typeof AssistenzaGdprRoute
   '/controlli-gratuiti': typeof ControlliGratuitiRoute
   '/corsi': typeof CorsiRoute
+  '/corso-gdpr-incaricati': typeof CorsoGdprIncaricatiRoute
   '/gps': typeof GpsRoute
   '/minifat': typeof MinifatRoute
   '/moca-serbatoi': typeof MocaSerbatoiRoute
@@ -125,6 +134,7 @@ export interface FileRouteTypes {
     | '/assistenza-gdpr'
     | '/controlli-gratuiti'
     | '/corsi'
+    | '/corso-gdpr-incaricati'
     | '/gps'
     | '/minifat'
     | '/moca-serbatoi'
@@ -138,6 +148,7 @@ export interface FileRouteTypes {
     | '/assistenza-gdpr'
     | '/controlli-gratuiti'
     | '/corsi'
+    | '/corso-gdpr-incaricati'
     | '/gps'
     | '/minifat'
     | '/moca-serbatoi'
@@ -151,6 +162,7 @@ export interface FileRouteTypes {
     | '/assistenza-gdpr'
     | '/controlli-gratuiti'
     | '/corsi'
+    | '/corso-gdpr-incaricati'
     | '/gps'
     | '/minifat'
     | '/moca-serbatoi'
@@ -165,6 +177,7 @@ export interface RootRouteChildren {
   AssistenzaGdprRoute: typeof AssistenzaGdprRoute
   ControlliGratuitiRoute: typeof ControlliGratuitiRoute
   CorsiRoute: typeof CorsiRoute
+  CorsoGdprIncaricatiRoute: typeof CorsoGdprIncaricatiRoute
   GpsRoute: typeof GpsRoute
   MinifatRoute: typeof MinifatRoute
   MocaSerbatoiRoute: typeof MocaSerbatoiRoute
@@ -217,6 +230,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof GpsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/corso-gdpr-incaricati': {
+      id: '/corso-gdpr-incaricati'
+      path: '/corso-gdpr-incaricati'
+      fullPath: '/corso-gdpr-incaricati'
+      preLoaderRoute: typeof CorsoGdprIncaricatiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/corsi': {
       id: '/corsi'
       path: '/corsi'
@@ -261,6 +281,7 @@ const rootRouteChildren: RootRouteChildren = {
   AssistenzaGdprRoute: AssistenzaGdprRoute,
   ControlliGratuitiRoute: ControlliGratuitiRoute,
   CorsiRoute: CorsiRoute,
+  CorsoGdprIncaricatiRoute: CorsoGdprIncaricatiRoute,
   GpsRoute: GpsRoute,
   MinifatRoute: MinifatRoute,
   MocaSerbatoiRoute: MocaSerbatoiRoute,
@@ -271,13 +292,3 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
