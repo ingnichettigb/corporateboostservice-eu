@@ -62,9 +62,17 @@ function CorsiPage() {
                 )}
                 <p className="text-foreground/85 leading-relaxed mb-6">{t(`corsi.items.${key}.desc`)}</p>
                 <div className="flex flex-col items-center gap-3 max-w-xs mx-auto">
-                  <Button variant="hero" size="default" className="h-11 w-full" disabled>
-                    {t("corsi.iscriviti")} <ArrowRight className="ml-1 h-4 w-4" aria-hidden />
-                  </Button>
+                  {key === "gdprAddetto" ? (
+                    <Button asChild variant="hero" size="default" className="h-11 w-full">
+                      <Link to="/corso-gdpr-incaricati">
+                        {t("corsi.iscriviti")} <ArrowRight className="ml-1 h-4 w-4" aria-hidden />
+                      </Link>
+                    </Button>
+                  ) : (
+                    <Button variant="hero" size="default" className="h-11 w-full" disabled>
+                      {t("corsi.iscriviti")} <ArrowRight className="ml-1 h-4 w-4" aria-hidden />
+                    </Button>
+                  )}
                   <Button asChild variant="outline" size="default" className="h-11 w-full">
                     <a href={buildMailto(t(`corsi.items.${key}.title`), t("corsi.infoBody"))}>
                       <Mail className="mr-1 h-4 w-4" aria-hidden /> {t("corsi.infoLabel")}
