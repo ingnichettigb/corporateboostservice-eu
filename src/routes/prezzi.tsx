@@ -1,0 +1,98 @@
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { useTranslation } from "react-i18next";
+import i18n from "@/i18n";
+import { Info } from "lucide-react";
+import { LegalLayout } from "@/components/LegalLayout";
+import { pricingItems } from "@/i18n/locales/pages/legal";
+
+export const Route = createFileRoute("/prezzi")({
+  head: () => ({
+    meta: [
+      { title: i18n.t("legal.prezzi.metaTitle") },
+      { name: "description", content: i18n.t("legal.prezzi.metaDesc") },
+      { property: "og:title", content: i18n.t("legal.prezzi.metaTitle") },
+      { property: "og:description", content: i18n.t("legal.prezzi.metaDesc") },
+    ],
+  }),
+  component: PrezziPage,
+});
+
+const related = [
+  { to: "/termini-e-condizioni", key: "navTermini" },
+  { to: "/termini-di-servizio", key: "navServizio" },
+  { to: "/privacy-policy", key: "navPrivacy" },
+  { to: "/politica-di-rimborso", key: "navRimborso" },
+] as const;
+
+function PrezziPage() {
+  const { t } = useTranslation();
+  const monthsLabel = (d: string) => `${d} ${d === "1" ? t("legal.prezzi.month") : t("legal.prezzi.months")}`;
+
+  return (
+    <LegalLayout badge={t("legal.prezzi.badge")} title={t("legal.prezzi.title")} subtitle={t("legal.prezzi.subtitle")}>
+      {/* Desktop table */}
+      <div className="hidden md:block overflow-x-auto rounded-xl border border-border">
+        <table className="w-full text-sm">
+          <thead className="bg-muted">
+            <tr className="text-left">
+              <th className="px-4 py-3 font-semibold">{t("legal.prezzi.colService")}</th>
+              <th className="px-4 py-3 font-semibold">{t("legal.prezzi.colPrice")}</th>
+              <th className="px-4 py-3 font-semibold">{t("legal.prezzi.colDuration")}</th>
+              <th className="px-4 py-3 font-semibold">{t("legal.prezzi.colDomain")}</th>
+            </tr>
+          </thead>
+          <tbody className="divide-y divide-border">
+            {pricingItems.map((item) => (
+              <tr key={item.domain} className="hover:bg-muted/50">
+                <td className="px-4 py-3 font-medium">{item.name}</td>
+                <td className="px-4 py-3 whitespace-nowrap font-semibold text-primary">{item.price}</td>
+                <td className="px-4 py-3 whitespace-nowrap">{monthsLabel(item.duration)}</td>
+                <td className="px-4 py-3 font-mono text-xs text-foreground/70 break-all">{item.domain}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      {/* Mobile cards */}
+      <div className="md:hidden space-y-3">
+        {pricingItems.map((item) => (
+          <div key={item.domain} className="rounded-xl border border-border p-4">
+            <div className="font-semibold">{item.name}</div>
+            <div className="mt-2 flex items-center gap-3 text-sm">
+              <span className="font-semibold text-primary">{item.price}</span>
+              <span className="text-foreground/70">{monthsLabel(item.duration)}</span>
+            </div>
+            <div className="mt-2 font-mono text-xs text-foreground/60 break-all">{item.domain}</div>
+          </div>
+        ))}
+      </div>
+
+      {/* Notes */}
+      <div className="mt-10 rounded-xl border border-border bg-muted/40 p-5">
+        <div className="flex items-center gap-2 mb-3 font-bold">
+          <Info className="h-5 w-5 text-primary" aria-hidden /> {t("legal.prezzi.notesHeading")}
+        </div>
+        <ul className="space-y-2 text-sm text-foreground/85 list-disc pl-5">
+          <li>{t("legal.prezzi.note1")}</li>
+          <li>{t("legal.prezzi.note2")}</li>
+          <li>{t("legal.prezzi.note3")}</li>
+        </ul>
+      </div>
+
+      {/* Related */}
+      <div className="mt-10">
+        <h2 className="text-lg font-bold mb-3">{t("legal.prezzi.relatedHeading")}</h2>
+        <ul className="flex flex-wrap gap-3 text-sm">
+          {related.map((l) => (
+            <li key={l.to}>
+              <Link to={l.to} className="text-primary underline underline-offset-4 hover:opacity-80">
+                {t(`legal.${l.key}`)}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </LegalLayout>
+  );
+}

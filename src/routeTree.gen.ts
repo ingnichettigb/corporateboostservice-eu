@@ -14,6 +14,7 @@ import { Route as SmartMaintenanceRouteImport } from './routes/smart-maintenance
 import { Route as PedflowRouteImport } from './routes/pedflow'
 import { Route as MocaSerbatoiRouteImport } from './routes/moca-serbatoi'
 import { Route as MinifatRouteImport } from './routes/minifat'
+import { Route as LegalRouteImport } from './routes/legal'
 import { Route as GpsRouteImport } from './routes/gps'
 import { Route as CorsoGdprIncaricatiRouteImport } from './routes/corso-gdpr-incaricati'
 import { Route as CorsiRouteImport } from './routes/corsi'
@@ -45,6 +46,11 @@ const MocaSerbatoiRoute = MocaSerbatoiRouteImport.update({
 const MinifatRoute = MinifatRouteImport.update({
   id: '/minifat',
   path: '/minifat',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LegalRoute = LegalRouteImport.update({
+  id: '/legal',
+  path: '/legal',
   getParentRoute: () => rootRouteImport,
 } as any)
 const GpsRoute = GpsRouteImport.update({
@@ -91,6 +97,7 @@ export interface FileRoutesByFullPath {
   '/corsi': typeof CorsiRoute
   '/corso-gdpr-incaricati': typeof CorsoGdprIncaricatiRoute
   '/gps': typeof GpsRoute
+  '/legal': typeof LegalRoute
   '/minifat': typeof MinifatRoute
   '/moca-serbatoi': typeof MocaSerbatoiRoute
   '/pedflow': typeof PedflowRoute
@@ -105,6 +112,7 @@ export interface FileRoutesByTo {
   '/corsi': typeof CorsiRoute
   '/corso-gdpr-incaricati': typeof CorsoGdprIncaricatiRoute
   '/gps': typeof GpsRoute
+  '/legal': typeof LegalRoute
   '/minifat': typeof MinifatRoute
   '/moca-serbatoi': typeof MocaSerbatoiRoute
   '/pedflow': typeof PedflowRoute
@@ -120,6 +128,7 @@ export interface FileRoutesById {
   '/corsi': typeof CorsiRoute
   '/corso-gdpr-incaricati': typeof CorsoGdprIncaricatiRoute
   '/gps': typeof GpsRoute
+  '/legal': typeof LegalRoute
   '/minifat': typeof MinifatRoute
   '/moca-serbatoi': typeof MocaSerbatoiRoute
   '/pedflow': typeof PedflowRoute
@@ -136,6 +145,7 @@ export interface FileRouteTypes {
     | '/corsi'
     | '/corso-gdpr-incaricati'
     | '/gps'
+    | '/legal'
     | '/minifat'
     | '/moca-serbatoi'
     | '/pedflow'
@@ -150,6 +160,7 @@ export interface FileRouteTypes {
     | '/corsi'
     | '/corso-gdpr-incaricati'
     | '/gps'
+    | '/legal'
     | '/minifat'
     | '/moca-serbatoi'
     | '/pedflow'
@@ -164,6 +175,7 @@ export interface FileRouteTypes {
     | '/corsi'
     | '/corso-gdpr-incaricati'
     | '/gps'
+    | '/legal'
     | '/minifat'
     | '/moca-serbatoi'
     | '/pedflow'
@@ -179,6 +191,7 @@ export interface RootRouteChildren {
   CorsiRoute: typeof CorsiRoute
   CorsoGdprIncaricatiRoute: typeof CorsoGdprIncaricatiRoute
   GpsRoute: typeof GpsRoute
+  LegalRoute: typeof LegalRoute
   MinifatRoute: typeof MinifatRoute
   MocaSerbatoiRoute: typeof MocaSerbatoiRoute
   PedflowRoute: typeof PedflowRoute
@@ -221,6 +234,13 @@ declare module '@tanstack/react-router' {
       path: '/minifat'
       fullPath: '/minifat'
       preLoaderRoute: typeof MinifatRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/legal': {
+      id: '/legal'
+      path: '/legal'
+      fullPath: '/legal'
+      preLoaderRoute: typeof LegalRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/gps': {
@@ -283,6 +303,7 @@ const rootRouteChildren: RootRouteChildren = {
   CorsiRoute: CorsiRoute,
   CorsoGdprIncaricatiRoute: CorsoGdprIncaricatiRoute,
   GpsRoute: GpsRoute,
+  LegalRoute: LegalRoute,
   MinifatRoute: MinifatRoute,
   MocaSerbatoiRoute: MocaSerbatoiRoute,
   PedflowRoute: PedflowRoute,
