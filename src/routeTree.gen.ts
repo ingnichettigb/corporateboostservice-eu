@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as TerminiECondizioniRouteImport } from './routes/termini-e-condizioni'
+import { Route as TerminiDiServizioRouteImport } from './routes/termini-di-servizio'
 import { Route as TelecamereRouteImport } from './routes/telecamere'
 import { Route as SmartMaintenanceRouteImport } from './routes/smart-maintenance'
 import { Route as PrezziRouteImport } from './routes/prezzi'
@@ -28,6 +29,11 @@ import { Route as IndexRouteImport } from './routes/index'
 const TerminiECondizioniRoute = TerminiECondizioniRouteImport.update({
   id: '/termini-e-condizioni',
   path: '/termini-e-condizioni',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TerminiDiServizioRoute = TerminiDiServizioRouteImport.update({
+  id: '/termini-di-servizio',
+  path: '/termini-di-servizio',
   getParentRoute: () => rootRouteImport,
 } as any)
 const TelecamereRoute = TelecamereRouteImport.update({
@@ -116,6 +122,7 @@ export interface FileRoutesByFullPath {
   '/prezzi': typeof PrezziRoute
   '/smart-maintenance': typeof SmartMaintenanceRoute
   '/telecamere': typeof TelecamereRoute
+  '/termini-di-servizio': typeof TerminiDiServizioRoute
   '/termini-e-condizioni': typeof TerminiECondizioniRoute
 }
 export interface FileRoutesByTo {
@@ -133,6 +140,7 @@ export interface FileRoutesByTo {
   '/prezzi': typeof PrezziRoute
   '/smart-maintenance': typeof SmartMaintenanceRoute
   '/telecamere': typeof TelecamereRoute
+  '/termini-di-servizio': typeof TerminiDiServizioRoute
   '/termini-e-condizioni': typeof TerminiECondizioniRoute
 }
 export interface FileRoutesById {
@@ -151,6 +159,7 @@ export interface FileRoutesById {
   '/prezzi': typeof PrezziRoute
   '/smart-maintenance': typeof SmartMaintenanceRoute
   '/telecamere': typeof TelecamereRoute
+  '/termini-di-servizio': typeof TerminiDiServizioRoute
   '/termini-e-condizioni': typeof TerminiECondizioniRoute
 }
 export interface FileRouteTypes {
@@ -170,6 +179,7 @@ export interface FileRouteTypes {
     | '/prezzi'
     | '/smart-maintenance'
     | '/telecamere'
+    | '/termini-di-servizio'
     | '/termini-e-condizioni'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -187,6 +197,7 @@ export interface FileRouteTypes {
     | '/prezzi'
     | '/smart-maintenance'
     | '/telecamere'
+    | '/termini-di-servizio'
     | '/termini-e-condizioni'
   id:
     | '__root__'
@@ -204,6 +215,7 @@ export interface FileRouteTypes {
     | '/prezzi'
     | '/smart-maintenance'
     | '/telecamere'
+    | '/termini-di-servizio'
     | '/termini-e-condizioni'
   fileRoutesById: FileRoutesById
 }
@@ -222,6 +234,7 @@ export interface RootRouteChildren {
   PrezziRoute: typeof PrezziRoute
   SmartMaintenanceRoute: typeof SmartMaintenanceRoute
   TelecamereRoute: typeof TelecamereRoute
+  TerminiDiServizioRoute: typeof TerminiDiServizioRoute
   TerminiECondizioniRoute: typeof TerminiECondizioniRoute
 }
 
@@ -232,6 +245,13 @@ declare module '@tanstack/react-router' {
       path: '/termini-e-condizioni'
       fullPath: '/termini-e-condizioni'
       preLoaderRoute: typeof TerminiECondizioniRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/termini-di-servizio': {
+      id: '/termini-di-servizio'
+      path: '/termini-di-servizio'
+      fullPath: '/termini-di-servizio'
+      preLoaderRoute: typeof TerminiDiServizioRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/telecamere': {
@@ -350,6 +370,7 @@ const rootRouteChildren: RootRouteChildren = {
   PrezziRoute: PrezziRoute,
   SmartMaintenanceRoute: SmartMaintenanceRoute,
   TelecamereRoute: TelecamereRoute,
+  TerminiDiServizioRoute: TerminiDiServizioRoute,
   TerminiECondizioniRoute: TerminiECondizioniRoute,
 }
 export const routeTree = rootRouteImport
