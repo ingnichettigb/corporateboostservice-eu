@@ -9,6 +9,7 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as TerminiECondizioniRouteImport } from './routes/termini-e-condizioni'
 import { Route as TelecamereRouteImport } from './routes/telecamere'
 import { Route as SmartMaintenanceRouteImport } from './routes/smart-maintenance'
 import { Route as PrezziRouteImport } from './routes/prezzi'
@@ -24,6 +25,11 @@ import { Route as AssistenzaGdprRouteImport } from './routes/assistenza-gdpr'
 import { Route as ApplicazioniRouteImport } from './routes/applicazioni'
 import { Route as IndexRouteImport } from './routes/index'
 
+const TerminiECondizioniRoute = TerminiECondizioniRouteImport.update({
+  id: '/termini-e-condizioni',
+  path: '/termini-e-condizioni',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const TelecamereRoute = TelecamereRouteImport.update({
   id: '/telecamere',
   path: '/telecamere',
@@ -110,6 +116,7 @@ export interface FileRoutesByFullPath {
   '/prezzi': typeof PrezziRoute
   '/smart-maintenance': typeof SmartMaintenanceRoute
   '/telecamere': typeof TelecamereRoute
+  '/termini-e-condizioni': typeof TerminiECondizioniRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -126,6 +133,7 @@ export interface FileRoutesByTo {
   '/prezzi': typeof PrezziRoute
   '/smart-maintenance': typeof SmartMaintenanceRoute
   '/telecamere': typeof TelecamereRoute
+  '/termini-e-condizioni': typeof TerminiECondizioniRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -143,6 +151,7 @@ export interface FileRoutesById {
   '/prezzi': typeof PrezziRoute
   '/smart-maintenance': typeof SmartMaintenanceRoute
   '/telecamere': typeof TelecamereRoute
+  '/termini-e-condizioni': typeof TerminiECondizioniRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -161,6 +170,7 @@ export interface FileRouteTypes {
     | '/prezzi'
     | '/smart-maintenance'
     | '/telecamere'
+    | '/termini-e-condizioni'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -177,6 +187,7 @@ export interface FileRouteTypes {
     | '/prezzi'
     | '/smart-maintenance'
     | '/telecamere'
+    | '/termini-e-condizioni'
   id:
     | '__root__'
     | '/'
@@ -193,6 +204,7 @@ export interface FileRouteTypes {
     | '/prezzi'
     | '/smart-maintenance'
     | '/telecamere'
+    | '/termini-e-condizioni'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -210,10 +222,18 @@ export interface RootRouteChildren {
   PrezziRoute: typeof PrezziRoute
   SmartMaintenanceRoute: typeof SmartMaintenanceRoute
   TelecamereRoute: typeof TelecamereRoute
+  TerminiECondizioniRoute: typeof TerminiECondizioniRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/termini-e-condizioni': {
+      id: '/termini-e-condizioni'
+      path: '/termini-e-condizioni'
+      fullPath: '/termini-e-condizioni'
+      preLoaderRoute: typeof TerminiECondizioniRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/telecamere': {
       id: '/telecamere'
       path: '/telecamere'
@@ -330,6 +350,7 @@ const rootRouteChildren: RootRouteChildren = {
   PrezziRoute: PrezziRoute,
   SmartMaintenanceRoute: SmartMaintenanceRoute,
   TelecamereRoute: TelecamereRoute,
+  TerminiECondizioniRoute: TerminiECondizioniRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
