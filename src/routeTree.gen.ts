@@ -14,6 +14,7 @@ import { Route as TerminiDiServizioRouteImport } from './routes/termini-di-servi
 import { Route as TelecamereRouteImport } from './routes/telecamere'
 import { Route as SmartMaintenanceRouteImport } from './routes/smart-maintenance'
 import { Route as PrezziRouteImport } from './routes/prezzi'
+import { Route as PoliticaDiRimborsoRouteImport } from './routes/politica-di-rimborso'
 import { Route as PedflowRouteImport } from './routes/pedflow'
 import { Route as MocaSerbatoiRouteImport } from './routes/moca-serbatoi'
 import { Route as MinifatRouteImport } from './routes/minifat'
@@ -49,6 +50,11 @@ const SmartMaintenanceRoute = SmartMaintenanceRouteImport.update({
 const PrezziRoute = PrezziRouteImport.update({
   id: '/prezzi',
   path: '/prezzi',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PoliticaDiRimborsoRoute = PoliticaDiRimborsoRouteImport.update({
+  id: '/politica-di-rimborso',
+  path: '/politica-di-rimborso',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PedflowRoute = PedflowRouteImport.update({
@@ -119,6 +125,7 @@ export interface FileRoutesByFullPath {
   '/minifat': typeof MinifatRoute
   '/moca-serbatoi': typeof MocaSerbatoiRoute
   '/pedflow': typeof PedflowRoute
+  '/politica-di-rimborso': typeof PoliticaDiRimborsoRoute
   '/prezzi': typeof PrezziRoute
   '/smart-maintenance': typeof SmartMaintenanceRoute
   '/telecamere': typeof TelecamereRoute
@@ -137,6 +144,7 @@ export interface FileRoutesByTo {
   '/minifat': typeof MinifatRoute
   '/moca-serbatoi': typeof MocaSerbatoiRoute
   '/pedflow': typeof PedflowRoute
+  '/politica-di-rimborso': typeof PoliticaDiRimborsoRoute
   '/prezzi': typeof PrezziRoute
   '/smart-maintenance': typeof SmartMaintenanceRoute
   '/telecamere': typeof TelecamereRoute
@@ -156,6 +164,7 @@ export interface FileRoutesById {
   '/minifat': typeof MinifatRoute
   '/moca-serbatoi': typeof MocaSerbatoiRoute
   '/pedflow': typeof PedflowRoute
+  '/politica-di-rimborso': typeof PoliticaDiRimborsoRoute
   '/prezzi': typeof PrezziRoute
   '/smart-maintenance': typeof SmartMaintenanceRoute
   '/telecamere': typeof TelecamereRoute
@@ -176,6 +185,7 @@ export interface FileRouteTypes {
     | '/minifat'
     | '/moca-serbatoi'
     | '/pedflow'
+    | '/politica-di-rimborso'
     | '/prezzi'
     | '/smart-maintenance'
     | '/telecamere'
@@ -194,6 +204,7 @@ export interface FileRouteTypes {
     | '/minifat'
     | '/moca-serbatoi'
     | '/pedflow'
+    | '/politica-di-rimborso'
     | '/prezzi'
     | '/smart-maintenance'
     | '/telecamere'
@@ -212,6 +223,7 @@ export interface FileRouteTypes {
     | '/minifat'
     | '/moca-serbatoi'
     | '/pedflow'
+    | '/politica-di-rimborso'
     | '/prezzi'
     | '/smart-maintenance'
     | '/telecamere'
@@ -231,6 +243,7 @@ export interface RootRouteChildren {
   MinifatRoute: typeof MinifatRoute
   MocaSerbatoiRoute: typeof MocaSerbatoiRoute
   PedflowRoute: typeof PedflowRoute
+  PoliticaDiRimborsoRoute: typeof PoliticaDiRimborsoRoute
   PrezziRoute: typeof PrezziRoute
   SmartMaintenanceRoute: typeof SmartMaintenanceRoute
   TelecamereRoute: typeof TelecamereRoute
@@ -273,6 +286,13 @@ declare module '@tanstack/react-router' {
       path: '/prezzi'
       fullPath: '/prezzi'
       preLoaderRoute: typeof PrezziRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/politica-di-rimborso': {
+      id: '/politica-di-rimborso'
+      path: '/politica-di-rimborso'
+      fullPath: '/politica-di-rimborso'
+      preLoaderRoute: typeof PoliticaDiRimborsoRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/pedflow': {
@@ -367,6 +387,7 @@ const rootRouteChildren: RootRouteChildren = {
   MinifatRoute: MinifatRoute,
   MocaSerbatoiRoute: MocaSerbatoiRoute,
   PedflowRoute: PedflowRoute,
+  PoliticaDiRimborsoRoute: PoliticaDiRimborsoRoute,
   PrezziRoute: PrezziRoute,
   SmartMaintenanceRoute: SmartMaintenanceRoute,
   TelecamereRoute: TelecamereRoute,
