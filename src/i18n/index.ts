@@ -34,6 +34,7 @@ if (!i18n.isInitialized) {
           ...en,
           assistenzaGdpr: assistenzaGdpr.en,
           corsoIncaricati: corsoIncaricati.en,
+          legal: legal.en,
           gps: gps.en,
           smartMaintenance: smartMaintenance.en,
           telecamere: telecamere.en,
