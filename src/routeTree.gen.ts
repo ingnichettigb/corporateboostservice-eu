@@ -13,6 +13,7 @@ import { Route as TerminiECondizioniRouteImport } from './routes/termini-e-condi
 import { Route as TerminiDiServizioRouteImport } from './routes/termini-di-servizio'
 import { Route as TelecamereRouteImport } from './routes/telecamere'
 import { Route as SmartMaintenanceRouteImport } from './routes/smart-maintenance'
+import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
 import { Route as PrezziRouteImport } from './routes/prezzi'
 import { Route as PoliticaDiRimborsoRouteImport } from './routes/politica-di-rimborso'
 import { Route as PedflowRouteImport } from './routes/pedflow'
@@ -45,6 +46,11 @@ const TelecamereRoute = TelecamereRouteImport.update({
 const SmartMaintenanceRoute = SmartMaintenanceRouteImport.update({
   id: '/smart-maintenance',
   path: '/smart-maintenance',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyPolicyRoute = PrivacyPolicyRouteImport.update({
+  id: '/privacy-policy',
+  path: '/privacy-policy',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PrezziRoute = PrezziRouteImport.update({
@@ -127,6 +133,7 @@ export interface FileRoutesByFullPath {
   '/pedflow': typeof PedflowRoute
   '/politica-di-rimborso': typeof PoliticaDiRimborsoRoute
   '/prezzi': typeof PrezziRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
   '/smart-maintenance': typeof SmartMaintenanceRoute
   '/telecamere': typeof TelecamereRoute
   '/termini-di-servizio': typeof TerminiDiServizioRoute
@@ -146,6 +153,7 @@ export interface FileRoutesByTo {
   '/pedflow': typeof PedflowRoute
   '/politica-di-rimborso': typeof PoliticaDiRimborsoRoute
   '/prezzi': typeof PrezziRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
   '/smart-maintenance': typeof SmartMaintenanceRoute
   '/telecamere': typeof TelecamereRoute
   '/termini-di-servizio': typeof TerminiDiServizioRoute
@@ -166,6 +174,7 @@ export interface FileRoutesById {
   '/pedflow': typeof PedflowRoute
   '/politica-di-rimborso': typeof PoliticaDiRimborsoRoute
   '/prezzi': typeof PrezziRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
   '/smart-maintenance': typeof SmartMaintenanceRoute
   '/telecamere': typeof TelecamereRoute
   '/termini-di-servizio': typeof TerminiDiServizioRoute
@@ -187,6 +196,7 @@ export interface FileRouteTypes {
     | '/pedflow'
     | '/politica-di-rimborso'
     | '/prezzi'
+    | '/privacy-policy'
     | '/smart-maintenance'
     | '/telecamere'
     | '/termini-di-servizio'
@@ -206,6 +216,7 @@ export interface FileRouteTypes {
     | '/pedflow'
     | '/politica-di-rimborso'
     | '/prezzi'
+    | '/privacy-policy'
     | '/smart-maintenance'
     | '/telecamere'
     | '/termini-di-servizio'
@@ -225,6 +236,7 @@ export interface FileRouteTypes {
     | '/pedflow'
     | '/politica-di-rimborso'
     | '/prezzi'
+    | '/privacy-policy'
     | '/smart-maintenance'
     | '/telecamere'
     | '/termini-di-servizio'
@@ -245,6 +257,7 @@ export interface RootRouteChildren {
   PedflowRoute: typeof PedflowRoute
   PoliticaDiRimborsoRoute: typeof PoliticaDiRimborsoRoute
   PrezziRoute: typeof PrezziRoute
+  PrivacyPolicyRoute: typeof PrivacyPolicyRoute
   SmartMaintenanceRoute: typeof SmartMaintenanceRoute
   TelecamereRoute: typeof TelecamereRoute
   TerminiDiServizioRoute: typeof TerminiDiServizioRoute
@@ -279,6 +292,13 @@ declare module '@tanstack/react-router' {
       path: '/smart-maintenance'
       fullPath: '/smart-maintenance'
       preLoaderRoute: typeof SmartMaintenanceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy-policy': {
+      id: '/privacy-policy'
+      path: '/privacy-policy'
+      fullPath: '/privacy-policy'
+      preLoaderRoute: typeof PrivacyPolicyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/prezzi': {
@@ -389,6 +409,7 @@ const rootRouteChildren: RootRouteChildren = {
   PedflowRoute: PedflowRoute,
   PoliticaDiRimborsoRoute: PoliticaDiRimborsoRoute,
   PrezziRoute: PrezziRoute,
+  PrivacyPolicyRoute: PrivacyPolicyRoute,
   SmartMaintenanceRoute: SmartMaintenanceRoute,
   TelecamereRoute: TelecamereRoute,
   TerminiDiServizioRoute: TerminiDiServizioRoute,
