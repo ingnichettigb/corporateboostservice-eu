@@ -4,6 +4,7 @@ import it from "./locales/it.json";
 import en from "./locales/en.json";
 import { assistenzaGdpr } from "./locales/pages/assistenza-gdpr";
 import { corsoIncaricati } from "./locales/pages/corso-gdpr-incaricati";
+import { legal } from "./locales/pages/legal";
 import { gps } from "./locales/pages/gps";
 import { smartMaintenance } from "./locales/pages/smart-maintenance";
 import { telecamere } from "./locales/pages/telecamere";
