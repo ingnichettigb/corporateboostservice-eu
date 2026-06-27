@@ -1,0 +1,54 @@
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { useTranslation } from "react-i18next";
+import i18n from "@/i18n";
+import { LegalLayout, LegalSection } from "@/components/LegalLayout";
+
+export const Route = createFileRoute("/politica-di-rimborso")({
+  head: () => ({
+    meta: [
+      { title: i18n.t("legal.rimborso.metaTitle") },
+      { name: "description", content: i18n.t("legal.rimborso.metaDesc") },
+      { property: "og:title", content: i18n.t("legal.rimborso.metaTitle") },
+      { property: "og:description", content: i18n.t("legal.rimborso.metaDesc") },
+    ],
+  }),
+  component: RimborsoPage,
+});
+
+const related = [
+  { to: "/prezzi", key: "navPrezzi" },
+  { to: "/termini-e-condizioni", key: "navTermini" },
+  { to: "/termini-di-servizio", key: "navServizio" },
+  { to: "/privacy-policy", key: "navPrivacy" },
+] as const;
+
+function RimborsoPage() {
+  const { t } = useTranslation();
+  const sections = t("legal.rimborso.sections", { returnObjects: true }) as {
+    heading: string;
+    body: string;
+  }[];
+
+  return (
+    <LegalLayout badge={t("legal.rimborso.badge")} title={t("legal.rimborso.title")} subtitle={t("legal.rimborso.subtitle")}>
+      {sections.map((s) => (
+        <LegalSection key={s.heading} heading={s.heading}>
+          <p>{s.body}</p>
+        </LegalSection>
+      ))}
+
+      <div className="mt-6 border-t border-border pt-6">
+        <h2 className="text-lg font-bold mb-3">{t("legal.rimborso.relatedHeading")}</h2>
+        <ul className="flex flex-wrap gap-3 text-sm">
+          {related.map((l) => (
+            <li key={l.to}>
+              <Link to={l.to} className="text-primary underline underline-offset-4 hover:opacity-80">
+                {t(`legal.${l.key}`)}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </LegalLayout>
+  );
+}

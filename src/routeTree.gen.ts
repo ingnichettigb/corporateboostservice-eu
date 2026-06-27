@@ -9,11 +9,17 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as TerminiECondizioniRouteImport } from './routes/termini-e-condizioni'
+import { Route as TerminiDiServizioRouteImport } from './routes/termini-di-servizio'
 import { Route as TelecamereRouteImport } from './routes/telecamere'
 import { Route as SmartMaintenanceRouteImport } from './routes/smart-maintenance'
+import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
+import { Route as PrezziRouteImport } from './routes/prezzi'
+import { Route as PoliticaDiRimborsoRouteImport } from './routes/politica-di-rimborso'
 import { Route as PedflowRouteImport } from './routes/pedflow'
 import { Route as MocaSerbatoiRouteImport } from './routes/moca-serbatoi'
 import { Route as MinifatRouteImport } from './routes/minifat'
+import { Route as LegalRouteImport } from './routes/legal'
 import { Route as GpsRouteImport } from './routes/gps'
 import { Route as CorsoGdprIncaricatiRouteImport } from './routes/corso-gdpr-incaricati'
 import { Route as CorsiRouteImport } from './routes/corsi'
@@ -22,6 +28,16 @@ import { Route as AssistenzaGdprRouteImport } from './routes/assistenza-gdpr'
 import { Route as ApplicazioniRouteImport } from './routes/applicazioni'
 import { Route as IndexRouteImport } from './routes/index'
 
+const TerminiECondizioniRoute = TerminiECondizioniRouteImport.update({
+  id: '/termini-e-condizioni',
+  path: '/termini-e-condizioni',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TerminiDiServizioRoute = TerminiDiServizioRouteImport.update({
+  id: '/termini-di-servizio',
+  path: '/termini-di-servizio',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const TelecamereRoute = TelecamereRouteImport.update({
   id: '/telecamere',
   path: '/telecamere',
@@ -30,6 +46,21 @@ const TelecamereRoute = TelecamereRouteImport.update({
 const SmartMaintenanceRoute = SmartMaintenanceRouteImport.update({
   id: '/smart-maintenance',
   path: '/smart-maintenance',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyPolicyRoute = PrivacyPolicyRouteImport.update({
+  id: '/privacy-policy',
+  path: '/privacy-policy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrezziRoute = PrezziRouteImport.update({
+  id: '/prezzi',
+  path: '/prezzi',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PoliticaDiRimborsoRoute = PoliticaDiRimborsoRouteImport.update({
+  id: '/politica-di-rimborso',
+  path: '/politica-di-rimborso',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PedflowRoute = PedflowRouteImport.update({
@@ -45,6 +76,11 @@ const MocaSerbatoiRoute = MocaSerbatoiRouteImport.update({
 const MinifatRoute = MinifatRouteImport.update({
   id: '/minifat',
   path: '/minifat',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LegalRoute = LegalRouteImport.update({
+  id: '/legal',
+  path: '/legal',
   getParentRoute: () => rootRouteImport,
 } as any)
 const GpsRoute = GpsRouteImport.update({
@@ -91,11 +127,17 @@ export interface FileRoutesByFullPath {
   '/corsi': typeof CorsiRoute
   '/corso-gdpr-incaricati': typeof CorsoGdprIncaricatiRoute
   '/gps': typeof GpsRoute
+  '/legal': typeof LegalRoute
   '/minifat': typeof MinifatRoute
   '/moca-serbatoi': typeof MocaSerbatoiRoute
   '/pedflow': typeof PedflowRoute
+  '/politica-di-rimborso': typeof PoliticaDiRimborsoRoute
+  '/prezzi': typeof PrezziRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
   '/smart-maintenance': typeof SmartMaintenanceRoute
   '/telecamere': typeof TelecamereRoute
+  '/termini-di-servizio': typeof TerminiDiServizioRoute
+  '/termini-e-condizioni': typeof TerminiECondizioniRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -105,11 +147,17 @@ export interface FileRoutesByTo {
   '/corsi': typeof CorsiRoute
   '/corso-gdpr-incaricati': typeof CorsoGdprIncaricatiRoute
   '/gps': typeof GpsRoute
+  '/legal': typeof LegalRoute
   '/minifat': typeof MinifatRoute
   '/moca-serbatoi': typeof MocaSerbatoiRoute
   '/pedflow': typeof PedflowRoute
+  '/politica-di-rimborso': typeof PoliticaDiRimborsoRoute
+  '/prezzi': typeof PrezziRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
   '/smart-maintenance': typeof SmartMaintenanceRoute
   '/telecamere': typeof TelecamereRoute
+  '/termini-di-servizio': typeof TerminiDiServizioRoute
+  '/termini-e-condizioni': typeof TerminiECondizioniRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -120,11 +168,17 @@ export interface FileRoutesById {
   '/corsi': typeof CorsiRoute
   '/corso-gdpr-incaricati': typeof CorsoGdprIncaricatiRoute
   '/gps': typeof GpsRoute
+  '/legal': typeof LegalRoute
   '/minifat': typeof MinifatRoute
   '/moca-serbatoi': typeof MocaSerbatoiRoute
   '/pedflow': typeof PedflowRoute
+  '/politica-di-rimborso': typeof PoliticaDiRimborsoRoute
+  '/prezzi': typeof PrezziRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
   '/smart-maintenance': typeof SmartMaintenanceRoute
   '/telecamere': typeof TelecamereRoute
+  '/termini-di-servizio': typeof TerminiDiServizioRoute
+  '/termini-e-condizioni': typeof TerminiECondizioniRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -136,11 +190,17 @@ export interface FileRouteTypes {
     | '/corsi'
     | '/corso-gdpr-incaricati'
     | '/gps'
+    | '/legal'
     | '/minifat'
     | '/moca-serbatoi'
     | '/pedflow'
+    | '/politica-di-rimborso'
+    | '/prezzi'
+    | '/privacy-policy'
     | '/smart-maintenance'
     | '/telecamere'
+    | '/termini-di-servizio'
+    | '/termini-e-condizioni'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -150,11 +210,17 @@ export interface FileRouteTypes {
     | '/corsi'
     | '/corso-gdpr-incaricati'
     | '/gps'
+    | '/legal'
     | '/minifat'
     | '/moca-serbatoi'
     | '/pedflow'
+    | '/politica-di-rimborso'
+    | '/prezzi'
+    | '/privacy-policy'
     | '/smart-maintenance'
     | '/telecamere'
+    | '/termini-di-servizio'
+    | '/termini-e-condizioni'
   id:
     | '__root__'
     | '/'
@@ -164,11 +230,17 @@ export interface FileRouteTypes {
     | '/corsi'
     | '/corso-gdpr-incaricati'
     | '/gps'
+    | '/legal'
     | '/minifat'
     | '/moca-serbatoi'
     | '/pedflow'
+    | '/politica-di-rimborso'
+    | '/prezzi'
+    | '/privacy-policy'
     | '/smart-maintenance'
     | '/telecamere'
+    | '/termini-di-servizio'
+    | '/termini-e-condizioni'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -179,15 +251,35 @@ export interface RootRouteChildren {
   CorsiRoute: typeof CorsiRoute
   CorsoGdprIncaricatiRoute: typeof CorsoGdprIncaricatiRoute
   GpsRoute: typeof GpsRoute
+  LegalRoute: typeof LegalRoute
   MinifatRoute: typeof MinifatRoute
   MocaSerbatoiRoute: typeof MocaSerbatoiRoute
   PedflowRoute: typeof PedflowRoute
+  PoliticaDiRimborsoRoute: typeof PoliticaDiRimborsoRoute
+  PrezziRoute: typeof PrezziRoute
+  PrivacyPolicyRoute: typeof PrivacyPolicyRoute
   SmartMaintenanceRoute: typeof SmartMaintenanceRoute
   TelecamereRoute: typeof TelecamereRoute
+  TerminiDiServizioRoute: typeof TerminiDiServizioRoute
+  TerminiECondizioniRoute: typeof TerminiECondizioniRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/termini-e-condizioni': {
+      id: '/termini-e-condizioni'
+      path: '/termini-e-condizioni'
+      fullPath: '/termini-e-condizioni'
+      preLoaderRoute: typeof TerminiECondizioniRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/termini-di-servizio': {
+      id: '/termini-di-servizio'
+      path: '/termini-di-servizio'
+      fullPath: '/termini-di-servizio'
+      preLoaderRoute: typeof TerminiDiServizioRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/telecamere': {
       id: '/telecamere'
       path: '/telecamere'
@@ -200,6 +292,27 @@ declare module '@tanstack/react-router' {
       path: '/smart-maintenance'
       fullPath: '/smart-maintenance'
       preLoaderRoute: typeof SmartMaintenanceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy-policy': {
+      id: '/privacy-policy'
+      path: '/privacy-policy'
+      fullPath: '/privacy-policy'
+      preLoaderRoute: typeof PrivacyPolicyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/prezzi': {
+      id: '/prezzi'
+      path: '/prezzi'
+      fullPath: '/prezzi'
+      preLoaderRoute: typeof PrezziRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/politica-di-rimborso': {
+      id: '/politica-di-rimborso'
+      path: '/politica-di-rimborso'
+      fullPath: '/politica-di-rimborso'
+      preLoaderRoute: typeof PoliticaDiRimborsoRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/pedflow': {
@@ -221,6 +334,13 @@ declare module '@tanstack/react-router' {
       path: '/minifat'
       fullPath: '/minifat'
       preLoaderRoute: typeof MinifatRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/legal': {
+      id: '/legal'
+      path: '/legal'
+      fullPath: '/legal'
+      preLoaderRoute: typeof LegalRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/gps': {
@@ -283,11 +403,17 @@ const rootRouteChildren: RootRouteChildren = {
   CorsiRoute: CorsiRoute,
   CorsoGdprIncaricatiRoute: CorsoGdprIncaricatiRoute,
   GpsRoute: GpsRoute,
+  LegalRoute: LegalRoute,
   MinifatRoute: MinifatRoute,
   MocaSerbatoiRoute: MocaSerbatoiRoute,
   PedflowRoute: PedflowRoute,
+  PoliticaDiRimborsoRoute: PoliticaDiRimborsoRoute,
+  PrezziRoute: PrezziRoute,
+  PrivacyPolicyRoute: PrivacyPolicyRoute,
   SmartMaintenanceRoute: SmartMaintenanceRoute,
   TelecamereRoute: TelecamereRoute,
+  TerminiDiServizioRoute: TerminiDiServizioRoute,
+  TerminiECondizioniRoute: TerminiECondizioniRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

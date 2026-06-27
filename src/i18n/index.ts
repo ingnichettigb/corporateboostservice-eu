@@ -4,6 +4,7 @@ import it from "./locales/it.json";
 import en from "./locales/en.json";
 import { assistenzaGdpr } from "./locales/pages/assistenza-gdpr";
 import { corsoIncaricati } from "./locales/pages/corso-gdpr-incaricati";
+import { legal } from "./locales/pages/legal";
 import { gps } from "./locales/pages/gps";
 import { smartMaintenance } from "./locales/pages/smart-maintenance";
 import { telecamere } from "./locales/pages/telecamere";
@@ -19,6 +20,7 @@ if (!i18n.isInitialized) {
           ...it,
           assistenzaGdpr: assistenzaGdpr.it,
           corsoIncaricati: corsoIncaricati.it,
+          legal: legal.it,
           gps: gps.it,
           smartMaintenance: smartMaintenance.it,
           telecamere: telecamere.it,
@@ -32,6 +34,7 @@ if (!i18n.isInitialized) {
           ...en,
           assistenzaGdpr: assistenzaGdpr.en,
           corsoIncaricati: corsoIncaricati.en,
+          legal: legal.en,
           gps: gps.en,
           smartMaintenance: smartMaintenance.en,
           telecamere: telecamere.en,
