@@ -26,8 +26,16 @@ export function SiteFooter() {
           <Link to="/corsi" className="hover:underline focus-visible:underline">{t("nav.corsi")}</Link>
           <Link to="/applicazioni" className="hover:underline focus-visible:underline">{t("nav.applicazioni")}</Link>
           <Link to="/" hash="contatti" className="hover:underline focus-visible:underline">{t("nav.contatti")}</Link>
+
+          <span className="mt-3 text-xs font-semibold uppercase tracking-wider text-white/70">{t("legal.footerHeading")}</span>
+          <Link to="/prezzi" className="hover:underline focus-visible:underline">{t("legal.navPrezzi")}</Link>
+          <Link to="/termini-e-condizioni" className="hover:underline focus-visible:underline">{t("legal.navTermini")}</Link>
+          <Link to="/termini-di-servizio" className="hover:underline focus-visible:underline">{t("legal.navServizio")}</Link>
+          <Link to="/privacy-policy" className="hover:underline focus-visible:underline">{t("legal.navPrivacy")}</Link>
+          <Link to="/politica-di-rimborso" className="hover:underline focus-visible:underline">{t("legal.navRimborso")}</Link>
         </nav>
       </div>
+
 
       <div className="container mx-auto px-4 mt-10 pt-6 border-t border-white/25 text-sm text-white/80 flex flex-wrap justify-between gap-2">
         <span>© {new Date().getFullYear()} {t("brand")} — {t("footer.rights")}.</span>
