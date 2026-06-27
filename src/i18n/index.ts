@@ -20,6 +20,7 @@ if (!i18n.isInitialized) {
           ...it,
           assistenzaGdpr: assistenzaGdpr.it,
           corsoIncaricati: corsoIncaricati.it,
+          legal: legal.it,
           gps: gps.it,
           smartMaintenance: smartMaintenance.it,
           telecamere: telecamere.it,
