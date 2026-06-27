@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as TelecamereRouteImport } from './routes/telecamere'
 import { Route as SmartMaintenanceRouteImport } from './routes/smart-maintenance'
+import { Route as PrezziRouteImport } from './routes/prezzi'
 import { Route as PedflowRouteImport } from './routes/pedflow'
 import { Route as MocaSerbatoiRouteImport } from './routes/moca-serbatoi'
 import { Route as MinifatRouteImport } from './routes/minifat'
@@ -31,6 +32,11 @@ const TelecamereRoute = TelecamereRouteImport.update({
 const SmartMaintenanceRoute = SmartMaintenanceRouteImport.update({
   id: '/smart-maintenance',
   path: '/smart-maintenance',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrezziRoute = PrezziRouteImport.update({
+  id: '/prezzi',
+  path: '/prezzi',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PedflowRoute = PedflowRouteImport.update({
@@ -101,6 +107,7 @@ export interface FileRoutesByFullPath {
   '/minifat': typeof MinifatRoute
   '/moca-serbatoi': typeof MocaSerbatoiRoute
   '/pedflow': typeof PedflowRoute
+  '/prezzi': typeof PrezziRoute
   '/smart-maintenance': typeof SmartMaintenanceRoute
   '/telecamere': typeof TelecamereRoute
 }
@@ -116,6 +123,7 @@ export interface FileRoutesByTo {
   '/minifat': typeof MinifatRoute
   '/moca-serbatoi': typeof MocaSerbatoiRoute
   '/pedflow': typeof PedflowRoute
+  '/prezzi': typeof PrezziRoute
   '/smart-maintenance': typeof SmartMaintenanceRoute
   '/telecamere': typeof TelecamereRoute
 }
@@ -132,6 +140,7 @@ export interface FileRoutesById {
   '/minifat': typeof MinifatRoute
   '/moca-serbatoi': typeof MocaSerbatoiRoute
   '/pedflow': typeof PedflowRoute
+  '/prezzi': typeof PrezziRoute
   '/smart-maintenance': typeof SmartMaintenanceRoute
   '/telecamere': typeof TelecamereRoute
 }
@@ -149,6 +158,7 @@ export interface FileRouteTypes {
     | '/minifat'
     | '/moca-serbatoi'
     | '/pedflow'
+    | '/prezzi'
     | '/smart-maintenance'
     | '/telecamere'
   fileRoutesByTo: FileRoutesByTo
@@ -164,6 +174,7 @@ export interface FileRouteTypes {
     | '/minifat'
     | '/moca-serbatoi'
     | '/pedflow'
+    | '/prezzi'
     | '/smart-maintenance'
     | '/telecamere'
   id:
@@ -179,6 +190,7 @@ export interface FileRouteTypes {
     | '/minifat'
     | '/moca-serbatoi'
     | '/pedflow'
+    | '/prezzi'
     | '/smart-maintenance'
     | '/telecamere'
   fileRoutesById: FileRoutesById
@@ -195,6 +207,7 @@ export interface RootRouteChildren {
   MinifatRoute: typeof MinifatRoute
   MocaSerbatoiRoute: typeof MocaSerbatoiRoute
   PedflowRoute: typeof PedflowRoute
+  PrezziRoute: typeof PrezziRoute
   SmartMaintenanceRoute: typeof SmartMaintenanceRoute
   TelecamereRoute: typeof TelecamereRoute
 }
@@ -213,6 +226,13 @@ declare module '@tanstack/react-router' {
       path: '/smart-maintenance'
       fullPath: '/smart-maintenance'
       preLoaderRoute: typeof SmartMaintenanceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/prezzi': {
+      id: '/prezzi'
+      path: '/prezzi'
+      fullPath: '/prezzi'
+      preLoaderRoute: typeof PrezziRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/pedflow': {
@@ -307,6 +327,7 @@ const rootRouteChildren: RootRouteChildren = {
   MinifatRoute: MinifatRoute,
   MocaSerbatoiRoute: MocaSerbatoiRoute,
   PedflowRoute: PedflowRoute,
+  PrezziRoute: PrezziRoute,
   SmartMaintenanceRoute: SmartMaintenanceRoute,
   TelecamereRoute: TelecamereRoute,
 }
