@@ -17,12 +17,12 @@
     "highContrastOn": "High contrast on"
   },
   "hero": {
-    "badge": "Certified training · Tailored solutions",
-    "title1": "Digital Solutions and",
-    "title2": "Professional Training",
-    "subtitle": "Online courses and applications for companies and professionals. I do it all: from consulting to implementation.",
-    "ctaCorsi": "Online Courses",
-    "ctaApp": "Business Applications"
+    "badge": "Certified courses · Digital apps",
+    "title1": "Certified Courses and",
+    "title2": "Digital Applications",
+    "subtitle": "Certified courses and digital applications for companies and professionals. Buy, install, use: all online, instantly.",
+    "ctaCorsi": "Explore courses",
+    "ctaApp": "Discover the apps"
   },
   "corsi": {
     "kicker": "Training",
