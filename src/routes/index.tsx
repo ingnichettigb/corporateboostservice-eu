@@ -40,19 +40,13 @@ function Home() {
             </p>
             <div className="mt-10 flex flex-col items-center gap-4 max-w-sm mx-auto">
               <Button size="lg" className="h-12 w-full bg-yellow-400 text-black border-2 border-black font-bold hover:bg-yellow-300 shadow-[var(--shadow-elegant)] hover:-translate-y-0.5 transition-all" asChild>
-                <Link to="/controlli-gratuiti"><Gift className="mr-1" aria-hidden /> Faccio tutto io gratis per te</Link>
+                <Link to="/corsi"><GraduationCap className="mr-1" aria-hidden /> {t("hero.ctaCorsi")}</Link>
               </Button>
-              <Button variant="outline" size="lg" className="h-12 w-full border-2 border-primary text-primary font-semibold" asChild>
+              <Button variant="hero" size="lg" className="h-12 w-full" asChild>
                 <Link to="/applicazioni"><Layers className="mr-1" aria-hidden /> {t("hero.ctaApp")}</Link>
               </Button>
               <Button variant="outline" size="lg" className="h-12 w-full border-2 border-primary text-primary font-semibold" asChild>
                 <Link to="/moca-serbatoi"><Container className="mr-1" aria-hidden /> {t("nav.moca")}</Link>
-              </Button>
-              <Button variant="hero" size="lg" className="h-12 w-full" asChild>
-                <Link to="/" hash="assistenza"><LifeBuoy className="mr-1" aria-hidden /> {t("nav.assistenza")}</Link>
-              </Button>
-              <Button variant="hero" size="lg" className="h-12 w-full" asChild>
-                <Link to="/corsi"><GraduationCap className="mr-1" aria-hidden /> {t("hero.ctaCorsi")}</Link>
               </Button>
             </div>
           </div>
