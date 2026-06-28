@@ -169,7 +169,7 @@ export const smartMaintenance = {
     ctaH2: "La manutenzione industriale, reinventata",
     ctaBody: "Un nuovo standard per tecnici e aziende: dal campo all'ufficio in un clic.",
     ctaDownload: "Scarica la demo",
-    ctaQuote: "Richiedi preventivo aziendale",
+    ctaQuote: "Attiva per la tua azienda",
   },
 
   en: {
@@ -342,6 +342,6 @@ export const smartMaintenance = {
     ctaH2: "Industrial maintenance, reinvented",
     ctaBody: "A new standard for technicians and companies: from the field to the office in one click.",
     ctaDownload: "Download the demo",
-    ctaQuote: "Request a business quote",
+    ctaQuote: "Activate for your company",
   },
 } as const;

@@ -75,24 +75,6 @@ export function SiteHeader() {
             </li>
             <li>
               <Link
-                to="/moca-serbatoi"
-                activeProps={{ className: "bg-primary text-primary-foreground" }}
-                className="inline-flex items-center min-h-11 px-4 rounded-md text-foreground hover:bg-primary/15"
-              >
-                {t("nav.moca")}
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/"
-                hash="assistenza"
-                className="inline-flex items-center min-h-11 px-4 rounded-md text-foreground hover:bg-primary/15"
-              >
-                {t("nav.assistenza")}
-              </Link>
-            </li>
-            <li>
-              <Link
                 to="/"
                 hash="contatti"
                 className="inline-flex items-center min-h-11 px-4 rounded-md text-foreground hover:bg-primary/15"

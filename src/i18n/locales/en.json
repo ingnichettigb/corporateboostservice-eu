@@ -1,14 +1,13 @@
 {
   "brand": "CorporateBoostService.eu",
-  "motto": "I DO IT ALL",
+  "motto": "COURSES & DIGITAL APPS",
   "skip": "Skip to content",
   "nav": {
     "home": "Home",
     "corsi": "Courses",
     "applicazioni": "Applications",
     "moca": "MOCA Tanks",
-    "contatti": "Contact me",
-    "assistenza": "GDPR, Privacy, CCTV, GPS Support"
+    "contatti": "Contact me"
   },
   "a11y": {
     "language": "Language",
@@ -18,12 +17,12 @@
     "highContrastOn": "High contrast on"
   },
   "hero": {
-    "badge": "Certified training · Tailored solutions",
-    "title1": "Digital Solutions and",
-    "title2": "Professional Training",
-    "subtitle": "Online courses and applications for companies and professionals. I do it all: from consulting to implementation.",
-    "ctaCorsi": "Online Courses",
-    "ctaApp": "Business Applications"
+    "badge": "Certified courses · Digital apps",
+    "title1": "Certified Courses and",
+    "title2": "Digital Applications",
+    "subtitle": "Certified courses and digital applications for companies and professionals. Buy, install, use: all online, instantly.",
+    "ctaCorsi": "Explore courses",
+    "ctaApp": "Discover the apps"
   },
   "corsi": {
     "kicker": "Training",
@@ -41,9 +40,9 @@
     "feat3": "For companies and individuals",
     "iscriviti": "Enroll",
     "infoLabel": "Information",
-    "preventivoLabel": "Quote",
-    "infoBody": "Hello,\n\nI would like to receive more information about the training course indicated in the subject. Could you kindly provide me with details on contents, format and timing?\n\nThank you.\n\n[Signature]",
-    "preventivoBody": "Hello,\n\nI am interested in the training course indicated in the subject and would like to receive a quote for the purchase of the certificate. I look forward to your kind reply.\n\nThank you.\n\n[Signature]",
+    "preventivoLabel": "Buy the course",
+    "infoBody": "Hello,\n\nI would like to receive more information about the online course indicated in the subject. Could you kindly provide details on contents and how to access it?\n\nThank you.\n\n[Signature]",
+    "preventivoBody": "Hello,\n\nI would like to buy the online course indicated in the subject and access the final certificate. Could you let me know how to proceed?\n\nThank you.\n\n[Signature]",
     "items": {
       "gdprAddetto": {
         "title": "GDPR and Data Protection",
@@ -115,42 +114,42 @@
   "chiSono": {
     "kicker": "About me",
     "title": "Experience, regulations and technology.",
-    "subtitle": "RSPP, privacy consultant and digital solutions developer. I help schools, companies and professionals work better, safely and in compliance.",
-    "role": "RSPP · Privacy Consultant",
-    "role2": "Digital solutions developer",
-    "p1": "GDPR and D.Lgs. 81/08 training",
-    "p2": "Privacy consulting for schools and SMBs",
-    "p3": "Management application development"
+    "subtitle": "Professional with experience in GDPR regulations and workplace safety. I have created online courses and digital tools to help companies and professionals work safely and in compliance, on their own.",
+    "role": "Online courses",
+    "role2": "Digital tools",
+    "p1": "GDPR and D.Lgs. 81/08 training"
   },
   "contact": {
     "kicker": "Contact",
     "title": "Request information",
-    "subtitle": "Have a question about a course or a project? Write to me: I reply within 24 hours.",
+    "subtitle": "Have a question about a course or an app? Write to me: I reply within 24 hours.",
     "name": "Full name",
     "namePh": "John Doe",
     "email": "Email",
     "emailPh": "email@company.com",
     "subject": "Subject",
-    "subjectPh": "E.g. GDPR course for my company",
+    "subjectPh": "E.g. online GDPR course",
     "message": "Message",
     "messagePh": "Briefly describe your request…",
     "send": "Send request",
     "sent": "Request sent. I will reply shortly."
   },
   "footer": {
-    "tagline": "Training and digital solutions for companies and professionals.",
+    "tagline": "Online courses and digital applications for companies and professionals.",
     "rights": "All rights reserved",
     "phone": "Phone",
     "vat": "VAT ID",
     "address": "Address"
   },
   "home": {
-    "pageTitle": "GDPR, Privacy & Digital Solutions Courses",
-    "pageDesc": "Online courses on GDPR, privacy and safety, plus tailored digital applications for companies and professionals."
+    "pageTitle": "GDPR Courses & Digital Apps for Business",
+    "pageDesc": "Online courses on GDPR and workplace safety, plus digital applications for companies and professionals."
   },
   "checklist": {
     "autovalutazione": "Privacy 1996 Self-Assessment — Free, in 9 questions",
-    "verifica": "Check your GDPR compliance — Free, in 10 questions"
+    "verifica": "Check your GDPR compliance — Free, in 10 questions",
+    "toolsTitle": "Free tools to support your training",
+    "toolsSubtitle": "Free questionnaires to test yourself before taking the online courses."
   },
   "minifat": {
     "metaTitle": "MiniFAT — Create professional FAT dossiers in minutes",

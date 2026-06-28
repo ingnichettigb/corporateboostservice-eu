@@ -1,18 +1,17 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, GraduationCap, Layers, CheckCircle2, ShieldCheck, FileLock, Video, MapPin, LifeBuoy, Construction, Gift, Container } from "lucide-react";
+import { ArrowRight, GraduationCap, Layers, CheckCircle2, ShieldCheck, Container, Construction } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { ContactSection } from "@/components/ContactSection";
-import { ChecklistCTAs } from "@/components/ChecklistCTAs";
 import { corsi, applicazioni } from "@/data/site";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Corsi GDPR, Privacy e Soluzioni Digitali Aziendali" },
-      { name: "description", content: "Corsi online su GDPR, privacy e sicurezza, più applicazioni digitali su misura per imprese e professionisti." },
+      { title: "Corsi GDPR e App Digitali per Imprese" },
+      { name: "description", content: "Corsi online su GDPR e sicurezza sul lavoro, più applicazioni digitali per imprese e professionisti." },
     ],
   }),
   component: Home,
@@ -41,19 +40,13 @@ function Home() {
             </p>
             <div className="mt-10 flex flex-col items-center gap-4 max-w-sm mx-auto">
               <Button size="lg" className="h-12 w-full bg-yellow-400 text-black border-2 border-black font-bold hover:bg-yellow-300 shadow-[var(--shadow-elegant)] hover:-translate-y-0.5 transition-all" asChild>
-                <Link to="/controlli-gratuiti"><Gift className="mr-1" aria-hidden /> Faccio tutto io gratis per te</Link>
+                <Link to="/corsi"><GraduationCap className="mr-1" aria-hidden /> {t("hero.ctaCorsi")}</Link>
               </Button>
-              <Button variant="outline" size="lg" className="h-12 w-full border-2 border-primary text-primary font-semibold" asChild>
+              <Button variant="hero" size="lg" className="h-12 w-full" asChild>
                 <Link to="/applicazioni"><Layers className="mr-1" aria-hidden /> {t("hero.ctaApp")}</Link>
               </Button>
               <Button variant="outline" size="lg" className="h-12 w-full border-2 border-primary text-primary font-semibold" asChild>
                 <Link to="/moca-serbatoi"><Container className="mr-1" aria-hidden /> {t("nav.moca")}</Link>
-              </Button>
-              <Button variant="hero" size="lg" className="h-12 w-full" asChild>
-                <Link to="/" hash="assistenza"><LifeBuoy className="mr-1" aria-hidden /> {t("nav.assistenza")}</Link>
-              </Button>
-              <Button variant="hero" size="lg" className="h-12 w-full" asChild>
-                <Link to="/corsi"><GraduationCap className="mr-1" aria-hidden /> {t("hero.ctaCorsi")}</Link>
               </Button>
             </div>
           </div>
@@ -166,7 +159,7 @@ function Home() {
               <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-5">{t("chiSono.title")}</h2>
               <p className="text-lg leading-relaxed text-white/95">{t("chiSono.subtitle")}</p>
               <ul className="mt-6 space-y-3 text-white/95 text-lg">
-                {[t("chiSono.p1"), t("chiSono.p2"), t("chiSono.p3")].map((txt) => (
+                {[t("chiSono.p1")].map((txt) => (
                   <li key={txt} className="flex items-start gap-3"><CheckCircle2 className="h-6 w-6 mt-0.5 shrink-0" aria-hidden />{txt}</li>
                 ))}
               </ul>
@@ -174,50 +167,7 @@ function Home() {
           </div>
         </section>
 
-        {/* ASSISTENZA */}
-        <section id="assistenza" className="py-24 [background:var(--gradient-section-corsi)] border-y-2 border-primary/15 scroll-mt-24">
-          <div className="container mx-auto px-4 max-w-5xl">
-            <div className="text-center mb-12">
-              <div className="inline-flex items-center gap-2 rounded-full bg-primary text-primary-foreground px-4 py-2 text-sm font-bold uppercase tracking-wider">
-                <LifeBuoy className="h-4 w-4" aria-hidden /> {t("nav.assistenza")}
-              </div>
-              <h2 className="mt-5 text-3xl md:text-5xl font-bold tracking-tight text-foreground">{t("nav.assistenza")}</h2>
-              <p className="mt-4 text-lg text-foreground/85">{t("hero.subtitle")}</p>
-            </div>
-            <ChecklistCTAs className="mb-10" />
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-              {[
-                { Icon: ShieldCheck, label: "GDPR", to: "/assistenza-gdpr" as const },
-                { Icon: FileLock, label: "Privacy", to: "/assistenza-gdpr" as const },
-                { Icon: Video, label: "Telecamere", to: "/telecamere" as const },
-                { Icon: MapPin, label: "GPS", to: "/gps" as const },
-              ].map(({ Icon, label, to }) => {
-                const inner = (
-                  <>
-                    <div className="h-14 w-14 mx-auto rounded-lg [background:var(--gradient-hero)] text-primary-foreground flex items-center justify-center mb-4">
-                      <Icon className="h-7 w-7" aria-hidden />
-                    </div>
-                    <h3 className="font-bold text-lg text-foreground">{label}</h3>
-                  </>
-                );
-                return to ? (
-                  <Link key={label} to={to} className="p-6 rounded-2xl border-2 border-primary/20 bg-white shadow-[var(--shadow-card)] text-center hover:-translate-y-1 hover:shadow-[var(--shadow-elegant)] transition-all">
-                    {inner}
-                  </Link>
-                ) : (
-                  <article key={label} className="p-6 rounded-2xl border-2 border-primary/20 bg-white shadow-[var(--shadow-card)] text-center">
-                    {inner}
-                  </article>
-                );
-              })}
-            </div>
-            <div className="mt-10 text-center">
-              <Button variant="hero" size="lg" className="h-12 px-8" asChild>
-                <Link to="/" hash="contatti"><LifeBuoy className="mr-1" aria-hidden /> {t("nav.contatti")}</Link>
-              </Button>
-            </div>
-          </div>
-        </section>
+
 
         <ContactSection />
       </main>
