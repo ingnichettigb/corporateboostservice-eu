@@ -165,7 +165,7 @@ export const pedflow = {
     ctaH2: "Classifica i tuoi fluidi con PedFlow",
     ctaP: "Gruppo 1 o 2 della Direttiva PED in un click, con la sicurezza di un calcolo conforme.",
     ctaPrimary: "Prova ora",
-    ctaSecondary: "Richiedi preventivo aziendale",
+    ctaSecondary: "Attiva per la tua azienda",
   },
 
   en: {
@@ -333,6 +333,6 @@ export const pedflow = {
     ctaH2: "Classify your fluids with PedFlow",
     ctaP: "PED Group 1 or 2 in one click, with the confidence of a compliant calculation.",
     ctaPrimary: "Try now",
-    ctaSecondary: "Request a business quote",
+    ctaSecondary: "Activate for your company",
   },
 } as const;
