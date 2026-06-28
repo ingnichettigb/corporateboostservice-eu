@@ -159,7 +159,7 @@ function Home() {
               <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-5">{t("chiSono.title")}</h2>
               <p className="text-lg leading-relaxed text-white/95">{t("chiSono.subtitle")}</p>
               <ul className="mt-6 space-y-3 text-white/95 text-lg">
-                {[t("chiSono.p1"), t("chiSono.p2"), t("chiSono.p3")].map((txt) => (
+                {[t("chiSono.p1")].map((txt) => (
                   <li key={txt} className="flex items-start gap-3"><CheckCircle2 className="h-6 w-6 mt-0.5 shrink-0" aria-hidden />{txt}</li>
                 ))}
               </ul>
