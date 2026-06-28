@@ -114,38 +114,36 @@
   "chiSono": {
     "kicker": "Chi Sono",
     "title": "Esperienza, normative e tecnologia.",
-    "subtitle": "RSPP, consulente privacy e sviluppatore di soluzioni digitali. Aiuto scuole, aziende e professionisti a lavorare meglio, in modo sicuro e conforme alle normative.",
-    "role": "RSPP · Consulente Privacy",
-    "role2": "Sviluppatore di soluzioni digitali",
-    "p1": "Formazione GDPR e D.Lgs. 81/08",
-    "p2": "Consulenza privacy per scuole e PMI",
-    "p3": "Sviluppo applicazioni gestionali"
+    "subtitle": "Professionista con esperienza in normative GDPR e sicurezza sul lavoro. Ho creato corsi online e strumenti digitali per aiutare imprese e professionisti a lavorare in modo sicuro e conforme, in autonomia.",
+    "role": "Corsi online",
+    "role2": "Strumenti digitali",
+    "p1": "Formazione GDPR e D.Lgs. 81/08"
   },
   "contact": {
     "kicker": "Contatti",
     "title": "Richiedi informazioni",
-    "subtitle": "Hai una domanda su un corso o un progetto? Scrivimi: rispondo entro 24 ore.",
+    "subtitle": "Hai una domanda su un corso o un'app? Scrivimi: rispondo entro 24 ore.",
     "name": "Nome e cognome",
     "namePh": "Mario Rossi",
     "email": "Email",
     "emailPh": "email@azienda.it",
     "subject": "Oggetto",
-    "subjectPh": "Es. Corso GDPR per la mia azienda",
+    "subjectPh": "Es. Corso GDPR online",
     "message": "Messaggio",
     "messagePh": "Descrivi brevemente la tua richiesta…",
     "send": "Richiedi informazioni",
     "sent": "Richiesta inviata. Ti risponderò a breve."
   },
   "footer": {
-    "tagline": "Formazione e soluzioni digitali per imprese e professionisti.",
+    "tagline": "Corsi online e applicazioni digitali per imprese e professionisti.",
     "rights": "Tutti i diritti riservati",
     "phone": "Telefono",
     "vat": "P.IVA",
     "address": "Indirizzo"
   },
   "home": {
-    "pageTitle": "Corsi GDPR, Privacy e Soluzioni Digitali Aziendali",
-    "pageDesc": "Corsi online su GDPR, privacy e sicurezza, più applicazioni digitali su misura per imprese e professionisti."
+    "pageTitle": "Corsi GDPR e App Digitali per Imprese",
+    "pageDesc": "Corsi online su GDPR e sicurezza sul lavoro, più applicazioni digitali per imprese e professionisti."
   },
   "checklist": {
     "autovalutazione": "Autovalutazione Privacy 1996 — Gratis, in 9 domande",
