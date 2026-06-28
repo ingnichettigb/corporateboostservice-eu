@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { ContactSection } from "@/components/ContactSection";
+import { ChecklistCTAs } from "@/components/ChecklistCTAs";
 import { corsi } from "@/data/site";
 import { buildMailto } from "@/lib/contact";
 import { ArrowRight, Clock, Award, Users, Construction, Mail, FileText } from "lucide-react";
