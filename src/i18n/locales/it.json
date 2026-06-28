@@ -1,14 +1,13 @@
 {
   "brand": "CorporateBoostService.eu",
-  "motto": "FACCIO TUTTO IO",
+  "motto": "CORSI E APP DIGITALI",
   "skip": "Vai al contenuto",
   "nav": {
     "home": "Home",
     "corsi": "Corsi",
     "applicazioni": "Applicazioni",
     "moca": "MOCA Serbatoi",
-    "contatti": "Contattami",
-    "assistenza": "Assistenza GDPR, Privacy, Telecamere, GPS"
+    "contatti": "Contattami"
   },
   "a11y": {
     "language": "Lingua",
