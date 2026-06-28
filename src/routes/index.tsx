@@ -1,18 +1,17 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, GraduationCap, Layers, CheckCircle2, ShieldCheck, FileLock, Video, MapPin, LifeBuoy, Construction, Gift, Container } from "lucide-react";
+import { ArrowRight, GraduationCap, Layers, CheckCircle2, ShieldCheck, Container } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { ContactSection } from "@/components/ContactSection";
-import { ChecklistCTAs } from "@/components/ChecklistCTAs";
 import { corsi, applicazioni } from "@/data/site";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Corsi GDPR, Privacy e Soluzioni Digitali Aziendali" },
-      { name: "description", content: "Corsi online su GDPR, privacy e sicurezza, più applicazioni digitali su misura per imprese e professionisti." },
+      { title: "Corsi GDPR e App Digitali per Imprese" },
+      { name: "description", content: "Corsi online su GDPR e sicurezza sul lavoro, più applicazioni digitali per imprese e professionisti." },
     ],
   }),
   component: Home,
