@@ -167,50 +167,7 @@ function Home() {
           </div>
         </section>
 
-        {/* ASSISTENZA */}
-        <section id="assistenza" className="py-24 [background:var(--gradient-section-corsi)] border-y-2 border-primary/15 scroll-mt-24">
-          <div className="container mx-auto px-4 max-w-5xl">
-            <div className="text-center mb-12">
-              <div className="inline-flex items-center gap-2 rounded-full bg-primary text-primary-foreground px-4 py-2 text-sm font-bold uppercase tracking-wider">
-                <LifeBuoy className="h-4 w-4" aria-hidden /> {t("nav.assistenza")}
-              </div>
-              <h2 className="mt-5 text-3xl md:text-5xl font-bold tracking-tight text-foreground">{t("nav.assistenza")}</h2>
-              <p className="mt-4 text-lg text-foreground/85">{t("hero.subtitle")}</p>
-            </div>
-            <ChecklistCTAs className="mb-10" />
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-              {[
-                { Icon: ShieldCheck, label: "GDPR", to: "/assistenza-gdpr" as const },
-                { Icon: FileLock, label: "Privacy", to: "/assistenza-gdpr" as const },
-                { Icon: Video, label: "Telecamere", to: "/telecamere" as const },
-                { Icon: MapPin, label: "GPS", to: "/gps" as const },
-              ].map(({ Icon, label, to }) => {
-                const inner = (
-                  <>
-                    <div className="h-14 w-14 mx-auto rounded-lg [background:var(--gradient-hero)] text-primary-foreground flex items-center justify-center mb-4">
-                      <Icon className="h-7 w-7" aria-hidden />
-                    </div>
-                    <h3 className="font-bold text-lg text-foreground">{label}</h3>
-                  </>
-                );
-                return to ? (
-                  <Link key={label} to={to} className="p-6 rounded-2xl border-2 border-primary/20 bg-white shadow-[var(--shadow-card)] text-center hover:-translate-y-1 hover:shadow-[var(--shadow-elegant)] transition-all">
-                    {inner}
-                  </Link>
-                ) : (
-                  <article key={label} className="p-6 rounded-2xl border-2 border-primary/20 bg-white shadow-[var(--shadow-card)] text-center">
-                    {inner}
-                  </article>
-                );
-              })}
-            </div>
-            <div className="mt-10 text-center">
-              <Button variant="hero" size="lg" className="h-12 px-8" asChild>
-                <Link to="/" hash="contatti"><LifeBuoy className="mr-1" aria-hidden /> {t("nav.contatti")}</Link>
-              </Button>
-            </div>
-          </div>
-        </section>
+
 
         <ContactSection />
       </main>
