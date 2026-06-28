@@ -114,38 +114,36 @@
   "chiSono": {
     "kicker": "About me",
     "title": "Experience, regulations and technology.",
-    "subtitle": "RSPP, privacy consultant and digital solutions developer. I help schools, companies and professionals work better, safely and in compliance.",
-    "role": "RSPP · Privacy Consultant",
-    "role2": "Digital solutions developer",
-    "p1": "GDPR and D.Lgs. 81/08 training",
-    "p2": "Privacy consulting for schools and SMBs",
-    "p3": "Management application development"
+    "subtitle": "Professional with experience in GDPR regulations and workplace safety. I have created online courses and digital tools to help companies and professionals work safely and in compliance, on their own.",
+    "role": "Online courses",
+    "role2": "Digital tools",
+    "p1": "GDPR and D.Lgs. 81/08 training"
   },
   "contact": {
     "kicker": "Contact",
     "title": "Request information",
-    "subtitle": "Have a question about a course or a project? Write to me: I reply within 24 hours.",
+    "subtitle": "Have a question about a course or an app? Write to me: I reply within 24 hours.",
     "name": "Full name",
     "namePh": "John Doe",
     "email": "Email",
     "emailPh": "email@company.com",
     "subject": "Subject",
-    "subjectPh": "E.g. GDPR course for my company",
+    "subjectPh": "E.g. online GDPR course",
     "message": "Message",
     "messagePh": "Briefly describe your request…",
     "send": "Send request",
     "sent": "Request sent. I will reply shortly."
   },
   "footer": {
-    "tagline": "Training and digital solutions for companies and professionals.",
+    "tagline": "Online courses and digital applications for companies and professionals.",
     "rights": "All rights reserved",
     "phone": "Phone",
     "vat": "VAT ID",
     "address": "Address"
   },
   "home": {
-    "pageTitle": "GDPR, Privacy & Digital Solutions Courses",
-    "pageDesc": "Online courses on GDPR, privacy and safety, plus tailored digital applications for companies and professionals."
+    "pageTitle": "GDPR Courses & Digital Apps for Business",
+    "pageDesc": "Online courses on GDPR and workplace safety, plus digital applications for companies and professionals."
   },
   "checklist": {
     "autovalutazione": "Privacy 1996 Self-Assessment — Free, in 9 questions",
