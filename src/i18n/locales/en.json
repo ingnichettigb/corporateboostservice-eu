@@ -147,7 +147,9 @@
   },
   "checklist": {
     "autovalutazione": "Privacy 1996 Self-Assessment — Free, in 9 questions",
-    "verifica": "Check your GDPR compliance — Free, in 10 questions"
+    "verifica": "Check your GDPR compliance — Free, in 10 questions",
+    "toolsTitle": "Free tools to support your training",
+    "toolsSubtitle": "Free questionnaires to test yourself before taking the online courses."
   },
   "minifat": {
     "metaTitle": "MiniFAT — Create professional FAT dossiers in minutes",
