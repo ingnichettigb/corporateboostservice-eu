@@ -1,14 +1,13 @@
 {
   "brand": "CorporateBoostService.eu",
-  "motto": "I DO IT ALL",
+  "motto": "COURSES & DIGITAL APPS",
   "skip": "Skip to content",
   "nav": {
     "home": "Home",
     "corsi": "Courses",
     "applicazioni": "Applications",
     "moca": "MOCA Tanks",
-    "contatti": "Contact me",
-    "assistenza": "GDPR, Privacy, CCTV, GPS Support"
+    "contatti": "Contact me"
   },
   "a11y": {
     "language": "Language",
