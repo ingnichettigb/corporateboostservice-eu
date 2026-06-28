@@ -17,12 +17,12 @@
     "highContrastOn": "Alto contrasto attivo"
   },
   "hero": {
-    "badge": "Formazione certificata · Soluzioni su misura",
-    "title1": "Soluzioni Digitali e",
-    "title2": "Formazione Professionale",
-    "subtitle": "Corsi online e applicazioni per imprese e professionisti. Faccio tutto io: dalla consulenza all'implementazione.",
-    "ctaCorsi": "Corsi Online",
-    "ctaApp": "Applicazioni per Imprese"
+    "badge": "Corsi certificati · App digitali",
+    "title1": "Corsi Certificati e",
+    "title2": "Applicazioni Digitali",
+    "subtitle": "Corsi certificati e applicazioni digitali per imprese e professionisti. Acquista, installa, usa: tutto online, subito.",
+    "ctaCorsi": "Esplora i corsi",
+    "ctaApp": "Scopri le app"
   },
   "corsi": {
     "kicker": "Formazione",
