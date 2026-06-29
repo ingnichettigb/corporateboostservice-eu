@@ -30,6 +30,15 @@ function PrezziPage() {
 
   return (
     <LegalLayout badge={t("legal.prezzi.badge")} title={t("legal.prezzi.title")} subtitle={t("legal.prezzi.subtitle")}>
+      {/* TODO: sostituire questo banner con il bottone Paddle quando il link è disponibile */}
+      <div className="mb-8 rounded-xl border-2 border-amber-400 bg-amber-50 p-5 text-amber-900">
+        <div className="flex items-center gap-3 font-bold text-base md:text-lg">
+          <Construction className="h-6 w-6 shrink-0 text-amber-600" aria-hidden />
+          <span>🚧 {t("legal.comingSoonBadge")}</span>
+        </div>
+        <p className="mt-2 text-sm text-amber-800/90">{t("legal.comingSoonNote")}</p>
+      </div>
+
       {/* Desktop table */}
       <div className="hidden md:block overflow-x-auto rounded-xl border border-border">
         <table className="w-full text-sm">
