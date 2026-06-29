@@ -1,10 +1,22 @@
 import { Link } from "@tanstack/react-router";
-import { Button } from "@/components/ui/button";
-import { ShieldCheck, Menu, X } from "lucide-react";
+import { ShieldCheck, Menu, X, ChevronDown, Scale } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { AccessibilityToggles } from "@/components/AccessibilityToggles";
+import {
+  DropdownMenu,
+  DropdownMenuTrigger,
+  DropdownMenuContent,
+  DropdownMenuItem,
+} from "@/components/ui/dropdown-menu";
 import { useState } from "react";
+
+const legalLinks = [
+  { to: "/termini-e-condizioni", key: "legal.navTermini" },
+  { to: "/termini-di-servizio", key: "legal.navServizio" },
+  { to: "/privacy-policy", key: "legal.navPrivacy" },
+  { to: "/politica-di-rimborso", key: "legal.navRimborso" },
+] as const;
 
 export function SiteHeader() {
   const { t } = useTranslation();
@@ -44,7 +56,6 @@ export function SiteHeader() {
       <div className="border-t border-primary/15 bg-primary/5">
         <div className="container mx-auto px-2 overflow-x-auto">
           <ul className="flex items-center gap-1 min-h-12 text-sm md:text-base font-semibold whitespace-nowrap">
-            
             <li>
               <Link
                 to="/"
@@ -75,6 +86,32 @@ export function SiteHeader() {
             </li>
             <li>
               <Link
+                to="/prezzi"
+                activeProps={{ className: "bg-primary text-primary-foreground" }}
+                className="inline-flex items-center min-h-11 px-4 rounded-md text-foreground hover:bg-primary/15"
+              >
+                {t("legal.navPrezzi")}
+              </Link>
+            </li>
+            <li>
+              <DropdownMenu>
+                <DropdownMenuTrigger className="inline-flex items-center gap-1 min-h-11 px-4 rounded-md text-foreground hover:bg-primary/15 outline-none focus-visible:ring-1 focus-visible:ring-ring">
+                  <Scale className="h-4 w-4" aria-hidden /> {t("legal.navLegalMenu")}
+                  <ChevronDown className="h-4 w-4" aria-hidden />
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="start" className="min-w-56">
+                  {legalLinks.map((l) => (
+                    <DropdownMenuItem key={l.to} asChild>
+                      <Link to={l.to} className="w-full cursor-pointer">
+                        {t(l.key)}
+                      </Link>
+                    </DropdownMenuItem>
+                  ))}
+                </DropdownMenuContent>
+              </DropdownMenu>
+            </li>
+            <li>
+              <Link
                 to="/"
                 hash="contatti"
                 className="inline-flex items-center min-h-11 px-4 rounded-md text-foreground hover:bg-primary/15"
@@ -88,7 +125,29 @@ export function SiteHeader() {
 
       {open && (
         <div className="lg:hidden border-t border-primary/20 bg-background px-4 py-4 flex flex-col gap-3">
-          <div className="flex flex-wrap gap-2">
+          <Link
+            to="/prezzi"
+            onClick={() => setOpen(false)}
+            className="inline-flex items-center min-h-11 px-3 rounded-md font-semibold text-foreground hover:bg-primary/15"
+          >
+            {t("legal.navPrezzi")}
+          </Link>
+          <div className="border-t border-primary/15 pt-3">
+            <p className="flex items-center gap-2 px-3 mb-1 text-sm font-bold text-primary uppercase tracking-wider">
+              <Scale className="h-4 w-4" aria-hidden /> {t("legal.navLegalMenu")}
+            </p>
+            {legalLinks.map((l) => (
+              <Link
+                key={l.to}
+                to={l.to}
+                onClick={() => setOpen(false)}
+                className="block min-h-11 px-3 py-2 rounded-md text-foreground hover:bg-primary/15"
+              >
+                {t(l.key)}
+              </Link>
+            ))}
+          </div>
+          <div className="flex flex-wrap gap-2 border-t border-primary/15 pt-3">
             <AccessibilityToggles />
           </div>
         </div>
