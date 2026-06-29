@@ -37,6 +37,10 @@ function ServizioPage() {
         </LegalSection>
       ))}
 
+      <LegalSection heading={t("legal.paddleServizioHeading")}>
+        <p>{t("legal.paddleServizioBody")}</p>
+      </LegalSection>
+
       <div className="mt-6 border-t border-border pt-6">
         <h2 className="text-lg font-bold mb-3">{t("legal.servizio.relatedHeading")}</h2>
         <ul className="flex flex-wrap gap-3 text-sm">
