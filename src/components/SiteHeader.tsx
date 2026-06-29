@@ -16,6 +16,7 @@ const legalLinks = [
   { to: "/termini-di-servizio", key: "legal.navServizio" },
   { to: "/privacy-policy", key: "legal.navPrivacy" },
   { to: "/politica-di-rimborso", key: "legal.navRimborso" },
+  { to: "/pagamenti-merchant-of-record", key: "legal.navPagamenti" },
 ] as const;
 
 export function SiteHeader() {
