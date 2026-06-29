@@ -33,6 +33,7 @@ export function SiteFooter() {
           <Link to="/termini-di-servizio" className="hover:underline focus-visible:underline">{t("legal.navServizio")}</Link>
           <Link to="/privacy-policy" className="hover:underline focus-visible:underline">{t("legal.navPrivacy")}</Link>
           <Link to="/politica-di-rimborso" className="hover:underline focus-visible:underline">{t("legal.navRimborso")}</Link>
+          <Link to="/pagamenti-merchant-of-record" className="hover:underline focus-visible:underline">{t("legal.navPagamenti")}</Link>
         </nav>
       </div>
 

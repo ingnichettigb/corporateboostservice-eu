@@ -16,6 +16,7 @@ import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
 import { Route as PrezziRouteImport } from './routes/prezzi'
 import { Route as PoliticaDiRimborsoRouteImport } from './routes/politica-di-rimborso'
 import { Route as PedflowRouteImport } from './routes/pedflow'
+import { Route as PagamentiMerchantOfRecordRouteImport } from './routes/pagamenti-merchant-of-record'
 import { Route as MocaSerbatoiRouteImport } from './routes/moca-serbatoi'
 import { Route as MinifatRouteImport } from './routes/minifat'
 import { Route as LegalRouteImport } from './routes/legal'
@@ -59,6 +60,12 @@ const PedflowRoute = PedflowRouteImport.update({
   path: '/pedflow',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PagamentiMerchantOfRecordRoute =
+  PagamentiMerchantOfRecordRouteImport.update({
+    id: '/pagamenti-merchant-of-record',
+    path: '/pagamenti-merchant-of-record',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const MocaSerbatoiRoute = MocaSerbatoiRouteImport.update({
   id: '/moca-serbatoi',
   path: '/moca-serbatoi',
@@ -103,6 +110,7 @@ export interface FileRoutesByFullPath {
   '/legal': typeof LegalRoute
   '/minifat': typeof MinifatRoute
   '/moca-serbatoi': typeof MocaSerbatoiRoute
+  '/pagamenti-merchant-of-record': typeof PagamentiMerchantOfRecordRoute
   '/pedflow': typeof PedflowRoute
   '/politica-di-rimborso': typeof PoliticaDiRimborsoRoute
   '/prezzi': typeof PrezziRoute
@@ -119,6 +127,7 @@ export interface FileRoutesByTo {
   '/legal': typeof LegalRoute
   '/minifat': typeof MinifatRoute
   '/moca-serbatoi': typeof MocaSerbatoiRoute
+  '/pagamenti-merchant-of-record': typeof PagamentiMerchantOfRecordRoute
   '/pedflow': typeof PedflowRoute
   '/politica-di-rimborso': typeof PoliticaDiRimborsoRoute
   '/prezzi': typeof PrezziRoute
@@ -136,6 +145,7 @@ export interface FileRoutesById {
   '/legal': typeof LegalRoute
   '/minifat': typeof MinifatRoute
   '/moca-serbatoi': typeof MocaSerbatoiRoute
+  '/pagamenti-merchant-of-record': typeof PagamentiMerchantOfRecordRoute
   '/pedflow': typeof PedflowRoute
   '/politica-di-rimborso': typeof PoliticaDiRimborsoRoute
   '/prezzi': typeof PrezziRoute
@@ -154,6 +164,7 @@ export interface FileRouteTypes {
     | '/legal'
     | '/minifat'
     | '/moca-serbatoi'
+    | '/pagamenti-merchant-of-record'
     | '/pedflow'
     | '/politica-di-rimborso'
     | '/prezzi'
@@ -170,6 +181,7 @@ export interface FileRouteTypes {
     | '/legal'
     | '/minifat'
     | '/moca-serbatoi'
+    | '/pagamenti-merchant-of-record'
     | '/pedflow'
     | '/politica-di-rimborso'
     | '/prezzi'
@@ -186,6 +198,7 @@ export interface FileRouteTypes {
     | '/legal'
     | '/minifat'
     | '/moca-serbatoi'
+    | '/pagamenti-merchant-of-record'
     | '/pedflow'
     | '/politica-di-rimborso'
     | '/prezzi'
@@ -203,6 +216,7 @@ export interface RootRouteChildren {
   LegalRoute: typeof LegalRoute
   MinifatRoute: typeof MinifatRoute
   MocaSerbatoiRoute: typeof MocaSerbatoiRoute
+  PagamentiMerchantOfRecordRoute: typeof PagamentiMerchantOfRecordRoute
   PedflowRoute: typeof PedflowRoute
   PoliticaDiRimborsoRoute: typeof PoliticaDiRimborsoRoute
   PrezziRoute: typeof PrezziRoute
@@ -261,6 +275,13 @@ declare module '@tanstack/react-router' {
       path: '/pedflow'
       fullPath: '/pedflow'
       preLoaderRoute: typeof PedflowRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pagamenti-merchant-of-record': {
+      id: '/pagamenti-merchant-of-record'
+      path: '/pagamenti-merchant-of-record'
+      fullPath: '/pagamenti-merchant-of-record'
+      preLoaderRoute: typeof PagamentiMerchantOfRecordRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/moca-serbatoi': {
@@ -323,6 +344,7 @@ const rootRouteChildren: RootRouteChildren = {
   LegalRoute: LegalRoute,
   MinifatRoute: MinifatRoute,
   MocaSerbatoiRoute: MocaSerbatoiRoute,
+  PagamentiMerchantOfRecordRoute: PagamentiMerchantOfRecordRoute,
   PedflowRoute: PedflowRoute,
   PoliticaDiRimborsoRoute: PoliticaDiRimborsoRoute,
   PrezziRoute: PrezziRoute,

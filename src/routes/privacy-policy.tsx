@@ -67,6 +67,12 @@ function PrivacyPage() {
 
       <LegalSection heading={t("legal.paddleHeading")}>
         <p>{t("legal.paddleBody")}</p>
+        <p>
+          {t("legal.paddleRefPrivacy")}{" "}
+          <Link to="/pagamenti-merchant-of-record" className="text-primary underline underline-offset-4 hover:opacity-80">
+            → {t("legal.paddleRefLink")}
+          </Link>
+        </p>
       </LegalSection>
 
       <div className="mt-6 border-t border-border pt-6">
