@@ -73,9 +73,18 @@ function PrezziPage() {
               <span className="text-foreground/70">{monthsLabel(item.duration)}</span>
             </div>
             <div className="mt-2 font-mono text-xs text-foreground/60 break-all">{item.domain}</div>
+            {/* TODO: sostituire con link Paddle */}
+            <div className="mt-3 rounded-lg border border-amber-400 bg-amber-50 px-3 py-2">
+              <div className="flex items-center gap-2 text-sm font-bold text-amber-900">
+                <Construction className="h-4 w-4 shrink-0 text-amber-600" aria-hidden />
+                <span>{t("legal.comingSoonBadge")}</span>
+              </div>
+              <p className="mt-1 text-xs text-amber-800/80">{t("legal.comingSoonCardNote")}</p>
+            </div>
           </div>
         ))}
       </div>
+
 
       {/* Notes */}
       <div className="mt-10 rounded-xl border border-border bg-muted/40 p-5">
