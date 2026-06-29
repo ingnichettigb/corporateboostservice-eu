@@ -231,12 +231,24 @@ export const legal = {
     backHome: "Back to home",
 
     navLegal: "Legal",
+    navLegalMenu: "Legal Information",
     navPrezzi: "Pricing",
     navTermini: "Terms and Conditions",
     navServizio: "Terms of Service",
     navPrivacy: "Privacy Policy",
     navRimborso: "Refund Policy",
     footerHeading: "Legal information",
+
+    // Payments / Merchant of Record
+    paddleHeading: "Payments and Merchant of Record",
+    paddleBody:
+      "Payments for the services and courses purchased on this site are handled by Paddle.com (Paddle.com, Inc. / Paddle Payments Ltd.), acting as Merchant of Record. Paddle is the official seller to the end customer and handles payment processing, the issuing of tax receipts and the management of refunds according to its own policies. For any matter relating to the payment, the amount charged or the invoice received, you can contact Paddle directly through their support at paddle.com, or write to team@corporateboostservice.eu.",
+    paddleServizioHeading: "8. Payments and Merchant of Record",
+    paddleServizioBody:
+      "Payments are processed by Paddle.com, which acts as Merchant of Record for all transactions made on this site. Paddle issues tax receipts, manages payment disputes (chargebacks) and applies its own terms of use for the payment service. By using the services of this site, the user also accepts the Paddle.com terms applicable to transactions.",
+    comingSoonBadge: "Purchases coming soon — available shortly",
+    comingSoonNote:
+      "The payment system will be activated shortly. To purchase, contact team@corporateboostservice.eu",
 
     index: {
       metaTitle: "Legal — Legal information | CorporateBoostService.eu",
