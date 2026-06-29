@@ -23,6 +23,39 @@ export const legal = {
     comingSoonBadge: "Acquisti in arrivo — disponibile a breve",
     comingSoonNote:
       "Il sistema di pagamento verrà attivato a breve. Per acquistare contatta team@corporateboostservice.eu",
+    comingSoonCardNote: "Per acquistare ora scrivi a team@corporateboostservice.eu",
+
+    // Nav / footer label for the dedicated Merchant of Record page
+    navPagamenti: "Pagamenti & MoR",
+
+    // Cross-references to the dedicated Merchant of Record page
+    paddleRefPrivacy: "I pagamenti sono gestiti da Paddle.com come Merchant of Record.",
+    paddleRefServizio:
+      "I pagamenti sono elaborati da Paddle.com, Merchant of Record per tutte le transazioni su questo sito.",
+    paddleRefLink: "Consulta la pagina Pagamenti & MoR per i dettagli.",
+
+    // Dedicated Merchant of Record page
+    mor: {
+      metaTitle: "Pagamenti e Merchant of Record | CorporateBoostService.eu",
+      metaDesc:
+        "Come vengono gestiti i pagamenti tramite Paddle.com in qualità di Merchant of Record: ricevute, rimborsi, contestazioni e contatti.",
+      badge: "Pagamenti",
+      title: "Pagamenti e Merchant of Record",
+      subtitle: "Come vengono gestiti i pagamenti per i servizi e i corsi di questo sito.",
+      s1Heading: "Chi gestisce i pagamenti",
+      s1Body:
+        "I pagamenti per i servizi e i corsi acquistati su questo sito sono gestiti da Paddle.com (Paddle.com, Inc. / Paddle Payments Ltd.), che opera in qualità di Merchant of Record. Paddle è il venditore ufficiale nei confronti del cliente finale per tutte le transazioni effettuate su corporateboostservice.eu.",
+      s2Heading: "Cosa fa Paddle",
+      s2Body:
+        "Paddle si occupa di: emissione delle ricevute e fatture fiscali, elaborazione dei pagamenti con carta, bonifico e altri metodi, gestione dei rimborsi secondo la Politica di Rimborso di questo sito, gestione delle contestazioni di pagamento (chargeback) secondo le proprie condizioni.",
+      s3Heading: "Contatti per problemi di pagamento",
+      s3Body:
+        "Per qualsiasi problema relativo a un pagamento, all'importo addebitato o a una ricevuta, è possibile: contattare Paddle direttamente su paddle.com/support, oppure scrivere a team@corporateboostservice.eu indicando l'ordine di riferimento.",
+      s4Heading: "Normativa applicabile",
+      s4Body:
+        "Paddle opera in conformità con la normativa europea sui pagamenti digitali (PSD2) e con le leggi applicabili nei paesi in cui fornisce i propri servizi.",
+      relatedHeading: "Altre pagine legali",
+    },
 
     // Index page
     index: {
