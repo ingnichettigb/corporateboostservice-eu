@@ -39,6 +39,12 @@ function ServizioPage() {
 
       <LegalSection heading={t("legal.paddleServizioHeading")}>
         <p>{t("legal.paddleServizioBody")}</p>
+        <p>
+          {t("legal.paddleRefServizio")}{" "}
+          <Link to="/pagamenti-merchant-of-record" className="text-primary underline underline-offset-4 hover:opacity-80">
+            → {t("legal.paddleRefLink")}
+          </Link>
+        </p>
       </LegalSection>
 
       <div className="mt-6 border-t border-border pt-6">
