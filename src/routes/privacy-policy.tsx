@@ -65,6 +65,10 @@ function PrivacyPage() {
         </LegalSection>
       ))}
 
+      <LegalSection heading={t("legal.paddleHeading")}>
+        <p>{t("legal.paddleBody")}</p>
+      </LegalSection>
+
       <div className="mt-6 border-t border-border pt-6">
         <h2 className="text-lg font-bold mb-3">{t("legal.privacy.relatedHeading")}</h2>
         <ul className="flex flex-wrap gap-3 text-sm">
