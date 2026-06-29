@@ -282,6 +282,36 @@ export const legal = {
     comingSoonBadge: "Purchases coming soon — available shortly",
     comingSoonNote:
       "The payment system will be activated shortly. To purchase, contact team@corporateboostservice.eu",
+    comingSoonCardNote: "To purchase now, write to team@corporateboostservice.eu",
+
+    navPagamenti: "Payments & MoR",
+
+    paddleRefPrivacy: "Payments are handled by Paddle.com as Merchant of Record.",
+    paddleRefServizio:
+      "Payments are processed by Paddle.com, Merchant of Record for all transactions on this site.",
+    paddleRefLink: "See the Payments & MoR page for the details.",
+
+    mor: {
+      metaTitle: "Payments and Merchant of Record | CorporateBoostService.eu",
+      metaDesc:
+        "How payments are handled through Paddle.com as Merchant of Record: receipts, refunds, disputes and contacts.",
+      badge: "Payments",
+      title: "Payments and Merchant of Record",
+      subtitle: "How payments for the services and courses on this site are handled.",
+      s1Heading: "Who handles payments",
+      s1Body:
+        "Payments for the services and courses purchased on this site are handled by Paddle.com (Paddle.com, Inc. / Paddle Payments Ltd.), acting as Merchant of Record. Paddle is the official seller to the end customer for all transactions made on corporateboostservice.eu.",
+      s2Heading: "What Paddle does",
+      s2Body:
+        "Paddle handles: issuing receipts and tax invoices, processing payments by card, bank transfer and other methods, managing refunds according to this site's Refund Policy, managing payment disputes (chargebacks) according to its own terms.",
+      s3Heading: "Contacts for payment issues",
+      s3Body:
+        "For any issue relating to a payment, the amount charged or a receipt, you can: contact Paddle directly at paddle.com/support, or write to team@corporateboostservice.eu indicating the reference order.",
+      s4Heading: "Applicable regulations",
+      s4Body:
+        "Paddle operates in compliance with the European regulation on digital payments (PSD2) and with the laws applicable in the countries where it provides its services.",
+      relatedHeading: "Other legal pages",
+    },
 
     index: {
       metaTitle: "Legal — Legal information | CorporateBoostService.eu",
