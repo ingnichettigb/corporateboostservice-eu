@@ -324,6 +324,27 @@ export const legal = {
 
     navPagamenti: "Payments & MoR",
 
+    cart: {
+      nav: "Cart",
+      title: "Cart",
+      subtitle: "Review your selected products before purchase.",
+      empty: "Your cart is empty.",
+      emptyCta: "Go to pricing",
+      add: "Add to cart",
+      added: "In cart",
+      addedToast: "Added to cart",
+      remove: "Remove",
+      clear: "Empty cart",
+      colService: "Product",
+      colPrice: "Price",
+      colDuration: "Duration",
+      total: "Total",
+      checkout: "Proceed to checkout",
+      checkoutNote:
+        "🚧 Online purchases will be available shortly via Paddle (Merchant of Record). You'll receive an email with the link and license right after purchase.",
+      continueShopping: "Continue shopping",
+    },
+
     paddleRefPrivacy: "Payments are handled by Paddle.com as Merchant of Record.",
     paddleRefServizio:
       "Payments are processed by Paddle.com, Merchant of Record for all transactions on this site.",
