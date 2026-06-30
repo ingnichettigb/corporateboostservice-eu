@@ -29,6 +29,27 @@ export const legal = {
     // Nav / footer label for the dedicated Merchant of Record page
     navPagamenti: "Pagamenti & MoR",
 
+    cart: {
+      nav: "Carrello",
+      title: "Carrello",
+      subtitle: "Rivedi i prodotti selezionati prima dell'acquisto.",
+      empty: "Il tuo carrello è vuoto.",
+      emptyCta: "Vai ai prezzi",
+      add: "Aggiungi al carrello",
+      added: "Nel carrello",
+      addedToast: "Aggiunto al carrello",
+      remove: "Rimuovi",
+      clear: "Svuota carrello",
+      colService: "Prodotto",
+      colPrice: "Prezzo",
+      colDuration: "Durata",
+      total: "Totale",
+      checkout: "Procedi all'acquisto",
+      checkoutNote:
+        "🚧 Gli acquisti online saranno attivi a breve tramite Paddle (Merchant of Record). Riceverai un'email con link e licenza subito dopo l'acquisto.",
+      continueShopping: "Continua gli acquisti",
+    },
+
     // Cross-references to the dedicated Merchant of Record page
     paddleRefPrivacy: "I pagamenti sono gestiti da Paddle.com come Merchant of Record.",
     paddleRefServizio:
