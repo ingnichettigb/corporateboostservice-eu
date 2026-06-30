@@ -22,6 +22,7 @@ const legalLinks = [
 
 export function SiteHeader() {
   const { t } = useTranslation();
+  const { count } = useCart();
   const [open, setOpen] = useState(false);
   return (
     <header className="fixed top-0 inset-x-0 z-50 bg-background/95 backdrop-blur-md border-b-2 border-primary/20">
