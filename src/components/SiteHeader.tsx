@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
-import { ShieldCheck, Menu, X, ChevronDown, Scale } from "lucide-react";
+import { ShieldCheck, Menu, X, ChevronDown, Scale, ShoppingCart } from "lucide-react";
+import { useCart } from "@/lib/cart";
 import { useTranslation } from "react-i18next";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { AccessibilityToggles } from "@/components/AccessibilityToggles";
