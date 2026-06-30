@@ -1,9 +1,11 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useTranslation } from "react-i18next";
 import i18n from "@/i18n";
-import { Info, Construction, Package } from "lucide-react";
+import { Info, Construction, Package, ShoppingCart, Check } from "lucide-react";
+import { toast } from "sonner";
 import { LegalLayout } from "@/components/LegalLayout";
 import { pricingItems } from "@/i18n/locales/pages/legal";
+import { useCart } from "@/lib/cart";
 
 export const Route = createFileRoute("/prezzi")({
   head: () => ({
@@ -26,7 +28,31 @@ const related = [
 
 function PrezziPage() {
   const { t } = useTranslation();
+  const { addItem, has } = useCart();
   const monthsLabel = (d: string) => `${d} ${d === "1" ? t("legal.prezzi.month") : t("legal.prezzi.months")}`;
+
+  const AddBtn = ({ item, full }: { item: (typeof pricingItems)[number]; full?: boolean }) => {
+    const inCart = has(item.domain);
+    return (
+      <button
+        type="button"
+        disabled={inCart}
+        onClick={() => {
+          addItem({ id: item.domain, name: item.name, price: item.price, duration: item.duration, domain: item.domain });
+          toast.success(t("legal.cart.addedToast"));
+        }}
+        className={`${full ? "w-full " : ""}inline-flex items-center justify-center gap-1.5 rounded-md px-3 py-2 text-xs font-semibold transition-colors ${
+          inCart
+            ? "border border-border bg-muted text-foreground/70 cursor-default"
+            : "bg-primary text-primary-foreground hover:bg-primary/90"
+        }`}
+      >
+        {inCart ? <Check className="h-4 w-4" aria-hidden /> : <ShoppingCart className="h-4 w-4" aria-hidden />}
+        {inCart ? t("legal.cart.added") : t("legal.cart.add")}
+      </button>
+    );
+  };
+
 
   return (
     <LegalLayout badge={t("legal.prezzi.badge")} title={t("legal.prezzi.title")} subtitle={t("legal.prezzi.subtitle")}>
@@ -48,7 +74,7 @@ function PrezziPage() {
               <th className="px-4 py-3 font-semibold">{t("legal.prezzi.colPrice")}</th>
               <th className="px-4 py-3 font-semibold">{t("legal.prezzi.colDuration")}</th>
               <th className="px-4 py-3 font-semibold">{t("legal.prezzi.colDomain")}</th>
-              <th className="px-4 py-3 font-semibold">{t("legal.comingSoonBadge")}</th>
+              <th className="px-4 py-3 font-semibold">{t("legal.cart.add")}</th>
             </tr>
           </thead>
           <tbody className="divide-y divide-border">
@@ -60,14 +86,9 @@ function PrezziPage() {
                 <td className="px-4 py-3 font-mono text-xs text-foreground/70 break-all">{item.domain}</td>
                 {/* TODO: sostituire con link Paddle */}
                 <td className="px-4 py-3">
-                  <div className="rounded-lg border border-amber-400 bg-amber-50 px-3 py-2">
-                    <div className="flex items-center gap-2 text-xs font-bold text-amber-900">
-                      <Construction className="h-4 w-4 shrink-0 text-amber-600" aria-hidden />
-                      <span>{t("legal.comingSoonBadge")}</span>
-                    </div>
-                    <p className="mt-1 text-xs text-amber-800/80">{t("legal.comingSoonCardNote")}</p>
-                  </div>
+                  <AddBtn item={item} />
                 </td>
+
               </tr>
             ))}
           </tbody>
@@ -85,13 +106,10 @@ function PrezziPage() {
             </div>
             <div className="mt-2 font-mono text-xs text-foreground/60 break-all">{item.domain}</div>
             {/* TODO: sostituire con link Paddle */}
-            <div className="mt-3 rounded-lg border border-amber-400 bg-amber-50 px-3 py-2">
-              <div className="flex items-center gap-2 text-sm font-bold text-amber-900">
-                <Construction className="h-4 w-4 shrink-0 text-amber-600" aria-hidden />
-                <span>{t("legal.comingSoonBadge")}</span>
-              </div>
-              <p className="mt-1 text-xs text-amber-800/80">{t("legal.comingSoonCardNote")}</p>
+            <div className="mt-3">
+              <AddBtn item={item} full />
             </div>
+
           </div>
         ))}
       </div>

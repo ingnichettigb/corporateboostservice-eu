@@ -29,6 +29,27 @@ export const legal = {
     // Nav / footer label for the dedicated Merchant of Record page
     navPagamenti: "Pagamenti & MoR",
 
+    cart: {
+      nav: "Carrello",
+      title: "Carrello",
+      subtitle: "Rivedi i prodotti selezionati prima dell'acquisto.",
+      empty: "Il tuo carrello è vuoto.",
+      emptyCta: "Vai ai prezzi",
+      add: "Aggiungi al carrello",
+      added: "Nel carrello",
+      addedToast: "Aggiunto al carrello",
+      remove: "Rimuovi",
+      clear: "Svuota carrello",
+      colService: "Prodotto",
+      colPrice: "Prezzo",
+      colDuration: "Durata",
+      total: "Totale",
+      checkout: "Procedi all'acquisto",
+      checkoutNote:
+        "🚧 Gli acquisti online saranno attivi a breve tramite Paddle (Merchant of Record). Riceverai un'email con link e licenza subito dopo l'acquisto.",
+      continueShopping: "Continua gli acquisti",
+    },
+
     // Cross-references to the dedicated Merchant of Record page
     paddleRefPrivacy: "I pagamenti sono gestiti da Paddle.com come Merchant of Record.",
     paddleRefServizio:
@@ -302,6 +323,27 @@ export const legal = {
 
 
     navPagamenti: "Payments & MoR",
+
+    cart: {
+      nav: "Cart",
+      title: "Cart",
+      subtitle: "Review your selected products before purchase.",
+      empty: "Your cart is empty.",
+      emptyCta: "Go to pricing",
+      add: "Add to cart",
+      added: "In cart",
+      addedToast: "Added to cart",
+      remove: "Remove",
+      clear: "Empty cart",
+      colService: "Product",
+      colPrice: "Price",
+      colDuration: "Duration",
+      total: "Total",
+      checkout: "Proceed to checkout",
+      checkoutNote:
+        "🚧 Online purchases will be available shortly via Paddle (Merchant of Record). You'll receive an email with the link and license right after purchase.",
+      continueShopping: "Continue shopping",
+    },
 
     paddleRefPrivacy: "Payments are handled by Paddle.com as Merchant of Record.",
     paddleRefServizio:

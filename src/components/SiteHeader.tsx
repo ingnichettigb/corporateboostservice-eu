@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
-import { ShieldCheck, Menu, X, ChevronDown, Scale } from "lucide-react";
+import { ShieldCheck, Menu, X, ChevronDown, Scale, ShoppingCart } from "lucide-react";
+import { useCart } from "@/lib/cart";
 import { useTranslation } from "react-i18next";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { AccessibilityToggles } from "@/components/AccessibilityToggles";
@@ -21,6 +22,7 @@ const legalLinks = [
 
 export function SiteHeader() {
   const { t } = useTranslation();
+  const { count } = useCart();
   const [open, setOpen] = useState(false);
   return (
     <header className="fixed top-0 inset-x-0 z-50 bg-background/95 backdrop-blur-md border-b-2 border-primary/20">
@@ -40,6 +42,19 @@ export function SiteHeader() {
         </div>
 
         <div className="flex items-center gap-2">
+          <Link
+            to="/carrello"
+            aria-label={t("legal.cart.title")}
+            className="relative min-w-11 min-h-11 inline-flex items-center justify-center rounded-md border-2 border-foreground/20 text-foreground hover:bg-primary/15"
+            activeProps={{ className: "bg-primary text-primary-foreground border-primary" }}
+          >
+            <ShoppingCart className="h-5 w-5" aria-hidden />
+            {count > 0 && (
+              <span className="absolute -top-1.5 -right-1.5 min-w-5 h-5 px-1 inline-flex items-center justify-center rounded-full bg-primary text-primary-foreground text-xs font-bold">
+                {count}
+              </span>
+            )}
+          </Link>
           <LanguageSwitcher />
           <button
             type="button"
@@ -92,6 +107,20 @@ export function SiteHeader() {
                 className="inline-flex items-center min-h-11 px-4 rounded-md text-foreground hover:bg-primary/15"
               >
                 {t("legal.navPrezzi")}
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/carrello"
+                activeProps={{ className: "bg-primary text-primary-foreground" }}
+                className="inline-flex items-center gap-1.5 min-h-11 px-4 rounded-md text-foreground hover:bg-primary/15"
+              >
+                <ShoppingCart className="h-4 w-4" aria-hidden /> {t("legal.cart.nav")}
+                {count > 0 && (
+                  <span className="min-w-5 h-5 px-1 inline-flex items-center justify-center rounded-full bg-primary text-primary-foreground text-xs font-bold">
+                    {count}
+                  </span>
+                )}
               </Link>
             </li>
             <li>
