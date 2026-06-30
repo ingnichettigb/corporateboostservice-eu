@@ -42,6 +42,19 @@ export function SiteHeader() {
         </div>
 
         <div className="flex items-center gap-2">
+          <Link
+            to="/carrello"
+            aria-label={t("legal.cart.title")}
+            className="relative min-w-11 min-h-11 inline-flex items-center justify-center rounded-md border-2 border-foreground/20 text-foreground hover:bg-primary/15"
+            activeProps={{ className: "bg-primary text-primary-foreground border-primary" }}
+          >
+            <ShoppingCart className="h-5 w-5" aria-hidden />
+            {count > 0 && (
+              <span className="absolute -top-1.5 -right-1.5 min-w-5 h-5 px-1 inline-flex items-center justify-center rounded-full bg-primary text-primary-foreground text-xs font-bold">
+                {count}
+              </span>
+            )}
+          </Link>
           <LanguageSwitcher />
           <button
             type="button"
