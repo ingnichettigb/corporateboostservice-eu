@@ -86,14 +86,9 @@ function PrezziPage() {
                 <td className="px-4 py-3 font-mono text-xs text-foreground/70 break-all">{item.domain}</td>
                 {/* TODO: sostituire con link Paddle */}
                 <td className="px-4 py-3">
-                  <div className="rounded-lg border border-amber-400 bg-amber-50 px-3 py-2">
-                    <div className="flex items-center gap-2 text-xs font-bold text-amber-900">
-                      <Construction className="h-4 w-4 shrink-0 text-amber-600" aria-hidden />
-                      <span>{t("legal.comingSoonBadge")}</span>
-                    </div>
-                    <p className="mt-1 text-xs text-amber-800/80">{t("legal.comingSoonCardNote")}</p>
-                  </div>
+                  <AddBtn item={item} />
                 </td>
+
               </tr>
             ))}
           </tbody>
