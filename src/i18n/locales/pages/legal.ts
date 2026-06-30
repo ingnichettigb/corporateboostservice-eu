@@ -363,10 +363,26 @@ export const legal = {
         "Billing: all amounts are in Euro. The invoice is issued upon activation of the service or course.",
       note3:
         "Renewal: subscriptions do not renew automatically unless otherwise stated. The service can be renewed upon expiry.",
+      deliveryHeading: "Digital product delivery",
+      deliveryIntro:
+        "After completing the payment, you will immediately receive an automatic email containing:",
+      deliveryList: [
+        "the download link for the CorporateBoostService application;",
+        "your personal license key;",
+        "step-by-step activation instructions;",
+        "technical support contacts if needed.",
+      ],
+      deliveryP1:
+        "Delivery is 100% digital and happens without any delay: the email is sent within a few seconds of payment confirmation.",
+      deliveryP2:
+        "The license is immediately usable and can be activated on an authorized device via the app's “Activate License” feature.",
+      deliveryP3:
+        "If you do not receive the email within 5 minutes, you can contact our support at team@corporateboostservice.eu: we will manually resend the link and the license.",
       relatedHeading: "Other legal pages",
       months: "months",
       month: "month",
     },
+
 
     termini: {
       metaTitle: "Terms and Conditions | CorporateBoostService.eu",
