@@ -22,6 +22,7 @@ import { Route as MinifatRouteImport } from './routes/minifat'
 import { Route as LegalRouteImport } from './routes/legal'
 import { Route as CorsoGdprIncaricatiRouteImport } from './routes/corso-gdpr-incaricati'
 import { Route as CorsiRouteImport } from './routes/corsi'
+import { Route as CarrelloRouteImport } from './routes/carrello'
 import { Route as ApplicazioniRouteImport } from './routes/applicazioni'
 import { Route as IndexRouteImport } from './routes/index'
 
@@ -91,6 +92,11 @@ const CorsiRoute = CorsiRouteImport.update({
   path: '/corsi',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CarrelloRoute = CarrelloRouteImport.update({
+  id: '/carrello',
+  path: '/carrello',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ApplicazioniRoute = ApplicazioniRouteImport.update({
   id: '/applicazioni',
   path: '/applicazioni',
@@ -105,6 +111,7 @@ const IndexRoute = IndexRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/applicazioni': typeof ApplicazioniRoute
+  '/carrello': typeof CarrelloRoute
   '/corsi': typeof CorsiRoute
   '/corso-gdpr-incaricati': typeof CorsoGdprIncaricatiRoute
   '/legal': typeof LegalRoute
@@ -122,6 +129,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/applicazioni': typeof ApplicazioniRoute
+  '/carrello': typeof CarrelloRoute
   '/corsi': typeof CorsiRoute
   '/corso-gdpr-incaricati': typeof CorsoGdprIncaricatiRoute
   '/legal': typeof LegalRoute
@@ -140,6 +148,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/applicazioni': typeof ApplicazioniRoute
+  '/carrello': typeof CarrelloRoute
   '/corsi': typeof CorsiRoute
   '/corso-gdpr-incaricati': typeof CorsoGdprIncaricatiRoute
   '/legal': typeof LegalRoute
@@ -159,6 +168,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/applicazioni'
+    | '/carrello'
     | '/corsi'
     | '/corso-gdpr-incaricati'
     | '/legal'
@@ -176,6 +186,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/applicazioni'
+    | '/carrello'
     | '/corsi'
     | '/corso-gdpr-incaricati'
     | '/legal'
@@ -193,6 +204,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/applicazioni'
+    | '/carrello'
     | '/corsi'
     | '/corso-gdpr-incaricati'
     | '/legal'
@@ -211,6 +223,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ApplicazioniRoute: typeof ApplicazioniRoute
+  CarrelloRoute: typeof CarrelloRoute
   CorsiRoute: typeof CorsiRoute
   CorsoGdprIncaricatiRoute: typeof CorsoGdprIncaricatiRoute
   LegalRoute: typeof LegalRoute
@@ -319,6 +332,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CorsiRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/carrello': {
+      id: '/carrello'
+      path: '/carrello'
+      fullPath: '/carrello'
+      preLoaderRoute: typeof CarrelloRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/applicazioni': {
       id: '/applicazioni'
       path: '/applicazioni'
@@ -339,6 +359,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ApplicazioniRoute: ApplicazioniRoute,
+  CarrelloRoute: CarrelloRoute,
   CorsiRoute: CorsiRoute,
   CorsoGdprIncaricatiRoute: CorsoGdprIncaricatiRoute,
   LegalRoute: LegalRoute,

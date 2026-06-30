@@ -1,9 +1,11 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useTranslation } from "react-i18next";
 import i18n from "@/i18n";
-import { Info, Construction, Package } from "lucide-react";
+import { Info, Construction, Package, ShoppingCart, Check } from "lucide-react";
+import { toast } from "sonner";
 import { LegalLayout } from "@/components/LegalLayout";
 import { pricingItems } from "@/i18n/locales/pages/legal";
+import { useCart } from "@/lib/cart";
 
 export const Route = createFileRoute("/prezzi")({
   head: () => ({
