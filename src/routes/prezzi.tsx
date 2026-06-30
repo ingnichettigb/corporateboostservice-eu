@@ -96,6 +96,22 @@ function PrezziPage() {
         ))}
       </div>
 
+      {/* Digital delivery */}
+      <div className="mt-10 rounded-xl border border-border bg-muted/40 p-5">
+        <div className="flex items-center gap-2 mb-3 font-bold">
+          <Package className="h-5 w-5 text-primary" aria-hidden /> {t("legal.prezzi.deliveryHeading")}
+        </div>
+        <p className="text-sm text-foreground/85 mb-3">{t("legal.prezzi.deliveryIntro")}</p>
+        <ul className="space-y-2 text-sm text-foreground/85 list-disc pl-5 mb-4">
+          <li>{t("legal.prezzi.deliveryItem1")}</li>
+          <li>{t("legal.prezzi.deliveryItem2")}</li>
+          <li>{t("legal.prezzi.deliveryItem3")}</li>
+          <li>{t("legal.prezzi.deliveryItem4")}</li>
+        </ul>
+        <p className="text-sm text-foreground/85 mb-3">{t("legal.prezzi.deliveryP1")}</p>
+        <p className="text-sm text-foreground/85 mb-3">{t("legal.prezzi.deliveryP2")}</p>
+        <p className="text-sm text-foreground/85">{t("legal.prezzi.deliveryP3")}</p>
+      </div>
 
       {/* Notes */}
       <div className="mt-10 rounded-xl border border-border bg-muted/40 p-5">
