@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useTranslation } from "react-i18next";
 import i18n from "@/i18n";
-import { Info, Construction } from "lucide-react";
+import { Info, Construction, Package } from "lucide-react";
 import { LegalLayout } from "@/components/LegalLayout";
 import { pricingItems } from "@/i18n/locales/pages/legal";
 
