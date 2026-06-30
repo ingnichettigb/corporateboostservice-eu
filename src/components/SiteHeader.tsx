@@ -110,6 +110,20 @@ export function SiteHeader() {
               </Link>
             </li>
             <li>
+              <Link
+                to="/carrello"
+                activeProps={{ className: "bg-primary text-primary-foreground" }}
+                className="inline-flex items-center gap-1.5 min-h-11 px-4 rounded-md text-foreground hover:bg-primary/15"
+              >
+                <ShoppingCart className="h-4 w-4" aria-hidden /> {t("legal.cart.nav")}
+                {count > 0 && (
+                  <span className="min-w-5 h-5 px-1 inline-flex items-center justify-center rounded-full bg-primary text-primary-foreground text-xs font-bold">
+                    {count}
+                  </span>
+                )}
+              </Link>
+            </li>
+            <li>
               <DropdownMenu>
                 <DropdownMenuTrigger className="inline-flex items-center gap-1 min-h-11 px-4 rounded-md text-foreground hover:bg-primary/15 outline-none focus-visible:ring-1 focus-visible:ring-ring">
                   <Scale className="h-4 w-4" aria-hidden /> {t("legal.navLegalMenu")}
