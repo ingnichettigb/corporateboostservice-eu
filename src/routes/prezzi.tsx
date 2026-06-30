@@ -28,7 +28,31 @@ const related = [
 
 function PrezziPage() {
   const { t } = useTranslation();
+  const { addItem, has } = useCart();
   const monthsLabel = (d: string) => `${d} ${d === "1" ? t("legal.prezzi.month") : t("legal.prezzi.months")}`;
+
+  const AddBtn = ({ item, full }: { item: (typeof pricingItems)[number]; full?: boolean }) => {
+    const inCart = has(item.domain);
+    return (
+      <button
+        type="button"
+        disabled={inCart}
+        onClick={() => {
+          addItem({ id: item.domain, name: item.name, price: item.price, duration: item.duration, domain: item.domain });
+          toast.success(t("legal.cart.addedToast"));
+        }}
+        className={`${full ? "w-full " : ""}inline-flex items-center justify-center gap-1.5 rounded-md px-3 py-2 text-xs font-semibold transition-colors ${
+          inCart
+            ? "border border-border bg-muted text-foreground/70 cursor-default"
+            : "bg-primary text-primary-foreground hover:bg-primary/90"
+        }`}
+      >
+        {inCart ? <Check className="h-4 w-4" aria-hidden /> : <ShoppingCart className="h-4 w-4" aria-hidden />}
+        {inCart ? t("legal.cart.added") : t("legal.cart.add")}
+      </button>
+    );
+  };
+
 
   return (
     <LegalLayout badge={t("legal.prezzi.badge")} title={t("legal.prezzi.title")} subtitle={t("legal.prezzi.subtitle")}>
