@@ -365,12 +365,11 @@ export const legal = {
       deliveryHeading: "Digital product delivery",
       deliveryIntro:
         "After completing the payment, you will immediately receive an automatic email containing:",
-      deliveryList: [
-        "the download link for the CorporateBoostService application;",
-        "your personal license key;",
-        "step-by-step activation instructions;",
-        "technical support contacts if needed.",
-      ],
+      deliveryItem1: "the download link for the CorporateBoostService application;",
+      deliveryItem2: "your personal license key;",
+      deliveryItem3: "step-by-step activation instructions;",
+      deliveryItem4: "technical support contacts if needed.",
+
       deliveryP1:
         "Delivery is 100% digital and happens without any delay: the email is sent within a few seconds of payment confirmation.",
       deliveryP2:
