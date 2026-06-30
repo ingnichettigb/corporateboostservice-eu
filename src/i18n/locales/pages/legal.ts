@@ -95,18 +95,17 @@ export const legal = {
       deliveryHeading: "Consegna del prodotto digitale",
       deliveryIntro:
         "Dopo aver completato il pagamento, riceverai immediatamente un’email automatica contenente:",
-      deliveryList: [
-        "il link di download dell’applicazione CorporateBoostService;",
-        "la tua chiave di licenza personale;",
-        "le istruzioni di attivazione passo‑passo;",
-        "i contatti di supporto tecnico in caso di necessità.",
-      ],
+      deliveryItem1: "il link di download dell’applicazione CorporateBoostService;",
+      deliveryItem2: "la tua chiave di licenza personale;",
+      deliveryItem3: "le istruzioni di attivazione passo‑passo;",
+      deliveryItem4: "i contatti di supporto tecnico in caso di necessità.",
       deliveryP1:
         "La consegna è digitale al 100% e avviene senza alcun ritardo: l’email viene inviata entro pochi secondi dalla conferma del pagamento.",
       deliveryP2:
         "La licenza è immediatamente utilizzabile e può essere attivata su un dispositivo autorizzato tramite la funzione “Attiva Licenza” dell’app.",
       deliveryP3:
         "In caso di mancata ricezione dell’email entro 5 minuti, puoi contattare il nostro supporto all’indirizzo team@corporateboostservice.eu: provvederemo a reinviare manualmente il link e la licenza.",
+
       relatedHeading: "Altre pagine legali",
       months: "mesi",
       month: "mese",
