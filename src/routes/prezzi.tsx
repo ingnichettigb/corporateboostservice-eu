@@ -74,7 +74,7 @@ function PrezziPage() {
               <th className="px-4 py-3 font-semibold">{t("legal.prezzi.colPrice")}</th>
               <th className="px-4 py-3 font-semibold">{t("legal.prezzi.colDuration")}</th>
               <th className="px-4 py-3 font-semibold">{t("legal.prezzi.colDomain")}</th>
-              <th className="px-4 py-3 font-semibold">{t("legal.cart.colService")}</th>
+              <th className="px-4 py-3 font-semibold">{t("legal.cart.add")}</th>
             </tr>
           </thead>
           <tbody className="divide-y divide-border">
