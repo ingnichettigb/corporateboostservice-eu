@@ -99,8 +99,9 @@ function PrezziPage() {
 
       {/* Mobile cards */}
       <div className="md:hidden space-y-3">
-        {pricingItems.map((item) => (
+        {pricingItems.map((item, index) => (
           <div key={item.domain} className="rounded-xl border border-border p-4">
+            <div className="text-xs font-semibold text-foreground/60">ID {index + 1}</div>
             <div className="font-semibold">{item.name}</div>
             <div className="mt-2 flex items-center gap-3 text-sm">
               <span className="font-semibold text-primary">{item.price}</span>
