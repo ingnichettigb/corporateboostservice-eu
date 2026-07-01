@@ -70,6 +70,7 @@ function PrezziPage() {
         <table className="w-full text-sm">
           <thead className="bg-muted">
             <tr className="text-left">
+              <th className="px-4 py-3 font-semibold">ID</th>
               <th className="px-4 py-3 font-semibold">{t("legal.prezzi.colService")}</th>
               <th className="px-4 py-3 font-semibold">{t("legal.prezzi.colPrice")}</th>
               <th className="px-4 py-3 font-semibold">{t("legal.prezzi.colDuration")}</th>
@@ -78,8 +79,9 @@ function PrezziPage() {
             </tr>
           </thead>
           <tbody className="divide-y divide-border">
-            {pricingItems.map((item) => (
+            {pricingItems.map((item, index) => (
               <tr key={item.domain} className="hover:bg-muted/50">
+                <td className="px-4 py-3 font-semibold text-foreground/70">{index + 1}</td>
                 <td className="px-4 py-3 font-medium">{item.name}</td>
                 <td className="px-4 py-3 whitespace-nowrap font-semibold text-primary">{item.price}</td>
                 <td className="px-4 py-3 whitespace-nowrap">{monthsLabel(item.duration)}</td>
@@ -97,8 +99,9 @@ function PrezziPage() {
 
       {/* Mobile cards */}
       <div className="md:hidden space-y-3">
-        {pricingItems.map((item) => (
+        {pricingItems.map((item, index) => (
           <div key={item.domain} className="rounded-xl border border-border p-4">
+            <div className="text-xs font-semibold text-foreground/60">ID {index + 1}</div>
             <div className="font-semibold">{item.name}</div>
             <div className="mt-2 flex items-center gap-3 text-sm">
               <span className="font-semibold text-primary">{item.price}</span>
