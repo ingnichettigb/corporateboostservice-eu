@@ -10,7 +10,23 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Query Supabase table
+        id: ping
         run: |
-          curl -s -X GET "${{ secrets.SUPABASE_URL }}/rest/v1/licenses?select=id&limit=1" \
+          RESPONSE=$(curl -s -X GET "${{ secrets.SUPABASE_URL }}/rest/v1/licenses?select=id&limit=1" \
             -H "apikey: ${{ secrets.SUPABASE_ANON_KEY }}" \
-            -H "Authorization: Bearer ${{ secrets.SUPABASE_ANON_KEY }}"
+            -H "Authorization: Bearer ${{ secrets.SUPABASE_ANON_KEY }}")
+          echo "response<<EOF" >> $GITHUB_OUTPUT
+          echo "$RESPONSE" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
+      - name: Send confirmation email via Resend
+        run: |
+          curl -s -X POST "https://api.resend.com/emails" \
+            -H "Authorization: Bearer ${{ secrets.RESEND_API_KEY }}" \
+            -H "Content-Type: application/json" \
+            -d "{
+              \"from\": \"keepalive@corporateboostservice.eu\",
+              \"to\": \"team@corporateboostservice.eu\",
+              \"subject\": \"✅ Supabase Keep-Alive eseguito\",
+              \"text\": \"Il ping automatico a Supabase e' andato a buon fine.\n\nData: $(date -u)\n\nRisposta:\n${{ steps.ping.outputs.response }}\"
+            }"
