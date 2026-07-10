@@ -108,7 +108,7 @@ function AnnualActivateButton({ className = "" }: { className?: string }) {
   return (
     <Button
       size="lg"
-      className={`h-12 px-8 whitespace-normal leading-tight bg-orange-500 font-bold text-yellow-300 hover:bg-orange-600 border-2 border-black ${className}`}
+      className={`h-12 px-8 whitespace-normal leading-tight bg-[#1A365D] font-bold text-[#FEF08A] hover:bg-[#162d4d] border-2 border-black ${className}`}
       onClick={() => {
         addItem(PEDFLOW_ANNUAL_PLAN);
         toast.success(t("addedToast"));
