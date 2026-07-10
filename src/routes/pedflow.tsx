@@ -26,7 +26,7 @@ import {
   Gauge,
   Lock,
   Languages,
-  PlayCircle,
+  
   ScrollText,
   Users,
   BookOpenCheck,
