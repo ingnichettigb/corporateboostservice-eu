@@ -388,15 +388,15 @@ export const legal = {
     prezzi: {
       metaTitle: "Pricing — SaaS Services and Digital Courses | CorporateBoostService.eu",
       metaDesc:
-        "Price list of SaaS services and digital courses: fee, duration and dedicated subdomain for each application.",
+        "Price list of SaaS services and digital courses: fee, duration and product code for each application.",
       badge: "Price list",
       title: "Pricing",
       subtitle:
-        "Fee, duration and dedicated subdomain for each SaaS service and digital course.",
+        "Fee, duration and product code for each SaaS service and digital course.",
       colService: "Service",
       colPrice: "Price",
       colDuration: "Duration",
-      colDomain: "Subdomain",
+      colCode: "Product code",
       notesHeading: "Important notes",
       note1:
         "Price changes: prices may be modified at any time. Changes do not apply to subscriptions already active until their expiry.",
