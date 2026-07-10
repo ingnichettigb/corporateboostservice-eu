@@ -1,6 +1,6 @@
 {
   "brand": "CorporateBoostService.eu",
-  "motto": "CORSI E APP DIGITALI",
+  "motto": "APP DIGITALI E CORSI",
   "skip": "Vai al contenuto",
   "nav": {
     "home": "Home",
@@ -17,10 +17,10 @@
     "highContrastOn": "Alto contrasto attivo"
   },
   "hero": {
-    "badge": "Corsi certificati · App digitali",
-    "title1": "Corsi Certificati e",
-    "title2": "Applicazioni Digitali",
-    "subtitle": "Corsi certificati e applicazioni digitali per imprese e professionisti. Acquista, installa, usa: tutto online, subito.",
+    "badge": "App digitali · Corsi certificati",
+    "title1": "Applicazioni Digitali e",
+    "title2": "Corsi Certificati",
+    "subtitle": "Applicazioni digitali e corsi certificati per imprese e professionisti. Acquista, installa, usa: tutto online, subito.",
     "ctaCorsi": "Esplora i corsi",
     "ctaApp": "Scopri le app"
   },
@@ -144,8 +144,8 @@
     "address": "Indirizzo"
   },
   "home": {
-    "pageTitle": "Corsi GDPR e App Digitali per Imprese",
-    "pageDesc": "Corsi online su GDPR e sicurezza sul lavoro, più applicazioni digitali per imprese e professionisti."
+    "pageTitle": "Applicazioni Digitali e Corsi Certificati per Imprese",
+    "pageDesc": "Applicazioni digitali e corsi certificati per imprese e professionisti."
   },
   "checklist": {
     "autovalutazione": "Autovalutazione Privacy 1996 — Gratis, in 9 domande",

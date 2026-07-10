@@ -1,6 +1,6 @@
 {
   "brand": "CorporateBoostService.eu",
-  "motto": "COURSES & DIGITAL APPS",
+  "motto": "DIGITAL APPS & COURSES",
   "skip": "Skip to content",
   "nav": {
     "home": "Home",
@@ -17,10 +17,10 @@
     "highContrastOn": "High contrast on"
   },
   "hero": {
-    "badge": "Certified courses · Digital apps",
-    "title1": "Certified Courses and",
-    "title2": "Digital Applications",
-    "subtitle": "Certified courses and digital applications for companies and professionals. Buy, install, use: all online, instantly.",
+    "badge": "Digital apps · Certified courses",
+    "title1": "Digital Applications and",
+    "title2": "Certified Courses",
+    "subtitle": "Digital applications and certified courses for companies and professionals. Buy, install, use: all online, instantly.",
     "ctaCorsi": "Explore courses",
     "ctaApp": "Discover the apps"
   },
@@ -144,8 +144,8 @@
     "address": "Address"
   },
   "home": {
-    "pageTitle": "GDPR Courses & Digital Apps for Business",
-    "pageDesc": "Online courses on GDPR and workplace safety, plus digital applications for companies and professionals."
+    "pageTitle": "Digital Applications & Certified Courses for Business",
+    "pageDesc": "Digital applications and certified courses for companies and professionals."
   },
   "checklist": {
     "autovalutazione": "Privacy 1996 Self-Assessment — Free, in 9 questions",

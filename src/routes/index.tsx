@@ -10,8 +10,8 @@ import { corsi, applicazioni } from "@/data/site";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Corsi GDPR e App Digitali per Imprese" },
-      { name: "description", content: "Corsi online su GDPR e sicurezza sul lavoro, più applicazioni digitali per imprese e professionisti." },
+      { title: "Applicazioni Digitali e Corsi Certificati per Imprese" },
+      { name: "description", content: "Applicazioni digitali e corsi certificati per imprese e professionisti." },
     ],
   }),
   component: Home,
@@ -39,48 +39,18 @@ function Home() {
               {t("hero.subtitle")}
             </p>
             <div className="mt-10 flex flex-col items-center gap-4 max-w-sm mx-auto">
-              <Button size="lg" className="h-12 w-full bg-yellow-400 text-black border-2 border-black font-bold hover:bg-yellow-300 shadow-[var(--shadow-elegant)] hover:-translate-y-0.5 transition-all" asChild>
-                <Link to="/corsi"><GraduationCap className="mr-1" aria-hidden /> {t("hero.ctaCorsi")}</Link>
-              </Button>
               <Button variant="hero" size="lg" className="h-12 w-full" asChild>
                 <Link to="/applicazioni"><Layers className="mr-1" aria-hidden /> {t("hero.ctaApp")}</Link>
               </Button>
-            </div>
-          </div>
-        </section>
-
-        {/* CORSI — sfumatura blu-100 */}
-        <section className="py-24 [background:var(--gradient-section-corsi)] border-y-2 border-primary/15">
-          <div className="container mx-auto px-4">
-            <div className="max-w-2xl mb-14">
-              <p className="text-base font-bold text-primary mb-3 uppercase tracking-wider">{t("corsi.kicker")}</p>
-              <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-foreground">{t("corsi.title")}</h2>
-              <p className="mt-4 text-lg text-foreground/85">{t("corsi.subtitle")}</p>
-            </div>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-              {corsi.map(({ icon: Icon, key }) => (
-                <article key={key} className="p-6 rounded-2xl border-2 border-primary/20 bg-white shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-elegant)] hover:-translate-y-1 transition-all">
-                  <div className="h-12 w-12 rounded-lg bg-primary text-primary-foreground flex items-center justify-center mb-5">
-                    <Icon className="h-6 w-6" aria-hidden />
-                  </div>
-                  <h3 className="font-bold text-lg mb-2 text-foreground">{t(`corsi.items.${key}.title`)}</h3>
-                  <p className="text-foreground/80 leading-relaxed mb-5">{t(`corsi.items.${key}.desc`)}</p>
-                  <Button variant="ghost" size="sm" className="px-0 text-primary font-bold hover:bg-transparent hover:text-primary/80" asChild>
-                    <Link to="/corsi">{t("corsi.details")} <ArrowRight className="ml-1 h-4 w-4" aria-hidden /></Link>
-                  </Button>
-                </article>
-              ))}
-            </div>
-            <div className="mt-12 text-center">
-              <Button variant="hero" size="lg" className="h-12 px-8" asChild>
-                <Link to="/corsi">{t("corsi.ctaAll")} <ArrowRight className="ml-1" aria-hidden /></Link>
+              <Button size="lg" className="h-12 w-full bg-yellow-400 text-black border-2 border-black font-bold hover:bg-yellow-300 shadow-[var(--shadow-elegant)] hover:-translate-y-0.5 transition-all" asChild>
+                <Link to="/corsi"><GraduationCap className="mr-1" aria-hidden /> {t("hero.ctaCorsi")}</Link>
               </Button>
             </div>
           </div>
         </section>
 
         {/* APPLICAZIONI — sfumatura azzurro medio */}
-        <section className="py-24 [background:var(--gradient-section-app)] border-b-2 border-primary/20">
+        <section className="py-24 [background:var(--gradient-section-app)] border-y-2 border-primary/20">
           <div className="container mx-auto px-4">
             <div className="max-w-2xl mb-14">
               <p className="text-base font-bold text-primary mb-3 uppercase tracking-wider">{t("app.kicker")}</p>
@@ -136,6 +106,36 @@ function Home() {
             <div className="mt-12 text-center">
               <Button variant="hero" size="lg" className="h-12 px-8" asChild>
                 <Link to="/applicazioni">{t("app.ctaAll")} <ArrowRight className="ml-1" aria-hidden /></Link>
+              </Button>
+            </div>
+          </div>
+        </section>
+
+        {/* CORSI — sfumatura blu-100 */}
+        <section className="py-24 [background:var(--gradient-section-corsi)] border-b-2 border-primary/15">
+          <div className="container mx-auto px-4">
+            <div className="max-w-2xl mb-14">
+              <p className="text-base font-bold text-primary mb-3 uppercase tracking-wider">{t("corsi.kicker")}</p>
+              <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-foreground">{t("corsi.title")}</h2>
+              <p className="mt-4 text-lg text-foreground/85">{t("corsi.subtitle")}</p>
+            </div>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+              {corsi.map(({ icon: Icon, key }) => (
+                <article key={key} className="p-6 rounded-2xl border-2 border-primary/20 bg-white shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-elegant)] hover:-translate-y-1 transition-all">
+                  <div className="h-12 w-12 rounded-lg bg-primary text-primary-foreground flex items-center justify-center mb-5">
+                    <Icon className="h-6 w-6" aria-hidden />
+                  </div>
+                  <h3 className="font-bold text-lg mb-2 text-foreground">{t(`corsi.items.${key}.title`)}</h3>
+                  <p className="text-foreground/80 leading-relaxed mb-5">{t(`corsi.items.${key}.desc`)}</p>
+                  <Button variant="ghost" size="sm" className="px-0 text-primary font-bold hover:bg-transparent hover:text-primary/80" asChild>
+                    <Link to="/corsi">{t("corsi.details")} <ArrowRight className="ml-1 h-4 w-4" aria-hidden /></Link>
+                  </Button>
+                </article>
+              ))}
+            </div>
+            <div className="mt-12 text-center">
+              <Button variant="hero" size="lg" className="h-12 px-8" asChild>
+                <Link to="/corsi">{t("corsi.ctaAll")} <ArrowRight className="ml-1" aria-hidden /></Link>
               </Button>
             </div>
           </div>
