@@ -322,6 +322,9 @@ function CorsoIncaricatiPage() {
                 </div>
               ))}
             </div>
+            <div className="mt-12 text-center">
+              <FreeCourseButton />
+            </div>
           </div>
         </section>
 
