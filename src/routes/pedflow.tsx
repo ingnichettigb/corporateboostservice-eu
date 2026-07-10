@@ -2,6 +2,11 @@ import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
 import { buildMailto } from "@/lib/contact";
 import { useCart } from "@/lib/cart";
+import {
+  getPedFlowMonthly,
+  getPedFlowAnnual,
+  toCartItem,
+} from "@/lib/pricing";
 import { toast } from "sonner";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
@@ -66,37 +71,27 @@ const benefitIcons = [Gauge, BookOpenCheck, Database, Layers, ShieldCheck, Langu
 
 const securityIcons = [Lock, ShieldCheck, Users];
 
-const PEDFLOW_PLAN = {
-  id: "pedflow.corporateboostservice.eu",
-  name: "PedFlow — Abbonamento mensile",
-  price: "50€",
-  duration: "1",
-  domain: "pedflow.corporateboostservice.eu",
-};
-
-const PEDFLOW_ANNUAL_PLAN = {
-  id: "pedflow-annual.corporateboostservice.eu",
-  name: "PedFlow — Abbonamento annuale",
-  price: "500€",
-  duration: "12",
-  domain: "pedflow.corporateboostservice.eu",
-};
+const PEDFLOW_MONTHLY = getPedFlowMonthly();
+const PEDFLOW_ANNUAL = getPedFlowAnnual();
+const PEDFLOW_DOMAIN = "pedflow.corporateboostservice.eu";
 
 function ActivateButton({ className = "" }: { className?: string }) {
   const { t } = useTranslation("pedflow");
   const { addItem } = useCart();
   const navigate = useNavigate();
+  const plan = PEDFLOW_MONTHLY;
+  const label = t("activateCta").replace("{{price}}", plan.price);
   return (
     <Button
       size="lg"
       className={`h-12 px-8 whitespace-normal leading-tight bg-orange-500 font-bold text-black hover:bg-orange-600 border-2 border-black ${className}`}
       onClick={() => {
-        addItem(PEDFLOW_PLAN);
+        addItem(toCartItem(plan, PEDFLOW_DOMAIN));
         toast.success(t("addedToast"));
         navigate({ to: "/carrello" });
       }}
     >
-      <ShoppingCart className="mr-2 h-5 w-5 shrink-0" aria-hidden /> {t("activateCta")}
+      <ShoppingCart className="mr-2 h-5 w-5 shrink-0" aria-hidden /> {label}
     </Button>
   );
 }
@@ -105,17 +100,19 @@ function AnnualActivateButton({ className = "" }: { className?: string }) {
   const { t } = useTranslation("pedflow");
   const { addItem } = useCart();
   const navigate = useNavigate();
+  const plan = PEDFLOW_ANNUAL;
+  const label = t("annualActivateCta").replace("{{price}}", plan.price);
   return (
     <Button
       size="lg"
       className={`h-12 px-8 whitespace-normal leading-tight bg-[#1A365D] font-bold text-[#FEF08A] hover:bg-[#162d4d] border-2 border-black ${className}`}
       onClick={() => {
-        addItem(PEDFLOW_ANNUAL_PLAN);
+        addItem(toCartItem(plan, PEDFLOW_DOMAIN));
         toast.success(t("addedToast"));
         navigate({ to: "/carrello" });
       }}
     >
-      <ShoppingCart className="mr-2 h-5 w-5 shrink-0" aria-hidden /> {t("annualActivateCta")}
+      <ShoppingCart className="mr-2 h-5 w-5 shrink-0" aria-hidden /> {label}
     </Button>
   );
 }

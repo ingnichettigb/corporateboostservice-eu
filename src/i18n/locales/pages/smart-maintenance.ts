@@ -14,8 +14,8 @@ export const smartMaintenance = {
     heroH1b: "zero errori",
     heroSubtitle:
       "La segnalazione guidata di guasti e interventi di manutenzione industriale: foto geolocalizzate, OCR, PDF professionale e mail precompilata, tutto dal tuo dispositivo.",
-    activateMonthly: "Attiva subito per la tua azienda — Solo 70€/mese",
-    activateYearly: "Zero pensieri: solo 600€/anno per l'azienda",
+    activateMonthly: "Attiva subito per la tua azienda — Solo {{price}}/mese",
+    activateYearly: "Zero pensieri: solo {{price}}/anno per l'azienda",
     addedToast: "Aggiunto al carrello",
     heroFlowAlt:
       "Flusso di lavoro SmartMaintenance: configurazione, creazione report sul campo, generazione PDF, invio, ricezione e archiviazione",
@@ -186,8 +186,8 @@ export const smartMaintenance = {
     heroH1b: "zero errors",
     heroSubtitle:
       "Guided reporting of faults and industrial maintenance interventions: geolocated photos, OCR, professional PDF and pre-filled email — all from your device.",
-    activateMonthly: "Activate now for your business — Only €70/month",
-    activateYearly: "Zero worries: only €600/year for your business",
+    activateMonthly: "Activate now for your business — Only {{price}}/month",
+    activateYearly: "Zero worries: only {{price}}/year for your business",
     addedToast: "Added to cart",
     heroFlowAlt:
       "SmartMaintenance workflow: setup, on-site report creation, PDF generation, sending, receiving and archiving",

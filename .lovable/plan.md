@@ -1,37 +1,58 @@
 ## Obiettivo
-Rivedere i tre bottoni della card **corso GDPR addetto** (`gdprAddetto`) nella pagina `/corsi`. È l'unica card attiva; le altre restano invariate.
+Rendere `pricingItems` (tabella in `/prezzi`) l'unica fonte di verità dei prezzi, così modificando quella tabella si aggiornano automaticamente anche i bottoni e le etichette nelle landing page Smart Maintenance, PedFlow e MiniFAT.
 
-## Comportamento richiesto (solo card `gdprAddetto`)
+## Problema attuale
+- I prezzi sono duplicati: `pricingItems` in `src/i18n/locales/pages/legal.ts` e oggetti locali (`SMART_MAINTENANCE_PLAN`, `PEDFLOW_PLAN`, ecc.) nelle route.
+- Le etichette dei bottoni nei file di traduzione contengono il prezzo scritto a mano.
+- C'è già una discrepanza: la tabella dice Smart Maintenance 60€/mese e 700€/anno, i bottoni dicono 70€/mese e 600€/anno.
 
-```text
-1° bottone  "Landing page"                         → /corso-gdpr-incaricati
-2° bottone  "Informazioni"                          → apre email (invariato)
-3° bottone  "Corso GRATIS – paghi solo             → aggiunge al carrello
-             l'attestato 40€"                          l'articolo 02-GDPR-00 e
-                                                        apre /carrello
-```
+## Soluzione proposta
 
-Il 3° bottone sostituisce l'attuale "Preventivo". Al click:
-- aggiunge al carrello **solo** l'articolo `Corso Privacy Addetto` (codice `02-GDPR-00`, 40€, durata 3 mesi, domain `02-gdpr-00.corporateboostservice.eu`) — stessi campi usati oggi da `AddBtn` in `/prezzi`;
-- se già presente non lo duplica (il `CartProvider` già evita i duplicati);
-- naviga a `/carrello`.
+### 1. Modulo di lookup prezzi centralizzato
+Creare `src/lib/pricing.ts` che:
+- importa `pricingItems` da `src/i18n/locales/pages/legal.ts`;
+- espone `getPlanByCode(code)` per ottenere `{ id, code, name, price, duration }`;
+- espone helper specifici per ogni prodotto, es. `getSmartMaintenanceMonthly()`, `getPedFlowAnnual()`, ecc.;
+- espone funzioni per formattare la durata (`1 mese`, `12 mesi`) e il testo del bottone.
 
-## Modifiche ai file
+### 2. Aggiornare le route di vendita
+In `src/routes/smart-maintenance.tsx`:
+- sostituire `SMART_MAINTENANCE_PLAN` e `SMART_MAINTENANCE_ANNUAL_PLAN` con lookup da `src/lib/pricing.ts` usando i codici `001SmMntnnc-01` e `001SmMntnnc-12`;
+- i bottoni leggeranno `price` e `duration` dal piano restituito.
 
-### 1. `src/routes/corsi.tsx`
-- Importare `useCart` da `@/lib/cart`, `useNavigate` da `@tanstack/react-router` e un'icona adatta (`GraduationCap` o `ShoppingCart`).
-- Definire la costante dell'articolo attestato (id/name/price/duration/domain) coerente con `pricingItems` (`02-gdpr-00`).
-- Nel blocco della card, **solo per `key === "gdprAddetto"`**:
-  - 1° bottone: mantenere il `Link to="/corso-gdpr-incaricati"` ma cambiare l'etichetta in `t("corsi.landingPage")`.
-  - 3° bottone (`gdprAddetto`): rimpiazzare il bottone "Preventivo" con un `Button` che chiama `addItem(...)`, mostra un `toast.success` e poi `navigate({ to: "/carrello" })`, con etichetta `t("corsi.corsoGratis")`.
-- Le altre card mantengono gli attuali tre bottoni (Iscriviti disabled, Informazioni, Preventivo).
+In `src/routes/pedflow.tsx`:
+- sostituire `PEDFLOW_PLAN` e `PEDFLOW_ANNUAL_PLAN` con lookup dai codici `011PedFlow-01` e `012PedFlow-12`.
 
-### 2. Traduzioni corsi (`src/i18n/locales/it.json` e `en.json`, sezione `corsi`)
-Aggiungere due chiavi:
-- `landingPage`: IT "Landing page" · EN "Landing page"
-- `corsoGratis`: IT "Corso GRATIS – paghi solo l'attestato 40€" · EN "FREE course – pay only the 40€ certificate"
+In `src/routes/minifat.tsx`:
+- sostituire lo `span` hardcoded `50€` con il prezzo live del codice `002MnFAT-01`;
+- se il bottone finale aggiunge al carrello, collegarlo al piano `002MnFAT-12` o al piano scelto.
 
-## Note tecniche
-- Solo frontend/presentazione: nessuna logica backend, nessun nuovo pacchetto.
-- Il carrello persiste già in `localStorage` tramite `CartProvider`; `addItem` è idempotente.
-- `toast` da `sonner` è già usato altrove nel progetto.
+### 3. Etichette dinamiche
+Nei file di traduzione:
+- rimuovere il prezzo dalle stringhe `activateCta`, `annualActivateCta`, `activateMonthly`, `activateYearly`;
+- usare placeholder o dividere in due parti: prefisso statico + prezzo/durata calcolato nel componente.
+
+Esempio:
+- IT: `activateCta: "Attiva subito per la tua azienda"`, poi in codice: `" — Solo {{price}}/mese"`.
+
+### 4. Componente riutilizzabile (opzionale ma consigliato)
+Creare un componente `PlanActivateButton` che:
+- accetta `code`, `variant` (mensile/annuale), `className`;
+- legge il piano da `pricingItems`;
+- mostra prezzo e durata aggiornati;
+- al click aggiunge al carrello e naviga a `/carrello`.
+
+Questo riduce la duplicazione tra Smart Maintenance e PedFlow.
+
+## File coinvolti
+- `src/lib/pricing.ts` (nuovo)
+- `src/i18n/locales/pages/legal.ts` (fonte di verità già esistente)
+- `src/routes/prezzi.tsx` (nessuna modifica funzionale, solo verifica)
+- `src/routes/smart-maintenance.tsx`
+- `src/routes/pedflow.tsx`
+- `src/routes/minifat.tsx`
+- `src/i18n/locales/pages/smart-maintenance.ts`
+- `src/i18n/locales/pages/pedflow.ts`
+
+## Risultato atteso
+Modificando solo i valori `price` in `pricingItems`, tutti i bottoni e le card delle landing page si aggiornano automaticamente, eliminando discrepanze e doppie modifiche.

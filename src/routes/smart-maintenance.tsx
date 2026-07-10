@@ -3,6 +3,11 @@ import { useTranslation } from "react-i18next";
 import i18n from "@/i18n";
 import { Button } from "@/components/ui/button";
 import { useCart } from "@/lib/cart";
+import {
+  getSmartMaintenanceMonthly,
+  getSmartMaintenanceAnnual,
+  toCartItem,
+} from "@/lib/pricing";
 import { toast } from "sonner";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
@@ -94,37 +99,27 @@ const benefitIcons = [Wifi, CheckCircle2, Layers, Gauge, HardDrive, ShieldCheck]
 
 const privacyIcons = [HardDrive, Lock, FolderArchive];
 
-const SMART_MAINTENANCE_PLAN = {
-  id: "smart-maintenance.corporateboostservice.eu",
-  name: "SmartMaintenance — Abbonamento mensile",
-  price: "70€",
-  duration: "1",
-  domain: "smart-maintenance.corporateboostservice.eu",
-};
-
-const SMART_MAINTENANCE_ANNUAL_PLAN = {
-  id: "smart-maintenance-annual.corporateboostservice.eu",
-  name: "SmartMaintenance — Abbonamento annuale",
-  price: "600€",
-  duration: "12",
-  domain: "smart-maintenance.corporateboostservice.eu",
-};
+const SMART_MAINTENANCE_MONTHLY = getSmartMaintenanceMonthly();
+const SMART_MAINTENANCE_ANNUAL = getSmartMaintenanceAnnual();
+const SMART_MAINTENANCE_DOMAIN = "smart-maintenance.corporateboostservice.eu";
 
 function ActivateButton({ className = "" }: { className?: string }) {
   const { t } = useTranslation();
   const { addItem } = useCart();
   const navigate = useNavigate();
+  const plan = SMART_MAINTENANCE_MONTHLY;
+  const label = t("smartMaintenance.activateMonthly").replace("{{price}}", plan.price);
   return (
     <Button
       size="lg"
       className={`h-12 px-8 whitespace-normal leading-tight bg-orange-500 font-bold text-black hover:bg-orange-600 border-2 border-black ${className}`}
       onClick={() => {
-        addItem(SMART_MAINTENANCE_PLAN);
+        addItem(toCartItem(plan, SMART_MAINTENANCE_DOMAIN));
         toast.success(t("smartMaintenance.addedToast"));
         navigate({ to: "/carrello" });
       }}
     >
-      <ShoppingCart className="mr-2 h-5 w-5 shrink-0" aria-hidden /> {t("smartMaintenance.activateMonthly")}
+      <ShoppingCart className="mr-2 h-5 w-5 shrink-0" aria-hidden /> {label}
     </Button>
   );
 }
@@ -133,17 +128,19 @@ function AnnualActivateButton({ className = "" }: { className?: string }) {
   const { t } = useTranslation();
   const { addItem } = useCart();
   const navigate = useNavigate();
+  const plan = SMART_MAINTENANCE_ANNUAL;
+  const label = t("smartMaintenance.activateYearly").replace("{{price}}", plan.price);
   return (
     <Button
       size="lg"
       className={`h-12 px-8 whitespace-normal leading-tight bg-[#1A365D] font-bold text-[#FEF08A] hover:bg-[#162d4d] border-2 border-black ${className}`}
       onClick={() => {
-        addItem(SMART_MAINTENANCE_ANNUAL_PLAN);
+        addItem(toCartItem(plan, SMART_MAINTENANCE_DOMAIN));
         toast.success(t("smartMaintenance.addedToast"));
         navigate({ to: "/carrello" });
       }}
     >
-      <ShoppingCart className="mr-2 h-5 w-5 shrink-0" aria-hidden /> {t("smartMaintenance.activateYearly")}
+      <ShoppingCart className="mr-2 h-5 w-5 shrink-0" aria-hidden /> {label}
     </Button>
   );
 }
