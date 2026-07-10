@@ -33,6 +33,16 @@ function PrezziPage() {
 
   const AddBtn = ({ item, full }: { item: (typeof pricingItems)[number]; full?: boolean }) => {
     const inCart = has(item.code);
+    if (item.code === "01-GDPR-00") {
+      return (
+        <span
+          className={`${full ? "w-full " : ""}inline-flex items-center justify-center gap-1.5 rounded-md px-3 py-2 text-xs font-semibold border border-amber-400 bg-amber-50 text-amber-700`}
+        >
+          <Construction className="h-4 w-4" aria-hidden />
+          {t("legal.prezzi.underConstruction")}
+        </span>
+      );
+    }
     return (
       <button
         type="button"
