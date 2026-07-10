@@ -112,7 +112,7 @@ export const corsoIncaricati = {
     ben3: "Protezione dell'azienda e dell'incaricato",
 
     // CTA finale
-    finalCtaTitle: "Accedi ora al corso GDPR per Incaricati",
+    finalCtaTitle: "Acquista ora al corso GDPR\u00a0\nper Incaricati",
     finalCtaText: "e lavora in sicurezza ogni giorno.",
     finalCtaBtn: "Accedi al Corso",
 
