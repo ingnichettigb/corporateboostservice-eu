@@ -34,6 +34,8 @@ export const Route = createFileRoute("/corsi")({
 
 function CorsiPage() {
   const { t } = useTranslation();
+  const { addItem } = useCart();
+  const navigate = useNavigate();
   return (
     <div className="min-h-screen bg-background">
       <a href="#main" className="skip-link">{t("skip")}</a>
