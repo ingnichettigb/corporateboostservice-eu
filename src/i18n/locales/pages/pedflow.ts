@@ -108,7 +108,7 @@ export const pedflow = {
       },
     ],
 
-    pdfLabel: "PDF generato",
+    pdfLabel: "\u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0PDF GENERATO",
     pdfH2: "Un documento completo e tracciabile",
     pdfCardH3: "PDF di classificazione",
     pdfCardP:
