@@ -1,58 +1,40 @@
 ## Obiettivo
-Rendere `pricingItems` (tabella in `/prezzi`) l'unica fonte di verità dei prezzi, così modificando quella tabella si aggiornano automaticamente anche i bottoni e le etichette nelle landing page Smart Maintenance, PedFlow e MiniFAT.
+Adeguare il sito ai requisiti Paddle: rimuovere la card MOCA, uniformare il nome legale del titolare e nascondere in modo permanente il badge "Edit with Lovable".
 
-## Problema attuale
-- I prezzi sono duplicati: `pricingItems` in `src/i18n/locales/pages/legal.ts` e oggetti locali (`SMART_MAINTENANCE_PLAN`, `PEDFLOW_PLAN`, ecc.) nelle route.
-- Le etichette dei bottoni nei file di traduzione contengono il prezzo scritto a mano.
-- C'è già una discrepanza: la tabella dice Smart Maintenance 60€/mese e 700€/anno, i bottoni dicono 70€/mese e 600€/anno.
+## 1. Rimozione card "MOCA Serbatoi Inox"
+La card è generata dall'array condiviso `applicazioni` in `src/data/site.ts` (usato sia dalla home che dalla pagina `/applicazioni`).
 
-## Soluzione proposta
+- Rimuovere la voce `{ icon: Container, key: "mocaSerbatoi", image: mocaSerbatoiLogo.url, wip: true }` dall'array.
+- Rimuovere l'import ora inutilizzato `mocaSerbatoiLogo` e, se non più usato, l'icona `Container` da lucide-react.
 
-### 1. Modulo di lookup prezzi centralizzato
-Creare `src/lib/pricing.ts` che:
-- importa `pricingItems` da `src/i18n/locales/pages/legal.ts`;
-- espone `getPlanByCode(code)` per ottenere `{ id, code, name, price, duration }`;
-- espone helper specifici per ogni prodotto, es. `getSmartMaintenanceMonthly()`, `getPedFlowAnnual()`, ecc.;
-- espone funzioni per formattare la durata (`1 mese`, `12 mesi`) e il testo del bottone.
+Effetto: la card sparisce da home e da Applicazioni, sia come attiva che come "in costruzione". La rotta `/moca-serbatoi` e le traduzioni restano nel codice (non collegate) per una futura reintroduzione come SaaS.
 
-### 2. Aggiornare le route di vendita
-In `src/routes/smart-maintenance.tsx`:
-- sostituire `SMART_MAINTENANCE_PLAN` e `SMART_MAINTENANCE_ANNUAL_PLAN` con lookup da `src/lib/pricing.ts` usando i codici `001SmMntnnc-01` e `001SmMntnnc-12`;
-- i bottoni leggeranno `price` e `duration` dal piano restituito.
+## 2. Nome legale uniforme: "Nichetti Gian Battista"
+Situazione attuale:
+- `src/components/SiteFooter.tsx` → "Dott. Ing. Nichetti Gian Battista" (da correggere).
+- `src/i18n/locales/pages/legal.ts` (2 punti) → già "Corporate Boost Service di Nichetti Gian Battista" (nome già corretto, si mantiene).
 
-In `src/routes/pedflow.tsx`:
-- sostituire `PEDFLOW_PLAN` e `PEDFLOW_ANNUAL_PLAN` con lookup dai codici `011PedFlow-01` e `012PedFlow-12`.
+Azione:
+- Nel footer sostituire "Dott. Ing. Nichetti Gian Battista" con "Nichetti Gian Battista".
 
-In `src/routes/minifat.tsx`:
-- sostituire lo `span` hardcoded `50€` con il prezzo live del codice `002MnFAT-01`;
-- se il bottone finale aggiunge al carrello, collegarlo al piano `002MnFAT-12` o al piano scelto.
+Nessun'altra occorrenza del nome del titolare è presente nel sito (pagina contatti e altre pagine legali non lo riportano), quindi dopo la correzione del footer il nome sarà identico ovunque compaia.
 
-### 3. Etichette dinamiche
-Nei file di traduzione:
-- rimuovere il prezzo dalle stringhe `activateCta`, `annualActivateCta`, `activateMonthly`, `activateYearly`;
-- usare placeholder o dividere in due parti: prefisso statico + prezzo/durata calcolato nel componente.
+## 3. Nascondere il badge "Edit with Lovable"
+- Aggiungere in `src/styles.css` (foglio di stile globale importato dal layout condiviso, quindi valido su tutte le pagine) la regola:
 
-Esempio:
-- IT: `activateCta: "Attiva subito per la tua azienda"`, poi in codice: `" — Solo {{price}}/mese"`.
+```css
+#lovable-badge {
+  display: none !important;
+}
+```
 
-### 4. Componente riutilizzabile (opzionale ma consigliato)
-Creare un componente `PlanActivateButton` che:
-- accetta `code`, `variant` (mensile/annuale), `className`;
-- legge il piano da `pricingItems`;
-- mostra prezzo e durata aggiornati;
-- al click aggiunge al carrello e naviga a `/carrello`.
+- In aggiunta, impostare la visibilità del badge come nascosta tramite le impostazioni di pubblicazione (richiede piano Pro): copertura anche a livello di deploy.
 
-Questo riduce la duplicazione tra Smart Maintenance e PedFlow.
+## 4. Pubblicazione e verifica
+- Ripubblicare il sito.
+- Verificare che: la card MOCA non compaia su home e Applicazioni; il nome "Nichetti Gian Battista" sia coerente ovunque; il badge Lovable non appaia su nessuna pagina (home, Corsi, Applicazioni, Prezzi, ecc.).
 
 ## File coinvolti
-- `src/lib/pricing.ts` (nuovo)
-- `src/i18n/locales/pages/legal.ts` (fonte di verità già esistente)
-- `src/routes/prezzi.tsx` (nessuna modifica funzionale, solo verifica)
-- `src/routes/smart-maintenance.tsx`
-- `src/routes/pedflow.tsx`
-- `src/routes/minifat.tsx`
-- `src/i18n/locales/pages/smart-maintenance.ts`
-- `src/i18n/locales/pages/pedflow.ts`
-
-## Risultato atteso
-Modificando solo i valori `price` in `pricingItems`, tutti i bottoni e le card delle landing page si aggiornano automaticamente, eliminando discrepanze e doppie modifiche.
+- `src/data/site.ts` (rimozione voce MOCA + import inutilizzati)
+- `src/components/SiteFooter.tsx` (nome legale)
+- `src/styles.css` (regola CSS badge)

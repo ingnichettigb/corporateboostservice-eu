@@ -1,8 +1,7 @@
-import { ShieldCheck, FileLock, HardHat, Newspaper, Wrench, Factory, ClipboardCheck, BookOpen, FlaskConical, Container } from "lucide-react";
+import { ShieldCheck, FileLock, HardHat, Newspaper, Wrench, Factory, ClipboardCheck, BookOpen, FlaskConical } from "lucide-react";
 import smartMaintenanceLogo from "@/assets/apps/smartmaintenance.jpg.asset.json";
 import pedflowLogo from "@/assets/apps/pedflow.png.asset.json";
 import minifatLogo from "@/assets/apps/minifat.png.asset.json";
-import mocaSerbatoiLogo from "@/assets/apps/moca-serbatoi.png.asset.json";
 
 export const corsi = [
   { icon: ShieldCheck, key: "gdprAddetto", wip: false, hasSubtitle: true },
@@ -19,5 +18,4 @@ export const applicazioni = [
   { icon: Factory, key: "fat", wip: true },
   { icon: ClipboardCheck, key: "sat", wip: true },
   { icon: BookOpen, key: "lp", wip: true },
-  { icon: Container, key: "mocaSerbatoi", image: mocaSerbatoiLogo.url, wip: true },
 ] as const;

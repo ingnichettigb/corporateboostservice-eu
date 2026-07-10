@@ -210,3 +210,8 @@
   font-weight: 700;
 }
 .skip-link:focus { left: 8px; }
+
+/* Nasconde in modo permanente il badge "Edit with Lovable" su tutte le pagine */
+#lovable-badge {
+  display: none !important;
+}
