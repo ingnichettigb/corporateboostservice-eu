@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
@@ -6,8 +6,19 @@ import { ContactSection } from "@/components/ContactSection";
 import { ChecklistCTAs } from "@/components/ChecklistCTAs";
 import { corsi } from "@/data/site";
 import { buildMailto } from "@/lib/contact";
-import { ArrowRight, Clock, Award, Users, Construction, Mail, FileText } from "lucide-react";
+import { useCart } from "@/lib/cart";
+import { toast } from "sonner";
+import { ArrowRight, Clock, Award, Users, Construction, Mail, FileText, GraduationCap } from "lucide-react";
 import { useTranslation } from "react-i18next";
+
+const ATTESTATO_ADDETTO = {
+  id: "02-gdpr-00.corporateboostservice.eu",
+  name: "Corso Privacy Addetto",
+  price: "40€",
+  duration: "3",
+  domain: "02-gdpr-00.corporateboostservice.eu",
+};
+
 
 
 
@@ -23,6 +34,8 @@ export const Route = createFileRoute("/corsi")({
 
 function CorsiPage() {
   const { t } = useTranslation();
+  const { addItem } = useCart();
+  const navigate = useNavigate();
   return (
     <div className="min-h-screen bg-background">
       <a href="#main" className="skip-link">{t("skip")}</a>
@@ -66,7 +79,7 @@ function CorsiPage() {
                   {key === "gdprAddetto" ? (
                     <Button asChild variant="hero" size="default" className="h-11 w-full">
                       <Link to="/corso-gdpr-incaricati">
-                        {t("corsi.iscriviti")} <ArrowRight className="ml-1 h-4 w-4" aria-hidden />
+                        {t("corsi.landingPage")} <ArrowRight className="ml-1 h-4 w-4" aria-hidden />
                       </Link>
                     </Button>
                   ) : (
@@ -79,11 +92,26 @@ function CorsiPage() {
                       <Mail className="mr-1 h-4 w-4" aria-hidden /> {t("corsi.infoLabel")}
                     </a>
                   </Button>
-                  <Button asChild variant="outline" size="default" className="h-11 w-full">
-                    <a href={buildMailto(t(`corsi.items.${key}.title`), t("corsi.preventivoBody"))}>
-                      <FileText className="mr-1 h-4 w-4" aria-hidden /> {t("corsi.preventivoLabel")}
-                    </a>
-                  </Button>
+                  {key === "gdprAddetto" ? (
+                    <Button
+                      variant="hero"
+                      size="default"
+                      className="h-11 w-full whitespace-normal leading-tight"
+                      onClick={() => {
+                        addItem(ATTESTATO_ADDETTO);
+                        toast.success(t("legal.cart.addedToast"));
+                        navigate({ to: "/carrello" });
+                      }}
+                    >
+                      <GraduationCap className="mr-1 h-4 w-4 shrink-0" aria-hidden /> {t("corsi.corsoGratis")}
+                    </Button>
+                  ) : (
+                    <Button asChild variant="outline" size="default" className="h-11 w-full">
+                      <a href={buildMailto(t(`corsi.items.${key}.title`), t("corsi.preventivoBody"))}>
+                        <FileText className="mr-1 h-4 w-4" aria-hidden /> {t("corsi.preventivoLabel")}
+                      </a>
+                    </Button>
+                  )}
                 </div>
 
 
