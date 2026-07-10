@@ -262,6 +262,9 @@ function SmartMaintenancePage() {
                 </span>
               ))}
             </div>
+            <div className="mt-10 flex justify-center">
+              <ActivateButtons />
+            </div>
           </div>
         </section>
 
@@ -290,6 +293,9 @@ function SmartMaintenancePage() {
                   </CardContent>
                 </Card>
               ))}
+            </div>
+            <div className="mt-10 flex justify-center">
+              <ActivateButtons />
             </div>
           </div>
         </section>
@@ -321,6 +327,9 @@ function SmartMaintenancePage() {
                 </Card>
               ))}
             </div>
+            <div className="mt-10 flex justify-center">
+              <ActivateButtons />
+            </div>
           </div>
         </section>
 
@@ -349,6 +358,9 @@ function SmartMaintenancePage() {
                   </CardContent>
                 </Card>
               ))}
+            </div>
+            <div className="mt-10 flex justify-center">
+              <ActivateButtons />
             </div>
           </div>
         </section>
