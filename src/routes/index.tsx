@@ -143,23 +143,47 @@ function Home() {
 
         {/* CHI SONO — blu profondo, testo bianco */}
         <section className="py-24 [background:var(--gradient-section-about)] text-white">
-          <div className="container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center max-w-5xl">
+          <div className="container mx-auto px-4 grid md:grid-cols-2 gap-12 items-start max-w-5xl">
             <div className="relative aspect-square max-w-sm mx-auto md:mx-0 w-full rounded-3xl bg-white/10 backdrop-blur-sm border-2 border-white/30 shadow-[var(--shadow-elegant)] flex items-center justify-center">
               <div className="text-center text-white px-6">
                 <ShieldCheck className="mx-auto h-20 w-20" aria-hidden />
-                <p className="mt-4 font-bold text-xl">{t("chiSono.role")}</p>
-                <p className="text-base opacity-95 mt-1">{t("chiSono.role2")}</p>
+                <p className="mt-4 font-bold text-xl">Corsi online</p>
+                <p className="text-base opacity-95 mt-1">Strumenti digitali</p>
               </div>
             </div>
             <div>
-              <p className="text-base font-bold text-white/85 mb-3 uppercase tracking-wider">{t("chiSono.kicker")}</p>
-              <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-5">{t("chiSono.title")}</h2>
-              <p className="text-lg leading-relaxed text-white/95">{t("chiSono.subtitle")}</p>
-              <ul className="mt-6 space-y-3 text-white/95 text-lg">
-                {[t("chiSono.p1")].map((txt) => (
-                  <li key={txt} className="flex items-start gap-3"><CheckCircle2 className="h-6 w-6 mt-0.5 shrink-0" aria-hidden />{txt}</li>
-                ))}
-              </ul>
+              <p className="text-base font-bold text-white/85 mb-3 uppercase tracking-wider">Chi sono</p>
+              <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-5">Esperienza, normative e tecnologia.</h2>
+              <div className="space-y-5 text-white/95 leading-relaxed">
+                <p>CorporateBoostService.eu è gestito da Gian Battista Nichetti, professionista attivo dal 1996 nel campo delle normative tecniche (Direttiva CE PED, saldatura, idoneità alimentare dei materiali, sicurezza sul lavoro come RSPP e formatore D.Lgs. 81/08, GDPR e privacy). Il doppio background — Perito Industriale in Meccanica e Informatica e Laurea in Ingegneria Industriale — ha permesso di unire competenza normativa e capacità tecnica digitale. Da questa esperienza nasce CorporateBoostService.eu: strumenti digitali e corsi online per aiutare imprese e professionisti a essere conformi, in autonomia.</p>
+
+                <div>
+                  <p className="font-bold mb-2">Applicazioni disponibili:</p>
+                  <ul className="list-disc list-inside space-y-1">
+                    <li>PedFlow: classificazione automatica dei fluidi secondo la Direttiva PED.</li>
+                    <li>MiniFAT: preparazione guidata della documentazione per sopralluoghi FAT.</li>
+                    <li>Smart Maintenance: report tecnici generati da foto, video e note vocali.</li>
+                  </ul>
+                  <p className="mt-2">Altre applicazioni (FAT, SAT, LP) sono in sviluppo secondo lo stesso principio: partire da esigenze reali verificate sul campo.</p>
+                </div>
+
+                <div>
+                  <p className="font-bold mb-2">Pagamenti gestiti da Paddle</p>
+                  <p>Paddle funge da Merchant of Record per tutti gli acquisti, gestendo fatturazione, IVA e pagamenti.</p>
+                  <ul className="list-disc list-inside space-y-1 mt-2">
+                    <li><a href="https://www.paddle.com/legal/terms" target="_blank" rel="noopener noreferrer" className="underline hover:text-white">Paddle Terms</a></li>
+                    <li><a href="https://www.paddle.com/legal/privacy" target="_blank" rel="noopener noreferrer" className="underline hover:text-white">Paddle Privacy</a></li>
+                    <li><a href="https://www.paddle.com/legal/refund-policy" target="_blank" rel="noopener noreferrer" className="underline hover:text-white">Paddle Refund Policy</a></li>
+                  </ul>
+                </div>
+
+                <div>
+                  <p className="font-bold mb-2">Dati del gestore:</p>
+                  <p>Gian Battista Nichetti – Soresina (CR), Italia</p>
+                  <p>Email di contatto: <a href="mailto:info@corporateboostservice.eu" className="underline hover:text-white">info@corporateboostservice.eu</a></p>
+                  <p>P.IVA: IT 01235350194</p>
+                </div>
+              </div>
             </div>
           </div>
         </section>
