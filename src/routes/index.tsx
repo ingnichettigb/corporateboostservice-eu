@@ -173,7 +173,7 @@ function Home() {
                 <div>
                   <p className="font-bold mb-2">Dati del gestore:</p>
                   <p>Gian Battista Nichetti – Soresina (CR), Italia</p>
-                  <p>Email di contatto: <a href="mailto:info@corporateboostservice.eu" className="underline hover:text-white">info@corporateboostservice.eu</a></p>
+                  <p>Email di contatto: <a href="mailto:team@corporateboostservice.eu" className="underline hover:text-white">team@corporateboostservice.eu</a></p>
                   <p>P.IVA: IT 01235350194</p>
                 </div>
               </div>
