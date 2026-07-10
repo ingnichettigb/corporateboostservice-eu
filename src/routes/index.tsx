@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, GraduationCap, Layers, CheckCircle2, ShieldCheck, Container, Construction } from "lucide-react";
+import { ArrowRight, GraduationCap, Layers, CheckCircle2, ShieldCheck, Construction } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
@@ -44,9 +44,6 @@ function Home() {
               </Button>
               <Button variant="hero" size="lg" className="h-12 w-full" asChild>
                 <Link to="/applicazioni"><Layers className="mr-1" aria-hidden /> {t("hero.ctaApp")}</Link>
-              </Button>
-              <Button variant="outline" size="lg" className="h-12 w-full border-2 border-primary text-primary font-semibold" asChild>
-                <Link to="/moca-serbatoi"><Container className="mr-1" aria-hidden /> {t("nav.moca")}</Link>
               </Button>
             </div>
           </div>
