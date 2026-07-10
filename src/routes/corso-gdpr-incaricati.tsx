@@ -1,5 +1,7 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import { useTranslation } from "react-i18next";
+import { useCart } from "@/lib/cart";
+import { toast } from "sonner";
 import i18n from "@/i18n";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -25,11 +27,39 @@ import {
   Mail,
   MapPin,
   Clock,
-  ArrowRight,
 } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import heroImg from "@/assets/gdpr-incaricati/hero.jpg";
+
+const ATTESTATO_ADDETTO = {
+  id: "02-gdpr-00.corporateboostservice.eu",
+  name: "Corso Privacy Addetto",
+  price: "40€",
+  duration: "3",
+  domain: "02-gdpr-00.corporateboostservice.eu",
+};
+
+function FreeCourseButton({ className = "" }: { className?: string }) {
+  const { t } = useTranslation();
+  const { addItem } = useCart();
+  const navigate = useNavigate();
+  return (
+    <Button
+      variant="hero"
+      size="lg"
+      className={`h-12 px-8 whitespace-normal leading-tight ${className}`}
+      onClick={() => {
+        addItem(ATTESTATO_ADDETTO);
+        toast.success(t("legal.cart.addedToast"));
+        navigate({ to: "/carrello" });
+      }}
+    >
+      <GraduationCap className="mr-1 h-4 w-4 shrink-0" aria-hidden /> {t("corsi.corsoGratis")}
+    </Button>
+  );
+}
+
 
 export const Route = createFileRoute("/corso-gdpr-incaricati")({
   head: () => ({
@@ -179,11 +209,7 @@ function CorsoIncaricatiPage() {
               {t("corsoIncaricati.heroNote")}
             </p>
             <div className="mt-8">
-              <Button variant="hero" size="lg" className="h-12 px-8" asChild>
-                <a href="#contatti">
-                  {t("corsoIncaricati.heroCta")} <ArrowRight className="ml-1 h-4 w-4" aria-hidden />
-                </a>
-              </Button>
+              <FreeCourseButton />
             </div>
             <div className="mt-12 max-w-3xl mx-auto">
               <img
@@ -223,6 +249,9 @@ function CorsoIncaricatiPage() {
                   </CardContent>
                 </Card>
               ))}
+            </div>
+            <div className="mt-12 text-center">
+              <FreeCourseButton />
             </div>
           </div>
         </section>
@@ -269,6 +298,9 @@ function CorsoIncaricatiPage() {
                 </Card>
               ))}
             </div>
+            <div className="mt-12 text-center">
+              <FreeCourseButton />
+            </div>
           </div>
         </section>
 
@@ -291,6 +323,9 @@ function CorsoIncaricatiPage() {
                   <span className="font-semibold text-foreground/90">{a}</span>
                 </div>
               ))}
+            </div>
+            <div className="mt-12 text-center">
+              <FreeCourseButton />
             </div>
           </div>
         </section>
@@ -350,11 +385,7 @@ function CorsoIncaricatiPage() {
               <h2 className="text-2xl md:text-3xl font-bold">{t("corsoIncaricati.finalCtaTitle")}</h2>
               <p className="mt-3 text-foreground/80 text-lg">{t("corsoIncaricati.finalCtaText")}</p>
               <div className="mt-8">
-                <Button variant="hero" size="lg" className="h-12 px-8" asChild>
-                  <a href="#contatti">
-                    {t("corsoIncaricati.finalCtaBtn")} <ArrowRight className="ml-1 h-4 w-4" aria-hidden />
-                  </a>
-                </Button>
+                <FreeCourseButton />
               </div>
             </div>
           </div>
