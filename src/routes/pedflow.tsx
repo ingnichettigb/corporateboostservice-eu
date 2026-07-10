@@ -197,7 +197,7 @@ function PedFlowPage() {
               height={765}
             />
             <div className="mt-8 flex justify-center">
-              <ActivateButton />
+              <ActivateButtons />
             </div>
             <p className="mt-6 text-sm text-foreground/65">
               {t("heroCaption")}
@@ -229,7 +229,7 @@ function PedFlowPage() {
               ))}
             </div>
             <div className="mt-10 flex justify-center">
-              <ActivateButton />
+              <ActivateButtons />
             </div>
           </div>
         </section>
@@ -264,7 +264,7 @@ function PedFlowPage() {
               })}
             </div>
             <div className="mt-10 flex justify-center">
-              <ActivateButton />
+              <ActivateButtons />
             </div>
           </div>
         </section>
@@ -301,7 +301,7 @@ function PedFlowPage() {
               })}
             </div>
             <div className="mt-10 flex justify-center">
-              <ActivateButton />
+              <ActivateButtons />
             </div>
           </div>
         </section>
@@ -336,7 +336,7 @@ function PedFlowPage() {
               })}
             </div>
             <div className="mt-10 flex justify-center">
-              <ActivateButton />
+              <ActivateButtons />
             </div>
           </div>
         </section>
@@ -376,7 +376,7 @@ function PedFlowPage() {
             </div>
           </div>
           <div className="container mx-auto px-4 max-w-6xl mt-10 flex justify-center">
-            <ActivateButton />
+            <ActivateButtons />
           </div>
         </section>
 
@@ -408,7 +408,7 @@ function PedFlowPage() {
               })}
             </div>
             <div className="mt-10 flex justify-center">
-              <ActivateButton />
+              <ActivateButtons />
             </div>
           </div>
         </section>
@@ -433,7 +433,7 @@ function PedFlowPage() {
               {t("faqDisclaimer")}
             </p>
             <div className="mt-10 flex justify-center">
-              <ActivateButton />
+              <ActivateButtons />
             </div>
           </div>
         </section>
