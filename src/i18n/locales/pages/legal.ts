@@ -422,6 +422,7 @@ export const legal = {
       relatedHeading: "Other legal pages",
       months: "months",
       month: "month",
+      underConstruction: "Under construction",
     },
 
 
