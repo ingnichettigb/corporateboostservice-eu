@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
@@ -6,8 +6,19 @@ import { ContactSection } from "@/components/ContactSection";
 import { ChecklistCTAs } from "@/components/ChecklistCTAs";
 import { corsi } from "@/data/site";
 import { buildMailto } from "@/lib/contact";
-import { ArrowRight, Clock, Award, Users, Construction, Mail, FileText } from "lucide-react";
+import { useCart } from "@/lib/cart";
+import { toast } from "sonner";
+import { ArrowRight, Clock, Award, Users, Construction, Mail, FileText, GraduationCap } from "lucide-react";
 import { useTranslation } from "react-i18next";
+
+const ATTESTATO_ADDETTO = {
+  id: "02-gdpr-00.corporateboostservice.eu",
+  name: "Corso Privacy Addetto",
+  price: "40€",
+  duration: "3",
+  domain: "02-gdpr-00.corporateboostservice.eu",
+};
+
 
 
 
