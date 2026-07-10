@@ -148,7 +148,11 @@ function Home() {
               <p className="text-base font-bold text-white/85 mb-3 uppercase tracking-wider">Chi sono</p>
               <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-5">Esperienza, normative e tecnologia.</h2>
               <div className="space-y-5 text-white/95 leading-relaxed">
-                <p>CorporateBoostService.eu è gestito da Gian Battista Nichetti, professionista attivo dal 1996 nel campo delle normative tecniche (Direttiva CE PED, saldatura, idoneità alimentare dei materiali, sicurezza sul lavoro come RSPP e formatore D.Lgs. 81/08, GDPR e privacy). Il doppio background — Perito Industriale in Meccanica e Informatica e Laurea in Ingegneria Industriale — ha permesso di unire competenza normativa e capacità tecnica digitale. Da questa esperienza nasce CorporateBoostService.eu: strumenti digitali e corsi online per aiutare imprese e professionisti a essere conformi, in autonomia.</p>
+                <p>
+                  CorporateBoostService.eu è gestito da Gian Battista Nichetti, professionista attivo dal 1996 nel campo delle normative tecniche (Direttiva CE PED, saldatura, idoneità alimentare dei materiali, sicurezza sul lavoro come RSPP e formatore D.Lgs. 81/08, GDPR e privacy). Il doppio background&nbsp;
+                  <br />— Perito Industriale in Meccanica e Informatica e Laurea in Ingegneria Industriale —&nbsp;
+                  <br />&nbsp;ha permesso di unire competenza normativa e capacità tecnica digitale. Da questa esperienza nasce CorporateBoostService.eu: strumenti digitali e corsi online per aiutare imprese e professionisti a essere conformi, in autonomia.
+                </p>
 
                 <div>
                   <p className="font-bold mb-2">Applicazioni disponibili:</p>
