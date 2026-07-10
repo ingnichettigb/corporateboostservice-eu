@@ -1,8 +1,9 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import { useTranslation } from "react-i18next";
 import i18n from "@/i18n";
 import { Button } from "@/components/ui/button";
-import { buildMailto } from "@/lib/contact";
+import { useCart } from "@/lib/cart";
+import { toast } from "sonner";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
   Accordion,
@@ -12,7 +13,6 @@ import {
 } from "@/components/ui/accordion";
 import {
   ArrowLeft,
-  ArrowRight,
   Wrench,
   KeyRound,
   Building2,
@@ -30,9 +30,9 @@ import {
   Gauge,
   Lock,
   Wifi,
-  PlayCircle,
   AlertTriangle,
   HardDrive,
+  ShoppingCart,
 } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
@@ -93,6 +93,69 @@ const stepIcons = [
 const benefitIcons = [Wifi, CheckCircle2, Layers, Gauge, HardDrive, ShieldCheck];
 
 const privacyIcons = [HardDrive, Lock, FolderArchive];
+
+const SMART_MAINTENANCE_PLAN = {
+  id: "smart-maintenance.corporateboostservice.eu",
+  name: "SmartMaintenance — Abbonamento mensile",
+  price: "70€",
+  duration: "1",
+  domain: "smart-maintenance.corporateboostservice.eu",
+};
+
+const SMART_MAINTENANCE_ANNUAL_PLAN = {
+  id: "smart-maintenance-annual.corporateboostservice.eu",
+  name: "SmartMaintenance — Abbonamento annuale",
+  price: "600€",
+  duration: "12",
+  domain: "smart-maintenance.corporateboostservice.eu",
+};
+
+function ActivateButton({ className = "" }: { className?: string }) {
+  const { t } = useTranslation();
+  const { addItem } = useCart();
+  const navigate = useNavigate();
+  return (
+    <Button
+      size="lg"
+      className={`h-12 px-8 whitespace-normal leading-tight bg-orange-500 font-bold text-black hover:bg-orange-600 border-2 border-black ${className}`}
+      onClick={() => {
+        addItem(SMART_MAINTENANCE_PLAN);
+        toast.success(t("smartMaintenance.addedToast"));
+        navigate({ to: "/carrello" });
+      }}
+    >
+      <ShoppingCart className="mr-2 h-5 w-5 shrink-0" aria-hidden /> {t("smartMaintenance.activateMonthly")}
+    </Button>
+  );
+}
+
+function AnnualActivateButton({ className = "" }: { className?: string }) {
+  const { t } = useTranslation();
+  const { addItem } = useCart();
+  const navigate = useNavigate();
+  return (
+    <Button
+      size="lg"
+      className={`h-12 px-8 whitespace-normal leading-tight bg-[#1A365D] font-bold text-[#FEF08A] hover:bg-[#162d4d] border-2 border-black ${className}`}
+      onClick={() => {
+        addItem(SMART_MAINTENANCE_ANNUAL_PLAN);
+        toast.success(t("smartMaintenance.addedToast"));
+        navigate({ to: "/carrello" });
+      }}
+    >
+      <ShoppingCart className="mr-2 h-5 w-5 shrink-0" aria-hidden /> {t("smartMaintenance.activateYearly")}
+    </Button>
+  );
+}
+
+function ActivateButtons({ className = "" }: { className?: string }) {
+  return (
+    <div className={`flex flex-col gap-3 justify-center items-center ${className}`}>
+      <ActivateButton />
+      <AnnualActivateButton />
+    </div>
+  );
+}
 
 function SmartMaintenancePage() {
   const { t } = useTranslation();
