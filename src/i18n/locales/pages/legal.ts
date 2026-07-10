@@ -97,15 +97,15 @@ export const legal = {
     prezzi: {
       metaTitle: "Prezzi — Servizi SaaS e Corsi Digitali | CorporateBoostService.eu",
       metaDesc:
-        "Listino prezzi dei servizi SaaS e dei corsi digitali: canone, durata e sottodominio dedicato per ogni applicazione.",
+        "Listino prezzi dei servizi SaaS e dei corsi digitali: canone, durata e codice prodotto per ogni applicazione.",
       badge: "Listino prezzi",
       title: "Prezzi",
       subtitle:
-        "Canone, durata e sottodominio dedicato per ogni servizio SaaS e corso digitale.",
+        "Canone, durata e codice prodotto per ogni servizio SaaS e corso digitale.",
       colService: "Servizio",
       colPrice: "Prezzo",
       colDuration: "Durata",
-      colDomain: "Sottodominio",
+      colCode: "Codice prodotto",
       notesHeading: "Note importanti",
       note1:
         "Variazioni di prezzo: i prezzi possono essere modificati in qualsiasi momento. Le variazioni non si applicano agli abbonamenti già attivi fino alla loro scadenza.",
@@ -388,15 +388,15 @@ export const legal = {
     prezzi: {
       metaTitle: "Pricing — SaaS Services and Digital Courses | CorporateBoostService.eu",
       metaDesc:
-        "Price list of SaaS services and digital courses: fee, duration and dedicated subdomain for each application.",
+        "Price list of SaaS services and digital courses: fee, duration and product code for each application.",
       badge: "Price list",
       title: "Pricing",
       subtitle:
-        "Fee, duration and dedicated subdomain for each SaaS service and digital course.",
+        "Fee, duration and product code for each SaaS service and digital course.",
       colService: "Service",
       colPrice: "Price",
       colDuration: "Duration",
-      colDomain: "Subdomain",
+      colCode: "Product code",
       notesHeading: "Important notes",
       note1:
         "Price changes: prices may be modified at any time. Changes do not apply to subscriptions already active until their expiry.",
@@ -585,11 +585,12 @@ export const legal = {
 };
 
 export const pricingItems = [
-  { name: "Smart Maintenance", price: "300€", duration: "12", domain: "001-sm-mntnnc.corporateboostservice.eu" },
-  { name: "Mini FAT", price: "200€", duration: "12", domain: "002-mn-fat.corporateboostservice.eu" },
-  { name: "Sopralluogo 81/08", price: "150€", duration: "12", domain: "005-sprllg.corporateboostservice.eu" },
-  { name: "Calcolo Gruppo Fluido CE PED – 1 mese", price: "10€", duration: "1", domain: "011-pedflow-01.corporateboostservice.eu" },
-  { name: "Calcolo Gruppo Fluido CE PED – 12 mesi", price: "100€", duration: "12", domain: "012-pedflow-12.corporateboostservice.eu" },
-  { name: "Corso Privacy Addetto", price: "40€", duration: "3", domain: "02-gdpr-00.corporateboostservice.eu" },
-  { name: "Corso Privacy Completo", price: "80€", duration: "3", domain: "01-gdpr-00.corporateboostservice.eu" },
+  { id: 1, code: "001SmMntnnc-12", name: "Smart maintenance", price: "700€", duration: "12" },
+  { id: 2, code: "001SmMntnnc-01", name: "Smart maintenance", price: "60€", duration: "1" },
+  { id: 3, code: "002MnFAT-12", name: "Mini FAT", price: "600€", duration: "12" },
+  { id: 4, code: "002MnFAT-01", name: "Mini FAT", price: "50€", duration: "1" },
+  { id: 5, code: "011PedFlow-01", name: "Calcolo gruppo fluido CE PED", price: "50€", duration: "1" },
+  { id: 6, code: "012PedFlow-12", name: "Calcolo gruppo fluido CE PED", price: "500€", duration: "12" },
+  { id: 7, code: "02-GDPR-00", name: "Corso Privacy Addetto", price: "40€", duration: "3" },
+  { id: 8, code: "01-GDPR-00", name: "Corso Privacy Completo", price: "80€", duration: "3" },
 ];
