@@ -33,6 +33,35 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import heroImg from "@/assets/gdpr-incaricati/hero.jpg";
 
+const ATTESTATO_ADDETTO = {
+  id: "02-gdpr-00.corporateboostservice.eu",
+  name: "Corso Privacy Addetto",
+  price: "40€",
+  duration: "3",
+  domain: "02-gdpr-00.corporateboostservice.eu",
+};
+
+function FreeCourseButton({ className = "" }: { className?: string }) {
+  const { t } = useTranslation();
+  const { addItem } = useCart();
+  const navigate = useNavigate();
+  return (
+    <Button
+      variant="hero"
+      size="lg"
+      className={`h-12 px-8 whitespace-normal leading-tight ${className}`}
+      onClick={() => {
+        addItem(ATTESTATO_ADDETTO);
+        toast.success(t("legal.cart.addedToast"));
+        navigate({ to: "/carrello" });
+      }}
+    >
+      <GraduationCap className="mr-1 h-4 w-4 shrink-0" aria-hidden /> {t("corsi.corsoGratis")}
+    </Button>
+  );
+}
+
+
 export const Route = createFileRoute("/corso-gdpr-incaricati")({
   head: () => ({
     meta: [
