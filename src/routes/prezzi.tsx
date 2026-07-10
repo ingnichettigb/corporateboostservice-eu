@@ -32,13 +32,13 @@ function PrezziPage() {
   const monthsLabel = (d: string) => `${d} ${d === "1" ? t("legal.prezzi.month") : t("legal.prezzi.months")}`;
 
   const AddBtn = ({ item, full }: { item: (typeof pricingItems)[number]; full?: boolean }) => {
-    const inCart = has(item.domain);
+    const inCart = has(item.code);
     return (
       <button
         type="button"
         disabled={inCart}
         onClick={() => {
-          addItem({ id: item.domain, name: item.name, price: item.price, duration: item.duration, domain: item.domain });
+          addItem({ id: item.code, name: item.name, price: item.price, duration: item.duration, domain: item.code });
           toast.success(t("legal.cart.addedToast"));
         }}
         className={`${full ? "w-full " : ""}inline-flex items-center justify-center gap-1.5 rounded-md px-3 py-2 text-xs font-semibold transition-colors ${
