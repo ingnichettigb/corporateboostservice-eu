@@ -14,8 +14,9 @@ export const smartMaintenance = {
     heroH1b: "zero errori",
     heroSubtitle:
       "La segnalazione guidata di guasti e interventi di manutenzione industriale: foto geolocalizzate, OCR, PDF professionale e mail precompilata, tutto dal tuo dispositivo.",
-    heroCta: "Prova ora",
-    heroDemoCta: "Richiedi demo",
+    activateMonthly: "Attiva subito per la tua azienda — Solo 70€/mese",
+    activateYearly: "Zero pensieri: solo 600€/anno per l'azienda",
+    addedToast: "Aggiunto al carrello",
     heroFlowAlt:
       "Flusso di lavoro SmartMaintenance: configurazione, creazione report sul campo, generazione PDF, invio, ricezione e archiviazione",
     heroTagline: "Mobile-first · Funziona offline · Dati salvati sul tuo dispositivo",
@@ -168,8 +169,6 @@ export const smartMaintenance = {
 
     ctaH2: "La manutenzione industriale, reinventata",
     ctaBody: "Un nuovo standard per tecnici e aziende: dal campo all'ufficio in un clic.",
-    ctaDownload: "Scarica la demo",
-    ctaQuote: "Attiva per la tua azienda",
   },
 
   en: {
@@ -187,8 +186,9 @@ export const smartMaintenance = {
     heroH1b: "zero errors",
     heroSubtitle:
       "Guided reporting of faults and industrial maintenance interventions: geolocated photos, OCR, professional PDF and pre-filled email — all from your device.",
-    heroCta: "Try it now",
-    heroDemoCta: "Request a demo",
+    activateMonthly: "Activate now for your business — Only €70/month",
+    activateYearly: "Zero worries: only €600/year for your business",
+    addedToast: "Added to cart",
     heroFlowAlt:
       "SmartMaintenance workflow: setup, on-site report creation, PDF generation, sending, receiving and archiving",
     heroTagline: "Mobile-first · Works offline · Data saved on your device",
@@ -341,7 +341,5 @@ export const smartMaintenance = {
 
     ctaH2: "Industrial maintenance, reinvented",
     ctaBody: "A new standard for technicians and companies: from the field to the office in one click.",
-    ctaDownload: "Download the demo",
-    ctaQuote: "Activate for your company",
   },
 } as const;

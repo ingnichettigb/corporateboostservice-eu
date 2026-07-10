@@ -1,8 +1,9 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import { useTranslation } from "react-i18next";
 import i18n from "@/i18n";
 import { Button } from "@/components/ui/button";
-import { buildMailto } from "@/lib/contact";
+import { useCart } from "@/lib/cart";
+import { toast } from "sonner";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
   Accordion,
@@ -12,7 +13,6 @@ import {
 } from "@/components/ui/accordion";
 import {
   ArrowLeft,
-  ArrowRight,
   Wrench,
   KeyRound,
   Building2,
@@ -30,9 +30,9 @@ import {
   Gauge,
   Lock,
   Wifi,
-  PlayCircle,
   AlertTriangle,
   HardDrive,
+  ShoppingCart,
 } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
@@ -94,6 +94,69 @@ const benefitIcons = [Wifi, CheckCircle2, Layers, Gauge, HardDrive, ShieldCheck]
 
 const privacyIcons = [HardDrive, Lock, FolderArchive];
 
+const SMART_MAINTENANCE_PLAN = {
+  id: "smart-maintenance.corporateboostservice.eu",
+  name: "SmartMaintenance — Abbonamento mensile",
+  price: "70€",
+  duration: "1",
+  domain: "smart-maintenance.corporateboostservice.eu",
+};
+
+const SMART_MAINTENANCE_ANNUAL_PLAN = {
+  id: "smart-maintenance-annual.corporateboostservice.eu",
+  name: "SmartMaintenance — Abbonamento annuale",
+  price: "600€",
+  duration: "12",
+  domain: "smart-maintenance.corporateboostservice.eu",
+};
+
+function ActivateButton({ className = "" }: { className?: string }) {
+  const { t } = useTranslation();
+  const { addItem } = useCart();
+  const navigate = useNavigate();
+  return (
+    <Button
+      size="lg"
+      className={`h-12 px-8 whitespace-normal leading-tight bg-orange-500 font-bold text-black hover:bg-orange-600 border-2 border-black ${className}`}
+      onClick={() => {
+        addItem(SMART_MAINTENANCE_PLAN);
+        toast.success(t("smartMaintenance.addedToast"));
+        navigate({ to: "/carrello" });
+      }}
+    >
+      <ShoppingCart className="mr-2 h-5 w-5 shrink-0" aria-hidden /> {t("smartMaintenance.activateMonthly")}
+    </Button>
+  );
+}
+
+function AnnualActivateButton({ className = "" }: { className?: string }) {
+  const { t } = useTranslation();
+  const { addItem } = useCart();
+  const navigate = useNavigate();
+  return (
+    <Button
+      size="lg"
+      className={`h-12 px-8 whitespace-normal leading-tight bg-[#1A365D] font-bold text-[#FEF08A] hover:bg-[#162d4d] border-2 border-black ${className}`}
+      onClick={() => {
+        addItem(SMART_MAINTENANCE_ANNUAL_PLAN);
+        toast.success(t("smartMaintenance.addedToast"));
+        navigate({ to: "/carrello" });
+      }}
+    >
+      <ShoppingCart className="mr-2 h-5 w-5 shrink-0" aria-hidden /> {t("smartMaintenance.activateYearly")}
+    </Button>
+  );
+}
+
+function ActivateButtons({ className = "" }: { className?: string }) {
+  return (
+    <div className={`flex flex-col gap-3 justify-center items-center ${className}`}>
+      <ActivateButton />
+      <AnnualActivateButton />
+    </div>
+  );
+}
+
 function SmartMaintenancePage() {
   const { t } = useTranslation();
 
@@ -145,22 +208,8 @@ function SmartMaintenancePage() {
               <p className="mt-5 text-lg md:text-xl text-foreground/85 max-w-xl mx-auto lg:mx-0">
                 {t("smartMaintenance.heroSubtitle")}
               </p>
-              <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
-                <Button variant="hero" size="lg" className="h-12 px-7 text-base" asChild>
-                  <a href={buildMailto(`Smart Maintenance — ${t("smartMaintenance.heroCta")}`)}>
-                    {t("smartMaintenance.heroCta")}
-                  </a>
-                </Button>
-                <Button
-                  variant="outline"
-                  size="lg"
-                  className="h-12 px-7 text-base border-2 border-primary/40"
-                  asChild
-                >
-                  <a href={buildMailto(`Smart Maintenance — ${t("smartMaintenance.heroDemoCta")}`)}>
-                    <PlayCircle className="h-5 w-5" aria-hidden /> {t("smartMaintenance.heroDemoCta")}
-                  </a>
-                </Button>
+              <div className="mt-8 flex justify-center lg:justify-start">
+                <ActivateButtons />
               </div>
               <figure className="mt-8 m-0">
                 <img
@@ -213,6 +262,9 @@ function SmartMaintenancePage() {
                 </span>
               ))}
             </div>
+            <div className="mt-10 flex justify-center">
+              <ActivateButtons />
+            </div>
           </div>
         </section>
 
@@ -241,6 +293,9 @@ function SmartMaintenancePage() {
                   </CardContent>
                 </Card>
               ))}
+            </div>
+            <div className="mt-10 flex justify-center">
+              <ActivateButtons />
             </div>
           </div>
         </section>
@@ -272,6 +327,9 @@ function SmartMaintenancePage() {
                 </Card>
               ))}
             </div>
+            <div className="mt-10 flex justify-center">
+              <ActivateButtons />
+            </div>
           </div>
         </section>
 
@@ -300,6 +358,9 @@ function SmartMaintenancePage() {
                   </CardContent>
                 </Card>
               ))}
+            </div>
+            <div className="mt-10 flex justify-center">
+              <ActivateButtons />
             </div>
           </div>
         </section>
@@ -337,6 +398,9 @@ function SmartMaintenancePage() {
               </ul>
             </div>
           </div>
+          <div className="container mx-auto px-4 max-w-6xl mt-10 flex justify-center">
+            <ActivateButtons />
+          </div>
         </section>
 
         {/* PRIVACY */}
@@ -363,6 +427,9 @@ function SmartMaintenancePage() {
                 </Card>
               ))}
             </div>
+            <div className="mt-10 flex justify-center">
+              <ActivateButtons />
+            </div>
           </div>
         </section>
 
@@ -382,6 +449,9 @@ function SmartMaintenancePage() {
                 </AccordionItem>
               ))}
             </Accordion>
+            <div className="mt-10 flex justify-center">
+              <ActivateButtons />
+            </div>
           </div>
         </section>
 
@@ -394,23 +464,8 @@ function SmartMaintenancePage() {
             <p className="mt-4 text-white/90 text-lg">
               {t("smartMaintenance.ctaBody")}
             </p>
-            <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
-              <Button
-                size="lg"
-                className="h-12 px-7 text-base bg-yellow-400 text-black hover:bg-yellow-300 border-2 border-black"
-              >
-                {t("smartMaintenance.ctaDownload")}
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="h-12 px-7 text-base border-2 border-white/60 bg-transparent text-white hover:bg-white/10 hover:text-white"
-                asChild
-              >
-                <a href={buildMailto(`Smart Maintenance — ${t("smartMaintenance.ctaQuote")}`)}>
-                  <ArrowRight className="h-5 w-5" aria-hidden /> {t("smartMaintenance.ctaQuote")}
-                </a>
-              </Button>
+            <div className="mt-8 flex justify-center">
+              <ActivateButtons />
             </div>
           </div>
         </section>
