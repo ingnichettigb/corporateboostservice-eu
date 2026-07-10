@@ -1,6 +1,7 @@
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import { useTranslation } from "react-i18next";
 import { useCart } from "@/lib/cart";
+import { getGdprAddetto, toCartItem } from "@/lib/pricing";
 import { toast } from "sonner";
 import i18n from "@/i18n";
 import { Button } from "@/components/ui/button";
@@ -32,13 +33,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import heroImg from "@/assets/gdpr-incaricati/hero.jpg";
 
-const ATTESTATO_ADDETTO = {
-  id: "02-gdpr-00.corporateboostservice.eu",
-  name: "Corso Privacy Addetto",
-  price: "40€",
-  duration: "3",
-  domain: "02-gdpr-00.corporateboostservice.eu",
-};
+const ATTESTATO_ADDETTO = toCartItem(getGdprAddetto(), "02-gdpr-00.corporateboostservice.eu");
 
 function FreeCourseButton({ className = "" }: { className?: string }) {
   const { t } = useTranslation();
