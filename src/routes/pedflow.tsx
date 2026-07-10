@@ -74,6 +74,14 @@ const PEDFLOW_PLAN = {
   domain: "pedflow.corporateboostservice.eu",
 };
 
+const PEDFLOW_ANNUAL_PLAN = {
+  id: "pedflow-annual.corporateboostservice.eu",
+  name: "PedFlow — Abbonamento annuale",
+  price: "500€",
+  duration: "12",
+  domain: "pedflow.corporateboostservice.eu",
+};
+
 function ActivateButton({ className = "" }: { className?: string }) {
   const { t } = useTranslation("pedflow");
   const { addItem } = useCart();
@@ -90,6 +98,34 @@ function ActivateButton({ className = "" }: { className?: string }) {
     >
       <ShoppingCart className="mr-2 h-5 w-5 shrink-0" aria-hidden /> {t("activateCta")}
     </Button>
+  );
+}
+
+function AnnualActivateButton({ className = "" }: { className?: string }) {
+  const { t } = useTranslation("pedflow");
+  const { addItem } = useCart();
+  const navigate = useNavigate();
+  return (
+    <Button
+      size="lg"
+      className={`h-12 px-8 whitespace-normal leading-tight bg-orange-500 font-bold text-yellow-300 hover:bg-orange-600 border-2 border-black ${className}`}
+      onClick={() => {
+        addItem(PEDFLOW_ANNUAL_PLAN);
+        toast.success(t("addedToast"));
+        navigate({ to: "/carrello" });
+      }}
+    >
+      <ShoppingCart className="mr-2 h-5 w-5 shrink-0" aria-hidden /> {t("annualActivateCta")}
+    </Button>
+  );
+}
+
+function ActivateButtons({ className = "" }: { className?: string }) {
+  return (
+    <div className={`flex flex-col gap-3 justify-center items-center ${className}`}>
+      <ActivateButton />
+      <AnnualActivateButton />
+    </div>
   );
 }
 

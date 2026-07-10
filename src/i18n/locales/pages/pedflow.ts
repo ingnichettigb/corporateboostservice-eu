@@ -8,6 +8,7 @@ export const pedflow = {
       "Determina in modo rapido e tracciabile il Gruppo PED di una sostanza, partendo dalla SDS o dal database CLP ufficiale ECHA. PDF di classificazione pronto da archiviare.",
     backBtn: "Torna alle applicazioni",
     activateCta: "Attiva subito per la tua azienda — Solo 50€/mese",
+    annualActivateCta: "Zero pensieri: solo 500€/anno per l'azienda",
     addedToast: "Aggiunto al carrello",
 
     heroBadge: "PedFlow · Classificazione fluidi PED",
@@ -179,6 +180,7 @@ export const pedflow = {
       "Quickly and traceably determine the PED Group of a substance from the SDS or the official ECHA CLP database. Classification PDF ready to file.",
     backBtn: "Back to applications",
     activateCta: "Activate now for your company — Only 50€/month",
+    annualActivateCta: "Zero worries: only 500€/year for your company",
     addedToast: "Added to cart",
 
     heroBadge: "PedFlow · PED Fluid Classification",
