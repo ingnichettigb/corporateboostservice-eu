@@ -40,6 +40,14 @@ export function getMiniFatAnnual() {
   return getPlanByCode("002MnFAT-12");
 }
 
+export function getGdprAddetto() {
+  return getPlanByCode("02-GDPR-00");
+}
+
+export function getGdprCompleto() {
+  return getPlanByCode("01-GDPR-00");
+}
+
 export function toCartItem(plan: PricingPlan, domain: string) {
   return {
     id: plan.code,
