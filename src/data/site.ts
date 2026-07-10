@@ -18,5 +18,4 @@ export const applicazioni = [
   { icon: Factory, key: "fat", wip: true },
   { icon: ClipboardCheck, key: "sat", wip: true },
   { icon: BookOpen, key: "lp", wip: true },
-  { icon: Container, key: "mocaSerbatoi", image: mocaSerbatoiLogo.url, wip: true },
 ] as const;
