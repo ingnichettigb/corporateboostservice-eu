@@ -208,22 +208,8 @@ function SmartMaintenancePage() {
               <p className="mt-5 text-lg md:text-xl text-foreground/85 max-w-xl mx-auto lg:mx-0">
                 {t("smartMaintenance.heroSubtitle")}
               </p>
-              <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
-                <Button variant="hero" size="lg" className="h-12 px-7 text-base" asChild>
-                  <a href={buildMailto(`Smart Maintenance — ${t("smartMaintenance.heroCta")}`)}>
-                    {t("smartMaintenance.heroCta")}
-                  </a>
-                </Button>
-                <Button
-                  variant="outline"
-                  size="lg"
-                  className="h-12 px-7 text-base border-2 border-primary/40"
-                  asChild
-                >
-                  <a href={buildMailto(`Smart Maintenance — ${t("smartMaintenance.heroDemoCta")}`)}>
-                    <PlayCircle className="h-5 w-5" aria-hidden /> {t("smartMaintenance.heroDemoCta")}
-                  </a>
-                </Button>
+              <div className="mt-8 flex justify-center lg:justify-start">
+                <ActivateButtons />
               </div>
               <figure className="mt-8 m-0">
                 <img
@@ -457,23 +443,8 @@ function SmartMaintenancePage() {
             <p className="mt-4 text-white/90 text-lg">
               {t("smartMaintenance.ctaBody")}
             </p>
-            <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
-              <Button
-                size="lg"
-                className="h-12 px-7 text-base bg-yellow-400 text-black hover:bg-yellow-300 border-2 border-black"
-              >
-                {t("smartMaintenance.ctaDownload")}
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="h-12 px-7 text-base border-2 border-white/60 bg-transparent text-white hover:bg-white/10 hover:text-white"
-                asChild
-              >
-                <a href={buildMailto(`Smart Maintenance — ${t("smartMaintenance.ctaQuote")}`)}>
-                  <ArrowRight className="h-5 w-5" aria-hidden /> {t("smartMaintenance.ctaQuote")}
-                </a>
-              </Button>
+            <div className="mt-8 flex justify-center">
+              <ActivateButtons />
             </div>
           </div>
         </section>
