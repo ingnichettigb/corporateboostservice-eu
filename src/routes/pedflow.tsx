@@ -66,6 +66,33 @@ const benefitIcons = [Gauge, BookOpenCheck, Database, Layers, ShieldCheck, Langu
 
 const securityIcons = [Lock, ShieldCheck, Users];
 
+const PEDFLOW_PLAN = {
+  id: "pedflow.corporateboostservice.eu",
+  name: "PedFlow — Abbonamento mensile",
+  price: "50€",
+  duration: "1",
+  domain: "pedflow.corporateboostservice.eu",
+};
+
+function ActivateButton({ className = "" }: { className?: string }) {
+  const { t } = useTranslation("pedflow");
+  const { addItem } = useCart();
+  const navigate = useNavigate();
+  return (
+    <Button
+      size="lg"
+      className={`h-12 px-8 whitespace-normal leading-tight bg-orange-500 font-bold text-black hover:bg-orange-600 border-2 border-black ${className}`}
+      onClick={() => {
+        addItem(PEDFLOW_PLAN);
+        toast.success(t("addedToast"));
+        navigate({ to: "/carrello" });
+      }}
+    >
+      <ShoppingCart className="mr-2 h-5 w-5 shrink-0" aria-hidden /> {t("activateCta")}
+    </Button>
+  );
+}
+
 export const Route = createFileRoute("/pedflow")({
   head: () => ({
     meta: [
