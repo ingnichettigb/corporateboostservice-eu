@@ -398,6 +398,9 @@ function SmartMaintenancePage() {
               </ul>
             </div>
           </div>
+          <div className="container mx-auto px-4 max-w-6xl mt-10 flex justify-center">
+            <ActivateButtons />
+          </div>
         </section>
 
         {/* PRIVACY */}
@@ -424,6 +427,9 @@ function SmartMaintenancePage() {
                 </Card>
               ))}
             </div>
+            <div className="mt-10 flex justify-center">
+              <ActivateButtons />
+            </div>
           </div>
         </section>
 
@@ -443,6 +449,9 @@ function SmartMaintenancePage() {
                 </AccordionItem>
               ))}
             </Accordion>
+            <div className="mt-10 flex justify-center">
+              <ActivateButtons />
+            </div>
           </div>
         </section>
 
