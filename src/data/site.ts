@@ -14,9 +14,9 @@ export const corsi = [
 
 export const applicazioni = [
   { icon: FlaskConical, key: "pedFlow", image: pedflowLogo.url, wip: false },
+  { icon: ClipboardCheck, key: "miniFat", image: minifatLogo.url, wip: false },
   { icon: Container, key: "mocaSerbatoi", image: mocaSerbatoiLogo.url, wip: false },
   { icon: Wrench, key: "smartMaintenance", image: smartMaintenanceLogo.url, wip: false },
-  { icon: ClipboardCheck, key: "miniFat", image: minifatLogo.url, wip: false },
   { icon: Factory, key: "fat", wip: true },
   { icon: ClipboardCheck, key: "sat", wip: true },
   { icon: BookOpen, key: "lp", wip: true },
