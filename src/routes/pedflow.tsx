@@ -378,6 +378,9 @@ function PedFlowPage() {
             <p className="mt-8 text-center text-sm text-foreground/60">
               {t("faqDisclaimer")}
             </p>
+            <div className="mt-10 flex justify-center">
+              <ActivateButton />
+            </div>
           </div>
         </section>
 
