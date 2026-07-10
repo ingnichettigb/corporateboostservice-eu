@@ -84,20 +84,20 @@ export function SiteHeader() {
             </li>
             <li>
               <Link
-                to="/corsi"
-                activeProps={{ className: "bg-primary text-primary-foreground" }}
-                className="inline-flex items-center min-h-11 px-4 rounded-md text-foreground hover:bg-primary/15"
-              >
-                {t("nav.corsi")}
-              </Link>
-            </li>
-            <li>
-              <Link
                 to="/applicazioni"
                 activeProps={{ className: "bg-primary text-primary-foreground" }}
                 className="inline-flex items-center min-h-11 px-4 rounded-md text-foreground hover:bg-primary/15"
               >
                 {t("nav.applicazioni")}
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/corsi"
+                activeProps={{ className: "bg-primary text-primary-foreground" }}
+                className="inline-flex items-center min-h-11 px-4 rounded-md text-foreground hover:bg-primary/15"
+              >
+                {t("nav.corsi")}
               </Link>
             </li>
             <li>
