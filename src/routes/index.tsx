@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, GraduationCap, Layers, CheckCircle2, ShieldCheck, Construction } from "lucide-react";
+import { ArrowRight, GraduationCap, Layers, CheckCircle2, Construction } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
@@ -143,14 +143,7 @@ function Home() {
 
         {/* CHI SONO — blu profondo, testo bianco */}
         <section className="py-24 [background:var(--gradient-section-about)] text-white">
-          <div className="container mx-auto px-4 grid md:grid-cols-2 gap-12 items-start max-w-5xl">
-            <div className="relative aspect-square max-w-sm mx-auto md:mx-0 w-full rounded-3xl bg-white/10 backdrop-blur-sm border-2 border-white/30 shadow-[var(--shadow-elegant)] flex items-center justify-center">
-              <div className="text-center text-white px-6">
-                <ShieldCheck className="mx-auto h-20 w-20" aria-hidden />
-                <p className="mt-4 font-bold text-xl">Corsi online</p>
-                <p className="text-base opacity-95 mt-1">Strumenti digitali</p>
-              </div>
-            </div>
+          <div className="container mx-auto px-4 max-w-5xl">
             <div>
               <p className="text-base font-bold text-white/85 mb-3 uppercase tracking-wider">Chi sono</p>
               <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-5">Esperienza, normative e tecnologia.</h2>
