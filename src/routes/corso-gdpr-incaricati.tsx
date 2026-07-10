@@ -386,11 +386,7 @@ function CorsoIncaricatiPage() {
               <h2 className="text-2xl md:text-3xl font-bold">{t("corsoIncaricati.finalCtaTitle")}</h2>
               <p className="mt-3 text-foreground/80 text-lg">{t("corsoIncaricati.finalCtaText")}</p>
               <div className="mt-8">
-                <Button variant="hero" size="lg" className="h-12 px-8" asChild>
-                  <a href="#contatti">
-                    {t("corsoIncaricati.finalCtaBtn")} <ArrowRight className="ml-1 h-4 w-4" aria-hidden />
-                  </a>
-                </Button>
+                <FreeCourseButton />
               </div>
             </div>
           </div>
