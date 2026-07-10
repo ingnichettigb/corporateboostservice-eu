@@ -1,6 +1,8 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
 import { buildMailto } from "@/lib/contact";
+import { useCart } from "@/lib/cart";
+import { toast } from "sonner";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
   Accordion,
@@ -24,10 +26,11 @@ import {
   Gauge,
   Lock,
   Languages,
-  PlayCircle,
+  
   ScrollText,
   Users,
   BookOpenCheck,
+  ShoppingCart,
 } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
@@ -62,6 +65,33 @@ const stepIcons = [FileText, Thermometer, Search, Calculator, FileDown];
 const benefitIcons = [Gauge, BookOpenCheck, Database, Layers, ShieldCheck, Languages];
 
 const securityIcons = [Lock, ShieldCheck, Users];
+
+const PEDFLOW_PLAN = {
+  id: "pedflow.corporateboostservice.eu",
+  name: "PedFlow — Abbonamento mensile",
+  price: "50€",
+  duration: "1",
+  domain: "pedflow.corporateboostservice.eu",
+};
+
+function ActivateButton({ className = "" }: { className?: string }) {
+  const { t } = useTranslation("pedflow");
+  const { addItem } = useCart();
+  const navigate = useNavigate();
+  return (
+    <Button
+      size="lg"
+      className={`h-12 px-8 whitespace-normal leading-tight bg-orange-500 font-bold text-black hover:bg-orange-600 border-2 border-black ${className}`}
+      onClick={() => {
+        addItem(PEDFLOW_PLAN);
+        toast.success(t("addedToast"));
+        navigate({ to: "/carrello" });
+      }}
+    >
+      <ShoppingCart className="mr-2 h-5 w-5 shrink-0" aria-hidden /> {t("activateCta")}
+    </Button>
+  );
+}
 
 export const Route = createFileRoute("/pedflow")({
   head: () => ({
@@ -130,22 +160,8 @@ function PedFlowPage() {
               width={1402}
               height={765}
             />
-            <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
-              <Button variant="hero" size="lg" className="h-12 px-7 text-base" asChild>
-                <a href={buildMailto(`PedFlow — ${t("heroCtaPrimary")}`)}>
-                  {t("heroCtaPrimary")}
-                </a>
-              </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                className="h-12 px-7 text-base border-2 border-primary/40"
-                asChild
-              >
-                <a href={buildMailto(`PedFlow — ${t("heroCtaSecondary")}`)}>
-                  <PlayCircle className="h-5 w-5" aria-hidden /> {t("heroCtaSecondary")}
-                </a>
-              </Button>
+            <div className="mt-8 flex justify-center">
+              <ActivateButton />
             </div>
             <p className="mt-6 text-sm text-foreground/65">
               {t("heroCaption")}
@@ -175,6 +191,9 @@ function PedFlowPage() {
                   <CheckCircle2 className="h-4 w-4 text-primary" aria-hidden /> {b}
                 </span>
               ))}
+            </div>
+            <div className="mt-10 flex justify-center">
+              <ActivateButton />
             </div>
           </div>
         </section>
@@ -207,6 +226,9 @@ function PedFlowPage() {
                   </Card>
                 );
               })}
+            </div>
+            <div className="mt-10 flex justify-center">
+              <ActivateButton />
             </div>
           </div>
         </section>
@@ -242,6 +264,9 @@ function PedFlowPage() {
                 );
               })}
             </div>
+            <div className="mt-10 flex justify-center">
+              <ActivateButton />
+            </div>
           </div>
         </section>
 
@@ -273,6 +298,9 @@ function PedFlowPage() {
                   </Card>
                 );
               })}
+            </div>
+            <div className="mt-10 flex justify-center">
+              <ActivateButton />
             </div>
           </div>
         </section>
@@ -311,6 +339,9 @@ function PedFlowPage() {
               </ul>
             </div>
           </div>
+          <div className="container mx-auto px-4 max-w-6xl mt-10 flex justify-center">
+            <ActivateButton />
+          </div>
         </section>
 
         {/* SICUREZZA */}
@@ -340,6 +371,9 @@ function PedFlowPage() {
                 );
               })}
             </div>
+            <div className="mt-10 flex justify-center">
+              <ActivateButton />
+            </div>
           </div>
         </section>
 
@@ -362,6 +396,9 @@ function PedFlowPage() {
             <p className="mt-8 text-center text-sm text-foreground/60">
               {t("faqDisclaimer")}
             </p>
+            <div className="mt-10 flex justify-center">
+              <ActivateButton />
+            </div>
           </div>
         </section>
 
