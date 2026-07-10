@@ -210,11 +210,7 @@ function CorsoIncaricatiPage() {
               {t("corsoIncaricati.heroNote")}
             </p>
             <div className="mt-8">
-              <Button variant="hero" size="lg" className="h-12 px-8" asChild>
-                <a href="#contatti">
-                  {t("corsoIncaricati.heroCta")} <ArrowRight className="ml-1 h-4 w-4" aria-hidden />
-                </a>
-              </Button>
+              <FreeCourseButton />
             </div>
             <div className="mt-12 max-w-3xl mx-auto">
               <img
