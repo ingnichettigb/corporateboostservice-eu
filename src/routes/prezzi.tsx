@@ -71,26 +71,25 @@ function PrezziPage() {
           <thead className="bg-muted">
             <tr className="text-left">
               <th className="px-4 py-3 font-semibold">ID</th>
+              <th className="px-4 py-3 font-semibold">{t("legal.prezzi.colCode")}</th>
               <th className="px-4 py-3 font-semibold">{t("legal.prezzi.colService")}</th>
               <th className="px-4 py-3 font-semibold">{t("legal.prezzi.colPrice")}</th>
               <th className="px-4 py-3 font-semibold">{t("legal.prezzi.colDuration")}</th>
-              <th className="px-4 py-3 font-semibold">{t("legal.prezzi.colDomain")}</th>
               <th className="px-4 py-3 font-semibold">{t("legal.cart.add")}</th>
             </tr>
           </thead>
           <tbody className="divide-y divide-border">
             {pricingItems.map((item, index) => (
-              <tr key={item.domain} className="hover:bg-muted/50">
+              <tr key={item.code} className="hover:bg-muted/50">
                 <td className="px-4 py-3 font-semibold text-foreground/70">{index + 1}</td>
+                <td className="px-4 py-3 font-mono text-xs text-foreground/70 whitespace-nowrap">{item.code}</td>
                 <td className="px-4 py-3 font-medium">{item.name}</td>
                 <td className="px-4 py-3 whitespace-nowrap font-semibold text-primary">{item.price}</td>
                 <td className="px-4 py-3 whitespace-nowrap">{monthsLabel(item.duration)}</td>
-                <td className="px-4 py-3 font-mono text-xs text-foreground/70 break-all">{item.domain}</td>
                 {/* TODO: sostituire con link Paddle */}
                 <td className="px-4 py-3">
                   <AddBtn item={item} />
                 </td>
-
               </tr>
             ))}
           </tbody>
@@ -100,19 +99,18 @@ function PrezziPage() {
       {/* Mobile cards */}
       <div className="md:hidden space-y-3">
         {pricingItems.map((item, index) => (
-          <div key={item.domain} className="rounded-xl border border-border p-4">
+          <div key={item.code} className="rounded-xl border border-border p-4">
             <div className="text-xs font-semibold text-foreground/60">ID {index + 1}</div>
+            <div className="mt-1 font-mono text-xs text-foreground/70 break-all">{item.code}</div>
             <div className="font-semibold">{item.name}</div>
             <div className="mt-2 flex items-center gap-3 text-sm">
               <span className="font-semibold text-primary">{item.price}</span>
               <span className="text-foreground/70">{monthsLabel(item.duration)}</span>
             </div>
-            <div className="mt-2 font-mono text-xs text-foreground/60 break-all">{item.domain}</div>
             {/* TODO: sostituire con link Paddle */}
             <div className="mt-3">
               <AddBtn item={item} full />
             </div>
-
           </div>
         ))}
       </div>
