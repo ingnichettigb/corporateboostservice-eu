@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import i18n from "@/i18n";
 import { Button } from "@/components/ui/button";
 import { buildMailto } from "@/lib/contact";
+import { getMiniFatMonthly } from "@/lib/pricing";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
   Accordion,
@@ -335,9 +336,9 @@ function MiniFatPage() {
             </div>
             <Card className="border-2 border-primary/30 shadow-[var(--shadow-elegant)] overflow-hidden">
               <div className="[background:var(--gradient-hero)] text-primary-foreground text-center py-7 px-6">
-                <p className="text-lg font-semibold">{t("minifat.pricingPlanName")}</p>
+              <p className="text-lg font-semibold">{t("minifat.pricingPlanName")}</p>
                 <p className="mt-1">
-                  <span className="text-5xl font-extrabold">50€</span>
+                  <span className="text-5xl font-extrabold">{getMiniFatMonthly().price}</span>
                   <span className="text-lg font-medium">{t("minifat.pricingMonth")}</span>
                 </p>
               </div>
