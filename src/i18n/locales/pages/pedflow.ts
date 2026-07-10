@@ -178,6 +178,8 @@ export const pedflow = {
     ogDescription:
       "Quickly and traceably determine the PED Group of a substance from the SDS or the official ECHA CLP database. Classification PDF ready to file.",
     backBtn: "Back to applications",
+    activateCta: "Activate now for your company — Only 50€/month",
+    addedToast: "Added to cart",
 
     heroBadge: "PedFlow · PED Fluid Classification",
     heroH1a: "PED Group 1 or 2,",
