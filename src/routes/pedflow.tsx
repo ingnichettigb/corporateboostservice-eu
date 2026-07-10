@@ -327,6 +327,9 @@ function PedFlowPage() {
               </ul>
             </div>
           </div>
+          <div className="container mx-auto px-4 max-w-6xl mt-10 flex justify-center">
+            <ActivateButton />
+          </div>
         </section>
 
         {/* SICUREZZA */}
