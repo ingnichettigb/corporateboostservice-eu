@@ -447,26 +447,8 @@ function PedFlowPage() {
             <p className="mt-4 text-white/90 text-lg">
               {t("ctaP")}
             </p>
-            <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
-              <Button
-                size="lg"
-                className="h-12 px-7 text-base bg-yellow-400 text-black hover:bg-yellow-300 border-2 border-black"
-                asChild
-              >
-                <a href={buildMailto(`PedFlow — ${t("ctaPrimary")}`)}>
-                  {t("ctaPrimary")}
-                </a>
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="h-12 px-7 text-base border-2 border-white/60 bg-transparent text-white hover:bg-white/10 hover:text-white"
-                asChild
-              >
-                <a href={buildMailto(`PedFlow — ${t("ctaSecondary")}`)}>
-                  <ArrowRight className="h-5 w-5" aria-hidden /> {t("ctaSecondary")}
-                </a>
-              </Button>
+            <div className="mt-8 flex justify-center">
+              <ActivateButtons />
             </div>
           </div>
         </section>
