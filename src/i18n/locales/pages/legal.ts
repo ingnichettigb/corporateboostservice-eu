@@ -130,6 +130,7 @@ export const legal = {
       relatedHeading: "Altre pagine legali",
       months: "mesi",
       month: "mese",
+      underConstruction: "In costruzione",
     },
 
 
