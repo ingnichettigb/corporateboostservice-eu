@@ -1,47 +1,54 @@
-## Conferme richieste
+# Uniformare la dicitura fiscale "+ iva e tasse"
 
-**Dove aggiungo il badge fiscale (chiave esistente o nuova): NUOVA chiave.**
+## Obiettivo
+Portare la stessa dicitura fiscale ovunque, come parte del testo del bottone, ed eliminare il badge separato "IVA/tasse escluse" che ora compare sotto il bottone.
 
-La chiave breve `badge` in `src/i18n/taxDisclaimer.ts` esiste già, ma i suoi testi **non coincidono** con quelli richiesti e riusarla causerebbe due problemi:
+Dicitura unificata (da un'unica fonte condivisa `taxDisclaimer.badge`):
+- IT: `+ iva e tasse`
+- EN: `+ VAT/tax`
 
-| Lingua | `badge` attuale | Richiesto per Corsi |
-|--------|-----------------|---------------------|
-| IT | `+ IVA/tasse` (senza "escluse", volutamente) | `IVA/tasse escluse` |
-| EN | `+ VAT/tax excluded` | `VAT/tax excluded` |
-| ES | `+ IVA/impuestos excluidos` | `IVA/impuestos excluidos` |
-| DE | `+ MwSt./Steuern zzgl.` | `zzgl. MwSt./Steuern` |
+Risultato sul bottone:
+- IT: `Corso GRATIS – paghi solo l'attestato 40€ + iva e tasse`
+- EN: `FREE course – pay only the 40€ certificate + VAT/tax`
 
-Modificare `badge` reintrodurrebbe "escluse" in italiano su PedFlow (dove era stato tolto di proposito) e cambierebbe l'ordine DE ovunque. Quindi aggiungo una **nuova chiave `badgeShort`** nella stessa costante condivisa (nessuna duplicazione: resta un'unica fonte a 4 lingue) con esattamente i testi richiesti, e un piccolo componente `TaxBadgeShort` che la legge.
+## Cosa cambia, file per file
 
-**File che tocco (3):**
-1. `src/i18n/taxDisclaimer.ts` — aggiungo la chiave `badgeShort` (IT/EN/ES/DE).
-2. `src/components/TaxDisclaimer.tsx` — aggiungo `TaxBadgeShort` (stesso stile discreto di `TaxBadge`, legge `badgeShort`).
-3. `src/routes/corsi.tsx` — badge sotto il bottone corso gratis, pulizia card in costruzione, spostamento sezione strumenti gratuiti.
+### 1. `src/i18n/taxDisclaimer.ts` (fonte unica della dicitura)
+- Aggiorno il valore di `badge` per uniformarlo:
+  - it → `+ iva e tasse`
+  - en → `+ VAT/tax`
+  - es → `+ IVA/impuestos` · de → `+ zzgl. MwSt.` (per coerenza)
+- Rimuovo la chiave `badgeShort` (e dal tipo): non serve più, era il testo del badge separato "IVA/tasse escluse".
+- La nota lunga `note` (paragrafo Paddle) resta invariata.
 
-Non tocco: corso attivo (funzionalità/prezzo), form contatti (`ContactSection`), footer.
+### 2. `src/components/TaxDisclaimer.tsx`
+- Rimuovo il componente `TaxBadgeShort` (non più usato).
+- Restano `TaxBadge` (span discreto che legge `badge`) e `TaxNote`.
 
-## Interventi su `src/routes/corsi.tsx`
+### 3. `src/routes/corsi.tsx` (pagina Corsi)
+- Accodo la dicitura al testo del bottone: `... 40€ + iva e tasse`, letta da `taxDisclaimer.badge` (stessa fonte).
+- Rimuovo `<TaxBadgeShort className="text-center" />` sotto il bottone e il relativo import.
 
-### 1. Badge fiscale sotto "Corso GRATIS – paghi solo l'attestato 40€"
-Import di `TaxBadgeShort` e inserimento subito dopo il bottone `corsoGratis` (dentro il ramo `key === "gdprAddetto"`, sotto la `<Button>` alla riga 107), come testo piccolo centrato — non un box.
+### 4. `src/routes/corso-gdpr-incaricati.tsx` (landing GDPR incaricati)
+- Uso lo stesso bottone già presente (`FreeCourseButton`): accodo la stessa dicitura al testo del bottone.
+- Rimuovo tutte le 6 occorrenze di `<TaxBadgeShort ... />` sotto i bottoni e il relativo import.
 
-### 2. Card "Under construction" (le 4 card non-gdprAddetto)
-Rimuovo, per il ramo `else` (WIP):
-- il bottone "Enroll" (`corsi.iscriviti`, righe 85–89)
-- il bottone "Buy the course" (`corsi.preventivoLabel`, righe 108–113)
+### 5. `src/routes/prezzi.tsx` (pagina Prezzi) — "anche il badge in Prezzi"
+- Accanto a ogni prezzo aggiungo `<TaxBadge />` (`+ iva e tasse` / `+ VAT/tax`), sia nella tabella desktop sia nelle card mobile.
+- La nota fiscale lunga sotto le tabelle (`TaxNote`) resta invariata.
 
-Resta solo il bottone **"Information"** (`corsi.infoLabel`, righe 90–94), comune a tutte le card. Il corso attivo (gdprAddetto) mantiene invariati tutti i suoi bottoni.
+### Effetto collaterale voluto (coerenza)
+`TaxBadge` è già usato nei bottoni "Aggiungi al carrello" di `src/routes/pedflow.tsx`: cambiando `badge` diventeranno anch'essi `+ VAT/tax` / `+ iva e tasse`, in linea con l'uniformazione richiesta.
 
-### 3. Spostamento sezione "Strumenti gratuiti / Free tools"
-Sposto l'intera `<section>` con `checklist.toolsTitle` + `ChecklistCTAs` (righe 124–130) da **sotto** la lista corsi a **subito dopo l'hero, prima del blocco corsi** (prima della `<section>` che contiene la griglia `corsi.map`). Nessuna modifica ai testi o al componente `ChecklistCTAs`.
+## Risposta alla tua domanda sulla tabella prezzi (/prezzi)
+- Come si chiama / dove sta: la tabella è nella route `/prezzi`, file `src/routes/prezzi.tsx`.
+- Struttura: due viste con gli stessi dati — tabella per desktop (`hidden md:block`) e lista di card per mobile (`md:hidden`).
+- Dati: provengono da `pricingItems` in `src/i18n/locales/pages/legal.ts` (ID, codice, servizio, prezzo, durata + bottone carrello).
+- Dicitura fiscale: il badge `+ iva e tasse` finirà accanto a ogni prezzo; la nota lunga Paddle resta subito sotto le tabelle.
 
-## Dettaglio nuova chiave (`badgeShort`)
+## Verifica
+- Typecheck (`tsgo`) per confermare che nessun riferimento residuo a `TaxBadgeShort`/`badgeShort` rompa il build.
+- Controllo visivo su /corsi, /corso-gdpr-incaricati e /prezzi (IT ed EN) che i bottoni mostrino la dicitura inline e che non resti il badge separato.
 
-```text
-it: "IVA/tasse escluse"
-en: "VAT/tax excluded"
-es: "IVA/impuestos excluidos"
-de: "zzgl. MwSt./Steuern"
-```
-
-Riusabile in futuro su MiniFAT / Smart Maintenance importando `TaxBadgeShort`, senza duplicare testo.
+## Fuori scope (non tocco)
+Corso attivo (prezzo/funzionalità), form contatti, footer, e la nota fiscale lunga esistente.
