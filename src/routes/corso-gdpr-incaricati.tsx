@@ -31,6 +31,7 @@ import {
 } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
+import { TaxBadgeShort } from "@/components/TaxDisclaimer";
 import heroImg from "@/assets/gdpr-incaricati/hero.jpg";
 
 const ATTESTATO_ADDETTO = toCartItem(getGdprAddetto(), "02-gdpr-00.corporateboostservice.eu");
