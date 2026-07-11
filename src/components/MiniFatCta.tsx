@@ -14,7 +14,7 @@ export function MiniFatCta({ className = "" }: { className?: string }) {
   return (
     <Button variant="hero" size="lg" className={`h-12 px-7 text-base ${className}`} asChild>
       <a href={buildMailto(`MiniFAT — ${label}`)}>
-        {label} <TaxBadge />
+        {label}
       </a>
     </Button>
   );
