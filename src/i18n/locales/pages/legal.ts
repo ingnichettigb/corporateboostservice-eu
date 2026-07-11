@@ -319,7 +319,7 @@ export const legal = {
       "Payments are processed by Paddle.com, which acts as Merchant of Record for all transactions made on this site. Paddle issues tax receipts, manages payment disputes (chargebacks) and applies its own terms of use for the payment service. By using the services of this site, the user also accepts the Paddle.com terms applicable to transactions.",
     comingSoonBadge: "Purchases coming soon — available shortly",
     comingSoonNote:
-      "Payments will be activated shortly. You will receive an email with the link and license immediately after purchase.",
+      "The payment system (Paddle) is not yet operational on this site. No transactions can be completed at this time. Purchase activation will be announced on this page and on the pricing page.",
     comingSoonCardNote: "You will receive an email with the link and license immediately after purchase.",
 
 
