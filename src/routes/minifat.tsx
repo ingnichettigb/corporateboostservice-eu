@@ -102,8 +102,9 @@ function MiniFatPage() {
               <p className="mt-5 text-lg md:text-xl text-foreground/85 max-w-xl mx-auto lg:mx-0">
                 {t("minifat.heroDesc")}
               </p>
-              <div className="mt-8 flex justify-center lg:justify-start">
+              <div className="mt-8 flex flex-col items-center lg:items-start gap-3">
                 <MiniFatCta />
+                <TaxNote className="text-center lg:text-left max-w-md" />
               </div>
 
               <p className="mt-4 text-sm text-foreground/65">
