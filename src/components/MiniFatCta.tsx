@@ -12,11 +12,11 @@ export function MiniFatCta({ className = "" }: { className?: string }) {
   const { t } = useTranslation();
   const label = t("minifat.heroCta");
   return (
-    <div className={`flex flex-col items-center gap-2 ${className}`}>
-      <Button variant="hero" size="lg" className="h-12 px-7 text-base" asChild>
-        <a href={buildMailto(`MiniFAT — ${label}`)}>{label}</a>
-      </Button>
-      <TaxBadge />
-    </div>
+    <Button variant="hero" size="lg" className={`h-12 px-7 text-base ${className}`} asChild>
+      <a href={buildMailto(`MiniFAT — ${label}`)}>
+        {label} <TaxBadge />
+      </a>
+    </Button>
   );
 }
+
