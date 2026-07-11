@@ -382,7 +382,11 @@ function MiniFatPage() {
                 </AccordionItem>
               ))}
             </Accordion>
+            <div className="mt-10 flex justify-center">
+              <MiniFatCta />
+            </div>
           </div>
+
         </section>
 
         {/* CTA FINALE */}
