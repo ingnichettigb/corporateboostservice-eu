@@ -100,23 +100,10 @@ function MiniFatPage() {
               <p className="mt-5 text-lg md:text-xl text-foreground/85 max-w-xl mx-auto lg:mx-0">
                 {t("minifat.heroDesc")}
               </p>
-              <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
-                <Button variant="hero" size="lg" className="h-12 px-7 text-base" asChild>
-                  <a href={buildMailto(`MiniFAT — ${t("minifat.heroCta")}`)}>
-                    {t("minifat.heroCta")}
-                  </a>
-                </Button>
-                <Button
-                  variant="outline"
-                  size="lg"
-                  className="h-12 px-7 text-base border-2 border-primary/40"
-                  asChild
-                >
-                  <a href={buildMailto(`MiniFAT — ${t("minifat.heroDemo")}`)}>
-                    <PlayCircle className="h-5 w-5" aria-hidden /> {t("minifat.heroDemo")}
-                  </a>
-                </Button>
+              <div className="mt-8 flex justify-center lg:justify-start">
+                <MiniFatCta className="lg:items-start" />
               </div>
+
               <p className="mt-4 text-sm text-foreground/65">
                 {t("minifat.heroNote")}
               </p>
