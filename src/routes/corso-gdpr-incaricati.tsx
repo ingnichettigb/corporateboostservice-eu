@@ -31,15 +31,16 @@ import {
 } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
-import { TaxBadgeShort } from "@/components/TaxDisclaimer";
+import { taxDisclaimer, resolveTaxLang } from "@/i18n/taxDisclaimer";
 import heroImg from "@/assets/gdpr-incaricati/hero.jpg";
 
 const ATTESTATO_ADDETTO = toCartItem(getGdprAddetto(), "02-gdpr-00.corporateboostservice.eu");
 
 function FreeCourseButton({ className = "" }: { className?: string }) {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const { addItem } = useCart();
   const navigate = useNavigate();
+  const taxBadge = taxDisclaimer[resolveTaxLang(i18n.language)].badge;
   return (
     <Button
       variant="hero"
@@ -51,7 +52,7 @@ function FreeCourseButton({ className = "" }: { className?: string }) {
         navigate({ to: "/carrello" });
       }}
     >
-      <GraduationCap className="mr-1 h-4 w-4 shrink-0" aria-hidden /> {t("corsi.corsoGratis")}
+      <GraduationCap className="mr-1 h-4 w-4 shrink-0" aria-hidden /> {t("corsi.corsoGratis")} {taxBadge}
     </Button>
   );
 }
@@ -206,7 +207,6 @@ function CorsoIncaricatiPage() {
             </p>
             <div className="mt-8">
               <FreeCourseButton />
-              <TaxBadgeShort className="mt-2 block text-center" />
             </div>
             <div className="mt-12 max-w-3xl mx-auto">
               <img
@@ -249,7 +249,6 @@ function CorsoIncaricatiPage() {
             </div>
             <div className="mt-12 text-center">
               <FreeCourseButton />
-              <TaxBadgeShort className="mt-2 block text-center" />
             </div>
           </div>
         </section>
@@ -298,7 +297,6 @@ function CorsoIncaricatiPage() {
             </div>
             <div className="mt-12 text-center">
               <FreeCourseButton />
-              <TaxBadgeShort className="mt-2 block text-center" />
             </div>
           </div>
         </section>
@@ -325,7 +323,6 @@ function CorsoIncaricatiPage() {
             </div>
             <div className="mt-12 text-center">
               <FreeCourseButton />
-              <TaxBadgeShort className="mt-2 block text-center" />
             </div>
           </div>
         </section>
@@ -386,7 +383,6 @@ function CorsoIncaricatiPage() {
               <p className="mt-3 text-foreground/80 text-lg">{t("corsoIncaricati.finalCtaText")}</p>
               <div className="mt-8">
                 <FreeCourseButton />
-                <TaxBadgeShort className="mt-2 block text-center" />
               </div>
             </div>
           </div>
