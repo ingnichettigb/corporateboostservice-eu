@@ -12,6 +12,16 @@ export function TaxBadge({ className = "" }: { className?: string }) {
 }
 
 /**
+ * Short tax badge without the leading "+" (e.g. "VAT/tax excluded").
+ * Reads the currently selected language from i18n, falling back to IT.
+ */
+export function TaxBadgeShort({ className = "" }: { className?: string }) {
+  const { i18n } = useTranslation();
+  const { badgeShort } = taxDisclaimer[resolveTaxLang(i18n.language)];
+  return <span className={`text-xs font-normal opacity-80 ${className}`}>{badgeShort}</span>;
+}
+
+/**
  * Extended tax note (Paddle Merchant of Record disclaimer). Render once per page.
  * Reads the currently selected language from i18n, falling back to IT.
  */
