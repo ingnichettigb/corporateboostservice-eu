@@ -22,7 +22,7 @@ export const legal = {
       "I pagamenti sono elaborati da Paddle.com, che agisce come Merchant of Record per tutte le transazioni effettuate su questo sito. Paddle emette le ricevute fiscali, gestisce le contestazioni di pagamento (chargeback) e applica le proprie condizioni d'uso per il servizio di pagamento. Utilizzando i servizi di questo sito, l'utente accetta anche le condizioni di Paddle.com applicabili alle transazioni.",
     comingSoonBadge: "Acquisti in arrivo — disponibile a breve",
     comingSoonNote:
-      "I pagamenti verranno attivati a breve. Riceverai un'email con il link e la licenza subito dopo l'acquisto.",
+      "Il sistema di pagamento (Paddle) non è ancora operativo su questo sito. Nessuna transazione può essere effettuata al momento. L'attivazione degli acquisti sarà comunicata su questa pagina nella pagina prezzi.",
     comingSoonCardNote: "Riceverai un'email con link e licenza subito dopo l'acquisto.",
 
 
