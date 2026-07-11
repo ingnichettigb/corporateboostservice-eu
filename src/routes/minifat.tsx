@@ -322,7 +322,11 @@ function MiniFatPage() {
                 );
               })}
             </div>
+            <div className="mt-12 flex justify-center">
+              <MiniFatCta />
+            </div>
           </div>
+
         </section>
 
         {/* PREZZI */}
