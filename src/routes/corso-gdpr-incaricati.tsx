@@ -206,6 +206,7 @@ function CorsoIncaricatiPage() {
             </p>
             <div className="mt-8">
               <FreeCourseButton />
+              <TaxBadgeShort className="mt-2 block text-center" />
             </div>
             <div className="mt-12 max-w-3xl mx-auto">
               <img
