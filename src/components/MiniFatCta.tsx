@@ -1,20 +1,38 @@
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "@tanstack/react-router";
+import { toast } from "sonner";
+import { ShoppingCart } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { buildMailto } from "@/lib/contact";
+import { useCart } from "@/lib/cart";
+import { getMiniFatMonthly, getMiniFatAnnual, toCartItem } from "@/lib/pricing";
+
+export const MINIFAT_DOMAIN = "minifat.corporateboostservice.eu";
 
 /**
- * Single source of truth for the MiniFAT "Attiva MiniFAT – 50€/mese" CTA.
- * The label comes from the `minifat.heroCta` i18n key, so changing that one
- * key updates the button text everywhere it is used across the page.
+ * Single source of truth for the MiniFAT activation CTAs.
+ * Clicking adds the correct plan to the cart and opens the checkout:
+ *  - monthly → 002MnFAT-01
+ *  - annual  → 002MnFAT-12
+ * The label comes from the `minifat.heroCta` / `minifat.heroCtaAnnual` i18n keys.
  */
 export function MiniFatCta({ className = "", annual = false }: { className?: string; annual?: boolean }) {
   const { t } = useTranslation();
+  const { addItem } = useCart();
+  const navigate = useNavigate();
+  const plan = annual ? getMiniFatAnnual() : getMiniFatMonthly();
   const label = t(annual ? "minifat.heroCtaAnnual" : "minifat.heroCta");
   return (
-    <Button variant="hero" size="lg" className={`h-12 px-7 text-base ${className}`} asChild>
-      <a href={buildMailto(`MiniFAT — ${label}`)}>
-        {label}
-      </a>
+    <Button
+      variant="hero"
+      size="lg"
+      className={`h-12 px-7 text-base whitespace-normal leading-tight ${className}`}
+      onClick={() => {
+        addItem(toCartItem(plan, MINIFAT_DOMAIN));
+        toast.success(t("minifat.addedToast"));
+        navigate({ to: "/carrello" });
+      }}
+    >
+      <ShoppingCart className="mr-2 h-5 w-5 shrink-0" aria-hidden /> {label}
     </Button>
   );
 }
@@ -30,5 +48,3 @@ export function MiniFatCtaGroup({ className = "" }: { className?: string }) {
     </div>
   );
 }
-
-

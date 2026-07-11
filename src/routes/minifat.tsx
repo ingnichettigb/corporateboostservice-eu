@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useTranslation } from "react-i18next";
 import i18n from "@/i18n";
 import { Button } from "@/components/ui/button";
-import { buildMailto } from "@/lib/contact";
+
 import { getMiniFatMonthly } from "@/lib/pricing";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
@@ -13,7 +13,6 @@ import {
 } from "@/components/ui/accordion";
 import {
   ArrowLeft,
-  ArrowRight,
   FileCheck2,
   Building2,
   ClipboardList,
@@ -104,6 +103,7 @@ function MiniFatPage() {
               </p>
               <div className="mt-8 flex flex-col items-center lg:items-start gap-3">
                 <MiniFatCta />
+                <MiniFatCta annual />
                 <TaxNote className="text-center lg:text-left max-w-md" />
               </div>
 
@@ -363,11 +363,7 @@ function MiniFatPage() {
                     </li>
                   ))}
                 </ul>
-                <Button variant="hero" size="lg" className="w-full h-12 mt-7 text-base" asChild>
-                  <a href={buildMailto(`MiniFAT — ${t("minifat.pricingCta")}`)}>
-                    {t("minifat.pricingCta")} <ArrowRight className="ml-1 h-4 w-4" aria-hidden />
-                  </a>
-                </Button>
+                <MiniFatCtaGroup className="mt-7" />
                 <p className="mt-3 text-center text-xs text-foreground/60">
                   {t("minifat.pricingNote")}
                 </p>
