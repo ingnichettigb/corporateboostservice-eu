@@ -104,6 +104,7 @@ function MiniFatPage() {
               </p>
               <div className="mt-8 flex flex-col items-center lg:items-start gap-3">
                 <MiniFatCta />
+                <MiniFatCta annual />
                 <TaxNote className="text-center lg:text-left max-w-md" />
               </div>
 
