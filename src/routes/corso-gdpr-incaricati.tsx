@@ -207,7 +207,6 @@ function CorsoIncaricatiPage() {
             </p>
             <div className="mt-8">
               <FreeCourseButton />
-              <TaxBadgeShort className="mt-2 block text-center" />
             </div>
             <div className="mt-12 max-w-3xl mx-auto">
               <img
@@ -250,7 +249,6 @@ function CorsoIncaricatiPage() {
             </div>
             <div className="mt-12 text-center">
               <FreeCourseButton />
-              <TaxBadgeShort className="mt-2 block text-center" />
             </div>
           </div>
         </section>
@@ -299,7 +297,6 @@ function CorsoIncaricatiPage() {
             </div>
             <div className="mt-12 text-center">
               <FreeCourseButton />
-              <TaxBadgeShort className="mt-2 block text-center" />
             </div>
           </div>
         </section>
@@ -326,7 +323,6 @@ function CorsoIncaricatiPage() {
             </div>
             <div className="mt-12 text-center">
               <FreeCourseButton />
-              <TaxBadgeShort className="mt-2 block text-center" />
             </div>
           </div>
         </section>
@@ -387,7 +383,6 @@ function CorsoIncaricatiPage() {
               <p className="mt-3 text-foreground/80 text-lg">{t("corsoIncaricati.finalCtaText")}</p>
               <div className="mt-8">
                 <FreeCourseButton />
-                <TaxBadgeShort className="mt-2 block text-center" />
               </div>
             </div>
           </div>
