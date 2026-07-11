@@ -386,6 +386,7 @@ function CorsoIncaricatiPage() {
               <p className="mt-3 text-foreground/80 text-lg">{t("corsoIncaricati.finalCtaText")}</p>
               <div className="mt-8">
                 <FreeCourseButton />
+                <TaxBadgeShort className="mt-2 block text-center" />
               </div>
             </div>
           </div>
