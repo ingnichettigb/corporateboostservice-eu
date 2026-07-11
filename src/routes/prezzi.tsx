@@ -4,7 +4,7 @@ import i18n from "@/i18n";
 import { Info, Construction, Package, ShoppingCart, Check } from "lucide-react";
 import { toast } from "sonner";
 import { LegalLayout } from "@/components/LegalLayout";
-import { TaxNote } from "@/components/TaxDisclaimer";
+import { TaxBadge, TaxNote } from "@/components/TaxDisclaimer";
 import { pricingItems } from "@/i18n/locales/pages/legal";
 import { useCart } from "@/lib/cart";
 
@@ -95,7 +95,7 @@ function PrezziPage() {
                 <td className="px-4 py-3 font-semibold text-foreground/70">{index + 1}</td>
                 <td className="px-4 py-3 font-mono text-xs text-foreground/70 whitespace-nowrap">{item.code}</td>
                 <td className="px-4 py-3 font-medium">{item.name}</td>
-                <td className="px-4 py-3 whitespace-nowrap font-semibold text-primary">{item.price}</td>
+                <td className="px-4 py-3 whitespace-nowrap font-semibold text-primary">{item.price} <TaxBadge className="text-foreground/70" /></td>
                 <td className="px-4 py-3 whitespace-nowrap">{monthsLabel(item.duration)}</td>
                 {/* TODO: sostituire con link Paddle */}
                 <td className="px-4 py-3">
@@ -115,7 +115,7 @@ function PrezziPage() {
             <div className="mt-1 font-mono text-xs text-foreground/70 break-all">{item.code}</div>
             <div className="font-semibold">{item.name}</div>
             <div className="mt-2 flex items-center gap-3 text-sm">
-              <span className="font-semibold text-primary">{item.price}</span>
+              <span className="font-semibold text-primary">{item.price} <TaxBadge className="text-foreground/70" /></span>
               <span className="text-foreground/70">{monthsLabel(item.duration)}</span>
             </div>
             {/* TODO: sostituire con link Paddle */}
