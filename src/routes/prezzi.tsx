@@ -4,6 +4,7 @@ import i18n from "@/i18n";
 import { Info, Construction, Package, ShoppingCart, Check } from "lucide-react";
 import { toast } from "sonner";
 import { LegalLayout } from "@/components/LegalLayout";
+import { TaxNote } from "@/components/TaxDisclaimer";
 import { pricingItems } from "@/i18n/locales/pages/legal";
 import { useCart } from "@/lib/cart";
 
@@ -124,6 +125,8 @@ function PrezziPage() {
           </div>
         ))}
       </div>
+
+      <TaxNote className="mt-4" />
 
       {/* Digital delivery */}
       <div className="mt-10 rounded-xl border border-border bg-muted/40 p-5">
