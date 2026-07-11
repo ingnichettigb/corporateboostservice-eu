@@ -34,7 +34,8 @@ export const Route = createFileRoute("/corsi")({
 });
 
 function CorsiPage() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const taxBadge = taxDisclaimer[resolveTaxLang(i18n.language)].badge;
   const { addItem } = useCart();
   const navigate = useNavigate();
   return (
@@ -99,21 +100,18 @@ function CorsiPage() {
                     </a>
                   </Button>
                   {key === "gdprAddetto" && (
-                    <>
-                      <Button
-                        variant="hero"
-                        size="default"
-                        className="h-11 w-full whitespace-normal leading-tight"
-                        onClick={() => {
-                          addItem(ATTESTATO_ADDETTO);
-                          toast.success(t("legal.cart.addedToast"));
-                          navigate({ to: "/carrello" });
-                        }}
-                      >
-                        <GraduationCap className="mr-1 h-4 w-4 shrink-0" aria-hidden /> {t("corsi.corsoGratis")}
-                      </Button>
-                      <TaxBadgeShort className="text-center" />
-                    </>
+                    <Button
+                      variant="hero"
+                      size="default"
+                      className="h-11 w-full whitespace-normal leading-tight"
+                      onClick={() => {
+                        addItem(ATTESTATO_ADDETTO);
+                        toast.success(t("legal.cart.addedToast"));
+                        navigate({ to: "/carrello" });
+                      }}
+                    >
+                      <GraduationCap className="mr-1 h-4 w-4 shrink-0" aria-hidden /> {t("corsi.corsoGratis")} {taxBadge}
+                    </Button>
                   )}
                 </div>
 
