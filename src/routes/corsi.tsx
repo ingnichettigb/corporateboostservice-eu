@@ -4,7 +4,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { ContactSection } from "@/components/ContactSection";
 import { ChecklistCTAs } from "@/components/ChecklistCTAs";
-import { TaxBadgeShort } from "@/components/TaxDisclaimer";
+import { taxDisclaimer, resolveTaxLang } from "@/i18n/taxDisclaimer";
 import { corsi } from "@/data/site";
 import { buildMailto } from "@/lib/contact";
 import { useCart } from "@/lib/cart";
