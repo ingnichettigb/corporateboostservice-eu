@@ -28,10 +28,11 @@ import {
   Zap,
   Wifi,
   Check,
-  PlayCircle,
 } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
+import { MiniFatCta } from "@/components/MiniFatCta";
+
 import heroAsset from "@/assets/minifat/minifat-process.png.asset.json";
 import screenMain from "@/assets/minifat/screen-main.jpg";
 import screenDocs from "@/assets/minifat/screen-docs.jpg";
