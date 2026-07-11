@@ -126,6 +126,8 @@ function PrezziPage() {
         ))}
       </div>
 
+      <TaxNote className="mt-4" />
+
       {/* Digital delivery */}
       <div className="mt-10 rounded-xl border border-border bg-muted/40 p-5">
         <div className="flex items-center gap-2 mb-3 font-bold">
