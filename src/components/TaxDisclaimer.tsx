@@ -16,7 +16,19 @@ export function TaxBadge({ className = "" }: { className?: string }) {
  * Reads the currently selected language from i18n, falling back to IT.
  */
 export function TaxNote({ className = "" }: { className?: string }) {
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
   const { note } = taxDisclaimer[resolveTaxLang(i18n.language)];
-  return <p className={`text-sm text-foreground/65 ${className}`}>{note}</p>;
+  return (
+    <div className={`space-y-2 ${className}`}>
+      <p className="text-sm text-foreground/65">{note}</p>
+      <div className="rounded-lg border border-amber-200/60 bg-amber-50/80 p-3 dark:border-amber-500/30 dark:bg-amber-500/10">
+        <p className="text-sm font-medium text-amber-800 dark:text-amber-300">
+          🚧 {t("legal.comingSoonBadge")}
+        </p>
+        <p className="mt-1 text-sm text-amber-800/90 dark:text-amber-300/90">
+          {t("legal.comingSoonNote")}
+        </p>
+      </div>
+    </div>
+  );
 }
