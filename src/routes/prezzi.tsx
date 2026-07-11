@@ -4,6 +4,7 @@ import i18n from "@/i18n";
 import { Info, Construction, Package, ShoppingCart, Check } from "lucide-react";
 import { toast } from "sonner";
 import { LegalLayout } from "@/components/LegalLayout";
+import { TaxNote } from "@/components/TaxDisclaimer";
 import { pricingItems } from "@/i18n/locales/pages/legal";
 import { useCart } from "@/lib/cart";
 
