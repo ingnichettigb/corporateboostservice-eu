@@ -76,15 +76,11 @@ function CorsiPage() {
                 )}
                 <p className="text-foreground/85 leading-relaxed mb-6">{t(`corsi.items.${key}.desc`)}</p>
                 <div className="flex flex-col items-center gap-3 max-w-xs mx-auto">
-                  {key === "gdprAddetto" ? (
+                  {key === "gdprAddetto" && (
                     <Button asChild variant="hero" size="default" className="h-11 w-full">
                       <Link to="/corso-gdpr-incaricati">
                         {t("corsi.landingPage")} <ArrowRight className="ml-1 h-4 w-4" aria-hidden />
                       </Link>
-                    </Button>
-                  ) : (
-                    <Button variant="hero" size="default" className="h-11 w-full" disabled>
-                      {t("corsi.iscriviti")} <ArrowRight className="ml-1 h-4 w-4" aria-hidden />
                     </Button>
                   )}
                   <Button asChild variant="outline" size="default" className="h-11 w-full">
@@ -92,25 +88,22 @@ function CorsiPage() {
                       <Mail className="mr-1 h-4 w-4" aria-hidden /> {t("corsi.infoLabel")}
                     </a>
                   </Button>
-                  {key === "gdprAddetto" ? (
-                    <Button
-                      variant="hero"
-                      size="default"
-                      className="h-11 w-full whitespace-normal leading-tight"
-                      onClick={() => {
-                        addItem(ATTESTATO_ADDETTO);
-                        toast.success(t("legal.cart.addedToast"));
-                        navigate({ to: "/carrello" });
-                      }}
-                    >
-                      <GraduationCap className="mr-1 h-4 w-4 shrink-0" aria-hidden /> {t("corsi.corsoGratis")}
-                    </Button>
-                  ) : (
-                    <Button asChild variant="outline" size="default" className="h-11 w-full">
-                      <a href={buildMailto(t(`corsi.items.${key}.title`), t("corsi.preventivoBody"))}>
-                        <FileText className="mr-1 h-4 w-4" aria-hidden /> {t("corsi.preventivoLabel")}
-                      </a>
-                    </Button>
+                  {key === "gdprAddetto" && (
+                    <>
+                      <Button
+                        variant="hero"
+                        size="default"
+                        className="h-11 w-full whitespace-normal leading-tight"
+                        onClick={() => {
+                          addItem(ATTESTATO_ADDETTO);
+                          toast.success(t("legal.cart.addedToast"));
+                          navigate({ to: "/carrello" });
+                        }}
+                      >
+                        <GraduationCap className="mr-1 h-4 w-4 shrink-0" aria-hidden /> {t("corsi.corsoGratis")}
+                      </Button>
+                      <TaxBadgeShort className="text-center" />
+                    </>
                   )}
                 </div>
 
