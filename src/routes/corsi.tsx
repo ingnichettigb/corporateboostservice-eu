@@ -4,11 +4,12 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { ContactSection } from "@/components/ContactSection";
 import { ChecklistCTAs } from "@/components/ChecklistCTAs";
+import { TaxBadgeShort } from "@/components/TaxDisclaimer";
 import { corsi } from "@/data/site";
 import { buildMailto } from "@/lib/contact";
 import { useCart } from "@/lib/cart";
 import { toast } from "sonner";
-import { ArrowRight, Clock, Award, Users, Construction, Mail, FileText, GraduationCap } from "lucide-react";
+import { ArrowRight, Clock, Award, Users, Construction, Mail, GraduationCap } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 const ATTESTATO_ADDETTO = {
