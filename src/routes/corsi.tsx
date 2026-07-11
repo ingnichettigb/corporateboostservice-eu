@@ -115,14 +115,6 @@ function CorsiPage() {
           </div>
         </section>
 
-        <section className="py-20 [background:var(--gradient-section-hero)] border-y-2 border-primary/15">
-          <div className="container mx-auto px-4 max-w-4xl text-center">
-            <h2 className="text-2xl md:text-4xl font-bold tracking-tight text-foreground">{t("checklist.toolsTitle")}</h2>
-            <p className="mt-4 text-lg text-foreground/85 max-w-2xl mx-auto">{t("checklist.toolsSubtitle")}</p>
-            <ChecklistCTAs className="mt-8" />
-          </div>
-        </section>
-
         <ContactSection />
 
       </main>
