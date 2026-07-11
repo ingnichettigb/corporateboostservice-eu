@@ -22,7 +22,7 @@ export const legal = {
       "I pagamenti sono elaborati da Paddle.com, che agisce come Merchant of Record per tutte le transazioni effettuate su questo sito. Paddle emette le ricevute fiscali, gestisce le contestazioni di pagamento (chargeback) e applica le proprie condizioni d'uso per il servizio di pagamento. Utilizzando i servizi di questo sito, l'utente accetta anche le condizioni di Paddle.com applicabili alle transazioni.",
     comingSoonBadge: "Acquisti in arrivo — disponibile a breve",
     comingSoonNote:
-      "I pagamenti verranno attivati a breve. Riceverai un'email con il link e la licenza subito dopo l'acquisto.",
+      "Il sistema di pagamento (Paddle) non è ancora operativo su questo sito. Nessuna transazione può essere effettuata al momento. L'attivazione degli acquisti sarà comunicata su questa pagina nella pagina prezzi.",
     comingSoonCardNote: "Riceverai un'email con link e licenza subito dopo l'acquisto.",
 
 
@@ -319,7 +319,7 @@ export const legal = {
       "Payments are processed by Paddle.com, which acts as Merchant of Record for all transactions made on this site. Paddle issues tax receipts, manages payment disputes (chargebacks) and applies its own terms of use for the payment service. By using the services of this site, the user also accepts the Paddle.com terms applicable to transactions.",
     comingSoonBadge: "Purchases coming soon — available shortly",
     comingSoonNote:
-      "Payments will be activated shortly. You will receive an email with the link and license immediately after purchase.",
+      "The payment system (Paddle) is not yet operational on this site. No transactions can be completed at this time. Purchase activation will be announced on this page and on the pricing page.",
     comingSoonCardNote: "You will receive an email with the link and license immediately after purchase.",
 
 
