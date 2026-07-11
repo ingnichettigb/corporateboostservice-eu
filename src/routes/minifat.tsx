@@ -31,7 +31,7 @@ import {
 } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
-import { MiniFatCta } from "@/components/MiniFatCta";
+import { MiniFatCta, MiniFatCtaGroup } from "@/components/MiniFatCta";
 import { TaxNote } from "@/components/TaxDisclaimer";
 
 import heroAsset from "@/assets/minifat/minifat-process.png.asset.json";
@@ -102,8 +102,9 @@ function MiniFatPage() {
               <p className="mt-5 text-lg md:text-xl text-foreground/85 max-w-xl mx-auto lg:mx-0">
                 {t("minifat.heroDesc")}
               </p>
-              <div className="mt-8 flex justify-center lg:justify-start">
+              <div className="mt-8 flex flex-col items-center lg:items-start gap-3">
                 <MiniFatCta />
+                <TaxNote className="text-center lg:text-left max-w-md" />
               </div>
 
               <p className="mt-4 text-sm text-foreground/65">
@@ -150,7 +151,7 @@ function MiniFatPage() {
               })}
             </div>
             <div className="mt-12 flex justify-center">
-              <MiniFatCta />
+              <MiniFatCtaGroup />
             </div>
           </div>
 
@@ -188,7 +189,7 @@ function MiniFatPage() {
               })}
             </div>
             <div className="mt-12 flex justify-center">
-              <MiniFatCta />
+              <MiniFatCtaGroup />
             </div>
           </div>
 
@@ -226,7 +227,7 @@ function MiniFatPage() {
               ))}
             </div>
             <div className="mt-12 flex justify-center">
-              <MiniFatCta />
+              <MiniFatCtaGroup />
             </div>
           </div>
 
@@ -288,7 +289,7 @@ function MiniFatPage() {
               </p>
             </div>
             <div className="mt-12 flex justify-center">
-              <MiniFatCta />
+              <MiniFatCtaGroup />
             </div>
           </div>
 
@@ -328,7 +329,7 @@ function MiniFatPage() {
               })}
             </div>
             <div className="mt-12 flex justify-center">
-              <MiniFatCta />
+              <MiniFatCtaGroup />
             </div>
           </div>
 
@@ -393,7 +394,7 @@ function MiniFatPage() {
               ))}
             </Accordion>
             <div className="mt-10 flex justify-center">
-              <MiniFatCta />
+              <MiniFatCtaGroup />
             </div>
           </div>
 
@@ -409,7 +410,7 @@ function MiniFatPage() {
               {t("minifat.ctaDesc")}
             </p>
             <div className="mt-8 flex justify-center">
-              <MiniFatCta />
+              <MiniFatCtaGroup />
             </div>
 
           </div>
