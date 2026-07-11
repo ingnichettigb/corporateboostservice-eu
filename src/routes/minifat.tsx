@@ -151,7 +151,7 @@ function MiniFatPage() {
               })}
             </div>
             <div className="mt-12 flex justify-center">
-              <MiniFatCta />
+              <MiniFatCtaGroup />
             </div>
           </div>
 
@@ -189,7 +189,7 @@ function MiniFatPage() {
               })}
             </div>
             <div className="mt-12 flex justify-center">
-              <MiniFatCta />
+              <MiniFatCtaGroup />
             </div>
           </div>
 
@@ -227,7 +227,7 @@ function MiniFatPage() {
               ))}
             </div>
             <div className="mt-12 flex justify-center">
-              <MiniFatCta />
+              <MiniFatCtaGroup />
             </div>
           </div>
 
@@ -289,7 +289,7 @@ function MiniFatPage() {
               </p>
             </div>
             <div className="mt-12 flex justify-center">
-              <MiniFatCta />
+              <MiniFatCtaGroup />
             </div>
           </div>
 
@@ -329,7 +329,7 @@ function MiniFatPage() {
               })}
             </div>
             <div className="mt-12 flex justify-center">
-              <MiniFatCta />
+              <MiniFatCtaGroup />
             </div>
           </div>
 
@@ -394,7 +394,7 @@ function MiniFatPage() {
               ))}
             </Accordion>
             <div className="mt-10 flex justify-center">
-              <MiniFatCta />
+              <MiniFatCtaGroup />
             </div>
           </div>
 
@@ -410,7 +410,7 @@ function MiniFatPage() {
               {t("minifat.ctaDesc")}
             </p>
             <div className="mt-8 flex justify-center">
-              <MiniFatCta />
+              <MiniFatCtaGroup />
             </div>
 
           </div>
