@@ -4,11 +4,12 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { ContactSection } from "@/components/ContactSection";
 import { ChecklistCTAs } from "@/components/ChecklistCTAs";
+import { TaxBadgeShort } from "@/components/TaxDisclaimer";
 import { corsi } from "@/data/site";
 import { buildMailto } from "@/lib/contact";
 import { useCart } from "@/lib/cart";
 import { toast } from "sonner";
-import { ArrowRight, Clock, Award, Users, Construction, Mail, FileText, GraduationCap } from "lucide-react";
+import { ArrowRight, Clock, Award, Users, Construction, Mail, GraduationCap } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 const ATTESTATO_ADDETTO = {
@@ -54,6 +55,15 @@ function CorsiPage() {
           </div>
         </section>
 
+        <section className="py-20 [background:var(--gradient-section-hero)] border-y-2 border-primary/15">
+          <div className="container mx-auto px-4 max-w-4xl text-center">
+            <h2 className="text-2xl md:text-4xl font-bold tracking-tight text-foreground">{t("checklist.toolsTitle")}</h2>
+            <p className="mt-4 text-lg text-foreground/85 max-w-2xl mx-auto">{t("checklist.toolsSubtitle")}</p>
+            <ChecklistCTAs className="mt-8" />
+          </div>
+        </section>
+
+
         <section className="py-20 [background:var(--gradient-section-corsi)]">
           <div className="container mx-auto px-4 grid sm:grid-cols-2 gap-6 max-w-5xl">
             {corsi.map((item) => {
@@ -76,15 +86,11 @@ function CorsiPage() {
                 )}
                 <p className="text-foreground/85 leading-relaxed mb-6">{t(`corsi.items.${key}.desc`)}</p>
                 <div className="flex flex-col items-center gap-3 max-w-xs mx-auto">
-                  {key === "gdprAddetto" ? (
+                  {key === "gdprAddetto" && (
                     <Button asChild variant="hero" size="default" className="h-11 w-full">
                       <Link to="/corso-gdpr-incaricati">
                         {t("corsi.landingPage")} <ArrowRight className="ml-1 h-4 w-4" aria-hidden />
                       </Link>
-                    </Button>
-                  ) : (
-                    <Button variant="hero" size="default" className="h-11 w-full" disabled>
-                      {t("corsi.iscriviti")} <ArrowRight className="ml-1 h-4 w-4" aria-hidden />
                     </Button>
                   )}
                   <Button asChild variant="outline" size="default" className="h-11 w-full">
@@ -92,25 +98,22 @@ function CorsiPage() {
                       <Mail className="mr-1 h-4 w-4" aria-hidden /> {t("corsi.infoLabel")}
                     </a>
                   </Button>
-                  {key === "gdprAddetto" ? (
-                    <Button
-                      variant="hero"
-                      size="default"
-                      className="h-11 w-full whitespace-normal leading-tight"
-                      onClick={() => {
-                        addItem(ATTESTATO_ADDETTO);
-                        toast.success(t("legal.cart.addedToast"));
-                        navigate({ to: "/carrello" });
-                      }}
-                    >
-                      <GraduationCap className="mr-1 h-4 w-4 shrink-0" aria-hidden /> {t("corsi.corsoGratis")}
-                    </Button>
-                  ) : (
-                    <Button asChild variant="outline" size="default" className="h-11 w-full">
-                      <a href={buildMailto(t(`corsi.items.${key}.title`), t("corsi.preventivoBody"))}>
-                        <FileText className="mr-1 h-4 w-4" aria-hidden /> {t("corsi.preventivoLabel")}
-                      </a>
-                    </Button>
+                  {key === "gdprAddetto" && (
+                    <>
+                      <Button
+                        variant="hero"
+                        size="default"
+                        className="h-11 w-full whitespace-normal leading-tight"
+                        onClick={() => {
+                          addItem(ATTESTATO_ADDETTO);
+                          toast.success(t("legal.cart.addedToast"));
+                          navigate({ to: "/carrello" });
+                        }}
+                      >
+                        <GraduationCap className="mr-1 h-4 w-4 shrink-0" aria-hidden /> {t("corsi.corsoGratis")}
+                      </Button>
+                      <TaxBadgeShort className="text-center" />
+                    </>
                   )}
                 </div>
 
@@ -118,14 +121,6 @@ function CorsiPage() {
               </article>
               );
             })}
-          </div>
-        </section>
-
-        <section className="py-20 [background:var(--gradient-section-hero)] border-y-2 border-primary/15">
-          <div className="container mx-auto px-4 max-w-4xl text-center">
-            <h2 className="text-2xl md:text-4xl font-bold tracking-tight text-foreground">{t("checklist.toolsTitle")}</h2>
-            <p className="mt-4 text-lg text-foreground/85 max-w-2xl mx-auto">{t("checklist.toolsSubtitle")}</p>
-            <ChecklistCTAs className="mt-8" />
           </div>
         </section>
 
