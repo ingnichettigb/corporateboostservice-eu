@@ -31,7 +31,7 @@ import {
 } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
-import { MiniFatCta } from "@/components/MiniFatCta";
+import { MiniFatCta, MiniFatCtaGroup } from "@/components/MiniFatCta";
 import { TaxNote } from "@/components/TaxDisclaimer";
 
 import heroAsset from "@/assets/minifat/minifat-process.png.asset.json";
