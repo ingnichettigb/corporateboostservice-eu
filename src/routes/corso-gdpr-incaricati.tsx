@@ -31,6 +31,7 @@ import {
 } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
+import { TaxBadgeShort } from "@/components/TaxDisclaimer";
 import heroImg from "@/assets/gdpr-incaricati/hero.jpg";
 
 const ATTESTATO_ADDETTO = toCartItem(getGdprAddetto(), "02-gdpr-00.corporateboostservice.eu");
@@ -205,6 +206,7 @@ function CorsoIncaricatiPage() {
             </p>
             <div className="mt-8">
               <FreeCourseButton />
+              <TaxBadgeShort className="mt-2 block text-center" />
             </div>
             <div className="mt-12 max-w-3xl mx-auto">
               <img
@@ -247,6 +249,7 @@ function CorsoIncaricatiPage() {
             </div>
             <div className="mt-12 text-center">
               <FreeCourseButton />
+              <TaxBadgeShort className="mt-2 block text-center" />
             </div>
           </div>
         </section>
@@ -295,6 +298,7 @@ function CorsoIncaricatiPage() {
             </div>
             <div className="mt-12 text-center">
               <FreeCourseButton />
+              <TaxBadgeShort className="mt-2 block text-center" />
             </div>
           </div>
         </section>
@@ -321,6 +325,7 @@ function CorsoIncaricatiPage() {
             </div>
             <div className="mt-12 text-center">
               <FreeCourseButton />
+              <TaxBadgeShort className="mt-2 block text-center" />
             </div>
           </div>
         </section>
@@ -381,6 +386,7 @@ function CorsoIncaricatiPage() {
               <p className="mt-3 text-foreground/80 text-lg">{t("corsoIncaricati.finalCtaText")}</p>
               <div className="mt-8">
                 <FreeCourseButton />
+                <TaxBadgeShort className="mt-2 block text-center" />
               </div>
             </div>
           </div>
