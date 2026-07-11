@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useTranslation } from "react-i18next";
 import i18n from "@/i18n";
 import { Button } from "@/components/ui/button";
-import { buildMailto } from "@/lib/contact";
+
 import { getMiniFatMonthly } from "@/lib/pricing";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
