@@ -344,6 +344,7 @@
     "ctaH2": "Ready to create your next FAT dossier?",
     "ctaDesc": "PDF generated locally, no data sent to external servers.",
     "ctaCta": "Activate MiniFAT – €50/month",
-    "ctaDemo": "Try the Demo"
+    "ctaDemo": "Try the Demo",
+    "addedToast": "Product added to cart"
   }
 }

@@ -344,6 +344,7 @@
     "ctaH2": "Pronto a creare il tuo prossimo dossier FAT?",
     "ctaDesc": "PDF generato localmente, nessun invio dati a server esterni.",
     "ctaCta": "Attiva MiniFAT – 50€/mese + iva e tasse",
-    "ctaDemo": "Prova la Demo"
+    "ctaDemo": "Prova la Demo",
+    "addedToast": "Prodotto aggiunto al carrello"
   }
 }
