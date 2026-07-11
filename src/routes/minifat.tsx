@@ -347,7 +347,7 @@ function MiniFatPage() {
               <p className="text-lg font-semibold">{t("minifat.pricingPlanName")}</p>
                 <p className="mt-1">
                   <span className="text-5xl font-extrabold">{getMiniFatMonthly().price}</span>
-                  <span className="text-lg font-medium">{t("minifat.pricingMonth")}</span>
+                  <span className="text-lg font-medium">{t("minifat.pricingMonth")} + iva e tasse</span>
                 </p>
               </div>
               <CardContent className="pt-6">

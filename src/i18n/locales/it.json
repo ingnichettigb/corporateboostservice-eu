@@ -163,7 +163,7 @@
     "heroH1a": "Il modo più semplice per creare",
     "heroH1b": "dossier FAT professionali",
     "heroDesc": "MiniFAT genera automaticamente copertina, indice, pagine documentali e PDF bilingue direttamente dal tuo dispositivo.",
-    "heroCta": "Attiva MiniFAT – 50€/mese",
+    "heroCta": "Attiva MiniFAT – 50€/mese + iva e tasse",
     "heroDemo": "Prova la Demo",
     "heroNote": "PDF generato localmente · Nessun invio dati a server esterni",
     "heroImgAlt": "App MiniFAT su tablet e smartphone con un dossier FAT professionale",
@@ -342,7 +342,7 @@
     ],
     "ctaH2": "Pronto a creare il tuo prossimo dossier FAT?",
     "ctaDesc": "PDF generato localmente, nessun invio dati a server esterni.",
-    "ctaCta": "Attiva MiniFAT – 50€/mese",
+    "ctaCta": "Attiva MiniFAT – 50€/mese + iva e tasse",
     "ctaDemo": "Prova la Demo"
   }
 }
