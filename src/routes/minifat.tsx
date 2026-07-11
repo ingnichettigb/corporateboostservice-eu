@@ -228,7 +228,11 @@ function MiniFatPage() {
                 </figure>
               ))}
             </div>
+            <div className="mt-12 flex justify-center">
+              <MiniFatCta />
+            </div>
           </div>
+
         </section>
 
         {/* IL METODO */}
