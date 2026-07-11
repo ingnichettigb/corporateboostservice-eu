@@ -200,6 +200,7 @@ function PedFlowPage() {
             <p className="mt-6 text-sm text-foreground/65">
               {t("heroCaption")}
             </p>
+            <TaxNote className="mt-4 max-w-xl mx-auto" />
           </div>
         </section>
 
