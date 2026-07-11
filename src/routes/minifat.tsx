@@ -32,6 +32,7 @@ import {
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { MiniFatCta } from "@/components/MiniFatCta";
+import { TaxNote } from "@/components/TaxDisclaimer";
 
 import heroAsset from "@/assets/minifat/minifat-process.png.asset.json";
 import screenMain from "@/assets/minifat/screen-main.jpg";
@@ -369,6 +370,7 @@ function MiniFatPage() {
                 <p className="mt-3 text-center text-xs text-foreground/60">
                   {t("minifat.pricingNote")}
                 </p>
+                <TaxNote className="mt-4 text-center" />
               </CardContent>
             </Card>
           </div>
