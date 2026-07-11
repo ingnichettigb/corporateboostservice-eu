@@ -102,7 +102,7 @@ function MiniFatPage() {
                 {t("minifat.heroDesc")}
               </p>
               <div className="mt-8 flex justify-center lg:justify-start">
-                <MiniFatCta className="lg:items-start" />
+                <MiniFatCta />
               </div>
 
               <p className="mt-4 text-sm text-foreground/65">
