@@ -28,10 +28,11 @@ import {
   Zap,
   Wifi,
   Check,
-  PlayCircle,
 } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
+import { MiniFatCta } from "@/components/MiniFatCta";
+
 import heroAsset from "@/assets/minifat/minifat-process.png.asset.json";
 import screenMain from "@/assets/minifat/screen-main.jpg";
 import screenDocs from "@/assets/minifat/screen-docs.jpg";
@@ -100,23 +101,10 @@ function MiniFatPage() {
               <p className="mt-5 text-lg md:text-xl text-foreground/85 max-w-xl mx-auto lg:mx-0">
                 {t("minifat.heroDesc")}
               </p>
-              <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
-                <Button variant="hero" size="lg" className="h-12 px-7 text-base" asChild>
-                  <a href={buildMailto(`MiniFAT — ${t("minifat.heroCta")}`)}>
-                    {t("minifat.heroCta")}
-                  </a>
-                </Button>
-                <Button
-                  variant="outline"
-                  size="lg"
-                  className="h-12 px-7 text-base border-2 border-primary/40"
-                  asChild
-                >
-                  <a href={buildMailto(`MiniFAT — ${t("minifat.heroDemo")}`)}>
-                    <PlayCircle className="h-5 w-5" aria-hidden /> {t("minifat.heroDemo")}
-                  </a>
-                </Button>
+              <div className="mt-8 flex justify-center lg:justify-start">
+                <MiniFatCta className="lg:items-start" />
               </div>
+
               <p className="mt-4 text-sm text-foreground/65">
                 {t("minifat.heroNote")}
               </p>
@@ -160,7 +148,11 @@ function MiniFatPage() {
                 );
               })}
             </div>
+            <div className="mt-12 flex justify-center">
+              <MiniFatCta />
+            </div>
           </div>
+
         </section>
 
         {/* COME FUNZIONA */}
@@ -194,7 +186,11 @@ function MiniFatPage() {
                 );
               })}
             </div>
+            <div className="mt-12 flex justify-center">
+              <MiniFatCta />
+            </div>
           </div>
+
         </section>
 
         {/* SCREENSHOT */}
@@ -228,7 +224,11 @@ function MiniFatPage() {
                 </figure>
               ))}
             </div>
+            <div className="mt-12 flex justify-center">
+              <MiniFatCta />
+            </div>
           </div>
+
         </section>
 
         {/* IL METODO */}
@@ -286,7 +286,11 @@ function MiniFatPage() {
                 {t("minifat.methodCalloutLine2")}
               </p>
             </div>
+            <div className="mt-12 flex justify-center">
+              <MiniFatCta />
+            </div>
           </div>
+
         </section>
 
 
@@ -322,7 +326,11 @@ function MiniFatPage() {
                 );
               })}
             </div>
+            <div className="mt-12 flex justify-center">
+              <MiniFatCta />
+            </div>
           </div>
+
         </section>
 
         {/* PREZZI */}
@@ -382,7 +390,11 @@ function MiniFatPage() {
                 </AccordionItem>
               ))}
             </Accordion>
+            <div className="mt-10 flex justify-center">
+              <MiniFatCta />
+            </div>
           </div>
+
         </section>
 
         {/* CTA FINALE */}
@@ -394,27 +406,10 @@ function MiniFatPage() {
             <p className="mt-4 text-white/90 text-lg">
               {t("minifat.ctaDesc")}
             </p>
-            <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
-              <Button
-                size="lg"
-                className="h-12 px-7 text-base bg-yellow-400 text-black hover:bg-yellow-300 border-2 border-black"
-                asChild
-              >
-                <a href={buildMailto(`MiniFAT — ${t("minifat.ctaCta")}`)}>
-                  {t("minifat.ctaCta")}
-                </a>
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="h-12 px-7 text-base border-2 border-white/60 bg-transparent text-white hover:bg-white/10 hover:text-white"
-                asChild
-              >
-                <a href={buildMailto(`MiniFAT — ${t("minifat.ctaDemo")}`)}>
-                  <PlayCircle className="h-5 w-5" aria-hidden /> {t("minifat.ctaDemo")}
-                </a>
-              </Button>
+            <div className="mt-8 flex justify-center">
+              <MiniFatCta />
             </div>
+
           </div>
         </section>
       </main>
