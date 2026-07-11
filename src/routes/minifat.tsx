@@ -13,7 +13,6 @@ import {
 } from "@/components/ui/accordion";
 import {
   ArrowLeft,
-  ArrowRight,
   FileCheck2,
   Building2,
   ClipboardList,
