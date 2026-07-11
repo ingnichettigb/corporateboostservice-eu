@@ -5,7 +5,7 @@ export type TaxDisclaimerLang = "it" | "en" | "es" | "de";
 
 export const taxDisclaimer: Record<TaxDisclaimerLang, { badge: string; note: string }> = {
   it: {
-    badge: "+ IVA/tasse escluse",
+    badge: "+ IVA/tasse",
     note:
       "I prezzi indicati si intendono al netto delle imposte. L'importo finale — comprensivo di IVA, GST o altra tassa applicabile in base al paese di fatturazione del cliente — viene calcolato automaticamente da Paddle al momento del checkout.",
   },
