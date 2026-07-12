@@ -462,8 +462,9 @@ function SmartMaintenancePage() {
             <p className="mt-4 text-white/90 text-lg">
               {t("smartMaintenance.ctaBody")}
             </p>
-            <div className="mt-8 flex justify-center">
+            <div className="mt-8 flex flex-col items-center gap-3">
               <ActivateButtons />
+              <TaxNote className="text-center max-w-md" />
             </div>
           </div>
         </section>
