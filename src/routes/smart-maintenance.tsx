@@ -464,7 +464,7 @@ function SmartMaintenancePage() {
             </p>
             <div className="mt-8 flex flex-col items-center gap-3">
               <ActivateButtons />
-              <TaxNote className="text-center max-w-md" />
+              <TaxNote light className="text-center max-w-md" />
             </div>
           </div>
         </section>
