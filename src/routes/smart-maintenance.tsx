@@ -206,8 +206,9 @@ function SmartMaintenancePage() {
               <p className="mt-5 text-lg md:text-xl text-foreground/85 max-w-xl mx-auto lg:mx-0">
                 {t("smartMaintenance.heroSubtitle")}
               </p>
-              <div className="mt-8 flex justify-center lg:justify-start">
+              <div className="mt-8 flex flex-col items-center lg:items-start gap-3">
                 <ActivateButtons />
+                <TaxNote className="text-center max-w-md" />
               </div>
               <figure className="mt-8 m-0">
                 <img

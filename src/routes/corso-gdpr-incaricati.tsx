@@ -32,6 +32,7 @@ import {
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { taxDisclaimer, resolveTaxLang } from "@/i18n/taxDisclaimer";
+import { TaxNote } from "@/components/TaxDisclaimer";
 import heroImg from "@/assets/gdpr-incaricati/hero.jpg";
 
 const ATTESTATO_ADDETTO = toCartItem(getGdprAddetto(), "02-gdpr-00.corporateboostservice.eu");
@@ -205,8 +206,9 @@ function CorsoIncaricatiPage() {
             <p className="mt-3 text-base text-foreground/75 max-w-2xl mx-auto">
               {t("corsoIncaricati.heroNote")}
             </p>
-            <div className="mt-8">
+            <div className="mt-8 flex flex-col items-center gap-3">
               <FreeCourseButton />
+              <TaxNote className="text-center max-w-md" />
             </div>
             <div className="mt-12 max-w-3xl mx-auto">
               <img
