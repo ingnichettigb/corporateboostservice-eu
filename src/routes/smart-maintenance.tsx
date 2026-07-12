@@ -41,6 +41,7 @@ import {
 } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
+import { TaxBadge, TaxNote } from "@/components/TaxDisclaimer";
 import heroAsset from "@/assets/smart-maintenance/home.png.asset.json";
 import flowAsset from "@/assets/smart-maintenance/flow.png.asset.json";
 import pdfImg from "@/assets/smart-maintenance/pdf.jpg";
@@ -119,7 +120,7 @@ function ActivateButton({ className = "" }: { className?: string }) {
         navigate({ to: "/carrello" });
       }}
     >
-      <ShoppingCart className="mr-2 h-5 w-5 shrink-0" aria-hidden /> {label}
+      <ShoppingCart className="mr-2 h-5 w-5 shrink-0" aria-hidden /> {label} <TaxBadge className="ml-2" />
     </Button>
   );
 }
@@ -140,7 +141,7 @@ function AnnualActivateButton({ className = "" }: { className?: string }) {
         navigate({ to: "/carrello" });
       }}
     >
-      <ShoppingCart className="mr-2 h-5 w-5 shrink-0" aria-hidden /> {label}
+      <ShoppingCart className="mr-2 h-5 w-5 shrink-0" aria-hidden /> {label} <TaxBadge className="ml-2" />
     </Button>
   );
 }
@@ -461,8 +462,9 @@ function SmartMaintenancePage() {
             <p className="mt-4 text-white/90 text-lg">
               {t("smartMaintenance.ctaBody")}
             </p>
-            <div className="mt-8 flex justify-center">
+            <div className="mt-8 flex flex-col items-center gap-3">
               <ActivateButtons />
+              <TaxNote className="text-center max-w-md" />
             </div>
           </div>
         </section>
