@@ -249,7 +249,7 @@ export const legal = {
         },
         {
           heading: "Cookie",
-          body: "Il sito utilizza cookie tecnici necessari al funzionamento e cookie di terze parti a fini statistici (es. Analytics). I cookie di terze parti possono essere disattivati dalle impostazioni del browser.",
+          body: "Il sito utilizza esclusivamente cookie tecnici necessari al funzionamento (gestione sessione, sicurezza anti-bot tramite Cloudflare, carrello) e non installa cookie di profilazione o di terze parti a fini statistici/pubblicitari. Non è pertanto necessario richiedere il consenso dell'utente per l'utilizzo dei cookie presenti su questo sito.",
         },
         {
           heading: "Trasferimento dati e servizi USA",
@@ -538,7 +538,7 @@ export const legal = {
         },
         {
           heading: "Cookies",
-          body: "The site uses technical cookies necessary for operation and third-party cookies for statistical purposes (e.g. Analytics). Third-party cookies can be disabled in the browser settings.",
+          body: "This site uses only technical cookies strictly necessary for operation (session management, Cloudflare anti-bot security, cart) and does not install profiling or third-party cookies for statistical/advertising purposes. Therefore, no user consent is required for the cookies used on this site.",
         },
         {
           heading: "Data transfer and US services",
