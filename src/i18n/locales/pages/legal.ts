@@ -270,7 +270,7 @@ export const legal = {
       sections: [
         {
           heading: "1. Casi di rimborso",
-          body: "Il rimborso è previsto esclusivamente in caso di doppio pagamento o di errore tecnico imputabile al fornitore entro 30 giorni dalla data di acquisto\" alla segnalazione di doppio pagamento o errore tecnico..",
+          body: "Il rimborso è previsto esclusivamente in caso di doppio pagamento o di errore tecnico imputabile al fornitore, da segnalare entro 30 giorni dalla data di acquisto.",
         },
         {
           heading: "2. Contenuti digitali già accessibili",
