@@ -281,19 +281,19 @@ export const legal = {
           body: "Non è previsto alcun rimborso per abbonamenti già utilizzati, anche solo parzialmente, durante il periodo di validità.",
         },
         {
-          heading: "3-bis. Cancellazione del rinnovo automatico",
+          heading: "4. Cancellazione del rinnovo automatico",
           body: "È possibile cancellare il rinnovo automatico dell'abbonamento in qualsiasi momento scrivendo a team@corporateboostservice.eu. La cancellazione ha effetto dal successivo ciclo di fatturazione e non comporta il rimborso del periodo già in corso.",
         },
         {
-          heading: "4. Tempi di rimborso",
+          heading: "5. Tempi di rimborso",
           body: "I rimborsi ammessi vengono effettuati entro 14 giorni dalla conferma della richiesta, con lo stesso metodo di pagamento utilizzato.",
         },
         {
-          heading: "5. Richiesta di rimborso",
+          heading: "6. Richiesta di rimborso",
           body: "La richiesta deve essere inviata via email all'indirizzo ufficiale team@corporateboostservice.eu, indicando i dati dell'ordine e la motivazione. Le richieste di rimborso possono essere gestite anche direttamente da Paddle.com, in qualità di Merchant of Record e venditore ufficiale delle transazioni, secondo le proprie procedure di assistenza clienti.",
         },
         {
-          heading: "6. Promozioni",
+          heading: "7. Promozioni",
           body: "Gli acquisti effettuati nell'ambito di promozioni, sconti o offerte speciali non sono rimborsabili.",
         },
       ],
