@@ -252,8 +252,8 @@ export const legal = {
           body: "Il sito utilizza esclusivamente cookie tecnici necessari al funzionamento (gestione sessione, sicurezza anti-bot tramite Cloudflare, carrello) e non installa cookie di profilazione o di terze parti a fini statistici/pubblicitari. Non è pertanto necessario richiedere il consenso dell'utente per l'utilizzo dei cookie presenti su questo sito.",
         },
         {
-          heading: "Trasferimento dati e servizi USA",
-          body: "Per alcuni servizi (es. analisi statistiche e infrastrutture) i dati possono essere trattati tramite fornitori con sede negli Stati Uniti, nel rispetto delle garanzie previste dalla normativa applicabile.",
+          heading: "Trasferimento dati e servizi",
+          body: "Per l'erogazione del servizio possono essere coinvolti fornitori europei ed extraeuropei che trattano i dati esclusivamente per finalità funzionali e indispensabili alla gestione del servizio stesso (es. gestione dei pagamenti, hosting, sicurezza, infrastrutture tecniche), in qualità di responsabili del trattamento nell'ambito di accordi conformi alla normativa applicabile. CorporateBoostService.eu non vende né cede dati personali a terzi per finalità commerciali proprie.",
         },
       ],
       relatedHeading: "Altre pagine legali",
