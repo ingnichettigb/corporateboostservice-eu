@@ -270,7 +270,7 @@ export const legal = {
       sections: [
         {
           heading: "1. Casi di rimborso",
-          body: "Il rimborso è previsto esclusivamente in caso di doppio pagamento o di errore tecnico imputabile al fornitore.",
+          body: "Il rimborso è previsto esclusivamente in caso di doppio pagamento o di errore tecnico imputabile al fornitore entro 30 giorni dalla data di acquisto\" alla segnalazione di doppio pagamento o errore tecnico..",
         },
         {
           heading: "2. Contenuti digitali già accessibili",
@@ -286,7 +286,7 @@ export const legal = {
         },
         {
           heading: "5. Richiesta di rimborso",
-          body: "La richiesta deve essere inviata via email all'indirizzo ufficiale team@corporateboostservice.eu, indicando i dati dell'ordine e la motivazione.",
+          body: "La richiesta deve essere inviata via email all'indirizzo ufficiale team@corporateboostservice.eu, indicando i dati dell'ordine e la motivazione. Le richieste di rimborso possono essere gestite anche direttamente da Paddle.com, in qualità di Merchant of Record e venditore ufficiale delle transazioni, secondo le proprie procedure di assistenza clienti.",
         },
         {
           heading: "6. Promozioni",
