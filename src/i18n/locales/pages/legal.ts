@@ -66,7 +66,7 @@ export const legal = {
       subtitle: "Come vengono gestiti i pagamenti per i servizi e i corsi di questo sito.",
       s1Heading: "Chi gestisce i pagamenti",
       s1Body:
-        "I pagamenti per i servizi e i corsi acquistati su questo sito sono gestiti da Paddle.com (Paddle.com, Inc. / Paddle Payments Ltd.), che opera in qualità di Merchant of Record. Paddle è il venditore ufficiale nei confronti del cliente finale per tutte le transazioni effettuate su corporateboostservice.eu.",
+        "I pagamenti per i servizi e i corsi acquistati su questo sito sono gestiti da Paddle.com (Paddle.com Inc. per le transazioni negli Stati Uniti; Paddle.com Market Limited, società di diritto inglese, per le transazioni nel resto del mondo, incluse quelle in Europa), che opera in qualità di Merchant of Record. Paddle è il venditore ufficiale nei confronti del cliente finale per tutte le transazioni effettuate su corporateboostservice.eu.",
       s2Heading: "Cosa fa Paddle",
       s2Body:
         "Paddle si occupa di: emissione delle ricevute e fatture fiscali, elaborazione dei pagamenti con carta, bonifico e altri metodi, gestione dei rimborsi secondo la Politica di Rimborso di questo sito, gestione delle contestazioni di pagamento (chargeback) secondo le proprie condizioni.",
