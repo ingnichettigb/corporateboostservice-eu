@@ -281,6 +281,10 @@ export const legal = {
           body: "Non è previsto alcun rimborso per abbonamenti già utilizzati, anche solo parzialmente, durante il periodo di validità.",
         },
         {
+          heading: "3-bis. Cancellazione del rinnovo automatico",
+          body: "È possibile cancellare il rinnovo automatico dell'abbonamento in qualsiasi momento scrivendo a team@corporateboostservice.eu. La cancellazione ha effetto dal successivo ciclo di fatturazione e non comporta il rimborso del periodo già in corso.",
+        },
+        {
           heading: "4. Tempi di rimborso",
           body: "I rimborsi ammessi vengono effettuati entro 14 giorni dalla conferma della richiesta, con lo stesso metodo di pagamento utilizzato.",
         },
