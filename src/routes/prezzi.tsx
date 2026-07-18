@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useTranslation } from "react-i18next";
+import { useQuery } from "@tanstack/react-query";
 import i18n from "@/i18n";
 import { Info, Construction, Package, ShoppingCart, Check } from "lucide-react";
 import { toast } from "sonner";
@@ -7,6 +8,10 @@ import { LegalLayout } from "@/components/LegalLayout";
 import { TaxBadge, TaxNote } from "@/components/TaxDisclaimer";
 import { pricingItems } from "@/i18n/locales/pages/legal";
 import { useCart } from "@/lib/cart";
+import { supabase } from "@/integrations/supabase/client";
+
+type CatalogRow = { code: string; name: string; price_eur: number; validity_months: number };
+
 
 export const Route = createFileRoute("/prezzi")({
   head: () => ({
