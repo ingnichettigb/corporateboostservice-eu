@@ -37,6 +37,56 @@ function PrezziPage() {
   const { addItem, has } = useCart();
   const monthsLabel = (d: string) => `${d} ${d === "1" ? t("legal.prezzi.month") : t("legal.prezzi.months")}`;
 
+  const codes = pricingItems.map((p) => p.code);
+  const { data: catalog, isLoading } = useQuery({
+    queryKey: ["product_catalog", codes],
+    queryFn: async (): Promise<Map<string, CatalogRow>> => {
+      const { data, error } = await supabase
+        .from("product_catalog")
+        .select("code, name, price_eur, validity_months")
+        .in("code", codes)
+        .eq("is_public", true);
+      if (error) throw error;
+      const map = new Map<string, CatalogRow>();
+      (data as CatalogRow[] | null)?.forEach((r) => map.set(r.code, r));
+      codes.forEach((c) => {
+        if (!map.has(c)) console.warn("[prezzi] code non trovato in product_catalog:", c);
+      });
+      return map;
+    },
+    staleTime: 5 * 60_000,
+  });
+
+  const formatPrice = (n: number) => {
+    const s = Number.isInteger(n) ? n.toString() : n.toFixed(2);
+    return `${s}€`;
+  };
+  const formatDuration = (m: number) =>
+    `${m} ${m === 1 ? t("legal.prezzi.month") : t("legal.prezzi.months")}`;
+
+  const Skeleton = ({ w = "w-16" }: { w?: string }) => (
+    <span className={`inline-block h-4 ${w} animate-pulse bg-muted rounded align-middle`} />
+  );
+
+  const PriceCell = ({ item }: { item: (typeof pricingItems)[number] }) => {
+    const row = catalog?.get(item.code);
+    if (isLoading && !row) return <Skeleton />;
+    const priceText = row ? formatPrice(row.price_eur) : item.price;
+    return (
+      <>
+        {priceText} <TaxBadge className="text-foreground/70" />
+      </>
+    );
+  };
+
+  const DurationCell = ({ item }: { item: (typeof pricingItems)[number] }) => {
+    const row = catalog?.get(item.code);
+    if (isLoading && !row) return <Skeleton w="w-14" />;
+    return <>{row ? formatDuration(row.validity_months) : monthsLabel(item.duration)}</>;
+  };
+
+
+
   const AddBtn = ({ item, full }: { item: (typeof pricingItems)[number]; full?: boolean }) => {
     const inCart = has(item.code);
     if (item.code === "01-GDPR-00") {
