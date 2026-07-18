@@ -171,8 +171,9 @@ function PrezziPage() {
             <div className="mt-1 font-mono text-xs text-foreground/70 break-all">{item.code}</div>
             <div className="font-semibold">{item.name}</div>
             <div className="mt-2 flex items-center gap-3 text-sm">
-              <span className="font-semibold text-primary">{item.price} <TaxBadge className="text-foreground/70" /></span>
-              <span className="text-foreground/70">{monthsLabel(item.duration)}</span>
+              <span className="font-semibold text-primary"><PriceCell item={item} /></span>
+              <span className="text-foreground/70"><DurationCell item={item} /></span>
+
             </div>
             {/* TODO: sostituire con link Paddle */}
             <div className="mt-3">
