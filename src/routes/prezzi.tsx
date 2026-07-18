@@ -150,8 +150,9 @@ function PrezziPage() {
                 <td className="px-4 py-3 font-semibold text-foreground/70">{index + 1}</td>
                 <td className="px-4 py-3 font-mono text-xs text-foreground/70 whitespace-nowrap">{item.code}</td>
                 <td className="px-4 py-3 font-medium">{item.name}</td>
-                <td className="px-4 py-3 whitespace-nowrap font-semibold text-primary">{item.price} <TaxBadge className="text-foreground/70" /></td>
-                <td className="px-4 py-3 whitespace-nowrap">{monthsLabel(item.duration)}</td>
+                <td className="px-4 py-3 whitespace-nowrap font-semibold text-primary"><PriceCell item={item} /></td>
+                <td className="px-4 py-3 whitespace-nowrap"><DurationCell item={item} /></td>
+
                 {/* TODO: sostituire con link Paddle */}
                 <td className="px-4 py-3">
                   <AddBtn item={item} />
