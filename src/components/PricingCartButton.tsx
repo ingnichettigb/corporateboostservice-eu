@@ -1,4 +1,3 @@
-import { useNavigate } from "@tanstack/react-router";
 import { useTranslation } from "react-i18next";
 import { useQuery } from "@tanstack/react-query";
 import { Check, Construction, ShoppingCart } from "lucide-react";
