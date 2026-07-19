@@ -37,7 +37,7 @@ export function PricingCartButton({
 }) {
   const { t } = useTranslation();
   const { addItem, has } = useCart();
-  const navigate = useNavigate();
+  
 
   const fallback = pricingItems.find((p) => p.code === code);
 
