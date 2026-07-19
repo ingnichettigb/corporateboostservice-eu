@@ -190,7 +190,7 @@ function PrezziPage() {
 
                 {/* TODO: sostituire con link Paddle */}
                 <td className="px-4 py-3">
-                  <AddBtn item={item} />
+                  <AddBtn item={item} index={index + 1} />
                 </td>
               </tr>
             ))}
