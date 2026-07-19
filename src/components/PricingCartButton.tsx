@@ -105,7 +105,7 @@ export function PricingCartButton({
           domain: fallback.code,
         });
         toast.success(t("legal.cart.addedToast"));
-        navigate({ to: "/carrello" });
+        
       }}
       className={`${full ? "w-full " : ""}relative inline-flex flex-col items-center justify-center gap-0.5 rounded-md pl-5 pr-3 py-2 text-xs font-semibold transition-colors text-center ${
         inCart
