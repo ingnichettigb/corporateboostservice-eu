@@ -2,12 +2,11 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useTranslation } from "react-i18next";
 import { useQuery } from "@tanstack/react-query";
 import i18n from "@/i18n";
-import { Info, Construction, Package, ShoppingCart, Check } from "lucide-react";
-import { toast } from "sonner";
+import { Info, Construction, Package } from "lucide-react";
 import { LegalLayout } from "@/components/LegalLayout";
 import { TaxBadge, TaxNote } from "@/components/TaxDisclaimer";
+import { PricingCartButton } from "@/components/PricingCartButton";
 import { pricingItems } from "@/i18n/locales/pages/legal";
-import { useCart } from "@/lib/cart";
 import { supabase } from "@/integrations/supabase/client";
 
 type CatalogRow = { code: string; name: string; price_eur: number; validity_months: number };
@@ -34,7 +33,6 @@ const related = [
 
 function PrezziPage() {
   const { t } = useTranslation();
-  const { addItem, has } = useCart();
   const monthsLabel = (d: string) => `${d} ${d === "1" ? t("legal.prezzi.month") : t("legal.prezzi.months")}`;
 
   const codes = pricingItems.map((p) => p.code);
@@ -87,72 +85,7 @@ function PrezziPage() {
 
 
 
-  const AddBtn = ({
-    item,
-    index,
-    full,
-  }: {
-    item: (typeof pricingItems)[number];
-    index: number;
-    full?: boolean;
-  }) => {
-    const inCart = has(item.code);
-    const row = catalog?.get(item.code);
-    const priceText = row ? formatPrice(row.price_eur) : null;
-    const durationText = row ? formatDuration(row.validity_months) : null;
-    const serviceName = row?.name ?? item.name;
-    const hasDetails = Boolean(row);
-    const ariaLabel = hasDetails
-      ? `Riga ${index}. ${t("legal.cart.add")}: ${serviceName}, ${priceText} più iva e tasse, durata ${durationText}`
-      : `Riga ${index}. ${t("legal.cart.add")}`;
 
-    if (item.code === "01-GDPR-00") {
-      return (
-        <span
-          className={`${full ? "w-full " : ""}relative inline-flex items-center justify-center gap-1.5 rounded-md px-3 py-2 pl-5 text-xs font-semibold border border-amber-400 bg-amber-50 text-amber-700`}
-        >
-          <span className="absolute top-0.5 left-1 text-[10px] font-medium text-amber-700/60 leading-none">
-            {index}
-          </span>
-          <Construction className="h-4 w-4" aria-hidden />
-          {t("legal.prezzi.underConstruction")}
-        </span>
-      );
-    }
-    return (
-      <button
-        type="button"
-        disabled={inCart}
-        aria-label={ariaLabel}
-        onClick={() => {
-          addItem({ id: item.code, name: item.name, price: item.price, duration: item.duration, domain: item.code });
-          toast.success(t("legal.cart.addedToast"));
-        }}
-        className={`${full ? "w-full " : ""}relative inline-flex flex-col items-center justify-center gap-0.5 rounded-md pl-5 pr-3 py-2 text-xs font-semibold transition-colors text-center ${
-          inCart
-            ? "border border-border bg-muted text-foreground/70 cursor-default"
-            : "bg-primary text-primary-foreground hover:bg-primary/90"
-        }`}
-      >
-        <span
-          className="absolute top-0.5 left-1 text-[10px] font-medium opacity-60 leading-none"
-          aria-hidden
-        >
-          {index}
-        </span>
-        <span className="inline-flex items-center gap-1.5">
-          {inCart ? <Check className="h-4 w-4" aria-hidden /> : <ShoppingCart className="h-4 w-4" aria-hidden />}
-          <span className="font-semibold">{inCart ? t("legal.cart.added") : t("legal.cart.add")}</span>
-        </span>
-        {hasDetails && (
-          <span className="text-[10px] font-normal opacity-85 leading-tight flex flex-wrap items-baseline justify-center gap-x-1 max-w-full">
-            <span className="truncate max-w-[10rem]">{serviceName}</span>
-            <span className="whitespace-nowrap">– {priceText} + iva e tasse – {durationText}</span>
-          </span>
-        )}
-      </button>
-    );
-  };
 
 
   return (
@@ -190,7 +123,7 @@ function PrezziPage() {
 
                 {/* TODO: sostituire con link Paddle */}
                 <td className="px-4 py-3">
-                  <AddBtn item={item} index={index + 1} />
+                  <PricingCartButton code={item.code} index={index + 1} />
                 </td>
               </tr>
             ))}
@@ -212,7 +145,7 @@ function PrezziPage() {
             </div>
             {/* TODO: sostituire con link Paddle */}
             <div className="mt-3">
-              <AddBtn item={item} index={index + 1} full />
+              <PricingCartButton code={item.code} index={index + 1} full />
             </div>
           </div>
         ))}

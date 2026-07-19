@@ -42,6 +42,7 @@ import {
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { TaxBadge, TaxNote } from "@/components/TaxDisclaimer";
+import { PricingCartButton } from "@/components/PricingCartButton";
 import heroAsset from "@/assets/smart-maintenance/home.png.asset.json";
 import flowAsset from "@/assets/smart-maintenance/flow.png.asset.json";
 import pdfImg from "@/assets/smart-maintenance/pdf.jpg";
@@ -126,23 +127,15 @@ function ActivateButton({ className = "" }: { className?: string }) {
 }
 
 function AnnualActivateButton({ className = "" }: { className?: string }) {
-  const { t } = useTranslation();
-  const { addItem } = useCart();
-  const navigate = useNavigate();
-  const plan = SMART_MAINTENANCE_ANNUAL;
-  const label = t("smartMaintenance.activateYearly").replace("{{price}}", plan.price);
+  // Riusa il bottone della pagina Prezzi (riga 1 — 001SmMntnnc-12).
+  // Fonte unica del prezzo/durata: tabella product_catalog di Supabase.
   return (
-    <Button
-      size="lg"
-      className={`h-12 px-8 whitespace-normal leading-tight bg-[#1A365D] font-bold text-[#FEF08A] hover:bg-[#162d4d] border-2 border-black ${className}`}
-      onClick={() => {
-        addItem(toCartItem(plan, SMART_MAINTENANCE_DOMAIN));
-        toast.success(t("smartMaintenance.addedToast"));
-        navigate({ to: "/carrello" });
-      }}
-    >
-      <ShoppingCart className="mr-2 h-5 w-5 shrink-0" aria-hidden /> {label} <TaxBadge className="ml-2" />
-    </Button>
+    <PricingCartButton
+      code="001SmMntnnc-12"
+      index={1}
+      full
+      className={className}
+    />
   );
 }
 
