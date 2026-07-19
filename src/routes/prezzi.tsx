@@ -33,7 +33,6 @@ const related = [
 
 function PrezziPage() {
   const { t } = useTranslation();
-  const { addItem, has } = useCart();
   const monthsLabel = (d: string) => `${d} ${d === "1" ? t("legal.prezzi.month") : t("legal.prezzi.months")}`;
 
   const codes = pricingItems.map((p) => p.code);
