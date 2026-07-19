@@ -42,6 +42,7 @@ import {
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { TaxBadge, TaxNote } from "@/components/TaxDisclaimer";
+import { PricingCartButton } from "@/components/PricingCartButton";
 import heroAsset from "@/assets/smart-maintenance/home.png.asset.json";
 import flowAsset from "@/assets/smart-maintenance/flow.png.asset.json";
 import pdfImg from "@/assets/smart-maintenance/pdf.jpg";
