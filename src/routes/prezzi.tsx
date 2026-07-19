@@ -87,72 +87,7 @@ function PrezziPage() {
 
 
 
-  const AddBtn = ({
-    item,
-    index,
-    full,
-  }: {
-    item: (typeof pricingItems)[number];
-    index: number;
-    full?: boolean;
-  }) => {
-    const inCart = has(item.code);
-    const row = catalog?.get(item.code);
-    const priceText = row ? formatPrice(row.price_eur) : null;
-    const durationText = row ? formatDuration(row.validity_months) : null;
-    const serviceName = row?.name ?? item.name;
-    const hasDetails = Boolean(row);
-    const ariaLabel = hasDetails
-      ? `Riga ${index}. ${t("legal.cart.add")}: ${serviceName}, ${priceText} più iva e tasse, durata ${durationText}`
-      : `Riga ${index}. ${t("legal.cart.add")}`;
 
-    if (item.code === "01-GDPR-00") {
-      return (
-        <span
-          className={`${full ? "w-full " : ""}relative inline-flex items-center justify-center gap-1.5 rounded-md px-3 py-2 pl-5 text-xs font-semibold border border-amber-400 bg-amber-50 text-amber-700`}
-        >
-          <span className="absolute top-0.5 left-1 text-[10px] font-medium text-amber-700/60 leading-none">
-            {index}
-          </span>
-          <Construction className="h-4 w-4" aria-hidden />
-          {t("legal.prezzi.underConstruction")}
-        </span>
-      );
-    }
-    return (
-      <button
-        type="button"
-        disabled={inCart}
-        aria-label={ariaLabel}
-        onClick={() => {
-          addItem({ id: item.code, name: item.name, price: item.price, duration: item.duration, domain: item.code });
-          toast.success(t("legal.cart.addedToast"));
-        }}
-        className={`${full ? "w-full " : ""}relative inline-flex flex-col items-center justify-center gap-0.5 rounded-md pl-5 pr-3 py-2 text-xs font-semibold transition-colors text-center ${
-          inCart
-            ? "border border-border bg-muted text-foreground/70 cursor-default"
-            : "bg-primary text-primary-foreground hover:bg-primary/90"
-        }`}
-      >
-        <span
-          className="absolute top-0.5 left-1 text-[10px] font-medium opacity-60 leading-none"
-          aria-hidden
-        >
-          {index}
-        </span>
-        <span className="inline-flex items-center gap-1.5">
-          {inCart ? <Check className="h-4 w-4" aria-hidden /> : <ShoppingCart className="h-4 w-4" aria-hidden />}
-          <span className="font-semibold">{inCart ? t("legal.cart.added") : t("legal.cart.add")}</span>
-        </span>
-        {hasDetails && (
-          <span className="text-[10px] font-normal opacity-85 leading-tight flex flex-wrap items-baseline justify-center gap-x-1 max-w-full">
-            <span className="truncate max-w-[10rem]">{serviceName}</span>
-            <span className="whitespace-nowrap">– {priceText} + iva e tasse – {durationText}</span>
-          </span>
-        )}
-      </button>
-    );
-  };
 
 
   return (
