@@ -98,9 +98,6 @@ const benefitIcons = [Wifi, CheckCircle2, Layers, Gauge, HardDrive, ShieldCheck]
 
 const privacyIcons = [HardDrive, Lock, FolderArchive];
 
-const SMART_MAINTENANCE_MONTHLY = getSmartMaintenanceMonthly();
-const SMART_MAINTENANCE_ANNUAL = getSmartMaintenanceAnnual();
-const SMART_MAINTENANCE_DOMAIN = "smart-maintenance.corporateboostservice.eu";
 
 function ActivateButton({ className = "" }: { className?: string }) {
   // Riusa il bottone della pagina Prezzi (riga 2 — 001SmMntnnc-01).
