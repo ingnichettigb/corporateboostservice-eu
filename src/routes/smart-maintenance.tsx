@@ -1,14 +1,10 @@
-import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { useTranslation } from "react-i18next";
 import i18n from "@/i18n";
 import { Button } from "@/components/ui/button";
-import { useCart } from "@/lib/cart";
-import {
-  getSmartMaintenanceMonthly,
-  getSmartMaintenanceAnnual,
-  toCartItem,
-} from "@/lib/pricing";
-import { toast } from "sonner";
+
+
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
   Accordion,
@@ -37,11 +33,11 @@ import {
   Wifi,
   AlertTriangle,
   HardDrive,
-  ShoppingCart,
+  
 } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
-import { TaxBadge, TaxNote } from "@/components/TaxDisclaimer";
+import { TaxNote } from "@/components/TaxDisclaimer";
 import { PricingCartButton } from "@/components/PricingCartButton";
 import heroAsset from "@/assets/smart-maintenance/home.png.asset.json";
 import flowAsset from "@/assets/smart-maintenance/flow.png.asset.json";
@@ -101,30 +97,20 @@ const benefitIcons = [Wifi, CheckCircle2, Layers, Gauge, HardDrive, ShieldCheck]
 
 const privacyIcons = [HardDrive, Lock, FolderArchive];
 
-const SMART_MAINTENANCE_MONTHLY = getSmartMaintenanceMonthly();
-const SMART_MAINTENANCE_ANNUAL = getSmartMaintenanceAnnual();
-const SMART_MAINTENANCE_DOMAIN = "smart-maintenance.corporateboostservice.eu";
 
 function ActivateButton({ className = "" }: { className?: string }) {
-  const { t } = useTranslation();
-  const { addItem } = useCart();
-  const navigate = useNavigate();
-  const plan = SMART_MAINTENANCE_MONTHLY;
-  const label = t("smartMaintenance.activateMonthly").replace("{{price}}", plan.price);
+  // Riusa il bottone della pagina Prezzi (riga 2 — 001SmMntnnc-01).
+  // Fonte unica del prezzo/durata: tabella product_catalog di Supabase.
   return (
-    <Button
-      size="lg"
-      className={`h-12 px-8 whitespace-normal leading-tight bg-orange-500 font-bold text-black hover:bg-orange-600 border-2 border-black ${className}`}
-      onClick={() => {
-        addItem(toCartItem(plan, SMART_MAINTENANCE_DOMAIN));
-        toast.success(t("smartMaintenance.addedToast"));
-        navigate({ to: "/carrello" });
-      }}
-    >
-      <ShoppingCart className="mr-2 h-5 w-5 shrink-0" aria-hidden /> {label} <TaxBadge className="ml-2" />
-    </Button>
+    <PricingCartButton
+      code="001SmMntnnc-01"
+      index={2}
+      full
+      className={className}
+    />
   );
 }
+
 
 function AnnualActivateButton({ className = "" }: { className?: string }) {
   // Riusa il bottone della pagina Prezzi (riga 1 — 001SmMntnnc-12).
