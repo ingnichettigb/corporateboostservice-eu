@@ -1,14 +1,11 @@
-import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { useTranslation } from "react-i18next";
 import i18n from "@/i18n";
 import { Button } from "@/components/ui/button";
-import { useCart } from "@/lib/cart";
 import {
-  getSmartMaintenanceMonthly,
   getSmartMaintenanceAnnual,
-  toCartItem,
 } from "@/lib/pricing";
-import { toast } from "sonner";
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
   Accordion,
