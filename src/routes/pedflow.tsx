@@ -40,6 +40,7 @@ import {
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { TaxBadge, TaxNote } from "@/components/TaxDisclaimer";
+import { PricingCartButton } from "@/components/PricingCartButton";
 import logoAsset from "@/assets/apps/pedflow.png.asset.json";
 import processAsset from "@/assets/pedflow/pedflow-process-en.png.asset.json";
 
