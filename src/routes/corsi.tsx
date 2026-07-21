@@ -24,10 +24,7 @@ export const Route = createFileRoute("/corsi")({
 });
 
 function CorsiPage() {
-  const { t, i18n } = useTranslation();
-  const taxBadge = taxDisclaimer[resolveTaxLang(i18n.language)].badge;
-  const { addItem } = useCart();
-  const navigate = useNavigate();
+  const { t } = useTranslation();
   return (
     <div className="min-h-screen bg-background">
       <a href="#main" className="skip-link">{t("skip")}</a>
