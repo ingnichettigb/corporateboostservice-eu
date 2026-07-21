@@ -40,6 +40,7 @@ import {
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { TaxBadge, TaxNote } from "@/components/TaxDisclaimer";
+import { PricingCartButton } from "@/components/PricingCartButton";
 import logoAsset from "@/assets/apps/pedflow.png.asset.json";
 import processAsset from "@/assets/pedflow/pedflow-process-en.png.asset.json";
 
@@ -77,45 +78,11 @@ const PEDFLOW_ANNUAL = getPedFlowAnnual();
 const PEDFLOW_DOMAIN = "pedflow.corporateboostservice.eu";
 
 function ActivateButton({ className = "" }: { className?: string }) {
-  const { t } = useTranslation("pedflow");
-  const { addItem } = useCart();
-  const navigate = useNavigate();
-  const plan = PEDFLOW_MONTHLY;
-  const label = t("activateCta").replace("{{price}}", plan.price);
-  return (
-    <Button
-      size="lg"
-      className={`h-12 px-8 whitespace-normal leading-tight bg-orange-500 font-bold text-black hover:bg-orange-600 border-2 border-black ${className}`}
-      onClick={() => {
-        addItem(toCartItem(plan, PEDFLOW_DOMAIN));
-        toast.success(t("addedToast"));
-        navigate({ to: "/carrello" });
-      }}
-    >
-      <ShoppingCart className="mr-2 h-5 w-5 shrink-0" aria-hidden /> {label} <TaxBadge className="ml-2" />
-    </Button>
-  );
+  return <PricingCartButton code="011PedFlow-01" index={5} full className={className} />;
 }
 
 function AnnualActivateButton({ className = "" }: { className?: string }) {
-  const { t } = useTranslation("pedflow");
-  const { addItem } = useCart();
-  const navigate = useNavigate();
-  const plan = PEDFLOW_ANNUAL;
-  const label = t("annualActivateCta").replace("{{price}}", plan.price);
-  return (
-    <Button
-      size="lg"
-      className={`h-12 px-8 whitespace-normal leading-tight bg-[#1A365D] font-bold text-[#FEF08A] hover:bg-[#162d4d] border-2 border-black ${className}`}
-      onClick={() => {
-        addItem(toCartItem(plan, PEDFLOW_DOMAIN));
-        toast.success(t("addedToast"));
-        navigate({ to: "/carrello" });
-      }}
-    >
-      <ShoppingCart className="mr-2 h-5 w-5 shrink-0" aria-hidden /> {label} <TaxBadge className="ml-2" />
-    </Button>
-  );
+  return <PricingCartButton code="012PedFlow-12" index={6} full className={className} />;
 }
 
 function ActivateButtons({ className = "" }: { className?: string }) {
