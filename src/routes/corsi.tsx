@@ -1,24 +1,14 @@
-import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { ContactSection } from "@/components/ContactSection";
 import { ChecklistCTAs } from "@/components/ChecklistCTAs";
-import { taxDisclaimer, resolveTaxLang } from "@/i18n/taxDisclaimer";
+import { PricingCartButton } from "@/components/PricingCartButton";
 import { corsi } from "@/data/site";
 import { buildMailto } from "@/lib/contact";
-import { useCart } from "@/lib/cart";
-import { toast } from "sonner";
-import { ArrowRight, Clock, Award, Users, Construction, Mail, GraduationCap } from "lucide-react";
+import { ArrowRight, Clock, Award, Users, Construction, Mail } from "lucide-react";
 import { useTranslation } from "react-i18next";
-
-const ATTESTATO_ADDETTO = {
-  id: "02-gdpr-00.corporateboostservice.eu",
-  name: "Corso Privacy Addetto",
-  price: "40€",
-  duration: "3",
-  domain: "02-gdpr-00.corporateboostservice.eu",
-};
 
 
 
@@ -34,10 +24,7 @@ export const Route = createFileRoute("/corsi")({
 });
 
 function CorsiPage() {
-  const { t, i18n } = useTranslation();
-  const taxBadge = taxDisclaimer[resolveTaxLang(i18n.language)].badge;
-  const { addItem } = useCart();
-  const navigate = useNavigate();
+  const { t } = useTranslation();
   return (
     <div className="min-h-screen bg-background">
       <a href="#main" className="skip-link">{t("skip")}</a>
@@ -100,18 +87,7 @@ function CorsiPage() {
                     </a>
                   </Button>
                   {key === "gdprAddetto" && (
-                    <Button
-                      variant="hero"
-                      size="default"
-                      className="h-11 w-full whitespace-normal leading-tight"
-                      onClick={() => {
-                        addItem(ATTESTATO_ADDETTO);
-                        toast.success(t("legal.cart.addedToast"));
-                        navigate({ to: "/carrello" });
-                      }}
-                    >
-                      <GraduationCap className="mr-1 h-4 w-4 shrink-0" aria-hidden /> {t("corsi.corsoGratis")} {taxBadge}
-                    </Button>
+                    <PricingCartButton code="02-GDPR-00" index={7} full />
                   )}
                 </div>
 
