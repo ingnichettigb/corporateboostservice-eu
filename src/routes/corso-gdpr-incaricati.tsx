@@ -1,8 +1,5 @@
-import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { useTranslation } from "react-i18next";
-import { useCart } from "@/lib/cart";
-import { getGdprAddetto, toCartItem } from "@/lib/pricing";
-import { toast } from "sonner";
 import i18n from "@/i18n";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -31,32 +28,21 @@ import {
 } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
-import { taxDisclaimer, resolveTaxLang } from "@/i18n/taxDisclaimer";
 import { TaxNote } from "@/components/TaxDisclaimer";
+import { PricingCartButton } from "@/components/PricingCartButton";
 import heroImg from "@/assets/gdpr-incaricati/hero.jpg";
 
-const ATTESTATO_ADDETTO = toCartItem(getGdprAddetto(), "02-gdpr-00.corporateboostservice.eu");
-
 function FreeCourseButton({ className = "" }: { className?: string }) {
-  const { t, i18n } = useTranslation();
-  const { addItem } = useCart();
-  const navigate = useNavigate();
-  const taxBadge = taxDisclaimer[resolveTaxLang(i18n.language)].badge;
   return (
-    <Button
-      variant="hero"
-      size="lg"
-      className={`h-12 px-8 whitespace-normal leading-tight ${className}`}
-      onClick={() => {
-        addItem(ATTESTATO_ADDETTO);
-        toast.success(t("legal.cart.addedToast"));
-        navigate({ to: "/carrello" });
-      }}
-    >
-      <GraduationCap className="mr-1 h-4 w-4 shrink-0" aria-hidden /> {t("corsi.corsoGratis")} {taxBadge}
-    </Button>
+    <PricingCartButton
+      code="02-GDPR-00"
+      index={7}
+      full
+      className={`max-w-md mx-auto ${className}`}
+    />
   );
 }
+
 
 
 export const Route = createFileRoute("/corso-gdpr-incaricati")({
