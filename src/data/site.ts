@@ -5,7 +5,7 @@ import minifatLogo from "@/assets/apps/minifat.png.asset.json";
 
 export const corsi = [
   { icon: ShieldCheck, key: "gdprAddetto", wip: false, hasSubtitle: true },
-  { icon: FileLock, key: "privacy", wip: true },
+  { icon: FileLock, key: "privacy", wip: false },
   { icon: ShieldCheck, key: "gdpr", wip: true },
   { icon: HardHat, key: "sicurezza", wip: true },
   { icon: Newspaper, key: "news", wip: true },
