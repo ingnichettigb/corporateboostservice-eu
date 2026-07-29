@@ -4,6 +4,7 @@ import it from "./locales/it.json";
 import en from "./locales/en.json";
 import { corsoIncaricati } from "./locales/pages/corso-gdpr-incaricati";
 import { legal } from "./locales/pages/legal";
+import { privacyGdpr } from "./locales/pages/privacy-gdpr";
 import { smartMaintenance } from "./locales/pages/smart-maintenance";
 import { pedflow } from "./locales/pages/pedflow";
 import { mocaSerbatoi } from "./locales/pages/moca-serbatoi";
@@ -15,6 +16,7 @@ if (!i18n.isInitialized) {
         translation: {
           ...it,
           corsoIncaricati: corsoIncaricati.it,
+          privacyGdpr: privacyGdpr.it,
           legal: legal.it,
           smartMaintenance: smartMaintenance.it,
         },
@@ -25,6 +27,7 @@ if (!i18n.isInitialized) {
         translation: {
           ...en,
           corsoIncaricati: corsoIncaricati.en,
+          privacyGdpr: privacyGdpr.en,
           legal: legal.en,
           smartMaintenance: smartMaintenance.en,
         },

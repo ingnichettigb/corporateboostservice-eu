@@ -20,6 +20,7 @@ import { Route as PagamentiMerchantOfRecordRouteImport } from './routes/pagament
 import { Route as MocaSerbatoiRouteImport } from './routes/moca-serbatoi'
 import { Route as MinifatRouteImport } from './routes/minifat'
 import { Route as LegalRouteImport } from './routes/legal'
+import { Route as CorsoPrivacyGdprRouteImport } from './routes/corso-privacy-gdpr'
 import { Route as CorsoGdprIncaricatiRouteImport } from './routes/corso-gdpr-incaricati'
 import { Route as CorsiRouteImport } from './routes/corsi'
 import { Route as CarrelloRouteImport } from './routes/carrello'
@@ -82,6 +83,11 @@ const LegalRoute = LegalRouteImport.update({
   path: '/legal',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CorsoPrivacyGdprRoute = CorsoPrivacyGdprRouteImport.update({
+  id: '/corso-privacy-gdpr',
+  path: '/corso-privacy-gdpr',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const CorsoGdprIncaricatiRoute = CorsoGdprIncaricatiRouteImport.update({
   id: '/corso-gdpr-incaricati',
   path: '/corso-gdpr-incaricati',
@@ -114,6 +120,7 @@ export interface FileRoutesByFullPath {
   '/carrello': typeof CarrelloRoute
   '/corsi': typeof CorsiRoute
   '/corso-gdpr-incaricati': typeof CorsoGdprIncaricatiRoute
+  '/corso-privacy-gdpr': typeof CorsoPrivacyGdprRoute
   '/legal': typeof LegalRoute
   '/minifat': typeof MinifatRoute
   '/moca-serbatoi': typeof MocaSerbatoiRoute
@@ -132,6 +139,7 @@ export interface FileRoutesByTo {
   '/carrello': typeof CarrelloRoute
   '/corsi': typeof CorsiRoute
   '/corso-gdpr-incaricati': typeof CorsoGdprIncaricatiRoute
+  '/corso-privacy-gdpr': typeof CorsoPrivacyGdprRoute
   '/legal': typeof LegalRoute
   '/minifat': typeof MinifatRoute
   '/moca-serbatoi': typeof MocaSerbatoiRoute
@@ -151,6 +159,7 @@ export interface FileRoutesById {
   '/carrello': typeof CarrelloRoute
   '/corsi': typeof CorsiRoute
   '/corso-gdpr-incaricati': typeof CorsoGdprIncaricatiRoute
+  '/corso-privacy-gdpr': typeof CorsoPrivacyGdprRoute
   '/legal': typeof LegalRoute
   '/minifat': typeof MinifatRoute
   '/moca-serbatoi': typeof MocaSerbatoiRoute
@@ -171,6 +180,7 @@ export interface FileRouteTypes {
     | '/carrello'
     | '/corsi'
     | '/corso-gdpr-incaricati'
+    | '/corso-privacy-gdpr'
     | '/legal'
     | '/minifat'
     | '/moca-serbatoi'
@@ -189,6 +199,7 @@ export interface FileRouteTypes {
     | '/carrello'
     | '/corsi'
     | '/corso-gdpr-incaricati'
+    | '/corso-privacy-gdpr'
     | '/legal'
     | '/minifat'
     | '/moca-serbatoi'
@@ -207,6 +218,7 @@ export interface FileRouteTypes {
     | '/carrello'
     | '/corsi'
     | '/corso-gdpr-incaricati'
+    | '/corso-privacy-gdpr'
     | '/legal'
     | '/minifat'
     | '/moca-serbatoi'
@@ -226,6 +238,7 @@ export interface RootRouteChildren {
   CarrelloRoute: typeof CarrelloRoute
   CorsiRoute: typeof CorsiRoute
   CorsoGdprIncaricatiRoute: typeof CorsoGdprIncaricatiRoute
+  CorsoPrivacyGdprRoute: typeof CorsoPrivacyGdprRoute
   LegalRoute: typeof LegalRoute
   MinifatRoute: typeof MinifatRoute
   MocaSerbatoiRoute: typeof MocaSerbatoiRoute
@@ -318,6 +331,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LegalRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/corso-privacy-gdpr': {
+      id: '/corso-privacy-gdpr'
+      path: '/corso-privacy-gdpr'
+      fullPath: '/corso-privacy-gdpr'
+      preLoaderRoute: typeof CorsoPrivacyGdprRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/corso-gdpr-incaricati': {
       id: '/corso-gdpr-incaricati'
       path: '/corso-gdpr-incaricati'
@@ -362,6 +382,7 @@ const rootRouteChildren: RootRouteChildren = {
   CarrelloRoute: CarrelloRoute,
   CorsiRoute: CorsiRoute,
   CorsoGdprIncaricatiRoute: CorsoGdprIncaricatiRoute,
+  CorsoPrivacyGdprRoute: CorsoPrivacyGdprRoute,
   LegalRoute: LegalRoute,
   MinifatRoute: MinifatRoute,
   MocaSerbatoiRoute: MocaSerbatoiRoute,

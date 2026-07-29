@@ -65,15 +65,32 @@ function CorsiPage() {
                     <Construction className="h-3.5 w-3.5" aria-hidden /> {t("corsi.wip")}
                   </span>
                 )}
-                <div className="h-14 w-14 rounded-xl bg-primary text-primary-foreground flex items-center justify-center mb-5">
-                  <Icon className="h-7 w-7" aria-hidden />
-                </div>
+                {key === "privacy" ? (
+                  <Link
+                    to="/corso-privacy-gdpr"
+                    aria-label={t(`corsi.items.${key}.title`)}
+                    className="h-14 w-14 rounded-xl bg-primary text-primary-foreground flex items-center justify-center mb-5 hover:bg-primary/90 transition-colors"
+                  >
+                    <Icon className="h-7 w-7" aria-hidden />
+                  </Link>
+                ) : (
+                  <div className="h-14 w-14 rounded-xl bg-primary text-primary-foreground flex items-center justify-center mb-5">
+                    <Icon className="h-7 w-7" aria-hidden />
+                  </div>
+                )}
                 <h2 className="text-xl font-bold mb-1 text-foreground">{t(`corsi.items.${key}.title`)}</h2>
                 {hasSubtitle && (
                   <p className="text-lg font-bold text-foreground mb-2">{t(`corsi.items.${key}.subtitle`)}</p>
                 )}
                 <p className="text-foreground/85 leading-relaxed mb-6">{t(`corsi.items.${key}.desc`)}</p>
                 <div className="flex flex-col items-center gap-3 max-w-xs mx-auto">
+                  {key === "privacy" && (
+                    <Button asChild variant="hero" size="default" className="h-11 w-full">
+                      <Link to="/corso-privacy-gdpr">
+                        {t("corsi.landingPage")} <ArrowRight className="ml-1 h-4 w-4" aria-hidden />
+                      </Link>
+                    </Button>
+                  )}
                   {key === "gdprAddetto" && (
                     <Button asChild variant="hero" size="default" className="h-11 w-full">
                       <Link to="/corso-gdpr-incaricati">
@@ -82,9 +99,15 @@ function CorsiPage() {
                     </Button>
                   )}
                   <Button asChild variant="outline" size="default" className="h-11 w-full">
+                    {key === "privacy" ? (
+                      <Link to="/corso-privacy-gdpr">
+                        <Mail className="mr-1 h-4 w-4" aria-hidden /> {t("corsi.infoLabel")}
+                      </Link>
+                    ) : (
                     <a href={buildMailto(t(`corsi.items.${key}.title`), t("corsi.infoBody"))}>
                       <Mail className="mr-1 h-4 w-4" aria-hidden /> {t("corsi.infoLabel")}
                     </a>
+                    )}
                   </Button>
                   {key === "gdprAddetto" && (
                     <PricingCartButton code="02-GDPR-00" index={7} full />
