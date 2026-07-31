@@ -59,20 +59,8 @@ export function PricingCartButton({
     staleTime: 5 * 60_000,
   });
 
-  // GDPR completo: still under construction, no purchase.
-  if (code === "01-GDPR-00") {
-    return (
-      <span
-        className={`${full ? "w-full " : ""}relative inline-flex items-center justify-center gap-1.5 rounded-md px-3 py-2 pl-5 text-xs font-semibold border border-amber-400 bg-amber-50 text-amber-700 ${className}`}
-      >
-        <span className="absolute top-0.5 left-1 text-[10px] font-medium text-amber-700/60 leading-none">
-          {index}
-        </span>
-        <Construction className="h-4 w-4" aria-hidden />
-        {t("legal.prezzi.underConstruction")}
-      </span>
-    );
-  }
+
+
 
   const serviceName = row?.name ?? fallback?.name ?? "";
   const priceText = row
