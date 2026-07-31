@@ -244,7 +244,11 @@ function PrivacyGdprPage() {
               <h2 className="text-3xl md:text-4xl font-bold">{t("privacyGdpr.whatTitle")}</h2>
               <p className="mt-4 text-foreground/85 max-w-3xl mx-auto">{t("privacyGdpr.whatP1")}</p>
               <p className="mt-3 text-foreground/80 max-w-3xl mx-auto">{t("privacyGdpr.whatP2")}</p>
+              <div className="mt-6 max-w-xl mx-auto">
+                <PricingCartButton code="01-GDPR-00" index={8} full />
+              </div>
             </div>
+
             <blockquote className="max-w-3xl mx-auto rounded-2xl border-l-4 border-primary bg-primary/5 px-6 py-5 text-lg font-semibold text-foreground/90">
               {t("privacyGdpr.whatQuote")}
             </blockquote>
@@ -275,7 +279,11 @@ function PrivacyGdprPage() {
               </p>
               <h2 className="text-3xl md:text-4xl font-bold">{t("privacyGdpr.prTitle")}</h2>
               <p className="mt-3 text-foreground/80 max-w-2xl mx-auto">{t("privacyGdpr.prSubtitle")}</p>
+              <div className="mt-6 max-w-xl mx-auto">
+                <PricingCartButton code="01-GDPR-00" index={8} full />
+              </div>
             </div>
+
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {principles.map(({ icon: Icon, title, desc }, idx) => (
                 <Card key={title} className="border-2 border-primary/20 h-full relative">
@@ -306,7 +314,11 @@ function PrivacyGdprPage() {
               </p>
               <h2 className="text-3xl md:text-4xl font-bold">{t("privacyGdpr.riTitle")}</h2>
               <p className="mt-3 text-foreground/80 max-w-2xl mx-auto">{t("privacyGdpr.riSubtitle")}</p>
+              <div className="mt-6 max-w-xl mx-auto">
+                <PricingCartButton code="01-GDPR-00" index={8} full />
+              </div>
             </div>
+
             <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {rights.map(({ icon: Icon, label }) => (
                 <li
@@ -332,7 +344,11 @@ function PrivacyGdprPage() {
               </p>
               <h2 className="text-3xl md:text-4xl font-bold">{t("privacyGdpr.fiTitle")}</h2>
               <p className="mt-3 text-foreground/80 max-w-2xl mx-auto">{t("privacyGdpr.fiSubtitle")}</p>
+              <div className="mt-6 max-w-xl mx-auto">
+                <PricingCartButton code="01-GDPR-00" index={8} full />
+              </div>
             </div>
+
             <div className="grid md:grid-cols-2 gap-5">
               {roles.map(({ icon: Icon, name, duty, obl, ex }) => (
                 <Card key={name} className="border-2 border-primary/20 h-full">
@@ -370,7 +386,11 @@ function PrivacyGdprPage() {
               </p>
               <h2 className="text-3xl md:text-4xl font-bold">{t("privacyGdpr.goTitle")}</h2>
               <p className="mt-3 text-foreground/80 max-w-2xl mx-auto">{t("privacyGdpr.goSubtitle")}</p>
+              <div className="mt-6 max-w-xl mx-auto">
+                <PricingCartButton code="01-GDPR-00" index={8} full />
+              </div>
             </div>
+
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {governance.map(({ icon: Icon, title, desc }) => (
                 <Card key={title} className="border-2 border-primary/20 h-full">
@@ -419,7 +439,11 @@ function PrivacyGdprPage() {
               </p>
               <h2 className="text-3xl md:text-4xl font-bold">{t("privacyGdpr.seTitle")}</h2>
               <p className="mt-3 text-foreground/80 max-w-2xl mx-auto">{t("privacyGdpr.seSubtitle")}</p>
+              <div className="mt-6 max-w-xl mx-auto">
+                <PricingCartButton code="01-GDPR-00" index={8} full />
+              </div>
             </div>
+
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {security.map(({ icon: Icon, label }) => (
                 <div
@@ -453,7 +477,11 @@ function PrivacyGdprPage() {
                 {t("privacyGdpr.dbEyebrow")}
               </p>
               <h2 className="text-3xl md:text-4xl font-bold">{t("privacyGdpr.dbTitle")}</h2>
+              <div className="mt-6 max-w-xl mx-auto">
+                <PricingCartButton code="01-GDPR-00" index={8} full />
+              </div>
             </div>
+
             <div className="grid lg:grid-cols-[minmax(0,18rem)_1fr] gap-8 items-start">
               <div className="rounded-2xl border-2 border-destructive/30 bg-destructive/5 p-8 text-center">
                 <AlarmClock className="h-12 w-12 text-destructive mx-auto mb-4" aria-hidden />
@@ -487,7 +515,11 @@ function PrivacyGdprPage() {
                 {t("privacyGdpr.orEyebrow")}
               </p>
               <h2 className="text-3xl md:text-4xl font-bold">{t("privacyGdpr.orTitle")}</h2>
+              <div className="mt-6 max-w-xl mx-auto">
+                <PricingCartButton code="01-GDPR-00" index={8} full />
+              </div>
             </div>
+
             <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
               {bodies.map(({ icon: Icon, label }) => (
                 <div
@@ -510,7 +542,11 @@ function PrivacyGdprPage() {
                 {t("privacyGdpr.saEyebrow")}
               </p>
               <h2 className="text-3xl md:text-4xl font-bold">{t("privacyGdpr.saTitle")}</h2>
+              <div className="mt-6 max-w-xl mx-auto">
+                <PricingCartButton code="01-GDPR-00" index={8} full />
+              </div>
             </div>
+
             <div className="rounded-2xl bg-white/10 border-2 border-white/30 p-8 text-center max-w-2xl mx-auto">
               <Euro className="h-10 w-10 mx-auto mb-3" aria-hidden />
               <p className="text-2xl md:text-3xl font-bold">{t("privacyGdpr.saBig")}</p>
