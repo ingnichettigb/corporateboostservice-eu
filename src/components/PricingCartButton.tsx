@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { useQuery } from "@tanstack/react-query";
-import { Check, Construction, ShoppingCart } from "lucide-react";
+import { Check, ShoppingCart } from "lucide-react";
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
 import { pricingItems } from "@/i18n/locales/pages/legal";
