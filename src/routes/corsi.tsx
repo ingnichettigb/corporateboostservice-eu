@@ -109,9 +109,13 @@ function CorsiPage() {
                     </a>
                     )}
                   </Button>
+                  {key === "privacy" && (
+                    <PricingCartButton code="01-GDPR-00" index={8} full />
+                  )}
                   {key === "gdprAddetto" && (
                     <PricingCartButton code="02-GDPR-00" index={7} full />
                   )}
+
                 </div>
 
 

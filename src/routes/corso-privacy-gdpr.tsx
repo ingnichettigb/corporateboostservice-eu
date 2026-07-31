@@ -56,6 +56,8 @@ import {
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { buildMailto } from "@/lib/contact";
+import { PricingCartButton } from "@/components/PricingCartButton";
+
 
 export const Route = createFileRoute("/corso-privacy-gdpr")({
   head: () => ({
@@ -225,6 +227,10 @@ function PrivacyGdprPage() {
                 </a>
               </Button>
             </div>
+            <div className="mt-4 max-w-sm mx-auto">
+              <PricingCartButton code="01-GDPR-00" index={8} full />
+            </div>
+
           </div>
         </section>
 
@@ -573,8 +579,12 @@ function PrivacyGdprPage() {
                 </div>
               ))}
             </div>
+            <div className="mt-8 max-w-sm mx-auto">
+              <PricingCartButton code="01-GDPR-00" index={8} full />
+            </div>
           </div>
         </section>
+
 
         {/* CTA FINALE */}
         <section className="py-20 bg-background">
@@ -594,6 +604,10 @@ function PrivacyGdprPage() {
                   </a>
                 </Button>
               </div>
+              <div className="mt-4 max-w-sm mx-auto">
+                <PricingCartButton code="01-GDPR-00" index={8} full />
+              </div>
+
             </div>
           </div>
         </section>
