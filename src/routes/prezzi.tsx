@@ -84,9 +84,6 @@ function PrezziPage() {
   };
 
 
-
-
-n
   return (
     <LegalLayout badge={t("legal.prezzi.badge")} title={t("legal.prezzi.title")} subtitle={t("legal.prezzi.subtitle")}>
       {/* TODO: sostituire questo banner con il bottone Paddle quando il link è disponibile */}
