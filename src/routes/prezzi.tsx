@@ -63,7 +63,7 @@ function PrezziPage() {
     `${m} ${m === 1 ? t("legal.prezzi.month") : t("legal.prezzi.months")}`;
 
   const Skeleton = ({ w = "w-16" }: { w?: string }) => (
-    <span className={`inline-block h-4 ${w} animate-pulse bg-muted rounded align-middle`} />
+    <span className={`inline-block h-5 ${w} animate-pulse bg-muted rounded align-middle`} />
   );
 
   const PriceCell = ({ item }: { item: (typeof pricingItems)[number] }) => {
@@ -72,24 +72,20 @@ function PrezziPage() {
     const priceText = row ? formatPrice(row.price_eur) : item.price;
     return (
       <>
-        {priceText} <TaxBadge className="text-foreground/70" />
+        {priceText} <TaxBadge size="md" className="text-foreground/70" />
       </>
     );
   };
 
   const DurationCell = ({ item }: { item: (typeof pricingItems)[number] }) => {
     const row = catalog?.get(item.code);
-    if (isLoading && !row) return <Skeleton w="w-14" />;
+    if (isLoading && !row) return <Skeleton w="w-16" />;
     return <>{row ? formatDuration(row.validity_months) : monthsLabel(item.duration)}</>;
   };
 
 
-
-
-
-
   return (
-    <LegalLayout badge={t("legal.prezzi.badge")} title={t("legal.prezzi.title")} subtitle={t("legal.prezzi.subtitle")}>
+    <LegalLayout badge={t("legal.prezzi.badge")} title={t("legal.prezzi.title")} subtitle={t("legal.prezzi.subtitle")} wide>
       {/* TODO: sostituire questo banner con il bottone Paddle quando il link è disponibile */}
       <div className="mb-8 rounded-xl border-2 border-amber-400 bg-amber-50 p-5 text-amber-900">
         <div className="flex items-center gap-3 font-bold text-base md:text-lg">
@@ -101,81 +97,82 @@ function PrezziPage() {
 
       {/* Desktop table */}
       <div className="hidden md:block overflow-x-auto rounded-xl border border-border">
-        <table className="w-full text-sm">
+        <table className="w-full text-base">
           <thead className="bg-muted">
             <tr className="text-left">
-              <th className="px-4 py-3 font-semibold">ID</th>
-              <th className="px-4 py-3 font-semibold">{t("legal.prezzi.colCode")}</th>
-              <th className="px-4 py-3 font-semibold">{t("legal.prezzi.colService")}</th>
-              <th className="px-4 py-3 font-semibold">{t("legal.prezzi.colPrice")}</th>
-              <th className="px-4 py-3 font-semibold">{t("legal.prezzi.colDuration")}</th>
-              <th className="px-4 py-3 font-semibold">{t("legal.cart.add")}</th>
+              <th className="px-5 py-4 font-semibold min-w-[3rem]">ID</th>
+              <th className="px-5 py-4 font-semibold min-w-[8rem]">{t("legal.prezzi.colCode")}</th>
+              <th className="px-5 py-4 font-semibold min-w-[12rem]">{t("legal.prezzi.colService")}</th>
+              <th className="px-5 py-4 font-semibold min-w-[9rem]">{t("legal.prezzi.colPrice")}</th>
+              <th className="px-5 py-4 font-semibold min-w-[6rem]">{t("legal.prezzi.colDuration")}</th>
+              <th className="px-5 py-4 font-semibold min-w-[13rem] whitespace-nowrap">{t("legal.cart.add")}</th>
             </tr>
           </thead>
           <tbody className="divide-y divide-border">
             {pricingItems.map((item, index) => (
               <tr key={item.code} className="hover:bg-muted/50">
-                <td className="px-4 py-3 font-semibold text-foreground/70">{index + 1}</td>
-                <td className="px-4 py-3 font-mono text-xs text-foreground/70 whitespace-nowrap">{item.code}</td>
-                <td className="px-4 py-3 font-medium">{item.name}</td>
-                <td className="px-4 py-3 whitespace-nowrap font-semibold text-primary"><PriceCell item={item} /></td>
-                <td className="px-4 py-3 whitespace-nowrap"><DurationCell item={item} /></td>
+                <td className="px-5 py-4 font-semibold text-foreground/70 align-middle">{index + 1}</td>
+                <td className="px-5 py-4 font-mono text-sm text-foreground/70 whitespace-nowrap align-middle">{item.code}</td>
+                <td className="px-5 py-4 font-medium align-middle">{item.name}</td>
+                <td className="px-5 py-4 whitespace-nowrap font-semibold text-primary align-middle"><PriceCell item={item} /></td>
+                <td className="px-5 py-4 whitespace-nowrap align-middle"><DurationCell item={item} /></td>
 
                 {/* TODO: sostituire con link Paddle */}
-                <td className="px-4 py-3">
-                  <PricingCartButton code={item.code} index={index + 1} />
+                <td className="px-5 py-4 align-middle min-w-[13rem]">
+                  <PricingCartButton code={item.code} index={index + 1} size="lg" />
                 </td>
               </tr>
             ))}
           </tbody>
         </table>
+
       </div>
 
       {/* Mobile cards */}
-      <div className="md:hidden space-y-3">
+      <div className="md:hidden space-y-4">
         {pricingItems.map((item, index) => (
-          <div key={item.code} className="rounded-xl border border-border p-4">
-            <div className="text-xs font-semibold text-foreground/60">ID {index + 1}</div>
-            <div className="mt-1 font-mono text-xs text-foreground/70 break-all">{item.code}</div>
-            <div className="font-semibold">{item.name}</div>
-            <div className="mt-2 flex items-center gap-3 text-sm">
+          <div key={item.code} className="rounded-xl border border-border p-5">
+            <div className="text-sm font-semibold text-foreground/60">ID {index + 1}</div>
+            <div className="mt-1 font-mono text-sm text-foreground/70 break-all">{item.code}</div>
+            <div className="text-base font-semibold">{item.name}</div>
+            <div className="mt-2 flex items-center gap-3 text-base">
               <span className="font-semibold text-primary"><PriceCell item={item} /></span>
               <span className="text-foreground/70"><DurationCell item={item} /></span>
 
             </div>
             {/* TODO: sostituire con link Paddle */}
-            <div className="mt-3">
-              <PricingCartButton code={item.code} index={index + 1} full />
+            <div className="mt-4">
+              <PricingCartButton code={item.code} index={index + 1} full size="lg" />
             </div>
           </div>
         ))}
       </div>
 
-      <TaxNote className="mt-4" />
+      <TaxNote size="lg" className="mt-5" />
 
       {/* Digital delivery */}
       <div className="mt-10 rounded-xl border border-border bg-muted/40 p-5">
-        <div className="flex items-center gap-2 mb-3 font-bold">
+        <div className="flex items-center gap-2 mb-3 font-bold text-base">
           <Package className="h-5 w-5 text-primary" aria-hidden /> {t("legal.prezzi.deliveryHeading")}
         </div>
-        <p className="text-sm text-foreground/85 mb-3">{t("legal.prezzi.deliveryIntro")}</p>
-        <ul className="space-y-2 text-sm text-foreground/85 list-disc pl-5 mb-4">
+        <p className="text-base text-foreground/85 mb-3">{t("legal.prezzi.deliveryIntro")}</p>
+        <ul className="space-y-2 text-base text-foreground/85 list-disc pl-5 mb-4">
           <li>{t("legal.prezzi.deliveryItem1")}</li>
           <li>{t("legal.prezzi.deliveryItem2")}</li>
           <li>{t("legal.prezzi.deliveryItem3")}</li>
           <li>{t("legal.prezzi.deliveryItem4")}</li>
         </ul>
-        <p className="text-sm text-foreground/85 mb-3">{t("legal.prezzi.deliveryP1")}</p>
-        <p className="text-sm text-foreground/85 mb-3">{t("legal.prezzi.deliveryP2")}</p>
-        <p className="text-sm text-foreground/85">{t("legal.prezzi.deliveryP3")}</p>
+        <p className="text-base text-foreground/85 mb-3">{t("legal.prezzi.deliveryP1")}</p>
+        <p className="text-base text-foreground/85 mb-3">{t("legal.prezzi.deliveryP2")}</p>
+        <p className="text-base text-foreground/85">{t("legal.prezzi.deliveryP3")}</p>
       </div>
 
       {/* Notes */}
       <div className="mt-10 rounded-xl border border-border bg-muted/40 p-5">
-        <div className="flex items-center gap-2 mb-3 font-bold">
+        <div className="flex items-center gap-2 mb-3 font-bold text-base">
           <Info className="h-5 w-5 text-primary" aria-hidden /> {t("legal.prezzi.notesHeading")}
         </div>
-        <ul className="space-y-2 text-sm text-foreground/85 list-disc pl-5">
+        <ul className="space-y-2 text-base text-foreground/85 list-disc pl-5">
           <li>{t("legal.prezzi.note1")}</li>
           <li>{t("legal.prezzi.note2")}</li>
           <li>{t("legal.prezzi.note3")}</li>
@@ -185,7 +182,7 @@ function PrezziPage() {
       {/* Related */}
       <div className="mt-10">
         <h2 className="text-lg font-bold mb-3">{t("legal.prezzi.relatedHeading")}</h2>
-        <ul className="flex flex-wrap gap-3 text-sm">
+        <ul className="flex flex-wrap gap-3 text-base">
           {related.map((l) => (
             <li key={l.to}>
               <Link to={l.to} className="text-primary underline underline-offset-4 hover:opacity-80">

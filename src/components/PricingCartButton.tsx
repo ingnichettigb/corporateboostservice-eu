@@ -28,16 +28,17 @@ export function PricingCartButton({
   code,
   index,
   full,
+  size = "md",
   className = "",
 }: {
   code: string;
   index: number;
   full?: boolean;
+  size?: "md" | "lg";
   className?: string;
 }) {
   const { t } = useTranslation();
   const { addItem, has } = useCart();
-  
 
   const fallback = pricingItems.find((p) => p.code === code);
 
@@ -59,9 +60,6 @@ export function PricingCartButton({
     staleTime: 5 * 60_000,
   });
 
-
-
-
   const serviceName = row?.name ?? fallback?.name ?? "";
   const priceText = row
     ? formatPrice(row.price_eur)
@@ -78,6 +76,21 @@ export function PricingCartButton({
     ? `Riga ${index}. ${t("legal.cart.add")}: ${serviceName}, ${priceText} più iva e tasse, durata ${durationText}`
     : `Riga ${index}. ${t("legal.cart.add")}`;
 
+  const isLg = size === "lg";
+  const btnBase = isLg
+    ? "relative inline-flex flex-col items-center justify-center gap-1 rounded-md pl-6 pr-4 py-3 text-sm font-semibold transition-colors text-center"
+    : "relative inline-flex flex-col items-center justify-center gap-0.5 rounded-md pl-5 pr-3 py-2 text-xs font-semibold transition-colors text-center";
+  const btnState = inCart
+    ? "border border-border bg-muted text-foreground/70 cursor-default"
+    : "bg-primary text-primary-foreground hover:bg-primary/90";
+  const indexClass = isLg
+    ? "absolute top-1 left-1.5 text-xs font-medium opacity-60 leading-none"
+    : "absolute top-0.5 left-1 text-[10px] font-medium opacity-60 leading-none";
+  const iconClass = isLg ? "h-5 w-5" : "h-4 w-4";
+  const detailClass = isLg
+    ? "text-xs font-normal opacity-85 leading-tight flex flex-wrap items-baseline justify-center gap-x-1 max-w-full"
+    : "text-[10px] font-normal opacity-85 leading-tight flex flex-wrap items-baseline justify-center gap-x-1 max-w-full";
+
   return (
     <button
       type="button"
@@ -93,32 +106,24 @@ export function PricingCartButton({
           domain: fallback.code,
         });
         toast.success(t("legal.cart.addedToast"));
-        
       }}
-      className={`${full ? "w-full " : ""}relative inline-flex flex-col items-center justify-center gap-0.5 rounded-md pl-5 pr-3 py-2 text-xs font-semibold transition-colors text-center ${
-        inCart
-          ? "border border-border bg-muted text-foreground/70 cursor-default"
-          : "bg-primary text-primary-foreground hover:bg-primary/90"
-      } ${className}`}
+      className={`${full ? "w-full " : ""}${btnBase} ${btnState} ${className}`}
     >
-      <span
-        className="absolute top-0.5 left-1 text-[10px] font-medium opacity-60 leading-none"
-        aria-hidden
-      >
+      <span className={indexClass} aria-hidden>
         {index}
       </span>
       <span className="inline-flex items-center gap-1.5">
         {inCart ? (
-          <Check className="h-4 w-4" aria-hidden />
+          <Check className={iconClass} aria-hidden />
         ) : (
-          <ShoppingCart className="h-4 w-4" aria-hidden />
+          <ShoppingCart className={iconClass} aria-hidden />
         )}
         <span className="font-semibold">
           {inCart ? t("legal.cart.added") : t("legal.cart.add")}
         </span>
       </span>
       {hasDetails && (
-        <span className="text-[10px] font-normal opacity-85 leading-tight flex flex-wrap items-baseline justify-center gap-x-1 max-w-full">
+        <span className={detailClass}>
           <span className="truncate max-w-[10rem]">{serviceName}</span>
           <span className="whitespace-nowrap">
             – {priceText} + iva e tasse – {durationText}
