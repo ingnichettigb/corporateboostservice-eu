@@ -100,31 +100,32 @@ function PrezziPage() {
         <table className="w-full text-base">
           <thead className="bg-muted">
             <tr className="text-left">
-              <th className="px-5 py-4 font-semibold">ID</th>
-              <th className="px-5 py-4 font-semibold">{t("legal.prezzi.colCode")}</th>
-              <th className="px-5 py-4 font-semibold">{t("legal.prezzi.colService")}</th>
-              <th className="px-5 py-4 font-semibold">{t("legal.prezzi.colPrice")}</th>
-              <th className="px-5 py-4 font-semibold">{t("legal.prezzi.colDuration")}</th>
-              <th className="px-5 py-4 font-semibold">{t("legal.cart.add")}</th>
+              <th className="px-5 py-4 font-semibold min-w-[3rem]">ID</th>
+              <th className="px-5 py-4 font-semibold min-w-[8rem]">{t("legal.prezzi.colCode")}</th>
+              <th className="px-5 py-4 font-semibold min-w-[12rem]">{t("legal.prezzi.colService")}</th>
+              <th className="px-5 py-4 font-semibold min-w-[9rem]">{t("legal.prezzi.colPrice")}</th>
+              <th className="px-5 py-4 font-semibold min-w-[6rem]">{t("legal.prezzi.colDuration")}</th>
+              <th className="px-5 py-4 font-semibold min-w-[13rem] whitespace-nowrap">{t("legal.cart.add")}</th>
             </tr>
           </thead>
           <tbody className="divide-y divide-border">
             {pricingItems.map((item, index) => (
               <tr key={item.code} className="hover:bg-muted/50">
-                <td className="px-5 py-4 font-semibold text-foreground/70">{index + 1}</td>
-                <td className="px-5 py-4 font-mono text-sm text-foreground/70 whitespace-nowrap">{item.code}</td>
-                <td className="px-5 py-4 font-medium">{item.name}</td>
-                <td className="px-5 py-4 whitespace-nowrap font-semibold text-primary"><PriceCell item={item} /></td>
-                <td className="px-5 py-4 whitespace-nowrap"><DurationCell item={item} /></td>
+                <td className="px-5 py-4 font-semibold text-foreground/70 align-middle">{index + 1}</td>
+                <td className="px-5 py-4 font-mono text-sm text-foreground/70 whitespace-nowrap align-middle">{item.code}</td>
+                <td className="px-5 py-4 font-medium align-middle">{item.name}</td>
+                <td className="px-5 py-4 whitespace-nowrap font-semibold text-primary align-middle"><PriceCell item={item} /></td>
+                <td className="px-5 py-4 whitespace-nowrap align-middle"><DurationCell item={item} /></td>
 
                 {/* TODO: sostituire con link Paddle */}
-                <td className="px-5 py-4">
+                <td className="px-5 py-4 align-middle min-w-[13rem]">
                   <PricingCartButton code={item.code} index={index + 1} size="lg" />
                 </td>
               </tr>
             ))}
           </tbody>
         </table>
+
       </div>
 
       {/* Mobile cards */}
