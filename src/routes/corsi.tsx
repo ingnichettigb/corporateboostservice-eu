@@ -59,7 +59,7 @@ function CorsiPage() {
               const wip = "wip" in item ? item.wip : false;
               const hasSubtitle = "hasSubtitle" in item ? item.hasSubtitle : false;
               return (
-              <article key={key} className="relative p-8 rounded-2xl border-2 border-primary/20 bg-white shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-elegant)] transition-all">
+              <article key={key} className="relative flex flex-col p-8 rounded-2xl border-2 border-primary/20 bg-white shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-elegant)] transition-all">
                 {wip && (
                   <span className="absolute top-3 right-3 inline-flex items-center gap-1 rounded-full bg-yellow-400 text-black px-2.5 py-1 text-xs font-bold uppercase tracking-wider border-2 border-black">
                     <Construction className="h-3.5 w-3.5" aria-hidden /> {t("corsi.wip")}
@@ -78,11 +78,12 @@ function CorsiPage() {
                     <Icon className="h-7 w-7" aria-hidden />
                   </div>
                 )}
-                <h2 className="text-xl font-bold mb-1 text-foreground">{t(`corsi.items.${key}.title`)}</h2>
-                {hasSubtitle && (
-                  <p className="text-lg font-bold text-foreground mb-2">{t(`corsi.items.${key}.subtitle`)}</p>
-                )}
-                <p className="text-foreground/85 leading-relaxed mb-6">{t(`corsi.items.${key}.desc`)}</p>
+                <h2 className="text-xl font-bold mb-1 text-foreground min-h-[1.75rem]">{t(`corsi.items.${key}.title`)}</h2>
+                <p className="text-lg font-bold text-foreground mb-2 min-h-[1.75rem]" aria-hidden={!hasSubtitle}>
+                  {hasSubtitle ? t(`corsi.items.${key}.subtitle`) : "\u00A0"}
+                </p>
+                <p className="text-foreground/85 leading-relaxed mb-6 sm:min-h-[5.25rem]">{t(`corsi.items.${key}.desc`)}</p>
+
                 <div className="flex flex-col items-center gap-3 max-w-xs mx-auto">
                   {key === "privacy" && (
                     <Button asChild variant="hero" size="default" className="h-11 w-full">

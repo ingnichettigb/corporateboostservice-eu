@@ -9,57 +9,68 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as TerminiECondizioniRouteImport } from './routes/termini-e-condizioni'
-import { Route as TerminiDiServizioRouteImport } from './routes/termini-di-servizio'
-import { Route as SmartMaintenanceRouteImport } from './routes/smart-maintenance'
-import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
-import { Route as PrezziRouteImport } from './routes/prezzi'
-import { Route as PoliticaDiRimborsoRouteImport } from './routes/politica-di-rimborso'
-import { Route as PedflowRouteImport } from './routes/pedflow'
-import { Route as PagamentiMerchantOfRecordRouteImport } from './routes/pagamenti-merchant-of-record'
-import { Route as MocaSerbatoiRouteImport } from './routes/moca-serbatoi'
-import { Route as MinifatRouteImport } from './routes/minifat'
-import { Route as LegalRouteImport } from './routes/legal'
-import { Route as CorsoPrivacyGdprRouteImport } from './routes/corso-privacy-gdpr'
-import { Route as CorsoGdprIncaricatiRouteImport } from './routes/corso-gdpr-incaricati'
-import { Route as CorsiRouteImport } from './routes/corsi'
-import { Route as CarrelloRouteImport } from './routes/carrello'
-import { Route as ApplicazioniRouteImport } from './routes/applicazioni'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ApplicazioniRouteImport } from './routes/applicazioni'
+import { Route as CarrelloRouteImport } from './routes/carrello'
+import { Route as CorsiRouteImport } from './routes/corsi'
+import { Route as CorsoGdprIncaricatiRouteImport } from './routes/corso-gdpr-incaricati'
+import { Route as CorsoPrivacyGdprRouteImport } from './routes/corso-privacy-gdpr'
+import { Route as LegalRouteImport } from './routes/legal'
+import { Route as MappaDelSitoRouteImport } from './routes/mappa-del-sito'
+import { Route as MinifatRouteImport } from './routes/minifat'
+import { Route as PagamentiMerchantOfRecordRouteImport } from './routes/pagamenti-merchant-of-record'
+import { Route as PedflowRouteImport } from './routes/pedflow'
+import { Route as PoliticaDiRimborsoRouteImport } from './routes/politica-di-rimborso'
+import { Route as PrezziRouteImport } from './routes/prezzi'
+import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as SmartMaintenanceRouteImport } from './routes/smart-maintenance'
+import { Route as TerminiDiServizioRouteImport } from './routes/termini-di-servizio'
+import { Route as TerminiECondizioniRouteImport } from './routes/termini-e-condizioni'
 
-const TerminiECondizioniRoute = TerminiECondizioniRouteImport.update({
-  id: '/termini-e-condizioni',
-  path: '/termini-e-condizioni',
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const TerminiDiServizioRoute = TerminiDiServizioRouteImport.update({
-  id: '/termini-di-servizio',
-  path: '/termini-di-servizio',
+const ApplicazioniRoute = ApplicazioniRouteImport.update({
+  id: '/applicazioni',
+  path: '/applicazioni',
   getParentRoute: () => rootRouteImport,
 } as any)
-const SmartMaintenanceRoute = SmartMaintenanceRouteImport.update({
-  id: '/smart-maintenance',
-  path: '/smart-maintenance',
+const CarrelloRoute = CarrelloRouteImport.update({
+  id: '/carrello',
+  path: '/carrello',
   getParentRoute: () => rootRouteImport,
 } as any)
-const PrivacyPolicyRoute = PrivacyPolicyRouteImport.update({
-  id: '/privacy-policy',
-  path: '/privacy-policy',
+const CorsiRoute = CorsiRouteImport.update({
+  id: '/corsi',
+  path: '/corsi',
   getParentRoute: () => rootRouteImport,
 } as any)
-const PrezziRoute = PrezziRouteImport.update({
-  id: '/prezzi',
-  path: '/prezzi',
+const CorsoGdprIncaricatiRoute = CorsoGdprIncaricatiRouteImport.update({
+  id: '/corso-gdpr-incaricati',
+  path: '/corso-gdpr-incaricati',
   getParentRoute: () => rootRouteImport,
 } as any)
-const PoliticaDiRimborsoRoute = PoliticaDiRimborsoRouteImport.update({
-  id: '/politica-di-rimborso',
-  path: '/politica-di-rimborso',
+const CorsoPrivacyGdprRoute = CorsoPrivacyGdprRouteImport.update({
+  id: '/corso-privacy-gdpr',
+  path: '/corso-privacy-gdpr',
   getParentRoute: () => rootRouteImport,
 } as any)
-const PedflowRoute = PedflowRouteImport.update({
-  id: '/pedflow',
-  path: '/pedflow',
+const LegalRoute = LegalRouteImport.update({
+  id: '/legal',
+  path: '/legal',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MappaDelSitoRoute = MappaDelSitoRouteImport.update({
+  id: '/mappa-del-sito',
+  path: '/mappa-del-sito',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MinifatRoute = MinifatRouteImport.update({
+  id: '/minifat',
+  path: '/minifat',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PagamentiMerchantOfRecordRoute =
@@ -68,49 +79,44 @@ const PagamentiMerchantOfRecordRoute =
     path: '/pagamenti-merchant-of-record',
     getParentRoute: () => rootRouteImport,
   } as any)
-const MocaSerbatoiRoute = MocaSerbatoiRouteImport.update({
-  id: '/moca-serbatoi',
-  path: '/moca-serbatoi',
+const PedflowRoute = PedflowRouteImport.update({
+  id: '/pedflow',
+  path: '/pedflow',
   getParentRoute: () => rootRouteImport,
 } as any)
-const MinifatRoute = MinifatRouteImport.update({
-  id: '/minifat',
-  path: '/minifat',
+const PoliticaDiRimborsoRoute = PoliticaDiRimborsoRouteImport.update({
+  id: '/politica-di-rimborso',
+  path: '/politica-di-rimborso',
   getParentRoute: () => rootRouteImport,
 } as any)
-const LegalRoute = LegalRouteImport.update({
-  id: '/legal',
-  path: '/legal',
+const PrezziRoute = PrezziRouteImport.update({
+  id: '/prezzi',
+  path: '/prezzi',
   getParentRoute: () => rootRouteImport,
 } as any)
-const CorsoPrivacyGdprRoute = CorsoPrivacyGdprRouteImport.update({
-  id: '/corso-privacy-gdpr',
-  path: '/corso-privacy-gdpr',
+const PrivacyPolicyRoute = PrivacyPolicyRouteImport.update({
+  id: '/privacy-policy',
+  path: '/privacy-policy',
   getParentRoute: () => rootRouteImport,
 } as any)
-const CorsoGdprIncaricatiRoute = CorsoGdprIncaricatiRouteImport.update({
-  id: '/corso-gdpr-incaricati',
-  path: '/corso-gdpr-incaricati',
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
-const CorsiRoute = CorsiRouteImport.update({
-  id: '/corsi',
-  path: '/corsi',
+const SmartMaintenanceRoute = SmartMaintenanceRouteImport.update({
+  id: '/smart-maintenance',
+  path: '/smart-maintenance',
   getParentRoute: () => rootRouteImport,
 } as any)
-const CarrelloRoute = CarrelloRouteImport.update({
-  id: '/carrello',
-  path: '/carrello',
+const TerminiDiServizioRoute = TerminiDiServizioRouteImport.update({
+  id: '/termini-di-servizio',
+  path: '/termini-di-servizio',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ApplicazioniRoute = ApplicazioniRouteImport.update({
-  id: '/applicazioni',
-  path: '/applicazioni',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
+const TerminiECondizioniRoute = TerminiECondizioniRouteImport.update({
+  id: '/termini-e-condizioni',
+  path: '/termini-e-condizioni',
   getParentRoute: () => rootRouteImport,
 } as any)
 
@@ -122,13 +128,14 @@ export interface FileRoutesByFullPath {
   '/corso-gdpr-incaricati': typeof CorsoGdprIncaricatiRoute
   '/corso-privacy-gdpr': typeof CorsoPrivacyGdprRoute
   '/legal': typeof LegalRoute
+  '/mappa-del-sito': typeof MappaDelSitoRoute
   '/minifat': typeof MinifatRoute
-  '/moca-serbatoi': typeof MocaSerbatoiRoute
   '/pagamenti-merchant-of-record': typeof PagamentiMerchantOfRecordRoute
   '/pedflow': typeof PedflowRoute
   '/politica-di-rimborso': typeof PoliticaDiRimborsoRoute
   '/prezzi': typeof PrezziRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/smart-maintenance': typeof SmartMaintenanceRoute
   '/termini-di-servizio': typeof TerminiDiServizioRoute
   '/termini-e-condizioni': typeof TerminiECondizioniRoute
@@ -141,13 +148,14 @@ export interface FileRoutesByTo {
   '/corso-gdpr-incaricati': typeof CorsoGdprIncaricatiRoute
   '/corso-privacy-gdpr': typeof CorsoPrivacyGdprRoute
   '/legal': typeof LegalRoute
+  '/mappa-del-sito': typeof MappaDelSitoRoute
   '/minifat': typeof MinifatRoute
-  '/moca-serbatoi': typeof MocaSerbatoiRoute
   '/pagamenti-merchant-of-record': typeof PagamentiMerchantOfRecordRoute
   '/pedflow': typeof PedflowRoute
   '/politica-di-rimborso': typeof PoliticaDiRimborsoRoute
   '/prezzi': typeof PrezziRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/smart-maintenance': typeof SmartMaintenanceRoute
   '/termini-di-servizio': typeof TerminiDiServizioRoute
   '/termini-e-condizioni': typeof TerminiECondizioniRoute
@@ -161,13 +169,14 @@ export interface FileRoutesById {
   '/corso-gdpr-incaricati': typeof CorsoGdprIncaricatiRoute
   '/corso-privacy-gdpr': typeof CorsoPrivacyGdprRoute
   '/legal': typeof LegalRoute
+  '/mappa-del-sito': typeof MappaDelSitoRoute
   '/minifat': typeof MinifatRoute
-  '/moca-serbatoi': typeof MocaSerbatoiRoute
   '/pagamenti-merchant-of-record': typeof PagamentiMerchantOfRecordRoute
   '/pedflow': typeof PedflowRoute
   '/politica-di-rimborso': typeof PoliticaDiRimborsoRoute
   '/prezzi': typeof PrezziRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/smart-maintenance': typeof SmartMaintenanceRoute
   '/termini-di-servizio': typeof TerminiDiServizioRoute
   '/termini-e-condizioni': typeof TerminiECondizioniRoute
@@ -182,13 +191,14 @@ export interface FileRouteTypes {
     | '/corso-gdpr-incaricati'
     | '/corso-privacy-gdpr'
     | '/legal'
+    | '/mappa-del-sito'
     | '/minifat'
-    | '/moca-serbatoi'
     | '/pagamenti-merchant-of-record'
     | '/pedflow'
     | '/politica-di-rimborso'
     | '/prezzi'
     | '/privacy-policy'
+    | '/sitemap.xml'
     | '/smart-maintenance'
     | '/termini-di-servizio'
     | '/termini-e-condizioni'
@@ -201,13 +211,14 @@ export interface FileRouteTypes {
     | '/corso-gdpr-incaricati'
     | '/corso-privacy-gdpr'
     | '/legal'
+    | '/mappa-del-sito'
     | '/minifat'
-    | '/moca-serbatoi'
     | '/pagamenti-merchant-of-record'
     | '/pedflow'
     | '/politica-di-rimborso'
     | '/prezzi'
     | '/privacy-policy'
+    | '/sitemap.xml'
     | '/smart-maintenance'
     | '/termini-di-servizio'
     | '/termini-e-condizioni'
@@ -220,13 +231,14 @@ export interface FileRouteTypes {
     | '/corso-gdpr-incaricati'
     | '/corso-privacy-gdpr'
     | '/legal'
+    | '/mappa-del-sito'
     | '/minifat'
-    | '/moca-serbatoi'
     | '/pagamenti-merchant-of-record'
     | '/pedflow'
     | '/politica-di-rimborso'
     | '/prezzi'
     | '/privacy-policy'
+    | '/sitemap.xml'
     | '/smart-maintenance'
     | '/termini-di-servizio'
     | '/termini-e-condizioni'
@@ -240,13 +252,14 @@ export interface RootRouteChildren {
   CorsoGdprIncaricatiRoute: typeof CorsoGdprIncaricatiRoute
   CorsoPrivacyGdprRoute: typeof CorsoPrivacyGdprRoute
   LegalRoute: typeof LegalRoute
+  MappaDelSitoRoute: typeof MappaDelSitoRoute
   MinifatRoute: typeof MinifatRoute
-  MocaSerbatoiRoute: typeof MocaSerbatoiRoute
   PagamentiMerchantOfRecordRoute: typeof PagamentiMerchantOfRecordRoute
   PedflowRoute: typeof PedflowRoute
   PoliticaDiRimborsoRoute: typeof PoliticaDiRimborsoRoute
   PrezziRoute: typeof PrezziRoute
   PrivacyPolicyRoute: typeof PrivacyPolicyRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   SmartMaintenanceRoute: typeof SmartMaintenanceRoute
   TerminiDiServizioRoute: typeof TerminiDiServizioRoute
   TerminiECondizioniRoute: typeof TerminiECondizioniRoute
@@ -254,109 +267,11 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/termini-e-condizioni': {
-      id: '/termini-e-condizioni'
-      path: '/termini-e-condizioni'
-      fullPath: '/termini-e-condizioni'
-      preLoaderRoute: typeof TerminiECondizioniRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/termini-di-servizio': {
-      id: '/termini-di-servizio'
-      path: '/termini-di-servizio'
-      fullPath: '/termini-di-servizio'
-      preLoaderRoute: typeof TerminiDiServizioRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/smart-maintenance': {
-      id: '/smart-maintenance'
-      path: '/smart-maintenance'
-      fullPath: '/smart-maintenance'
-      preLoaderRoute: typeof SmartMaintenanceRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/privacy-policy': {
-      id: '/privacy-policy'
-      path: '/privacy-policy'
-      fullPath: '/privacy-policy'
-      preLoaderRoute: typeof PrivacyPolicyRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/prezzi': {
-      id: '/prezzi'
-      path: '/prezzi'
-      fullPath: '/prezzi'
-      preLoaderRoute: typeof PrezziRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/politica-di-rimborso': {
-      id: '/politica-di-rimborso'
-      path: '/politica-di-rimborso'
-      fullPath: '/politica-di-rimborso'
-      preLoaderRoute: typeof PoliticaDiRimborsoRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/pedflow': {
-      id: '/pedflow'
-      path: '/pedflow'
-      fullPath: '/pedflow'
-      preLoaderRoute: typeof PedflowRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/pagamenti-merchant-of-record': {
-      id: '/pagamenti-merchant-of-record'
-      path: '/pagamenti-merchant-of-record'
-      fullPath: '/pagamenti-merchant-of-record'
-      preLoaderRoute: typeof PagamentiMerchantOfRecordRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/moca-serbatoi': {
-      id: '/moca-serbatoi'
-      path: '/moca-serbatoi'
-      fullPath: '/moca-serbatoi'
-      preLoaderRoute: typeof MocaSerbatoiRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/minifat': {
-      id: '/minifat'
-      path: '/minifat'
-      fullPath: '/minifat'
-      preLoaderRoute: typeof MinifatRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/legal': {
-      id: '/legal'
-      path: '/legal'
-      fullPath: '/legal'
-      preLoaderRoute: typeof LegalRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/corso-privacy-gdpr': {
-      id: '/corso-privacy-gdpr'
-      path: '/corso-privacy-gdpr'
-      fullPath: '/corso-privacy-gdpr'
-      preLoaderRoute: typeof CorsoPrivacyGdprRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/corso-gdpr-incaricati': {
-      id: '/corso-gdpr-incaricati'
-      path: '/corso-gdpr-incaricati'
-      fullPath: '/corso-gdpr-incaricati'
-      preLoaderRoute: typeof CorsoGdprIncaricatiRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/corsi': {
-      id: '/corsi'
-      path: '/corsi'
-      fullPath: '/corsi'
-      preLoaderRoute: typeof CorsiRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/carrello': {
-      id: '/carrello'
-      path: '/carrello'
-      fullPath: '/carrello'
-      preLoaderRoute: typeof CarrelloRouteImport
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/applicazioni': {
@@ -366,11 +281,116 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApplicazioniRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
+    '/carrello': {
+      id: '/carrello'
+      path: '/carrello'
+      fullPath: '/carrello'
+      preLoaderRoute: typeof CarrelloRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/corsi': {
+      id: '/corsi'
+      path: '/corsi'
+      fullPath: '/corsi'
+      preLoaderRoute: typeof CorsiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/corso-gdpr-incaricati': {
+      id: '/corso-gdpr-incaricati'
+      path: '/corso-gdpr-incaricati'
+      fullPath: '/corso-gdpr-incaricati'
+      preLoaderRoute: typeof CorsoGdprIncaricatiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/corso-privacy-gdpr': {
+      id: '/corso-privacy-gdpr'
+      path: '/corso-privacy-gdpr'
+      fullPath: '/corso-privacy-gdpr'
+      preLoaderRoute: typeof CorsoPrivacyGdprRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/legal': {
+      id: '/legal'
+      path: '/legal'
+      fullPath: '/legal'
+      preLoaderRoute: typeof LegalRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mappa-del-sito': {
+      id: '/mappa-del-sito'
+      path: '/mappa-del-sito'
+      fullPath: '/mappa-del-sito'
+      preLoaderRoute: typeof MappaDelSitoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/minifat': {
+      id: '/minifat'
+      path: '/minifat'
+      fullPath: '/minifat'
+      preLoaderRoute: typeof MinifatRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pagamenti-merchant-of-record': {
+      id: '/pagamenti-merchant-of-record'
+      path: '/pagamenti-merchant-of-record'
+      fullPath: '/pagamenti-merchant-of-record'
+      preLoaderRoute: typeof PagamentiMerchantOfRecordRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pedflow': {
+      id: '/pedflow'
+      path: '/pedflow'
+      fullPath: '/pedflow'
+      preLoaderRoute: typeof PedflowRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/politica-di-rimborso': {
+      id: '/politica-di-rimborso'
+      path: '/politica-di-rimborso'
+      fullPath: '/politica-di-rimborso'
+      preLoaderRoute: typeof PoliticaDiRimborsoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/prezzi': {
+      id: '/prezzi'
+      path: '/prezzi'
+      fullPath: '/prezzi'
+      preLoaderRoute: typeof PrezziRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy-policy': {
+      id: '/privacy-policy'
+      path: '/privacy-policy'
+      fullPath: '/privacy-policy'
+      preLoaderRoute: typeof PrivacyPolicyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/smart-maintenance': {
+      id: '/smart-maintenance'
+      path: '/smart-maintenance'
+      fullPath: '/smart-maintenance'
+      preLoaderRoute: typeof SmartMaintenanceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/termini-di-servizio': {
+      id: '/termini-di-servizio'
+      path: '/termini-di-servizio'
+      fullPath: '/termini-di-servizio'
+      preLoaderRoute: typeof TerminiDiServizioRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/termini-e-condizioni': {
+      id: '/termini-e-condizioni'
+      path: '/termini-e-condizioni'
+      fullPath: '/termini-e-condizioni'
+      preLoaderRoute: typeof TerminiECondizioniRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
@@ -384,13 +404,14 @@ const rootRouteChildren: RootRouteChildren = {
   CorsoGdprIncaricatiRoute: CorsoGdprIncaricatiRoute,
   CorsoPrivacyGdprRoute: CorsoPrivacyGdprRoute,
   LegalRoute: LegalRoute,
+  MappaDelSitoRoute: MappaDelSitoRoute,
   MinifatRoute: MinifatRoute,
-  MocaSerbatoiRoute: MocaSerbatoiRoute,
   PagamentiMerchantOfRecordRoute: PagamentiMerchantOfRecordRoute,
   PedflowRoute: PedflowRoute,
   PoliticaDiRimborsoRoute: PoliticaDiRimborsoRoute,
   PrezziRoute: PrezziRoute,
   PrivacyPolicyRoute: PrivacyPolicyRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
   SmartMaintenanceRoute: SmartMaintenanceRoute,
   TerminiDiServizioRoute: TerminiDiServizioRoute,
   TerminiECondizioniRoute: TerminiECondizioniRoute,

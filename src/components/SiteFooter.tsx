@@ -34,6 +34,8 @@ export function SiteFooter() {
           <Link to="/privacy-policy" className="hover:underline focus-visible:underline">{t("legal.navPrivacy")}</Link>
           <Link to="/politica-di-rimborso" className="hover:underline focus-visible:underline">{t("legal.navRimborso")}</Link>
           <Link to="/pagamenti-merchant-of-record" className="hover:underline focus-visible:underline">{t("legal.navPagamenti")}</Link>
+          <Link to="/mappa-del-sito" className="hover:underline focus-visible:underline">Mappa del sito</Link>
+
         </nav>
       </div>
 
