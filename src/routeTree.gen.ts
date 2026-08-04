@@ -17,7 +17,6 @@ import { Route as CorsoGdprIncaricatiRouteImport } from './routes/corso-gdpr-inc
 import { Route as CorsoPrivacyGdprRouteImport } from './routes/corso-privacy-gdpr'
 import { Route as LegalRouteImport } from './routes/legal'
 import { Route as MinifatRouteImport } from './routes/minifat'
-import { Route as MocaSerbatoiRouteImport } from './routes/moca-serbatoi'
 import { Route as PagamentiMerchantOfRecordRouteImport } from './routes/pagamenti-merchant-of-record'
 import { Route as PedflowRouteImport } from './routes/pedflow'
 import { Route as PoliticaDiRimborsoRouteImport } from './routes/politica-di-rimborso'
@@ -65,11 +64,6 @@ const LegalRoute = LegalRouteImport.update({
 const MinifatRoute = MinifatRouteImport.update({
   id: '/minifat',
   path: '/minifat',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const MocaSerbatoiRoute = MocaSerbatoiRouteImport.update({
-  id: '/moca-serbatoi',
-  path: '/moca-serbatoi',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PagamentiMerchantOfRecordRoute =
@@ -123,7 +117,6 @@ export interface FileRoutesByFullPath {
   '/corso-privacy-gdpr': typeof CorsoPrivacyGdprRoute
   '/legal': typeof LegalRoute
   '/minifat': typeof MinifatRoute
-  '/moca-serbatoi': typeof MocaSerbatoiRoute
   '/pagamenti-merchant-of-record': typeof PagamentiMerchantOfRecordRoute
   '/pedflow': typeof PedflowRoute
   '/politica-di-rimborso': typeof PoliticaDiRimborsoRoute
@@ -142,7 +135,6 @@ export interface FileRoutesByTo {
   '/corso-privacy-gdpr': typeof CorsoPrivacyGdprRoute
   '/legal': typeof LegalRoute
   '/minifat': typeof MinifatRoute
-  '/moca-serbatoi': typeof MocaSerbatoiRoute
   '/pagamenti-merchant-of-record': typeof PagamentiMerchantOfRecordRoute
   '/pedflow': typeof PedflowRoute
   '/politica-di-rimborso': typeof PoliticaDiRimborsoRoute
@@ -162,7 +154,6 @@ export interface FileRoutesById {
   '/corso-privacy-gdpr': typeof CorsoPrivacyGdprRoute
   '/legal': typeof LegalRoute
   '/minifat': typeof MinifatRoute
-  '/moca-serbatoi': typeof MocaSerbatoiRoute
   '/pagamenti-merchant-of-record': typeof PagamentiMerchantOfRecordRoute
   '/pedflow': typeof PedflowRoute
   '/politica-di-rimborso': typeof PoliticaDiRimborsoRoute
@@ -183,7 +174,6 @@ export interface FileRouteTypes {
     | '/corso-privacy-gdpr'
     | '/legal'
     | '/minifat'
-    | '/moca-serbatoi'
     | '/pagamenti-merchant-of-record'
     | '/pedflow'
     | '/politica-di-rimborso'
@@ -202,7 +192,6 @@ export interface FileRouteTypes {
     | '/corso-privacy-gdpr'
     | '/legal'
     | '/minifat'
-    | '/moca-serbatoi'
     | '/pagamenti-merchant-of-record'
     | '/pedflow'
     | '/politica-di-rimborso'
@@ -221,7 +210,6 @@ export interface FileRouteTypes {
     | '/corso-privacy-gdpr'
     | '/legal'
     | '/minifat'
-    | '/moca-serbatoi'
     | '/pagamenti-merchant-of-record'
     | '/pedflow'
     | '/politica-di-rimborso'
@@ -241,7 +229,6 @@ export interface RootRouteChildren {
   CorsoPrivacyGdprRoute: typeof CorsoPrivacyGdprRoute
   LegalRoute: typeof LegalRoute
   MinifatRoute: typeof MinifatRoute
-  MocaSerbatoiRoute: typeof MocaSerbatoiRoute
   PagamentiMerchantOfRecordRoute: typeof PagamentiMerchantOfRecordRoute
   PedflowRoute: typeof PedflowRoute
   PoliticaDiRimborsoRoute: typeof PoliticaDiRimborsoRoute
@@ -308,13 +295,6 @@ declare module '@tanstack/react-router' {
       path: '/minifat'
       fullPath: '/minifat'
       preLoaderRoute: typeof MinifatRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/moca-serbatoi': {
-      id: '/moca-serbatoi'
-      path: '/moca-serbatoi'
-      fullPath: '/moca-serbatoi'
-      preLoaderRoute: typeof MocaSerbatoiRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/pagamenti-merchant-of-record': {
@@ -385,7 +365,6 @@ const rootRouteChildren: RootRouteChildren = {
   CorsoPrivacyGdprRoute: CorsoPrivacyGdprRoute,
   LegalRoute: LegalRoute,
   MinifatRoute: MinifatRoute,
-  MocaSerbatoiRoute: MocaSerbatoiRoute,
   PagamentiMerchantOfRecordRoute: PagamentiMerchantOfRecordRoute,
   PedflowRoute: PedflowRoute,
   PoliticaDiRimborsoRoute: PoliticaDiRimborsoRoute,
