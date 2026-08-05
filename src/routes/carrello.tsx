@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useTranslation } from "react-i18next";
 import i18n from "@/i18n";
-import { ShoppingCart, Trash2, Construction, ArrowRight } from "lucide-react";
+import { ShoppingCart, Trash2, Construction, ArrowRight, Minus, Plus } from "lucide-react";
 import { toast } from "sonner";
 import { LegalLayout } from "@/components/LegalLayout";
 import { useCart } from "@/lib/cart";
