@@ -43,6 +43,11 @@ export const legal = {
       colService: "Prodotto",
       colPrice: "Prezzo",
       colDuration: "Durata",
+      colQty: "Quantità",
+      colSubtotal: "Totale riga",
+      qtyIncrease: "Aumenta quantità",
+      qtyDecrease: "Riduci quantità",
+
       total: "Totale",
       checkout: "Procedi all'acquisto",
       checkoutNote:
@@ -343,6 +348,11 @@ export const legal = {
       colService: "Product",
       colPrice: "Price",
       colDuration: "Duration",
+      colQty: "Quantity",
+      colSubtotal: "Line total",
+      qtyIncrease: "Increase quantity",
+      qtyDecrease: "Decrease quantity",
+
       total: "Total",
       checkout: "Proceed to checkout",
       checkoutNote:

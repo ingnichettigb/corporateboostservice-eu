@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useTranslation } from "react-i18next";
 import i18n from "@/i18n";
-import { ShoppingCart, Trash2, Construction, ArrowRight } from "lucide-react";
+import { ShoppingCart, Trash2, Construction, ArrowRight, Minus, Plus } from "lucide-react";
 import { toast } from "sonner";
 import { LegalLayout } from "@/components/LegalLayout";
 import { useCart } from "@/lib/cart";
@@ -20,9 +20,10 @@ export const Route = createFileRoute("/carrello")({
 
 function CartPage() {
   const { t } = useTranslation();
-  const { items, total, removeItem, clear } = useCart();
+  const { items, total, removeItem, setQty, clear, lineTotal } = useCart();
   const monthsLabel = (d: string) =>
     `${d} ${d === "1" ? t("legal.prezzi.month") : t("legal.prezzi.months")}`;
+  const fmt = (n: number) => `${Number.isInteger(n) ? n : n.toFixed(2)}€`;
 
   return (
     <LegalLayout
@@ -50,15 +51,49 @@ function CartPage() {
                   <th className="px-4 py-3 font-semibold">{t("legal.cart.colService")}</th>
                   <th className="px-4 py-3 font-semibold">{t("legal.cart.colDuration")}</th>
                   <th className="px-4 py-3 font-semibold whitespace-nowrap">{t("legal.cart.colPrice")}</th>
+                  <th className="px-4 py-3 font-semibold whitespace-nowrap">{t("legal.cart.colQty")}</th>
+                  <th className="px-4 py-3 font-semibold whitespace-nowrap">{t("legal.cart.colSubtotal")}</th>
                   <th className="px-4 py-3" />
                 </tr>
               </thead>
               <tbody className="divide-y divide-border">
-                {items.map((item) => (
+                {items.map((item) => {
+                  const qty = item.qty ?? 1;
+                  return (
                   <tr key={item.id} className="hover:bg-muted/50">
                     <td className="px-4 py-3 font-medium">{item.name}</td>
                     <td className="px-4 py-3 whitespace-nowrap">{monthsLabel(item.duration)}</td>
                     <td className="px-4 py-3 whitespace-nowrap font-semibold text-primary">{item.price}</td>
+                    <td className="px-4 py-3 whitespace-nowrap">
+                      <div className="inline-flex items-center gap-1 rounded-md border border-border">
+                        <button
+                          type="button"
+                          aria-label={`${t("legal.cart.qtyDecrease")}: ${item.name}`}
+                          onClick={() => setQty(item.id, qty - 1)}
+                          className="inline-flex h-8 w-8 items-center justify-center rounded-l-md text-foreground/80 hover:bg-muted"
+                        >
+                          <Minus className="h-4 w-4" aria-hidden />
+                        </button>
+                        <input
+                          type="number"
+                          min={1}
+                          max={99}
+                          value={qty}
+                          aria-label={`${t("legal.cart.colQty")}: ${item.name}`}
+                          onChange={(e) => setQty(item.id, Number(e.target.value))}
+                          className="h-8 w-12 border-x border-border bg-transparent text-center text-sm font-semibold outline-none"
+                        />
+                        <button
+                          type="button"
+                          aria-label={`${t("legal.cart.qtyIncrease")}: ${item.name}`}
+                          onClick={() => setQty(item.id, qty + 1)}
+                          className="inline-flex h-8 w-8 items-center justify-center rounded-r-md text-foreground/80 hover:bg-muted"
+                        >
+                          <Plus className="h-4 w-4" aria-hidden />
+                        </button>
+                      </div>
+                    </td>
+                    <td className="px-4 py-3 whitespace-nowrap font-semibold">{fmt(lineTotal(item))}</td>
                     <td className="px-4 py-3 text-right">
                       <button
                         type="button"
@@ -69,19 +104,21 @@ function CartPage() {
                       </button>
                     </td>
                   </tr>
-                ))}
+                  );
+                })}
               </tbody>
               <tfoot>
                 <tr className="border-t border-border bg-muted/40">
-                  <td className="px-4 py-3 font-bold" colSpan={2}>
+                  <td className="px-4 py-3 font-bold" colSpan={4}>
                     {t("legal.cart.total")}
                   </td>
-                  <td className="px-4 py-3 font-bold text-primary whitespace-nowrap">{total}€</td>
+                  <td className="px-4 py-3 font-bold text-primary whitespace-nowrap">{fmt(total)}</td>
                   <td />
                 </tr>
               </tfoot>
             </table>
           </div>
+
 
           <div className="mt-6 rounded-xl border-2 border-amber-400 bg-amber-50 p-5 text-amber-900">
             <div className="flex items-center gap-3 font-bold">
