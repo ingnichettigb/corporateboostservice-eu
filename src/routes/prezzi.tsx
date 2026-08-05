@@ -105,7 +105,7 @@ function PrezziPage() {
               <th className="px-5 py-4 font-semibold min-w-[12rem]">{t("legal.prezzi.colService")}</th>
               <th className="px-5 py-4 font-semibold min-w-[9rem]">{t("legal.prezzi.colPrice")}</th>
               <th className="px-5 py-4 font-semibold min-w-[6rem]">{t("legal.prezzi.colDuration")}</th>
-              <th className="px-5 py-4 font-semibold min-w-[13rem] whitespace-nowrap">{t("legal.cart.add")}</th>
+              <th className="px-5 py-4 font-semibold w-[19rem] whitespace-nowrap">{t("legal.cart.add")}</th>
             </tr>
           </thead>
           <tbody className="divide-y divide-border">
@@ -118,9 +118,10 @@ function PrezziPage() {
                 <td className="px-5 py-4 whitespace-nowrap align-middle"><DurationCell item={item} /></td>
 
                 {/* TODO: sostituire con link Paddle */}
-                <td className="px-5 py-4 align-middle min-w-[13rem]">
-                  <PricingCartButton code={item.code} index={index + 1} size="lg" />
+                <td className="px-5 py-4 align-middle w-[19rem]">
+                  <PricingCartButton code={item.code} index={index + 1} size="lg" full className="min-h-[5.25rem]" />
                 </td>
+
               </tr>
             ))}
           </tbody>
@@ -142,7 +143,7 @@ function PrezziPage() {
             </div>
             {/* TODO: sostituire con link Paddle */}
             <div className="mt-4">
-              <PricingCartButton code={item.code} index={index + 1} full size="lg" />
+              <PricingCartButton code={item.code} index={index + 1} full size="lg" className="min-h-[5.25rem]" />
             </div>
           </div>
         ))}
