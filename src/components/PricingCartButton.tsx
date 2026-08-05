@@ -5,6 +5,8 @@ import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
 import { pricingItems } from "@/i18n/locales/pages/legal";
 import { useCart } from "@/lib/cart";
+import { pricingButtonStyle, resolvePricingButtonScale } from "@/lib/pricingButtonStyle";
+
 
 type CatalogRow = {
   code: string;
@@ -21,20 +23,27 @@ function formatPrice(n: number) {
 /**
  * Unified "Aggiungi al carrello" button used across the site.
  * Single source of truth: `product_catalog` row keyed by `code` (Supabase).
- * Falls back to the hardcoded `pricingItems` entry while the query is loading
- * or if the code is missing from the DB.
+ *
+ * Stile: metriche centrali in `@/lib/pricingButtonStyle`.
+ *  - `base` (pagina Prezzi): scala fissa 1, non modificabile.
+ *  - altrove: scala derivata (default o per codice), sovrascrivibile con `scale`.
+ * Testo, funzione e azione restano invariati.
  */
 export function PricingCartButton({
   code,
   index,
   full,
-  size = "md",
+  base = false,
+  scale,
   className = "",
 }: {
   code: string;
   index: number;
   full?: boolean;
-  size?: "md" | "lg";
+  /** true = stile base fisso della pagina Prezzi (nessuno scaling) */
+  base?: boolean;
+  /** fattore di scaling per i bottoni fuori dalla pagina Prezzi */
+  scale?: number;
   className?: string;
 }) {
   const { t } = useTranslation();
@@ -76,26 +85,21 @@ export function PricingCartButton({
     ? `Riga ${index}. ${t("legal.cart.add")}: ${serviceName}, ${priceText} più iva e tasse, durata ${durationText}`
     : `Riga ${index}. ${t("legal.cart.add")}`;
 
-  const isLg = size === "lg";
-  const btnBase = isLg
-    ? "relative inline-flex flex-col items-center justify-center gap-1 rounded-md pl-6 pr-4 py-3 text-sm font-semibold transition-colors text-center"
-    : "relative inline-flex flex-col items-center justify-center gap-0.5 rounded-md pl-5 pr-3 py-2 text-xs font-semibold transition-colors text-center";
+  const appliedScale = base ? 1 : resolvePricingButtonScale(code, scale);
+  const style = pricingButtonStyle(appliedScale);
+
+  const btnBase =
+    "relative inline-flex flex-col items-center justify-center font-semibold transition-colors text-center";
   const btnState = inCart
     ? "border border-border bg-muted text-foreground/70 cursor-default"
     : "bg-primary text-primary-foreground hover:bg-primary/90";
-  const indexClass = isLg
-    ? "absolute top-1 left-1.5 text-xs font-medium opacity-60 leading-none"
-    : "absolute top-0.5 left-1 text-[10px] font-medium opacity-60 leading-none";
-  const iconClass = isLg ? "h-5 w-5" : "h-4 w-4";
-  const detailClass = isLg
-    ? "text-xs font-normal opacity-85 leading-tight flex flex-wrap items-baseline justify-center gap-x-1 max-w-full"
-    : "text-[10px] font-normal opacity-85 leading-tight flex flex-wrap items-baseline justify-center gap-x-1 max-w-full";
 
   return (
     <button
       type="button"
       disabled={inCart}
       aria-label={ariaLabel}
+      style={style}
       onClick={() => {
         if (!fallback) return;
         addItem({
@@ -109,22 +113,29 @@ export function PricingCartButton({
       }}
       className={`${full ? "w-full " : ""}${btnBase} ${btnState} ${className}`}
     >
-      <span className={indexClass} aria-hidden>
+      <span
+        className="absolute top-1 left-1.5 font-medium opacity-60 leading-none"
+        style={{ fontSize: "var(--pcb-index-font)" }}
+        aria-hidden
+      >
         {index}
       </span>
       <span className="inline-flex items-center gap-1.5">
         {inCart ? (
-          <Check className={iconClass} aria-hidden />
+          <Check style={{ height: "var(--pcb-icon)", width: "var(--pcb-icon)" }} aria-hidden />
         ) : (
-          <ShoppingCart className={iconClass} aria-hidden />
+          <ShoppingCart style={{ height: "var(--pcb-icon)", width: "var(--pcb-icon)" }} aria-hidden />
         )}
         <span className="font-semibold">
           {inCart ? t("legal.cart.added") : t("legal.cart.add")}
         </span>
       </span>
       {hasDetails && (
-        <span className={detailClass}>
-          <span className="truncate max-w-[10rem]">{serviceName}</span>
+        <span
+          className="font-normal opacity-85 leading-tight flex flex-wrap items-baseline justify-center gap-x-1 max-w-full"
+          style={{ fontSize: "var(--pcb-detail-font)" }}
+        >
+          <span className="truncate max-w-[12rem]">{serviceName}</span>
           <span className="whitespace-nowrap">
             – {priceText} + iva e tasse – {durationText}
           </span>
@@ -133,3 +144,4 @@ export function PricingCartButton({
     </button>
   );
 }
+
