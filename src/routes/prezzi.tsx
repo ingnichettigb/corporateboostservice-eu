@@ -143,7 +143,7 @@ function PrezziPage() {
             </div>
             {/* TODO: sostituire con link Paddle */}
             <div className="mt-4">
-              <PricingCartButton code={item.code} index={index + 1} full size="lg" />
+              <PricingCartButton code={item.code} index={index + 1} full size="lg" className="min-h-[5.25rem]" />
             </div>
           </div>
         ))}
