@@ -5,6 +5,8 @@ import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
 import { pricingItems } from "@/i18n/locales/pages/legal";
 import { useCart } from "@/lib/cart";
+import { pricingButtonStyle, resolvePricingButtonScale } from "@/lib/pricingButtonStyle";
+
 
 type CatalogRow = {
   code: string;
