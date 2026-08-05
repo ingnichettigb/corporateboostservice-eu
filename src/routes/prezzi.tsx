@@ -119,7 +119,7 @@ function PrezziPage() {
 
                 {/* TODO: sostituire con link Paddle */}
                 <td className="px-5 py-4 align-middle w-[19rem]">
-                  <PricingCartButton code={item.code} index={index + 1} size="lg" full className="min-h-[5.25rem]" />
+                  <PricingCartButton code={item.code} index={index + 1} base full />
                 </td>
 
               </tr>
