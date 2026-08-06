@@ -209,12 +209,13 @@ function PedFlowPage() {
               </p>
               <h2 className="text-3xl md:text-4xl font-bold">{t("videoH2")}</h2>
             </div>
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="max-w-3xl mx-auto">
               <div className="flex flex-col gap-4">
                 <div className="aspect-video w-full rounded-2xl overflow-hidden border-2 border-primary/15 shadow-lg bg-black">
                   <iframe
-                    src="https://www.youtube.com/embed/dCqQilCP4Y4"
-                    title={t("videoItTitle")}
+                    key={isItalian ? "it" : "en"}
+                    src={isItalian ? "https://www.youtube.com/embed/hapJKrTNIMI" : "https://www.youtube.com/embed/dCqQilCP4Y4"}
+                    title={isItalian ? t("videoItTitle") : t("videoEnTitle")}
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowFullScreen
                     className="w-full h-full"
@@ -222,24 +223,8 @@ function PedFlowPage() {
                   />
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold">{t("videoItTitle")}</h3>
-                  <p className="text-foreground/80">{t("videoItDesc")}</p>
-                </div>
-              </div>
-              <div className="flex flex-col gap-4">
-                <div className="aspect-video w-full rounded-2xl overflow-hidden border-2 border-primary/15 shadow-lg bg-black">
-                  <iframe
-                    src="https://www.youtube.com/embed/hapJKrTNIMI"
-                    title={t("videoEnTitle")}
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowFullScreen
-                    className="w-full h-full"
-                    loading="lazy"
-                  />
-                </div>
-                <div>
-                  <h3 className="text-lg font-bold">{t("videoEnTitle")}</h3>
-                  <p className="text-foreground/80">{t("videoEnDesc")}</p>
+                  <h3 className="text-lg font-bold">{isItalian ? t("videoItTitle") : t("videoEnTitle")}</h3>
+                  <p className="text-foreground/80">{isItalian ? t("videoItDesc") : t("videoEnDesc")}</p>
                 </div>
               </div>
             </div>
