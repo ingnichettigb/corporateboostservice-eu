@@ -24,6 +24,15 @@ export const pedflow = {
     processImgAlt:
       "Processo PedFlow in 6 passaggi: introduzione, inserimento dati, condizioni operative, identificazione fluido, calcolo automatico, PDF e registro",
 
+    videoLabel: "Guarda PedFlow in azione",
+    videoH2: "Due demo rapide per scoprire il flusso",
+    videoItTitle: "Demo in italiano",
+    videoItDesc:
+      "Tour completo dell'interfaccia: inserimento dati, ricerca sostanze, calcolo Art. 13 e generazione del PDF.",
+    videoEnTitle: "Demo in inglese",
+    videoEnDesc:
+      "Full walkthrough in English: document data, substance lookup, automatic Art. 13 calculation and PDF export.",
+
     whatLabel: "Cos'è PedFlow",
     whatH2: "La classificazione PED, semplice e tracciabile",
     whatP:
@@ -194,6 +203,15 @@ export const pedflow = {
     heroImgAlt: "PedFlow — application for fluid classification under the PED Directive",
     processImgAlt:
       "PedFlow process in 6 steps: introduction, document data entry, operating conditions, fluid identification, automatic calculation, PDF and registry",
+
+    videoLabel: "Watch PedFlow in action",
+    videoH2: "Two quick demos to discover the workflow",
+    videoItTitle: "Italian demo",
+    videoItDesc:
+      "Complete interface tour: data entry, substance lookup, Art. 13 calculation and PDF generation.",
+    videoEnTitle: "English demo",
+    videoEnDesc:
+      "Full walkthrough in English: document data, substance lookup, automatic Art. 13 calculation and PDF export.",
 
     whatLabel: "What is PedFlow",
     whatH2: "PED classification, simple and traceable",
