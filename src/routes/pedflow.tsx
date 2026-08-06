@@ -200,6 +200,52 @@ function PedFlowPage() {
           </div>
         </section>
 
+        {/* VIDEO DEMO */}
+        <section className="py-20 bg-background border-b-2 border-primary/15">
+          <div className="container mx-auto px-4 max-w-6xl">
+            <div className="text-center mb-12">
+              <p className="text-sm font-bold text-primary uppercase tracking-wider mb-2">
+                {t("videoLabel")}
+              </p>
+              <h2 className="text-3xl md:text-4xl font-bold">{t("videoH2")}</h2>
+            </div>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="flex flex-col gap-4">
+                <div className="aspect-video w-full rounded-2xl overflow-hidden border-2 border-primary/15 shadow-lg bg-black">
+                  <iframe
+                    src="https://www.youtube.com/embed/dCqQilCP4Y4"
+                    title={t("videoItTitle")}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                    className="w-full h-full"
+                    loading="lazy"
+                  />
+                </div>
+                <div>
+                  <h3 className="text-lg font-bold">{t("videoItTitle")}</h3>
+                  <p className="text-foreground/80">{t("videoItDesc")}</p>
+                </div>
+              </div>
+              <div className="flex flex-col gap-4">
+                <div className="aspect-video w-full rounded-2xl overflow-hidden border-2 border-primary/15 shadow-lg bg-black">
+                  <iframe
+                    src="https://www.youtube.com/embed/hapJKrTNIMI"
+                    title={t("videoEnTitle")}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                    className="w-full h-full"
+                    loading="lazy"
+                  />
+                </div>
+                <div>
+                  <h3 className="text-lg font-bold">{t("videoEnTitle")}</h3>
+                  <p className="text-foreground/80">{t("videoEnDesc")}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* FUNZIONALITÀ */}
         <section className="py-20 [background:var(--gradient-section-corsi)] border-y-2 border-primary/15">
           <div className="container mx-auto px-4 max-w-6xl">
