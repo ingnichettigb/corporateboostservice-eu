@@ -24,6 +24,15 @@ export const pedflow = {
     processImgAlt:
       "Processo PedFlow in 6 passaggi: introduzione, inserimento dati, condizioni operative, identificazione fluido, calcolo automatico, PDF e registro",
 
+    videoLabel: "Guarda PedFlow in azione",
+    videoH2: "Due demo rapide per scoprire il flusso",
+    videoItTitle: "Demo in italiano",
+    videoItDesc:
+      "Tour completo dell'interfaccia: inserimento dati, ricerca sostanze, calcolo Art. 13 e generazione del PDF.",
+    videoEnTitle: "Demo in inglese",
+    videoEnDesc:
+      "Full walkthrough in English: document data, substance lookup, automatic Art. 13 calculation and PDF export.",
+
     whatLabel: "Cos'è PedFlow",
     whatH2: "La classificazione PED, semplice e tracciabile",
     whatP:
