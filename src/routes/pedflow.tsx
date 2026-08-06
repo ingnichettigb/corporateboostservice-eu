@@ -118,7 +118,9 @@ export const Route = createFileRoute("/pedflow")({
 });
 
 function PedFlowPage() {
-  const { t } = useTranslation("pedflow");
+  const { t, i18n } = useTranslation("pedflow");
+  const isItalian = (i18n.language || "it").toLowerCase().startsWith("it");
+
 
   const features = (t("features", { returnObjects: true }) as { title: string; desc: string }[]);
   const steps = (t("steps", { returnObjects: true }) as { title: string; desc: string }[]);
