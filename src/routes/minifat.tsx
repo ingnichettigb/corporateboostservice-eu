@@ -63,7 +63,9 @@ const benefitIcons = [ShieldCheck, CheckCircle2, Award, Clock, Zap, Wifi];
 const screenshotImgs = [screenMain, screenDocs, screenPdf, screenArchive];
 
 function MiniFatPage() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const isItalian = (i18n.language || "it").toLowerCase().startsWith("it");
+
 
   const features = (t("minifat.features", { returnObjects: true }) as { title: string; desc: string }[]);
   const steps = (t("minifat.steps", { returnObjects: true }) as { title: string; desc: string }[]);
