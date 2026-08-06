@@ -121,6 +121,45 @@ function MiniFatPage() {
           </div>
         </section>
 
+        {/* VIDEO DEMO */}
+        <section className="py-20 bg-background border-b-2 border-primary/15">
+          <div className="container mx-auto px-4 max-w-6xl">
+            <div className="text-center mb-12">
+              <p className="text-sm font-bold text-primary uppercase tracking-wider mb-2">
+                {isItalian ? "Guarda MiniFAT in azione" : "Watch MiniFAT in action"}
+              </p>
+              <h2 className="text-3xl md:text-4xl font-bold">
+                {isItalian ? "Una demo rapida per scoprire il flusso" : "A quick demo to discover the workflow"}
+              </h2>
+            </div>
+            <div className="max-w-3xl mx-auto flex flex-col gap-4">
+              <div className="aspect-video w-full rounded-2xl overflow-hidden border-2 border-primary/15 shadow-lg bg-black">
+                <iframe
+                  key={isItalian ? "it" : "en"}
+                  src={isItalian ? "https://www.youtube.com/embed/hapJKrTNIMI" : "https://www.youtube.com/embed/dCqQilCP4Y4"}
+                  title={isItalian ? "Demo MiniFAT in italiano" : "MiniFAT demo in English"}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                  className="w-full h-full"
+                  loading="lazy"
+                />
+              </div>
+              <div>
+                <h3 className="text-lg font-bold">
+                  {isItalian ? "Demo in italiano" : "Demo in English"}
+                </h3>
+                <p className="text-foreground/80">
+                  {isItalian
+                    ? "Panoramica guidata di MiniFAT: preparazione della documentazione, checklist e report per i sopralluoghi FAT."
+                    : "Guided overview of MiniFAT: documentation setup, checklists and reports for FAT inspections."}
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+
         {/* COSA FA */}
         <section className="py-20 bg-background">
           <div className="container mx-auto px-4 max-w-6xl">
