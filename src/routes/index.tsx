@@ -12,7 +12,11 @@ export const Route = createFileRoute("/")({
     meta: [
       { title: "Applicazioni Digitali e Corsi Certificati per Imprese" },
       { name: "description", content: "Applicazioni digitali e corsi certificati per imprese e professionisti." },
+      { property: "og:url", content: "https://corporateboostservice.eu/" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "canonical", href: "https://corporateboostservice.eu/" }],
   }),
   component: Home,
 });

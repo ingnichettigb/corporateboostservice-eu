@@ -10,7 +10,11 @@ export const Route = createFileRoute("/termini-e-condizioni")({
       { name: "description", content: i18n.t("legal.termini.metaDesc") },
       { property: "og:title", content: i18n.t("legal.termini.metaTitle") },
       { property: "og:description", content: i18n.t("legal.termini.metaDesc") },
+      { property: "og:url", content: "https://corporateboostservice.eu/termini-e-condizioni" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "canonical", href: "https://corporateboostservice.eu/termini-e-condizioni" }],
   }),
   component: TerminiPage,
 });

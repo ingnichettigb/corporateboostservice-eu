@@ -10,7 +10,11 @@ export const Route = createFileRoute("/pagamenti-merchant-of-record")({
       { name: "description", content: i18n.t("legal.mor.metaDesc") },
       { property: "og:title", content: i18n.t("legal.mor.metaTitle") },
       { property: "og:description", content: i18n.t("legal.mor.metaDesc") },
+      { property: "og:url", content: "https://corporateboostservice.eu/pagamenti-merchant-of-record" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "canonical", href: "https://corporateboostservice.eu/pagamenti-merchant-of-record" }],
   }),
   component: PagamentiMoRPage,
 });

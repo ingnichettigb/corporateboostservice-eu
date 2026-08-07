@@ -12,7 +12,11 @@ export const Route = createFileRoute("/applicazioni")({
     meta: [
       { title: "Applicazioni per Imprese — CorporateBoostService.eu" },
       { name: "description", content: "Applicazioni professionali per gestire adempimenti, formazione e processi aziendali." },
+      { property: "og:url", content: "https://corporateboostservice.eu/applicazioni" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "canonical", href: "https://corporateboostservice.eu/applicazioni" }],
   }),
   component: AppPage,
 });
