@@ -52,7 +52,11 @@ export const Route = createFileRoute("/minifat")({
         property: "og:description",
         content: i18n.t("minifat.ogDescription"),
       },
+      { property: "og:url", content: "https://corporateboostservice.eu/minifat" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "canonical", href: "https://corporateboostservice.eu/minifat" }],
   }),
   component: MiniFatPage,
 });

@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /carrello
+
+Sitemap: https://corporateboostservice.eu/sitemap.xml

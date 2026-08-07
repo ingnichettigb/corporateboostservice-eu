@@ -19,7 +19,9 @@ export const Route = createFileRoute("/mappa-del-sito")({
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
+      { property: "og:url", content: "https://corporateboostservice.eu/mappa-del-sito" },
     ],
+    links: [{ rel: "canonical", href: "https://corporateboostservice.eu/mappa-del-sito" }],
   }),
   component: SitemapPage,
 });

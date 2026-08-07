@@ -10,7 +10,11 @@ export const Route = createFileRoute("/termini-di-servizio")({
       { name: "description", content: i18n.t("legal.servizio.metaDesc") },
       { property: "og:title", content: i18n.t("legal.servizio.metaTitle") },
       { property: "og:description", content: i18n.t("legal.servizio.metaDesc") },
+      { property: "og:url", content: "https://corporateboostservice.eu/termini-di-servizio" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "canonical", href: "https://corporateboostservice.eu/termini-di-servizio" }],
   }),
   component: ServizioPage,
 });

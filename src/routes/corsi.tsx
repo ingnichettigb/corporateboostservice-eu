@@ -18,7 +18,11 @@ export const Route = createFileRoute("/corsi")({
     meta: [
       { title: "Corsi Online — CorporateBoostService.eu" },
       { name: "description", content: "Corsi online su privacy, GDPR, sicurezza sul lavoro e aggiornamenti normativi." },
+      { property: "og:url", content: "https://corporateboostservice.eu/corsi" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "canonical", href: "https://corporateboostservice.eu/corsi" }],
   }),
   component: CorsiPage,
 });
