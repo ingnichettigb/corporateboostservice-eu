@@ -10,14 +10,51 @@ import { corsi, applicazioni } from "@/data/site";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Applicazioni Digitali e Corsi Certificati per Imprese" },
-      { name: "description", content: "Applicazioni digitali e corsi certificati per imprese e professionisti." },
+      { title: "Applicazioni Digitali e Corsi Certificati GDPR | CorporateBoostService" },
+      {
+        name: "description",
+        content:
+          "Software per direttiva PED, FAT e manutenzione, più corsi online certificati su GDPR e privacy per imprese e professionisti.",
+      },
+      { property: "og:title", content: "Applicazioni Digitali e Corsi Certificati GDPR | CorporateBoostService" },
+      {
+        property: "og:description",
+        content:
+          "Software per direttiva PED, FAT e manutenzione, più corsi online certificati su GDPR e privacy per imprese e professionisti.",
+      },
       { property: "og:url", content: "https://corporateboostservice.eu/" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [{ rel: "canonical", href: "https://corporateboostservice.eu/" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          name: "CorporateBoostService.eu",
+          url: "https://corporateboostservice.eu",
+          inLanguage: "it-IT",
+          publisher: {
+            "@type": "Organization",
+            name: "CorporateBoostService.eu",
+            url: "https://corporateboostservice.eu",
+            email: "team@corporateboostservice.eu",
+            founder: { "@type": "Person", name: "Nichetti Gian Battista" },
+            address: {
+              "@type": "PostalAddress",
+              addressLocality: "Soresina",
+              addressRegion: "CR",
+              addressCountry: "IT",
+            },
+            vatID: "IT01235350194",
+          },
+        }),
+      },
+    ],
   }),
+
   component: Home,
 });
 
