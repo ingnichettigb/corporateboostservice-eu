@@ -142,7 +142,7 @@ function MiniFatPage() {
               <div className="aspect-video w-full rounded-2xl overflow-hidden border-2 border-primary/15 shadow-lg bg-black">
                 <iframe
                   key={isItalian ? "it" : "en"}
-                  src={isItalian ? "https://www.youtube.com/embed/hapJKrTNIMI" : "https://www.youtube.com/embed/dCqQilCP4Y4"}
+                  src={isItalian ? "https://www.youtube.com/embed/z6pXaBMIvXE" : "https://www.youtube.com/embed/dCqQilCP4Y4"}
                   title={isItalian ? "Demo MiniFAT in italiano" : "MiniFAT demo in English"}
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowFullScreen
