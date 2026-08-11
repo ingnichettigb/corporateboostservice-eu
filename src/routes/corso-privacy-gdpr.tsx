@@ -66,6 +66,7 @@ export const Route = createFileRoute("/corso-privacy-gdpr")({
       { name: "description", content: i18n.t("privacyGdpr.metaDesc") },
       { property: "og:title", content: i18n.t("privacyGdpr.metaTitle") },
       { property: "og:description", content: i18n.t("privacyGdpr.metaDesc") },
+      { property: "og:url", content: "https://corporateboostservice.eu/corso-privacy-gdpr" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: i18n.t("privacyGdpr.metaTitle") },
