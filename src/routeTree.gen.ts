@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ApplicazioniRouteImport } from './routes/applicazioni'
+import { Route as AssistenzaGdprRouteImport } from './routes/assistenza-gdpr'
 import { Route as CarrelloRouteImport } from './routes/carrello'
 import { Route as CorsiRouteImport } from './routes/corsi'
 import { Route as CorsoGdprIncaricatiRouteImport } from './routes/corso-gdpr-incaricati'
@@ -18,6 +19,7 @@ import { Route as CorsoPrivacyGdprRouteImport } from './routes/corso-privacy-gdp
 import { Route as LegalRouteImport } from './routes/legal'
 import { Route as MappaDelSitoRouteImport } from './routes/mappa-del-sito'
 import { Route as MinifatRouteImport } from './routes/minifat'
+import { Route as MocaSerbatoiRouteImport } from './routes/moca-serbatoi'
 import { Route as PagamentiMerchantOfRecordRouteImport } from './routes/pagamenti-merchant-of-record'
 import { Route as PedflowRouteImport } from './routes/pedflow'
 import { Route as PoliticaDiRimborsoRouteImport } from './routes/politica-di-rimborso'
@@ -36,6 +38,11 @@ const IndexRoute = IndexRouteImport.update({
 const ApplicazioniRoute = ApplicazioniRouteImport.update({
   id: '/applicazioni',
   path: '/applicazioni',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AssistenzaGdprRoute = AssistenzaGdprRouteImport.update({
+  id: '/assistenza-gdpr',
+  path: '/assistenza-gdpr',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CarrelloRoute = CarrelloRouteImport.update({
@@ -71,6 +78,11 @@ const MappaDelSitoRoute = MappaDelSitoRouteImport.update({
 const MinifatRoute = MinifatRouteImport.update({
   id: '/minifat',
   path: '/minifat',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MocaSerbatoiRoute = MocaSerbatoiRouteImport.update({
+  id: '/moca-serbatoi',
+  path: '/moca-serbatoi',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PagamentiMerchantOfRecordRoute =
@@ -123,6 +135,7 @@ const TerminiECondizioniRoute = TerminiECondizioniRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/applicazioni': typeof ApplicazioniRoute
+  '/assistenza-gdpr': typeof AssistenzaGdprRoute
   '/carrello': typeof CarrelloRoute
   '/corsi': typeof CorsiRoute
   '/corso-gdpr-incaricati': typeof CorsoGdprIncaricatiRoute
@@ -130,6 +143,7 @@ export interface FileRoutesByFullPath {
   '/legal': typeof LegalRoute
   '/mappa-del-sito': typeof MappaDelSitoRoute
   '/minifat': typeof MinifatRoute
+  '/moca-serbatoi': typeof MocaSerbatoiRoute
   '/pagamenti-merchant-of-record': typeof PagamentiMerchantOfRecordRoute
   '/pedflow': typeof PedflowRoute
   '/politica-di-rimborso': typeof PoliticaDiRimborsoRoute
@@ -143,6 +157,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/applicazioni': typeof ApplicazioniRoute
+  '/assistenza-gdpr': typeof AssistenzaGdprRoute
   '/carrello': typeof CarrelloRoute
   '/corsi': typeof CorsiRoute
   '/corso-gdpr-incaricati': typeof CorsoGdprIncaricatiRoute
@@ -150,6 +165,7 @@ export interface FileRoutesByTo {
   '/legal': typeof LegalRoute
   '/mappa-del-sito': typeof MappaDelSitoRoute
   '/minifat': typeof MinifatRoute
+  '/moca-serbatoi': typeof MocaSerbatoiRoute
   '/pagamenti-merchant-of-record': typeof PagamentiMerchantOfRecordRoute
   '/pedflow': typeof PedflowRoute
   '/politica-di-rimborso': typeof PoliticaDiRimborsoRoute
@@ -164,6 +180,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/applicazioni': typeof ApplicazioniRoute
+  '/assistenza-gdpr': typeof AssistenzaGdprRoute
   '/carrello': typeof CarrelloRoute
   '/corsi': typeof CorsiRoute
   '/corso-gdpr-incaricati': typeof CorsoGdprIncaricatiRoute
@@ -171,6 +188,7 @@ export interface FileRoutesById {
   '/legal': typeof LegalRoute
   '/mappa-del-sito': typeof MappaDelSitoRoute
   '/minifat': typeof MinifatRoute
+  '/moca-serbatoi': typeof MocaSerbatoiRoute
   '/pagamenti-merchant-of-record': typeof PagamentiMerchantOfRecordRoute
   '/pedflow': typeof PedflowRoute
   '/politica-di-rimborso': typeof PoliticaDiRimborsoRoute
@@ -186,6 +204,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/applicazioni'
+    | '/assistenza-gdpr'
     | '/carrello'
     | '/corsi'
     | '/corso-gdpr-incaricati'
@@ -193,6 +212,7 @@ export interface FileRouteTypes {
     | '/legal'
     | '/mappa-del-sito'
     | '/minifat'
+    | '/moca-serbatoi'
     | '/pagamenti-merchant-of-record'
     | '/pedflow'
     | '/politica-di-rimborso'
@@ -206,6 +226,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/applicazioni'
+    | '/assistenza-gdpr'
     | '/carrello'
     | '/corsi'
     | '/corso-gdpr-incaricati'
@@ -213,6 +234,7 @@ export interface FileRouteTypes {
     | '/legal'
     | '/mappa-del-sito'
     | '/minifat'
+    | '/moca-serbatoi'
     | '/pagamenti-merchant-of-record'
     | '/pedflow'
     | '/politica-di-rimborso'
@@ -226,6 +248,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/applicazioni'
+    | '/assistenza-gdpr'
     | '/carrello'
     | '/corsi'
     | '/corso-gdpr-incaricati'
@@ -233,6 +256,7 @@ export interface FileRouteTypes {
     | '/legal'
     | '/mappa-del-sito'
     | '/minifat'
+    | '/moca-serbatoi'
     | '/pagamenti-merchant-of-record'
     | '/pedflow'
     | '/politica-di-rimborso'
@@ -247,6 +271,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ApplicazioniRoute: typeof ApplicazioniRoute
+  AssistenzaGdprRoute: typeof AssistenzaGdprRoute
   CarrelloRoute: typeof CarrelloRoute
   CorsiRoute: typeof CorsiRoute
   CorsoGdprIncaricatiRoute: typeof CorsoGdprIncaricatiRoute
@@ -254,6 +279,7 @@ export interface RootRouteChildren {
   LegalRoute: typeof LegalRoute
   MappaDelSitoRoute: typeof MappaDelSitoRoute
   MinifatRoute: typeof MinifatRoute
+  MocaSerbatoiRoute: typeof MocaSerbatoiRoute
   PagamentiMerchantOfRecordRoute: typeof PagamentiMerchantOfRecordRoute
   PedflowRoute: typeof PedflowRoute
   PoliticaDiRimborsoRoute: typeof PoliticaDiRimborsoRoute
@@ -279,6 +305,13 @@ declare module '@tanstack/react-router' {
       path: '/applicazioni'
       fullPath: '/applicazioni'
       preLoaderRoute: typeof ApplicazioniRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/assistenza-gdpr': {
+      id: '/assistenza-gdpr'
+      path: '/assistenza-gdpr'
+      fullPath: '/assistenza-gdpr'
+      preLoaderRoute: typeof AssistenzaGdprRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/carrello': {
@@ -328,6 +361,13 @@ declare module '@tanstack/react-router' {
       path: '/minifat'
       fullPath: '/minifat'
       preLoaderRoute: typeof MinifatRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/moca-serbatoi': {
+      id: '/moca-serbatoi'
+      path: '/moca-serbatoi'
+      fullPath: '/moca-serbatoi'
+      preLoaderRoute: typeof MocaSerbatoiRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/pagamenti-merchant-of-record': {
@@ -399,6 +439,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ApplicazioniRoute: ApplicazioniRoute,
+  AssistenzaGdprRoute: AssistenzaGdprRoute,
   CarrelloRoute: CarrelloRoute,
   CorsiRoute: CorsiRoute,
   CorsoGdprIncaricatiRoute: CorsoGdprIncaricatiRoute,
@@ -406,6 +447,7 @@ const rootRouteChildren: RootRouteChildren = {
   LegalRoute: LegalRoute,
   MappaDelSitoRoute: MappaDelSitoRoute,
   MinifatRoute: MinifatRoute,
+  MocaSerbatoiRoute: MocaSerbatoiRoute,
   PagamentiMerchantOfRecordRoute: PagamentiMerchantOfRecordRoute,
   PedflowRoute: PedflowRoute,
   PoliticaDiRimborsoRoute: PoliticaDiRimborsoRoute,
