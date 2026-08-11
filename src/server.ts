@@ -69,6 +69,23 @@ async function normalizeCatastrophicSsrResponse(response: Response): Promise<Res
 export default {
   async fetch(request: Request, env: unknown, ctx: unknown) {
     try {
+      const url = new URL(request.url);
+      const usesWwwHost = url.hostname === "www.corporateboostservice.eu";
+      const hasTrailingSlash = url.pathname.length > 1 && url.pathname.endsWith("/");
+
+      if (usesWwwHost || hasTrailingSlash) {
+        if (usesWwwHost) url.hostname = "corporateboostservice.eu";
+        if (hasTrailingSlash) url.pathname = url.pathname.replace(/\/+$/, "");
+
+        return new Response(null, {
+          status: 301,
+          headers: {
+            Location: url.toString(),
+            "Cache-Control": "public, max-age=3600",
+          },
+        });
+      }
+
       const handler = await getServerEntry();
       const response = await handler.fetch(request, env, ctx);
       return await normalizeCatastrophicSsrResponse(response);
