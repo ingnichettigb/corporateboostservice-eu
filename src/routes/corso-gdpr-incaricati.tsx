@@ -35,7 +35,7 @@ import heroImg from "@/assets/gdpr-incaricati/hero.jpg";
 function FreeCourseButton({ className = "" }: { className?: string }) {
   return (
     <PricingCartButton
-      code="02-GDPR-00"
+      code="02-GDPR-00-090"
       index={7}
       full
       className={`max-w-md mx-auto ${className}`}

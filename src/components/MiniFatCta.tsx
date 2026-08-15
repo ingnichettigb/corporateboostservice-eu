@@ -10,9 +10,9 @@ export const MINIFAT_DOMAIN = "minifat.corporateboostservice.eu";
  */
 export function MiniFatCta({ className = "", annual = false }: { className?: string; annual?: boolean }) {
   return annual ? (
-    <PricingCartButton code="002MnFAT-12" index={3} full className={className} />
+    <PricingCartButton code="002MnFAT-365" index={3} full className={className} />
   ) : (
-    <PricingCartButton code="002MnFAT-01" index={4} full className={className} />
+    <PricingCartButton code="002MnFAT-030" index={4} full className={className} />
   );
 }
 

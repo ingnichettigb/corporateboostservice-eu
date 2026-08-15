@@ -28,7 +28,7 @@ export const PRICING_BUTTON_DEFAULT_SCALE = 1.1;
 
 /** Override per singolo codice prodotto (contesto specifico). */
 export const PRICING_BUTTON_SCALE_BY_CODE: Record<string, number> = {
-  // esempio: "001SmMntnnc-12": 1.2,
+  // esempio: "001SmMntnnc-365": 1.2,
 };
 
 export function resolvePricingButtonScale(code: string, explicit?: number): number {

@@ -107,7 +107,7 @@ function ActivateButton({ className = "" }: { className?: string }) {
   // Fonte unica del prezzo/durata: tabella product_catalog di Supabase.
   return (
     <PricingCartButton
-      code="001SmMntnnc-01"
+      code="001SmMntnnc-030"
       index={2}
       full
       className={className}
@@ -121,7 +121,7 @@ function AnnualActivateButton({ className = "" }: { className?: string }) {
   // Fonte unica del prezzo/durata: tabella product_catalog di Supabase.
   return (
     <PricingCartButton
-      code="001SmMntnnc-12"
+      code="001SmMntnnc-365"
       index={1}
       full
       className={className}

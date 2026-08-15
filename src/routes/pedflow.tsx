@@ -78,11 +78,11 @@ const PEDFLOW_ANNUAL = getPedFlowAnnual();
 const PEDFLOW_DOMAIN = "pedflow.corporateboostservice.eu";
 
 function ActivateButton({ className = "" }: { className?: string }) {
-  return <PricingCartButton code="011PedFlow-01" index={5} full className={className} />;
+  return <PricingCartButton code="011PedFlow-030" index={5} full className={className} />;
 }
 
 function AnnualActivateButton({ className = "" }: { className?: string }) {
-  return <PricingCartButton code="012PedFlow-12" index={6} full className={className} />;
+  return <PricingCartButton code="011PedFlow-365" index={6} full className={className} />;
 }
 
 function ActivateButtons({ className = "" }: { className?: string }) {
