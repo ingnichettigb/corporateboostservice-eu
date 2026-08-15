@@ -17,35 +17,35 @@ export function getPlanByCode(code: string): PricingPlan {
 }
 
 export function getSmartMaintenanceMonthly() {
-  return getPlanByCode("001SmMntnnc-01");
+  return getPlanByCode("001SmMntnnc-030");
 }
 
 export function getSmartMaintenanceAnnual() {
-  return getPlanByCode("001SmMntnnc-12");
+  return getPlanByCode("001SmMntnnc-365");
 }
 
 export function getPedFlowMonthly() {
-  return getPlanByCode("011PedFlow-01");
+  return getPlanByCode("011PedFlow-030");
 }
 
 export function getPedFlowAnnual() {
-  return getPlanByCode("012PedFlow-12");
+  return getPlanByCode("011PedFlow-365");
 }
 
 export function getMiniFatMonthly() {
-  return getPlanByCode("002MnFAT-01");
+  return getPlanByCode("002MnFAT-030");
 }
 
 export function getMiniFatAnnual() {
-  return getPlanByCode("002MnFAT-12");
+  return getPlanByCode("002MnFAT-365");
 }
 
 export function getGdprAddetto() {
-  return getPlanByCode("02-GDPR-00");
+  return getPlanByCode("02-GDPR-00-090");
 }
 
 export function getGdprCompleto() {
-  return getPlanByCode("01-GDPR-00");
+  return getPlanByCode("01-GDPR-00-090");
 }
 
 export function toCartItem(plan: PricingPlan, domain: string) {
