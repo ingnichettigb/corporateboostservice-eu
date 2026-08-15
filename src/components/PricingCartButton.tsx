@@ -12,7 +12,7 @@ type CatalogRow = {
   code: string;
   name: string;
   price_eur: number;
-  validity_months: number;
+  validity_days: number;
 };
 
 function formatPrice(n: number) {
@@ -56,7 +56,7 @@ export function PricingCartButton({
     queryFn: async (): Promise<CatalogRow | null> => {
       const { data, error } = await supabase
         .from("product_catalog")
-        .select("code, name, price_eur, validity_months")
+        .select("code, name, price_eur, validity_days")
         .eq("code", code)
         .eq("is_public", true)
         .maybeSingle();
@@ -74,9 +74,9 @@ export function PricingCartButton({
     ? formatPrice(row.price_eur)
     : fallback?.price ?? "";
   const durationText = row
-    ? `${row.validity_months} ${row.validity_months === 1 ? t("legal.prezzi.month") : t("legal.prezzi.months")}`
+    ? `${row.validity_days} ${row.validity_days === 1 ? t("legal.prezzi.day") : t("legal.prezzi.days")}`
     : fallback
-      ? `${fallback.duration} ${fallback.duration === "1" ? t("legal.prezzi.month") : t("legal.prezzi.months")}`
+      ? `${fallback.duration} ${fallback.duration === "1" ? t("legal.prezzi.day") : t("legal.prezzi.days")}`
       : "";
   const hasDetails = Boolean(serviceName && priceText && durationText);
 
@@ -101,13 +101,23 @@ export function PricingCartButton({
       aria-label={ariaLabel}
       style={style}
       onClick={() => {
-        if (!fallback) return;
+        // Auto-compila dalla riga live del catalogo (row) quando disponibile;
+        // il fallback statico serve solo se la query non ha ancora risposto.
+        const source = row
+          ? {
+              code: row.code,
+              name: row.name,
+              price: formatPrice(row.price_eur),
+              duration: String(row.validity_days),
+            }
+          : fallback;
+        if (!source) return;
         addItem({
-          id: fallback.code,
-          name: fallback.name,
-          price: fallback.price,
-          duration: fallback.duration,
-          domain: fallback.code,
+          id: source.code,
+          name: source.name,
+          price: source.price,
+          duration: source.duration,
+          domain: source.code,
         });
         toast.success(t("legal.cart.addedToast"));
       }}

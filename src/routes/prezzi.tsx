@@ -9,7 +9,7 @@ import { PricingCartButton } from "@/components/PricingCartButton";
 import { pricingItems } from "@/i18n/locales/pages/legal";
 import { supabase } from "@/integrations/supabase/client";
 
-type CatalogRow = { code: string; name: string; price_eur: number; validity_months: number };
+type CatalogRow = { code: string; name: string; price_eur: number; validity_days: number };
 
 
 export const Route = createFileRoute("/prezzi")({
@@ -37,7 +37,7 @@ const related = [
 
 function PrezziPage() {
   const { t } = useTranslation();
-  const monthsLabel = (d: string) => `${d} ${d === "1" ? t("legal.prezzi.month") : t("legal.prezzi.months")}`;
+  const daysLabel = (d: string) => `${d} ${d === "1" ? t("legal.prezzi.day") : t("legal.prezzi.days")}`;
 
   const codes = pricingItems.map((p) => p.code);
   const { data: catalog, isLoading } = useQuery({
@@ -45,7 +45,7 @@ function PrezziPage() {
     queryFn: async (): Promise<Map<string, CatalogRow>> => {
       const { data, error } = await supabase
         .from("product_catalog")
-        .select("code, name, price_eur, validity_months")
+        .select("code, name, price_eur, validity_days")
         .in("code", codes)
         .eq("is_public", true);
       if (error) throw error;
@@ -63,8 +63,8 @@ function PrezziPage() {
     const s = Number.isInteger(n) ? n.toString() : n.toFixed(2);
     return `${s}€`;
   };
-  const formatDuration = (m: number) =>
-    `${m} ${m === 1 ? t("legal.prezzi.month") : t("legal.prezzi.months")}`;
+  const formatDuration = (d: number) =>
+    `${d} ${d === 1 ? t("legal.prezzi.day") : t("legal.prezzi.days")}`;
 
   const Skeleton = ({ w = "w-16" }: { w?: string }) => (
     <span className={`inline-block h-5 ${w} animate-pulse bg-muted rounded align-middle`} />
@@ -84,7 +84,7 @@ function PrezziPage() {
   const DurationCell = ({ item }: { item: (typeof pricingItems)[number] }) => {
     const row = catalog?.get(item.code);
     if (isLoading && !row) return <Skeleton w="w-16" />;
-    return <>{row ? formatDuration(row.validity_months) : monthsLabel(item.duration)}</>;
+    return <>{row ? formatDuration(row.validity_days) : daysLabel(item.duration)}</>;
   };
 
 

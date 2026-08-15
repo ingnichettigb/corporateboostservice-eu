@@ -135,6 +135,8 @@ export const legal = {
       relatedHeading: "Altre pagine legali",
       months: "mesi",
       month: "mese",
+      days: "giorni",
+      day: "giorno",
       underConstruction: "In costruzione",
     },
 
@@ -436,6 +438,8 @@ export const legal = {
       relatedHeading: "Other legal pages",
       months: "months",
       month: "month",
+      days: "days",
+      day: "day",
       underConstruction: "Under construction",
     },
 
@@ -601,12 +605,23 @@ export const legal = {
 };
 
 export const pricingItems = [
-  { id: 1, code: "001SmMntnnc-12", name: "Smart maintenance", price: "700€", duration: "12" },
-  { id: 2, code: "001SmMntnnc-01", name: "Smart maintenance", price: "60€", duration: "1" },
-  { id: 3, code: "002MnFAT-12", name: "Mini FAT", price: "600€", duration: "12" },
-  { id: 4, code: "002MnFAT-01", name: "Mini FAT", price: "50€", duration: "1" },
-  { id: 5, code: "011PedFlow-01", name: "Calcolo gruppo fluido CE PED", price: "50€", duration: "1" },
-  { id: 6, code: "012PedFlow-12", name: "Calcolo gruppo fluido CE PED", price: "500€", duration: "12" },
-  { id: 7, code: "02-GDPR-00", name: "Corso Privacy Addetto", price: "40€", duration: "3" },
-  { id: 8, code: "01-GDPR-00", name: "Corso Privacy Completo", price: "80€", duration: "3" },
+  // Smart maintenance
+  { id: 1, code: "001SmMntnnc-002", name: "Smart maintenance (uso singolo)", price: "40€", duration: "2" },
+  { id: 2, code: "001SmMntnnc-030", name: "Smart maintenance (mensile)", price: "60€", duration: "30" },
+  { id: 3, code: "001SmMntnnc-365", name: "Smart maintenance (annuale)", price: "700€", duration: "365" },
+  // Mini FAT
+  { id: 4, code: "002MnFAT-002", name: "Mini FAT (uso singolo)", price: "30€", duration: "2" },
+  { id: 5, code: "002MnFAT-030", name: "Mini FAT (mensile)", price: "50€", duration: "30" },
+  { id: 6, code: "002MnFAT-365", name: "Mini FAT (annuale)", price: "600€", duration: "365" },
+  // Calcolo gruppo fluido CE PED
+  { id: 7, code: "011PedFlow-002", name: "Calcolo gruppo fluido CE PED (uso singolo)", price: "30€", duration: "2" },
+  { id: 8, code: "011PedFlow-030", name: "Calcolo gruppo fluido CE PED (mensile)", price: "50€", duration: "30" },
+  { id: 9, code: "011PedFlow-365", name: "Calcolo gruppo fluido CE PED (annuale)", price: "500€", duration: "365" },
+  // Taratura Serbatoio
+  { id: 10, code: "001TARATURE-002", name: "Taratura Serbatoio (uso singolo)", price: "50€", duration: "2" },
+  { id: 11, code: "001TARATURE-030", name: "Taratura Serbatoio (mensile)", price: "100€", duration: "30" },
+  { id: 12, code: "001TARATURE-365", name: "Taratura Serbatoio (annuale)", price: "900€", duration: "365" },
+  // Corsi
+  { id: 13, code: "02-GDPR-00-090", name: "Corso Privacy Addetto", price: "40€", duration: "90" },
+  { id: 14, code: "01-GDPR-00-090", name: "Corso Privacy Completo", price: "80€", duration: "90" },
 ];
