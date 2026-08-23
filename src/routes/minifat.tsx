@@ -108,8 +108,10 @@ function MiniFatPage() {
                 {t("minifat.heroDesc")}
               </p>
               <div className="mt-8 flex flex-col items-center lg:items-start gap-3">
-                <MiniFatCta />
-                <MiniFatCta annual />
+                <MiniFatCta variant="single" />
+                <MiniFatCta variant="monthly" />
+                <MiniFatCta variant="annual" />
+
                 <TaxNote className="text-center lg:text-left max-w-md" />
               </div>
 

@@ -229,7 +229,7 @@ function PrivacyGdprPage() {
               </Button>
             </div>
             <div className="mt-4 max-w-sm mx-auto">
-              <PricingCartButton code="01-GDPR-00-090" index={8} full />
+              <PricingCartButton code="01-GDPR-00-090" index={14} full />
             </div>
 
           </div>
@@ -246,7 +246,7 @@ function PrivacyGdprPage() {
               <p className="mt-4 text-foreground/85 max-w-3xl mx-auto">{t("privacyGdpr.whatP1")}</p>
               <p className="mt-3 text-foreground/80 max-w-3xl mx-auto">{t("privacyGdpr.whatP2")}</p>
               <div className="mt-6 max-w-xl mx-auto">
-                <PricingCartButton code="01-GDPR-00-090" index={8} full />
+                <PricingCartButton code="01-GDPR-00-090" index={14} full />
               </div>
             </div>
 
@@ -281,7 +281,7 @@ function PrivacyGdprPage() {
               <h2 className="text-3xl md:text-4xl font-bold">{t("privacyGdpr.prTitle")}</h2>
               <p className="mt-3 text-foreground/80 max-w-2xl mx-auto">{t("privacyGdpr.prSubtitle")}</p>
               <div className="mt-6 max-w-xl mx-auto">
-                <PricingCartButton code="01-GDPR-00-090" index={8} full />
+                <PricingCartButton code="01-GDPR-00-090" index={14} full />
               </div>
             </div>
 
@@ -316,7 +316,7 @@ function PrivacyGdprPage() {
               <h2 className="text-3xl md:text-4xl font-bold">{t("privacyGdpr.riTitle")}</h2>
               <p className="mt-3 text-foreground/80 max-w-2xl mx-auto">{t("privacyGdpr.riSubtitle")}</p>
               <div className="mt-6 max-w-xl mx-auto">
-                <PricingCartButton code="01-GDPR-00-090" index={8} full />
+                <PricingCartButton code="01-GDPR-00-090" index={14} full />
               </div>
             </div>
 
@@ -346,7 +346,7 @@ function PrivacyGdprPage() {
               <h2 className="text-3xl md:text-4xl font-bold">{t("privacyGdpr.fiTitle")}</h2>
               <p className="mt-3 text-foreground/80 max-w-2xl mx-auto">{t("privacyGdpr.fiSubtitle")}</p>
               <div className="mt-6 max-w-xl mx-auto">
-                <PricingCartButton code="01-GDPR-00-090" index={8} full />
+                <PricingCartButton code="01-GDPR-00-090" index={14} full />
               </div>
             </div>
 
@@ -388,7 +388,7 @@ function PrivacyGdprPage() {
               <h2 className="text-3xl md:text-4xl font-bold">{t("privacyGdpr.goTitle")}</h2>
               <p className="mt-3 text-foreground/80 max-w-2xl mx-auto">{t("privacyGdpr.goSubtitle")}</p>
               <div className="mt-6 max-w-xl mx-auto">
-                <PricingCartButton code="01-GDPR-00-090" index={8} full />
+                <PricingCartButton code="01-GDPR-00-090" index={14} full />
               </div>
             </div>
 
@@ -441,7 +441,7 @@ function PrivacyGdprPage() {
               <h2 className="text-3xl md:text-4xl font-bold">{t("privacyGdpr.seTitle")}</h2>
               <p className="mt-3 text-foreground/80 max-w-2xl mx-auto">{t("privacyGdpr.seSubtitle")}</p>
               <div className="mt-6 max-w-xl mx-auto">
-                <PricingCartButton code="01-GDPR-00-090" index={8} full />
+                <PricingCartButton code="01-GDPR-00-090" index={14} full />
               </div>
             </div>
 
@@ -479,7 +479,7 @@ function PrivacyGdprPage() {
               </p>
               <h2 className="text-3xl md:text-4xl font-bold">{t("privacyGdpr.dbTitle")}</h2>
               <div className="mt-6 max-w-xl mx-auto">
-                <PricingCartButton code="01-GDPR-00-090" index={8} full />
+                <PricingCartButton code="01-GDPR-00-090" index={14} full />
               </div>
             </div>
 
@@ -517,7 +517,7 @@ function PrivacyGdprPage() {
               </p>
               <h2 className="text-3xl md:text-4xl font-bold">{t("privacyGdpr.orTitle")}</h2>
               <div className="mt-6 max-w-xl mx-auto">
-                <PricingCartButton code="01-GDPR-00-090" index={8} full />
+                <PricingCartButton code="01-GDPR-00-090" index={14} full />
               </div>
             </div>
 
@@ -544,7 +544,7 @@ function PrivacyGdprPage() {
               </p>
               <h2 className="text-3xl md:text-4xl font-bold">{t("privacyGdpr.saTitle")}</h2>
               <div className="mt-6 max-w-xl mx-auto">
-                <PricingCartButton code="01-GDPR-00-090" index={8} full />
+                <PricingCartButton code="01-GDPR-00-090" index={14} full />
               </div>
             </div>
 
@@ -617,7 +617,7 @@ function PrivacyGdprPage() {
               ))}
             </div>
             <div className="mt-8 max-w-sm mx-auto">
-              <PricingCartButton code="01-GDPR-00-090" index={8} full />
+              <PricingCartButton code="01-GDPR-00-090" index={14} full />
             </div>
           </div>
         </section>
@@ -642,7 +642,7 @@ function PrivacyGdprPage() {
                 </Button>
               </div>
               <div className="mt-4 max-w-sm mx-auto">
-                <PricingCartButton code="01-GDPR-00-090" index={8} full />
+                <PricingCartButton code="01-GDPR-00-090" index={14} full />
               </div>
 
             </div>
