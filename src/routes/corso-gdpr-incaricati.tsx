@@ -36,7 +36,7 @@ function FreeCourseButton({ className = "" }: { className?: string }) {
   return (
     <PricingCartButton
       code="02-GDPR-00-090"
-      index={7}
+      index={13}
       full
       className={`max-w-md mx-auto ${className}`}
     />

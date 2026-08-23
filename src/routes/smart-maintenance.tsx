@@ -102,8 +102,20 @@ const benefitIcons = [Wifi, CheckCircle2, Layers, Gauge, HardDrive, ShieldCheck]
 const privacyIcons = [HardDrive, Lock, FolderArchive];
 
 
+function SingleUseButton({ className = "" }: { className?: string }) {
+  // Riga 1 della pagina Prezzi — 001SmMntnnc-002 (uso singolo).
+  return (
+    <PricingCartButton
+      code="001SmMntnnc-002"
+      index={1}
+      full
+      className={className}
+    />
+  );
+}
+
 function ActivateButton({ className = "" }: { className?: string }) {
-  // Riusa il bottone della pagina Prezzi (riga 2 — 001SmMntnnc-01).
+  // Riga 2 della pagina Prezzi — 001SmMntnnc-030 (mensile).
   // Fonte unica del prezzo/durata: tabella product_catalog di Supabase.
   return (
     <PricingCartButton
@@ -117,12 +129,12 @@ function ActivateButton({ className = "" }: { className?: string }) {
 
 
 function AnnualActivateButton({ className = "" }: { className?: string }) {
-  // Riusa il bottone della pagina Prezzi (riga 1 — 001SmMntnnc-12).
+  // Riga 3 della pagina Prezzi — 001SmMntnnc-365 (annuale).
   // Fonte unica del prezzo/durata: tabella product_catalog di Supabase.
   return (
     <PricingCartButton
       code="001SmMntnnc-365"
-      index={1}
+      index={3}
       full
       className={className}
     />
@@ -132,11 +144,13 @@ function AnnualActivateButton({ className = "" }: { className?: string }) {
 function ActivateButtons({ className = "" }: { className?: string }) {
   return (
     <div className={`flex flex-col gap-3 justify-center items-center ${className}`}>
+      <SingleUseButton />
       <ActivateButton />
       <AnnualActivateButton />
     </div>
   );
 }
+
 
 function SmartMaintenancePage() {
   const { t } = useTranslation();
