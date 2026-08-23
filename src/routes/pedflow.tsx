@@ -77,22 +77,28 @@ const PEDFLOW_MONTHLY = getPedFlowMonthly();
 const PEDFLOW_ANNUAL = getPedFlowAnnual();
 const PEDFLOW_DOMAIN = "pedflow.corporateboostservice.eu";
 
+function SingleUseButton({ className = "" }: { className?: string }) {
+  return <PricingCartButton code="011PedFlow-002" index={7} full className={className} />;
+}
+
 function ActivateButton({ className = "" }: { className?: string }) {
-  return <PricingCartButton code="011PedFlow-030" index={5} full className={className} />;
+  return <PricingCartButton code="011PedFlow-030" index={8} full className={className} />;
 }
 
 function AnnualActivateButton({ className = "" }: { className?: string }) {
-  return <PricingCartButton code="011PedFlow-365" index={6} full className={className} />;
+  return <PricingCartButton code="011PedFlow-365" index={9} full className={className} />;
 }
 
 function ActivateButtons({ className = "" }: { className?: string }) {
   return (
     <div className={`flex flex-col gap-3 justify-center items-center ${className}`}>
+      <SingleUseButton />
       <ActivateButton />
       <AnnualActivateButton />
     </div>
   );
 }
+
 
 export const Route = createFileRoute("/pedflow")({
   head: () => ({
