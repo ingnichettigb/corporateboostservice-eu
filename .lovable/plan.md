@@ -44,7 +44,8 @@ Prezzi (riga → codice)          Landing            Bottoni presenti      Indic
 - `src/routes/corsi.tsx`, `src/routes/corso-privacy-gdpr.tsx`, `src/routes/corso-gdpr-incaricati.tsx`: solo aggiornamento indici.
 - Prezzi, nomi e durate continuano a venire da `product_catalog` su Cloud: nessun valore hardcoded.
 
-## Da confermare
+## Confermato
 
-- Vuoi che gli indici restino sincronizzati con le righe di `/prezzi`? (li allineo così)
-- Serve anche una landing page per "Taratura Serbatoio"?
+- Indici sincronizzati con le righe di `/prezzi` (1-14).
+- Nessuna landing page per "Taratura Serbatoio".
+
