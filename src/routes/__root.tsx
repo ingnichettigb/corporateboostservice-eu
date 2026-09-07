@@ -1,9 +1,11 @@
+import { useEffect, useRef } from "react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
   Outlet,
   Link,
   createRootRouteWithContext,
   useRouter,
+  useRouterState,
   HeadContent,
   Scripts,
 } from "@tanstack/react-router";
@@ -98,6 +100,24 @@ function RootShell({ children }: { children: React.ReactNode }) {
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+  const pathname = useRouterState({ select: (s) => s.location.pathname });
+  const isFirstRender = useRef(true);
+
+  // GA4: page_view anche sui cambi di rotta client-side (SPA).
+  // Il config iniziale già traccia il primo caricamento: lo saltiamo.
+  useEffect(() => {
+    if (isFirstRender.current) {
+      isFirstRender.current = false;
+      return;
+    }
+    const w = window as unknown as { gtag?: (...args: unknown[]) => void };
+    w.gtag?.("event", "page_view", {
+      page_path: pathname,
+      page_title: document.title,
+      page_location: window.location.href,
+    });
+  }, [pathname]);
+
   return (
     <QueryClientProvider client={queryClient}>
       <CartProvider>
