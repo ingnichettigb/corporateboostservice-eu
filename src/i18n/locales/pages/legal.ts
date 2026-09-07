@@ -624,4 +624,8 @@ export const pricingItems = [
   // Corsi
   { id: 13, code: "02-GDPR-00-090", name: "Corso Privacy Addetto", price: "40€", duration: "90" },
   { id: 14, code: "01-GDPR-00-090", name: "Corso Privacy Completo", price: "80€", duration: "90" },
+  // Da calendario a WhatsApp
+  { id: 15, code: "020AgendaShare-015", name: "Da calendario a WhatsApp (15 giorni)", price: "5€", duration: "15" },
+  { id: 16, code: "020AgendaShare-030", name: "Da calendario a WhatsApp (30 giorni)", price: "7€", duration: "30" },
+  { id: 17, code: "020AgendaShare-365", name: "Da calendario a WhatsApp (365 giorni)", price: "50€", duration: "365" },
 ];
