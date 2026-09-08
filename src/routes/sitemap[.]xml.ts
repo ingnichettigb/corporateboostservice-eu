@@ -17,6 +17,7 @@ const entries: SitemapEntry[] = [
   { path: "/pedflow", changefreq: "monthly", priority: "0.8" },
   { path: "/minifat", changefreq: "monthly", priority: "0.8" },
   { path: "/smart-maintenance", changefreq: "monthly", priority: "0.8" },
+  { path: "/agenda-share", changefreq: "monthly", priority: "0.8" },
   { path: "/corso-privacy-gdpr", changefreq: "monthly", priority: "0.8" },
   { path: "/corso-gdpr-incaricati", changefreq: "monthly", priority: "0.8" },
   { path: "/mappa-del-sito", changefreq: "monthly", priority: "0.4" },

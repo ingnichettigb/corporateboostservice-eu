@@ -98,6 +98,10 @@
         "title": "MiniFAT",
         "desc": "MiniFAT is an application that optimizes acceptance tests by preparing in advance the documentation needed for the FAT inspection."
       },
+      "agendaShare": {
+        "title": "Agenda Share",
+        "desc": "From calendar to WhatsApp: connect Google Calendar or Outlook, pick a period and get a tidy summary ready to send — no manual copying."
+      },
       "fat": {
         "title": "FAT — Factory Acceptance Test",
         "desc": "Digital management of factory acceptance tests: checklists, photo evidence and signed reports."

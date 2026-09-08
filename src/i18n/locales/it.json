@@ -98,6 +98,10 @@
         "title": "MiniFAT",
         "desc": "MiniFAT è un'applicazione che ottimizza i collaudi preparando in anticipo la documentazione necessaria per il sopralluogo FAT."
       },
+      "agendaShare": {
+        "title": "Agenda Share",
+        "desc": "Da calendario a WhatsApp: collega Google Calendar o Outlook, scegli il periodo e ottieni un riepilogo ordinato pronto da inviare, senza copiare niente a mano."
+      },
       "fat": {
         "title": "FAT — Factory Acceptance Test",
         "desc": "Gestione digitale dei collaudi in fabbrica: checklist, evidenze fotografiche e verbali firmati."

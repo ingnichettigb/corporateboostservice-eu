@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AgendaShareRouteImport } from './routes/agenda-share'
 import { Route as ApplicazioniRouteImport } from './routes/applicazioni'
 import { Route as AssistenzaGdprRouteImport } from './routes/assistenza-gdpr'
 import { Route as CarrelloRouteImport } from './routes/carrello'
@@ -33,6 +34,11 @@ import { Route as TerminiECondizioniRouteImport } from './routes/termini-e-condi
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AgendaShareRoute = AgendaShareRouteImport.update({
+  id: '/agenda-share',
+  path: '/agenda-share',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ApplicazioniRoute = ApplicazioniRouteImport.update({
@@ -134,6 +140,7 @@ const TerminiECondizioniRoute = TerminiECondizioniRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/agenda-share': typeof AgendaShareRoute
   '/applicazioni': typeof ApplicazioniRoute
   '/assistenza-gdpr': typeof AssistenzaGdprRoute
   '/carrello': typeof CarrelloRoute
@@ -156,6 +163,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/agenda-share': typeof AgendaShareRoute
   '/applicazioni': typeof ApplicazioniRoute
   '/assistenza-gdpr': typeof AssistenzaGdprRoute
   '/carrello': typeof CarrelloRoute
@@ -179,6 +187,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/agenda-share': typeof AgendaShareRoute
   '/applicazioni': typeof ApplicazioniRoute
   '/assistenza-gdpr': typeof AssistenzaGdprRoute
   '/carrello': typeof CarrelloRoute
@@ -203,6 +212,7 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/agenda-share'
     | '/applicazioni'
     | '/assistenza-gdpr'
     | '/carrello'
@@ -225,6 +235,7 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/agenda-share'
     | '/applicazioni'
     | '/assistenza-gdpr'
     | '/carrello'
@@ -247,6 +258,7 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/agenda-share'
     | '/applicazioni'
     | '/assistenza-gdpr'
     | '/carrello'
@@ -270,6 +282,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AgendaShareRoute: typeof AgendaShareRoute
   ApplicazioniRoute: typeof ApplicazioniRoute
   AssistenzaGdprRoute: typeof AssistenzaGdprRoute
   CarrelloRoute: typeof CarrelloRoute
@@ -298,6 +311,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/agenda-share': {
+      id: '/agenda-share'
+      path: '/agenda-share'
+      fullPath: '/agenda-share'
+      preLoaderRoute: typeof AgendaShareRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/applicazioni': {
@@ -438,6 +458,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AgendaShareRoute: AgendaShareRoute,
   ApplicazioniRoute: ApplicazioniRoute,
   AssistenzaGdprRoute: AssistenzaGdprRoute,
   CarrelloRoute: CarrelloRoute,
