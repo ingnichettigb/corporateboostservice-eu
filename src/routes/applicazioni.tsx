@@ -49,9 +49,10 @@ function AppPage() {
               const wip = "wip" in item ? item.wip : false;
               const routeMap: Record<string, string> = {
                 pedFlow: "/pedflow",
-                
+
                 miniFat: "/minifat",
                 smartMaintenance: "/smart-maintenance",
+                agendaShare: "/agenda-share",
               };
               const to = !wip ? routeMap[key] : undefined;
               const logo = image ? (

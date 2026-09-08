@@ -42,6 +42,7 @@ const groups: { heading: string; links: { to: string; label: string }[] }[] = [
       { to: "/pedflow", label: "PedFlow — Direttiva PED" },
       { to: "/minifat", label: "MiniFAT — Factory Acceptance Test" },
       { to: "/smart-maintenance", label: "Smart Maintenance — Report tecnici" },
+      { to: "/agenda-share", label: "Agenda Share — Da calendario a WhatsApp" },
     ],
   },
   {
