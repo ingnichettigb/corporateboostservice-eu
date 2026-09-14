@@ -36,6 +36,7 @@ export function PricingCartButton({
   base = false,
   scale,
   className = "",
+  construction = false,
 }: {
   code: string;
   index: number;
@@ -45,6 +46,8 @@ export function PricingCartButton({
   /** fattore di scaling per i bottoni fuori dalla pagina Prezzi */
   scale?: number;
   className?: string;
+  /** true = bottone disabilitato con etichetta "In costruzione" */
+  construction?: boolean;
 }) {
   const { t } = useTranslation();
   const { addItem, has } = useCart();
