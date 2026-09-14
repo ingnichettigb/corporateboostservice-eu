@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { useQuery } from "@tanstack/react-query";
-import { Check, ShoppingCart } from "lucide-react";
+import { Check, Construction, ShoppingCart } from "lucide-react";
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
 import { pricingItems } from "@/i18n/locales/pages/legal";
@@ -36,6 +36,7 @@ export function PricingCartButton({
   base = false,
   scale,
   className = "",
+  construction = false,
 }: {
   code: string;
   index: number;
@@ -45,6 +46,8 @@ export function PricingCartButton({
   /** fattore di scaling per i bottoni fuori dalla pagina Prezzi */
   scale?: number;
   className?: string;
+  /** true = bottone disabilitato con etichetta "In costruzione" */
+  construction?: boolean;
 }) {
   const { t } = useTranslation();
   const { addItem, has } = useCart();
@@ -81,26 +84,31 @@ export function PricingCartButton({
   const hasDetails = Boolean(serviceName && priceText && durationText);
 
   const inCart = has(code);
-  const ariaLabel = hasDetails
-    ? `Riga ${index}. ${t("legal.cart.add")}: ${serviceName}, ${priceText} più iva e tasse, durata ${durationText}`
-    : `Riga ${index}. ${t("legal.cart.add")}`;
+  const isDisabled = inCart || construction;
+  const ariaLabel = construction
+    ? `Riga ${index}. ${t("legal.prezzi.underConstruction")}: ${serviceName}`
+    : hasDetails
+      ? `Riga ${index}. ${t("legal.cart.add")}: ${serviceName}, ${priceText} più iva e tasse, durata ${durationText}`
+      : `Riga ${index}. ${t("legal.cart.add")}`;
 
   const appliedScale = base ? 1 : resolvePricingButtonScale(code, scale);
   const style = pricingButtonStyle(appliedScale);
 
   const btnBase =
     "relative inline-flex flex-col items-center justify-center font-semibold transition-colors text-center";
-  const btnState = inCart
-    ? "border border-border bg-muted text-foreground/70 cursor-default"
-    : "bg-primary text-primary-foreground hover:bg-primary/90";
+  const btnState = construction
+    ? "border border-border bg-muted text-foreground/70 cursor-not-allowed"
+    : inCart
+      ? "border border-border bg-muted text-foreground/70 cursor-default"
+      : "bg-primary text-primary-foreground hover:bg-primary/90";
 
   return (
     <button
       type="button"
-      disabled={inCart}
+      disabled={isDisabled}
       aria-label={ariaLabel}
       style={style}
-      onClick={() => {
+      onClick={construction ? undefined : () => {
         // Auto-compila dalla riga live del catalogo (row) quando disponibile;
         // il fallback statico serve solo se la query non ha ancora risposto.
         const source = row
@@ -131,13 +139,15 @@ export function PricingCartButton({
         {index}
       </span>
       <span className="inline-flex items-center gap-1.5">
-        {inCart ? (
+        {construction ? (
+          <Construction style={{ height: "var(--pcb-icon)", width: "var(--pcb-icon)" }} aria-hidden />
+        ) : inCart ? (
           <Check style={{ height: "var(--pcb-icon)", width: "var(--pcb-icon)" }} aria-hidden />
         ) : (
           <ShoppingCart style={{ height: "var(--pcb-icon)", width: "var(--pcb-icon)" }} aria-hidden />
         )}
         <span className="font-semibold">
-          {inCart ? t("legal.cart.added") : t("legal.cart.add")}
+          {construction ? t("legal.prezzi.underConstruction") : inCart ? t("legal.cart.added") : t("legal.cart.add")}
         </span>
       </span>
       {hasDetails && (
