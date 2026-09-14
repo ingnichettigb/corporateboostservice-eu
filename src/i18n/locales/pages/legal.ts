@@ -628,4 +628,6 @@ export const pricingItems = [
   { id: 15, code: "020AgendaShare-015", name: "Da calendario a WhatsApp (15 giorni)", price: "5€", duration: "15" },
   { id: 16, code: "020AgendaShare-030", name: "Da calendario a WhatsApp (30 giorni)", price: "7€", duration: "30" },
   { id: 17, code: "020AgendaShare-365", name: "Da calendario a WhatsApp (365 giorni)", price: "50€", duration: "365" },
+  // Registro Siti Web Aziendali
+  { id: 18, code: "040RegistroWEB-365", name: "REGISTRO SITI WEB AZIENDALI", price: "90€", duration: "365" },
 ];
