@@ -123,7 +123,7 @@ function PrezziPage() {
 
                 {/* TODO: sostituire con link Paddle */}
                 <td className="px-5 py-4 align-middle w-[19rem]">
-                  <PricingCartButton code={item.code} index={index + 1} base full construction={item.code === "040RegistroWEB-365"} />
+                  <PricingCartButton code={item.code} index={index + 1} base full />
                 </td>
 
               </tr>
@@ -147,7 +147,7 @@ function PrezziPage() {
             </div>
             {/* TODO: sostituire con link Paddle */}
             <div className="mt-4">
-              <PricingCartButton code={item.code} index={index + 1} base full construction={item.code === "040RegistroWEB-365"} />
+              <PricingCartButton code={item.code} index={index + 1} base full />
             </div>
           </div>
         ))}
