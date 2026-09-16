@@ -1,0 +1,8 @@
+export const de = {
+  brand: "CorporateBoostService.eu", motto: "DIGITALE APPS & KURSE", skip: "Zum Inhalt",
+  nav: { home: "Startseite", corsi: "Kurse", applicazioni: "Anwendungen", contatti: "Kontakt" },
+  a11y: { language: "Sprache", largeText: "Großer Text", largeTextOn: "Großer Text aktiv", highContrast: "Hoher Kontrast", highContrastOn: "Hoher Kontrast aktiv" },
+  app: { kicker: "Digitale Lösungen", title: "Anwendungen für Unternehmen", subtitle: "Digitale Werkzeuge für einfachere Abläufe.", more: "Mehr erfahren", feat1: "Schnell einsatzbereit", feat2: "Sicher und konform", feat3: "Laufende Updates", wip: "In Arbeit", items: { registroCredenziali: { title: "Zugangsdatenregister für Lieferanten", desc: "Lieferantenportale, Zugangsdaten und berechtigte Personen sicher an einem gemeinsamen Ort verwalten." } } },
+  footer: { tagline: "Online-Kurse und digitale Anwendungen für Unternehmen und Fachleute.", rights: "Alle Rechte vorbehalten", phone: "Telefon", vat: "USt-IdNr.", address: "Adresse" },
+  legal: { navPrezzi: "Preise", navLegalMenu: "Rechtliches", navTermini: "Allgemeine Bedingungen", navServizio: "Nutzungsbedingungen", navPrivacy: "Datenschutz", navRimborso: "Rückerstattungen", navPagamenti: "Zahlungen & MoR", comingSoonBadge: "Käufe demnächst verfügbar", comingSoonNote: "Das Paddle-Zahlungssystem ist noch nicht aktiv. Derzeit können keine Transaktionen abgeschlossen werden.", cart: { title: "Warenkorb", nav: "Warenkorb", add: "In den Warenkorb", added: "Im Warenkorb", addedToast: "Zum Warenkorb hinzugefügt" }, prezzi: { day: "Tag", days: "Tage", underConstruction: "In Arbeit" } },
+};
