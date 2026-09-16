@@ -102,6 +102,10 @@
         "title": "Agenda Share",
         "desc": "Da calendario a WhatsApp: collega Google Calendar o Outlook, scegli il periodo e ottieni un riepilogo ordinato pronto da inviare, senza copiare niente a mano."
       },
+      "registroCredenziali": {
+        "title": "Registro Credenziali Fornitori",
+        "desc": "Gestisci portali, credenziali e persone autorizzate in un unico spazio aziendale condiviso e sicuro."
+      },
       "fat": {
         "title": "FAT — Factory Acceptance Test",
         "desc": "Gestione digitale dei collaudi in fabbrica: checklist, evidenze fotografiche e verbali firmati."
@@ -142,6 +146,8 @@
   },
   "footer": {
     "tagline": "Corsi online e applicazioni digitali per imprese e professionisti.",
+    "paddle": "Pagamenti gestiti da Paddle",
+    "siteMap": "Mappa del sito",
     "rights": "Tutti i diritti riservati",
     "phone": "Telefono",
     "vat": "P.IVA",

@@ -11,6 +11,7 @@ export function SiteFooter() {
           <p className="text-xl font-bold mb-1">{t("brand")}</p>
           <p className="text-sm font-semibold uppercase tracking-wider text-white/90 mb-3">{t("motto")}</p>
           <p className="text-white/85 leading-relaxed">{t("footer.tagline")}</p>
+          <p className="mt-3 text-sm font-semibold text-white/90">{t("footer.paddle")}</p>
         </div>
 
         <address className="not-italic space-y-3 text-white/95">
@@ -34,7 +35,7 @@ export function SiteFooter() {
           <Link to="/privacy-policy" className="hover:underline focus-visible:underline">{t("legal.navPrivacy")}</Link>
           <Link to="/politica-di-rimborso" className="hover:underline focus-visible:underline">{t("legal.navRimborso")}</Link>
           <Link to="/pagamenti-merchant-of-record" className="hover:underline focus-visible:underline">{t("legal.navPagamenti")}</Link>
-          <Link to="/mappa-del-sito" className="hover:underline focus-visible:underline">Mappa del sito</Link>
+          <Link to="/mappa-del-sito" className="hover:underline focus-visible:underline">{t("footer.siteMap")}</Link>
 
         </nav>
       </div>

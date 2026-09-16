@@ -7,6 +7,8 @@ import { legal } from "./locales/pages/legal";
 import { privacyGdpr } from "./locales/pages/privacy-gdpr";
 import { smartMaintenance } from "./locales/pages/smart-maintenance";
 import { pedflow } from "./locales/pages/pedflow";
+import { de } from "./locales/de";
+import { es } from "./locales/es";
 
 if (!i18n.isInitialized) {
   i18n.use(initReactI18next).init({
@@ -31,9 +33,11 @@ if (!i18n.isInitialized) {
         },
         pedflow: pedflow.en,
       },
+      de: { translation: de },
+      es: { translation: es },
     },
     lng: "it",
-    fallbackLng: "it",
+    fallbackLng: { de: ["en"], es: ["en"], default: ["it"] },
     ns: ["translation", "pedflow"],
     defaultNS: "translation",
     interpolation: { escapeValue: false },

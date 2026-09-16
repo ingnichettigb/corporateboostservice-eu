@@ -26,6 +26,7 @@ import { Route as PedflowRouteImport } from './routes/pedflow'
 import { Route as PoliticaDiRimborsoRouteImport } from './routes/politica-di-rimborso'
 import { Route as PrezziRouteImport } from './routes/prezzi'
 import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
+import { Route as RegistroCredenzialiFornitoriRouteImport } from './routes/registro-credenziali-fornitori'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as SmartMaintenanceRouteImport } from './routes/smart-maintenance'
 import { Route as TerminiDiServizioRouteImport } from './routes/termini-di-servizio'
@@ -117,6 +118,12 @@ const PrivacyPolicyRoute = PrivacyPolicyRouteImport.update({
   path: '/privacy-policy',
   getParentRoute: () => rootRouteImport,
 } as any)
+const RegistroCredenzialiFornitoriRoute =
+  RegistroCredenzialiFornitoriRouteImport.update({
+    id: '/registro-credenziali-fornitori',
+    path: '/registro-credenziali-fornitori',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
   path: '/sitemap.xml',
@@ -156,6 +163,7 @@ export interface FileRoutesByFullPath {
   '/politica-di-rimborso': typeof PoliticaDiRimborsoRoute
   '/prezzi': typeof PrezziRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
+  '/registro-credenziali-fornitori': typeof RegistroCredenzialiFornitoriRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/smart-maintenance': typeof SmartMaintenanceRoute
   '/termini-di-servizio': typeof TerminiDiServizioRoute
@@ -179,6 +187,7 @@ export interface FileRoutesByTo {
   '/politica-di-rimborso': typeof PoliticaDiRimborsoRoute
   '/prezzi': typeof PrezziRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
+  '/registro-credenziali-fornitori': typeof RegistroCredenzialiFornitoriRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/smart-maintenance': typeof SmartMaintenanceRoute
   '/termini-di-servizio': typeof TerminiDiServizioRoute
@@ -203,6 +212,7 @@ export interface FileRoutesById {
   '/politica-di-rimborso': typeof PoliticaDiRimborsoRoute
   '/prezzi': typeof PrezziRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
+  '/registro-credenziali-fornitori': typeof RegistroCredenzialiFornitoriRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/smart-maintenance': typeof SmartMaintenanceRoute
   '/termini-di-servizio': typeof TerminiDiServizioRoute
@@ -228,6 +238,7 @@ export interface FileRouteTypes {
     | '/politica-di-rimborso'
     | '/prezzi'
     | '/privacy-policy'
+    | '/registro-credenziali-fornitori'
     | '/sitemap.xml'
     | '/smart-maintenance'
     | '/termini-di-servizio'
@@ -251,6 +262,7 @@ export interface FileRouteTypes {
     | '/politica-di-rimborso'
     | '/prezzi'
     | '/privacy-policy'
+    | '/registro-credenziali-fornitori'
     | '/sitemap.xml'
     | '/smart-maintenance'
     | '/termini-di-servizio'
@@ -274,6 +286,7 @@ export interface FileRouteTypes {
     | '/politica-di-rimborso'
     | '/prezzi'
     | '/privacy-policy'
+    | '/registro-credenziali-fornitori'
     | '/sitemap.xml'
     | '/smart-maintenance'
     | '/termini-di-servizio'
@@ -298,6 +311,7 @@ export interface RootRouteChildren {
   PoliticaDiRimborsoRoute: typeof PoliticaDiRimborsoRoute
   PrezziRoute: typeof PrezziRoute
   PrivacyPolicyRoute: typeof PrivacyPolicyRoute
+  RegistroCredenzialiFornitoriRoute: typeof RegistroCredenzialiFornitoriRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   SmartMaintenanceRoute: typeof SmartMaintenanceRoute
   TerminiDiServizioRoute: typeof TerminiDiServizioRoute
@@ -425,6 +439,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PrivacyPolicyRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/registro-credenziali-fornitori': {
+      id: '/registro-credenziali-fornitori'
+      path: '/registro-credenziali-fornitori'
+      fullPath: '/registro-credenziali-fornitori'
+      preLoaderRoute: typeof RegistroCredenzialiFornitoriRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/sitemap.xml': {
       id: '/sitemap.xml'
       path: '/sitemap.xml'
@@ -474,6 +495,7 @@ const rootRouteChildren: RootRouteChildren = {
   PoliticaDiRimborsoRoute: PoliticaDiRimborsoRoute,
   PrezziRoute: PrezziRoute,
   PrivacyPolicyRoute: PrivacyPolicyRoute,
+  RegistroCredenzialiFornitoriRoute: RegistroCredenzialiFornitoriRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   SmartMaintenanceRoute: SmartMaintenanceRoute,
   TerminiDiServizioRoute: TerminiDiServizioRoute,

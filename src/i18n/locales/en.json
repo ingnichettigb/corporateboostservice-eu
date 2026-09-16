@@ -102,6 +102,10 @@
         "title": "Agenda Share",
         "desc": "From calendar to WhatsApp: connect Google Calendar or Outlook, pick a period and get a tidy summary ready to send — no manual copying."
       },
+      "registroCredenziali": {
+        "title": "Supplier Credentials Register",
+        "desc": "Manage supplier portals, credentials and authorized people in one secure shared company space."
+      },
       "fat": {
         "title": "FAT — Factory Acceptance Test",
         "desc": "Digital management of factory acceptance tests: checklists, photo evidence and signed reports."
@@ -142,6 +146,8 @@
   },
   "footer": {
     "tagline": "Online courses and digital applications for companies and professionals.",
+    "paddle": "Payments managed by Paddle",
+    "siteMap": "Site map",
     "rights": "All rights reserved",
     "phone": "Phone",
     "vat": "VAT ID",
