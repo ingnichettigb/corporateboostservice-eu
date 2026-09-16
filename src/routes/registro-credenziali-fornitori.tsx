@@ -63,10 +63,10 @@ function SectionHeading({ kicker, title }: { kicker: string; title: string }) {
   );
 }
 
-function PriceBlock({ dark = false }: { dark?: boolean }) {
+function PriceBlock({ dark = false, anchor = false }: { dark?: boolean; anchor?: boolean }) {
   const { t } = useTranslation("registroCredenziali");
   return (
-    <div id={dark ? undefined : "prezzo"} className={`mx-auto mt-12 max-w-2xl text-center ${dark ? "text-primary-foreground" : ""}`}>
+    <div id={anchor ? "prezzo" : undefined} className={`mx-auto mt-12 max-w-2xl scroll-mt-36 text-center ${dark ? "text-primary-foreground" : ""}`}>
       <p className={`text-xs font-bold uppercase tracking-wider ${dark ? "text-primary-foreground/80" : "text-primary"}`}>{t("planKicker")}</p>
       <h3 className="mt-2 text-xl font-bold">{t("planTitle")}</h3>
       <p className={`mt-1 text-sm ${dark ? "text-primary-foreground/75" : "text-foreground/65"}`}>{t("planCode")}</p>
@@ -130,7 +130,7 @@ function RegistroCredenzialiPage() {
             </div>
             <RegisterMockup />
           </div>
-          <div className="container mx-auto max-w-6xl px-4"><PriceBlock /></div>
+          <div className="container mx-auto max-w-6xl px-4"><PriceBlock anchor /></div>
         </section>
 
         <section className="py-20">

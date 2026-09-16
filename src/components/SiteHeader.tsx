@@ -26,7 +26,7 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false);
   return (
     <header className="fixed top-0 inset-x-0 z-50 bg-background/95 backdrop-blur-md border-b-2 border-primary/20">
-      <nav className="container mx-auto flex items-center justify-between gap-3 px-4 py-3" aria-label="Main">
+      <nav className="container mx-auto flex items-center justify-between gap-2 px-2 py-3 sm:gap-3 sm:px-4" aria-label="Main">
         <Link to="/" className="flex items-center gap-3 font-bold tracking-tight shrink-0">
           <span className="h-11 w-11 rounded-lg [background:var(--gradient-hero)] flex items-center justify-center shadow-[var(--shadow-card)]">
             <ShieldCheck className="h-6 w-6 text-primary-foreground" aria-hidden />

@@ -6,6 +6,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { pricingItems } from "@/i18n/locales/pages/legal";
 import { useCart } from "@/lib/cart";
 import { pricingButtonStyle, resolvePricingButtonScale } from "@/lib/pricingButtonStyle";
+import { resolveTaxLang, taxDisclaimer } from "@/i18n/taxDisclaimer";
 
 
 type CatalogRow = {
@@ -49,7 +50,7 @@ export function PricingCartButton({
   /** true = bottone disabilitato con etichetta "In costruzione" */
   construction?: boolean;
 }) {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const { addItem, has } = useCart();
 
   const fallback = pricingItems.find((p) => p.code === code);
@@ -82,14 +83,15 @@ export function PricingCartButton({
       ? `${fallback.duration} ${fallback.duration === "1" ? t("legal.prezzi.day") : t("legal.prezzi.days")}`
       : "";
   const hasDetails = Boolean(serviceName && priceText && durationText);
+  const taxBadge = taxDisclaimer[resolveTaxLang(i18n.language)].badge;
 
   const inCart = has(code);
   const isDisabled = inCart || construction;
   const ariaLabel = construction
-    ? `Riga ${index}. ${t("legal.prezzi.underConstruction")}: ${serviceName}`
+      ? `${index}. ${t("legal.prezzi.underConstruction")}: ${serviceName}`
     : hasDetails
-      ? `Riga ${index}. ${t("legal.cart.add")}: ${serviceName}, ${priceText} più iva e tasse, durata ${durationText}`
-      : `Riga ${index}. ${t("legal.cart.add")}`;
+      ? `${index}. ${t("legal.cart.add")}: ${serviceName}, ${priceText} ${taxBadge}, ${durationText}`
+      : `${index}. ${t("legal.cart.add")}`;
 
   const appliedScale = base ? 1 : resolvePricingButtonScale(code, scale);
   const style = pricingButtonStyle(appliedScale);
@@ -157,7 +159,7 @@ export function PricingCartButton({
         >
           <span className="truncate max-w-[12rem]">{serviceName}</span>
           <span className="whitespace-nowrap">
-            – {priceText} + iva e tasse – {durationText}
+            – {priceText} {taxBadge} – {durationText}
           </span>
         </span>
       )}
