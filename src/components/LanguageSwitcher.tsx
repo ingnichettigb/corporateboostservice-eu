@@ -6,7 +6,7 @@ export function LanguageSwitcher() {
   const { t } = useTranslation();
   return (
     <div role="group" aria-label={t("a11y.language")} className="inline-flex rounded-md border-2 border-foreground/20 overflow-hidden">
-      {(["it", "en"] as const).map((l) => (
+      {(["it", "en", "de", "es"] as const).map((l) => (
         <button
           key={l}
           type="button"

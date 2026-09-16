@@ -11,6 +11,7 @@ export function SiteFooter() {
           <p className="text-xl font-bold mb-1">{t("brand")}</p>
           <p className="text-sm font-semibold uppercase tracking-wider text-white/90 mb-3">{t("motto")}</p>
           <p className="text-white/85 leading-relaxed">{t("footer.tagline")}</p>
+          <p className="mt-3 text-sm font-semibold text-white/90">Pagamenti gestiti da Paddle</p>
         </div>
 
         <address className="not-italic space-y-3 text-white/95">

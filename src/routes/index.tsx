@@ -108,6 +108,8 @@ function Home() {
                   
                   miniFat: "/minifat",
                   smartMaintenance: "/smart-maintenance",
+                  agendaShare: "/agenda-share",
+                  registroCredenziali: "/registro-credenziali-fornitori",
                 };
                 const to = !wip ? routeMap[key] : undefined;
                 const logo = image ? (
