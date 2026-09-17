@@ -8,7 +8,7 @@ export const Route = createFileRoute("/assistenza-gdpr")({
       GET: async () =>
         new Response(null, {
           status: 301,
-          headers: { Location: "/corso-privacy-gdpr", "Cache-Control": "public, max-age=3600" },
+          headers: { Location: "https://corporateboostservice.eu/corso-privacy-gdpr", "Cache-Control": "public, max-age=3600" },
         }),
     },
   },
