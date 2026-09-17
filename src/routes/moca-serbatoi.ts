@@ -8,7 +8,7 @@ export const Route = createFileRoute("/moca-serbatoi")({
       GET: async () =>
         new Response(null, {
           status: 301,
-          headers: { Location: "/applicazioni", "Cache-Control": "public, max-age=3600" },
+          headers: { Location: "https://corporateboostservice.eu/applicazioni", "Cache-Control": "public, max-age=3600" },
         }),
     },
   },
