@@ -66,16 +66,34 @@ async function normalizeCatastrophicSsrResponse(response: Response): Promise<Res
   return brandedErrorResponse();
 }
 
+const CANONICAL_ORIGIN = "https://corporateboostservice.eu";
+
+// Pagine rimosse: una sola destinazione finale, mai catene di redirect.
+const REMOVED_PATHS: Record<string, string> = {
+  "/moca-serbatoi": "/applicazioni",
+  "/assistenza-gdpr": "/corso-privacy-gdpr",
+};
+
 export default {
   async fetch(request: Request, env: unknown, ctx: unknown) {
     try {
       const url = new URL(request.url);
+      const isCanonicalHost = url.hostname === "corporateboostservice.eu";
       const usesWwwHost = url.hostname === "www.corporateboostservice.eu";
       const hasTrailingSlash = url.pathname.length > 1 && url.pathname.endsWith("/");
 
-      if (usesWwwHost || hasTrailingSlash) {
-        if (usesWwwHost) url.hostname = "corporateboostservice.eu";
-        if (hasTrailingSlash) url.pathname = url.pathname.replace(/\/+$/, "");
+      // Normalizza host, slash finale e pagine rimosse in UN SOLO 301.
+      const normalizedPath = hasTrailingSlash ? url.pathname.replace(/\/+$/, "") : url.pathname;
+      const finalPath = REMOVED_PATHS[normalizedPath] ?? normalizedPath;
+      const needsRedirect =
+        usesWwwHost || hasTrailingSlash || finalPath !== url.pathname;
+
+      if (needsRedirect) {
+        url.pathname = finalPath;
+        if (usesWwwHost || (isCanonicalHost && url.protocol !== "https:")) {
+          url.hostname = "corporateboostservice.eu";
+          url.protocol = "https:";
+        }
 
         return new Response(null, {
           status: 301,
