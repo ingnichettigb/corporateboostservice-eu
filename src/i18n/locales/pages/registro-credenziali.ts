@@ -1,502 +1,328 @@
-export const registroCredenziali = {
-  it: {
-    metaTitle: "Registro Credenziali Fornitori | CorporateBoostService",
-    metaDescription:
-      "Un registro aziendale condiviso e sicuro per credenziali, siti ed email dei fornitori, con accessi controllati e registro attività.",
-    back: "Torna alle applicazioni",
-    heroKicker: "Registro Credenziali Fornitori · Modulo del portfolio CorporateBoostService",
-    heroTitle: "Tutte le credenziali dei fornitori, in un unico registro condiviso e sicuro",
-    heroBody:
-      "Con il Registro l’azienda sa sempre quali sono le credenziali di accesso ai siti di cui ha bisogno, senza andare a caccia in agende diverse — magari personali di un dipendente — e senza perdere tempo a farle rigenerare quando servono o quando qualcuno lascia l’azienda.",
-    discover: "Scopri le funzionalità",
-    price: "Vedi il prezzo",
-    mockTitle: "Registro fornitori",
-    mockSearch: "Cerca nel registro…",
-    mockHeaders: ["Fornitore", "Sito", "ID accesso", "Password", "Descrizione", "Email autorizzate", "Azioni"],
-    mockRow: [
-      "Fornitore Demo",
-      "area-fornitore.it",
-      "acquisti@azienda.it",
-      "••••••••",
-      "Portale ordini",
-      "3 persone",
-      "Apri",
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { useTranslation } from "react-i18next";
+import {
+  Activity,
+  ArrowDown,
+  ArrowLeft,
+  CheckCircle2,
+  ClipboardCopy,
+  Download,
+  Eye,
+  FileSpreadsheet,
+  KeyRound,
+  Languages,
+  LockKeyhole,
+  Search,
+  Settings,
+  ShieldCheck,
+  UserCheck,
+  Users,
+} from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { SiteHeader } from "@/components/SiteHeader";
+import { SiteFooter } from "@/components/SiteFooter";
+import { PricingCartButton } from "@/components/PricingCartButton";
+import { TaxNote } from "@/components/TaxDisclaimer";
+import i18n from "@/i18n";
+import { registroCredenziali } from "@/i18n/locales/pages/registro-credenziali";
+
+i18n.addResourceBundle("it", "registroCredenziali", registroCredenziali.it, true, false);
+i18n.addResourceBundle("en", "registroCredenziali", registroCredenziali.en, true, false);
+i18n.addResourceBundle("de", "registroCredenziali", registroCredenziali.de, true, false);
+i18n.addResourceBundle("es", "registroCredenziali", registroCredenziali.es, true, false);
+
+const featureIcons = [Search, LockKeyhole, Eye, Activity, FileSpreadsheet, Download, UserCheck, Languages, Settings];
+const securityIcons = [LockKeyhole, ShieldCheck, Users, Activity];
+
+type Entry = { title: string; desc: string };
+type Faq = { q: string; a: string };
+
+export const Route = createFileRoute("/registro-credenziali-fornitori")({
+  head: () => ({
+    meta: [
+      { title: i18n.t("registroCredenziali:metaTitle") },
+      { name: "description", content: i18n.t("registroCredenziali:metaDescription") },
+      { property: "og:title", content: i18n.t("registroCredenziali:metaTitle") },
+      { property: "og:description", content: i18n.t("registroCredenziali:metaDescription") },
+      { property: "og:url", content: "https://corporateboostservice.eu/registro-credenziali-fornitori" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
-    planKicker: "Un solo piano",
-    planTitle: "Registro Siti Web Aziendali",
-    planCode: "Codice prodotto 040RegistroWEB-365",
-    whatKicker: "Cos’è il registro credenziali",
-    whatTitle: "La memoria operativa dell’azienda, finalmente condivisa",
-    whatBody:
-      "L’applicazione archivia in modo sicuro sito, username, password, email collegata, note e categorie o tag per l’accesso ai portali dei fornitori usati dal team.",
-    badges: ["Password cifrate", "Accesso condiviso per licenza", "Registro attività", "Multilingua"],
-    featuresKicker: "Funzionalità principali",
-    featuresTitle: "Tutto ciò che serve per trovare, proteggere e condividere gli accessi",
-    features: [
-      {
-        title: "Ricerca e filtri",
-        desc: "Cerca per fornitore, sito, ID accesso, email, descrizione o numero record e filtra per categoria.",
-      },
-      {
-        title: "Password protette",
-        desc: "Sempre mascherate, con mostra o nascondi e copia negli appunti; nel database restano cifrate.",
-      },
-      {
-        title: "Visibilità controllata",
-        desc: "Ogni voce è visibile a chi l’ha creata o alle email autorizzate scelte durante la creazione.",
-      },
-      {
-        title: "Registro attività",
-        desc: "Traccia login, apertura dei link e modifiche, con filtri per utente e sito.",
-      },
-      {
-        title: "Import ed export CSV",
-        desc: "L’Amministratore importa archivi esterni in modalità Unisci o Sostituisci ed esporta l’intero registro in un file compatibile con Excel.",
-      },
-      {
-        title: "Esportazione PDF",
-        desc: "Dati licenza in prima pagina e registro completo orizzontale, ordinato per fornitore.",
-      },
-      { title: "Persone autorizzate", desc: "Gestisci chi fa parte del team e i relativi accessi." },
-      { title: "Multilingua", desc: "Interfaccia disponibile in italiano, inglese, tedesco e spagnolo." },
-      {
-        title: "Postazioni e permessi",
-        desc: "L’Amministratore assegna i PUK, imposta l’accesso Completo o Sola Lettura per ogni collaboratore, sceglie le categorie visibili a ciascuno e invia le credenziali via email con un clic.",
-      },
-    ],
-    flowKicker: "Il flusso operativo",
-    flowTitle: "Dall’attivazione all’audit in cinque passaggi",
-    steps: [
-      {
-        title: "Attivazione",
-        desc: "Ogni dipendente attiva il proprio accesso con email, licenza e PUK personale, con lo stesso sistema sicuro degli altri moduli.",
-      },
-      {
-        title: "Inserimento",
-        desc: "Aggiunge un fornitore con sito, credenziali e descrizione, scegliendo chi altro può vedere la voce.",
-      },
-      {
-        title: "Consultazione",
-        desc: "Il team cerca, filtra e apre i siti in un click, senza password perse in chat, fogli o agende personali.",
-      },
-      { title: "Tracciamento", desc: "Ogni accesso e modifica resta registrato nel log attività." },
-      { title: "Esportazione", desc: "Quando serve, il registro completo si esporta in CSV o PDF con un click." },
-    ],
-    benefitsKicker: "Perché sceglierlo",
-    benefitsTitle: "Più continuità, meno dipendenza dalle singole persone",
-    benefits: [
-      "L’azienda sa sempre quali credenziali usa, senza dipendere dalla memoria o dalle agende personali.",
-      "Fine alle password disperse tra chat e fogli non controllati.",
-      "Un solo abbonamento fornitore, gestito dal team in sicurezza.",
-      "Onboarding e offboarding più veloci, senza rifare le credenziali da zero.",
-      "Responsabilità chiara: sai sempre chi ha inserito o modificato cosa.",
-      "Pronto per team internazionali, con quattro lingue disponibili.",
-    ],
-    securityKicker: "Sicurezza e multi-tenant",
-    securityTitle: "Ogni licenza ha il proprio spazio protetto",
-    security: [
-      { title: "Cifratura", desc: "Le password sono cifrate nel database e non vengono mai memorizzate in chiaro." },
-      { title: "Accesso a due livelli", desc: "Verifica email OTP e attivazione con licenza e PUK personale." },
-      { title: "Dati isolati", desc: "Ogni licenza accede esclusivamente al proprio spazio dati." },
-      { title: "Audit completo", desc: "Login, aperture e modifiche alimentano un registro attività consultabile." },
-    ],
-    faqKicker: "Domande frequenti",
-    faqTitle: "Risposte prima di iniziare",
-    faq: [
-      {
-        q: "Cosa succede se un dipendente lascia l’azienda?",
-        a: "Puoi rimuoverlo dalle persone autorizzate. Il registro resta patrimonio dell’azienda e le credenziali non devono essere ricostruite da zero.",
-      },
-      {
-        q: "Le password sono visibili a tutti in azienda?",
-        a: "No. Ogni voce è visibile al creatore e alle sole email autorizzate indicate per quella voce.",
-      },
-      {
-        q: "Quante persone posso aggiungere alla licenza?",
-        a: "Il piano include fino a 15 utilizzi o persone autorizzate per la durata della licenza.",
-      },
-      {
-        q: "Posso esportare il registro per un audit?",
-        a: "Sì. Puoi esportare l’intero registro in CSV o in PDF ordinato alfabeticamente per fornitore.",
-      },
-    ],
-    finalTitle: "Metti ordine nelle credenziali dei tuoi fornitori",
-    finalBody:
-      "Mai più a caccia di credenziali in chat, fogli sparsi o agende personali: il registro resta disponibile al team quando serve.",
-  },
-  en: {
-    metaTitle: "Supplier Credentials Register | CorporateBoostService",
-    metaDescription:
-      "A secure shared business register for supplier credentials, websites and emails, with controlled access and activity logs.",
-    back: "Back to applications",
-    heroKicker: "Supplier Credentials Register · A CorporateBoostService portfolio module",
-    heroTitle: "All supplier credentials in one secure, shared register",
-    heroBody:
-      "The Register ensures the company always knows which credentials are needed to access supplier websites, without hunting through scattered notes — including an employee’s personal notebook — or wasting time resetting credentials when they are needed or someone leaves.",
-    discover: "Explore features",
-    price: "See pricing",
-    mockTitle: "Supplier register",
-    mockSearch: "Search the register…",
-    mockHeaders: ["Supplier", "Website", "Login ID", "Password", "Description", "Authorized emails", "Actions"],
-    mockRow: [
-      "Demo Supplier",
-      "supplier-portal.com",
-      "purchasing@company.com",
-      "••••••••",
-      "Order portal",
-      "3 people",
-      "Open",
-    ],
-    planKicker: "One simple plan",
-    planTitle: "Corporate Website Register",
-    planCode: "Product code 040RegistroWEB-365",
-    whatKicker: "What the credentials register is",
-    whatTitle: "Your company’s operational memory, finally shared",
-    whatBody:
-      "The application securely stores each supplier portal’s website, username, password, linked email, notes, and categories or tags used by the team.",
-    badges: ["Encrypted passwords", "Shared license access", "Activity log", "Multilingual"],
-    featuresKicker: "Core features",
-    featuresTitle: "Everything you need to find, protect and share access",
-    features: [
-      {
-        title: "Search and filters",
-        desc: "Search by supplier, website, login ID, email, description or record number, and filter by category.",
-      },
-      {
-        title: "Protected passwords",
-        desc: "Masked by default, with reveal, hide and copy controls; always encrypted in the database.",
-      },
-      {
-        title: "Controlled visibility",
-        desc: "Each entry is visible to its creator or the authorized emails selected when it is created.",
-      },
-      {
-        title: "Activity log",
-        desc: "Tracks logins, supplier-link openings and every update, filterable by user and website.",
-      },
-      {
-        title: "CSV import and export",
-        desc: "The Administrator imports external archives in Merge or Replace mode and exports the complete register to an Excel-compatible file.",
-      },
-      {
-        title: "PDF export",
-        desc: "License details first, followed by the complete landscape register sorted by supplier.",
-      },
-      { title: "Authorized people", desc: "Manage team members and their access rights." },
-      { title: "Multilingual", desc: "The interface is available in Italian, English, German and Spanish." },
-      {
-        title: "Seats and permissions",
-        desc: "The Administrator assigns PUK codes, sets Full or Read-Only access for each collaborator, chooses which categories each person can see, and sends credentials by email with one click.",
-      },
-    ],
-    flowKicker: "The workflow",
-    flowTitle: "From activation to audit in five steps",
-    steps: [
-      {
-        title: "Activation",
-        desc: "Each employee activates access with email, license and personal PUK, using the portfolio’s secure authentication system.",
-      },
-      { title: "Entry", desc: "Add a supplier website, credentials and description, then choose who else can see it." },
-      {
-        title: "Lookup",
-        desc: "The team searches, filters and opens supplier sites in one click, without lost passwords in chats, sheets or notebooks.",
-      },
-      { title: "Tracking", desc: "Every access and update remains recorded in the activity log." },
-      { title: "Export", desc: "Export the complete register to CSV or PDF whenever needed." },
-    ],
-    benefitsKicker: "Why choose it",
-    benefitsTitle: "More continuity, less reliance on individuals",
-    benefits: [
-      "The company always knows which credentials it uses, without relying on one person’s memory or notes.",
-      "No more passwords scattered across chats and uncontrolled sheets.",
-      "One supplier subscription, managed securely by the whole team.",
-      "Faster onboarding and offboarding without rebuilding credentials.",
-      "Clear accountability for every addition and update.",
-      "Ready for international teams in four languages.",
-    ],
-    securityKicker: "Security and multi-tenancy",
-    securityTitle: "Each license has its own protected data space",
-    security: [
-      { title: "Encryption", desc: "Passwords are encrypted in the database and never stored as plain text." },
-      { title: "Two-level access", desc: "Email OTP verification plus activation with a license and personal PUK." },
-      { title: "Isolated data", desc: "Each license can access only its own data space." },
-      { title: "Complete audit", desc: "Logins, openings and changes feed a searchable activity log." },
-    ],
-    faqKicker: "Frequently asked questions",
-    faqTitle: "Answers before you start",
-    faq: [
-      {
-        q: "What happens when an employee leaves?",
-        a: "Remove them from authorized people. The register remains with the company, so credentials do not need to be rebuilt.",
-      },
-      {
-        q: "Can everyone in the company see every password?",
-        a: "No. Each entry is visible only to its creator and the email addresses authorized for that entry.",
-      },
-      {
-        q: "How many people can I add to the license?",
-        a: "The plan includes up to 15 uses or authorized people for the license period.",
-      },
-      {
-        q: "Can I export the register for an audit?",
-        a: "Yes. Export the full register as CSV or as a PDF sorted alphabetically by supplier.",
-      },
-    ],
-    finalTitle: "Bring order to your supplier credentials",
-    finalBody:
-      "Stop hunting for credentials in chats, scattered sheets or personal notebooks. The register is ready for your team whenever needed.",
-  },
-  de: {
-    metaTitle: "Zugangsdatenregister für Lieferanten | CorporateBoostService",
-    metaDescription:
-      "Ein sicheres gemeinsames Unternehmensregister für Lieferantenzugänge, Websites und E-Mails mit kontrollierten Zugriffen und Aktivitätsprotokoll.",
-    back: "Zurück zu den Anwendungen",
-    heroKicker: "Zugangsdatenregister für Lieferanten · Modul im CorporateBoostService-Portfolio",
-    heroTitle: "Alle Zugangsdaten Ihrer Lieferanten in einem sicheren, gemeinsamen Register",
-    heroBody:
-      "Mit dem Register weiß das Unternehmen jederzeit, welche Zugangsdaten es für Lieferantenportale benötigt – ohne in verschiedenen, vielleicht privaten Notizbüchern zu suchen und ohne Zugänge neu erstellen zu lassen, wenn sie gebraucht werden oder jemand das Unternehmen verlässt.",
-    discover: "Funktionen entdecken",
-    price: "Preis ansehen",
-    mockTitle: "Lieferantenregister",
-    mockSearch: "Register durchsuchen…",
-    mockHeaders: ["Lieferant", "Website", "Anmelde-ID", "Passwort", "Beschreibung", "Berechtigte E-Mails", "Aktionen"],
-    mockRow: [
-      "Demo-Lieferant",
-      "lieferantenportal.de",
-      "einkauf@firma.de",
-      "••••••••",
-      "Bestellportal",
-      "3 Personen",
-      "Öffnen",
-    ],
-    planKicker: "Ein Tarif",
-    planTitle: "REGISTER DER UNTERNEHMENSWEBSITES",
-    planCode: "Produktcode 040RegistroWEB-365",
-    whatKicker: "Was ist das Zugangsdatenregister",
-    whatTitle: "Das operative Gedächtnis Ihres Unternehmens – endlich gemeinsam genutzt",
-    whatBody:
-      "Die Anwendung speichert Website, Benutzername, Passwort, verknüpfte E-Mail, Notizen sowie Kategorien oder Tags für die vom Team genutzten Lieferantenportale sicher.",
-    badges: ["Verschlüsselte Passwörter", "Gemeinsamer Lizenzzugang", "Aktivitätsprotokoll", "Mehrsprachig"],
-    featuresKicker: "Hauptfunktionen",
-    featuresTitle: "Alles zum Finden, Schützen und Teilen von Zugängen",
-    features: [
-      {
-        title: "Suche und Filter",
-        desc: "Suche nach Lieferant, Website, Anmelde-ID, E-Mail, Beschreibung oder Datensatznummer; Filter nach Kategorie.",
-      },
-      {
-        title: "Geschützte Passwörter",
-        desc: "Standardmäßig maskiert, mit Anzeigen, Ausblenden und Kopieren; in der Datenbank verschlüsselt.",
-      },
-      {
-        title: "Kontrollierte Sichtbarkeit",
-        desc: "Jeder Eintrag ist nur für den Ersteller und die ausgewählten berechtigten E-Mail-Adressen sichtbar.",
-      },
-      {
-        title: "Aktivitätsprotokoll",
-        desc: "Protokolliert Anmeldungen, geöffnete Lieferantenlinks und Änderungen, filterbar nach Benutzer und Website.",
-      },
-      {
-        title: "CSV-Import und -Export",
-        desc: "Der Administrator importiert externe Archive im Modus Zusammenführen oder Ersetzen und exportiert das vollständige Register als Excel-kompatible Datei.",
-      },
-      {
-        title: "PDF-Export",
-        desc: "Zuerst Lizenzdaten, danach das vollständige Register im Querformat, alphabetisch nach Lieferant.",
-      },
-      { title: "Berechtigte Personen", desc: "Teammitglieder und deren Zugriffsrechte verwalten." },
-      { title: "Mehrsprachig", desc: "Die Oberfläche ist auf Italienisch, Englisch, Deutsch und Spanisch verfügbar." },
-      {
-        title: "Plätze und Berechtigungen",
-        desc: "Der Administrator weist PUK-Codes zu, legt für jeden Mitarbeiter Voll- oder Nur-Lese-Zugriff fest, wählt die sichtbaren Kategorien pro Person und versendet Zugangsdaten mit einem Klick per E-Mail.",
-      },
-    ],
-    flowKicker: "Der Arbeitsablauf",
-    flowTitle: "Von der Aktivierung bis zum Audit in fünf Schritten",
-    steps: [
-      {
-        title: "Aktivierung",
-        desc: "Jeder Mitarbeiter aktiviert seinen Zugang mit E-Mail, Lizenz und persönlichem PUK über das sichere Portfolio-System.",
-      },
-      {
-        title: "Erfassung",
-        desc: "Lieferant mit Website, Zugangsdaten und Beschreibung anlegen und Sichtbarkeit festlegen.",
-      },
-      {
-        title: "Nutzung",
-        desc: "Das Team sucht, filtert und öffnet Portale mit einem Klick – ohne verlorene Passwörter in Chats oder Notizen.",
-      },
-      { title: "Protokollierung", desc: "Jeder Zugriff und jede Änderung bleibt im Aktivitätsprotokoll gespeichert." },
-      { title: "Export", desc: "Das vollständige Register jederzeit mit einem Klick als CSV oder PDF exportieren." },
-    ],
-    benefitsKicker: "Warum dieses Modul",
-    benefitsTitle: "Mehr Kontinuität, weniger Abhängigkeit von Einzelpersonen",
-    benefits: [
-      "Das Unternehmen kennt seine Zugangsdaten, ohne vom Gedächtnis einzelner Personen abhängig zu sein.",
-      "Keine Passwörter mehr in Chats und verstreuten Tabellen.",
-      "Ein Lieferantenkonto, sicher vom gesamten Team verwaltet.",
-      "Schnelleres Onboarding und Offboarding ohne neue Zugangsdaten.",
-      "Klare Verantwortlichkeit für jede Eingabe und Änderung.",
-      "Für internationale Teams in vier Sprachen geeignet.",
-    ],
-    securityKicker: "Sicherheit und Mandantentrennung",
-    securityTitle: "Jede Lizenz besitzt einen eigenen geschützten Datenbereich",
-    security: [
-      { title: "Verschlüsselung", desc: "Passwörter werden verschlüsselt und nie im Klartext gespeichert." },
-      { title: "Zweistufiger Zugang", desc: "E-Mail-OTP-Prüfung sowie Aktivierung mit Lizenz und persönlichem PUK." },
-      { title: "Isolierte Daten", desc: "Jede Lizenz greift ausschließlich auf ihren eigenen Datenbereich zu." },
-      { title: "Vollständiges Audit", desc: "Anmeldungen, Öffnungen und Änderungen werden protokolliert." },
-    ],
-    faqKicker: "Häufige Fragen",
-    faqTitle: "Antworten vor dem Start",
-    faq: [
-      {
-        q: "Was passiert, wenn ein Mitarbeiter das Unternehmen verlässt?",
-        a: "Entfernen Sie ihn aus den berechtigten Personen. Das Register bleibt beim Unternehmen und muss nicht neu aufgebaut werden.",
-      },
-      {
-        q: "Sind Passwörter für alle sichtbar?",
-        a: "Nein. Ein Eintrag ist nur für den Ersteller und die dafür berechtigten E-Mail-Adressen sichtbar.",
-      },
-      {
-        q: "Wie viele Personen kann ich hinzufügen?",
-        a: "Der Tarif umfasst bis zu 15 Nutzungen oder berechtigte Personen während der Lizenzlaufzeit.",
-      },
-      {
-        q: "Kann ich das Register für ein Audit exportieren?",
-        a: "Ja, vollständig als CSV oder alphabetisch nach Lieferant sortiertes PDF.",
-      },
-    ],
-    finalTitle: "Bringen Sie Ordnung in Ihre Lieferantenzugänge",
-    finalBody:
-      "Nie wieder Zugangsdaten in Chats, Tabellen oder privaten Notizbüchern suchen: Das Register steht Ihrem Team jederzeit zur Verfügung.",
-  },
-  es: {
-    metaTitle: "Registro de Credenciales de Proveedores | CorporateBoostService",
-    metaDescription:
-      "Un registro empresarial seguro y compartido para credenciales, sitios y correos de proveedores, con acceso controlado y registro de actividad.",
-    back: "Volver a aplicaciones",
-    heroKicker: "Registro de Credenciales de Proveedores · Módulo del portfolio CorporateBoostService",
-    heroTitle: "Todas las credenciales de proveedores en un único registro compartido y seguro",
-    heroBody:
-      "Con el Registro, la empresa siempre sabe qué credenciales necesita para acceder a los sitios de sus proveedores, sin buscarlas en distintas agendas — quizá personales de un empleado — ni perder tiempo restableciéndolas cuando hacen falta o alguien deja la empresa.",
-    discover: "Descubre las funciones",
-    price: "Ver el precio",
-    mockTitle: "Registro de proveedores",
-    mockSearch: "Buscar en el registro…",
-    mockHeaders: ["Proveedor", "Sitio", "ID de acceso", "Contraseña", "Descripción", "Emails autorizados", "Acciones"],
-    mockRow: [
-      "Proveedor Demo",
-      "portal-proveedor.es",
-      "compras@empresa.es",
-      "••••••••",
-      "Portal de pedidos",
-      "3 personas",
-      "Abrir",
-    ],
-    planKicker: "Un único plan",
-    planTitle: "REGISTRO DE SITIOS WEB EMPRESARIALES",
-    planCode: "Código de producto 040RegistroWEB-365",
-    whatKicker: "Qué es el registro de credenciales",
-    whatTitle: "La memoria operativa de tu empresa, por fin compartida",
-    whatBody:
-      "La aplicación guarda de forma segura el sitio, usuario, contraseña, email vinculado, notas y categorías o etiquetas de los portales de proveedores utilizados por el equipo.",
-    badges: ["Contraseñas cifradas", "Acceso compartido por licencia", "Registro de actividad", "Multilingüe"],
-    featuresKicker: "Funciones principales",
-    featuresTitle: "Todo lo necesario para encontrar, proteger y compartir accesos",
-    features: [
-      {
-        title: "Búsqueda y filtros",
-        desc: "Busca por proveedor, sitio, ID, email, descripción o número de registro y filtra por categoría.",
-      },
-      {
-        title: "Contraseñas protegidas",
-        desc: "Ocultas por defecto, con controles para mostrar, ocultar y copiar; cifradas en la base de datos.",
-      },
-      {
-        title: "Visibilidad controlada",
-        desc: "Cada entrada es visible para su creador o para los emails autorizados elegidos al crearla.",
-      },
-      {
-        title: "Registro de actividad",
-        desc: "Registra inicios de sesión, apertura de enlaces y cambios, con filtros por usuario y sitio.",
-      },
-      {
-        title: "Importación y exportación CSV",
-        desc: "El Administrador importa archivos externos en modo Combinar o Sustituir y exporta el registro completo en un archivo compatible con Excel.",
-      },
-      {
-        title: "Exportación PDF",
-        desc: "Primero los datos de licencia y después el registro horizontal ordenado por proveedor.",
-      },
-      { title: "Personas autorizadas", desc: "Gestiona quién forma parte del equipo y sus accesos." },
-      { title: "Multilingüe", desc: "Interfaz disponible en italiano, inglés, alemán y español." },
-      {
-        title: "Puestos y permisos",
-        desc: "El Administrador asigna códigos PUK, establece acceso Completo o Solo Lectura para cada colaborador, elige las categorías visibles para cada uno y envía las credenciales por correo con un clic.",
-      },
-    ],
-    flowKicker: "El flujo operativo",
-    flowTitle: "De la activación a la auditoría en cinco pasos",
-    steps: [
-      {
-        title: "Activación",
-        desc: "Cada empleado activa su acceso con email, licencia y PUK personal mediante el sistema seguro del portfolio.",
-      },
-      {
-        title: "Registro",
-        desc: "Añade un proveedor con sitio, credenciales y descripción, y elige quién más puede verlo.",
-      },
-      {
-        title: "Consulta",
-        desc: "El equipo busca, filtra y abre portales con un clic, sin contraseñas perdidas en chats, hojas o agendas.",
-      },
-      { title: "Seguimiento", desc: "Cada acceso y cambio queda registrado en el historial de actividad." },
-      { title: "Exportación", desc: "Cuando sea necesario, exporta todo el registro a CSV o PDF con un clic." },
-    ],
-    benefitsKicker: "Por qué elegirlo",
-    benefitsTitle: "Más continuidad, menos dependencia de una sola persona",
-    benefits: [
-      "La empresa siempre sabe qué credenciales utiliza, sin depender de la memoria o agenda de una persona.",
-      "Adiós a las contraseñas dispersas en chats y hojas sin control.",
-      "Una cuenta de proveedor gestionada de forma segura por todo el equipo.",
-      "Incorporaciones y salidas más rápidas, sin rehacer credenciales.",
-      "Responsabilidad clara sobre cada alta o modificación.",
-      "Preparado para equipos internacionales en cuatro idiomas.",
-    ],
-    securityKicker: "Seguridad y multi-tenant",
-    securityTitle: "Cada licencia tiene su propio espacio de datos protegido",
-    security: [
-      { title: "Cifrado", desc: "Las contraseñas se cifran y nunca se guardan como texto visible." },
-      { title: "Acceso en dos niveles", desc: "Verificación por email OTP y activación con licencia y PUK personal." },
-      { title: "Datos aislados", desc: "Cada licencia accede únicamente a su propio espacio de datos." },
-      {
-        title: "Auditoría completa",
-        desc: "Inicios de sesión, aperturas y cambios alimentan el registro de actividad.",
-      },
-    ],
-    faqKicker: "Preguntas frecuentes",
-    faqTitle: "Respuestas antes de empezar",
-    faq: [
-      {
-        q: "¿Qué ocurre si un empleado deja la empresa?",
-        a: "Puedes eliminarlo de las personas autorizadas. El registro sigue siendo de la empresa y no hay que reconstruir las credenciales.",
-      },
-      {
-        q: "¿Todos pueden ver las contraseñas?",
-        a: "No. Cada entrada solo es visible para su creador y los emails autorizados para ella.",
-      },
-      {
-        q: "¿Cuántas personas puedo añadir?",
-        a: "El plan incluye hasta 15 usos o personas autorizadas durante la vigencia de la licencia.",
-      },
-      {
-        q: "¿Puedo exportar el registro para una auditoría?",
-        a: "Sí, puedes exportarlo en CSV o PDF ordenado alfabéticamente por proveedor.",
-      },
-    ],
-    finalTitle: "Pon orden en las credenciales de tus proveedores",
-    finalBody:
-      "Nunca más busques credenciales en chats, hojas dispersas o agendas personales: el registro estará disponible para tu equipo cuando lo necesite.",
-  },
-} as const;
+    links: [{ rel: "canonical", href: "https://corporateboostservice.eu/registro-credenziali-fornitori" }],
+  }),
+  component: RegistroCredenzialiPage,
+});
+
+function SectionHeading({ kicker, title }: { kicker: string; title: string }) {
+  return (
+    <div className="mx-auto mb-12 max-w-3xl text-center">
+      <p className="mb-3 text-sm font-bold uppercase tracking-wider text-primary">{kicker}</p>
+      <h2 className="text-3xl font-bold leading-tight md:text-4xl">{title}</h2>
+    </div>
+  );
+}
+
+function PriceBlock({ dark = false, anchor = false }: { dark?: boolean; anchor?: boolean }) {
+  const { t } = useTranslation("registroCredenziali");
+  return (
+    <div
+      id={anchor ? "prezzo" : undefined}
+      className={`mx-auto mt-12 max-w-2xl scroll-mt-36 text-center ${dark ? "text-primary-foreground" : ""}`}
+    >
+      <p
+        className={`text-xs font-bold uppercase tracking-wider ${dark ? "text-primary-foreground/80" : "text-primary"}`}
+      >
+        {t("planKicker")}
+      </p>
+      <h3 className="mt-2 text-xl font-bold">{t("planTitle")}</h3>
+      <p className={`mt-1 text-sm ${dark ? "text-primary-foreground/75" : "text-foreground/65"}`}>{t("planCode")}</p>
+      <div className="mx-auto mt-5 max-w-md">
+        <PricingCartButton code="040RegistroWEB-365" index={18} full />
+      </div>
+      <TaxNote light={dark} className="mx-auto mt-4 max-w-xl" />
+    </div>
+  );
+}
+
+function RegisterMockup() {
+  const { t } = useTranslation("registroCredenziali");
+  const headers = t("mockHeaders", { returnObjects: true }) as string[];
+  const row = t("mockRow", { returnObjects: true }) as string[];
+  return (
+    <div
+      className="overflow-hidden rounded-lg border-2 border-primary/20 bg-card shadow-[var(--shadow-elegant)]"
+      aria-label={t("mockTitle")}
+    >
+      <div className="flex items-center justify-between gap-3 border-b border-border bg-secondary px-4 py-3">
+        <span className="inline-flex items-center gap-2 font-bold">
+          <KeyRound className="h-5 w-5 text-primary" aria-hidden />
+          {t("mockTitle")}
+        </span>
+        <span className="hidden items-center gap-2 rounded-md border border-border bg-background px-3 py-2 text-xs text-muted-foreground sm:inline-flex">
+          <Search className="h-4 w-4" aria-hidden />
+          {t("mockSearch")}
+        </span>
+      </div>
+      <div className="overflow-x-auto">
+        <table className="min-w-[860px] w-full text-left text-xs">
+          <thead className="bg-muted text-foreground">
+            <tr>
+              {headers.map((h) => (
+                <th key={h} className="border-b border-border px-3 py-3 font-bold">
+                  {h}
+                </th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              {row.map((cell, index) => (
+                <td key={`${cell}-${index}`} className="border-b border-border px-3 py-4 text-foreground/75">
+                  {index === 3 ? (
+                    <span className="inline-flex items-center gap-2 font-bold">
+                      {cell}
+                      <Eye className="h-3.5 w-3.5 text-primary" aria-hidden />
+                    </span>
+                  ) : index === 6 ? (
+                    <span className="font-bold text-primary">{cell}</span>
+                  ) : (
+                    cell
+                  )}
+                </td>
+              ))}
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div className="flex justify-end gap-2 p-3 text-primary">
+        <ClipboardCopy className="h-4 w-4" aria-hidden />
+        <ShieldCheck className="h-4 w-4" aria-hidden />
+      </div>
+    </div>
+  );
+}
+
+function RegistroCredenzialiPage() {
+  const { t } = useTranslation("registroCredenziali");
+  const badges = t("badges", { returnObjects: true }) as string[];
+  const features = t("features", { returnObjects: true }) as Entry[];
+  const steps = t("steps", { returnObjects: true }) as Entry[];
+  const benefits = t("benefits", { returnObjects: true }) as string[];
+  const security = t("security", { returnObjects: true }) as Entry[];
+  const faq = t("faq", { returnObjects: true }) as Faq[];
+
+  return (
+    <div className="min-h-screen bg-background text-foreground">
+      <a href="#main" className="skip-link">
+        {t("skip", { ns: "translation" })}
+      </a>
+      <SiteHeader />
+      <main id="main" className="pt-36 md:pt-44">
+        <div className="container mx-auto max-w-6xl px-4">
+          <Button variant="ghost" size="sm" asChild className="mb-5">
+            <Link to="/applicazioni">
+              <ArrowLeft aria-hidden />
+              {t("back")}
+            </Link>
+          </Button>
+        </div>
+
+        <section className="pb-20 [background:var(--gradient-section-hero)]">
+          <div className="container mx-auto grid max-w-6xl items-center gap-12 px-4 lg:grid-cols-[0.9fr_1.1fr]">
+            <div>
+              <p className="text-sm font-bold uppercase tracking-wider text-primary">{t("heroKicker")}</p>
+              <h1 className="mt-4 text-4xl font-bold leading-tight md:text-5xl">{t("heroTitle")}</h1>
+              <p className="mt-6 text-lg leading-relaxed text-foreground/80">{t("heroBody")}</p>
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+                <Button size="lg" variant="hero" className="h-12" asChild>
+                  <a href="#funzionalita">
+                    {t("discover")}
+                    <ArrowDown aria-hidden />
+                  </a>
+                </Button>
+                <Button size="lg" variant="outline" className="h-12" asChild>
+                  <a href="#prezzo">{t("price")}</a>
+                </Button>
+              </div>
+            </div>
+            <RegisterMockup />
+          </div>
+          <div className="container mx-auto max-w-6xl px-4">
+            <PriceBlock anchor />
+          </div>
+        </section>
+
+        <section className="py-20">
+          <div className="container mx-auto max-w-5xl px-4">
+            <SectionHeading kicker={t("whatKicker")} title={t("whatTitle")} />
+            <p className="mx-auto max-w-3xl text-center text-lg leading-relaxed text-foreground/80">{t("whatBody")}</p>
+            <div className="mt-8 flex flex-wrap justify-center gap-3">
+              {badges.map((badge) => (
+                <span
+                  key={badge}
+                  className="inline-flex items-center gap-2 rounded-full border-2 border-primary/20 bg-secondary px-4 py-2 text-sm font-semibold"
+                >
+                  <CheckCircle2 className="h-4 w-4 text-primary" aria-hidden />
+                  {badge}
+                </span>
+              ))}
+            </div>
+            <PriceBlock />
+          </div>
+        </section>
+
+        <section
+          id="funzionalita"
+          className="scroll-mt-36 border-y-2 border-primary/15 py-20 [background:var(--gradient-section-corsi)]"
+        >
+          <div className="container mx-auto max-w-6xl px-4">
+            <SectionHeading kicker={t("featuresKicker")} title={t("featuresTitle")} />
+            <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+              {features.map((item, i) => {
+                const Icon = featureIcons[i];
+                return (
+                  <Card key={item.title} className="border-2 border-primary/20">
+                    <CardHeader>
+                      <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-lg [background:var(--gradient-hero)] text-primary-foreground">
+                        <Icon className="h-6 w-6" aria-hidden />
+                      </div>
+                      <CardTitle className="text-lg leading-snug">{item.title}</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-sm leading-relaxed text-foreground/80">{item.desc}</p>
+                    </CardContent>
+                  </Card>
+                );
+              })}
+            </div>
+            <PriceBlock />
+          </div>
+        </section>
+
+        <section className="py-20">
+          <div className="container mx-auto max-w-5xl px-4">
+            <SectionHeading kicker={t("flowKicker")} title={t("flowTitle")} />
+            <ol className="grid gap-5 md:grid-cols-5">
+              {steps.map((step, i) => (
+                <li key={step.title} className="border-t-4 border-primary pt-5">
+                  <span className="text-4xl font-bold text-primary/30">{String(i + 1).padStart(2, "0")}</span>
+                  <h3 className="mt-3 font-bold">{step.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-foreground/75">{step.desc}</p>
+                </li>
+              ))}
+            </ol>
+            <PriceBlock />
+          </div>
+        </section>
+
+        <section className="border-y-2 border-primary/15 py-20 [background:var(--gradient-section-app)]">
+          <div className="container mx-auto max-w-6xl px-4">
+            <SectionHeading kicker={t("benefitsKicker")} title={t("benefitsTitle")} />
+            <div className="grid gap-4 md:grid-cols-2">
+              {benefits.map((benefit) => (
+                <div
+                  key={benefit}
+                  className="flex gap-3 rounded-lg border-2 border-primary/20 bg-card p-5 shadow-[var(--shadow-card)]"
+                >
+                  <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-primary" aria-hidden />
+                  <p className="leading-relaxed">{benefit}</p>
+                </div>
+              ))}
+            </div>
+            <PriceBlock />
+          </div>
+        </section>
+
+        <section className="py-20">
+          <div className="container mx-auto max-w-5xl px-4">
+            <SectionHeading kicker={t("securityKicker")} title={t("securityTitle")} />
+            <div className="grid gap-5 sm:grid-cols-2">
+              {security.map((item, i) => {
+                const Icon = securityIcons[i];
+                return (
+                  <div key={item.title} className="flex gap-4 border-l-4 border-primary bg-secondary p-6">
+                    <Icon className="h-7 w-7 shrink-0 text-primary" aria-hidden />
+                    <div>
+                      <h3 className="font-bold">{item.title}</h3>
+                      <p className="mt-2 text-sm leading-relaxed text-foreground/75">{item.desc}</p>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+            <PriceBlock />
+          </div>
+        </section>
+
+        <section className="border-y-2 border-primary/15 py-20 [background:var(--gradient-section-corsi)]">
+          <div className="container mx-auto max-w-3xl px-4">
+            <SectionHeading kicker={t("faqKicker")} title={t("faqTitle")} />
+            <Accordion type="single" collapsible>
+              {faq.map((item, i) => (
+                <AccordionItem key={item.q} value={`faq-${i}`}>
+                  <AccordionTrigger className="text-left text-base font-semibold">{item.q}</AccordionTrigger>
+                  <AccordionContent className="leading-relaxed text-foreground/80">{item.a}</AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+            <PriceBlock />
+          </div>
+        </section>
+
+        <section className="py-20 [background:var(--gradient-section-about)] text-primary-foreground">
+          <div className="container mx-auto max-w-3xl px-4 text-center">
+            <p className="text-sm font-bold uppercase tracking-wider text-primary-foreground/75">
+              CorporateBoostService
+            </p>
+            <h2 className="mt-3 text-3xl font-bold md:text-4xl">{t("finalTitle")}</h2>
+            <p className="mt-5 text-lg leading-relaxed text-primary-foreground/85">{t("finalBody")}</p>
+            <PriceBlock dark />
+          </div>
+        </section>
+      </main>
+      <SiteFooter />
+    </div>
+  );
+}
