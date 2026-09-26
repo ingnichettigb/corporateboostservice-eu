@@ -43,8 +43,9 @@ function AppPage() {
 
         <section className="py-20 [background:var(--gradient-section-app)]">
           <div className="container mx-auto px-4 grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl">
-            {applicazioni.map((item) => {
+            {applicazioni.map((item, index) => {
               const { icon: Icon, key } = item;
+              const numero = String(index + 1).padStart(2, "0");
               const image = "image" in item ? item.image : undefined;
               const wip = "wip" in item ? item.wip : false;
               const routeMap: Record<string, string> = {
@@ -93,6 +94,12 @@ function AppPage() {
                     {t("app.more")} <ArrowRight className="ml-1 h-4 w-4" aria-hidden />
                   </Button>
                 )}
+                <span
+                  aria-hidden="true"
+                  className="absolute bottom-6 right-6 rounded-md border border-primary/20 bg-primary/5 px-2 py-0.5 font-mono text-xs font-bold tracking-wider text-primary"
+                >
+                  {numero}
+                </span>
               </article>
               );
             })}
