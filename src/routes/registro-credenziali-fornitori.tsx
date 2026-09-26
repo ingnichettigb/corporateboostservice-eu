@@ -1,24 +1,20 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import {
-  ArrowDown,
-  ArrowLeft,
-  CheckCircle2,
-  ClipboardCopy,
-  Download,
-  Eye,
-  FileSpreadsheet,
-  Globe,
-  KeyRound,
-  Lock,
-  LockKeyhole,
-  Search,
-  ShieldAlert,
-  ShieldCheck,
+import { 
+  ShieldCheck, 
+  Clock, 
+  KeyRound, 
+  Layers, 
+  UserCheck, 
+  FileSpreadsheet, 
+  Monitor, 
+  ArrowLeft, 
+  CheckCircle2, 
   Sparkles,
-  Upload,
-  UserCheck,
-  UserMinus,
+  Lock,
+  Download,
+  AlertTriangle,
   Users,
+  Crown
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -26,489 +22,655 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { PricingCartButton } from "@/components/PricingCartButton";
-import { TaxNote } from "@/components/TaxDisclaimer";
+import { TaxDisclaimer } from "@/components/TaxDisclaimer";
 
 export const Route = createFileRoute("/registro-credenziali-fornitori")({
   head: () => ({
+    title: "Registro Siti Web Aziendali e Credenziali | 040RegistroWEB",
     meta: [
-      { title: "Registro Siti Web Aziendali e Credenziali | 040RegistroWEB" },
       {
         name: "description",
-        content:
-          "Software SaaS per gestire in sicurezza tutti i siti web aziendali con URL, ID, password crittografate, permessi per categoria e backup riservato all'amministratore.",
+        content: "Software SaaS per organizzare e proteggere tutti i siti web aziendali e le relative credenziali. Risparmia ore di lavoro: primo accesso Amministratore, permessi per categorie, backup Excel/PDF riservato e lanciatore Desktop PWA.",
       },
-      { property: "og:title", content: "Registro Siti Web Aziendali | 040RegistroWEB" },
-      {
-        property: "og:description",
-        content:
-          "Proteggi e velocizza l'accesso ai siti web aziendali. Primo accesso Amministratore, invito con PUK personali, visibilità per categoria e backup protetto.",
-      },
-      { property: "og:url", content: "https://corporateboostservice.eu/registro-credenziali-fornitori" },
+      { property: "og:title", content: "040RegistroWEB – Registro Siti Web Aziendali e Credenziali Protette" },
+      { property: "og:description", content: "Elimina il caos delle password, risparmia ore ogni mese e rimani padrone assoluto del sistema con il controllo centralizzato Amministratore." },
       { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://corporateboostservice.eu/040registroweb/040RegistroWEB-image01.jpg" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "https://corporateboostservice.eu/registro-credenziali-fornitori" }],
   }),
   component: RegistroSitiWebPage,
 });
 
-function SectionHeading({ kicker, title }: { kicker: string; title: string }) {
+function SectionHeading({ title, subtitle, badge }: { title: string; subtitle?: string; badge?: string }) {
   return (
-    <div className="mx-auto mb-12 max-w-3xl text-center">
-      <p className="mb-3 text-sm font-bold uppercase tracking-wider text-primary">{kicker}</p>
-      <h2 className="text-3xl font-bold leading-tight md:text-4xl">{title}</h2>
+    <div className="text-center max-w-3xl mx-auto mb-12 space-y-3">
+      {badge && (
+        <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-primary/10 text-primary border border-primary/20">
+          <Sparkles className="w-3.5 h-3.5" />
+          {badge}
+        </span>
+      )}
+      <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight">{title}</h2>
+      {subtitle && <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">{subtitle}</p>}
     </div>
   );
 }
 
-function RegisterMockup() {
+function PriceBlock({
+  title,
+  price,
+  period,
+  users,
+  pdfExports,
+  features,
+  highlight,
+  planCode,
+  planIndex,
+}: {
+  title: string;
+  price: string;
+  period: string;
+  users: string;
+  pdfExports: string;
+  features: string[];
+  highlight?: boolean;
+  planCode: string;
+  planIndex: number;
+}) {
   return (
     <div
-      className="overflow-hidden rounded-xl border-2 border-primary/25 bg-card shadow-[var(--shadow-elegant)]"
-      aria-label="Anteprima Registro Siti Web Aziendali"
+      className={`relative rounded-2xl flex flex-col justify-between transition-all duration-300 ${
+        highlight
+          ? "border-2 border-primary shadow-2xl bg-gradient-to-b from-primary/10 via-background to-background p-6 sm:p-8 scale-[1.02]"
+          : "border-2 border-primary/20 bg-background/95 p-6 sm:p-8 hover:border-primary/40"
+      }`}
     >
-      <div className="flex flex-wrap items-center justify-between gap-3 border-b border-border bg-secondary/80 px-4 py-3">
-        <div className="flex items-center gap-2 font-bold text-sm">
-          <Globe className="h-5 w-5 text-primary" aria-hidden />
-          <span>040RegistroWEB – Registro Siti Web Aziendali</span>
+      {highlight && (
+        <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow">
+          Consigliato per PMI
         </div>
-        <div className="flex items-center gap-2">
-          <span className="inline-flex items-center gap-1.5 rounded-full bg-primary/15 px-2.5 py-1 text-xs font-semibold text-primary">
-            <ShieldCheck className="h-3.5 w-3.5" /> Postazione #1 (Admin)
-          </span>
-          <span className="hidden sm:inline-flex items-center gap-1.5 rounded-md border border-border bg-background px-2.5 py-1 text-xs text-muted-foreground">
-            <Search className="h-3.5 w-3.5" /> Cerca sito web aziendale...
-          </span>
+      )}
+
+      <div>
+        <div className="space-y-1 mb-4">
+          <h3 className="text-xl font-bold">{title}</h3>
+          <p className="text-xs text-muted-foreground">Postazioni e credenziali condivise</p>
         </div>
-      </div>
 
-      <div className="overflow-x-auto">
-        <table className="min-w-[700px] w-full text-left text-xs">
-          <thead className="bg-muted text-foreground">
-            <tr>
-              <th className="border-b border-border px-3 py-3 font-bold">N°</th>
-              <th className="border-b border-border px-3 py-3 font-bold">Sito Web Aziendale (URL)</th>
-              <th className="border-b border-border px-3 py-3 font-bold">Categoria</th>
-              <th className="border-b border-border px-3 py-3 font-bold">ID Utente</th>
-              <th className="border-b border-border px-3 py-3 font-bold">Password</th>
-              <th className="border-b border-border px-3 py-3 font-bold">Azioni Rapide</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr className="border-b border-border hover:bg-muted/40 transition-colors">
-              <td className="px-3 py-3 font-semibold text-primary">001</td>
-              <td className="px-3 py-3 font-medium">https://fatture.portaledoc.it</td>
-              <td className="px-3 py-3">
-                <span className="rounded bg-secondary px-2 py-0.5 text-[11px] font-semibold text-foreground/80">
-                  Fatturazione & Fisco
-                </span>
-              </td>
-              <td className="px-3 py-3 text-muted-foreground font-mono">admin@azienda.it</td>
-              <td className="px-3 py-3">
-                <span className="inline-flex items-center gap-1.5 rounded bg-background px-2 py-1 font-mono text-[11px] border border-border">
-                  ••••••••••••
-                  <Eye className="h-3 w-3 text-primary" />
-                </span>
-              </td>
-              <td className="px-3 py-3">
-                <div className="flex items-center gap-1 text-[11px]">
-                  <span className="inline-flex items-center gap-1 rounded bg-primary/10 px-2 py-1 font-semibold text-primary hover:bg-primary/20 cursor-pointer">
-                    <Globe className="h-3 w-3" /> Apri
-                  </span>
-                  <span className="inline-flex items-center gap-1 rounded bg-secondary px-2 py-1 font-semibold text-foreground/80 hover:bg-secondary/80 cursor-pointer">
-                    <ClipboardCopy className="h-3 w-3" /> ID
-                  </span>
-                  <span className="inline-flex items-center gap-1 rounded bg-secondary px-2 py-1 font-semibold text-foreground/80 hover:bg-secondary/80 cursor-pointer">
-                    <KeyRound className="h-3 w-3" /> Pass
-                  </span>
-                </div>
-              </td>
-            </tr>
+        <div className="flex items-baseline gap-1 mb-6">
+          <span className="text-4xl font-extrabold">{price}</span>
+          <span className="text-xs text-muted-foreground">{period}</span>
+        </div>
 
-            <tr className="border-b border-border hover:bg-muted/40 transition-colors">
-              <td className="px-3 py-3 font-semibold text-primary">002</td>
-              <td className="px-3 py-3 font-medium">https://logistica.spedizionionline.eu</td>
-              <td className="px-3 py-3">
-                <span className="rounded bg-secondary px-2 py-0.5 text-[11px] font-semibold text-foreground/80">
-                  Spedizioni & Magazzino
-                </span>
-              </td>
-              <td className="px-3 py-3 text-muted-foreground font-mono">logistica_nord</td>
-              <td className="px-3 py-3">
-                <span className="inline-flex items-center gap-1.5 rounded bg-background px-2 py-1 font-mono text-[11px] border border-border">
-                  ••••••••••••
-                  <Eye className="h-3 w-3 text-primary" />
-                </span>
-              </td>
-              <td className="px-3 py-3">
-                <div className="flex items-center gap-1 text-[11px]">
-                  <span className="inline-flex items-center gap-1 rounded bg-primary/10 px-2 py-1 font-semibold text-primary hover:bg-primary/20 cursor-pointer">
-                    <Globe className="h-3 w-3" /> Apri
-                  </span>
-                  <span className="inline-flex items-center gap-1 rounded bg-secondary px-2 py-1 font-semibold text-foreground/80 hover:bg-secondary/80 cursor-pointer">
-                    <ClipboardCopy className="h-3 w-3" /> ID
-                  </span>
-                  <span className="inline-flex items-center gap-1 rounded bg-secondary px-2 py-1 font-semibold text-foreground/80 hover:bg-secondary/80 cursor-pointer">
-                    <KeyRound className="h-3 w-3" /> Pass
-                  </span>
-                </div>
-              </td>
-            </tr>
-
-            <tr className="hover:bg-muted/40 transition-colors">
-              <td className="px-3 py-3 font-semibold text-primary">003</td>
-              <td className="px-3 py-3 font-medium">https://cloud.serverbackup24.com</td>
-              <td className="px-3 py-3">
-                <span className="rounded bg-secondary px-2 py-0.5 text-[11px] font-semibold text-foreground/80">
-                  Infrastruttura IT
-                </span>
-              </td>
-              <td className="px-3 py-3 text-muted-foreground font-mono">root_ced</td>
-              <td className="px-3 py-3">
-                <span className="inline-flex items-center gap-1.5 rounded bg-background px-2 py-1 font-mono text-[11px] border border-border">
-                  ••••••••••••
-                  <Eye className="h-3 w-3 text-primary" />
-                </span>
-              </td>
-              <td className="px-3 py-3">
-                <div className="flex items-center gap-1 text-[11px]">
-                  <span className="inline-flex items-center gap-1 rounded bg-primary/10 px-2 py-1 font-semibold text-primary hover:bg-primary/20 cursor-pointer">
-                    <Globe className="h-3 w-3" /> Apri
-                  </span>
-                  <span className="inline-flex items-center gap-1 rounded bg-secondary px-2 py-1 font-semibold text-foreground/80 hover:bg-secondary/80 cursor-pointer">
-                    <ClipboardCopy className="h-3 w-3" /> ID
-                  </span>
-                  <span className="inline-flex items-center gap-1 rounded bg-secondary px-2 py-1 font-semibold text-foreground/80 hover:bg-secondary/80 cursor-pointer">
-                    <KeyRound className="h-3 w-3" /> Pass
-                  </span>
-                </div>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div className="flex flex-wrap items-center justify-between border-t border-border bg-secondary/40 p-3 text-xs text-muted-foreground">
-        <span>Visualizzazione protetta: ogni collaboratore visualizza solo i siti web aziendali assegnati.</span>
-        <span className="font-semibold text-primary">Backup Excel/PDF riservato all'Amministratore</span>
-      </div>
-    </div>
-  );
-}
-
-function PriceBlock({ anchor = false }: { anchor?: boolean }) {
-  return (
-    <div
-      id={anchor ? "prezzo" : undefined}
-      className="mx-auto mt-12 max-w-5xl scroll-mt-36"
-    >
-      <div className="text-center mb-8">
-        <p className="text-xs font-bold uppercase tracking-wider text-primary">Piani di Abbonamento Annuale</p>
-        <h3 className="mt-2 text-2xl font-bold">Attiva la Licenza Ufficiale di 040RegistroWEB</h3>
-        <p className="mt-1 text-sm text-foreground/75">
-          Tutti i piani includono 365 giorni di licenza, crittografia AES-GCM, crediti di esportazione PDF e supporto.
-        </p>
-      </div>
-
-      <div className="grid gap-6 md:grid-cols-3">
-        {/* Piano 15 */}
-        <Card className="border-2 border-primary/20 flex flex-col justify-between">
-          <CardHeader>
-            <div className="text-xs font-bold text-muted-foreground uppercase">Base Aziende</div>
-            <CardTitle className="text-xl mt-1">15 Postazioni</CardTitle>
-            <div className="text-3xl font-bold mt-2">50 € <span className="text-sm font-normal text-muted-foreground">/ anno</span></div>
-            <p className="text-xs text-muted-foreground mt-2">
-              Ideale per uffici e piccoli team: gestione protetta dei siti web aziendali con 15 PUK e 15 crediti PDF.
-            </p>
-          </CardHeader>
-          <CardContent className="space-y-4">
-            <PricingCartButton code="040RegistroWEB-015" index={32} full />
-            <p className="text-[11px] text-center text-muted-foreground">Codice: 040RegistroWEB-015</p>
-          </CardContent>
-        </Card>
-
-        {/* Piano 50 - Consigliato */}
-        <Card className="border-2 border-primary bg-primary/5 flex flex-col justify-between relative shadow-lg">
-          <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground text-[11px] font-bold px-3 py-0.5 rounded-full uppercase">
-            Più Scelto dalle Imprese
+        <div className="space-y-2 py-3 px-3.5 rounded-lg bg-primary/5 border border-primary/15 text-xs mb-6">
+          <div className="flex justify-between font-semibold">
+            <span>Collaboratori / PUK:</span>
+            <span className="text-primary">{users}</span>
           </div>
-          <CardHeader>
-            <div className="text-xs font-bold text-primary uppercase">Standard PMI</div>
-            <CardTitle className="text-xl mt-1">50 Postazioni</CardTitle>
-            <div className="text-3xl font-bold mt-2 text-primary">90 € <span className="text-sm font-normal text-muted-foreground">/ anno</span></div>
-            <p className="text-xs text-muted-foreground mt-2">
-              Pieno controllo e catalogazione dei siti web aziendali: fino a 50 collaboratori, 50 crediti PDF e categorie illimitate.
-            </p>
-          </CardHeader>
-          <CardContent className="space-y-4">
-            <PricingCartButton code="040RegistroWEB-050" index={33} full />
-            <p className="text-[11px] text-center text-muted-foreground">Codice: 040RegistroWEB-050</p>
-          </CardContent>
-        </Card>
+          <div className="flex justify-between font-semibold">
+            <span>Crediti Esportazione PDF/CSV:</span>
+            <span className="text-primary">{pdfExports}</span>
+          </div>
+        </div>
 
-        {/* Piano 200 */}
-        <Card className="border-2 border-primary/20 flex flex-col justify-between">
-          <CardHeader>
-            <div className="text-xs font-bold text-muted-foreground uppercase">Aziende Strutturate</div>
-            <CardTitle className="text-xl mt-1">200 Postazioni</CardTitle>
-            <div className="text-3xl font-bold mt-2">200 € <span className="text-sm font-normal text-muted-foreground">/ anno</span></div>
-            <p className="text-xs text-muted-foreground mt-2">
-              Per grandi strutture e gruppi: sicurezza estesa per tutti i siti web aziendali con 200 postazioni e 200 crediti PDF.
-            </p>
-          </CardHeader>
-          <CardContent className="space-y-4">
-            <PricingCartButton code="040RegistroWEB-200" index={34} full />
-            <p className="text-[11px] text-center text-muted-foreground">Codice: 040RegistroWEB-200</p>
-          </CardContent>
-        </Card>
+        <ul className="space-y-2.5 text-xs sm:text-sm mb-6">
+          {features.map((f, i) => (
+            <li key={i} className="flex items-start gap-2">
+              <CheckCircle2 className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+              <span>{f}</span>
+            </li>
+          ))}
+        </ul>
       </div>
 
-      <TaxNote className="mx-auto mt-6 max-w-xl text-center" />
+      <div className="pt-4 border-t border-border/50">
+        <PricingCartButton code={planCode} index={planIndex} label="Aggiungi al carrello" />
+      </div>
     </div>
   );
 }
 
-function RegistroSitiWebPage() {
+export function RegistroSitiWebPage() {
   const problems = [
     {
-      title: "Ore perse a cercare gli accessi ai siti web aziendali",
-      desc: "Dipendenti e collaboratori bloccati perché non trovano l'indirizzo o la password di un sito web aziendale utilizzato raramente o gestito da un collega assente.",
+      icon: Clock,
+      title: "Ore perse a cercare credenziali",
+      desc: "Post-it attaccati agli schermi, foglietti volanti, messaggi su WhatsApp: ogni volta che serve accedere a un portale si perdono 15 minuti tra ricerche e tentativi a vuoto.",
     },
     {
-      title: "Password scambiate in chat o salvate su foglietti",
-      desc: "Nessuna protezione: le chiavi di accesso ai siti web aziendali finiscono su fogli volanti, email non protette o chat di gruppo, esponendo l'azienda a gravi rischi informatici.",
+      icon: AlertTriangle,
+      title: "Password bloccate e reset continui",
+      desc: "Un collaboratore modifica una password senza avvisare gli altri, e improvvisamente l'intero ufficio resta bloccato fuori proprio nel momento di una scadenza urgente.",
     },
     {
-      title: "Nessun controllo su chi vede quale sito web aziendale",
-      desc: "Senza una segmentazione per categorie, tutti gli utenti vedono tutti i siti aziendali, compresi portali bancari, gestionali interni o aree riservate della direzione.",
-    },
-  ];
-
-  const steps = [
-    {
-      step: "01",
-      title: "Primo Accesso e Nomina Amministratore",
-      desc: "Chi effettua la prima attivazione con la Licenza e il primo PUK diventa automaticamente l'Amministratore unico del Registro Siti Web Aziendali.",
-    },
-    {
-      step: "02",
-      title: "Invito del Team con PUK Personale in 1 Clic",
-      desc: "L'amministratore inserisce l'email del collaboratore e clicca 'Invia credenziali': il sistema spedisce in automatico la Licenza e il suo PUK personale.",
-    },
-    {
-      step: "03",
-      title: "Assegnazione Permessi e Categorie",
-      desc: "Per ogni collaboratore l'amministratore sceglie il livello (Accesso Completo o Sola Lettura) e spunta esattamente le categorie di siti web aziendali che può consultare.",
-    },
-    {
-      step: "04",
-      title: "Copia Rapida in 1 Tocco (URL, ID, Password)",
-      desc: "Il collaboratore accede, visualizza solo i siti web aziendali abilitati e con un solo clic apre il portale o copia ID e password senza errori.",
-    },
-    {
-      step: "05",
-      title: "Backup & Ripristino Esclusivi dell'Amministratore",
-      desc: "Solo l'amministratore può esportare il registro in Excel/CSV o PDF con logo ditta, custodendolo in sicurezza e ripristinandolo al bisogno con 'Unisci' o 'Sostituisci'.",
+      icon: Lock,
+      title: "Nessun controllo dell'Amministratore",
+      desc: "Con un file Excel condiviso tutti vedono tutto (banche, credenziali fiscali) e se un collaboratore se ne va, porta con sé l'intero archivio aziendale.",
     },
   ];
 
   const features = [
     {
-      icon: ShieldCheck,
-      title: "Segmentazione per Categorie",
-      desc: "I collaboratori visualizzano solo le categorie autorizzate. I siti web aziendali a cui non hanno accesso non compaiono nemmeno nell'elenco.",
+      icon: UserCheck,
+      title: "Nomina automatica Amministratore",
+      desc: "Il primo collaboratore che attiva la licenza diventa automaticamente l'Amministratore dell'azienda. Solo lui ha accesso alle impostazioni e alla governance delle postazioni.",
     },
     {
-      icon: ClipboardCopy,
-      title: "Accesso Veloce in 1 Clic",
-      desc: "Tre pulsanti immediati su ciascuna riga: apri l'indirizzo del sito web aziendale, copia l'ID utente, copia la password pronta per l'accesso.",
+      icon: Users,
+      title: "Invito collaboratori in 1 clic",
+      desc: "L'Amministratore inserisce l'email del dipendente e invia automaticamente le credenziali: ogni collaboratore riceve la licenza aziendale e il proprio codice PUK personale univoco.",
     },
     {
-      icon: UserMinus,
-      title: "Revoca Accessi Istantanea",
-      desc: "Se un collaboratore lascia l'azienda o cambia mansione, l'amministratore azzera il suo PUK con un clic, disattivando all'istante l'accesso al registro.",
+      icon: Layers,
+      title: "Permessi e filtro per Categorie",
+      desc: "Scegli per ogni collaboratore tra Accesso Completo o Sola Lettura, e seleziona le categorie visibili. Chi non è autorizzato a 'Banche' o 'Fatturazione' non vede neppure la riga nel registro.",
     },
     {
-      icon: Lock,
-      title: "Zero Rischio di Fuga Dati",
-      desc: "I collaboratori non hanno accesso ai pulsanti di esportazione: nessuno può scaricare in blocco l'intero registro dei siti web aziendali.",
+      icon: KeyRound,
+      title: "Copia rapida in 1 tocco",
+      desc: "Tre pulsanti istantanei per ogni sito: un clic per aprire l'indirizzo web, un clic per copiare l'ID utente, un clic per copiare la password. La password non viene mostrata in chiaro a schermo.",
     },
     {
       icon: FileSpreadsheet,
-      title: "Ripristino da Excel in 1 Secondo",
-      desc: "In caso di emergenza o passaggio a nuovo dispositivo, l'amministratore reimporta il file Excel con modalità 'Unisci' o 'Sostituisci integralmente'.",
+      title: "Backup Excel & PDF riservati all'Admin",
+      desc: "Nessun collaboratore può esportare o scaricare le credenziali: zero rischio di furto dati. Solo l'Amministratore può salvare backup periodici in Excel o stampare il registro ufficiale PDF.",
     },
     {
-      icon: Globe,
-      title: "Lanciatore Desktop PWA Dedicato",
-      desc: "Installabile su PC Windows, Mac o smartphone con icona dedicata sul Desktop, per un avvio immediato come programma nativo.",
+      icon: Monitor,
+      title: "Lanciatore Desktop PWA",
+      desc: "Installabile come applicazione desktop con icona dedicata su Windows e Mac. Doppio clic dal desktop o dalla barra delle applicazioni e si accede subito al registro protetto.",
     },
   ];
 
   const faqs = [
     {
-      q: "Che cos'è esattamente 040RegistroWEB?",
-      a: "È il software cloud ideato per archiviare, proteggere e condividere in modo ordinato tutti i siti web aziendali e i rispettivi dati di accesso (indirizzo web, nome utente, password crittografata e note operative), eliminando dispersioni e violazioni di sicurezza.",
+      q: "Chi diventa l'Amministratore del registro aziendale?",
+      a: "La prima persona dell'azienda che attiva la licenza (inserendo la licenza e il primo PUK assegnato) viene riconosciuta dal sistema come Amministratore. Solo l'Amministratore vede la tabella 'Gestione Postazioni', le 'Impostazioni Ditta' e i pulsanti per l'esportazione dei backup.",
     },
     {
-      q: "Chi può fare da Amministratore e come viene nominato?",
-      a: "Il primo collaboratore che esegue l'attivazione della licenza inserendo il primo PUK e verificando la propria email aziendale viene automaticamente riconosciuto dal sistema come Amministratore Unico. Solo lui potrà gestire postazioni, invitare colleghi ed effettuare esportazioni.",
+      q: "Quanto tempo fa risparmiare concretamente questo registro?",
+      a: "Nelle aziende con 5-15 collaboratori si stima un risparmio di oltre 15 ore lavorative ogni mese. Niente più richieste continue tra colleghi ('mi passi la password di quel sito?'), niente più reset credenziali e zero blocchi operativi durante il lavoro.",
     },
     {
-      q: "I collaboratori possono vedere tutti i siti web aziendali?",
-      a: "No. L'amministratore seleziona per ciascun collaboratore le categorie di siti web aziendali a cui è autorizzato. Chi non ha i permessi non vedrà né il sito, né l'indirizzo, né la password.",
+      q: "I dipendenti possono scaricare tutte le password aziendali?",
+      a: "No. I pulsanti 'Esporta CSV' e 'Esporta PDF' sono visibili e utilizzabili esclusivamente dall'Amministratore. I collaboratori autorizzati possono solo consultare o copiare le credenziali delle categorie a loro assegnate, azzerando il rischio di fuga dati.",
     },
     {
-      q: "I dipendenti possono scaricare o esportare il registro?",
-      a: "Assolutamente no. Per garantire la massima riservatezza aziendale, i pulsanti di esportazione in Excel, CSV e PDF con frontespizio sono visibili e azionabili esclusivamente dall'Amministratore. I collaboratori possono solo consultare e copiare i singoli accessi autorizzati.",
+      q: "Cosa succede se un dipendente lascia l'azienda?",
+      a: "L'Amministratore apre la 'Gestione Postazioni' e con un solo clic cancella o riassegna il PUK del dipendente. L'accesso di quel collaboratore viene revocato all'istante, e la postazione torna libera per un nuovo collega.",
     },
     {
-      q: "Come avviene il backup e il ripristino dei siti web aziendali?",
-      a: "L'amministratore deve effettuare periodicamente il backup salvando il file Excel o PDF in un luogo protetto. Se occorre ripristinare i dati, basta usare la funzione 'Importa da file' scegliendo se unire i dati o sostituire interamente il registro.",
+      q: "Come funziona il backup e il ripristino dei dati?",
+      a: "L'Amministratore può esportare in qualsiasi momento un backup completo in formato Excel/CSV o PDF con il frontespizio aziendale. In caso di necessità, il file Excel può essere reimportato con due modalità: 'Unisci' (aggiunge i record mancanti senza toccare quelli esistenti) o 'Sostituisci' (ripristina esattamente l'archivio salvato).",
     },
     {
-      q: "Cosa succede se un dipendente si dimette o cambia mansione?",
-      a: "L'amministratore apre la scheda 'Gestione Postazioni' e con un semplice clic cancella o riassegna il PUK del dipendente: il suo accesso a tutti i siti web aziendali viene revocato all'istante senza dover cambiare tutte le password dei portali.",
+      q: "Che cos'è il Lanciatore Desktop PWA?",
+      a: "È un'applicazione leggera basata su tecnologia Progressive Web App. Si installa direttamente dal browser creando un'icona dedicata sul desktop del computer e nella barra delle applicazioni, permettendo di aprire il registro con un doppio clic.",
     },
   ];
 
   return (
     <div className="min-h-screen bg-background text-foreground">
+      {/* 1. Header istituzionale del sito */}
       <SiteHeader />
+
       <main id="main" className="pt-36 md:pt-44">
         {/* Pulsante Torna alle applicazioni */}
-        <div className="container mx-auto max-w-6xl px-4">
-          <Button variant="ghost" size="sm" asChild className="mb-5">
+        <div className="container mx-auto px-4 max-w-6xl mb-6">
+          <Button variant="ghost" size="sm" asChild className="hover:bg-primary/10">
             <Link to="/applicazioni">
-              <ArrowLeft className="h-4 w-4 mr-2" aria-hidden />
+              <ArrowLeft className="h-4 w-4 mr-2" />
               Torna alle applicazioni
             </Link>
           </Button>
         </div>
 
-        {/* Hero Section */}
-        <section className="pb-20 [background:var(--gradient-section-hero)]">
-          <div className="container mx-auto grid max-w-6xl items-center gap-12 px-4 lg:grid-cols-[0.9fr_1.1fr]">
-            <div>
-              <p className="text-sm font-bold uppercase tracking-wider text-primary">
-                040REGISTROWEB – REGISTRO SITI WEB AZIENDALI
-              </p>
-              <h1 className="mt-4 text-4xl font-bold leading-tight md:text-5xl">
-                Tutti i siti web aziendali e le relative credenziali, in un unico registro blindato.
-              </h1>
-              <p className="mt-6 text-lg leading-relaxed text-foreground/80">
-                Basta perdere ore di lavoro a cercare link e password smarrite o inviarsi accessi via chat. Con 040RegistroWEB l'amministratore governa le categorie, invita i collaboratori in 1 clic e protegge l'intero patrimonio dei siti web aziendali.
-              </p>
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                <Button size="lg" variant="hero" className="h-12" asChild>
-                  <a href="#come-funziona">
-                    Scopri come funziona
-                    <ArrowDown className="ml-2 h-4 w-4" aria-hidden />
-                  </a>
-                </Button>
-                <Button size="lg" variant="outline" className="h-12" asChild>
-                  <a href="#prezzo">Piani e Prezzi</a>
-                </Button>
+        {/* 2. HERO PRINCIPALE (con Immagine 01 in /040registroweb/) */}
+        <section className="relative overflow-hidden py-8 md:py-16" style={{ background: "var(--gradient-section-hero)" }}>
+          <div className="container mx-auto px-4 max-w-6xl">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+              
+              {/* Testo Hero */}
+              <div className="lg:col-span-7 space-y-6 text-left">
+                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-primary/30 bg-primary/10 text-xs font-semibold text-primary">
+                  <span className="h-2 w-2 rounded-full bg-[#b4ff3c] animate-pulse" />
+                  SOFTWARE SAAS AZIENDALE 040RegistroWEB
+                </div>
+
+                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight">
+                  Tutti i siti web aziendali e le credenziali, in un unico registro blindato.
+                </h1>
+
+                <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
+                  Basta perdere ore ogni giorno a cercare password in chat o foglietti volanti. 
+                  Il primo accesso nomina in automatico l'Amministratore, che assegna i PUK ai collaboratori, 
+                  decide quali categorie far vedere a ciascuno e custodisce l'archivio con backup protetti.
+                </p>
+
+                <div className="flex flex-wrap gap-4 pt-2">
+                  <Button size="lg" className="bg-[#b4ff3c] hover:bg-[#a3f02b] text-black font-bold shadow-lg" asChild>
+                    <a href="#prezzi">Attiva la licenza aziendale →</a>
+                  </Button>
+                  <Button size="lg" variant="outline" asChild>
+                    <a href="#come-funziona">Come funziona</a>
+                  </Button>
+                </div>
+
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-4 border-t border-primary/15 text-xs text-muted-foreground">
+                  <div className="flex items-center gap-1.5">
+                    <CheckCircle2 className="w-4 h-4 text-primary shrink-0" />
+                    <span>Attivazione immediata</span>
+                  </div>
+                  <div className="flex items-center gap-1.5">
+                    <CheckCircle2 className="w-4 h-4 text-primary shrink-0" />
+                    <span>Backup riservato Admin</span>
+                  </div>
+                  <div className="flex items-center gap-1.5">
+                    <CheckCircle2 className="w-4 h-4 text-primary shrink-0" />
+                    <span>Crittografia Cloud</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Immagine Hero 01 */}
+              <div className="lg:col-span-5 relative">
+                <div className="absolute -inset-2 bg-gradient-to-r from-[#b4ff3c]/20 via-[#00e5ff]/20 to-transparent rounded-2xl blur-xl opacity-80" />
+                <div className="relative rounded-2xl overflow-hidden border-2 border-primary/25 bg-[#060a12] shadow-2xl">
+                  <img
+                    src="/040registroweb/040RegistroWEB-image01.jpg"
+                    alt="040RegistroWEB - Software Registro Siti Web Aziendali e Credenziali Protette"
+                    className="w-full h-auto object-cover block"
+                    loading="eager"
+                  />
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        {/* 3. IL CONFRONTO: DAL CAOS AL TOTALE CONTROLLO (con Immagine 05 in /040registroweb/) */}
+        <section className="py-16 sm:py-24 bg-background border-b border-border/50">
+          <div className="container mx-auto px-4 max-w-6xl">
+            <SectionHeading
+              badge="Tempo & Produttività"
+              title="Dal caos dei post-it al controllo totale del tuo tempo"
+              subtitle="Guarda la differenza tra lavorare cercando password ogni 10 minuti e lavorare con un sistema aziendale blindato dove sei tu il vero padrone."
+            />
+
+            {/* Immagine 05: Before vs After */}
+            <div className="relative max-w-4xl mx-auto mb-12">
+              <div className="absolute -inset-2 bg-gradient-to-r from-red-500/10 via-[#b4ff3c]/20 to-primary/20 rounded-2xl blur-xl opacity-80" />
+              <div className="relative rounded-2xl overflow-hidden border-2 border-primary/25 bg-[#060a12] shadow-2xl">
+                <img
+                  src="/040registroweb/040RegistroWEB-image05.jpg"
+                  alt="Dal Caos dei Post-it al Totale Controllo e Tempo Risparmiato con 040RegistroWEB"
+                  className="w-full h-auto object-cover block"
+                  loading="lazy"
+                />
               </div>
             </div>
-            <RegisterMockup />
-          </div>
-          <div className="container mx-auto max-w-6xl px-4">
-            <PriceBlock anchor />
-          </div>
-        </section>
 
-        {/* Problemi Risolti */}
-        <section className="py-20">
-          <div className="container mx-auto max-w-5xl px-4">
-            <SectionHeading
-              kicker="Sicurezza & Risparmio di Tempo"
-              title="Quanto tempo perde ogni giorno la tua azienda per accedere ai propri siti?"
-            />
-            <div className="grid gap-6 md:grid-cols-3">
-              {problems.map((prob) => (
-                <Card key={prob.title} className="border-2 border-primary/20 bg-card">
-                  <CardHeader>
-                    <div className="mb-2 flex h-10 w-10 items-center justify-center rounded-lg bg-destructive/10 text-destructive">
-                      <ShieldAlert className="h-5 w-5" />
-                    </div>
-                    <CardTitle className="text-base leading-snug">{prob.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-sm leading-relaxed text-foreground/75">{prob.desc}</p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Come Funziona - Flusso in 5 step */}
-        <section
-          id="come-funziona"
-          className="scroll-mt-36 border-y-2 border-primary/15 py-20 [background:var(--gradient-section-corsi)]"
-        >
-          <div className="container mx-auto max-w-6xl px-4">
-            <SectionHeading
-              kicker="Flusso Operativo Immediato"
-              title="Come funziona 040RegistroWEB in 5 semplici passaggi"
-            />
-            <ol className="grid gap-5 md:grid-cols-5">
-              {steps.map((st) => (
-                <li key={st.step} className="border-t-4 border-primary pt-5 bg-card/60 p-4 rounded-b-lg border-x border-b border-primary/10">
-                  <span className="text-3xl font-extrabold text-primary">{st.step}</span>
-                  <h3 className="mt-3 font-bold text-sm leading-tight">{st.title}</h3>
-                  <p className="mt-2 text-xs leading-relaxed text-foreground/75">{st.desc}</p>
-                </li>
-              ))}
-            </ol>
-          </div>
-        </section>
-
-        {/* Caratteristiche Chiave */}
-        <section className="py-20">
-          <div className="container mx-auto max-w-6xl px-4">
-            <SectionHeading
-              kicker="Protezione Totale"
-              title="Perché le aziende scelgono 040RegistroWEB"
-            />
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {features.map((feat) => {
-                const Icon = feat.icon;
+            {/* 3 Card di dettaglio */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {problems.map((p, idx) => {
+                const Icon = p.icon;
                 return (
-                  <Card key={feat.title} className="border-2 border-primary/20 bg-card">
-                    <CardHeader>
-                      <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-lg [background:var(--gradient-hero)] text-primary-foreground">
-                        <Icon className="h-6 w-6" aria-hidden />
+                  <Card key={idx} className="border-2 border-primary/20 bg-background/60 hover:border-primary/40 transition-colors">
+                    <CardHeader className="space-y-3">
+                      <div className="w-12 h-12 rounded-xl bg-destructive/10 text-destructive flex items-center justify-center">
+                        <Icon className="w-6 h-6" />
                       </div>
-                      <CardTitle className="text-lg leading-snug">{feat.title}</CardTitle>
+                      <CardTitle className="text-lg font-bold">{p.title}</CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-sm leading-relaxed text-foreground/80">{feat.desc}</p>
+                      <p className="text-sm text-muted-foreground leading-relaxed">{p.desc}</p>
                     </CardContent>
                   </Card>
                 );
               })}
             </div>
-            <PriceBlock />
           </div>
         </section>
 
-        {/* FAQ */}
-        <section className="border-y-2 border-primary/15 py-20 [background:var(--gradient-section-corsi)]">
-          <div className="container mx-auto max-w-3xl px-4">
-            <SectionHeading kicker="Domande Frequenti" title="Tutto quello che c'è da sapere" />
-            <Accordion type="single" collapsible className="space-y-3">
-              {faqs.map((faq, i) => (
+        {/* 4. SEZIONE COME FUNZIONA: GOVERNANCE AMMINISTRATORE (con Immagine 02 in /040registroweb/) */}
+        <section id="come-funziona" className="py-16 sm:py-24 border-y-2 border-primary/15" style={{ background: "var(--gradient-section-corsi)" }}>
+          <div className="container mx-auto px-4 max-w-6xl">
+            <SectionHeading
+              badge="Controllo & Permessi"
+              title="L'Amministratore decide chi vede cosa in 1 clic"
+              subtitle="Una gestione centralizzata che elimina il disordine senza complicare il lavoro ai collaboratori."
+            />
+
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+              
+              {/* Immagine 02: Gestione Postazioni */}
+              <div className="lg:col-span-6 order-2 lg:order-1 relative">
+                <div className="absolute -inset-2 bg-gradient-to-r from-primary/20 via-[#b4ff3c]/20 to-transparent rounded-2xl blur-xl opacity-75" />
+                <div className="relative rounded-2xl overflow-hidden border-2 border-primary/25 bg-[#060a12] shadow-2xl">
+                  <img
+                    src="/040registroweb/040RegistroWEB-image02.jpg"
+                    alt="040RegistroWEB - Gestione Postazioni e Permessi Categorie Riservata Amministratore"
+                    className="w-full h-auto object-cover block"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+
+              {/* Punti operativi */}
+              <div className="lg:col-span-6 order-1 lg:order-2 space-y-6">
+                <div className="space-y-4">
+                  <div className="flex gap-4 items-start">
+                    <div className="w-8 h-8 rounded-full bg-[#b4ff3c] text-black font-extrabold flex items-center justify-center shrink-0 text-sm shadow">
+                      1
+                    </div>
+                    <div>
+                      <h3 className="text-base sm:text-lg font-bold flex items-center gap-2">
+                        Primo accesso = Amministratore <Crown className="w-4 h-4 text-amber-500" />
+                      </h3>
+                      <p className="text-sm text-muted-foreground mt-1 leading-relaxed">
+                        Il titolare o il responsabile IT attiva la licenza: il sistema lo riconosce all'istante come Amministratore supremo dell'intero registro aziendale.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex gap-4 items-start">
+                    <div className="w-8 h-8 rounded-full bg-[#b4ff3c] text-black font-extrabold flex items-center justify-center shrink-0 text-sm shadow">
+                      2
+                    </div>
+                    <div>
+                      <h3 className="text-base sm:text-lg font-bold">Invito e PUK personale via email</h3>
+                      <p className="text-sm text-muted-foreground mt-1 leading-relaxed">
+                        Inserisci l'email del dipendente: il sistema spedisce in automatico la licenza aziendale e il codice PUK personale univoco.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex gap-4 items-start">
+                    <div className="w-8 h-8 rounded-full bg-[#b4ff3c] text-black font-extrabold flex items-center justify-center shrink-0 text-sm shadow">
+                      3
+                    </div>
+                    <div>
+                      <h3 className="text-base sm:text-lg font-bold">Visibilità selettiva per Categorie</h3>
+                      <p className="text-sm text-muted-foreground mt-1 leading-relaxed">
+                        Spunta solo le categorie a cui il dipendente è autorizzato (es. <em>Documenti tecnici</em>, <em>Logistica</em>). I portali bancari e contabili restano invisibili.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex gap-4 items-start">
+                    <div className="w-8 h-8 rounded-full bg-[#b4ff3c] text-black font-extrabold flex items-center justify-center shrink-0 text-sm shadow">
+                      4
+                    </div>
+                    <div>
+                      <h3 className="text-base sm:text-lg font-bold">Offboarding istantaneo in 3 secondi</h3>
+                      <p className="text-sm text-muted-foreground mt-1 leading-relaxed">
+                        Un collaboratore cambia incarico o lascia l'azienda? Con un clic revochi il suo PUK: l'accesso si chiude all'istante e la postazione torna libera.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        {/* 5. SEZIONE SICUREZZA & BACKUP (con Immagine 03 in /040registroweb/) */}
+        <section className="py-16 sm:py-24 bg-background">
+          <div className="container mx-auto px-4 max-w-6xl">
+            <SectionHeading
+              badge="Zero Rischio Fuga Dati"
+              title="Backup Excel & Report PDF riservati esclusivamente all'Amministratore"
+              subtitle="I collaboratori utilizzano le password ogni giorno ma non possono esportare l'archivio. Solo l'Amministratore può salvare copie aziendali sicure."
+            />
+
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+              
+              {/* Testo Sicurezza */}
+              <div className="lg:col-span-6 space-y-6">
+                <div className="p-4 rounded-xl bg-primary/5 border border-primary/20 space-y-2">
+                  <div className="flex items-center gap-2 font-bold text-sm text-primary">
+                    <ShieldCheck className="w-5 h-5 text-[#b4ff3c]" />
+                    <span>Nessun dipendente può scaricare il registro</span>
+                  </div>
+                  <p className="text-xs text-muted-foreground leading-relaxed">
+                    A differenza dei fogli condivisi o dei vecchi archivi, i pulsanti di esportazione sono completamente nascosti ai collaboratori: non c'è rischio che l'archivio venga scaricato su chiavetta.
+                  </p>
+                </div>
+
+                <div className="space-y-4">
+                  <div className="flex gap-3 items-start">
+                    <FileSpreadsheet className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                    <div>
+                      <h4 className="text-sm font-bold">Backup periodico in Excel (.xlsx / .csv)</h4>
+                      <p className="text-xs text-muted-foreground mt-0.5 leading-relaxed">
+                        L'Amministratore scarica in autonomia il backup periodico da custodire nel server aziendale o su supporto crittografato.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex gap-3 items-start">
+                    <Download className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                    <div>
+                      <h4 className="text-sm font-bold">Ripristino facilitato "Unisci" o "Sostituisci"</h4>
+                      <p className="text-xs text-muted-foreground mt-0.5 leading-relaxed">
+                        Se occorre ripristinare i dati, basta ricaricare il file Excel scegliendo se unire i dati mancanti o ripristinare integralmente l'archivio.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex gap-3 items-start">
+                    <Lock className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                    <div>
+                      <h4 className="text-sm font-bold">Registro Ufficiale PDF con Logo Ditta</h4>
+                      <p className="text-xs text-muted-foreground mt-0.5 leading-relaxed">
+                        Stampa il documento ufficiale completo di ragione sociale, partita IVA, data, operatore e timbro di riservatezza per gli archivi della direzione.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Immagine 03: Report PDF e Backup Excel */}
+              <div className="lg:col-span-6 relative">
+                <div className="absolute -inset-2 bg-gradient-to-r from-emerald-500/20 via-cyan-500/20 to-transparent rounded-2xl blur-xl opacity-75" />
+                <div className="relative rounded-2xl overflow-hidden border-2 border-primary/25 bg-[#060a12] shadow-2xl">
+                  <img
+                    src="/040registroweb/040RegistroWEB-image03.jpg"
+                    alt="040RegistroWEB - Backup Excel e Documento Ufficiale PDF Riservato Amministratore"
+                    className="w-full h-auto object-cover block"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        {/* 6. LE CARATTERISTICHE CHIAVE DEL SOFTWARE */}
+        <section className="py-16 sm:py-20 border-t border-border/50" style={{ background: "var(--gradient-section-app)" }}>
+          <div className="container mx-auto px-4 max-w-6xl">
+            <SectionHeading
+              badge="Tutto ciò che serve"
+              title="Progettato per la massima produttività quotidiana"
+              subtitle="Semplice da usare per chiunque, potente e blindato per chi amministra l'azienda."
+            />
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {features.map((f, idx) => {
+                const Icon = f.icon;
+                return (
+                  <Card key={idx} className="border-2 border-primary/20 bg-background/80 hover:border-primary/40 transition-colors">
+                    <CardHeader className="space-y-2">
+                      <div className="w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center">
+                        <Icon className="w-5 h-5" />
+                      </div>
+                      <CardTitle className="text-base font-bold">{f.title}</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">{f.desc}</p>
+                    </CardContent>
+                  </Card>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* 7. SEZIONE LANCIATORE PWA (con Immagine 04 in /040registroweb/) */}
+        <section className="py-16 sm:py-24 bg-background border-t border-border/50">
+          <div className="container mx-auto px-4 max-w-6xl">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+              
+              {/* Immagine 04: Desktop PWA */}
+              <div className="lg:col-span-6 relative">
+                <div className="absolute -inset-2 bg-gradient-to-r from-[#b4ff3c]/20 via-[#00e5ff]/20 to-transparent rounded-2xl blur-xl opacity-75" />
+                <div className="relative rounded-2xl overflow-hidden border-2 border-primary/25 bg-[#060a12] shadow-2xl">
+                  <img
+                    src="/040registroweb/040RegistroWEB-image04.jpg"
+                    alt="040RegistroWEB - Lanciatore Desktop PWA con Icona Dedicata su Windows e Mac"
+                    className="w-full h-auto object-cover block"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+
+              {/* Testo PWA */}
+              <div className="lg:col-span-6 space-y-5">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold border border-primary/20">
+                  <Monitor className="w-3.5 h-3.5" />
+                  APP DESKTOP AZIENDALE
+                </div>
+
+                <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight">
+                  Un doppio clic dal desktop e sei subito operativo
+                </h2>
+
+                <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
+                  Grazie al <strong>Lanciatore Desktop PWA</strong>, 040RegistroWEB si installa direttamente sul computer dei dipendenti con un'icona nativa ad alta risoluzione sul desktop e nella barra delle applicazioni.
+                </p>
+
+                <ul className="space-y-2.5 text-xs sm:text-sm text-muted-foreground">
+                  <li className="flex items-center gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-[#b4ff3c] shrink-0" />
+                    <span>Nessun installer pesante o file .exe da aggiornare</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-[#b4ff3c] shrink-0" />
+                    <span>Compatibile con Windows 10/11, Mac, iPad e tablet</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-[#b4ff3c] shrink-0" />
+                    <span>Accesso istantaneo senza dover ricordare l'indirizzo web</span>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        {/* 8. SEZIONE PIANI & PREZZI */}
+        <section id="prezzi" className="py-16 sm:py-24 border-y-2 border-primary/15" style={{ background: "var(--gradient-section-corsi)" }}>
+          <div className="container mx-auto px-4 max-w-6xl">
+            <SectionHeading
+              badge="Trasparenza Totale"
+              title="Scegli il piano ideale per la tua azienda"
+              subtitle="Canone annuale fisso tutto compreso. Attivazione immediata con il primo PUK Amministratore."
+            />
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch max-w-5xl mx-auto">
+              {/* Piano 15 */}
+              <PriceBlock
+                title="040RegistroWEB-015"
+                price="€ 50,00"
+                period="/ anno"
+                users="Fino a 15 collaboratori"
+                pdfExports="15 esportazioni PDF/CSV"
+                planCode="040RegistroWEB-015"
+                planIndex={32}
+                features={[
+                  "Amministratore automatico",
+                  "15 Codici PUK personali univoci",
+                  "Permessi e filtro per Categorie",
+                  "Copia rapida URL, ID e Password",
+                  "Backup Excel e Registro PDF riservati",
+                  "Lanciatore Desktop PWA incluso",
+                  "Validità 365 giorni",
+                ]}
+              />
+
+              {/* Piano 50 (In Evidenza) */}
+              <PriceBlock
+                highlight
+                title="040RegistroWEB-050"
+                price="€ 90,00"
+                period="/ anno"
+                users="Fino a 50 collaboratori"
+                pdfExports="50 esportazioni PDF/CSV"
+                planCode="040RegistroWEB-050"
+                planIndex={33}
+                features={[
+                  "Tutte le funzioni del piano 015",
+                  "50 Codici PUK personali univoci",
+                  "50 Crediti esportazione PDF/CSV",
+                  "Ideale per imprese con più reparti",
+                  "Gestione categorie avanzata",
+                  "Supporto prioritario via email",
+                  "Validità 365 giorni",
+                ]}
+              />
+
+              {/* Piano 200 */}
+              <PriceBlock
+                title="040RegistroWEB-200"
+                price="€ 200,00"
+                period="/ anno"
+                users="Fino a 200 collaboratori"
+                pdfExports="200 esportazioni PDF/CSV"
+                planCode="040RegistroWEB-200"
+                planIndex={34}
+                features={[
+                  "Tutte le funzioni del piano 050",
+                  "200 Codici PUK personali univoci",
+                  "200 Crediti esportazione PDF/CSV",
+                  "Per grandi strutture o gruppi",
+                  "Offboarding massivo collaboratori",
+                  "Backup senza pensieri tutto l'anno",
+                  "Validità 365 giorni",
+                ]}
+              />
+            </div>
+
+            <div className="mt-8 max-w-xl mx-auto text-center">
+              <TaxDisclaimer />
+            </div>
+          </div>
+        </section>
+
+        {/* 9. FAQ ACCORDION */}
+        <section className="py-16 sm:py-24 bg-background">
+          <div className="container mx-auto px-4 max-w-4xl">
+            <SectionHeading
+              badge="Domande Frequenti"
+              title="Tutto quello che c'è da sapere"
+              subtitle="Risposte chiare sui permessi, la sicurezza e l'uso quotidiano di 040RegistroWEB."
+            />
+
+            <Accordion type="single" collapsible className="w-full space-y-4">
+              {faqs.map((faq, idx) => (
                 <AccordionItem
-                  key={faq.q}
-                  value={`faq-${i}`}
-                  className="rounded-lg border-2 border-primary/20 bg-card px-4"
+                  key={idx}
+                  value={`item-${idx}`}
+                  className="border-2 border-primary/20 rounded-xl px-4 sm:px-6 bg-background/60"
                 >
-                  <AccordionTrigger className="text-left text-base font-semibold hover:no-underline py-4">
+                  <AccordionTrigger className="text-left font-bold text-sm sm:text-base py-4 hover:no-underline">
                     {faq.q}
                   </AccordionTrigger>
-                  <AccordionContent className="leading-relaxed text-foreground/80 pb-4 text-sm">
+                  <AccordionContent className="text-xs sm:text-sm text-muted-foreground leading-relaxed pb-4">
                     {faq.a}
                   </AccordionContent>
                 </AccordionItem>
@@ -517,26 +679,25 @@ function RegistroSitiWebPage() {
           </div>
         </section>
 
-        {/* Sezione Finale CTA */}
-        <section className="py-20 [background:var(--gradient-section-about)] text-primary-foreground">
-          <div className="container mx-auto max-w-3xl px-4 text-center">
-            <p className="text-sm font-bold uppercase tracking-wider text-primary-foreground/75">
-              CorporateBoostService
-            </p>
-            <h2 className="mt-3 text-3xl font-bold md:text-4xl">
-              Metti in sicurezza i siti web aziendali oggi stesso
+        {/* 10. CTA FINALE */}
+        <section className="py-16 sm:py-20 text-white" style={{ background: "var(--gradient-section-about)" }}>
+          <div className="container mx-auto px-4 max-w-4xl text-center space-y-6">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight">
+              Proteggi i siti aziendali e risparmia ore preziose da subito.
             </h2>
-            <p className="mt-5 text-lg leading-relaxed text-primary-foreground/85">
-              Attiva la licenza aziendale annuale, ricevi immediatamente il tuo codice di attivazione e metti fine alla perdita di tempo e alle falle di sicurezza per sempre.
+            <p className="text-white/80 max-w-2xl mx-auto text-sm sm:text-base leading-relaxed">
+              Attiva la licenza per la tua azienda: riceverai subito la licenza e il PUK Amministratore per iniziare a invitare i tuoi collaboratori in totale sicurezza.
             </p>
-            <div className="mt-8 flex justify-center">
-              <Button size="lg" variant="hero" className="h-12 text-base px-8" asChild>
-                <a href="#prezzo">Scegli il tuo piano</a>
+            <div className="pt-2">
+              <Button size="lg" className="bg-[#b4ff3c] hover:bg-[#a3f02b] text-black font-bold shadow-xl" asChild>
+                <a href="#prezzi">Scegli il tuo piano aziendale →</a>
               </Button>
             </div>
           </div>
         </section>
       </main>
+
+      {/* 11. Footer istituzionale del sito */}
       <SiteFooter />
     </div>
   );
