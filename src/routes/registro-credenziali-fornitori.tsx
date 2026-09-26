@@ -78,8 +78,10 @@ function PriceBlock({ dark = false, anchor = false }: { dark?: boolean; anchor?:
       </p>
       <h3 className="mt-2 text-xl font-bold">{t("planTitle")}</h3>
       <p className={`mt-1 text-sm ${dark ? "text-primary-foreground/75" : "text-foreground/65"}`}>{t("planCode")}</p>
-      <div className="mx-auto mt-5 max-w-md">
-        <PricingCartButton code="040RegistroWEB-365" index={18} full />
+      <div className="mx-auto mt-5 flex max-w-md flex-col items-center gap-3">
+        <PricingCartButton code="040RegistroWEB-015" index={18} full />
+        <PricingCartButton code="040RegistroWEB-050" index={19} full />
+        <PricingCartButton code="040RegistroWEB-200" index={20} full />
       </div>
       <TaxNote light={dark} className="mx-auto mt-4 max-w-xl" />
     </div>
