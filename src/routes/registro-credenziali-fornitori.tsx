@@ -22,12 +22,12 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { PricingCartButton } from "@/components/PricingCartButton";
-import { TaxDisclaimer } from "@/components/TaxDisclaimer";
+import { TaxNote } from "@/components/TaxDisclaimer";
 
 export const Route = createFileRoute("/registro-credenziali-fornitori")({
   head: () => ({
-    title: "Registro Siti Web Aziendali e Credenziali | 040RegistroWEB",
     meta: [
+      { title: "Registro Siti Web Aziendali e Credenziali | 040RegistroWEB" },
       {
         name: "description",
         content: "Software SaaS per organizzare e proteggere tutti i siti web aziendali e le relative credenziali. Risparmia ore di lavoro: primo accesso Amministratore, permessi per categorie, backup Excel/PDF riservato e lanciatore Desktop PWA.",
@@ -38,6 +38,7 @@ export const Route = createFileRoute("/registro-credenziali-fornitori")({
       { property: "og:image", content: "https://corporateboostservice.eu/040registroweb/040RegistroWEB-image01.jpg" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "canonical", href: "https://corporateboostservice.eu/registro-credenziali-fornitori" }],
   }),
   component: RegistroSitiWebPage,
 });
@@ -125,7 +126,7 @@ function PriceBlock({
       </div>
 
       <div className="pt-4 border-t border-border/50">
-        <PricingCartButton code={planCode} index={planIndex} label="Aggiungi al carrello" />
+        <PricingCartButton code={planCode} index={planIndex} full />
       </div>
     </div>
   );
@@ -226,7 +227,7 @@ export function RegistroSitiWebPage() {
           </Button>
         </div>
 
-        {/* 2. HERO PRINCIPALE (con Immagine 01 in /040registroweb/) */}
+        {/* 2. HERO PRINCIPALE */}
         <section className="relative overflow-hidden py-8 md:py-16" style={{ background: "var(--gradient-section-hero)" }}>
           <div className="container mx-auto px-4 max-w-6xl">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
@@ -290,7 +291,7 @@ export function RegistroSitiWebPage() {
           </div>
         </section>
 
-        {/* 3. IL CONFRONTO: DAL CAOS AL TOTALE CONTROLLO (con Immagine 05 in /040registroweb/) */}
+        {/* 3. IL CONFRONTO: DAL CAOS AL TOTALE CONTROLLO */}
         <section className="py-16 sm:py-24 bg-background border-b border-border/50">
           <div className="container mx-auto px-4 max-w-6xl">
             <SectionHeading
@@ -334,7 +335,7 @@ export function RegistroSitiWebPage() {
           </div>
         </section>
 
-        {/* 4. SEZIONE COME FUNZIONA: GOVERNANCE AMMINISTRATORE (con Immagine 02 in /040registroweb/) */}
+        {/* 4. SEZIONE COME FUNZIONA: GOVERNANCE AMMINISTRATORE */}
         <section id="come-funziona" className="py-16 sm:py-24 border-y-2 border-primary/15" style={{ background: "var(--gradient-section-corsi)" }}>
           <div className="container mx-auto px-4 max-w-6xl">
             <SectionHeading
@@ -417,7 +418,7 @@ export function RegistroSitiWebPage() {
           </div>
         </section>
 
-        {/* 5. SEZIONE SICUREZZA & BACKUP (con Immagine 03 in /040registroweb/) */}
+        {/* 5. SEZIONE SICUREZZA & BACKUP */}
         <section className="py-16 sm:py-24 bg-background">
           <div className="container mx-auto px-4 max-w-6xl">
             <SectionHeading
@@ -520,7 +521,7 @@ export function RegistroSitiWebPage() {
           </div>
         </section>
 
-        {/* 7. SEZIONE LANCIATORE PWA (con Immagine 04 in /040registroweb/) */}
+        {/* 7. SEZIONE LANCIATORE PWA */}
         <section className="py-16 sm:py-24 bg-background border-t border-border/50">
           <div className="container mx-auto px-4 max-w-6xl">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
@@ -591,7 +592,7 @@ export function RegistroSitiWebPage() {
                 users="Fino a 15 collaboratori"
                 pdfExports="15 esportazioni PDF/CSV"
                 planCode="040RegistroWEB-015"
-                planIndex={32}
+                planIndex={18}
                 features={[
                   "Amministratore automatico",
                   "15 Codici PUK personali univoci",
@@ -612,7 +613,7 @@ export function RegistroSitiWebPage() {
                 users="Fino a 50 collaboratori"
                 pdfExports="50 esportazioni PDF/CSV"
                 planCode="040RegistroWEB-050"
-                planIndex={33}
+                planIndex={19}
                 features={[
                   "Tutte le funzioni del piano 015",
                   "50 Codici PUK personali univoci",
@@ -632,7 +633,7 @@ export function RegistroSitiWebPage() {
                 users="Fino a 200 collaboratori"
                 pdfExports="200 esportazioni PDF/CSV"
                 planCode="040RegistroWEB-200"
-                planIndex={34}
+                planIndex={20}
                 features={[
                   "Tutte le funzioni del piano 050",
                   "200 Codici PUK personali univoci",
@@ -646,7 +647,7 @@ export function RegistroSitiWebPage() {
             </div>
 
             <div className="mt-8 max-w-xl mx-auto text-center">
-              <TaxDisclaimer />
+              <TaxNote />
             </div>
           </div>
         </section>
