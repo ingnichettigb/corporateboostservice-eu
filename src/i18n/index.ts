@@ -9,6 +9,7 @@ import { smartMaintenance } from "./locales/pages/smart-maintenance";
 import { pedflow } from "./locales/pages/pedflow";
 import { de } from "./locales/de";
 import { es } from "./locales/es";
+import { blog } from "./locales/pages/blog";
 
 if (!i18n.isInitialized) {
   i18n.use(initReactI18next).init({
