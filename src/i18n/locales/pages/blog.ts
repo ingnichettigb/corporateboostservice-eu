@@ -1,0 +1,78 @@
+export const blog = {
+  it: {
+    metaTitle: "Blog — Approfondimenti per imprese | CorporateBoostService.eu",
+    metaDescription:
+      "Articoli e guide pratiche su digitalizzazione, sicurezza degli accessi, manutenzione e adempimenti per imprese e professionisti.",
+    kicker: "Notizie e approfondimenti",
+    title: "Blog",
+    subtitle:
+      "Guide pratiche e approfondimenti su digitalizzazione, sicurezza degli accessi e adempimenti per le imprese.",
+    read: "Leggi l'articolo",
+    empty: "Nessun articolo pubblicato al momento.",
+    back: "Torna al blog",
+    home: "Home",
+    article: "Articolo",
+    by: "di",
+    readingTime: "Lettura",
+    sponsored: "Sponsorizzato",
+    notFoundTitle: "Articolo non disponibile",
+    notFoundText: "L'articolo che stai cercando non esiste o è stato spostato.",
+  },
+  en: {
+    metaTitle: "Blog — Insights for businesses | CorporateBoostService.eu",
+    metaDescription:
+      "Articles and practical guides on digitalisation, access security, maintenance and compliance for companies and professionals.",
+    kicker: "News and insights",
+    title: "Blog",
+    subtitle:
+      "Practical guides and insights on digitalisation, access security and compliance for businesses.",
+    read: "Read the article",
+    empty: "No articles published yet.",
+    back: "Back to the blog",
+    home: "Home",
+    article: "Article",
+    by: "by",
+    readingTime: "Reading time",
+    sponsored: "Sponsored",
+    notFoundTitle: "Article unavailable",
+    notFoundText: "The article you are looking for does not exist or has been moved.",
+  },
+  de: {
+    metaTitle: "Blog — Einblicke für Unternehmen | CorporateBoostService.eu",
+    metaDescription:
+      "Artikel und praktische Leitfäden zu Digitalisierung, Zugangssicherheit, Wartung und Compliance für Unternehmen und Fachleute.",
+    kicker: "News und Einblicke",
+    title: "Blog",
+    subtitle:
+      "Praktische Leitfäden zu Digitalisierung, Zugangssicherheit und Compliance für Unternehmen.",
+    read: "Artikel lesen",
+    empty: "Derzeit keine Artikel veröffentlicht.",
+    back: "Zurück zum Blog",
+    home: "Startseite",
+    article: "Artikel",
+    by: "von",
+    readingTime: "Lesezeit",
+    sponsored: "Gesponsert",
+    notFoundTitle: "Artikel nicht verfügbar",
+    notFoundText: "Der gesuchte Artikel existiert nicht oder wurde verschoben.",
+  },
+  es: {
+    metaTitle: "Blog — Ideas para empresas | CorporateBoostService.eu",
+    metaDescription:
+      "Artículos y guías prácticas sobre digitalización, seguridad de los accesos, mantenimiento y cumplimiento para empresas y profesionales.",
+    kicker: "Noticias y análisis",
+    title: "Blog",
+    subtitle:
+      "Guías prácticas sobre digitalización, seguridad de los accesos y cumplimiento para empresas.",
+    read: "Leer el artículo",
+    empty: "Todavía no hay artículos publicados.",
+    back: "Volver al blog",
+    home: "Inicio",
+    article: "Artículo",
+    by: "por",
+    readingTime: "Lectura",
+    sponsored: "Patrocinado",
+    notFoundTitle: "Artículo no disponible",
+    notFoundText: "El artículo que buscas no existe o se ha movido.",
+  },
+};

@@ -61,7 +61,7 @@ export function BlogSponsoredSidebar({ label = "Sponsorizzato" }: { label?: stri
             </a>
           ) : (
             <Link
-              to={item.link}
+              to={item.link as "/applicazioni"}
               rel="sponsored noopener"
               className="mt-5 inline-flex items-center justify-center gap-2 min-h-11 w-full rounded-lg bg-primary px-4 font-semibold text-primary-foreground hover:bg-primary/90"
             >
