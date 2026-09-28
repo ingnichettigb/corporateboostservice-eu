@@ -1,0 +1,38 @@
+[
+  {
+    "title": "REGISTRO SITI WEB AZIENDALI",
+    "description": "Tutte le credenziali dei siti, portali e servizi web aziendali in un unico registro condiviso e sicuro.",
+    "badge": "Applicazione",
+    "link": "/registro-credenziali-fornitori"
+  },
+  {
+    "title": "Agenda Share",
+    "description": "Trasforma gli appuntamenti del calendario in un riepilogo ordinato, pronto da inviare su WhatsApp.",
+    "badge": "Applicazione",
+    "link": "/agenda-share"
+  },
+  {
+    "title": "Smart Maintenance",
+    "description": "Report tecnici di manutenzione compilati sul campo e archiviati in PDF, senza carta.",
+    "badge": "Applicazione",
+    "link": "/smart-maintenance"
+  },
+  {
+    "title": "MiniFAT",
+    "description": "Gestisci i collaudi Factory Acceptance Test con documenti, archivio e PDF firmabili.",
+    "badge": "Applicazione",
+    "link": "/minifat"
+  },
+  {
+    "title": "PedFlow",
+    "description": "Il flusso guidato per la Direttiva PED: classificazione, documenti e fascicolo tecnico.",
+    "badge": "Applicazione",
+    "link": "/pedflow"
+  },
+  {
+    "title": "Privacy & Protezione Dati",
+    "description": "Corso online certificato sul GDPR per imprese e professionisti, con attestato finale.",
+    "badge": "Corso certificato",
+    "link": "/corso-privacy-gdpr"
+  }
+]

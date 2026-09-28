@@ -9,6 +9,7 @@ import { smartMaintenance } from "./locales/pages/smart-maintenance";
 import { pedflow } from "./locales/pages/pedflow";
 import { de } from "./locales/de";
 import { es } from "./locales/es";
+import { blog } from "./locales/pages/blog";
 
 if (!i18n.isInitialized) {
   i18n.use(initReactI18next).init({
@@ -22,6 +23,7 @@ if (!i18n.isInitialized) {
           smartMaintenance: smartMaintenance.it,
         },
         pedflow: pedflow.it,
+        blog: blog.it,
       },
       en: {
         translation: {
@@ -32,13 +34,14 @@ if (!i18n.isInitialized) {
           smartMaintenance: smartMaintenance.en,
         },
         pedflow: pedflow.en,
+        blog: blog.en,
       },
-      de: { translation: de },
-      es: { translation: es },
+      de: { translation: de, blog: blog.de },
+      es: { translation: es, blog: blog.es },
     },
     lng: "it",
     fallbackLng: { de: ["en"], es: ["en"], default: ["it"] },
-    ns: ["translation", "pedflow"],
+    ns: ["translation", "pedflow", "blog"],
     defaultNS: "translation",
     interpolation: { escapeValue: false },
     react: { useSuspense: false },
