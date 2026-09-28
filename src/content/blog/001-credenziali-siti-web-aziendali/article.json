@@ -1,0 +1,340 @@
+{
+  "number": "001",
+  "slug": "001-credenziali-siti-web-aziendali",
+  "date": "2026-09-27",
+  "author": "Nichetti Gian Battista",
+  "cover": "copertina.jpg",
+  "coverAlt": "Registro delle credenziali dei siti web aziendali su computer e smartphone",
+  "translations": {
+    "it": {
+      "title": "Come gestire in sicurezza le credenziali dei siti web aziendali",
+      "excerpt": "Guida pratica per centralizzare gli accessi ai portali aziendali ed eliminare password su fogli sparsi, chat e agende personali.",
+      "readingTime": "6 min",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Ogni impresa, anche piccola, accede ogni giorno a decine di siti web: portale della banca, area riservata del commercialista, piattaforme dei fornitori, gestionali in cloud, servizi di hosting, portali della pubblica amministrazione. Ognuno di questi accessi ha un indirizzo, un nome utente, una password e spesso un'email collegata. Nella pratica quotidiana queste informazioni finiscono sparse: un foglio nel cassetto, un blocco note sul telefono di un collaboratore, un messaggio in chat di due anni fa."
+        },
+        {
+          "type": "paragraph",
+          "text": "Il risultato è sempre lo stesso: quando la credenziale serve, nessuno la trova. E quando la persona che la custodiva non è raggiungibile, o ha lasciato l'azienda, l'unica strada è chiedere il recupero della password e perdere ore di lavoro."
+        },
+        {
+          "type": "heading2",
+          "text": "Perché le agende personali sono un rischio, non una soluzione"
+        },
+        {
+          "type": "paragraph",
+          "text": "Affidare le credenziali alla memoria o all'agenda di un singolo dipendente sembra comodo, ma sposta un patrimonio aziendale fuori dal controllo dell'azienda. Le conseguenze sono concrete: dipendenza da una sola persona, nessuna tracciabilità di chi accede a cosa, impossibilità di dimostrare in fase di audit come sono protetti gli accessi, e un rischio reale di diffusione involontaria quando le password viaggiano nelle chat."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Le password scambiate in chat restano leggibili per anni sui dispositivi di tutti i partecipanti.",
+            "Un foglio di calcolo condiviso non distingue chi può vedere cosa.",
+            "Senza registro delle attività non si sa chi ha modificato o utilizzato un accesso.",
+            "Quando un collaboratore lascia l'azienda, l'unica contromisura diventa cambiare tutto da zero."
+          ]
+        },
+        {
+          "type": "heading2",
+          "text": "Cosa significa avere un registro centralizzato"
+        },
+        {
+          "type": "paragraph",
+          "text": "Un registro degli accessi aziendali è un archivio unico in cui ogni voce contiene il sito, l'identificativo di accesso, la password cifrata, l'email collegata, una descrizione e le persone autorizzate a vederla. Non è un semplice elenco: è lo strumento che permette all'azienda di sapere, in qualunque momento, quali credenziali utilizza e chi le può usare."
+        },
+        {
+          "type": "image",
+          "src": "figura-1.jpg",
+          "caption": "Esempio di registro centralizzato: password sempre mascherate, ricerca immediata ed elenco delle persone autorizzate."
+        },
+        {
+          "type": "heading3",
+          "text": "Le quattro caratteristiche indispensabili"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Password cifrate nel database e mascherate a schermo, con copia negli appunti in un clic.",
+            "Visibilità controllata: ogni voce è accessibile solo a chi l'ha creata e alle persone autorizzate.",
+            "Registro attività su accessi, aperture dei siti e modifiche, filtrabile per persona e per sito.",
+            "Esportazione in CSV e PDF, per archivio interno e per verifiche esterne."
+          ]
+        },
+        {
+          "type": "heading2",
+          "text": "Onboarding e offboarding senza interruzioni"
+        },
+        {
+          "type": "paragraph",
+          "text": "Il momento più delicato è il cambio di persone. Con un registro condiviso, l'ingresso di un nuovo collaboratore si risolve abilitando il suo accesso alle sole voci che gli servono; l'uscita si risolve revocando quella singola abilitazione, senza toccare le credenziali usate dal resto del team e senza dover rifare nulla da zero."
+        },
+        {
+          "type": "quote",
+          "text": "La sicurezza degli accessi aziendali non nasce da password più complicate, ma dall'ordine e dalla tracciabilità di chi le usa."
+        },
+        {
+          "type": "heading2",
+          "text": "Come partire in pratica"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Fai l'inventario: elenca tutti i siti e servizi web che l'azienda utilizza davvero.",
+            "Assegna un responsabile per ogni voce e definisci chi deve poterla vedere.",
+            "Trasferisci le credenziali nel registro e cancella fogli, note e messaggi che le contenevano.",
+            "Verifica periodicamente il registro attività e aggiorna le abilitazioni a ogni cambio di organico."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Il passaggio richiede poche ore di lavoro iniziale e restituisce ordine stabile: ricerca immediata, responsabilità chiara e nessuna caccia alle password nei momenti in cui il tempo conta."
+        },
+        {
+          "type": "cta",
+          "text": "Scopri il modulo REGISTRO SITI WEB AZIENDALI",
+          "link": "/registro-credenziali-fornitori"
+        }
+      ]
+    },
+    "en": {
+      "title": "How to securely manage corporate website credentials",
+      "excerpt": "A practical guide to centralizing access to company portals and removing passwords from scattered sheets, chats and personal notebooks.",
+      "readingTime": "6 min",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Every company, even a small one, signs in to dozens of websites every day: the bank portal, the accountant's area, supplier platforms, cloud business software, hosting services and public administration portals. Each of them has an address, a username, a password and often a linked email address. In daily practice this information ends up scattered: a sheet in a drawer, a note on an employee's phone, a chat message from two years ago."
+        },
+        {
+          "type": "paragraph",
+          "text": "The outcome is always the same: when the credential is needed, nobody can find it. And when the person who kept it is unavailable, or has left the company, the only option is a password reset and hours of lost work."
+        },
+        {
+          "type": "heading2",
+          "text": "Why personal notebooks are a risk, not a solution"
+        },
+        {
+          "type": "paragraph",
+          "text": "Relying on one employee's memory or notebook feels convenient, but it moves a company asset outside the company's control. The consequences are concrete: dependency on a single person, no traceability of who accesses what, no way to demonstrate during an audit how access is protected, and a real risk of accidental disclosure when passwords travel through chats."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Passwords shared in chats stay readable for years on every participant's device.",
+            "A shared spreadsheet cannot separate who is allowed to see what.",
+            "Without an activity log nobody knows who changed or used an account.",
+            "When a colleague leaves, the only countermeasure left is resetting everything."
+          ]
+        },
+        {
+          "type": "heading2",
+          "text": "What a centralized register actually gives you"
+        },
+        {
+          "type": "paragraph",
+          "text": "A corporate access register is a single archive where each entry holds the website, the login ID, the encrypted password, the linked email, a description and the people authorised to see it. It is not just a list: it is what lets the company know, at any moment, which credentials it uses and who may use them."
+        },
+        {
+          "type": "image",
+          "src": "figura-1.jpg",
+          "caption": "A centralized register: passwords always masked, instant search and a clear list of authorised people."
+        },
+        {
+          "type": "heading3",
+          "text": "The four essential features"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Passwords encrypted in the database and masked on screen, with one-click copy.",
+            "Controlled visibility: each entry is reachable only by its author and the authorised people.",
+            "Activity log covering logins, site openings and edits, filterable by person and by site.",
+            "CSV and PDF export, for internal archiving and external checks."
+          ]
+        },
+        {
+          "type": "heading2",
+          "text": "Onboarding and offboarding without disruption"
+        },
+        {
+          "type": "paragraph",
+          "text": "The most delicate moment is a change of people. With a shared register, a new colleague is onboarded by granting access only to the entries they need; a departure is handled by revoking that single permission, without touching the credentials the rest of the team relies on."
+        },
+        {
+          "type": "quote",
+          "text": "Access security does not come from more complicated passwords, but from order and traceability of who uses them."
+        },
+        {
+          "type": "heading2",
+          "text": "How to start in practice"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Take inventory: list every website and web service the company actually uses.",
+            "Assign an owner to each entry and decide who must be able to see it.",
+            "Move the credentials into the register and delete the sheets, notes and messages holding them.",
+            "Review the activity log regularly and update permissions whenever the team changes."
+          ]
+        },
+        {
+          "type": "cta",
+          "text": "Discover the CORPORATE WEBSITE REGISTER",
+          "link": "/registro-credenziali-fornitori"
+        }
+      ]
+    },
+    "de": {
+      "title": "Zugangsdaten von Unternehmenswebsites sicher verwalten",
+      "excerpt": "Praktischer Leitfaden, um Zugänge zu Unternehmensportalen zu zentralisieren und Passwörter aus Zetteln, Chats und privaten Notizbüchern zu entfernen.",
+      "readingTime": "6 min",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Jedes Unternehmen nutzt täglich Dutzende Websites: Bankportal, Bereich des Steuerberaters, Lieferantenplattformen, Cloud-Software, Hosting-Dienste und Behördenportale. Jeder Zugang hat eine Adresse, einen Benutzernamen, ein Passwort und oft eine verknüpfte E-Mail-Adresse. In der Praxis liegen diese Angaben verstreut: ein Zettel in der Schublade, eine Notiz auf dem Handy eines Mitarbeiters, eine Chatnachricht von vor zwei Jahren."
+        },
+        {
+          "type": "paragraph",
+          "text": "Das Ergebnis ist immer dasselbe: Wenn die Zugangsdaten gebraucht werden, findet sie niemand. Und wenn die zuständige Person nicht erreichbar ist oder das Unternehmen verlassen hat, bleibt nur das Zurücksetzen des Passworts und verlorene Arbeitszeit."
+        },
+        {
+          "type": "heading2",
+          "text": "Warum private Notizbücher ein Risiko sind"
+        },
+        {
+          "type": "paragraph",
+          "text": "Sich auf das Gedächtnis oder das Notizbuch einer einzelnen Person zu verlassen, wirkt bequem, verlagert aber ein Unternehmensgut aus der Kontrolle des Unternehmens. Die Folgen sind konkret: Abhängigkeit von einer Person, keine Nachvollziehbarkeit der Zugriffe, kein Nachweis im Audit und ein echtes Risiko der unbeabsichtigten Weitergabe über Chats."
+        },
+        {
+          "type": "list",
+          "items": [
+            "In Chats geteilte Passwörter bleiben jahrelang auf allen Geräten lesbar.",
+            "Eine gemeinsame Tabelle kann nicht trennen, wer was sehen darf.",
+            "Ohne Aktivitätsprotokoll weiß niemand, wer einen Zugang geändert oder genutzt hat.",
+            "Beim Ausscheiden einer Person bleibt nur, alles neu aufzusetzen."
+          ]
+        },
+        {
+          "type": "heading2",
+          "text": "Was ein zentrales Register leistet"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ein Zugangsregister ist ein einziges Archiv, in dem jeder Eintrag Website, Zugangskennung, verschlüsseltes Passwort, verknüpfte E-Mail, Beschreibung und die berechtigten Personen enthält. So weiß das Unternehmen jederzeit, welche Zugangsdaten es nutzt und wer sie verwenden darf."
+        },
+        {
+          "type": "image",
+          "src": "figura-1.jpg",
+          "caption": "Zentrales Register: Passwörter immer maskiert, sofortige Suche und klare Liste der berechtigten Personen."
+        },
+        {
+          "type": "heading3",
+          "text": "Die vier unverzichtbaren Funktionen"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Passwörter verschlüsselt in der Datenbank und maskiert auf dem Bildschirm, mit Kopieren per Klick.",
+            "Kontrollierte Sichtbarkeit: jeder Eintrag nur für Ersteller und berechtigte Personen.",
+            "Aktivitätsprotokoll für Anmeldungen, Seitenaufrufe und Änderungen, filterbar nach Person und Website.",
+            "Export als CSV und PDF für interne Archivierung und externe Prüfungen."
+          ]
+        },
+        {
+          "type": "heading2",
+          "text": "Eintritt und Austritt ohne Unterbrechung"
+        },
+        {
+          "type": "paragraph",
+          "text": "Der kritischste Moment ist der Personalwechsel. Mit einem gemeinsamen Register erhält eine neue Person nur Zugriff auf die benötigten Einträge; beim Austritt wird genau diese Berechtigung entzogen, ohne die Zugangsdaten des übrigen Teams anzutasten."
+        },
+        {
+          "type": "quote",
+          "text": "Sicherheit entsteht nicht durch komplizierte Passwörter, sondern durch Ordnung und Nachvollziehbarkeit."
+        },
+        {
+          "type": "cta",
+          "text": "Das UNTERNEHMENSWEBSITE-REGISTER entdecken",
+          "link": "/registro-credenziali-fornitori"
+        }
+      ]
+    },
+    "es": {
+      "title": "Cómo gestionar con seguridad las credenciales de los sitios web de la empresa",
+      "excerpt": "Guía práctica para centralizar los accesos a los portales corporativos y eliminar contraseñas dispersas en hojas, chats y agendas personales.",
+      "readingTime": "6 min",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Cualquier empresa accede cada día a decenas de sitios web: el portal del banco, el área de la asesoría, plataformas de proveedores, software en la nube, servicios de hosting y portales de la administración pública. Cada acceso tiene una dirección, un usuario, una contraseña y a menudo un correo vinculado. En la práctica, esa información acaba dispersa: una hoja en un cajón, una nota en el móvil de un empleado, un mensaje de chat de hace dos años."
+        },
+        {
+          "type": "paragraph",
+          "text": "El resultado es siempre el mismo: cuando se necesita la credencial, nadie la encuentra. Y si la persona que la guardaba no está disponible o ha dejado la empresa, solo queda restablecer la contraseña y perder horas de trabajo."
+        },
+        {
+          "type": "heading2",
+          "text": "Por qué las agendas personales son un riesgo"
+        },
+        {
+          "type": "paragraph",
+          "text": "Confiar las credenciales a la memoria o a la agenda de un solo empleado parece cómodo, pero saca un activo de la empresa de su propio control. Las consecuencias son concretas: dependencia de una única persona, ninguna trazabilidad de los accesos, imposibilidad de demostrar en una auditoría cómo se protegen y un riesgo real de difusión involuntaria cuando las contraseñas circulan por los chats."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Las contraseñas compartidas en chats siguen legibles durante años en todos los dispositivos.",
+            "Una hoja compartida no distingue quién puede ver qué.",
+            "Sin registro de actividad nadie sabe quién modificó o utilizó un acceso.",
+            "Cuando alguien se marcha, la única medida es rehacerlo todo."
+          ]
+        },
+        {
+          "type": "heading2",
+          "text": "Qué aporta un registro centralizado"
+        },
+        {
+          "type": "paragraph",
+          "text": "Un registro de accesos corporativos es un archivo único donde cada ficha contiene el sitio, el identificador, la contraseña cifrada, el correo vinculado, una descripción y las personas autorizadas. Así la empresa sabe en todo momento qué credenciales utiliza y quién puede usarlas."
+        },
+        {
+          "type": "image",
+          "src": "figura-1.jpg",
+          "caption": "Registro centralizado: contraseñas siempre ocultas, búsqueda inmediata y lista clara de personas autorizadas."
+        },
+        {
+          "type": "heading3",
+          "text": "Las cuatro funciones imprescindibles"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Contraseñas cifradas en la base de datos y ocultas en pantalla, con copia en un clic.",
+            "Visibilidad controlada: cada ficha solo para su autor y las personas autorizadas.",
+            "Registro de actividad de accesos, aperturas y modificaciones, filtrable por persona y sitio.",
+            "Exportación en CSV y PDF para archivo interno y verificaciones externas."
+          ]
+        },
+        {
+          "type": "heading2",
+          "text": "Incorporaciones y salidas sin interrupciones"
+        },
+        {
+          "type": "paragraph",
+          "text": "El momento más delicado es el cambio de personas. Con un registro compartido, una nueva incorporación recibe acceso solo a las fichas que necesita; una salida se resuelve revocando ese permiso concreto, sin tocar las credenciales del resto del equipo."
+        },
+        {
+          "type": "quote",
+          "text": "La seguridad no llega con contraseñas más complicadas, sino con orden y trazabilidad."
+        },
+        {
+          "type": "cta",
+          "text": "Descubre el REGISTRO DE SITIOS WEB EMPRESARIALES",
+          "link": "/registro-credenziali-fornitori"
+        }
+      ]
+    }
+  }
+}
