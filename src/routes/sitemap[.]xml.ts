@@ -14,6 +14,12 @@ const entries: SitemapEntry[] = [
   { path: "/applicazioni", changefreq: "weekly", priority: "0.9" },
   { path: "/corsi", changefreq: "weekly", priority: "0.9" },
   { path: "/prezzi", changefreq: "weekly", priority: "0.9" },
+  { path: "/blog", changefreq: "weekly", priority: "0.8" },
+  ...articles.map((a) => ({
+    path: `/blog/${a.slug}`,
+    changefreq: "monthly" as const,
+    priority: "0.7",
+  })),
   { path: "/pedflow", changefreq: "monthly", priority: "0.8" },
   { path: "/minifat", changefreq: "monthly", priority: "0.8" },
   { path: "/smart-maintenance", changefreq: "monthly", priority: "0.8" },
