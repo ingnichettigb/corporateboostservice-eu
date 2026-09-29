@@ -8,6 +8,8 @@ export const blog = {
     subtitle:
       "Guide pratiche e approfondimenti su digitalizzazione, sicurezza degli accessi e adempimenti per le imprese.",
     read: "Leggi l'articolo",
+    topicsLabel: "Argomenti",
+    allTopics: "Tutti",
     empty: "Nessun articolo pubblicato al momento.",
     back: "Torna al blog",
     home: "Home",
@@ -27,6 +29,8 @@ export const blog = {
     subtitle:
       "Practical guides and insights on digitalisation, access security and compliance for businesses.",
     read: "Read the article",
+    topicsLabel: "Topics",
+    allTopics: "All",
     empty: "No articles published yet.",
     back: "Back to the blog",
     home: "Home",
@@ -46,6 +50,8 @@ export const blog = {
     subtitle:
       "Praktische Leitfäden zu Digitalisierung, Zugangssicherheit und Compliance für Unternehmen.",
     read: "Artikel lesen",
+    topicsLabel: "Themen",
+    allTopics: "Alle",
     empty: "Derzeit keine Artikel veröffentlicht.",
     back: "Zurück zum Blog",
     home: "Startseite",
@@ -65,6 +71,8 @@ export const blog = {
     subtitle:
       "Guías prácticas sobre digitalización, seguridad de los accesos y cumplimiento para empresas.",
     read: "Leer el artículo",
+    topicsLabel: "Temas",
+    allTopics: "Todos",
     empty: "Todavía no hay artículos publicados.",
     back: "Volver al blog",
     home: "Inicio",
