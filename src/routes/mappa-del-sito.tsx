@@ -34,6 +34,7 @@ const groups: { heading: string; links: { to: string; label: string }[] }[] = [
       { to: "/applicazioni", label: "Applicazioni per imprese" },
       { to: "/corsi", label: "Corsi online" },
       { to: "/prezzi", label: "Prezzi" },
+      { to: "/blog", label: "Blog — Approfondimenti" },
     ],
   },
   {

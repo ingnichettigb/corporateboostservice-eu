@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import type {} from "@tanstack/react-start";
+import { articles } from "@/lib/blog";
 
 const BASE_URL = "https://corporateboostservice.eu";
 
