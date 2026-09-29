@@ -1,6 +1,6 @@
 export const de = {
   brand: "CorporateBoostService.eu", motto: "DIGITALE APPS & KURSE", skip: "Zum Inhalt",
-  nav: { home: "Startseite", corsi: "Kurse", applicazioni: "Anwendungen", contatti: "Kontakt" },
+  nav: { home: "Startseite", blog: "Blog", corsi: "Kurse", applicazioni: "Anwendungen", contatti: "Kontakt" },
   a11y: { language: "Sprache", largeText: "Großer Text", largeTextOn: "Großer Text aktiv", highContrast: "Hoher Kontrast", highContrastOn: "Hoher Kontrast aktiv" },
   app: { kicker: "Digitale Lösungen", title: "Anwendungen für Unternehmen", subtitle: "Digitale Werkzeuge für einfachere Abläufe.", more: "Mehr erfahren", feat1: "Schnell einsatzbereit", feat2: "Sicher und konform", feat3: "Laufende Updates", wip: "In Arbeit", items: { registroCredenziali: { title: "UNTERNEHMENSWEBSITE-REGISTER", desc: "Lieferantenportale, Zugangsdaten und berechtigte Personen sicher an einem gemeinsamen Ort verwalten." } } },
   footer: { tagline: "Online-Kurse und digitale Anwendungen für Unternehmen und Fachleute.", paddle: "Zahlungen verwaltet von Paddle", siteMap: "Sitemap", rights: "Alle Rechte vorbehalten", phone: "Telefon", vat: "USt-IdNr.", address: "Adresse" },
