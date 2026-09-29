@@ -10,6 +10,11 @@
       "title": "Come gestire in sicurezza le credenziali dei siti web aziendali",
       "excerpt": "Guida pratica per centralizzare gli accessi ai portali aziendali ed eliminare password su fogli sparsi, chat e agende personali.",
       "readingTime": "6 min",
+      "topics": [
+        "Sicurezza aziendale",
+        "Gestione credenziali",
+        "Organizzazione"
+      ],
       "content": [
         {
           "type": "paragraph",
@@ -102,6 +107,11 @@
       "title": "How to securely manage corporate website credentials",
       "excerpt": "A practical guide to centralizing access to company portals and removing passwords from scattered sheets, chats and personal notebooks.",
       "readingTime": "6 min",
+      "topics": [
+        "Corporate security",
+        "Credential management",
+        "Organization"
+      ],
       "content": [
         {
           "type": "paragraph",
@@ -190,6 +200,11 @@
       "title": "Zugangsdaten von Unternehmenswebsites sicher verwalten",
       "excerpt": "Praktischer Leitfaden, um Zugänge zu Unternehmensportalen zu zentralisieren und Passwörter aus Zetteln, Chats und privaten Notizbüchern zu entfernen.",
       "readingTime": "6 min",
+      "topics": [
+        "Unternehmenssicherheit",
+        "Zugangsverwaltung",
+        "Organisation"
+      ],
       "content": [
         {
           "type": "paragraph",
@@ -265,6 +280,11 @@
       "title": "Cómo gestionar con seguridad las credenciales de los sitios web de la empresa",
       "excerpt": "Guía práctica para centralizar los accesos a los portales corporativos y eliminar contraseñas dispersas en hojas, chats y agendas personales.",
       "readingTime": "6 min",
+      "topics": [
+        "Seguridad empresarial",
+        "Gestión de credenciales",
+        "Organización"
+      ],
       "content": [
         {
           "type": "paragraph",

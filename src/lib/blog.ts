@@ -14,6 +14,8 @@ export interface BlogTranslation {
   title: string;
   excerpt: string;
   readingTime?: string;
+  /** Argomenti (tag) dell'articolo nella lingua corrente. */
+  topics?: string[];
   content: BlogBlock[];
 }
 
@@ -87,6 +89,22 @@ export function pickTranslation(article: BlogArticleFile, lang: string): BlogTra
     t.it ??
     (Object.values(t).find(Boolean) as BlogTranslation)
   );
+}
+
+/** Argomenti presenti in almeno un articolo, con il numero di articoli, ordinati per frequenza. */
+export function collectTopics(lang: string): { topic: string; count: number }[] {
+  const counts = new Map<string, number>();
+  for (const a of articles) {
+    const topics = pickTranslation(a, lang)?.topics ?? [];
+    for (const raw of topics) {
+      const topic = raw.trim();
+      if (!topic) continue;
+      counts.set(topic, (counts.get(topic) ?? 0) + 1);
+    }
+  }
+  return [...counts.entries()]
+    .map(([topic, count]) => ({ topic, count }))
+    .sort((a, b) => b.count - a.count || a.topic.localeCompare(b.topic));
 }
 
 export function formatDate(date: string, lang: string) {
