@@ -31,6 +31,8 @@ import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as SmartMaintenanceRouteImport } from './routes/smart-maintenance'
 import { Route as TerminiDiServizioRouteImport } from './routes/termini-di-servizio'
 import { Route as TerminiECondizioniRouteImport } from './routes/termini-e-condizioni'
+import { Route as BlogIndexRouteImport } from './routes/blog.index'
+import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -144,6 +146,16 @@ const TerminiECondizioniRoute = TerminiECondizioniRouteImport.update({
   path: '/termini-e-condizioni',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BlogIndexRoute = BlogIndexRouteImport.update({
+  id: '/blog/',
+  path: '/blog/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogSlugRoute = BlogSlugRouteImport.update({
+  id: '/blog/$slug',
+  path: '/blog/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -168,6 +180,8 @@ export interface FileRoutesByFullPath {
   '/smart-maintenance': typeof SmartMaintenanceRoute
   '/termini-di-servizio': typeof TerminiDiServizioRoute
   '/termini-e-condizioni': typeof TerminiECondizioniRoute
+  '/blog/$slug': typeof BlogSlugRoute
+  '/blog/': typeof BlogIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -192,6 +206,8 @@ export interface FileRoutesByTo {
   '/smart-maintenance': typeof SmartMaintenanceRoute
   '/termini-di-servizio': typeof TerminiDiServizioRoute
   '/termini-e-condizioni': typeof TerminiECondizioniRoute
+  '/blog/$slug': typeof BlogSlugRoute
+  '/blog': typeof BlogIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -217,6 +233,8 @@ export interface FileRoutesById {
   '/smart-maintenance': typeof SmartMaintenanceRoute
   '/termini-di-servizio': typeof TerminiDiServizioRoute
   '/termini-e-condizioni': typeof TerminiECondizioniRoute
+  '/blog/$slug': typeof BlogSlugRoute
+  '/blog/': typeof BlogIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -243,6 +261,8 @@ export interface FileRouteTypes {
     | '/smart-maintenance'
     | '/termini-di-servizio'
     | '/termini-e-condizioni'
+    | '/blog/$slug'
+    | '/blog/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -267,6 +287,8 @@ export interface FileRouteTypes {
     | '/smart-maintenance'
     | '/termini-di-servizio'
     | '/termini-e-condizioni'
+    | '/blog/$slug'
+    | '/blog'
   id:
     | '__root__'
     | '/'
@@ -291,6 +313,8 @@ export interface FileRouteTypes {
     | '/smart-maintenance'
     | '/termini-di-servizio'
     | '/termini-e-condizioni'
+    | '/blog/$slug'
+    | '/blog/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -316,6 +340,8 @@ export interface RootRouteChildren {
   SmartMaintenanceRoute: typeof SmartMaintenanceRoute
   TerminiDiServizioRoute: typeof TerminiDiServizioRoute
   TerminiECondizioniRoute: typeof TerminiECondizioniRoute
+  BlogSlugRoute: typeof BlogSlugRoute
+  BlogIndexRoute: typeof BlogIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -474,6 +500,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof TerminiECondizioniRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/blog/': {
+      id: '/blog/'
+      path: '/blog'
+      fullPath: '/blog/'
+      preLoaderRoute: typeof BlogIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/$slug': {
+      id: '/blog/$slug'
+      path: '/blog/$slug'
+      fullPath: '/blog/$slug'
+      preLoaderRoute: typeof BlogSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -500,6 +540,8 @@ const rootRouteChildren: RootRouteChildren = {
   SmartMaintenanceRoute: SmartMaintenanceRoute,
   TerminiDiServizioRoute: TerminiDiServizioRoute,
   TerminiECondizioniRoute: TerminiECondizioniRoute,
+  BlogSlugRoute: BlogSlugRoute,
+  BlogIndexRoute: BlogIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

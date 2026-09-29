@@ -111,6 +111,15 @@ export function SiteHeader() {
             </li>
             <li>
               <Link
+                to="/blog"
+                activeProps={{ className: "bg-primary text-primary-foreground" }}
+                className="inline-flex items-center min-h-11 px-4 rounded-md text-foreground hover:bg-primary/15"
+              >
+                {t("nav.blog")}
+              </Link>
+            </li>
+            <li>
+              <Link
                 to="/carrello"
                 activeProps={{ className: "bg-primary text-primary-foreground" }}
                 className="inline-flex items-center gap-1.5 min-h-11 px-4 rounded-md text-foreground hover:bg-primary/15"
