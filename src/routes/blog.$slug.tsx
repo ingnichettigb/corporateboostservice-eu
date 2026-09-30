@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { BlogSponsoredSidebar } from "@/components/BlogSponsoredSidebar";
-import { formatDate, getArticle, pickTranslation, type BlogBlock } from "@/lib/blog";
+import { articleBlocks, formatDate, getArticle, pickTranslation, type BlogBlock } from "@/lib/blog";
 
 const BASE_URL = "https://corporateboostservice.eu";
 
