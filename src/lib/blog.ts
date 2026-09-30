@@ -67,7 +67,7 @@ export function markdownToBlocks(markdown: string, figures: BlogFigure[] = []): 
     if (img) {
       flush();
       const src = img[2].split("/").pop() ?? img[2];
-      blocks.push({ type: "image", src, caption: captionOf(src) ?? img[1] || undefined });
+      blocks.push({ type: "image", src, caption: captionOf(src) ?? (img[1] || undefined) });
       continue;
     }
     if (line.startsWith("### ")) {
