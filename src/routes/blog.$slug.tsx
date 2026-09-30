@@ -65,6 +65,31 @@ function ArticleNotFound() {
   );
 }
 
+/** Formattazione inline del Markdown: **grassetto**, *corsivo*, `codice`. */
+function Inline({ text }: { text: string }) {
+  const parts = text.split(/(\*\*[^*]+\*\*|\*[^*]+\*|`[^`]+`)/g).filter(Boolean);
+  return (
+    <>
+      {parts.map((p, i) => {
+        if (p.startsWith("**") && p.endsWith("**"))
+          return (
+            <strong key={i} className="font-bold text-foreground">
+              {p.slice(2, -2)}
+            </strong>
+          );
+        if (p.startsWith("*") && p.endsWith("*") && p.length > 2) return <em key={i}>{p.slice(1, -1)}</em>;
+        if (p.startsWith("`") && p.endsWith("`"))
+          return (
+            <code key={i} className="rounded bg-primary/10 px-1.5 py-0.5 text-base font-mono">
+              {p.slice(1, -1)}
+            </code>
+          );
+        return <span key={i}>{p}</span>;
+      })}
+    </>
+  );
+}
+
 function Block({ block, asset }: { block: BlogBlock; asset: (f: string) => string | undefined }) {
   switch (block.type) {
     case "heading2":
@@ -72,7 +97,12 @@ function Block({ block, asset }: { block: BlogBlock; asset: (f: string) => strin
     case "heading3":
       return <h3 className="mt-8 text-xl md:text-2xl font-bold text-foreground">{block.text}</h3>;
     case "paragraph":
-      return <p className="mt-5 text-lg leading-relaxed text-foreground/85">{block.text}</p>;
+      return (
+        <p className="mt-5 text-lg leading-relaxed text-foreground/85">
+          <Inline text={block.text} />
+        </p>
+      );
+
     case "list":
       return (
         <ul className="mt-5 space-y-3">
