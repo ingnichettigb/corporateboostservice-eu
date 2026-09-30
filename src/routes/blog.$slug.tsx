@@ -224,7 +224,7 @@ function ArticlePage() {
               />
             )}
             <p className="mt-8 text-xl font-semibold leading-relaxed text-foreground">{tr.excerpt}</p>
-            {tr.content.map((block, i) => (
+            {articleBlocks(tr).map((block, i) => (
               <Block key={i} block={block} asset={article.asset} />
             ))}
 
