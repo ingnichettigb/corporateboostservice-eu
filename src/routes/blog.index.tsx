@@ -1,10 +1,11 @@
+import { useMemo, useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, CalendarDays, Clock } from "lucide-react";
+import { ArrowRight, CalendarDays, Clock, Tags } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { BlogSponsoredSidebar } from "@/components/BlogSponsoredSidebar";
-import { articles, formatDate, pickTranslation } from "@/lib/blog";
+import { articles, collectTopics, formatDate, pickTranslation } from "@/lib/blog";
 
 export const Route = createFileRoute("/blog/")({
   head: () => ({
@@ -34,6 +35,18 @@ function BlogIndex() {
   const { t, i18n } = useTranslation("blog");
   const { t: tc } = useTranslation();
   const lang = i18n.language || "it";
+  const [topic, setTopic] = useState<string | null>(null);
+
+  const topics = useMemo(() => collectTopics(lang), [lang]);
+  const visible = useMemo(
+    () =>
+      topic
+        ? articles.filter((a) => (pickTranslation(a, lang)?.topics ?? []).includes(topic))
+        : articles,
+    [topic, lang],
+  );
+
+
 
   return (
     <div className="min-h-screen bg-background">
@@ -55,11 +68,48 @@ function BlogIndex() {
         <section className="py-14">
           <div className="container mx-auto px-4 flex flex-col lg:flex-row gap-10 items-start">
             <div className="flex-1 w-full">
-              {articles.length === 0 ? (
+              {topics.length > 0 && (
+                <div className="mb-10 rounded-2xl border-2 border-primary/20 bg-white p-4 shadow-[var(--shadow-card)]">
+                  <div className="flex flex-wrap items-center gap-2">
+                    <span className="inline-flex items-center gap-2 pr-2 text-xs font-bold uppercase tracking-widest text-primary">
+                      <Tags className="h-4 w-4" aria-hidden /> {t("topicsLabel")}
+                    </span>
+                    <button
+                      type="button"
+                      onClick={() => setTopic(null)}
+                      aria-pressed={topic === null}
+                      className={`inline-flex items-center rounded-full border-2 px-4 py-2 text-sm font-semibold transition-colors ${
+                        topic === null
+                          ? "border-primary bg-primary text-primary-foreground"
+                          : "border-primary/25 text-foreground/80 hover:bg-primary/5"
+                      }`}
+                    >
+                      {t("allTopics")} ({articles.length})
+                    </button>
+                    {topics.map(({ topic: name, count }) => (
+                      <button
+                        key={name}
+                        type="button"
+                        onClick={() => setTopic(name)}
+                        aria-pressed={topic === name}
+                        className={`inline-flex items-center rounded-full border-2 px-4 py-2 text-sm font-semibold transition-colors ${
+                          topic === name
+                            ? "border-primary bg-primary text-primary-foreground"
+                            : "border-primary/25 text-foreground/80 hover:bg-primary/5"
+                        }`}
+                      >
+                        {name} ({count})
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {visible.length === 0 ? (
                 <p className="text-lg text-foreground/80">{t("empty")}</p>
               ) : (
                 <div className="grid gap-8 sm:grid-cols-2 xl:grid-cols-3">
-                  {articles.map((a) => {
+                  {visible.map((a) => {
                     const tr = pickTranslation(a, lang);
                     return (
                       <article
