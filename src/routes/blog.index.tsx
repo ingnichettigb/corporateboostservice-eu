@@ -68,11 +68,48 @@ function BlogIndex() {
         <section className="py-14">
           <div className="container mx-auto px-4 flex flex-col lg:flex-row gap-10 items-start">
             <div className="flex-1 w-full">
-              {articles.length === 0 ? (
+              {topics.length > 0 && (
+                <div className="mb-10 rounded-2xl border-2 border-primary/20 bg-white p-4 shadow-[var(--shadow-card)]">
+                  <div className="flex flex-wrap items-center gap-2">
+                    <span className="inline-flex items-center gap-2 pr-2 text-xs font-bold uppercase tracking-widest text-primary">
+                      <Tags className="h-4 w-4" aria-hidden /> {t("topicsLabel")}
+                    </span>
+                    <button
+                      type="button"
+                      onClick={() => setTopic(null)}
+                      aria-pressed={topic === null}
+                      className={`inline-flex items-center rounded-full border-2 px-4 py-2 text-sm font-semibold transition-colors ${
+                        topic === null
+                          ? "border-primary bg-primary text-primary-foreground"
+                          : "border-primary/25 text-foreground/80 hover:bg-primary/5"
+                      }`}
+                    >
+                      {t("allTopics")} ({articles.length})
+                    </button>
+                    {topics.map(({ topic: name, count }) => (
+                      <button
+                        key={name}
+                        type="button"
+                        onClick={() => setTopic(name)}
+                        aria-pressed={topic === name}
+                        className={`inline-flex items-center rounded-full border-2 px-4 py-2 text-sm font-semibold transition-colors ${
+                          topic === name
+                            ? "border-primary bg-primary text-primary-foreground"
+                            : "border-primary/25 text-foreground/80 hover:bg-primary/5"
+                        }`}
+                      >
+                        {name} ({count})
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {visible.length === 0 ? (
                 <p className="text-lg text-foreground/80">{t("empty")}</p>
               ) : (
                 <div className="grid gap-8 sm:grid-cols-2 xl:grid-cols-3">
-                  {articles.map((a) => {
+                  {visible.map((a) => {
                     const tr = pickTranslation(a, lang);
                     return (
                       <article
