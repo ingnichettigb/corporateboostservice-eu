@@ -10,14 +10,105 @@ export type BlogBlock =
   | { type: "quote"; text: string }
   | { type: "cta"; text: string; link: string };
 
+export interface BlogFigure {
+  id?: string;
+  src: string;
+  caption?: string;
+}
+
 export interface BlogTranslation {
   title: string;
   excerpt: string;
   readingTime?: string;
   /** Argomenti (tag) dell'articolo nella lingua corrente. */
   topics?: string[];
-  content: BlogBlock[];
+  /** Formato a blocchi strutturati. */
+  content?: BlogBlock[];
+  /** Formato Markdown generato dal programma esterno. */
+  markdown?: string;
+  /** Didascalie delle figure citate nel Markdown. */
+  figures?: BlogFigure[];
 }
+
+/** Converte il Markdown dell'articolo in blocchi renderizzabili. */
+export function markdownToBlocks(markdown: string, figures: BlogFigure[] = []): BlogBlock[] {
+  const captionOf = (src: string) => figures.find((f) => f.src === src)?.caption;
+  const blocks: BlogBlock[] = [];
+  const lines = markdown.replace(/\r\n/g, "\n").split("\n");
+  let list: string[] = [];
+  let para: string[] = [];
+
+  const flushList = () => {
+    if (list.length) blocks.push({ type: "list", items: list });
+    list = [];
+  };
+  const flushPara = () => {
+    if (para.length) blocks.push({ type: "paragraph", text: para.join(" ") });
+    para = [];
+  };
+  const flush = () => {
+    flushList();
+    flushPara();
+  };
+
+  for (const raw of lines) {
+    const line = raw.trim();
+    if (!line) {
+      flush();
+      continue;
+    }
+    const cta = line.match(/^\[cta:([^\]]+)\](.+)\[\/cta\]$/);
+    if (cta) {
+      flush();
+      blocks.push({ type: "cta", link: cta[1], text: cta[2] });
+      continue;
+    }
+    const img = line.match(/^!\[([^\]]*)\]\(([^)\s]+)\)$/);
+    if (img) {
+      flush();
+      const src = img[2].split("/").pop() ?? img[2];
+      blocks.push({ type: "image", src, caption: captionOf(src) ?? img[1] || undefined });
+      continue;
+    }
+    if (line.startsWith("### ")) {
+      flush();
+      blocks.push({ type: "heading3", text: line.slice(4).trim() });
+      continue;
+    }
+    if (line.startsWith("## ")) {
+      flush();
+      blocks.push({ type: "heading2", text: line.slice(3).trim() });
+      continue;
+    }
+    if (line.startsWith("# ")) {
+      flush();
+      blocks.push({ type: "heading2", text: line.slice(2).trim() });
+      continue;
+    }
+    if (line.startsWith("> ")) {
+      flush();
+      blocks.push({ type: "quote", text: line.slice(2).trim() });
+      continue;
+    }
+    if (/^([-*+]|\d+\.)\s+/.test(line)) {
+      flushPara();
+      list.push(line.replace(/^([-*+]|\d+\.)\s+/, ""));
+      continue;
+    }
+    flushList();
+    para.push(line);
+  }
+  flush();
+  return blocks;
+}
+
+/** Blocchi dell'articolo, indipendentemente dal formato di origine (blocchi o Markdown). */
+export function articleBlocks(tr: BlogTranslation): BlogBlock[] {
+  if (tr.content?.length) return tr.content;
+  if (tr.markdown) return markdownToBlocks(tr.markdown, tr.figures);
+  return [];
+}
+
 
 export interface BlogArticleFile {
   number: string;
