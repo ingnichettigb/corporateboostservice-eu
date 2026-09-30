@@ -1,10 +1,11 @@
+import { useMemo, useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, CalendarDays, Clock } from "lucide-react";
+import { ArrowRight, CalendarDays, Clock, Tags } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { BlogSponsoredSidebar } from "@/components/BlogSponsoredSidebar";
-import { articles, formatDate, pickTranslation } from "@/lib/blog";
+import { articles, collectTopics, formatDate, pickTranslation } from "@/lib/blog";
 
 export const Route = createFileRoute("/blog/")({
   head: () => ({
