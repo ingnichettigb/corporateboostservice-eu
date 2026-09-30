@@ -109,7 +109,7 @@ function Block({ block, asset }: { block: BlogBlock; asset: (f: string) => strin
           {block.items.map((item, i) => (
             <li key={i} className="flex gap-3 text-lg leading-relaxed text-foreground/85">
               <span className="mt-2.5 h-2 w-2 shrink-0 rounded-full bg-primary" aria-hidden />
-              <span>{item}</span>
+              <span><Inline text={item} /></span>
             </li>
           ))}
         </ul>
