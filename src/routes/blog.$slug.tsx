@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { BlogSponsoredSidebar } from "@/components/BlogSponsoredSidebar";
-import { formatDate, getArticle, pickTranslation, type BlogBlock } from "@/lib/blog";
+import { articleBlocks, formatDate, getArticle, pickTranslation, type BlogBlock } from "@/lib/blog";
 
 const BASE_URL = "https://corporateboostservice.eu";
 
@@ -65,6 +65,31 @@ function ArticleNotFound() {
   );
 }
 
+/** Formattazione inline del Markdown: **grassetto**, *corsivo*, `codice`. */
+function Inline({ text }: { text: string }) {
+  const parts = text.split(/(\*\*[^*]+\*\*|\*[^*]+\*|`[^`]+`)/g).filter(Boolean);
+  return (
+    <>
+      {parts.map((p, i) => {
+        if (p.startsWith("**") && p.endsWith("**"))
+          return (
+            <strong key={i} className="font-bold text-foreground">
+              {p.slice(2, -2)}
+            </strong>
+          );
+        if (p.startsWith("*") && p.endsWith("*") && p.length > 2) return <em key={i}>{p.slice(1, -1)}</em>;
+        if (p.startsWith("`") && p.endsWith("`"))
+          return (
+            <code key={i} className="rounded bg-primary/10 px-1.5 py-0.5 text-base font-mono">
+              {p.slice(1, -1)}
+            </code>
+          );
+        return <span key={i}>{p}</span>;
+      })}
+    </>
+  );
+}
+
 function Block({ block, asset }: { block: BlogBlock; asset: (f: string) => string | undefined }) {
   switch (block.type) {
     case "heading2":
@@ -72,14 +97,19 @@ function Block({ block, asset }: { block: BlogBlock; asset: (f: string) => strin
     case "heading3":
       return <h3 className="mt-8 text-xl md:text-2xl font-bold text-foreground">{block.text}</h3>;
     case "paragraph":
-      return <p className="mt-5 text-lg leading-relaxed text-foreground/85">{block.text}</p>;
+      return (
+        <p className="mt-5 text-lg leading-relaxed text-foreground/85">
+          <Inline text={block.text} />
+        </p>
+      );
+
     case "list":
       return (
         <ul className="mt-5 space-y-3">
           {block.items.map((item, i) => (
             <li key={i} className="flex gap-3 text-lg leading-relaxed text-foreground/85">
               <span className="mt-2.5 h-2 w-2 shrink-0 rounded-full bg-primary" aria-hidden />
-              <span>{item}</span>
+              <span><Inline text={item} /></span>
             </li>
           ))}
         </ul>
@@ -194,7 +224,7 @@ function ArticlePage() {
               />
             )}
             <p className="mt-8 text-xl font-semibold leading-relaxed text-foreground">{tr.excerpt}</p>
-            {tr.content.map((block, i) => (
+            {articleBlocks(tr).map((block, i) => (
               <Block key={i} block={block} asset={article.asset} />
             ))}
 
