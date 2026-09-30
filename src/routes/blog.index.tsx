@@ -35,6 +35,18 @@ function BlogIndex() {
   const { t, i18n } = useTranslation("blog");
   const { t: tc } = useTranslation();
   const lang = i18n.language || "it";
+  const [topic, setTopic] = useState<string | null>(null);
+
+  const topics = useMemo(() => collectTopics(lang), [lang]);
+  const visible = useMemo(
+    () =>
+      topic
+        ? articles.filter((a) => (pickTranslation(a, lang)?.topics ?? []).includes(topic))
+        : articles,
+    [topic, lang],
+  );
+
+
 
   return (
     <div className="min-h-screen bg-background">
