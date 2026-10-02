@@ -632,4 +632,8 @@ export const pricingItems = [
   { id: 18, code: "040RegistroWEB-015", name: "REGISTRO SITI WEB AZIENDALI 15 utenti", price: "50€", duration: "365" },
   { id: 19, code: "040RegistroWEB-050", name: "REGISTRO SITI WEB AZIENDALI 50 utenti", price: "90€", duration: "365" },
   { id: 20, code: "040RegistroWEB-200", name: "REGISTRO SITI WEB AZIENDALI 200 utenti", price: "200€", duration: "365" },
+  // PPWR Riciclabilità Imballaggi
+  { id: 21, code: "060RicicloPPWR-002", name: "Calcola la % di riciclabilità PPWR (uso singolo)", price: "30€", duration: "2" },
+  { id: 22, code: "060RicicloPPWR-030", name: "Calcola la % di riciclabilità PPWR (mensile)", price: "50€", duration: "30" },
+  { id: 23, code: "060RicicloPPWR-365", name: "Calcola la % di riciclabilità PPWR (annuale)", price: "600€", duration: "365" },
 ];
