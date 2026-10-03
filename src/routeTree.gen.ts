@@ -27,6 +27,7 @@ import { Route as PoliticaDiRimborsoRouteImport } from './routes/politica-di-rim
 import { Route as PrezziRouteImport } from './routes/prezzi'
 import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
 import { Route as RegistroCredenzialiFornitoriRouteImport } from './routes/registro-credenziali-fornitori'
+import { Route as RicicloPpwrRouteImport } from './routes/riciclo-ppwr'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as SmartMaintenanceRouteImport } from './routes/smart-maintenance'
 import { Route as TerminiDiServizioRouteImport } from './routes/termini-di-servizio'
@@ -126,6 +127,11 @@ const RegistroCredenzialiFornitoriRoute =
     path: '/registro-credenziali-fornitori',
     getParentRoute: () => rootRouteImport,
   } as any)
+const RicicloPpwrRoute = RicicloPpwrRouteImport.update({
+  id: '/riciclo-ppwr',
+  path: '/riciclo-ppwr',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
   path: '/sitemap.xml',
@@ -176,6 +182,7 @@ export interface FileRoutesByFullPath {
   '/prezzi': typeof PrezziRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/registro-credenziali-fornitori': typeof RegistroCredenzialiFornitoriRoute
+  '/riciclo-ppwr': typeof RicicloPpwrRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/smart-maintenance': typeof SmartMaintenanceRoute
   '/termini-di-servizio': typeof TerminiDiServizioRoute
@@ -202,6 +209,7 @@ export interface FileRoutesByTo {
   '/prezzi': typeof PrezziRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/registro-credenziali-fornitori': typeof RegistroCredenzialiFornitoriRoute
+  '/riciclo-ppwr': typeof RicicloPpwrRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/smart-maintenance': typeof SmartMaintenanceRoute
   '/termini-di-servizio': typeof TerminiDiServizioRoute
@@ -229,6 +237,7 @@ export interface FileRoutesById {
   '/prezzi': typeof PrezziRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/registro-credenziali-fornitori': typeof RegistroCredenzialiFornitoriRoute
+  '/riciclo-ppwr': typeof RicicloPpwrRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/smart-maintenance': typeof SmartMaintenanceRoute
   '/termini-di-servizio': typeof TerminiDiServizioRoute
@@ -257,6 +266,7 @@ export interface FileRouteTypes {
     | '/prezzi'
     | '/privacy-policy'
     | '/registro-credenziali-fornitori'
+    | '/riciclo-ppwr'
     | '/sitemap.xml'
     | '/smart-maintenance'
     | '/termini-di-servizio'
@@ -283,6 +293,7 @@ export interface FileRouteTypes {
     | '/prezzi'
     | '/privacy-policy'
     | '/registro-credenziali-fornitori'
+    | '/riciclo-ppwr'
     | '/sitemap.xml'
     | '/smart-maintenance'
     | '/termini-di-servizio'
@@ -309,6 +320,7 @@ export interface FileRouteTypes {
     | '/prezzi'
     | '/privacy-policy'
     | '/registro-credenziali-fornitori'
+    | '/riciclo-ppwr'
     | '/sitemap.xml'
     | '/smart-maintenance'
     | '/termini-di-servizio'
@@ -336,6 +348,7 @@ export interface RootRouteChildren {
   PrezziRoute: typeof PrezziRoute
   PrivacyPolicyRoute: typeof PrivacyPolicyRoute
   RegistroCredenzialiFornitoriRoute: typeof RegistroCredenzialiFornitoriRoute
+  RicicloPpwrRoute: typeof RicicloPpwrRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   SmartMaintenanceRoute: typeof SmartMaintenanceRoute
   TerminiDiServizioRoute: typeof TerminiDiServizioRoute
@@ -472,6 +485,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof RegistroCredenzialiFornitoriRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/riciclo-ppwr': {
+      id: '/riciclo-ppwr'
+      path: '/riciclo-ppwr'
+      fullPath: '/riciclo-ppwr'
+      preLoaderRoute: typeof RicicloPpwrRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/sitemap.xml': {
       id: '/sitemap.xml'
       path: '/sitemap.xml'
@@ -536,6 +556,7 @@ const rootRouteChildren: RootRouteChildren = {
   PrezziRoute: PrezziRoute,
   PrivacyPolicyRoute: PrivacyPolicyRoute,
   RegistroCredenzialiFornitoriRoute: RegistroCredenzialiFornitoriRoute,
+  RicicloPpwrRoute: RicicloPpwrRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   SmartMaintenanceRoute: SmartMaintenanceRoute,
   TerminiDiServizioRoute: TerminiDiServizioRoute,
