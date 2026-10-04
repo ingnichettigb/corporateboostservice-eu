@@ -1,0 +1,184 @@
+{
+  "metaTitle": "SmartMaintenance — App para informes de mantenimiento industrial",
+  "metaDescription": "SmartMaintenance: app mobile-first para informes guiados de averías e intervenciones de mantenimiento. Fotos geolocalizadas, OCR, PDF profesional y correo electrónico precompilado. Mantenimiento industrial, informes de averías.",
+  "ogTitle": "SmartMaintenance — Informes de mantenimiento, cero errores",
+  "ogDescription": "Informes guiados de averías industriales: fotos GPS con marca de agua, OCR de matrículas, PDF profesional y correo electrónico precompilado. Todo desde su dispositivo.",
+  "backBtn": "Volver a las aplicaciones",
+  "heroBadge": "SmartMaintenance · Informes de mantenimiento",
+  "heroH1a": "Informes perfectos,",
+  "heroH1b": "cero errores",
+  "heroSubtitle": "Informes guiados de averías e intervenciones de mantenimiento industrial: fotos geolocalizadas, OCR, PDF profesional y correo electrónico precompilado, todo desde su dispositivo.",
+  "activateMonthly": "Actívelo ahora para su empresa — Solo {{price}}/mes",
+  "activateYearly": "Cero preocupaciones: solo {{price}}/año para su empresa",
+  "addedToast": "Añadido al carrito",
+  "heroFlowAlt": "Flujo de trabajo de SmartMaintenance: configuración, creación de informes in situ, generación de PDF, envío, recepción y archivo",
+  "heroTagline": "Mobile-first · Funciona sin conexión · Datos guardados en su dispositivo",
+  "heroImgAlt": "App SmartMaintenance en un smartphone mostrando un informe de mantenimiento industrial",
+  "heroFigcaption": "Pantalla de inicio de SmartMaintenance",
+  "whatLabel": "Qué es SmartMaintenance",
+  "whatH2": "El mantenimiento se vuelve inteligente",
+  "whatBody": "SmartMaintenance es una aplicación mobile-first para la elaboración guiada de informes de averías e intervenciones de mantenimiento industrial. El técnico de campo compila un informe estructurado con datos del activo, descripción de la avería, acción sugerida, fotos geolocalizadas, vídeo y coordenadas GPS, generando un PDF profesional y un correo electrónico precompilado listo para enviar.",
+  "whatBadges": [
+    "Mobile-first",
+    "Funciona sin conexión",
+    "PDF profesional",
+    "Correo precompilado"
+  ],
+  "featuresLabel": "Características clave",
+  "featuresH2": "Todo lo que necesita, en una sola app",
+  "features": [
+    {
+      "title": "Activación y licencia",
+      "desc": "Active la app con su licencia y habilite todas las funciones en segundos."
+    },
+    {
+      "title": "Configuración de empresa y operador",
+      "desc": "Introduzca los datos de la empresa y del operador una sola vez; serán consistentes en cada informe."
+    },
+    {
+      "title": "Creación guiada de informes",
+      "desc": "Un asistente paso a paso guía al operador para que nunca se omita ningún dato."
+    },
+    {
+      "title": "Fotos GPS con marca de agua",
+      "desc": "Capture fotos geolocalizadas con marcas de agua de fecha, hora y coordenadas, siempre trazables."
+    },
+    {
+      "title": "Vídeo opcional",
+      "desc": "Adjunte un vídeo corto para documentar la avería con aún más claridad."
+    },
+    {
+      "title": "OCR de matrículas",
+      "desc": "Reconocimiento automático de la matrícula del activo: menos escritura, menos errores."
+    },
+    {
+      "title": "Geolocalización automática",
+      "desc": "Las coordenadas GPS de la intervención se detectan y adjuntan automáticamente."
+    },
+    {
+      "title": "Borradores y archivo de envíos",
+      "desc": "Guarde borradores y recupere cada informe enviado en un archivo ordenado y con capacidad de búsqueda."
+    },
+    {
+      "title": "Generación de PDF profesional",
+      "desc": "Genere un PDF pulido y estandarizado listo para compartir."
+    },
+    {
+      "title": "Correo con destinatarios predefinidos",
+      "desc": "Correo electrónico precompilado con adjuntos y destinatarios predefinidos: centro de servicio y responsables."
+    }
+  ],
+  "howLabel": "Cómo funciona",
+  "howH2": "Informes en 8 pasos",
+  "steps": [
+    {
+      "title": "Activo",
+      "desc": "Identifique la máquina con sus datos de registro y matrícula."
+    },
+    {
+      "title": "Orden de trabajo",
+      "desc": "Asocie la orden de trabajo o la referencia de la intervención."
+    },
+    {
+      "title": "Urgencia",
+      "desc": "Establezca el nivel de urgencia del informe."
+    },
+    {
+      "title": "Descripción y acción",
+      "desc": "Describa la avería y la acción correctiva sugerida."
+    },
+    {
+      "title": "Fotos",
+      "desc": "Adjunte fotos con marca de agua y coordenadas GPS."
+    },
+    {
+      "title": "Vídeo",
+      "desc": "Añada un vídeo opcional de la intervención."
+    },
+    {
+      "title": "GPS",
+      "desc": "Las coordenadas se detectan automáticamente."
+    },
+    {
+      "title": "Guardar y enviar",
+      "desc": "Genere el PDF y envíe el correo electrónico precompilado."
+    }
+  ],
+  "whyLabel": "Por qué elegir SmartMaintenance",
+  "whyH2": "Reduzca el tiempo, aumente la calidad",
+  "benefits": [
+    {
+      "title": "Funciona sin conexión",
+      "desc": "Complete y genere el informe incluso sin conexión; envíelo cuando quiera."
+    },
+    {
+      "title": "Cero errores en los informes",
+      "desc": "El flujo de trabajo guiado y el OCR minimizan las omisiones y los datos incorrectos."
+    },
+    {
+      "title": "Estandarización en toda la empresa",
+      "desc": "Cada técnico produce documentos idénticos, profesionales y recuperables."
+    },
+    {
+      "title": "Velocidad operativa",
+      "desc": "Del campo a la oficina en un clic: informes más rápidos, decisiones más ágiles."
+    },
+    {
+      "title": "Almacenamiento local seguro",
+      "desc": "Los datos permanecen en su dispositivo, con un historial siempre a mano."
+    },
+    {
+      "title": "Fiable en el terreno",
+      "desc": "Diseñado para el técnico de campo: simple, robusto y rápido de usar."
+    }
+  ],
+  "pdfLabel": "PDF generado",
+  "pdfH2": "Un documento profesional y estandarizado",
+  "pdfBody": "Cada informe genera un PDF pulido, idéntico para cada técnico y fácil de consultar:",
+  "pdfImgAlt": "Ejemplo de PDF de informe de mantenimiento generado por SmartMaintenance",
+  "pdfBlocks": [
+    "Encabezado sobre fondo azul",
+    "Indicador de urgencia claramente visible",
+    "Bloque completo de datos del activo",
+    "Descripción de la avería y acción sugerida",
+    "Fotos con reconocimiento OCR de la matrícula",
+    "Página final con datos del operador y coordenadas GPS"
+  ],
+  "privacyLabel": "Privacidad y seguridad",
+  "privacyH2": "Todo bajo su control",
+  "privacy": [
+    {
+      "title": "Datos guardados solo localmente",
+      "desc": "Los informes y adjuntos permanecen en el dispositivo, sin archivo en servidores externos."
+    },
+    {
+      "title": "Sin envío automático",
+      "desc": "Usted decide cuándo y a quién enviar: sin transmisiones en segundo plano."
+    },
+    {
+      "title": "Copia de seguridad manual",
+      "desc": "Exporte y guarde sus informes cuando prefiera, con total control."
+    }
+  ],
+  "faqH2": "Preguntas frecuentes",
+  "faq": [
+    {
+      "q": "¿El GPS no se detecta, qué debo hacer?",
+      "a": "Compruebe que los servicios de localización estén activados y que la app tenga permisos de ubicación. En entornos cerrados la señal puede ser débil: acérquese a una ventana o salga al exterior y vuelva a intentarlo. Las coordenadas también se pueden introducir manualmente."
+    },
+    {
+      "q": "¿Cómo funciona el reconocimiento de voz?",
+      "a": "En los campos de descripción puede usar el reconocimiento de voz del dispositivo para dictar texto, útil para completar el informe rápidamente cuando tiene las manos ocupadas."
+    },
+    {
+      "q": "He recibido el correo electrónico sin archivo adjunto, ¿por qué?",
+      "a": "Asegúrese de haber generado el PDF antes de enviar y que su aplicación de correo electrónico permita archivos adjuntos. Si el adjunto es demasiado grande, reduzca la calidad de las fotos y el vídeo, o envíe el PDF por separado desde el archivo."
+    },
+    {
+      "q": "¿Dónde se guardan los informes?",
+      "a": "Los informes se guardan localmente en el dispositivo, en la carpeta dedicada de la app. Desde allí puede verlos, exportarlos o hacer una copia de seguridad manual."
+    }
+  ],
+  "ctaH2": "Mantenimiento industrial, reinventado",
+  "ctaBody": "Un nuevo estándar para técnicos y empresas: del campo a la oficina en un solo clic."
+}

@@ -1,0 +1,144 @@
+{
+  "metaTitle": "Agenda Share: del calendario a un mensaje de WhatsApp",
+  "metaDescription": "Conecte Google Calendar u Outlook, elija un período y obtenga un resumen claro y listo para enviar por WhatsApp. Sin copiar y pegar manualmente.",
+  "ogTitle": "Agenda Share: su calendario se convierte en un mensaje",
+  "ogDescription": "Tres clics: conecte el calendario, elija el período y envíe el resumen por WhatsApp. El calendario solo se lee.",
+  "backBtn": "Volver a las aplicaciones",
+  "heroBadge": "Del calendario a WhatsApp",
+  "heroH1a": "Su calendario se convierte en un mensaje de WhatsApp",
+  "heroH1b": "en tres clics.",
+  "heroSubtitle": "Conecte Google Calendar u Outlook, elija el período y obtenga un resumen claro para enviar de inmediato. Sin copiar y pegar manualmente.",
+  "heroTagline": "Menos copiar y pegar, más citas confirmadas.",
+  "badges": [
+    "Google Calendar",
+    "Outlook / .ics",
+    "Sin registro",
+    "Móvil y escritorio",
+    "4 idiomas"
+  ],
+  "whatLabel": "Qué es",
+  "whatH2": "Las citas se convierten en texto, listas para enviar",
+  "whatBody": "Agenda Share lee un calendario (Google Calendar o un calendario publicado de Outlook/Microsoft 365 en formato .ics) y convierte las citas del período elegido en un texto claro y ordenado, listo para pegar o enviar por WhatsApp. Compartir su disponibilidad requiere tres clics en lugar de diez minutos de copiar y pegar.",
+  "howLabel": "Cómo funciona",
+  "howH2": "Tres pasos",
+  "steps": [
+    {
+      "title": "Conecte el calendario",
+      "desc": "Calendario principal o secundario de Google Calendar, o un calendario publicado de Outlook/Microsoft 365. Los calendarios se guardan y seleccionan con un solo clic."
+    },
+    {
+      "title": "Elija el período",
+      "desc": "Hoy, mañana, fin de semana, próximos 7, 15 o 30 días, este mes o el mes que viene: un clic para cada opción."
+    },
+    {
+      "title": "Revise y envíe",
+      "desc": "Elimine, edite u oculte filas, y luego copie el texto o ábralo directamente en WhatsApp."
+    }
+  ],
+  "featuresLabel": "Funcionalidades",
+  "featuresH2": "Todo lo que necesita antes de enviar",
+  "features": [
+    {
+      "title": "Períodos rápidos",
+      "desc": "Diez intervalos predefinidos, desde hoy hasta el próximo mes, con un solo clic."
+    },
+    {
+      "title": "Eliminar una fila",
+      "desc": "La papelera elimina la cita del resumen, nunca del calendario."
+    },
+    {
+      "title": "Edición al instante",
+      "desc": "Cambie el texto, la hora de inicio y fin, la ubicación o establezca \"todo el día\"."
+    },
+    {
+      "title": "Modo ocupado",
+      "desc": "Mantiene el día y la hora, y reemplaza el contenido con \"Ocupado\"."
+    },
+    {
+      "title": "Selección y privacidad",
+      "desc": "Seleccione varias filas y ocúltelas en bloque: es un interruptor, siempre reversible."
+    },
+    {
+      "title": "Cita rápida",
+      "desc": "Añada manualmente un compromiso que no está en el calendario, solo para este resumen."
+    },
+    {
+      "title": "Calendarios guardados",
+      "desc": "Renombre, edite o elimine calendarios; una marca de verificación indica el que está activo."
+    },
+    {
+      "title": "Cuatro idiomas",
+      "desc": "Italiano, English, Español, Deutsch: su elección se guarda."
+    },
+    {
+      "title": "Copiar o WhatsApp",
+      "desc": "Copie el texto o abra WhatsApp: primero la aplicación instalada, y si no, WhatsApp Web."
+    }
+  ],
+  "privacyLabel": "Privacidad",
+  "privacyH2": "Muestre cuándo está ocupado, no por qué.",
+  "privacy": [
+    {
+      "title": "El calendario solo se lee",
+      "desc": "Sin acceso de escritura: las citas se leen y nada más."
+    },
+    {
+      "title": "Sin cambios en sus eventos",
+      "desc": "Las eliminaciones, ediciones y filas ocultas permanecen en pantalla y desaparecen al recargar."
+    },
+    {
+      "title": "Los datos permanecen en su navegador",
+      "desc": "Las preferencias se almacenan en su navegador: el servicio no guarda nada."
+    }
+  ],
+  "casesLabel": "Casos de uso",
+  "casesH2": "Quién lo usa a diario",
+  "cases": [
+    {
+      "title": "Despacho profesional",
+      "desc": "La recepción envía a los clientes los huecos disponibles de la semana sin revelar otros nombres."
+    },
+    {
+      "title": "Profesional autónomo",
+      "desc": "Envía al cliente la planificación de trabajos de los próximos días, con horarios y direcciones."
+    },
+    {
+      "title": "Profesor y tutor",
+      "desc": "Comparte las próximas clases con alumnos y familias, ocultando compromisos personales."
+    },
+    {
+      "title": "Familia",
+      "desc": "Resume los turnos y citas de los próximos quince días en un solo mensaje."
+    }
+  ],
+  "faqLabel": "Preguntas frecuentes",
+  "faqH2": "Respuestas rápidas",
+  "faq": [
+    {
+      "q": "¿Necesito instalar algo?",
+      "a": "No: funciona en el navegador, tanto en el móvil como en el escritorio."
+    },
+    {
+      "q": "¿Funciona con Outlook?",
+      "a": "Sí, con calendarios publicados de Outlook o Microsoft 365 (enlaces .ics o /index.html) y cualquier calendario público .ics."
+    },
+    {
+      "q": "¿Las ediciones modifican mi calendario?",
+      "a": "No. Todos los cambios solo existen en la pantalla y desaparecen al recargar el período."
+    },
+    {
+      "q": "¿Necesito una cuenta?",
+      "a": "No es necesario registrarse: las preferencias se guardan en su navegador."
+    },
+    {
+      "q": "¿Funciona en un móvil?",
+      "a": "Sí, la interfaz está diseñada para móviles y abre WhatsApp directamente."
+    },
+    {
+      "q": "¿Puedo usar otros idiomas?",
+      "a": "Sí: italiano, inglés, español y alemán. Su selección de idioma se guarda."
+    }
+  ],
+  "ctaH2": "Menos copiar y pegar, más citas confirmadas.",
+  "ctaBody": "Active Agenda Share y envíe su primer resumen en cuestión de minutos."
+}

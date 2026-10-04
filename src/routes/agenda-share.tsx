@@ -34,10 +34,14 @@ import { PricingCartButton } from "@/components/PricingCartButton";
 import { useTranslation } from "react-i18next";
 import i18n from "@/i18n";
 import { agendaShare as agendaShareLocale } from "@/i18n/locales/pages/agenda-share";
+import agendaDe from "@/i18n/locales/generated/agendaShare.de.json";
+import agendaEs from "@/i18n/locales/generated/agendaShare.es.json";
 
 // Register translations
 i18n.addResourceBundle("it", "agendaShare", agendaShareLocale.it, true, false);
 i18n.addResourceBundle("en", "agendaShare", agendaShareLocale.en, true, false);
+i18n.addResourceBundle("de", "agendaShare", agendaDe, true, false);
+i18n.addResourceBundle("es", "agendaShare", agendaEs, true, false);
 
 const stepIcons = [CalendarClock, CalendarRange, Send];
 

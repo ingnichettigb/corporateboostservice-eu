@@ -1,0 +1,251 @@
+{
+  "backToLegal": "Volver a Información legal",
+  "backHome": "Volver al inicio",
+  "navLegal": "Legal",
+  "navLegalMenu": "Información legal",
+  "navPrezzi": "Precios",
+  "navTermini": "Términos y condiciones",
+  "navServizio": "Términos del servicio",
+  "navPrivacy": "Política de privacidad",
+  "navRimborso": "Política de reembolso",
+  "footerHeading": "Información legal",
+  "paddleHeading": "Pagos y Merchant of Record",
+  "paddleBody": "Los pagos por los servicios y cursos adquiridos en este sitio son gestionados por Paddle.com (Paddle.com, Inc. / Paddle Payments Ltd.), que actúa como Merchant of Record. Paddle es el vendedor oficial para el cliente final y se encarga del procesamiento de pagos, la emisión de recibos fiscales y la gestión de reembolsos según sus propias políticas. Para cualquier asunto relacionado con el pago, el importe cobrado o la factura recibida, puede contactar directamente a Paddle a través de su soporte en paddle.com, o escribir a team@corporateboostservice.eu.",
+  "paddleServizioHeading": "8. Pagos y Merchant of Record",
+  "paddleServizioBody": "Los pagos son procesados por Paddle.com, que actúa como Merchant of Record para todas las transacciones realizadas en este sitio. Paddle emite los recibos fiscales, gestiona las disputas de pago (chargebacks) y aplica sus propios términos de uso para el servicio de pago. Al utilizar los servicios de este sitio, el usuario también acepta los términos de Paddle.com aplicables a las transacciones.",
+  "comingSoonBadge": "Compras próximamente — disponible en breve",
+  "comingSoonNote": "El sistema de pago (Paddle) aún no está operativo en este sitio. No se pueden completar transacciones en este momento. La activación de las compras se anunciará en esta página y en la página de precios.",
+  "comingSoonCardNote": "Recibirá un correo electrónico con el enlace y la licencia inmediatamente después de la compra.",
+  "navPagamenti": "Pagos y MoR",
+  "cart": {
+    "nav": "Carrito",
+    "title": "Carrito",
+    "subtitle": "Revise los productos seleccionados antes de comprar.",
+    "empty": "Su carrito está vacío.",
+    "emptyCta": "Ir a precios",
+    "add": "Añadir al carrito",
+    "added": "En el carrito",
+    "addedToast": "Añadido al carrito",
+    "remove": "Eliminar",
+    "clear": "Vaciar carrito",
+    "colService": "Producto",
+    "colPrice": "Precio",
+    "colDuration": "Duración",
+    "colQty": "Cantidad",
+    "colSubtotal": "Total de línea",
+    "qtyIncrease": "Aumentar cantidad",
+    "qtyDecrease": "Disminuir cantidad",
+    "total": "Total",
+    "checkout": "Proceder al pago",
+    "checkoutNote": "🚧 Las compras en línea estarán disponibles en breve a través de Paddle (Merchant of Record). Recibirá un correo electrónico con el enlace y la licencia justo después de la compra.",
+    "continueShopping": "Continuar comprando"
+  },
+  "paddleRefPrivacy": "Los pagos son gestionados por Paddle.com como Merchant of Record.",
+  "paddleRefServizio": "Los pagos son procesados por Paddle.com, Merchant of Record para todas las transacciones en este sitio.",
+  "paddleRefLink": "Consulte la página de Pagos y MoR para más detalles.",
+  "mor": {
+    "metaTitle": "Pagos y Merchant of Record | CorporateBoostService.eu",
+    "metaDesc": "Cómo se gestionan los pagos a través de Paddle.com como Merchant of Record: recibos, reembolsos, disputas y contactos.",
+    "badge": "Pagos",
+    "title": "Pagos y Merchant of Record",
+    "subtitle": "Cómo se gestionan los pagos por los servicios y cursos en este sitio.",
+    "s1Heading": "Quién gestiona los pagos",
+    "s1Body": "Los pagos por los servicios y cursos adquiridos en este sitio son gestionados por Paddle.com (Paddle.com, Inc. / Paddle Payments Ltd.), que actúa como Merchant of Record. Paddle es el vendedor oficial para el cliente final en todas las transacciones realizadas en corporateboostservice.eu.",
+    "s2Heading": "Qué hace Paddle",
+    "s2Body": "Paddle se encarga de: emitir recibos y facturas fiscales, procesar pagos con tarjeta, transferencia bancaria y otros métodos, gestionar reembolsos según la Política de reembolso de este sitio, gestionar disputas de pago (chargebacks) según sus propios términos.",
+    "s3Heading": "Contactos para problemas de pago",
+    "s3Body": "Para cualquier problema relacionado con un pago, el importe cobrado o un recibo, puede: contactar directamente a Paddle en paddle.com/support, o escribir a team@corporateboostservice.eu indicando el pedido de referencia.",
+    "s4Heading": "Normativas aplicables",
+    "s4Body": "Paddle opera en cumplimiento con la regulación europea sobre pagos digitales (PSD2) y con las leyes aplicables en los países donde presta sus servicios.",
+    "relatedHeading": "Otras páginas legales"
+  },
+  "index": {
+    "metaTitle": "Legal — Información legal | CorporateBoostService.eu",
+    "metaDesc": "Índice de la información legal: precios, términos y condiciones, términos del servicio, política de privacidad y política de reembolso.",
+    "badge": "Información legal",
+    "title": "Información legal",
+    "subtitle": "Toda la información legal y contractual sobre el servicio. Seleccione la página que le interese.",
+    "intro": "Esta página es un índice: solo contiene enlaces a las páginas legales. Abra la página que desee para leer su contenido completo.",
+    "linksHeading": "Páginas legales"
+  },
+  "prezzi": {
+    "metaTitle": "Precios — Servicios SaaS y Cursos Digitales | CorporateBoostService.eu",
+    "metaDesc": "Lista de precios de los servicios SaaS y cursos digitales: tarifa, duración y código de producto para cada aplicación.",
+    "badge": "Lista de precios",
+    "title": "Precios",
+    "subtitle": "Tarifa, duración y código de producto para cada servicio SaaS y curso digital.",
+    "colService": "Servicio",
+    "colPrice": "Precio",
+    "colDuration": "Duración",
+    "colCode": "Código de producto",
+    "notesHeading": "Notas importantes",
+    "note1": "Cambios de precios: los precios pueden ser modificados en cualquier momento. Los cambios no se aplican a las suscripciones ya activas hasta su vencimiento.",
+    "note2": "Facturación: todos los importes están en euros. La factura se emite al activar el servicio o curso.",
+    "note3": "Renovación: las suscripciones no se renuevan automáticamente, salvo que se indique lo contrario. El servicio puede renovarse a su vencimiento.",
+    "deliveryHeading": "Entrega del producto digital",
+    "deliveryIntro": "Después de completar el pago, recibirá inmediatamente un correo electrónico automático que contiene:",
+    "deliveryItem1": "el enlace de descarga para la aplicación CorporateBoostService;",
+    "deliveryItem2": "su clave de licencia personal;",
+    "deliveryItem3": "instrucciones de activación paso a paso;",
+    "deliveryItem4": "contactos de soporte técnico si es necesario.",
+    "deliveryP1": "La entrega es 100% digital y se realiza sin demora: el correo electrónico se envía a los pocos segundos de la confirmación del pago.",
+    "deliveryP2": "La licencia es utilizable de inmediato y se puede activar en un dispositivo autorizado a través de la función “Activar Licencia” de la aplicación.",
+    "deliveryP3": "Si no recibe el correo electrónico en 5 minutos, puede contactar a nuestro soporte en team@corporateboostservice.eu: reenviaremos manualmente el enlace y la licencia.",
+    "relatedHeading": "Otras páginas legales",
+    "months": "meses",
+    "month": "mes",
+    "days": "días",
+    "day": "día",
+    "underConstruction": "En construcción"
+  },
+  "termini": {
+    "metaTitle": "Términos y Condiciones | CorporateBoostService.eu",
+    "metaDesc": "Términos y Condiciones de uso: solo para uso profesional, prohibida la ingeniería inversa, propiedad del software, ley italiana y tribunal de Cremona.",
+    "badge": "Términos y condiciones",
+    "title": "Términos y condiciones",
+    "subtitle": "Condiciones generales de uso de los servicios y el software.",
+    "sections": [
+      {
+        "heading": "1. Solo para uso profesional",
+        "body": "Los servicios y el software están destinados exclusivamente a un uso profesional y empresarial. No están dirigidos a consumidores y no pueden utilizarse para fines personales ajenos a la actividad empresarial."
+      },
+      {
+        "heading": "2. Prohibición de ingeniería inversa",
+        "body": "Está prohibido descompilar, desensamblar, modificar, copiar, reproducir o intentar extraer el código fuente del software, total o parcialmente, por cualquier medio."
+      },
+      {
+        "heading": "3. Propiedad del software",
+        "body": "El software, su contenido, marcas y código son propiedad exclusiva del proveedor. El usuario solo adquiere un derecho de uso limitado, no exclusivo e intransferible durante la vigencia de la suscripción."
+      },
+      {
+        "heading": "4. Sin garantía de resultados",
+        "body": "El proveedor no garantiza ningún resultado específico derivado del uso de los servicios. El usuario es responsable del uso que haga de las herramientas y la información obtenida."
+      },
+      {
+        "heading": "5. Ley aplicable y jurisdicción",
+        "body": "Estos Términos se rigen por la ley italiana. El Tribunal de Cremona tendrá jurisdicción exclusiva sobre cualquier disputa."
+      },
+      {
+        "heading": "6. Actualizaciones de los Términos",
+        "body": "El proveedor puede actualizar estos Términos en cualquier momento, previo aviso. El uso continuado del servicio después de los cambios constituye la aceptación de las nuevas condiciones."
+      }
+    ],
+    "relatedHeading": "Otras páginas legales"
+  },
+  "servizio": {
+    "metaTitle": "Términos del Servicio | CorporateBoostService.eu",
+    "metaDesc": "Términos del Servicio: servicio proporcionado tal cual, posibles cambios e interrupciones, requisitos técnicos, soporte y limitaciones de responsabilidad.",
+    "badge": "Términos del servicio",
+    "title": "Términos del servicio",
+    "subtitle": "Condiciones para la prestación y el funcionamiento de los servicios en línea.",
+    "sections": [
+      {
+        "heading": "1. Servicio proporcionado \"tal cual\"",
+        "body": "El servicio se proporciona \"tal cual\" y \"según disponibilidad\", sin garantías de ningún tipo, expresas o implícitas, con respecto a la continuidad, idoneidad para un propósito específico o ausencia de errores."
+      },
+      {
+        "heading": "2. Cambios en el servicio",
+        "body": "El proveedor puede modificar, actualizar o suspender la totalidad o parte de las funciones del servicio en cualquier momento, incluso sin previo aviso."
+      },
+      {
+        "heading": "3. Posibles interrupciones",
+        "body": "El servicio puede ser interrumpido, incluso sin previo aviso, por mantenimiento, actualizaciones, razones técnicas o eventos fuera del control del proveedor."
+      },
+      {
+        "heading": "4. Requisitos técnicos",
+        "body": "El uso adecuado del servicio requiere un dispositivo actualizado y una conexión a internet estable. El proveedor no es responsable de los fallos de funcionamiento debidos a los dispositivos o redes del usuario."
+      },
+      {
+        "heading": "5. Soporte",
+        "body": "El soporte se proporciona exclusivamente por correo electrónico, sin tiempos de respuesta garantizados. El proveedor se compromete a responder lo antes posible."
+      },
+      {
+        "heading": "6. Suspensión por uso ilícito",
+        "body": "El proveedor puede suspender o terminar el acceso al servicio en caso de uso ilícito, abusivo o incumplimiento de estos Términos."
+      },
+      {
+        "heading": "7. Limitación de responsabilidad",
+        "body": "El proveedor no es responsable de daños indirectos, incidentales o consecuentes, incluida la pérdida de datos, lucro cesante o interrupción del negocio que surjan del uso o la imposibilidad de usar el servicio."
+      }
+    ],
+    "relatedHeading": "Otras páginas legales"
+  },
+  "privacy": {
+    "metaTitle": "Política de Privacidad | CorporateBoostService.eu",
+    "metaDesc": "Información sobre el tratamiento de datos personales: responsable del tratamiento, finalidades, base jurídica, conservación, derechos del usuario, cookies y transferencias.",
+    "badge": "Política de privacidad",
+    "title": "Política de privacidad",
+    "subtitle": "Información sobre el tratamiento de datos personales conforme al Reg. UE 2016/679.",
+    "titolareHeading": "Responsable del tratamiento",
+    "titolare": "Corporate Boost Service di Nichetti Gian Battista",
+    "indirizzoLabel": "Dirección",
+    "indirizzo": "Soresina (CR), Italia",
+    "telefonoLabel": "Teléfono",
+    "telefono": "339 634 4660",
+    "pivaLabel": "NIF/IVA",
+    "piva": "IT 01235350194",
+    "emailLabel": "Correo electrónico",
+    "email": "team@corporateboostservice.eu",
+    "sections": [
+      {
+        "heading": "Finalidad del tratamiento",
+        "body": "Los datos personales se tratan para la gestión de la cuenta de usuario, la prestación de los servicios y la facturación."
+      },
+      {
+        "heading": "Base jurídica",
+        "body": "El tratamiento se basa en la ejecución del contrato del que el usuario es parte y en el cumplimiento de las obligaciones legales a las que está sujeto el responsable."
+      },
+      {
+        "heading": "Conservación de los datos",
+        "body": "Los datos se conservan durante el tiempo necesario para los fines declarados y, para los datos contables y fiscales, hasta 10 años según lo exigen las obligaciones legales."
+      },
+      {
+        "heading": "Derechos del usuario",
+        "body": "El usuario puede ejercer los derechos de acceso, rectificación, supresión, limitación, oposición y portabilidad de los datos escribiendo a la dirección de correo electrónico del responsable. El usuario también tiene derecho a presentar una reclamación ante la Autoridad de Protección de Datos."
+      },
+      {
+        "heading": "Cookies",
+        "body": "Este sitio utiliza únicamente cookies técnicas estrictamente necesarias para su funcionamiento (gestión de sesión, seguridad anti-bot de Cloudflare, carrito) y no instala cookies de perfilado o de terceros con fines estadísticos/publicitarios. Por lo tanto, no se requiere el consentimiento del usuario para las cookies utilizadas en este sitio."
+      },
+      {
+        "heading": "Transferencia de datos y servicios de EE. UU.",
+        "body": "Para algunos servicios (p. ej., análisis estadístico e infraestructura) los datos pueden ser procesados a través de proveedores con sede en los Estados Unidos, en cumplimiento de las garantías previstas por la ley aplicable."
+      }
+    ],
+    "relatedHeading": "Otras páginas legales"
+  },
+  "rimborso": {
+    "metaTitle": "Política de Reembolso | CorporateBoostService.eu",
+    "metaDesc": "Política de reembolso: reembolsos solo por pago duplicado o error técnico, sin reembolso para contenido digital ya accedido o suscripciones ya utilizadas.",
+    "badge": "Política de reembolso",
+    "title": "Política de reembolso",
+    "subtitle": "Condiciones para solicitar y procesar reembolsos.",
+    "sections": [
+      {
+        "heading": "1. Casos de reembolso",
+        "body": "Se proporciona un reembolso solo en caso de pago duplicado o de un error técnico atribuible al proveedor."
+      },
+      {
+        "heading": "2. Contenido digital ya accesible",
+        "body": "No se proporciona reembolso para contenido digital, cursos o servicios que ya hayan sido puestos a disposición del usuario o descargados por este."
+      },
+      {
+        "heading": "3. Suscripciones ya utilizadas",
+        "body": "No se proporciona reembolso para las suscripciones ya utilizadas, incluso parcialmente, durante su período de validez."
+      },
+      {
+        "heading": "4. Plazos de reembolso",
+        "body": "Los reembolsos elegibles se procesan en un plazo de 14 días desde la confirmación de la solicitud, utilizando el mismo método de pago empleado."
+      },
+      {
+        "heading": "5. Solicitud de reembolso",
+        "body": "La solicitud debe enviarse por correo electrónico a la dirección oficial team@corporateboostservice.eu, indicando los detalles del pedido y el motivo."
+      },
+      {
+        "heading": "6. Promociones",
+        "body": "Las compras realizadas como parte de promociones, descuentos u ofertas especiales no son reembolsables."
+      }
+    ],
+    "relatedHeading": "Otras páginas legales"
+  }
+}
