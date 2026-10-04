@@ -1,4 +1,5 @@
-import { ShieldCheck, FileLock, HardHat, Newspaper, Wrench, Factory, ClipboardCheck, BookOpen, FlaskConical, CalendarClock, KeyRound } from "lucide-react";
+import { ShieldCheck, FileLock, HardHat, Newspaper, Wrench, Factory, ClipboardCheck, BookOpen, FlaskConical, CalendarClock, KeyRound, Recycle } from "lucide-react";
+import ricicloPpwrLogo from "@/assets/apps/riciclo-ppwr.png.asset.json";
 import smartMaintenanceLogo from "@/assets/apps/smartmaintenance.jpg.asset.json";
 import pedflowLogo from "@/assets/apps/pedflow.png.asset.json";
 import minifatLogo from "@/assets/apps/minifat.png.asset.json";
@@ -17,6 +18,7 @@ export const applicazioni = [
   { icon: Wrench, key: "smartMaintenance", image: smartMaintenanceLogo.url, wip: false },
   { icon: CalendarClock, key: "agendaShare", wip: false },
   { icon: KeyRound, key: "registroCredenziali", wip: false },
+  { icon: Recycle, key: "ricicloPpwr", image: ricicloPpwrLogo.url, wip: false },
   { icon: Factory, key: "fat", wip: true },
   { icon: ClipboardCheck, key: "sat", wip: true },
   { icon: BookOpen, key: "lp", wip: true },

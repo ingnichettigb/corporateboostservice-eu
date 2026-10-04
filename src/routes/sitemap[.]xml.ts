@@ -26,6 +26,7 @@ const entries: SitemapEntry[] = [
   { path: "/smart-maintenance", changefreq: "monthly", priority: "0.8" },
   { path: "/agenda-share", changefreq: "monthly", priority: "0.8" },
   { path: "/registro-credenziali-fornitori", changefreq: "monthly", priority: "0.8" },
+  { path: "/riciclo-ppwr", changefreq: "monthly", priority: "0.8" },
   { path: "/corso-privacy-gdpr", changefreq: "monthly", priority: "0.8" },
   { path: "/corso-gdpr-incaricati", changefreq: "monthly", priority: "0.8" },
   { path: "/mappa-del-sito", changefreq: "monthly", priority: "0.4" },

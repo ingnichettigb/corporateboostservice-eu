@@ -204,6 +204,7 @@ function Home() {
                     <li>PedFlow: classificazione automatica dei fluidi secondo la Direttiva PED.</li>
                     <li>MiniFAT: preparazione guidata della documentazione per sopralluoghi FAT.</li>
                     <li>Smart Maintenance: report tecnici generati da foto, video e note vocali.</li>
+                    <li>Riciclabilità PPWR: calcolo della percentuale di riciclabilità degli imballaggi secondo il Reg. UE 2025/40.</li>
                   </ul>
                   <p className="mt-2">Altre applicazioni (FAT, SAT, LP) sono in sviluppo secondo lo stesso principio: partire da esigenze reali verificate sul campo.</p>
                 </div>
