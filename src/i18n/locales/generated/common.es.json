@@ -1,0 +1,365 @@
+{
+  "brand": "CorporateBoostService.eu",
+  "motto": "APLICACIONES Y CURSOS DIGITALES",
+  "skip": "Saltar al contenido",
+  "nav": {
+    "home": "Inicio",
+    "blog": "Blog",
+    "corsi": "Cursos",
+    "applicazioni": "Aplicaciones",
+    "moca": "Tanques MOCA",
+    "contatti": "Contacto"
+  },
+  "a11y": {
+    "language": "Idioma",
+    "largeText": "Texto grande",
+    "largeTextOn": "Texto grande activado",
+    "highContrast": "Alto contraste",
+    "highContrastOn": "Alto contraste activado"
+  },
+  "hero": {
+    "badge": "Aplicaciones digitales · Cursos certificados",
+    "title1": "Aplicaciones digitales y",
+    "title2": "Cursos certificados",
+    "subtitle": "Aplicaciones digitales y cursos certificados para empresas y profesionales. Compra, instala, utiliza: todo en línea, al instante.",
+    "ctaCorsi": "Explora los cursos",
+    "ctaApp": "Descubre las aplicaciones"
+  },
+  "corsi": {
+    "kicker": "Formación",
+    "title": "Cursos en línea",
+    "subtitle": "Formación clara, actualizada y conforme a la normativa.",
+    "details": "Detalles",
+    "ctaAll": "Ir a los Cursos",
+    "pageTitle": "Cursos en línea — Privacidad, GDPR y Seguridad",
+    "pageDesc": "Cursos en línea sobre privacidad, GDPR, seguridad en el trabajo y actualizaciones normativas.",
+    "h1Kicker": "Formación profesional",
+    "h1": "Cursos en línea",
+    "h1Sub": "Formación clara y actualizada conforme a la normativa italiana y de la UE.",
+    "feat1": "Acceso 24/7",
+    "feat2": "Certificado final",
+    "feat3": "Para empresas y particulares",
+    "iscriviti": "Inscríbete",
+    "landingPage": "Página de destino",
+    "corsoGratis": "Curso GRATIS – paga solo el certificado de 40 €",
+    "infoLabel": "Información",
+    "preventivoLabel": "Comprar el curso",
+    "infoBody": "Hola,\n\nMe gustaría recibir más información sobre el curso en línea indicado en el asunto. ¿Podrían proporcionarme detalles sobre el contenido y cómo acceder a él?\n\nGracias.\n\n[Firma]",
+    "preventivoBody": "Hola,\n\nMe gustaría comprar el curso en línea indicado en el asunto y acceder al certificado final. ¿Podrían indicarme cómo proceder?\n\nGracias.\n\n[Firma]",
+    "items": {
+      "gdprAddetto": {
+        "title": "GDPR y Protección de Datos",
+        "subtitle": "Guía práctica para el responsable de privacidad",
+        "desc": "Todo lo que el responsable de privacidad necesita saber y hacer a diario."
+      },
+      "privacy": {
+        "title": "Privacidad y Protección de Datos",
+        "desc": "Principios de la normativa de privacidad aplicados al trabajo diario."
+      },
+      "gdpr": {
+        "title": "GDPR para Empresas",
+        "desc": "Obligaciones, registros de tratamiento y roles según el Reg. UE 2016/679."
+      },
+      "sicurezza": {
+        "title": "Seguridad en el Trabajo",
+        "desc": "Formación según el D.Lgs. 81/08 para trabajadores, supervisores y empleadores."
+      },
+      "news": {
+        "title": "Noticias Normativas",
+        "desc": "Actualizaciones continuas sobre privacidad, seguridad y cambios legislativos."
+      }
+    },
+    "wip": "En construcción"
+  },
+  "app": {
+    "kicker": "Soluciones Digitales",
+    "title": "Aplicaciones Empresariales (APP)",
+    "subtitle": "Herramientas digitales para simplificar el trabajo y mejorar los procesos.",
+    "more": "Más información",
+    "ctaAll": "Aplicaciones Empresariales",
+    "pageTitle": "Aplicaciones Empresariales — Herramientas digitales profesionales",
+    "pageDesc": "Aplicaciones profesionales para gestionar obligaciones, formación y procesos empresariales.",
+    "feat1": "Rápida implementación",
+    "feat2": "Seguras y conformes",
+    "feat3": "Actualizaciones continuas",
+    "items": {
+      "pedFlow": {
+        "title": "PedFlow",
+        "desc": "Comprueba si el fluido pertenece al Grupo 1 o 2 de la PED de la CE con un solo clic."
+      },
+      "mocaSerbatoi": {
+        "title": "Tanques de acero inoxidable MOCA",
+        "desc": "Regularización y certificación MOCA de tanques de acero inoxidable antiguos: idoneidad para el contacto con alimentos demostrada con una metodología oficial."
+      },
+      "smartMaintenance": {
+        "title": "Smart Maintenance",
+        "desc": "El asistente digital para mantenimiento e inspecciones in situ: captura fotos y vídeos, convierte notas de voz en texto y organiza todo en informes listos para compartir."
+      },
+      "miniFat": {
+        "title": "MiniFAT",
+        "desc": "MiniFAT es una aplicación que optimiza las pruebas de aceptación preparando con antelación la documentación necesaria para la inspección FAT."
+      },
+      "agendaShare": {
+        "title": "Agenda Share",
+        "desc": "Del calendario a WhatsApp: conecta Google Calendar u Outlook, elige un período y obtén un resumen ordenado listo para enviar, sin copiar manualmente."
+      },
+      "registroCredenziali": {
+        "title": "REGISTRO DEL SITIO WEB DE LA EMPRESA",
+        "desc": "Gestiona portales de proveedores, credenciales y personas autorizadas en un único espacio empresarial seguro y compartido."
+      },
+      "ricicloPpwr": {
+        "title": "PPWR Recyclability",
+        "desc": "Calcula la reciclabilidad de los envases según el Reglamento UE 2025/40 (PPWR), asigna la calificación y genera el PDF para el expediente técnico."
+      },
+      "fat": {
+        "title": "FAT — Factory Acceptance Test",
+        "desc": "Gestión digital de las pruebas de aceptación en fábrica: listas de verificación, evidencia fotográfica e informes firmados."
+      },
+      "sat": {
+        "title": "SAT — Site Acceptance Test",
+        "desc": "Pruebas de aceptación in situ paso a paso con seguimiento de resultados y no conformidades."
+      },
+      "lp": {
+        "title": "LP — Lesson Plan",
+        "desc": "Planifica lecciones e itinerarios formativos con objetivos, materiales y evaluaciones."
+      }
+    },
+    "wip": "En construcción"
+  },
+  "chiSono": {
+    "kicker": "Sobre mí",
+    "title": "Experiencia, normativas y tecnología.",
+    "subtitle": "Profesional con experiencia en la normativa GDPR y seguridad en el trabajo. He creado cursos en línea y herramientas digitales para ayudar a empresas y profesionales a trabajar de forma segura y conforme a la normativa, por su cuenta.",
+    "role": "Cursos en línea",
+    "role2": "Herramientas digitales",
+    "p1": "Formación en GDPR y D.Lgs. 81/08"
+  },
+  "contact": {
+    "kicker": "Contacto",
+    "title": "Solicita información",
+    "subtitle": "¿Tienes alguna pregunta sobre un curso o una aplicación? Escríbeme: respondo en 24 horas.",
+    "name": "Nombre completo",
+    "namePh": "Juan Pérez",
+    "email": "Correo electrónico",
+    "emailPh": "email@company.com",
+    "subject": "Asunto",
+    "subjectPh": "Ej. curso en línea GDPR",
+    "message": "Mensaje",
+    "messagePh": "Describe brevemente tu solicitud…",
+    "send": "Enviar solicitud",
+    "sent": "Solicitud enviada. Te responderé en breve."
+  },
+  "footer": {
+    "tagline": "Cursos en línea y aplicaciones digitales para empresas y profesionales.",
+    "paddle": "Pagos gestionados por Paddle",
+    "siteMap": "Mapa del sitio",
+    "rights": "Todos los derechos reservados",
+    "phone": "Teléfono",
+    "vat": "NIF/IVA",
+    "address": "Dirección"
+  },
+  "home": {
+    "pageTitle": "Aplicaciones Digitales y Cursos Certificados para Empresas",
+    "pageDesc": "Aplicaciones digitales y cursos certificados para empresas y profesionales."
+  },
+  "checklist": {
+    "autovalutazione": "Autoevaluación de Privacidad 1996 — Gratis, en 9 preguntas",
+    "verifica": "Verifica tu cumplimiento del GDPR — Gratis, en 10 preguntas",
+    "toolsTitle": "Herramientas gratuitas para apoyar tu formación",
+    "toolsSubtitle": "Cuestionarios gratuitos para autoevaluarte antes de realizar los cursos en línea."
+  },
+  "minifat": {
+    "metaTitle": "MiniFAT — Crea dosieres FAT profesionales en minutos",
+    "metaDescription": "MiniFAT genera automáticamente portada, índice, páginas de documentos y PDF bilingüe para tus Pruebas de Aceptación en Fábrica (FAT), directamente en tu dispositivo.",
+    "ogTitle": "MiniFAT — Dosieres FAT profesionales en una sola app",
+    "ogDescription": "La forma más sencilla de crear dosieres FAT profesionales. PDF bilingües generados localmente, sin enviar datos a servidores externos.",
+    "backToApps": "Volver a las aplicaciones",
+    "heroBadge": "MiniFAT · Prueba de Aceptación en Fábrica",
+    "heroH1a": "La forma más sencilla de crear",
+    "heroH1b": "dosieres FAT profesionales",
+    "heroDesc": "MiniFAT genera automáticamente portada, índice, páginas de documentos y PDF bilingüe directamente en tu dispositivo.",
+    "heroCta": "Activar MiniFAT – 50 €/mes",
+    "heroCtaAnnual": "Activar MiniFAT – 600 €/año + IVA/impuestos",
+    "heroDemo": "Probar la demo",
+    "heroNote": "PDF generado localmente · No se envían datos a servidores externos",
+    "heroImgAlt": "App MiniFAT en tableta y smartphone con un dosier FAT profesional",
+    "featuresSectionLabel": "¿Qué hace MiniFAT?",
+    "featuresH2": "Todo el dosier FAT en una sola aplicación",
+    "features": [
+      {
+        "title": "Datos del fabricante y cliente",
+        "desc": "Gestión completa de registros, con plantillas reutilizables para cada proyecto."
+      },
+      {
+        "title": "Asunto de la FAT guiado",
+        "desc": "Introducción paso a paso del objeto de la prueba, para no olvidar nada."
+      },
+      {
+        "title": "Selección de documentos",
+        "desc": "Elige los documentos necesarios: certificados, declaraciones y anexos."
+      },
+      {
+        "title": "Generación automática",
+        "desc": "Portada, índice y páginas de documentos creados automáticamente, siempre coherentes."
+      },
+      {
+        "title": "Soporte bilingüe",
+        "desc": "Documentación lista en IT / EN / DE / ES con un solo toque."
+      },
+      {
+        "title": "Guardar y archivar",
+        "desc": "Almacena tus FAT y encuéntralas en un archivo ordenado y siempre disponible."
+      },
+      {
+        "title": "Exportación a PDF",
+        "desc": "Genera y exporta el PDF completo directamente desde tu dispositivo."
+      }
+    ],
+    "stepsSectionLabel": "Cómo funciona",
+    "stepsH2": "Tu FAT en 4 pasos",
+    "steps": [
+      {
+        "title": "Introduce los datos",
+        "desc": "Rellena los registros del Fabricante y del Cliente."
+      },
+      {
+        "title": "Completa el asunto de la FAT",
+        "desc": "Define la máquina, el alcance y los detalles de la prueba de aceptación."
+      },
+      {
+        "title": "Selecciona los documentos",
+        "desc": "Elige los certificados, declaraciones y anexos necesarios."
+      },
+      {
+        "title": "Genera y descarga",
+        "desc": "Crea el PDF completo y descárgalo en tu dispositivo."
+      }
+    ],
+    "screenshotsSectionLabel": "Dentro de la app",
+    "screenshotsH2": "Sencilla, clara, profesional",
+    "screenshots": [
+      {
+        "caption": "Pantalla principal"
+      },
+      {
+        "caption": "Lista de documentos"
+      },
+      {
+        "caption": "Vista previa del PDF"
+      },
+      {
+        "caption": "Archivo de FAT"
+      }
+    ],
+    "methodSectionLabel": "El método MiniFAT",
+    "methodH2": "Prepara la FAT con un paso de antelación",
+    "methodP1": "MiniFAT te permite preparar el dosier de la FAT con antelación, con una estructura clara y profesional. Lo compilas, lo generas y se lo envías al fabricante con todos los capítulos ya configurados. Ellos insertan sus documentos directamente después de los tuyos, siguiendo la estructura que has definido.",
+    "methodP2": "Unos días antes de la FAT, te lo devuelven todo completo: puedes revisarlo con calma, solicitar adiciones y aclarar cualquier punto crítico. Cuando llegas a la planta, no queda nada por esperar: todo está ya listo.",
+    "methodCards1": [
+      {
+        "title": "Optimiza tu jornada",
+        "desc": "Llegarás a la planta y encontrarás todo ya preparado, para que puedas centrarte únicamente en la máquina."
+      },
+      {
+        "title": "Reduce esperas innecesarias",
+        "desc": "Los documentos estarán listos a tu llegada y podrás pasar directamente al trabajo técnico."
+      },
+      {
+        "title": "Llega y ponte a trabajar",
+        "desc": "Cero tiempo perdido: todo está organizado y puedes pasar directamente a la inspección de la máquina."
+      }
+    ],
+    "methodP3": "MiniFAT elimina la confusión, los PDF desorganizados, los documentos que faltan y las prisas de última hora. Te permite llegar a la FAT con un dosier completo y verificado, con todas las partes administrativas ya aprobadas.",
+    "methodCards2": [
+      {
+        "title": "Maximiza cada minuto",
+        "desc": "El papeleo ya está resuelto; te centras solo en la inspección y la supervisión operativa."
+      },
+      {
+        "title": "Llega y ve directo al grano",
+        "desc": "Documentos listos, procedimientos ya alineados: solo queda la evaluación de la máquina."
+      },
+      {
+        "title": "Trabaja un paso por delante",
+        "desc": "Todo preparado con antelación para que puedas dedicarte de inmediato a lo que realmente importa."
+      }
+    ],
+    "methodCalloutLine1": "MiniFAT no es solo una app:",
+    "methodCalloutLine2": "es una nueva forma de gestionar la FAT: más rápida, más limpia, más profesional.",
+    "benefitsSectionLabel": "Por qué MiniFAT es esencial",
+    "benefitsH2": "Llega y ve directo al grano",
+    "benefitsSubtitle": "Documentos listos, procedimientos alineados: solo queda la evaluación de la máquina.",
+    "benefits": [
+      {
+        "title": "Estandariza el proceso FAT",
+        "desc": "Un método único y repetible para cada prueba de aceptación, siempre conforme a la normativa."
+      },
+      {
+        "title": "Evita errores y retrasos",
+        "desc": "Sin documentos faltantes u olvidados: el procedimiento te guía en cada paso."
+      },
+      {
+        "title": "Documentación profesional",
+        "desc": "Dosieres pulcros y bien organizados, listos para presentar al cliente."
+      },
+      {
+        "title": "Optimiza tu jornada",
+        "desc": "Llegas a la planta y lo encuentras todo preparado: céntrate solo en la máquina."
+      },
+      {
+        "title": "Llega y ponte a trabajar",
+        "desc": "Cero tiempo perdido: todo está organizado y pasas directamente a la inspección."
+      },
+      {
+        "title": "Funciona en cualquier lugar",
+        "desc": "Incluso en la planta: el PDF se genera localmente en tu dispositivo."
+      }
+    ],
+    "pricingSectionLabel": "Precios",
+    "pricingH2": "Un plan, todo incluido",
+    "pricingPlanName": "MiniFAT",
+    "pricingMonth": "/mes",
+    "planFeatures": [
+      "Acceso completo",
+      "Guardado en tu dispositivo",
+      "PDF ilimitados",
+      "Plantillas de fabricante / cliente",
+      "Soporte bilingüe IT / EN / DE / ES",
+      "Actualizaciones incluidas"
+    ],
+    "pricingCta": "Activar ahora",
+    "pricingNote": "Pago seguro a través de Paddle",
+    "faqH2": "Preguntas frecuentes",
+    "faq": [
+      {
+        "q": "¿Qué es una FAT?",
+        "a": "Una FAT (Factory Acceptance Test o Prueba de Aceptación en Fábrica) es la inspección de aceptación en fábrica: la verificación de que una máquina o sistema cumple con los requisitos acordados antes de su envío al cliente. MiniFAT te ayuda a documentarlo profesionalmente."
+      },
+      {
+        "q": "¿Funciona MiniFAT sin conexión?",
+        "a": "Sí. MiniFAT genera la documentación y el PDF directamente en tu dispositivo, para que puedas trabajar en la planta sin conexión. El guardado en la nube es opcional."
+      },
+      {
+        "q": "¿Puedo exportar PDF bilingües?",
+        "a": "Sí. MiniFAT soporta IT, EN, DE y ES: la portada, el índice y las páginas de los documentos se generan en el idioma elegido."
+      },
+      {
+        "q": "¿Se guardan mis datos en mi dispositivo?",
+        "a": "Sí. Los PDF se generan localmente y tus datos permanecen en el dispositivo. No se envía nada a servidores externos."
+      },
+      {
+        "q": "¿Puedo editar una FAT ya creada?",
+        "a": "Sí. Puedes reabrir una FAT guardada, actualizar datos y documentos, y regenerar el PDF en cualquier momento."
+      },
+      {
+        "q": "¿Puedo añadir documentos personalizados?",
+        "a": "Sí. Además de los certificados, declaraciones y anexos estándar, puedes incluir documentos personalizados en el dosier."
+      }
+    ],
+    "ctaH2": "¿Listo para crear tu próximo dosier FAT?",
+    "ctaDesc": "PDF generado localmente, sin enviar datos a servidores externos.",
+    "ctaCta": "Activar MiniFAT – 50 €/mes",
+    "ctaDemo": "Probar la demo",
+    "addedToast": "Producto añadido al carrito"
+  }
+}

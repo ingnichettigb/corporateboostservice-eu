@@ -1,0 +1,144 @@
+{
+  "metaTitle": "Agenda Share – Kalender als WhatsApp-Nachricht",
+  "metaDescription": "Verbinden Sie Google Kalender oder Outlook, wählen Sie einen Zeitraum und erhalten Sie eine übersichtliche Zusammenfassung zum Senden auf WhatsApp. Kein manuelles Kopieren.",
+  "ogTitle": "Agenda Share – Ihr Kalender wird zur Nachricht",
+  "ogDescription": "Drei Klicks: Kalender verbinden, Zeitraum auswählen, Zusammenfassung auf WhatsApp senden. Der Kalender wird nur gelesen.",
+  "backBtn": "Zurück zu den Anwendungen",
+  "heroBadge": "Vom Kalender zu WhatsApp",
+  "heroH1a": "Ihr Kalender wird zur WhatsApp-Nachricht",
+  "heroH1b": "in drei Klicks.",
+  "heroSubtitle": "Verbinden Sie Google Kalender oder Outlook, wählen Sie den Zeitraum und erhalten Sie eine übersichtliche Zusammenfassung zum sofortigen Senden. Kein manuelles Kopieren.",
+  "heroTagline": "Weniger Kopieren und Einfügen, mehr bestätigte Termine.",
+  "badges": [
+    "Google Calendar",
+    "Outlook / .ics",
+    "Keine Anmeldung",
+    "Smartphone und Desktop",
+    "4 Sprachen"
+  ],
+  "whatLabel": "Was es ist",
+  "whatH2": "Termine werden zu versandfertigem Text",
+  "whatBody": "Agenda Share liest einen Kalender (Google Kalender oder einen veröffentlichten Outlook/Microsoft 365-Kalender im .ics-Format) und wandelt die Termine des gewählten Zeitraums in klaren, geordneten Text um, der direkt eingefügt oder auf WhatsApp gesendet werden kann. Das Teilen Ihrer Verfügbarkeit dauert drei Klicks statt zehn Minuten Kopieren und Einfügen.",
+  "howLabel": "Wie es funktioniert",
+  "howH2": "Drei Schritte",
+  "steps": [
+    {
+      "title": "Kalender verbinden",
+      "desc": "Haupt- oder sekundärer Google Kalender, oder ein veröffentlichter Outlook/Microsoft 365 Kalender. Kalender werden gespeichert und mit einem Klick ausgewählt."
+    },
+    {
+      "title": "Zeitraum auswählen",
+      "desc": "Heute, morgen, Ende der Woche, nächste 7, 15 oder 30 Tage, dieser Monat oder nächster Monat: jeweils ein Klick."
+    },
+    {
+      "title": "Bereinigen und senden",
+      "desc": "Zeilen entfernen, bearbeiten oder ausblenden, dann den Text kopieren oder direkt in WhatsApp öffnen."
+    }
+  ],
+  "featuresLabel": "Funktionen",
+  "featuresH2": "Alles, was Sie vor dem Senden brauchen",
+  "features": [
+    {
+      "title": "Schnelle Zeiträume",
+      "desc": "Zehn vordefinierte Bereiche, von heute bis zum nächsten Monat, mit einem einzigen Klick."
+    },
+    {
+      "title": "Eine Zeile entfernen",
+      "desc": "Der Papierkorb entfernt den Termin aus der Zusammenfassung, niemals aus dem Kalender."
+    },
+    {
+      "title": "Spontane Bearbeitung",
+      "desc": "Ändern Sie Text, Start- und Endzeit, Ort oder stellen Sie auf „ganztägig“ ein."
+    },
+    {
+      "title": "Besetzt-Modus",
+      "desc": "Behält Tag und Uhrzeit bei und ersetzt den Inhalt durch „Besetzt“."
+    },
+    {
+      "title": "Auswählen und Datenschutz",
+      "desc": "Mehrere Zeilen auswählen und gesammelt ausblenden: Es ist ein Schalter, immer umkehrbar."
+    },
+    {
+      "title": "Blitz-Termin",
+      "desc": "Fügen Sie manuell eine Verpflichtung hinzu, die nicht im Kalender steht, nur für diese Zusammenfassung."
+    },
+    {
+      "title": "Gespeicherte Kalender",
+      "desc": "Kalender umbenennen, bearbeiten oder löschen; ein Häkchen zeigt den aktiven an."
+    },
+    {
+      "title": "Vier Sprachen",
+      "desc": "Italiano, English, Español, Deutsch: Ihre Auswahl wird gespeichert."
+    },
+    {
+      "title": "Kopieren oder WhatsApp",
+      "desc": "Kopieren Sie den Text oder öffnen Sie WhatsApp: zuerst die installierte App, dann WhatsApp Web."
+    }
+  ],
+  "privacyLabel": "Datenschutz",
+  "privacyH2": "Zeigen Sie, wann Sie beschäftigt sind, nicht warum.",
+  "privacy": [
+    {
+      "title": "Der Kalender wird nur gelesen",
+      "desc": "Kein Schreibzugriff: Termine werden nur gelesen und sonst nichts."
+    },
+    {
+      "title": "Keine Änderungen an Ihren Terminen",
+      "desc": "Löschungen, Bearbeitungen und ausgeblendete Zeilen bleiben auf dem Bildschirm und verschwinden beim Neuladen."
+    },
+    {
+      "title": "Daten bleiben in Ihrem Browser",
+      "desc": "Einstellungen werden in Ihrem Browser gespeichert: Der Dienst speichert nichts."
+    }
+  ],
+  "casesLabel": "Anwendungsfälle",
+  "casesH2": "Wer es täglich nutzt",
+  "cases": [
+    {
+      "title": "Kanzlei/Praxis",
+      "desc": "Die Rezeption sendet den Kunden die freien Termine der Woche, ohne andere Namen preiszugeben."
+    },
+    {
+      "title": "Handwerker",
+      "desc": "Sendet dem Kunden die anstehenden Aufträge der nächsten Tage mit Zeiten und Adressen."
+    },
+    {
+      "title": "Lehrer und Nachhilfelehrer",
+      "desc": "Teilt anstehende Unterrichtsstunden mit Schülern und Familien und blendet private Termine aus."
+    },
+    {
+      "title": "Familie",
+      "desc": "Fasst Schichten und Termine der nächsten fünfzehn Tage in einer Nachricht zusammen."
+    }
+  ],
+  "faqLabel": "FAQ",
+  "faqH2": "Schnelle Antworten",
+  "faq": [
+    {
+      "q": "Muss ich etwas installieren?",
+      "a": "Nein, die Anwendung läuft im Browser, auf dem Smartphone und dem Desktop."
+    },
+    {
+      "q": "Funktioniert es mit Outlook?",
+      "a": "Ja, mit veröffentlichten Outlook- oder Microsoft 365-Kalendern (.ics- oder /index.html-Links) und jedem öffentlichen .ics-Kalender."
+    },
+    {
+      "q": "Ändern Bearbeitungen meinen Kalender?",
+      "a": "Nein. Jede Änderung existiert nur auf dem Bildschirm und verschwindet, wenn Sie den Zeitraum neu laden."
+    },
+    {
+      "q": "Benötige ich ein Konto?",
+      "a": "Keine Anmeldung: Die Einstellungen bleiben in Ihrem Browser."
+    },
+    {
+      "q": "Funktioniert es auf einem Smartphone?",
+      "a": "Ja, die Benutzeroberfläche ist Mobile-First und öffnet WhatsApp direkt."
+    },
+    {
+      "q": "Kann ich andere Sprachen verwenden?",
+      "a": "Ja: Italienisch, Englisch, Spanisch und Deutsch, wobei die Sprache gespeichert wird."
+    }
+  ],
+  "ctaH2": "Weniger Kopieren und Einfügen, mehr bestätigte Termine.",
+  "ctaBody": "Aktivieren Sie Agenda Share und senden Sie Ihre erste Zusammenfassung in wenigen Minuten."
+}

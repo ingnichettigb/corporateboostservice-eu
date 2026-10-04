@@ -1,0 +1,184 @@
+{
+  "metaTitle": "SmartMaintenance — App für industrielle Wartungsberichte",
+  "metaDescription": "SmartMaintenance: Mobile-First-App für geführte Störungsmeldungen und Wartungseinsätze. Geolokalisierte Fotos, OCR, professionelles PDF und vorausgefüllte E-Mail. Industrielle Instandhaltung, Störungsprotokolle.",
+  "ogTitle": "SmartMaintenance — Wartungsberichte, fehlerfrei",
+  "ogDescription": "Geführte industrielle Störungsmeldungen: GPS-Fotos mit Wasserzeichen, Kennzeichen-OCR, professionelles PDF und vorausgefüllte E-Mail. Alles von Ihrem Gerät aus.",
+  "backBtn": "Zurück zu den Anwendungen",
+  "heroBadge": "SmartMaintenance · Wartungsberichte",
+  "heroH1a": "Perfekte Berichte,",
+  "heroH1b": "fehlerfrei",
+  "heroSubtitle": "Geführte Erstellung von Störungsmeldungen und industriellen Wartungseinsätzen: geolokalisierte Fotos, OCR, professionelles PDF und vorausgefüllte E-Mail – alles von Ihrem Gerät aus.",
+  "activateMonthly": "Jetzt für Ihr Unternehmen aktivieren – Nur {{price}}/Monat",
+  "activateYearly": "Sorgenfrei: nur {{price}}/Jahr für Ihr Unternehmen",
+  "addedToast": "Zum Warenkorb hinzugefügt",
+  "heroFlowAlt": "SmartMaintenance-Workflow: Einrichtung, Berichtserstellung vor Ort, PDF-Generierung, Senden, Empfangen und Archivieren",
+  "heroTagline": "Mobile-First · Funktioniert offline · Daten auf Ihrem Gerät gespeichert",
+  "heroImgAlt": "SmartMaintenance-App auf einem Smartphone, die einen industriellen Wartungsbericht anzeigt",
+  "heroFigcaption": "SmartMaintenance Startbildschirm",
+  "whatLabel": "Was ist SmartMaintenance",
+  "whatH2": "Instandhaltung wird intelligent",
+  "whatBody": "SmartMaintenance ist eine Mobile-First-Anwendung für die geführte Meldung von Störungen und industriellen Wartungseinsätzen. Der Außendiensttechniker erstellt einen strukturierten Bericht mit Anlagendaten, Fehlerbeschreibung, Maßnahmenvorschlag, geolokalisierten Fotos, Video und GPS-Koordinaten. Daraus wird ein professionelles PDF und eine vorausgefüllte, versandbereite E-Mail generiert.",
+  "whatBadges": [
+    "Mobile-First",
+    "Funktioniert offline",
+    "Professionelles PDF",
+    "Vorausgefüllte E-Mail"
+  ],
+  "featuresLabel": "Hauptfunktionen",
+  "featuresH2": "Alles, was Sie brauchen, in einer einzigen App",
+  "features": [
+    {
+      "title": "Aktivierung & Lizenz",
+      "desc": "Aktivieren Sie die App mit Ihrer Lizenz und schalten Sie alle Funktionen in Sekundenschnelle frei."
+    },
+    {
+      "title": "Einrichtung von Unternehmen & Bediener",
+      "desc": "Geben Sie Unternehmens- und Bedienerdaten einmal ein – sie werden in jedem Bericht konsistent übernommen."
+    },
+    {
+      "title": "Geführte Berichterstellung",
+      "desc": "Ein schrittweiser Assistent führt den Bediener, damit keine Daten übersehen werden."
+    },
+    {
+      "title": "GPS-Fotos mit Wasserzeichen",
+      "desc": "Erfassen Sie geolokalisierte Fotos mit Wasserzeichen für Datum, Uhrzeit und Koordinaten – immer nachverfolgbar."
+    },
+    {
+      "title": "Optionales Video",
+      "desc": "Fügen Sie ein kurzes Video hinzu, um die Störung noch deutlicher zu dokumentieren."
+    },
+    {
+      "title": "Kennzeichen-OCR",
+      "desc": "Automatische Erkennung des Anlagenschilds: weniger Tippen, weniger Fehler."
+    },
+    {
+      "title": "Automatische Geolokalisierung",
+      "desc": "Die GPS-Koordinaten des Einsatzes werden automatisch erfasst und angehängt."
+    },
+    {
+      "title": "Entwürfe & Sende-Archiv",
+      "desc": "Speichern Sie Entwürfe und rufen Sie jeden gesendeten Bericht in einem übersichtlichen, durchsuchbaren Archiv ab."
+    },
+    {
+      "title": "Professionelle PDF-Generierung",
+      "desc": "Erstellen Sie ein professionelles, standardisiertes PDF, das sofort geteilt werden kann."
+    },
+    {
+      "title": "E-Mail mit voreingestellten Empfängern",
+      "desc": "Vorausgefüllte E-Mail mit Anhängen und voreingestellten Empfängern: Servicecenter und Manager."
+    }
+  ],
+  "howLabel": "So funktioniert's",
+  "howH2": "Berichterstellung in 8 Schritten",
+  "steps": [
+    {
+      "title": "Anlage",
+      "desc": "Identifizieren Sie die Maschine mit ihren Stammdaten und dem Typenschild."
+    },
+    {
+      "title": "Arbeitsauftrag",
+      "desc": "Ordnen Sie den Arbeitsauftrag oder die Einsatzreferenz zu."
+    },
+    {
+      "title": "Dringlichkeit",
+      "desc": "Legen Sie die Dringlichkeitsstufe des Berichts fest."
+    },
+    {
+      "title": "Beschreibung & Maßnahme",
+      "desc": "Beschreiben Sie die Störung und die vorgeschlagene Korrekturmaßnahme."
+    },
+    {
+      "title": "Fotos",
+      "desc": "Fügen Sie Fotos mit Wasserzeichen und GPS-Koordinaten hinzu."
+    },
+    {
+      "title": "Video",
+      "desc": "Fügen Sie ein optionales Video des Einsatzes hinzu."
+    },
+    {
+      "title": "GPS",
+      "desc": "Die Koordinaten werden automatisch erfasst."
+    },
+    {
+      "title": "Speichern & Senden",
+      "desc": "Generieren Sie das PDF und senden Sie die vorausgefüllte E-Mail."
+    }
+  ],
+  "whyLabel": "Warum SmartMaintenance",
+  "whyH2": "Zeit sparen, Qualität steigern",
+  "benefits": [
+    {
+      "title": "Funktioniert offline",
+      "desc": "Erstellen und generieren Sie den Bericht auch ohne Verbindung – senden Sie ihn, wann immer Sie möchten."
+    },
+    {
+      "title": "Fehlerfreie Berichte",
+      "desc": "Der geführte Arbeitsablauf und die OCR minimieren Auslassungen und fehlerhafte Daten."
+    },
+    {
+      "title": "Unternehmensweite Standardisierung",
+      "desc": "Jeder Techniker erstellt identische, professionelle und abrufbare Dokumente."
+    },
+    {
+      "title": "Operative Geschwindigkeit",
+      "desc": "Vom Außendienst ins Büro mit einem Klick: schnellere Berichte, raschere Entscheidungen."
+    },
+    {
+      "title": "Sichere lokale Speicherung",
+      "desc": "Die Daten bleiben auf Ihrem Gerät, mit einem jederzeit verfügbaren Verlauf."
+    },
+    {
+      "title": "Zuverlässig im Außendienst",
+      "desc": "Entwickelt für den Außendiensttechniker: einfach, robust und schnell in der Anwendung."
+    }
+  ],
+  "pdfLabel": "Generiertes PDF",
+  "pdfH2": "Ein professionelles, standardisiertes Dokument",
+  "pdfBody": "Jeder Bericht generiert ein professionelles PDF, das für jeden Techniker identisch und leicht einzusehen ist:",
+  "pdfImgAlt": "Beispiel eines von SmartMaintenance generierten Wartungsberichts im PDF-Format",
+  "pdfBlocks": [
+    "Kopfzeile auf blauem Hintergrund",
+    "Deutlich sichtbare Dringlichkeits-Markierung",
+    "Vollständiger Block mit Anlagendaten",
+    "Störungsbeschreibung und Maßnahmenvorschlag",
+    "Fotos mit Kennzeichen-OCR-Erkennung",
+    "Abschlussseite mit Bedienerdaten und GPS-Koordinaten"
+  ],
+  "privacyLabel": "Datenschutz & Sicherheit",
+  "privacyH2": "Alles unter Ihrer Kontrolle",
+  "privacy": [
+    {
+      "title": "Daten nur lokal gespeichert",
+      "desc": "Berichte und Anhänge bleiben auf dem Gerät – kein externes Serverarchiv."
+    },
+    {
+      "title": "Kein automatischer Versand",
+      "desc": "Sie entscheiden, wann und an wen gesendet wird: keine Übertragungen im Hintergrund."
+    },
+    {
+      "title": "Manuelles Backup",
+      "desc": "Exportieren und sichern Sie Ihre Berichte, wann immer Sie möchten, bei voller Kontrolle."
+    }
+  ],
+  "faqH2": "Häufig gestellte Fragen",
+  "faq": [
+    {
+      "q": "GPS wird nicht erkannt – was soll ich tun?",
+      "a": "Prüfen Sie, ob die Ortungsdienste aktiviert sind und die App die Berechtigung für den Standortzugriff hat. In geschlossenen Räumen kann das Signal schwach sein: Gehen Sie näher an ein Fenster oder nach draußen und versuchen Sie es erneut. Die Koordinaten können auch manuell eingegeben werden."
+    },
+    {
+      "q": "Wie funktioniert die Spracherkennung?",
+      "a": "In den Beschreibungsfeldern können Sie die Spracherkennung des Geräts nutzen, um Text zu diktieren – nützlich, um den Bericht schnell auszufüllen, wenn Sie keine Hand frei haben."
+    },
+    {
+      "q": "Ich habe die E-Mail ohne Anhang erhalten – warum?",
+      "a": "Stellen Sie sicher, dass Sie das PDF vor dem Senden generiert haben und dass Ihre E-Mail-App Anhänge zulässt. Wenn der Anhang zu groß ist, reduzieren Sie die Foto- und Videoqualität oder senden Sie das PDF separat aus dem Archiv."
+    },
+    {
+      "q": "Wo werden die Berichte gespeichert?",
+      "a": "Die Berichte werden lokal auf dem Gerät im dafür vorgesehenen Ordner der App gespeichert. Von dort aus können Sie sie ansehen, exportieren oder manuell sichern."
+    }
+  ],
+  "ctaH2": "Industrielle Instandhaltung, neu erfunden",
+  "ctaBody": "Ein neuer Standard für Techniker und Unternehmen: vom Außendienst ins Büro mit einem Klick."
+}
