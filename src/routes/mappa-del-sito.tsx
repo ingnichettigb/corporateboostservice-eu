@@ -45,6 +45,7 @@ const groups: { heading: string; links: { to: string; label: string }[] }[] = [
       { to: "/smart-maintenance", label: "Smart Maintenance — Report tecnici" },
       { to: "/agenda-share", label: "Agenda Share — Da calendario a WhatsApp" },
       { to: "/registro-credenziali-fornitori", label: "Registro Credenziali Fornitori" },
+      { to: "/riciclo-ppwr", label: "Riciclabilità PPWR — Reg. UE 2025/40" },
     ],
   },
   {
