@@ -103,10 +103,10 @@ const privacyIcons = [HardDrive, Lock, FolderArchive];
 
 
 function SingleUseButton({ className = "" }: { className?: string }) {
-  // Riga 1 della pagina Prezzi — 001SmMntnnc-002 (uso singolo).
+  // Riga 1 della pagina Prezzi — 006SmMntnnc-002 (uso singolo).
   return (
     <PricingCartButton
-      code="001SmMntnnc-002"
+      code="006SmMntnnc-002"
       index={1}
       full
       className={className}
@@ -115,11 +115,11 @@ function SingleUseButton({ className = "" }: { className?: string }) {
 }
 
 function ActivateButton({ className = "" }: { className?: string }) {
-  // Riga 2 della pagina Prezzi — 001SmMntnnc-030 (mensile).
+  // Riga 2 della pagina Prezzi — 006SmMntnnc-030 (mensile).
   // Fonte unica del prezzo/durata: tabella product_catalog di Supabase.
   return (
     <PricingCartButton
-      code="001SmMntnnc-030"
+      code="006SmMntnnc-030"
       index={2}
       full
       className={className}
@@ -129,11 +129,11 @@ function ActivateButton({ className = "" }: { className?: string }) {
 
 
 function AnnualActivateButton({ className = "" }: { className?: string }) {
-  // Riga 3 della pagina Prezzi — 001SmMntnnc-365 (annuale).
+  // Riga 3 della pagina Prezzi — 006SmMntnnc-365 (annuale).
   // Fonte unica del prezzo/durata: tabella product_catalog di Supabase.
   return (
     <PricingCartButton
-      code="001SmMntnnc-365"
+      code="006SmMntnnc-365"
       index={3}
       full
       className={className}

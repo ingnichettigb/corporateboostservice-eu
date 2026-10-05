@@ -606,9 +606,9 @@ export const legal = {
 
 export const pricingItems = [
   // Smart maintenance
-  { id: 1, code: "001SmMntnnc-002", name: "Smart maintenance (uso singolo)", price: "40€", duration: "2" },
-  { id: 2, code: "001SmMntnnc-030", name: "Smart maintenance (mensile)", price: "60€", duration: "30" },
-  { id: 3, code: "001SmMntnnc-365", name: "Smart maintenance (annuale)", price: "700€", duration: "365" },
+  { id: 1, code: "006SmMntnnc-002", name: "Smart maintenance (uso singolo)", price: "40€", duration: "2" },
+  { id: 2, code: "006SmMntnnc-030", name: "Smart maintenance (mensile)", price: "60€", duration: "30" },
+  { id: 3, code: "006SmMntnnc-365", name: "Smart maintenance (annuale)", price: "700€", duration: "365" },
   // Mini FAT
   { id: 4, code: "002MnFAT-002", name: "Mini FAT (uso singolo)", price: "30€", duration: "2" },
   { id: 5, code: "002MnFAT-030", name: "Mini FAT (mensile)", price: "50€", duration: "30" },

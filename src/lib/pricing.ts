@@ -17,11 +17,11 @@ export function getPlanByCode(code: string): PricingPlan {
 }
 
 export function getSmartMaintenanceMonthly() {
-  return getPlanByCode("001SmMntnnc-030");
+  return getPlanByCode("006SmMntnnc-030");
 }
 
 export function getSmartMaintenanceAnnual() {
-  return getPlanByCode("001SmMntnnc-365");
+  return getPlanByCode("006SmMntnnc-365");
 }
 
 export function getPedFlowMonthly() {
