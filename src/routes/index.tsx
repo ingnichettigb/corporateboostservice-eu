@@ -1,3 +1,4 @@
+import { tx } from "@/i18n/tx";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, GraduationCap, Layers, CheckCircle2, Construction } from "lucide-react";
