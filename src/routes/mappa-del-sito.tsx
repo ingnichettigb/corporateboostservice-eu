@@ -1,3 +1,4 @@
+import { tx } from "@/i18n/tx";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
@@ -79,9 +80,9 @@ function SitemapPage() {
       <main id="main">
         <section className="pt-36 pb-16 [background:var(--gradient-section-hero)] border-b-2 border-primary/15">
           <div className="container mx-auto px-4 max-w-4xl text-center">
-            <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-foreground">Mappa del sito</h1>
+            <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-foreground">{tx("Mappa del sito")}</h1>
             <p className="mt-4 text-lg text-foreground/85">
-              Tutte le pagine pubbliche di CorporateBoostService.eu.
+              {tx("Tutte le pagine pubbliche di CorporateBoostService.eu.")}
             </p>
           </div>
         </section>
@@ -89,12 +90,12 @@ function SitemapPage() {
           <div className="container mx-auto px-4 max-w-4xl grid sm:grid-cols-2 gap-8">
             {groups.map((g) => (
               <div key={g.heading} className="p-6 rounded-2xl border-2 border-primary/20 bg-white shadow-[var(--shadow-card)]">
-                <h2 className="text-xl font-bold text-foreground mb-4">{g.heading}</h2>
+                <h2 className="text-xl font-bold text-foreground mb-4">{tx(g.heading)}</h2>
                 <ul className="space-y-2">
                   {g.links.map((l) => (
                     <li key={l.to}>
                       <Link to={l.to} className="text-primary font-semibold hover:underline">
-                        {l.label}
+                        {tx(l.label)}
                       </Link>
                     </li>
                   ))}
