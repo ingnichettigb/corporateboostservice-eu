@@ -188,30 +188,30 @@ function Home() {
         <section className="py-24 [background:var(--gradient-section-about)] text-white">
           <div className="container mx-auto px-4 max-w-5xl">
             <div>
-              <p className="text-base font-bold text-white/85 mb-3 uppercase tracking-wider">Chi sono</p>
-              <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-5">Esperienza, normative e tecnologia.</h2>
+              <p className="text-base font-bold text-white/85 mb-3 uppercase tracking-wider">{tx("Chi sono")}</p>
+              <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-5">{tx("Esperienza, normative e tecnologia.")}</h2>
               <div className="space-y-5 text-white/95 leading-relaxed">
                 <p>
-                  CorporateBoostService.eu è gestito da Gian Battista Nichetti, professionista attivo dal 1996 nel campo delle normative tecniche (Direttiva CE PED, saldatura, idoneità alimentare dei materiali, sicurezza sul lavoro come RSPP e formatore D.Lgs. 81/08, GDPR e privacy).&nbsp;
-                  <br />Il doppio background&nbsp;
-                  <br />— Perito Industriale in Meccanica e Informatica e Laurea in Ingegneria Industriale —&nbsp;
-                  <br />&nbsp;ha permesso di unire competenza normativa e capacità tecnica digitale. Da questa esperienza nasce CorporateBoostService.eu: strumenti digitali e corsi online per aiutare imprese e professionisti a essere conformi, in autonomia.
+                  {tx("CorporateBoostService.eu è gestito da Gian Battista Nichetti, professionista attivo dal 1996 nel campo delle normative tecniche (Direttiva CE PED, saldatura, idoneità alimentare dei materiali, sicurezza sul lavoro come RSPP e formatore D.Lgs. 81/08, GDPR e privacy).")}&nbsp;
+                  <br />{tx("Il doppio background")}&nbsp;
+                  <br />{tx("— Perito Industriale in Meccanica e Informatica e Laurea in Ingegneria Industriale —")}&nbsp;
+                  <br />&nbsp;{tx("ha permesso di unire competenza normativa e capacità tecnica digitale. Da questa esperienza nasce CorporateBoostService.eu: strumenti digitali e corsi online per aiutare imprese e professionisti a essere conformi, in autonomia.")}
                 </p>
 
                 <div>
-                  <p className="font-bold mb-2">Applicazioni disponibili:</p>
+                  <p className="font-bold mb-2">{tx("Applicazioni disponibili:")}</p>
                   <ul className="list-disc list-inside space-y-1">
-                    <li>PedFlow: classificazione automatica dei fluidi secondo la Direttiva PED.</li>
-                    <li>MiniFAT: preparazione guidata della documentazione per sopralluoghi FAT.</li>
-                    <li>Smart Maintenance: report tecnici generati da foto, video e note vocali.</li>
-                    <li>Riciclabilità PPWR: calcolo della percentuale di riciclabilità degli imballaggi secondo il Reg. UE 2025/40.</li>
+                    <li>{tx("PedFlow: classificazione automatica dei fluidi secondo la Direttiva PED.")}</li>
+                    <li>{tx("MiniFAT: preparazione guidata della documentazione per sopralluoghi FAT.")}</li>
+                    <li>{tx("Smart Maintenance: report tecnici generati da foto, video e note vocali.")}</li>
+                    <li>{tx("Riciclabilità PPWR: calcolo della percentuale di riciclabilità degli imballaggi secondo il Reg. UE 2025/40.")}</li>
                   </ul>
-                  <p className="mt-2">Altre applicazioni (FAT, SAT, LP) sono in sviluppo secondo lo stesso principio: partire da esigenze reali verificate sul campo.</p>
+                  <p className="mt-2">{tx("Altre applicazioni (FAT, SAT, LP) sono in sviluppo secondo lo stesso principio: partire da esigenze reali verificate sul campo.")}</p>
                 </div>
 
                 <div>
-                  <p className="font-bold mb-2">Pagamenti gestiti da Paddle</p>
-                  <p>Paddle funge da Merchant of Record per tutti gli acquisti, gestendo fatturazione, IVA e pagamenti.</p>
+                  <p className="font-bold mb-2">{tx("Pagamenti gestiti da Paddle")}</p>
+                  <p>{tx("Paddle funge da Merchant of Record per tutti gli acquisti, gestendo fatturazione, IVA e pagamenti.")}</p>
                   <ul className="list-disc list-inside space-y-1 mt-2">
                     <li><a href="https://www.paddle.com/legal/terms" target="_blank" rel="noopener noreferrer" className="underline hover:text-white">Paddle Terms</a></li>
                     <li><a href="https://www.paddle.com/legal/privacy" target="_blank" rel="noopener noreferrer" className="underline hover:text-white">Paddle Privacy</a></li>
@@ -220,10 +220,10 @@ function Home() {
                 </div>
 
                 <div>
-                  <p className="font-bold mb-2">Dati del gestore:</p>
-                  <p>Gian Battista Nichetti – Soresina (CR), Italia</p>
-                  <p>Email di contatto: <a href="mailto:team@corporateboostservice.eu" className="underline hover:text-white">team@corporateboostservice.eu</a></p>
-                  <p>P.IVA: IT 01235350194</p>
+                  <p className="font-bold mb-2">{tx("Dati del gestore:")}</p>
+                  <p>{tx("Gian Battista Nichetti – Soresina (CR), Italia")}</p>
+                  <p>{tx("Email di contatto:")} <a href="mailto:team@corporateboostservice.eu" className="underline hover:text-white">team@corporateboostservice.eu</a></p>
+                  <p>{tx("P.IVA: IT 01235350194")}</p>
                 </div>
               </div>
             </div>
