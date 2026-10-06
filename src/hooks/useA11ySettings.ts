@@ -15,10 +15,14 @@ export function useA11ySettings() {
   const [contrast, setContrastState] = useState(false);
 
   useEffect(() => {
-    const storedLang = localStorage.getItem(LANG_KEY);
+    const urlLang = new URLSearchParams(window.location.search).get("lang");
+    const storedLang = supportedLanguages.includes(urlLang as SiteLanguage)
+      ? urlLang
+      : localStorage.getItem(LANG_KEY);
     const savedLang = supportedLanguages.includes(storedLang as SiteLanguage)
       ? (storedLang as SiteLanguage)
       : "it";
+    if (urlLang && savedLang === urlLang) localStorage.setItem(LANG_KEY, savedLang);
     const savedLarge = localStorage.getItem(LARGE_KEY) === "1";
     const savedContrast = localStorage.getItem(CONTRAST_KEY) === "1";
     setLangState(savedLang);
