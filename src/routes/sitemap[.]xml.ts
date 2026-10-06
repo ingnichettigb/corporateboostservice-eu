@@ -44,20 +44,18 @@ export const Route = createFileRoute("/sitemap.xml")({
       GET: async () => {
         const langs = ["it", "en", "de", "es"] as const;
         const href = (path: string, l: string) => `${BASE_URL}${path}${l === "it" ? "" : `?lang=${l}`}`;
-        const urls = entries.flatMap((e) =>
-          langs.map((lang) =>
-            [
-              `  <url>`,
-              `    <loc>${href(e.path, lang)}</loc>`,
-              ...langs.map((l) => `    <xhtml:link rel="alternate" hreflang="${l}" href="${href(e.path, l)}"/>`),
-              `    <xhtml:link rel="alternate" hreflang="x-default" href="${href(e.path, "it")}"/>`,
-              e.changefreq ? `    <changefreq>${e.changefreq}</changefreq>` : null,
-              e.priority ? `    <priority>${e.priority}</priority>` : null,
-              `  </url>`,
-            ]
-              .filter(Boolean)
-              .join("\n"),
-          ),
+        const urls = entries.map((e) =>
+          [
+            `  <url>`,
+            `    <loc>${href(e.path, "it")}</loc>`,
+            ...langs.map((l) => `    <xhtml:link rel="alternate" hreflang="${l}" href="${href(e.path, l).replace(/&/g, "&amp;")}"/>`),
+            `    <xhtml:link rel="alternate" hreflang="x-default" href="${href(e.path, "it")}"/>`,
+            e.changefreq ? `    <changefreq>${e.changefreq}</changefreq>` : null,
+            e.priority ? `    <priority>${e.priority}</priority>` : null,
+            `  </url>`,
+          ]
+            .filter(Boolean)
+            .join("\n"),
         );
 
         const xml = [
