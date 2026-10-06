@@ -50,7 +50,15 @@ function ErrorComponent({ error, reset }: import("@tanstack/react-router").Error
 }
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
-  head: () => ({
+  head: ({ matches }) => {
+    const path = matches[matches.length - 1]?.pathname ?? "/";
+    const base = `https://corporateboostservice.eu${path}`;
+    const alternates = [
+      { rel: "alternate", hrefLang: "it", href: base },
+      ...(["en", "de", "es"] as const).map((l) => ({ rel: "alternate", hrefLang: l, href: `${base}?lang=${l}` })),
+      { rel: "alternate", hrefLang: "x-default", href: base },
+    ];
+    return {
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
@@ -66,10 +74,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "CorporateBoostService.eu" },
       { property: "og:locale", content: "it_IT" },
+      { property: "og:locale:alternate", content: "en_GB" },
+      { property: "og:locale:alternate", content: "de_DE" },
+      { property: "og:locale:alternate", content: "es_ES" },
     ],
-    links: [{ rel: "stylesheet", href: appCss }],
-
-  }),
+    links: [{ rel: "stylesheet", href: appCss }, ...alternates],
+    };
+  },
   shellComponent: RootShell,
   component: RootComponent,
   notFoundComponent: NotFoundComponent,
