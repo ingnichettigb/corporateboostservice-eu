@@ -10,11 +10,9 @@ export const Route = createFileRoute("/politica-di-rimborso")({
       { name: "description", content: i18n.t("legal.rimborso.metaDesc") },
       { property: "og:title", content: i18n.t("legal.rimborso.metaTitle") },
       { property: "og:description", content: i18n.t("legal.rimborso.metaDesc") },
-      { property: "og:url", content: "https://corporateboostservice.eu/politica-di-rimborso" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "https://corporateboostservice.eu/politica-di-rimborso" }],
   }),
   component: RimborsoPage,
 });

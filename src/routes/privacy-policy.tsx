@@ -11,11 +11,9 @@ export const Route = createFileRoute("/privacy-policy")({
       { name: "description", content: i18n.t("legal.privacy.metaDesc") },
       { property: "og:title", content: i18n.t("legal.privacy.metaTitle") },
       { property: "og:description", content: i18n.t("legal.privacy.metaDesc") },
-      { property: "og:url", content: "https://corporateboostservice.eu/privacy-policy" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "https://corporateboostservice.eu/privacy-policy" }],
   }),
   component: PrivacyPage,
 });

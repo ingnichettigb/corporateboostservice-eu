@@ -13,12 +13,10 @@ export const Route = createFileRoute("/carrello")({
       { name: "description", content: i18n.t("legal.cart.subtitle") },
       { property: "og:title", content: i18n.t("legal.cart.title") },
       { property: "og:description", content: i18n.t("legal.cart.subtitle") },
-      { property: "og:url", content: "https://corporateboostservice.eu/carrello" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "robots", content: "noindex, follow" },
     ],
-    links: [{ rel: "canonical", href: "https://corporateboostservice.eu/carrello" }],
   }),
   component: CartPage,
 });

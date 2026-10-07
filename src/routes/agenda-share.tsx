@@ -87,11 +87,9 @@ export const Route = createFileRoute("/agenda-share")({
         property: "og:description",
         content: i18n.t("agendaShare:ogDescription"),
       },
-      { property: "og:url", content: "https://corporateboostservice.eu/agenda-share" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "https://corporateboostservice.eu/agenda-share" }],
   }),
   component: AgendaSharePage,
 });

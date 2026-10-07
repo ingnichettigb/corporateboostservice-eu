@@ -19,11 +19,9 @@ export const Route = createFileRoute("/prezzi")({
       { name: "description", content: i18n.t("legal.prezzi.metaDesc") },
       { property: "og:title", content: i18n.t("legal.prezzi.metaTitle") },
       { property: "og:description", content: i18n.t("legal.prezzi.metaDesc") },
-      { property: "og:url", content: "https://corporateboostservice.eu/prezzi" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "https://corporateboostservice.eu/prezzi" }],
   }),
   component: PrezziPage,
 });
