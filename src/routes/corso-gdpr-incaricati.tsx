@@ -58,9 +58,7 @@ export const Route = createFileRoute("/corso-gdpr-incaricati")({
       { name: "twitter:title", content: i18n.t("corsoIncaricati.metaTitle") },
       { name: "twitter:description", content: i18n.t("corsoIncaricati.metaDesc") },
       { name: "twitter:image", content: heroImg },
-      { property: "og:url", content: "https://corporateboostservice.eu/corso-gdpr-incaricati" },
     ],
-    links: [{ rel: "canonical", href: "https://corporateboostservice.eu/corso-gdpr-incaricati" }],
   }),
   component: CorsoIncaricatiPage,
 });

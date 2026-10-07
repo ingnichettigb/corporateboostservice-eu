@@ -34,10 +34,8 @@ export const Route = createFileRoute("/riciclo-ppwr")({
       { property: "og:title", content: i18n.t("ricicloPpwr:metaTitle") },
       { property: "og:description", content: i18n.t("ricicloPpwr:metaDescription") },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: URL_ },
       { name: "twitter:card", content: "summary" },
     ],
-    links: [{ rel: "canonical", href: URL_ }],
   }),
   component: RicicloPpwrPage,
 });

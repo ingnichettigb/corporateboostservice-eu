@@ -64,11 +64,9 @@ export const Route = createFileRoute("/smart-maintenance")({
       },
       { property: "og:image", content: heroImg },
       { name: "twitter:image", content: heroImg },
-      { property: "og:url", content: "https://corporateboostservice.eu/smart-maintenance" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "https://corporateboostservice.eu/smart-maintenance" }],
   }),
   component: SmartMaintenancePage,
 });

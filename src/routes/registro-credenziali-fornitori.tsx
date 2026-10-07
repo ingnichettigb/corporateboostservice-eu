@@ -41,7 +41,6 @@ export const Route = createFileRoute("/registro-credenziali-fornitori")({
       { property: "og:image", content: "https://corporateboostservice.eu/040registroweb/040RegistroWEB-image01.jpg" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "https://corporateboostservice.eu/registro-credenziali-fornitori" }],
   }),
   component: RegistroSitiWebPage,
 });

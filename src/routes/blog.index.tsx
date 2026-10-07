@@ -2,6 +2,7 @@ import { useMemo, useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, CalendarDays, Clock, Tags } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import { seoText } from "@/i18n/seo";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { BlogSponsoredSidebar } from "@/components/BlogSponsoredSidebar";
@@ -10,23 +11,13 @@ import { articles, collectTopics, formatDate, pickTranslation } from "@/lib/blog
 export const Route = createFileRoute("/blog/")({
   head: () => ({
     meta: [
-      { title: "Blog — Approfondimenti per imprese | CorporateBoostService.eu" },
-      {
-        name: "description",
-        content:
-          "Articoli e guide pratiche su digitalizzazione, sicurezza degli accessi, manutenzione e adempimenti per imprese e professionisti.",
-      },
-      { property: "og:title", content: "Blog — Approfondimenti per imprese" },
-      {
-        property: "og:description",
-        content:
-          "Guide pratiche su digitalizzazione, sicurezza degli accessi e adempimenti per le imprese.",
-      },
+      { title: seoText("blog").title },
+      { name: "description", content: seoText("blog").description },
+      { property: "og:title", content: seoText("blog").ogTitle },
+      { property: "og:description", content: seoText("blog").ogDescription },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://corporateboostservice.eu/blog" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "https://corporateboostservice.eu/blog" }],
   }),
   component: BlogIndex,
 });

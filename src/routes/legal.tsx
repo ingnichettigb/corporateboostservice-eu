@@ -11,11 +11,9 @@ export const Route = createFileRoute("/legal")({
       { name: "description", content: i18n.t("legal.index.metaDesc") },
       { property: "og:title", content: i18n.t("legal.index.metaTitle") },
       { property: "og:description", content: i18n.t("legal.index.metaDesc") },
-      { property: "og:url", content: "https://corporateboostservice.eu/legal" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "https://corporateboostservice.eu/legal" }],
   }),
   component: LegalIndex,
 });

@@ -1,4 +1,5 @@
 import { tx } from "@/i18n/tx";
+import { seoText } from "@/i18n/seo";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
@@ -7,22 +8,13 @@ import { useTranslation } from "react-i18next";
 export const Route = createFileRoute("/mappa-del-sito")({
   head: () => ({
     meta: [
-      { title: "Mappa del sito — CorporateBoostService.eu" },
-      {
-        name: "description",
-        content:
-          "Mappa del sito di CorporateBoostService.eu: applicazioni digitali, corsi online, prezzi e informazioni legali.",
-      },
-      { property: "og:title", content: "Mappa del sito — CorporateBoostService.eu" },
-      {
-        property: "og:description",
-        content: "Tutte le pagine di CorporateBoostService.eu in un unico elenco.",
-      },
+      { title: seoText("sitemapPage").title },
+      { name: "description", content: seoText("sitemapPage").description },
+      { property: "og:title", content: seoText("sitemapPage").title },
+      { property: "og:description", content: seoText("sitemapPage").ogDescription },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
-      { property: "og:url", content: "https://corporateboostservice.eu/mappa-del-sito" },
     ],
-    links: [{ rel: "canonical", href: "https://corporateboostservice.eu/mappa-del-sito" }],
   }),
   component: SitemapPage,
 });

@@ -10,6 +10,7 @@ import { pedflow } from "./locales/pages/pedflow";
 import { de } from "./locales/de";
 import { es } from "./locales/es";
 import { blog } from "./locales/pages/blog";
+import { DEFAULT_LANG, splitLangPath, type Lang } from "@/lib/locale";
 import commonDe from "./locales/generated/common.de.json";
 import commonEs from "./locales/generated/common.es.json";
 import legalDe from "./locales/generated/legal.de.json";
@@ -23,6 +24,9 @@ import smartEs from "./locales/generated/smartMaintenance.es.json";
 import pedflowDe from "./locales/generated/pedflow.de.json";
 import pedflowEs from "./locales/generated/pedflow.es.json";
 
+// Istanza reale di i18next (una sola, condivisa).
+const baseI18n = i18n;
+
 type Obj = Record<string, unknown>;
 const isObj = (v: unknown): v is Obj => !!v && typeof v === "object" && !Array.isArray(v);
 function merge(a: Obj, b: Obj): Obj {
@@ -31,8 +35,8 @@ function merge(a: Obj, b: Obj): Obj {
   return out;
 }
 
-if (!i18n.isInitialized) {
-  i18n.use(initReactI18next).init({
+if (!baseI18n.isInitialized) {
+  baseI18n.use(initReactI18next).init({
     resources: {
       it: {
         translation: {
@@ -76,8 +80,38 @@ if (!i18n.isInitialized) {
     interpolation: { escapeValue: false },
     react: { useSuspense: false },
   });
-  i18n.addResourceBundle("de", "translation", { corsoIncaricati: corsoDe, privacyGdpr: privacyDe, smartMaintenance: smartDe }, true, false);
-  i18n.addResourceBundle("es", "translation", { corsoIncaricati: corsoEs, privacyGdpr: privacyEs, smartMaintenance: smartEs }, true, false);
+  baseI18n.addResourceBundle("de", "translation", { corsoIncaricati: corsoDe, privacyGdpr: privacyDe, smartMaintenance: smartDe }, true, false);
+  baseI18n.addResourceBundle("es", "translation", { corsoIncaricati: corsoEs, privacyGdpr: privacyEs, smartMaintenance: smartEs }, true, false);
 }
 
-export default i18n;
+// Lingua della richiesta corrente.
+// - Browser: ricavata dall'URL (/de/... -> "de"), quindi sempre coerente con la pagina mostrata.
+// - Server: ricavata dall'AsyncLocalStorage impostato in src/server.ts per ogni richiesta,
+//   così richieste simultanee in lingue diverse non si influenzano a vicenda.
+type LangStore = { getStore(): { lang: Lang } | undefined };
+
+export function currentLang(): Lang {
+  if (typeof window !== "undefined") return splitLangPath(window.location.pathname).lang;
+  const store = (globalThis as { __cbsLangStore?: LangStore }).__cbsLangStore;
+  return store?.getStore()?.lang ?? DEFAULT_LANG;
+}
+
+// L'export di default è un proxy: `i18n.t(...)` e `i18n.language` usano la lingua della richiesta
+// invece di una lingua globale condivisa. I componenti React ricevono invece un'istanza clonata
+// per lingua tramite <I18nextProvider> (vedi __root.tsx).
+const i18nByRequest = new Proxy(baseI18n, {
+  get(target, prop) {
+    if (prop === "language" || prop === "resolvedLanguage") return currentLang();
+    if (prop === "t") {
+      return (key: unknown, opts?: unknown) => {
+        const options =
+          typeof opts === "string" ? { defaultValue: opts } : (opts as Record<string, unknown> | undefined);
+        return (target.t as (k: unknown, o: unknown) => unknown)(key, { lng: currentLang(), ...options });
+      };
+    }
+    return Reflect.get(target, prop, target);
+  },
+}) as typeof baseI18n;
+
+export { baseI18n };
+export default i18nByRequest;

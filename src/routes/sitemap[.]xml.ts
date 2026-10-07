@@ -1,8 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import type {} from "@tanstack/react-start";
 import { articles } from "@/lib/blog";
-
-const BASE_URL = "https://corporateboostservice.eu";
+import { DEFAULT_LANG, LANGS, absoluteUrl, isItalianOnly } from "@/lib/locale";
 
 interface SitemapEntry {
   path: string;
@@ -42,21 +41,33 @@ export const Route = createFileRoute("/sitemap.xml")({
   server: {
     handlers: {
       GET: async () => {
-        const langs = ["it", "en", "de", "es"] as const;
-        const href = (path: string, l: string) => `${BASE_URL}${path}${l === "it" ? "" : `?lang=${l}`}`;
-        const urls = entries.map((e) =>
-          [
-            `  <url>`,
-            `    <loc>${href(e.path, "it")}</loc>`,
-            ...langs.map((l) => `    <xhtml:link rel="alternate" hreflang="${l}" href="${href(e.path, l).replace(/&/g, "&amp;")}"/>`),
-            `    <xhtml:link rel="alternate" hreflang="x-default" href="${href(e.path, "it")}"/>`,
+        // Ogni lingua ha un URL proprio (/de/..., /en/..., /es/...) con canonical autoreferenziale:
+        // ogni versione è elencata come <url> e dichiara tutte le alternate (inclusa sé stessa).
+        // Le pagine solo in italiano compaiono una volta sola, senza alternate.
+        const urls = entries.flatMap((e) => {
+          const meta = [
             e.changefreq ? `    <changefreq>${e.changefreq}</changefreq>` : null,
             e.priority ? `    <priority>${e.priority}</priority>` : null,
-            `  </url>`,
-          ]
-            .filter(Boolean)
-            .join("\n"),
-        );
+          ];
+          if (isItalianOnly(e.path)) {
+            return [
+              ["  <url>", `    <loc>${absoluteUrl(e.path, DEFAULT_LANG)}</loc>`, ...meta, "  </url>"]
+                .filter(Boolean)
+                .join("\n"),
+            ];
+          }
+          const alternates = [
+            ...LANGS.map(
+              (l) => `    <xhtml:link rel="alternate" hreflang="${l}" href="${absoluteUrl(e.path, l)}"/>`,
+            ),
+            `    <xhtml:link rel="alternate" hreflang="x-default" href="${absoluteUrl(e.path, DEFAULT_LANG)}"/>`,
+          ];
+          return LANGS.map((l) =>
+            ["  <url>", `    <loc>${absoluteUrl(e.path, l)}</loc>`, ...alternates, ...meta, "  </url>"]
+              .filter(Boolean)
+              .join("\n"),
+          );
+        });
 
         const xml = [
           `<?xml version="1.0" encoding="UTF-8"?>`,

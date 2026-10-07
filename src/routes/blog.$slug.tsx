@@ -1,3 +1,4 @@
+import { currentLang } from "@/i18n";
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { ArrowLeft, ArrowRight, CalendarDays, Clock, User } from "lucide-react";
 import { useTranslation } from "react-i18next";
@@ -6,26 +7,23 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { BlogSponsoredSidebar } from "@/components/BlogSponsoredSidebar";
 import { articleBlocks, formatDate, getArticle, pickTranslation, type BlogBlock } from "@/lib/blog";
 
-const BASE_URL = "https://corporateboostservice.eu";
-
 export const Route = createFileRoute("/blog/$slug")({
   loader: ({ params }) => {
     const article = getArticle(params.slug);
     if (!article) throw notFound();
-    const it = pickTranslation(article, "it");
+    const it = pickTranslation(article, currentLang());
     return {
       slug: article.slug,
       title: it.title,
       excerpt: it.excerpt,
     };
   },
-  head: ({ loaderData, params }) => {
+  head: ({ loaderData }) => {
     if (!loaderData) {
       return {
         meta: [{ title: "Articolo non disponibile — CorporateBoostService.eu" }, { name: "robots", content: "noindex" }],
       };
     }
-    const url = `${BASE_URL}/blog/${params.slug}`;
     return {
       meta: [
         { title: `${loaderData.title} — Blog CorporateBoostService.eu` },
@@ -33,10 +31,8 @@ export const Route = createFileRoute("/blog/$slug")({
         { property: "og:title", content: loaderData.title },
         { property: "og:description", content: loaderData.excerpt },
         { property: "og:type", content: "article" },
-        { property: "og:url", content: url },
         { name: "twitter:card", content: "summary_large_image" },
       ],
-      links: [{ rel: "canonical", href: url }],
     };
   },
   notFoundComponent: ArticleNotFound,

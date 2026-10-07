@@ -1,4 +1,7 @@
 import { tx } from "@/i18n/tx";
+import { currentLang } from "@/i18n";
+import { seoText } from "@/i18n/seo";
+import { LD_LANGUAGE, absoluteUrl } from "@/lib/locale";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, GraduationCap, Layers, CheckCircle2, Construction } from "lucide-react";
@@ -9,25 +12,18 @@ import { ContactSection } from "@/components/ContactSection";
 import { corsi, applicazioni } from "@/data/site";
 
 export const Route = createFileRoute("/")({
-  head: () => ({
+  head: () => {
+    const seo = seoText("home");
+    const lang = currentLang();
+    return {
     meta: [
-      { title: "Applicazioni Digitali e Corsi Certificati GDPR | CorporateBoostService" },
-      {
-        name: "description",
-        content:
-          "Software per direttiva PED, FAT e manutenzione, più corsi online certificati su GDPR e privacy per imprese e professionisti.",
-      },
-      { property: "og:title", content: "Applicazioni Digitali e Corsi Certificati GDPR | CorporateBoostService" },
-      {
-        property: "og:description",
-        content:
-          "Software per direttiva PED, FAT e manutenzione, più corsi online certificati su GDPR e privacy per imprese e professionisti.",
-      },
-      { property: "og:url", content: "https://corporateboostservice.eu/" },
+      { title: seo.title },
+      { name: "description", content: seo.description },
+      { property: "og:title", content: seo.title },
+      { property: "og:description", content: seo.description },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "https://corporateboostservice.eu/" }],
     scripts: [
       {
         type: "application/ld+json",
@@ -35,8 +31,8 @@ export const Route = createFileRoute("/")({
           "@context": "https://schema.org",
           "@type": "WebSite",
           name: "CorporateBoostService.eu",
-          url: "https://corporateboostservice.eu",
-          inLanguage: "it-IT",
+          url: absoluteUrl("/", lang),
+          inLanguage: LD_LANGUAGE[lang],
           publisher: {
             "@type": "Organization",
             name: "CorporateBoostService.eu",
@@ -54,7 +50,8 @@ export const Route = createFileRoute("/")({
         }),
       },
     ],
-  }),
+    };
+  },
 
   component: Home,
 });

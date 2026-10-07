@@ -118,11 +118,9 @@ export const Route = createFileRoute("/pedflow")({
       },
       { property: "og:image", content: logoImg },
       { name: "twitter:image", content: logoImg },
-      { property: "og:url", content: "https://corporateboostservice.eu/pedflow" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "https://corporateboostservice.eu/pedflow" }],
   }),
   component: PedFlowPage,
 });
