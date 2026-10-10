@@ -122,6 +122,10 @@
       "lp": {
         "title": "LP — Lesson Plan",
         "desc": "Plan lessons and training paths with objectives, materials and assessments."
+      },
+      "taraturaSerbatoi": {
+        "title": "Tank Calibration",
+        "desc": "Millimetre calibration tables for 22 tank geometries, with surfaces, weights and PDF reports ready in seconds."
       }
     },
     "wip": "Under construction"

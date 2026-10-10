@@ -122,6 +122,10 @@
       "lp": {
         "title": "LP — Lesson Plan",
         "desc": "Planen Sie Unterrichtsstunden und Schulungswege mit Zielen, Materialien und Bewertungen."
+      },
+      "taraturaSerbatoi": {
+        "title": "Tankkalibrierung",
+        "desc": "Peiltabellen im Millimeterschritt für 22 Tankgeometrien, mit Flächen, Gewichten und PDF-Berichten in Sekunden."
       }
     },
     "wip": "In Bearbeitung"
