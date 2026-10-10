@@ -55,6 +55,7 @@ function AppPage() {
                 agendaShare: "/agenda-share",
                 registroCredenziali: "/registro-credenziali-fornitori",
                 ricicloPpwr: "/riciclo-ppwr",
+                taraturaSerbatoi: "/taratura-serbatoi",
               };
               const to = !wip ? routeMap[key] : undefined;
               const logo = image ? (

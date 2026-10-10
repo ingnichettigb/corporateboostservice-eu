@@ -30,6 +30,7 @@ import { Route as RegistroCredenzialiFornitoriRouteImport } from './routes/regis
 import { Route as RicicloPpwrRouteImport } from './routes/riciclo-ppwr'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as SmartMaintenanceRouteImport } from './routes/smart-maintenance'
+import { Route as TaraturaSerbatoiRouteImport } from './routes/taratura-serbatoi'
 import { Route as TerminiDiServizioRouteImport } from './routes/termini-di-servizio'
 import { Route as TerminiECondizioniRouteImport } from './routes/termini-e-condizioni'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
@@ -142,6 +143,11 @@ const SmartMaintenanceRoute = SmartMaintenanceRouteImport.update({
   path: '/smart-maintenance',
   getParentRoute: () => rootRouteImport,
 } as any)
+const TaraturaSerbatoiRoute = TaraturaSerbatoiRouteImport.update({
+  id: '/taratura-serbatoi',
+  path: '/taratura-serbatoi',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const TerminiDiServizioRoute = TerminiDiServizioRouteImport.update({
   id: '/termini-di-servizio',
   path: '/termini-di-servizio',
@@ -185,6 +191,7 @@ export interface FileRoutesByFullPath {
   '/riciclo-ppwr': typeof RicicloPpwrRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/smart-maintenance': typeof SmartMaintenanceRoute
+  '/taratura-serbatoi': typeof TaraturaSerbatoiRoute
   '/termini-di-servizio': typeof TerminiDiServizioRoute
   '/termini-e-condizioni': typeof TerminiECondizioniRoute
   '/blog/$slug': typeof BlogSlugRoute
@@ -212,6 +219,7 @@ export interface FileRoutesByTo {
   '/riciclo-ppwr': typeof RicicloPpwrRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/smart-maintenance': typeof SmartMaintenanceRoute
+  '/taratura-serbatoi': typeof TaraturaSerbatoiRoute
   '/termini-di-servizio': typeof TerminiDiServizioRoute
   '/termini-e-condizioni': typeof TerminiECondizioniRoute
   '/blog/$slug': typeof BlogSlugRoute
@@ -240,6 +248,7 @@ export interface FileRoutesById {
   '/riciclo-ppwr': typeof RicicloPpwrRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/smart-maintenance': typeof SmartMaintenanceRoute
+  '/taratura-serbatoi': typeof TaraturaSerbatoiRoute
   '/termini-di-servizio': typeof TerminiDiServizioRoute
   '/termini-e-condizioni': typeof TerminiECondizioniRoute
   '/blog/$slug': typeof BlogSlugRoute
@@ -269,6 +278,7 @@ export interface FileRouteTypes {
     | '/riciclo-ppwr'
     | '/sitemap.xml'
     | '/smart-maintenance'
+    | '/taratura-serbatoi'
     | '/termini-di-servizio'
     | '/termini-e-condizioni'
     | '/blog/$slug'
@@ -296,6 +306,7 @@ export interface FileRouteTypes {
     | '/riciclo-ppwr'
     | '/sitemap.xml'
     | '/smart-maintenance'
+    | '/taratura-serbatoi'
     | '/termini-di-servizio'
     | '/termini-e-condizioni'
     | '/blog/$slug'
@@ -323,6 +334,7 @@ export interface FileRouteTypes {
     | '/riciclo-ppwr'
     | '/sitemap.xml'
     | '/smart-maintenance'
+    | '/taratura-serbatoi'
     | '/termini-di-servizio'
     | '/termini-e-condizioni'
     | '/blog/$slug'
@@ -351,6 +363,7 @@ export interface RootRouteChildren {
   RicicloPpwrRoute: typeof RicicloPpwrRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   SmartMaintenanceRoute: typeof SmartMaintenanceRoute
+  TaraturaSerbatoiRoute: typeof TaraturaSerbatoiRoute
   TerminiDiServizioRoute: typeof TerminiDiServizioRoute
   TerminiECondizioniRoute: typeof TerminiECondizioniRoute
   BlogSlugRoute: typeof BlogSlugRoute
@@ -506,6 +519,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SmartMaintenanceRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/taratura-serbatoi': {
+      id: '/taratura-serbatoi'
+      path: '/taratura-serbatoi'
+      fullPath: '/taratura-serbatoi'
+      preLoaderRoute: typeof TaraturaSerbatoiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/termini-di-servizio': {
       id: '/termini-di-servizio'
       path: '/termini-di-servizio'
@@ -559,6 +579,7 @@ const rootRouteChildren: RootRouteChildren = {
   RicicloPpwrRoute: RicicloPpwrRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   SmartMaintenanceRoute: SmartMaintenanceRoute,
+  TaraturaSerbatoiRoute: TaraturaSerbatoiRoute,
   TerminiDiServizioRoute: TerminiDiServizioRoute,
   TerminiECondizioniRoute: TerminiECondizioniRoute,
   BlogSlugRoute: BlogSlugRoute,

@@ -122,6 +122,10 @@
       "lp": {
         "title": "LP — Lesson Plan",
         "desc": "Planifica lecciones e itinerarios formativos con objetivos, materiales y evaluaciones."
+      },
+      "taraturaSerbatoi": {
+        "title": "Calibración de Depósitos",
+        "desc": "Tablas de calibración al milímetro para 22 geometrías de depósito, con superficies, pesos e informes PDF en segundos."
       }
     },
     "wip": "En construcción"

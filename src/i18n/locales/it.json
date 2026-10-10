@@ -122,6 +122,10 @@
       "lp": {
         "title": "LP — Lesson Plan",
         "desc": "Pianificazione lezioni e percorsi formativi con obiettivi, materiali e verifiche."
+      },
+      "taraturaSerbatoi": {
+        "title": "Taratura Serbatoi",
+        "desc": "Tabelle di taratura al millimetro per 22 geometrie di serbatoio, con superfici, pesi e report PDF pronti in pochi secondi."
       }
     },
     "wip": "In costruzione"
