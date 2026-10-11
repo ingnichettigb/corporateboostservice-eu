@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { MediaCode } from "@/components/MediaCode";
 import { useTranslation } from "react-i18next";
 import i18n from "@/i18n";
 import { Button } from "@/components/ui/button";
@@ -204,6 +205,7 @@ function CorsoIncaricatiPage() {
                 height={800}
                 className="w-full rounded-2xl border-2 border-primary/15 shadow-lg"
               />
+              <MediaCode id="CORSOGDPR-001" />
             </div>
           </div>
         </section>

@@ -1,5 +1,6 @@
 import { currentLang } from "@/i18n";
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
+import { MediaCode } from "@/components/MediaCode";
 import { ArrowLeft, ArrowRight, CalendarDays, Clock, User } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { SiteHeader } from "@/components/SiteHeader";
@@ -129,6 +130,7 @@ function Block({ block, asset }: { block: BlogBlock; asset: (f: string) => strin
             height={720}
             className="w-full aspect-video rounded-2xl border-2 border-primary/15 object-cover"
           />
+          {block.mediaCode && <MediaCode id={block.mediaCode} />}
           {block.caption && (
             <figcaption className="mt-3 text-base text-foreground/65">{block.caption}</figcaption>
           )}
@@ -218,6 +220,9 @@ function ArticlePage() {
                 height={720}
                 className="w-full aspect-video rounded-2xl border-2 border-primary/15 object-cover"
               />
+            )}
+            {article.coverUrl && (
+              <MediaCode id={`BLOG-${article.number}-001`} />
             )}
             <p className="mt-8 text-xl font-semibold leading-relaxed text-foreground">{tr.excerpt}</p>
             {articleBlocks(tr).map((block, i) => (

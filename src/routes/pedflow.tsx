@@ -1,4 +1,5 @@
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
+import { MediaCode } from "@/components/MediaCode";
 import { Button } from "@/components/ui/button";
 import { buildMailto } from "@/lib/contact";
 import { useCart } from "@/lib/cart";
@@ -171,6 +172,7 @@ function PedFlowPage() {
               width={1402}
               height={765}
             />
+            <MediaCode id="PEDFLOW-001" />
             <div className="mt-8 flex justify-center">
               <ActivateButtons />
             </div>

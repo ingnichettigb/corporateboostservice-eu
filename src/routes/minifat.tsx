@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { MediaCode } from "@/components/MediaCode";
 import { useTranslation } from "react-i18next";
 import i18n from "@/i18n";
 import { Button } from "@/components/ui/button";
@@ -117,6 +118,7 @@ function MiniFatPage() {
                 {t("minifat.heroNote")}
               </p>
             </div>
+            <figure className="m-0">
             <img
               src={heroAsset.url}
               alt={t("minifat.heroImgAlt")}
@@ -124,6 +126,8 @@ function MiniFatPage() {
               width={1280}
               height={896}
             />
+            <MediaCode id="MINFAT-001" />
+            </figure>
           </div>
         </section>
 
@@ -150,6 +154,7 @@ function MiniFatPage() {
                   loading="lazy"
                 />
               </div>
+              <MediaCode id="MINFAT-002" />
               <div>
                 <h3 className="text-lg font-bold">
                   {isItalian ? "Demo in italiano" : "Demo in English"}
@@ -262,6 +267,7 @@ function MiniFatPage() {
                       loading="lazy"
                     />
                   </div>
+                  <MediaCode id={`MINFAT-${String(i + 3).padStart(3, "0")}`} />
                   <figcaption className="mt-3 text-xs text-foreground/70">
                     <sup className="text-[0.65rem] font-bold text-primary mr-0.5">
                       {i + 1}

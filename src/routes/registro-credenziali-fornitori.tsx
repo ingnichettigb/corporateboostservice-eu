@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { MediaCode } from "@/components/MediaCode";
 import { 
   ShieldCheck, 
   Layers, 
@@ -141,6 +142,7 @@ interface CarouselSlide {
   title: string;
   description: string;
   image: string;
+  code: string;
   alt: string;
   icon: typeof Monitor;
 }
@@ -152,6 +154,7 @@ const carouselSlides: CarouselSlide[] = [
     title: "Pieno controllo su credenziali, categorie ed esportazioni",
     description: "L'Amministratore gestisce tutti i siti web aziendali, filtra istantaneamente per categoria, monitora i crediti di esportazione e accede al pannello Impostazioni riservato.",
     image: "/040registroweb/040RegistroWEB-image06.jpg",
+    code: "REGWEB-002",
     alt: "Schermata Dashboard Amministratore 040RegistroWEB",
     icon: Settings,
   },
@@ -161,6 +164,7 @@ const carouselSlides: CarouselSlide[] = [
     title: "Assegna licenze, PUK personali e permessi mirati per reparto",
     description: "Invita i collaboratori via email: ciascuno riceve il proprio codice PUK univoco. Puoi scegliere 'Accesso Completo' o 'Sola Lettura' e limitare le categorie visibili per singolo dipendente.",
     image: "/040registroweb/040RegistroWEB-image08.jpg",
+    code: "REGWEB-003",
     alt: "Schermata Gestione Postazioni e PUK 040RegistroWEB",
     icon: Users,
   },
@@ -170,6 +174,7 @@ const carouselSlides: CarouselSlide[] = [
     title: "Interfaccia pulita e sicura per il lavoro quotidiano",
     description: "I collaboratori visualizzano esclusivamente le categorie loro assegnate. Con un solo clic copiano Sito Web, ID di accesso e Password mascherata, senza bottoni amministrativi.",
     image: "/040registroweb/040RegistroWEB-image07.jpg",
+    code: "REGWEB-004",
     alt: "Schermata Vista Collaboratore 040RegistroWEB",
     icon: Eye,
   },
@@ -252,6 +257,7 @@ function HorizontalCarousel() {
             className="w-full h-auto object-cover rounded-xl transition-all duration-500 ease-in-out"
           />
         </div>
+        <MediaCode id={active.code} />
 
         {/* Didascalia e vantaggi chiave */}
         <div className="mt-5 sm:mt-6 p-4 rounded-xl bg-primary/5 border border-primary/15 text-left space-y-1.5">
@@ -404,6 +410,7 @@ function RegistroSitiWebPage() {
                     <span>15, 50 o 200 Postazioni</span>
                   </div>
                 </div>
+                <MediaCode id="REGWEB-001" />
               </div>
 
               {/* Immagine Hero Principale */}
@@ -464,6 +471,7 @@ function RegistroSitiWebPage() {
                     className="w-full h-auto object-cover"
                   />
                 </div>
+                <MediaCode id="REGWEB-005" />
               </div>
 
               {/* Confronto Dettagliato */}
@@ -577,6 +585,7 @@ function RegistroSitiWebPage() {
                     className="w-full h-auto object-cover"
                   />
                 </div>
+                <MediaCode id="REGWEB-006" />
               </div>
 
             </div>
@@ -596,6 +605,7 @@ function RegistroSitiWebPage() {
                     className="w-full h-auto object-cover"
                   />
                 </div>
+                <MediaCode id="REGWEB-007" />
               </div>
 
               <div className="lg:col-span-6 order-1 lg:order-2 space-y-6 text-left">
@@ -680,6 +690,7 @@ function RegistroSitiWebPage() {
                     className="w-full h-auto object-cover"
                   />
                 </div>
+                <MediaCode id="REGWEB-008" />
               </div>
 
             </div>
