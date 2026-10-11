@@ -11,8 +11,8 @@ import { PricingCartButton } from "@/components/PricingCartButton";
 import { TaxNote } from "@/components/TaxDisclaimer";
 import i18n from "@/i18n";
 import { taraturaSerbatoi as locale } from "@/i18n/locales/pages/taratura-serbatoi";
-import logoAsset from "@/assets/apps/taratura-serbatoi.png.asset.json";
-import primaDopo from "@/assets/tarature/prima-dopo.png.asset.json";
+import logoAsset from "@/assets/tarature/TARATURE-002.png.asset.json";
+import primaDopo from "@/assets/tarature/TARATURE-001.png.asset.json";
 
 i18n.addResourceBundle("it", "taratura", locale.it, true, false);
 i18n.addResourceBundle("en", "taratura", locale.en, true, false);
@@ -27,10 +27,11 @@ const CODES = [
   "ORIZZ-BOMB", "ORIZZ-CON",
   "PIANO-BOMB", "PIANO-CON", "PIANO-CON-BOCC", "PIANO-INCL", "PIANO-TRONCOCON", "PIANO-TRONCOCON-BOCC",
 ];
+// Media ID = nome file: TARATURE-001 prima/dopo, 002 logo, 003–024 i 22 moduli
 const modules = CODES.map((code, i) => {
-  const n = String(i + 1).padStart(2, "0");
+  const mediaId = `TARATURE-${String(i + 3).padStart(3, "0")}`;
   const [family, ...rest] = code.split("-");
-  return { n: i + 1, code, family, bottom: rest.join("-"), icon: icons[`/src/assets/tarature/${n}_${code}.png.asset.json`]?.default.url };
+  return { n: i + 1, code, family, bottom: rest.join("-"), mediaId, icon: icons[`/src/assets/tarature/${mediaId}.png.asset.json`]?.default.url };
 });
 const FAMILIES = ["BOMB", "CON", "ORIZZ", "PIANO"] as const;
 const featIcons = [Ruler, Scale, ListOrdered, FileDown, ShieldCheck];
@@ -119,10 +120,10 @@ function TaraturaPage() {
         {/* HERO */}
         <section className="pb-16 [background:var(--gradient-section-hero)]">
           <div className="container mx-auto px-4 max-w-3xl text-center">
-            <div className="relative mx-auto mb-6 h-32 w-32">
-              <img src={logoAsset.url} alt="Taratura Serbatoi" width={128} height={128} className="h-32 w-32 object-contain" />
-              <MediaId id="TARATURE-000" />
-            </div>
+            <figure className="mx-auto mb-6 w-32" data-media-id="TARATURE-002">
+              <img src={logoAsset.url} alt="TARATURE-002 — Taratura Serbatoi" width={128} height={128} className="h-32 w-32 object-contain" />
+              <figcaption className="mt-1 font-mono text-[10px] uppercase tracking-wider text-muted-foreground">TARATURE-002</figcaption>
+            </figure>
             <div className="inline-flex items-center gap-2 rounded-full border-2 border-primary/30 bg-white px-4 py-2 text-sm font-semibold mb-6">
               <Ruler className="h-4 w-4 text-primary" aria-hidden /> {t("eyebrow")}
             </div>
@@ -143,9 +144,9 @@ function TaraturaPage() {
         {/* IMMAGINE PRIMA/DOPO */}
         <section className="py-12 bg-background">
           <div className="container mx-auto px-4 max-w-5xl">
-            <figure className="relative overflow-hidden rounded-2xl border-2 border-primary/20 shadow-lg" data-media-id="TARATURE-PRIMA">
-              <img src={primaDopo.url} alt="TARATURE-PRIMA — Prima e dopo 001 TARATURE" width={1397} height={768} className="w-full h-auto" />
-              <MediaId id="TARATURE-PRIMA" />
+            <figure data-media-id="TARATURE-001">
+              <img src={primaDopo.url} alt="TARATURE-001 — Taratura Serbatoi: prima e dopo" width={1397} height={768} className="w-full h-auto rounded-2xl border-2 border-primary/20 shadow-lg" />
+              <figcaption className="mt-2 text-right font-mono text-[11px] uppercase tracking-wider text-muted-foreground">TARATURE-001</figcaption>
             </figure>
           </div>
         </section>
@@ -223,7 +224,7 @@ function TaraturaPage() {
             </div>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {shown.map((m) => {
-                const id = `TARATURE-${String(m.n).padStart(3, "0")}`;
+                const id = m.mediaId;
                 return (
                   <article key={m.code} className={`${cardCls} flex gap-4`}>
                     <div className="relative h-24 w-24 shrink-0 rounded-xl border border-primary/15 bg-white">
