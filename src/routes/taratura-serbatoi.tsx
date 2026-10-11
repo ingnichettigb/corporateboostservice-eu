@@ -27,7 +27,7 @@ const CODES = [
   "ORIZZ-BOMB", "ORIZZ-CON",
   "PIANO-BOMB", "PIANO-CON", "PIANO-CON-BOCC", "PIANO-INCL", "PIANO-TRONCOCON", "PIANO-TRONCOCON-BOCC",
 ];
-// Media ID = nome file: TARATURE-001 prima/dopo, 002 logo, 003–024 i 22 moduli
+// Codice media solo su TARATURE-001 (immagine); logo e 22 pittogrammi sono icone: nessun codice
 const modules = CODES.map((code, i) => {
   const mediaId = `TARATURE-${String(i + 3).padStart(3, "0")}`;
   const [family, ...rest] = code.split("-");
@@ -49,14 +49,6 @@ export const Route = createFileRoute("/taratura-serbatoi")({
   }),
   component: TaraturaPage,
 });
-
-function MediaId({ id }: { id: string }) {
-  return (
-    <span data-media-id={id} className="absolute bottom-1.5 right-1.5 rounded border border-primary/20 bg-white/90 px-1.5 py-px font-mono text-[10px] uppercase tracking-wider text-muted-foreground">
-      {id}
-    </span>
-  );
-}
 
 function PriceButtons() {
   const { t } = useTranslation();
@@ -120,10 +112,7 @@ function TaraturaPage() {
         {/* HERO */}
         <section className="pb-16 [background:var(--gradient-section-hero)]">
           <div className="container mx-auto px-4 max-w-3xl text-center">
-            <figure className="mx-auto mb-6 w-32" data-media-id="TARATURE-002">
-              <img src={logoAsset.url} alt="TARATURE-002 — Taratura Serbatoi" width={128} height={128} className="h-32 w-32 object-contain" />
-              <figcaption className="mt-1 font-mono text-[10px] uppercase tracking-wider text-muted-foreground">TARATURE-002</figcaption>
-            </figure>
+            <img src={logoAsset.url} alt="Taratura Serbatoi" width={128} height={128} className="mx-auto mb-6 h-32 w-32 object-contain" />
             <div className="inline-flex items-center gap-2 rounded-full border-2 border-primary/30 bg-white px-4 py-2 text-sm font-semibold mb-6">
               <Ruler className="h-4 w-4 text-primary" aria-hidden /> {t("eyebrow")}
             </div>
@@ -224,12 +213,10 @@ function TaraturaPage() {
             </div>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {shown.map((m) => {
-                const id = m.mediaId;
                 return (
                   <article key={m.code} className={`${cardCls} flex gap-4`}>
                     <div className="relative h-24 w-24 shrink-0 rounded-xl border border-primary/15 bg-white">
-                      {m.icon && <img src={m.icon} alt={`${name(m)} — ${id}`} loading="lazy" className="h-full w-full object-contain p-1" />}
-                      <MediaId id={id} />
+                      {m.icon && <img src={m.icon} alt={`${String(m.n).padStart(2, "0")} · ${m.code} — ${name(m)}`} loading="lazy" className="h-full w-full object-contain p-1" />}
                     </div>
                     <div>
                       <p className="font-mono text-xs font-bold text-primary">{String(m.n).padStart(2, "0")} · {m.code}</p>
