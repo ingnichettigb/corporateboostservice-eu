@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { MediaCode } from "@/components/MediaCode";
 import { useTranslation } from "react-i18next";
 import i18n from "@/i18n";
 import { Button } from "@/components/ui/button";
@@ -214,6 +215,7 @@ function SmartMaintenancePage() {
                   height={742}
                   loading="lazy"
                 />
+                <MediaCode id="SMART-001" />
               </figure>
               <p className="mt-4 text-sm text-foreground/65">
                 {t("smartMaintenance.heroTagline")}
@@ -227,6 +229,7 @@ function SmartMaintenancePage() {
                 width={1206}
                 height={880}
               />
+              <MediaCode id="SMART-002" />
               <figcaption className="mt-3 text-center text-sm text-foreground/65">
                 {t("smartMaintenance.heroFigcaption")}
               </figcaption>
@@ -362,6 +365,7 @@ function SmartMaintenancePage() {
         {/* PDF GENERATO */}
         <section className="py-20 bg-background">
           <div className="container mx-auto px-4 max-w-6xl grid lg:grid-cols-2 gap-10 items-center">
+            <figure className="m-0">
             <img
               src={pdfImg}
               alt={t("smartMaintenance.pdfImgAlt")}
@@ -370,6 +374,8 @@ function SmartMaintenancePage() {
               height={1024}
               loading="lazy"
             />
+            <MediaCode id="SMART-003" />
+            </figure>
             <div>
               <p className="text-sm font-bold text-primary uppercase tracking-wider mb-2">
                 {t("smartMaintenance.pdfLabel")}
