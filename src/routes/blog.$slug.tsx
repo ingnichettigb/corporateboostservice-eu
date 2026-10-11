@@ -87,7 +87,7 @@ function Inline({ text }: { text: string }) {
   );
 }
 
-function Block({ block, asset }: { block: BlogBlock; asset: (f: string) => string | undefined }) {
+function Block({ block, asset, mediaCode }: { block: BlogBlock; asset: (f: string) => string | undefined; mediaCode?: string }) {
   switch (block.type) {
     case "heading2":
       return <h2 className="mt-12 text-2xl md:text-3xl font-bold text-foreground">{block.text}</h2>;
@@ -130,7 +130,7 @@ function Block({ block, asset }: { block: BlogBlock; asset: (f: string) => strin
             height={720}
             className="w-full aspect-video rounded-2xl border-2 border-primary/15 object-cover"
           />
-          {block.mediaCode && <MediaCode id={block.mediaCode} />}
+          {mediaCode && <MediaCode id={mediaCode} />}
           {block.caption && (
             <figcaption className="mt-3 text-base text-foreground/65">{block.caption}</figcaption>
           )}
@@ -225,9 +225,15 @@ function ArticlePage() {
               <MediaCode id={`BLOG-${article.number}-001`} />
             )}
             <p className="mt-8 text-xl font-semibold leading-relaxed text-foreground">{tr.excerpt}</p>
-            {articleBlocks(tr).map((block, i) => (
-              <Block key={i} block={block} asset={article.asset} />
-            ))}
+            {(() => {
+              let fig = article.coverUrl ? 1 : 0;
+              return articleBlocks(tr).map((block, i) => {
+                const code = block.type === "image" && article.asset(block.src)
+                  ? `BLOG-${article.number}-${String(++fig).padStart(3, "0")}`
+                  : undefined;
+                return <Block key={i} block={block} asset={article.asset} mediaCode={code} />;
+              });
+            })()}
 
             <div className="mt-14 border-t-2 border-primary/15 pt-6">
               <Link
