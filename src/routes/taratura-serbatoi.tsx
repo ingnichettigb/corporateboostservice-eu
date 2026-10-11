@@ -12,6 +12,7 @@ import { TaxNote } from "@/components/TaxDisclaimer";
 import i18n from "@/i18n";
 import { taraturaSerbatoi as locale } from "@/i18n/locales/pages/taratura-serbatoi";
 import logoAsset from "@/assets/apps/taratura-serbatoi.png.asset.json";
+import primaDopo from "@/assets/tarature/prima-dopo.png.asset.json";
 
 i18n.addResourceBundle("it", "taratura", locale.it, true, false);
 i18n.addResourceBundle("en", "taratura", locale.en, true, false);
@@ -136,6 +137,16 @@ function TaraturaPage() {
               ))}
             </div>
             <PriceButtons />
+          </div>
+        </section>
+
+        {/* IMMAGINE PRIMA/DOPO */}
+        <section className="py-12 bg-background">
+          <div className="container mx-auto px-4 max-w-5xl">
+            <figure className="relative overflow-hidden rounded-2xl border-2 border-primary/20 shadow-lg" data-media-id="TARATURE-PRIMA">
+              <img src={primaDopo.url} alt="TARATURE-PRIMA — Prima e dopo 001 TARATURE" width={1397} height={768} className="w-full h-auto" />
+              <MediaId id="TARATURE-PRIMA" />
+            </figure>
           </div>
         </section>
 
