@@ -3,7 +3,6 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useTranslation } from "react-i18next";
 import { ArrowLeft, Ruler, Scale, ListOrdered, FileDown, ShieldCheck, Construction, X, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Slider } from "@/components/ui/slider";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
@@ -81,17 +80,13 @@ function Heading({ label, h2 }: { label: string; h2: string }) {
 const cardCls = "p-6 rounded-2xl border-2 border-primary/20 bg-white shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-elegant)] transition-all";
 
 function TaraturaPage() {
-  const { t, i18n: inst } = useTranslation("taratura");
+  const { t } = useTranslation("taratura");
   const arr = <X,>(k: string) => t(k, { returnObjects: true }) as X;
   const stats = arr<string[][]>("stats");
   const cmpRows = arr<string[][]>("cmpRows");
   const features = arr<{ title: string; desc: string }[]>("features");
   const faq = arr<{ q: string; a: string }[]>("faq");
   const [filter, setFilter] = useState<string>("ALL");
-  const [tanks, setTanks] = useState(10);
-  const [cost, setCost] = useState(45);
-  const hours = Math.round(tanks * 12 * 3.5);
-  const fmt = new Intl.NumberFormat(inst.language, { style: "currency", currency: "EUR", maximumFractionDigits: 0 });
 
   const name = (m: (typeof modules)[number]) =>
     m.family === "ORIZZ" ? t(`orizz.${m.bottom}.name`) : `${t(`top.${m.family}`)} / ${t(`bottom.${m.bottom}`)}`;
@@ -161,20 +156,8 @@ function TaraturaPage() {
         <section className="py-20 [background:var(--gradient-section-corsi)] border-y-2 border-primary/15">
           <div className="container mx-auto px-4 max-w-3xl">
             <Heading label={t("roiLabel")} h2={t("roiH2")} />
-            <div className={`${cardCls} space-y-8`}>
-              <div>
-                <div className="flex justify-between font-semibold mb-3"><span>{t("roiTanks")}</span><span className="font-mono text-primary">{tanks}</span></div>
-                <Slider min={1} max={100} step={1} value={[tanks]} onValueChange={(v) => setTanks(v[0])} aria-label={t("roiTanks")} />
-              </div>
-              <div>
-                <div className="flex justify-between font-semibold mb-3"><span>{t("roiCost")}</span><span className="font-mono text-primary">{cost} €</span></div>
-                <Slider min={20} max={120} step={1} value={[cost]} onValueChange={(v) => setCost(v[0])} aria-label={t("roiCost")} />
-              </div>
-              <div className="grid sm:grid-cols-2 gap-4 text-center">
-                <div className="rounded-xl bg-primary/10 p-4"><div className="text-sm">{t("roiHours")}</div><div className="text-3xl font-bold text-primary font-mono">{hours}</div></div>
-                <div className="rounded-xl bg-primary/10 p-4"><div className="text-sm">{t("roiValue")}</div><div className="text-3xl font-bold text-primary font-mono">{fmt.format(hours * cost)}</div></div>
-              </div>
-              <p className="text-sm text-foreground/70 italic">{t("roiNote")}</p>
+            <div className={cardCls}>
+              <p className="text-foreground/85 leading-relaxed">{t("roiNote")}</p>
             </div>
           </div>
         </section>
