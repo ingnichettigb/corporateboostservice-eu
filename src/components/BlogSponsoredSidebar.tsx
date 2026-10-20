@@ -64,7 +64,8 @@ export function BlogSponsoredSidebar({
       if (target <= 0 || count <= 0) return;
       const pitch = el.scrollHeight / count;
       if (pitch <= 0) return;
-      const need = Math.min(MAX_CARDS, Math.max(items.length, Math.ceil(target / pitch)));
+      const need = Math.min(MAX_CARDS, Math.max(1, Math.ceil(target / pitch)));
+
       if (need !== count) setCount(need);
     };
     measure();
