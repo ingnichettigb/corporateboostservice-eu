@@ -46,21 +46,29 @@ export function BlogSponsoredSidebar({
     return () => window.clearInterval(id);
   }, [paused, items.length]);
 
-  /** Misura l'altezza della colonna affiancata e ripete la sequenza finché non la riempie. */
+  /** Misura l'altezza della colonna di contenuto affiancata e ripete la sequenza finché non la riempie. */
   useEffect(() => {
     const el = asideRef.current;
-    const parent = el?.parentElement;
-    if (!el || !parent) return;
+    if (!el || !el.parentElement) return;
     const measure = () => {
+      const parent = el.parentElement;
+      if (!parent) return;
+      // Target: la colonna di contenuto (articolo o griglia), mai l'aside stesso,
+      // per evitare un circuito di feedback in cui l'aside allunga il contenitore.
+      let target = 0;
+      for (const sib of Array.from(parent.children)) {
+        if (sib === el) continue;
+        target = Math.max(target, sib.getBoundingClientRect().height);
+      }
+      if (target <= 0) return;
       const per = el.scrollHeight / Math.max(copies, 1);
       if (per <= 0) return;
-      const need = Math.min(MAX_COPIES, Math.max(1, Math.ceil(parent.clientHeight / per)));
+      const need = Math.min(MAX_COPIES, Math.max(1, Math.ceil(target / per)));
       if (need !== copies) setCopies(need);
     };
     measure();
     const ro = new ResizeObserver(measure);
-    ro.observe(parent);
-    ro.observe(el);
+    ro.observe(el.parentElement);
     return () => ro.disconnect();
   }, [copies, items.length]);
 
