@@ -245,7 +245,7 @@ function ArticlePage() {
             </div>
           </article>
 
-          <BlogSponsoredSidebar label={t("sponsored")} />
+          <BlogSponsoredSidebar label={t("sponsored")} extra={article.sponsored ?? []} />
         </div>
       </main>
       <SiteFooter />

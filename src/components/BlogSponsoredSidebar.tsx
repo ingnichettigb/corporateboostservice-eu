@@ -4,10 +4,35 @@ import { ArrowRight, Megaphone } from "lucide-react";
 import sponsored from "@/content/sponsored.json";
 import type { SponsoredItem } from "@/lib/blog";
 
-const items = sponsored as SponsoredItem[];
+const baseItems = sponsored as SponsoredItem[];
 const ROTATION_MS = 5000;
 
-export function BlogSponsoredSidebar({ label = "Sponsorizzato" }: { label?: string }) {
+/** Alterna 1 a 1 le carte del sito con le pubblicità extra, senza duplicati. */
+function mix(base: SponsoredItem[], extra: SponsoredItem[]) {
+  const seen = new Set<string>();
+  const out: SponsoredItem[] = [];
+  const push = (it?: SponsoredItem) => {
+    if (!it) return;
+    const k = it.link + "|" + it.title;
+    if (seen.has(k)) return;
+    seen.add(k);
+    out.push(it);
+  };
+  for (let i = 0; i < Math.max(base.length, extra.length); i++) {
+    push(base[i]);
+    push(extra[i]);
+  }
+  return out;
+}
+
+export function BlogSponsoredSidebar({
+  label = "Sponsorizzato",
+  extra = [],
+}: {
+  label?: string;
+  extra?: SponsoredItem[];
+}) {
+  const items = mix(baseItems, extra);
   const [offset, setOffset] = useState(0);
   const [paused, setPaused] = useState(false);
 
@@ -15,7 +40,7 @@ export function BlogSponsoredSidebar({ label = "Sponsorizzato" }: { label?: stri
     if (paused || items.length < 2) return;
     const id = window.setInterval(() => setOffset((o) => (o + 1) % items.length), ROTATION_MS);
     return () => window.clearInterval(id);
-  }, [paused]);
+  }, [paused, items.length]);
 
   if (items.length === 0) return null;
 
