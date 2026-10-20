@@ -77,10 +77,9 @@ export function BlogSponsoredSidebar({
 
   const ordered = items.map((_, i) => items[(i + offset) % items.length]);
   const sequence: { item: SponsoredItem; key: string }[] = [];
-  for (let c = 0; c < copies; c++) {
-    for (const item of ordered) {
-      sequence.push({ item, key: `${c}-${item.link}|${item.title}` });
-    }
+  for (let i = 0; i < count; i++) {
+    const item = ordered[i % ordered.length];
+    sequence.push({ item, key: `${i}-${item.link}|${item.title}` });
   }
 
   return (
