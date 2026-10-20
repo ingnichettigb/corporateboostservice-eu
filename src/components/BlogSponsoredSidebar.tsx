@@ -6,7 +6,8 @@ import type { SponsoredItem } from "@/lib/blog";
 
 const baseItems = sponsored as SponsoredItem[];
 const ROTATION_MS = 5000;
-const MAX_COPIES = 30;
+const MAX_CARDS = 300;
+
 
 /** Alterna 1 a 1 le carte del sito con le pubblicità extra, senza duplicati. */
 function mix(base: SponsoredItem[], extra: SponsoredItem[]) {
