@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { ArrowRight, Megaphone } from "lucide-react";
 import sponsored from "@/content/sponsored.json";
@@ -6,6 +6,8 @@ import type { SponsoredItem } from "@/lib/blog";
 
 const baseItems = sponsored as SponsoredItem[];
 const ROTATION_MS = 5000;
+const MAX_CARDS = 300;
+
 
 /** Alterna 1 a 1 le carte del sito con le pubblicità extra, senza duplicati. */
 function mix(base: SponsoredItem[], extra: SponsoredItem[]) {
@@ -35,6 +37,9 @@ export function BlogSponsoredSidebar({
   const items = mix(baseItems, extra);
   const [offset, setOffset] = useState(0);
   const [paused, setPaused] = useState(false);
+  /** Ripete la sequenza fino a riempire l'altezza della colonna di contenuto. */
+  const [count, setCount] = useState(items.length);
+  const asideRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     if (paused || items.length < 2) return;
@@ -42,12 +47,45 @@ export function BlogSponsoredSidebar({
     return () => window.clearInterval(id);
   }, [paused, items.length]);
 
+  /** Misura l'altezza della colonna di contenuto affiancata e ripete le carte finché non la riempie. */
+  useEffect(() => {
+    const el = asideRef.current;
+    if (!el || !el.parentElement) return;
+    const measure = () => {
+      const parent = el.parentElement;
+      if (!parent) return;
+      // Target: la colonna di contenuto (articolo o griglia), mai l'aside stesso,
+      // per evitare un circuito di feedback in cui l'aside allunga il contenitore.
+      let target = 0;
+      for (const sib of Array.from(parent.children)) {
+        if (sib === el) continue;
+        target = Math.max(target, sib.getBoundingClientRect().height);
+      }
+      if (target <= 0 || count <= 0) return;
+      const pitch = el.scrollHeight / count;
+      if (pitch <= 0) return;
+      const need = Math.min(MAX_CARDS, Math.max(1, Math.ceil(target / pitch)));
+
+      if (need !== count) setCount(need);
+    };
+    measure();
+    const ro = new ResizeObserver(measure);
+    ro.observe(el.parentElement);
+    return () => ro.disconnect();
+  }, [count, items, items.length]);
+
   if (items.length === 0) return null;
 
   const ordered = items.map((_, i) => items[(i + offset) % items.length]);
+  const sequence: { item: SponsoredItem; key: string }[] = [];
+  for (let i = 0; i < count; i++) {
+    const item = ordered[i % ordered.length];
+    sequence.push({ item, key: `${i}-${item.link}|${item.title}` });
+  }
 
   return (
     <aside
+      ref={asideRef}
       className="w-full lg:w-80 shrink-0"
       aria-label={label}
       onMouseEnter={() => setPaused(true)}
@@ -60,7 +98,7 @@ export function BlogSponsoredSidebar({
       </p>
 
       <div className="flex flex-col gap-4">
-        {ordered.map((item) => {
+        {sequence.map(({ item, key }) => {
           const isExternal = /^https?:\/\//.test(item.link);
           const cta = (
             <>
@@ -73,7 +111,7 @@ export function BlogSponsoredSidebar({
 
           return (
             <div
-              key={item.link + item.title}
+              key={key}
               className="rounded-2xl border-2 border-primary/20 bg-white p-5 shadow-[var(--shadow-card)] transition-all duration-500"
             >
               {item.badge && (
