@@ -356,5 +356,37 @@
         }
       ]
     }
-  }
+  },
+  "sponsored": [
+    {
+      "title": "Consulenza SEO GDPR privacy",
+      "description": "Consulenze speciali personalizzate: tu mi dai l'incarico, faccio tutto io.",
+      "badge": "Studio",
+      "link": "https://studio.corporateboostservice.eu/"
+    },
+    {
+      "title": "Applicazioni per Imprese (APP)",
+      "description": "Strumenti digitali per semplificare il lavoro e migliorare i processi.",
+      "badge": "Studio",
+      "link": "https://studio.corporateboostservice.eu/saas-su-misura"
+    },
+    {
+      "title": "Strumenti gratuiti di supporto alla formazione",
+      "description": "Questionari gratuiti per metterti alla prova prima di seguire i corsi online.",
+      "badge": "Studio",
+      "link": "https://studio.corporateboostservice.eu/"
+    },
+    {
+      "title": "Videocamere a norma, senza stress",
+      "description": "La tua privacy è la mia missione. Ci penso a tutto io: non trasformare uno strumento utile in fonte di problemi.",
+      "badge": "Studio",
+      "link": "https://studio.corporateboostservice.eu/telecamere"
+    },
+    {
+      "title": "GPS satellitare a norma, senza stress",
+      "description": "Pratiche obbligatorie, soluzioni semplici. La tua privacy è la mia missione: non trasformare uno strumento utile in una fonte di problemi. Ci penso a tutto io.",
+      "badge": "Studio",
+      "link": "https://studio.corporateboostservice.eu/gps"
+    }
+  ]
 }

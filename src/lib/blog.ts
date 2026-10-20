@@ -118,6 +118,8 @@ export interface BlogArticleFile {
   cover?: string;
   coverAlt?: string;
   translations: Partial<Record<string, BlogTranslation>>;
+  /** Pubblicità specifiche dell'articolo, mescolate alle carte nel carosello laterale. */
+  sponsored?: SponsoredItem[];
 }
 
 export interface BlogArticle extends BlogArticleFile {

@@ -153,7 +153,10 @@ function BlogIndex() {
                 </div>
               )}
             </div>
-            <BlogSponsoredSidebar label={t("sponsored")} />
+            <BlogSponsoredSidebar
+              label={t("sponsored")}
+              extra={articles.flatMap((a) => a.sponsored ?? [])}
+            />
           </div>
         </section>
       </main>
