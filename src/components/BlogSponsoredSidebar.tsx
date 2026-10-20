@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { ArrowRight, Megaphone } from "lucide-react";
 import sponsored from "@/content/sponsored.json";
@@ -6,6 +6,7 @@ import type { SponsoredItem } from "@/lib/blog";
 
 const baseItems = sponsored as SponsoredItem[];
 const ROTATION_MS = 5000;
+const MAX_COPIES = 30;
 
 /** Alterna 1 a 1 le carte del sito con le pubblicità extra, senza duplicati. */
 function mix(base: SponsoredItem[], extra: SponsoredItem[]) {
@@ -35,6 +36,9 @@ export function BlogSponsoredSidebar({
   const items = mix(baseItems, extra);
   const [offset, setOffset] = useState(0);
   const [paused, setPaused] = useState(false);
+  /** Ripetizioni della sequenza fino a riempire l'altezza della colonna articolo. */
+  const [copies, setCopies] = useState(1);
+  const asideRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     if (paused || items.length < 2) return;
@@ -42,12 +46,37 @@ export function BlogSponsoredSidebar({
     return () => window.clearInterval(id);
   }, [paused, items.length]);
 
+  /** Misura l'altezza della colonna affiancata e ripete la sequenza finché non la riempie. */
+  useEffect(() => {
+    const el = asideRef.current;
+    const parent = el?.parentElement;
+    if (!el || !parent) return;
+    const measure = () => {
+      const per = el.scrollHeight / Math.max(copies, 1);
+      if (per <= 0) return;
+      const need = Math.min(MAX_COPIES, Math.max(1, Math.ceil(parent.clientHeight / per)));
+      if (need !== copies) setCopies(need);
+    };
+    measure();
+    const ro = new ResizeObserver(measure);
+    ro.observe(parent);
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, [copies, items.length]);
+
   if (items.length === 0) return null;
 
   const ordered = items.map((_, i) => items[(i + offset) % items.length]);
+  const sequence: { item: SponsoredItem; key: string }[] = [];
+  for (let c = 0; c < copies; c++) {
+    for (const item of ordered) {
+      sequence.push({ item, key: `${c}-${item.link}|${item.title}` });
+    }
+  }
 
   return (
     <aside
+      ref={asideRef}
       className="w-full lg:w-80 shrink-0"
       aria-label={label}
       onMouseEnter={() => setPaused(true)}
@@ -60,7 +89,7 @@ export function BlogSponsoredSidebar({
       </p>
 
       <div className="flex flex-col gap-4">
-        {ordered.map((item) => {
+        {sequence.map(({ item, key }) => {
           const isExternal = /^https?:\/\//.test(item.link);
           const cta = (
             <>
@@ -73,7 +102,7 @@ export function BlogSponsoredSidebar({
 
           return (
             <div
-              key={item.link + item.title}
+              key={key}
               className="rounded-2xl border-2 border-primary/20 bg-white p-5 shadow-[var(--shadow-card)] transition-all duration-500"
             >
               {item.badge && (
