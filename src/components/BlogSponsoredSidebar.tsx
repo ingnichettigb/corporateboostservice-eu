@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { ArrowRight, Megaphone } from "lucide-react";
 import sponsored from "@/content/sponsored.json";
+import sponsoredExtra from "@/content/sponsored-extra.json";
 import type { SponsoredItem } from "@/lib/blog";
 
 const baseItems = sponsored as SponsoredItem[];
@@ -34,7 +35,7 @@ export function BlogSponsoredSidebar({
   label?: string;
   extra?: SponsoredItem[];
 }) {
-  const items = mix(baseItems, extra);
+  const items = mix(baseItems, [...(sponsoredExtra as SponsoredItem[]), ...extra]);
   const [offset, setOffset] = useState(0);
   const [paused, setPaused] = useState(false);
   /** Ripete la sequenza fino a riempire l'altezza della colonna di contenuto. */
