@@ -1,4 +1,4 @@
-import { ShieldCheck, FileLock, HardHat, Newspaper, Wrench, Factory, ClipboardCheck, BookOpen, FlaskConical, CalendarClock, KeyRound, Recycle } from "lucide-react";
+import { ShieldCheck, FileLock, HardHat, Newspaper, Wrench, ClipboardCheck, FlaskConical, CalendarClock, KeyRound, Recycle } from "lucide-react";
 import taraturaLogo from "@/assets/apps/taratura-serbatoi.png.asset.json";
 import ricicloPpwrLogo from "@/assets/apps/riciclo-ppwr.png.asset.json";
 import smartMaintenanceLogo from "@/assets/apps/smartmaintenance.jpg.asset.json";
@@ -21,7 +21,4 @@ export const applicazioni = [
   { icon: KeyRound, key: "registroCredenziali", wip: false },
   { icon: Recycle, key: "ricicloPpwr", image: ricicloPpwrLogo.url, wip: false },
   { icon: Recycle, key: "taraturaSerbatoi", image: taraturaLogo.url, wip: false },
-  { icon: Factory, key: "fat", wip: true },
-  { icon: ClipboardCheck, key: "sat", wip: true },
-  { icon: BookOpen, key: "lp", wip: true },
 ] as const;
