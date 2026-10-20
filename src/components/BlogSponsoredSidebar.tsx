@@ -37,8 +37,8 @@ export function BlogSponsoredSidebar({
   const items = mix(baseItems, extra);
   const [offset, setOffset] = useState(0);
   const [paused, setPaused] = useState(false);
-  /** Ripetizioni della sequenza fino a riempire l'altezza della colonna articolo. */
-  const [copies, setCopies] = useState(1);
+  /** Ripete la sequenza fino a riempire l'altezza della colonna di contenuto. */
+  const [count, setCount] = useState(items.length);
   const asideRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -47,7 +47,7 @@ export function BlogSponsoredSidebar({
     return () => window.clearInterval(id);
   }, [paused, items.length]);
 
-  /** Misura l'altezza della colonna di contenuto affiancata e ripete la sequenza finché non la riempie. */
+  /** Misura l'altezza della colonna di contenuto affiancata e ripete le carte finché non la riempie. */
   useEffect(() => {
     const el = asideRef.current;
     if (!el || !el.parentElement) return;
@@ -61,17 +61,17 @@ export function BlogSponsoredSidebar({
         if (sib === el) continue;
         target = Math.max(target, sib.getBoundingClientRect().height);
       }
-      if (target <= 0) return;
-      const per = el.scrollHeight / Math.max(copies, 1);
-      if (per <= 0) return;
-      const need = Math.min(MAX_COPIES, Math.max(1, Math.ceil(target / per)));
-      if (need !== copies) setCopies(need);
+      if (target <= 0 || count <= 0) return;
+      const pitch = el.scrollHeight / count;
+      if (pitch <= 0) return;
+      const need = Math.min(MAX_CARDS, Math.max(items.length, Math.ceil(target / pitch)));
+      if (need !== count) setCount(need);
     };
     measure();
     const ro = new ResizeObserver(measure);
     ro.observe(el.parentElement);
     return () => ro.disconnect();
-  }, [copies, items.length]);
+  }, [count, items, items.length]);
 
   if (items.length === 0) return null;
 
