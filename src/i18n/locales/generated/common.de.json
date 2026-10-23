@@ -107,6 +107,10 @@
         "title": "UNTERNEHMENS-WEBSITE-REGISTER",
         "desc": "Verwalten Sie Lieferantenportale, Anmeldedaten und autorisierte Personen in einem sicheren, gemeinsam genutzten Unternehmensbereich."
       },
+      "riusoPpwr": {
+        "title": "PPWR-Wiederverwendbarkeit",
+        "desc": "Erklären Sie, ob eine Verpackung gemäß EU-Verordnung 2025/40 (PPWR) wiederverwendbar ist, und erstellen Sie das PDF für die technische Akte."
+      },
       "ricicloPpwr": {
         "title": "PPWR Recyclingfähigkeit",
         "desc": "Berechnen Sie die Recyclingfähigkeit von Verpackungen gemäß der EU-Verordnung 2025/40 (PPWR), weisen Sie die Klasse zu und erstellen Sie das PDF für die technische Akte."

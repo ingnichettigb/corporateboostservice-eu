@@ -7,6 +7,7 @@ import { LegalLayout } from "@/components/LegalLayout";
 import { TaxBadge, TaxNote } from "@/components/TaxDisclaimer";
 import { PricingCartButton } from "@/components/PricingCartButton";
 import { pricingItems } from "@/i18n/locales/pages/legal";
+import { tx } from "@/i18n/tx";
 import { supabase } from "@/integrations/supabase/client";
 
 type CatalogRow = { code: string; name: string; price_eur: number; validity_days: number };
@@ -115,7 +116,7 @@ function PrezziPage() {
               <tr key={item.code} className="hover:bg-muted/50">
                 <td className="px-5 py-4 font-semibold text-foreground/70 align-middle">{index + 1}</td>
                 <td className="px-5 py-4 font-mono text-sm text-foreground/70 whitespace-nowrap align-middle">{item.code}</td>
-                <td className="px-5 py-4 font-medium align-middle">{item.name}</td>
+                <td className="px-5 py-4 font-medium align-middle">{tx(item.name)}</td>
                 <td className="px-5 py-4 whitespace-nowrap font-semibold text-primary align-middle"><PriceCell item={item} /></td>
                 <td className="px-5 py-4 whitespace-nowrap align-middle"><DurationCell item={item} /></td>
 
@@ -137,7 +138,7 @@ function PrezziPage() {
           <div key={item.code} className="rounded-xl border border-border p-5">
             <div className="text-sm font-semibold text-foreground/60">ID {index + 1}</div>
             <div className="mt-1 font-mono text-sm text-foreground/70 break-all">{item.code}</div>
-            <div className="text-base font-semibold">{item.name}</div>
+            <div className="text-base font-semibold">{tx(item.name)}</div>
             <div className="mt-2 flex items-center gap-3 text-base">
               <span className="font-semibold text-primary"><PriceCell item={item} /></span>
               <span className="text-foreground/70"><DurationCell item={item} /></span>

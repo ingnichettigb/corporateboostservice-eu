@@ -636,4 +636,8 @@ export const pricingItems = [
   { id: 21, code: "060RicicloPPWR-002", name: "Calcola la % di riciclabilità PPWR (uso singolo)", price: "30€", duration: "2" },
   { id: 22, code: "060RicicloPPWR-030", name: "Calcola la % di riciclabilità PPWR (mensile)", price: "50€", duration: "30" },
   { id: 23, code: "060RicicloPPWR-365", name: "Calcola la % di riciclabilità PPWR (annuale)", price: "600€", duration: "365" },
+  // PPWR Riuso Imballaggi
+  { id: 24, code: "070RiusoPPWR-002", name: "Dichiarazione riutilizzo imballaggi PPWR (uso singolo)", price: "30€", duration: "2" },
+  { id: 25, code: "070RiusoPPWR-030", name: "Dichiarazione riutilizzo imballaggi PPWR (mensile)", price: "50€", duration: "30" },
+  { id: 26, code: "070RiusoPPWR-365", name: "Dichiarazione riutilizzo imballaggi PPWR (annuale)", price: "600€", duration: "365" },
 ];

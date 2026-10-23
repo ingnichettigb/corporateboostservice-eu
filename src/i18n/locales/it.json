@@ -107,6 +107,10 @@
         "title": "REGISTRO SITI WEB AZIENDALI",
         "desc": "Gestisci portali, credenziali e persone autorizzate in un unico spazio aziendale condiviso e sicuro."
       },
+      "riusoPpwr": {
+        "title": "Riutilizzabilità PPWR",
+        "desc": "Dichiara se un imballaggio è riutilizzabile secondo il Regolamento UE 2025/40 (PPWR) e genera il PDF per il fascicolo tecnico."
+      },
       "ricicloPpwr": {
         "title": "Riciclabilità PPWR",
         "desc": "Calcola la percentuale di riciclabilità degli imballaggi secondo il Regolamento UE 2025/40 (PPWR), assegna il grado e genera il PDF per il fascicolo tecnico."

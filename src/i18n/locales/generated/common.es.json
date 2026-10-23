@@ -107,6 +107,10 @@
         "title": "REGISTRO DEL SITIO WEB DE LA EMPRESA",
         "desc": "Gestiona portales de proveedores, credenciales y personas autorizadas en un único espacio empresarial seguro y compartido."
       },
+      "riusoPpwr": {
+        "title": "Reutilizabilidad PPWR",
+        "desc": "Declara si un envase es reutilizable según el Reglamento UE 2025/40 (PPWR) y genera el PDF para el expediente técnico."
+      },
       "ricicloPpwr": {
         "title": "PPWR Recyclability",
         "desc": "Calcula la reciclabilidad de los envases según el Reglamento UE 2025/40 (PPWR), asigna la calificación y genera el PDF para el expediente técnico."
