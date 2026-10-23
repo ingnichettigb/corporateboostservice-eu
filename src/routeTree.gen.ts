@@ -28,6 +28,7 @@ import { Route as PrezziRouteImport } from './routes/prezzi'
 import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
 import { Route as RegistroCredenzialiFornitoriRouteImport } from './routes/registro-credenziali-fornitori'
 import { Route as RicicloPpwrRouteImport } from './routes/riciclo-ppwr'
+import { Route as RiusoPpwrRouteImport } from './routes/riuso-ppwr'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as SmartMaintenanceRouteImport } from './routes/smart-maintenance'
 import { Route as TaraturaSerbatoiRouteImport } from './routes/taratura-serbatoi'
@@ -133,6 +134,11 @@ const RicicloPpwrRoute = RicicloPpwrRouteImport.update({
   path: '/riciclo-ppwr',
   getParentRoute: () => rootRouteImport,
 } as any)
+const RiusoPpwrRoute = RiusoPpwrRouteImport.update({
+  id: '/riuso-ppwr',
+  path: '/riuso-ppwr',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
   path: '/sitemap.xml',
@@ -189,6 +195,7 @@ export interface FileRoutesByFullPath {
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/registro-credenziali-fornitori': typeof RegistroCredenzialiFornitoriRoute
   '/riciclo-ppwr': typeof RicicloPpwrRoute
+  '/riuso-ppwr': typeof RiusoPpwrRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/smart-maintenance': typeof SmartMaintenanceRoute
   '/taratura-serbatoi': typeof TaraturaSerbatoiRoute
@@ -217,6 +224,7 @@ export interface FileRoutesByTo {
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/registro-credenziali-fornitori': typeof RegistroCredenzialiFornitoriRoute
   '/riciclo-ppwr': typeof RicicloPpwrRoute
+  '/riuso-ppwr': typeof RiusoPpwrRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/smart-maintenance': typeof SmartMaintenanceRoute
   '/taratura-serbatoi': typeof TaraturaSerbatoiRoute
@@ -246,6 +254,7 @@ export interface FileRoutesById {
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/registro-credenziali-fornitori': typeof RegistroCredenzialiFornitoriRoute
   '/riciclo-ppwr': typeof RicicloPpwrRoute
+  '/riuso-ppwr': typeof RiusoPpwrRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/smart-maintenance': typeof SmartMaintenanceRoute
   '/taratura-serbatoi': typeof TaraturaSerbatoiRoute
@@ -276,6 +285,7 @@ export interface FileRouteTypes {
     | '/privacy-policy'
     | '/registro-credenziali-fornitori'
     | '/riciclo-ppwr'
+    | '/riuso-ppwr'
     | '/sitemap.xml'
     | '/smart-maintenance'
     | '/taratura-serbatoi'
@@ -304,6 +314,7 @@ export interface FileRouteTypes {
     | '/privacy-policy'
     | '/registro-credenziali-fornitori'
     | '/riciclo-ppwr'
+    | '/riuso-ppwr'
     | '/sitemap.xml'
     | '/smart-maintenance'
     | '/taratura-serbatoi'
@@ -332,6 +343,7 @@ export interface FileRouteTypes {
     | '/privacy-policy'
     | '/registro-credenziali-fornitori'
     | '/riciclo-ppwr'
+    | '/riuso-ppwr'
     | '/sitemap.xml'
     | '/smart-maintenance'
     | '/taratura-serbatoi'
@@ -361,6 +373,7 @@ export interface RootRouteChildren {
   PrivacyPolicyRoute: typeof PrivacyPolicyRoute
   RegistroCredenzialiFornitoriRoute: typeof RegistroCredenzialiFornitoriRoute
   RicicloPpwrRoute: typeof RicicloPpwrRoute
+  RiusoPpwrRoute: typeof RiusoPpwrRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   SmartMaintenanceRoute: typeof SmartMaintenanceRoute
   TaraturaSerbatoiRoute: typeof TaraturaSerbatoiRoute
@@ -505,6 +518,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof RicicloPpwrRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/riuso-ppwr': {
+      id: '/riuso-ppwr'
+      path: '/riuso-ppwr'
+      fullPath: '/riuso-ppwr'
+      preLoaderRoute: typeof RiusoPpwrRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/sitemap.xml': {
       id: '/sitemap.xml'
       path: '/sitemap.xml'
@@ -577,6 +597,7 @@ const rootRouteChildren: RootRouteChildren = {
   PrivacyPolicyRoute: PrivacyPolicyRoute,
   RegistroCredenzialiFornitoriRoute: RegistroCredenzialiFornitoriRoute,
   RicicloPpwrRoute: RicicloPpwrRoute,
+  RiusoPpwrRoute: RiusoPpwrRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   SmartMaintenanceRoute: SmartMaintenanceRoute,
   TaraturaSerbatoiRoute: TaraturaSerbatoiRoute,
