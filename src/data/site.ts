@@ -20,6 +20,6 @@ export const applicazioni = [
   { icon: CalendarClock, key: "agendaShare", wip: false },
   { icon: KeyRound, key: "registroCredenziali", wip: false },
   { icon: Recycle, key: "ricicloPpwr", image: ricicloPpwrLogo.url, wip: false },
-  { icon: Recycle, key: "riusoPpwr", wip: true },
+  { icon: Recycle, key: "riusoPpwr", wip: false },
   { icon: Recycle, key: "taraturaSerbatoi", image: taraturaLogo.url, wip: false },
 ] as const;
