@@ -107,6 +107,10 @@
         "title": "COMPANY WEBSITE REGISTER",
         "desc": "Manage supplier portals, credentials and authorized people in one secure shared company space."
       },
+      "riusoPpwr": {
+        "title": "PPWR Reusability",
+        "desc": "Declare whether packaging is reusable under EU Regulation 2025/40 (PPWR) and generate the PDF for the technical file."
+      },
       "ricicloPpwr": {
         "title": "PPWR Recyclability",
         "desc": "Calculate packaging recyclability under EU Regulation 2025/40 (PPWR), assign the grade and generate the PDF for the technical file."
