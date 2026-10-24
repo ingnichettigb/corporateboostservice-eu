@@ -21,6 +21,7 @@ import { MediaCode } from "@/components/MediaCode";
 import { TaxNote } from "@/components/TaxDisclaimer";
 import i18n from "@/i18n";
 import riusoLogo from "@/assets/apps/riuso-ppwr.jpeg.asset.json";
+import riuso003 from "@/assets/riuso-ppwr/RIUSOPPWR-003.jpg.asset.json";
 import { riusoPpwr as locale } from "@/i18n/locales/pages/riuso-ppwr";
 
 i18n.addResourceBundle("it", "riusoPpwr", locale.it, true, false);
@@ -53,7 +54,7 @@ const IMAGE_SLOTS: Slot[] = [
     prompt: "Clean flat vector infographic on a white background: a circular reuse loop with five stages connected by arrows (fill, transport, use, return, inspect-clean-repair), a stylised IBC container icon at each stage, palette of blue shades (#0B3A8F, #3B82C4, #DCEBFA), rounded shapes, minimal and professional. No text labels, no logos.",
   },
   {
-    ratio: "4:3", size: "1200x900",
+    ratio: "4:3", size: "1200x900", src: riuso003.url,
     prompt: "Photorealistic medium shot of a technician in safety gloves and glasses inspecting a white reusable IBC container with steel cage inside a clean washing and reconditioning bay, holding a tablet, bright neutral lighting, shallow depth of field. No visible brand names, no readable text, face not in focus.",
   },
   {
