@@ -20,6 +20,7 @@ import { PricingCartButton } from "@/components/PricingCartButton";
 import { MediaCode } from "@/components/MediaCode";
 import { TaxNote } from "@/components/TaxDisclaimer";
 import i18n from "@/i18n";
+import riusoLogo from "@/assets/apps/riuso-ppwr.jpeg.asset.json";
 import { riusoPpwr as locale } from "@/i18n/locales/pages/riuso-ppwr";
 
 i18n.addResourceBundle("it", "riusoPpwr", locale.it, true, false);
@@ -136,9 +137,11 @@ function PriceButtons() {
         </div>
         <p className="mt-1 text-sm text-amber-800/90">{t("legal.comingSoonNote")}</p>
       </div>
-      <PricingCartButton code="070RiusoPPWR-002" index={24} full />
-      <PricingCartButton code="070RiusoPPWR-030" index={25} full />
-      <PricingCartButton code="070RiusoPPWR-365" index={26} full />
+      <div className="flex w-full max-w-[19rem] flex-col gap-3">
+      <PricingCartButton code="070RiusoPPWR-002" index={24} full base />
+      <PricingCartButton code="070RiusoPPWR-030" index={25} full base />
+      <PricingCartButton code="070RiusoPPWR-365" index={26} full base />
+      </div>
       <TaxNote className="mt-2 max-w-md mx-auto" />
     </div>
   );
@@ -191,6 +194,7 @@ function RiusoPpwrPage() {
         {/* HERO */}
         <section className="pb-16 [background:var(--gradient-section-hero)]">
           <div className="container mx-auto px-4 max-w-3xl text-center">
+            <img src={riusoLogo.url} alt="070RiusoPPWR" width={140} height={140} className="mx-auto mb-6 h-32 w-32 rounded-xl object-contain" />
             <div className="inline-flex items-center gap-2 rounded-full border-2 border-primary/30 bg-white px-4 py-2 text-sm font-semibold mb-6">
               <Recycle className="h-4 w-4 text-primary" aria-hidden /> {t("eyebrow")}
             </div>
