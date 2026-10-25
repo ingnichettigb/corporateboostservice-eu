@@ -1,3 +1,6 @@
+/**
+ * File: smart-maintenance.ts · Percorso: src/i18n/locales/pages/smart-maintenance.ts · Revisione: 2 · Data: 25/10/2026 · Ora: 19:20
+ */
 export const smartMaintenance = {
   it: {
     metaTitle: "SmartMaintenance — App per report di manutenzione industriale",
@@ -21,6 +24,19 @@ export const smartMaintenance = {
       "Flusso di lavoro SmartMaintenance: configurazione, creazione report sul campo, generazione PDF, invio, ricezione e archiviazione",
     heroTagline: "Mobile-first · Funziona offline · Dati salvati sul tuo dispositivo",
     heroImgAlt: "App SmartMaintenance su smartphone con un report di manutenzione industriale",
+    screensLabel: "Le schermate",
+    screensH2: "L'app, passo dopo passo",
+    imgAlt: {
+      m004: "Schermata dei termini e condizioni mostrata al primo avvio dell'app",
+      m005: "Schermata Impostazioni con lingua e dati dell'azienda cliente",
+      m006: "Schermata Bozze report",
+      m007: "Schermata Archivio invii",
+      m008: "Storyboard degli 8 passi della segnalazione: dall'asset al salvataggio e invio",
+      m009: "Tecnico di manutenzione che fotografa la targa di un motore elettrico con lo smartphone",
+      m010: "Smartphone appoggiato su un motore elettrico per misurare le vibrazioni",
+      m011: "Fumetto in 4 riquadri: senza segnale il report viene salvato sul dispositivo e inviato quando torna la connessione",
+      m012: "Schema della privacy: dati salvati sul dispositivo e nessun invio automatico",
+    },
     heroFigcaption: "Home page Smart Maintenance",
 
     whatLabel: "Cos'è SmartMaintenance",
@@ -193,6 +209,19 @@ export const smartMaintenance = {
       "SmartMaintenance workflow: setup, on-site report creation, PDF generation, sending, receiving and archiving",
     heroTagline: "Mobile-first · Works offline · Data saved on your device",
     heroImgAlt: "SmartMaintenance app on a smartphone showing an industrial maintenance report",
+    screensLabel: "Screens",
+    screensH2: "The app at a glance",
+    imgAlt: {
+      m004: "Terms and conditions screen shown at first launch of the app",
+      m005: "Settings screen with language and client company data",
+      m006: "Report drafts screen",
+      m007: "Sent reports archive screen",
+      m008: "Storyboard of the 8 reporting steps, from asset to save and send",
+      m009: "Maintenance technician photographing an electric motor nameplate with a smartphone",
+      m010: "Smartphone resting on an electric motor to measure vibrations",
+      m011: "Four-panel comic: with no signal the report is saved on the device and sent when the connection returns",
+      m012: "Privacy diagram: data stored on the device and no automatic upload",
+    },
     heroFigcaption: "SmartMaintenance home screen",
 
     whatLabel: "What is SmartMaintenance",
