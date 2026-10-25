@@ -1,4 +1,4 @@
-**File:** GEOGRAFIA-MEDIA.md · **Percorso:** docs/GEOGRAFIA-MEDIA.md · **Revisione:** 2 · **Data:** 25/10/2026 · **Ora:** 10:51
+**File:** GEOGRAFIA-MEDIA.md · **Percorso:** docs/GEOGRAFIA-MEDIA.md · **Revisione:** 3 · **Data:** 25/10/2026 · **Ora:** 14:59
 
 ---
 
@@ -19,7 +19,7 @@ Le icone e i loghi applicativi non portano codici MediaCode.
 | **Taratura Serbatoi** (`/taratura-serbatoi`) | `src/assets/tarature/` | `TARATURE-` | `TARATURE-001` |
 | **miniFAT** (`/minifat`) | `src/assets/minifat/` | `MINFAT-` | `MINFAT-005` |
 | **Smart Maintenance** (`/smart-maintenance`) | `src/assets/smart-maintenance/` | `SMART-` | `SMART-003` |
-| **PEDFLOW** (`/pedflow`) | `src/assets/pedflow/` | `PEDFLOW-` | `PEDFLOW-001` |
+| **PEDFLOW** (`/pedflow`) | `src/assets/pedflow/` | `PEDFLOW-` | `PEDFLOW-009` |
 | **Agenda Share** (`/agenda-share`) | `src/assets/agenda-share/` | `AGENDASHARE-` | `AGENDASHARE-007` |
 | **Registro Credenziali** (`/registro-credenziali-fornitori`) | `src/assets/registro-credenziali/` | `REGWEB-` | `REGWEB-008` |
 | **Corso GDPR Incaricati** (`/corso-gdpr-incaricati`) | `src/assets/gdpr-incaricati/` | `CORSOGDPR-` | `CORSOGDPR-001` |
@@ -67,8 +67,17 @@ Le icone e i loghi applicativi non portano codici MediaCode.
 
 ### PEDFLOW (`/pedflow`)
 - Cartella: `src/assets/pedflow/`
-- `PEDFLOW-001`: Diagramma di flusso classificazione apparecchi a pressione (Direttiva PED 2014/68/UE)
-*Prossimo progressivo da assegnare: `PEDFLOW-002`*
+- `PEDFLOW-001`: Diagramma di flusso classificazione apparecchi a pressione (Direttiva PED 2014/68/UE) — hero (`pedflow-process-en.png`)
+- `PEDFLOW-002`: Sezione "Cos'è PedFlow" — tecnico che controlla la documentazione delle apparecchiature a pressione su tablet in uno stabilimento (foto realistica, slot riservato, 16:9, 1600x900). Didascalia EN: *Engineer checking pressure equipment documentation on a tablet in a process plant*
+- `PEDFLOW-003`: Sezione "Funzionalità" — recipienti a pressione e tubazioni in un impianto industriale (stile industriale, slot riservato, 4:3, 1200x900). Didascalia EN: *Pressure vessels and piping in an industrial plant subject to PED 2014/68/EU*
+- `PEDFLOW-004`: Sezione "Come funziona" — tecnico che legge la Scheda di Sicurezza (SDS) per CAS e codici H (foto realistica, slot riservato, 4:3, 1200x900). Didascalia EN: *Technician reading a Safety Data Sheet to identify CAS number and H statements*
+- `PEDFLOW-005`: Sezione "Come funziona" — ricerca per nome o CAS nel database CLP integrato (schermata app, slot riservato, 16:10, 1600x1000). Didascalia EN: *Searching a substance by name or CAS in the integrated CLP database*
+- `PEDFLOW-006`: Sezione "Come funziona" — tubazione isolata con termometro e manometro, condizioni operative Tmin/Tmax (stile industriale, slot riservato, 4:3, 1200x900). Didascalia EN: *Insulated process pipe with temperature gauge showing operating conditions (Tmin/Tmax)*
+- `PEDFLOW-007`: Sezione "Come funziona" — risultato del calcolo con Gruppo base, Gruppo finale e Art. 13 (schermata app, slot riservato, 16:10, 1600x1000). Didascalia EN: *Calculation result showing base Group and final Group with Art. 13 applied*
+- `PEDFLOW-008`: Sezione "PDF generato" — fac-simile del PDF di classificazione archiviato nel Registro (documento, slot riservato, 4:3, 1200x900). Didascalia EN: *Sample classification PDF with written rationale, archived in the Registry*
+- `PEDFLOW-009`: Sezione "Perché scegliere PedFlow" — team internazionale qualità/progettazione che consulta il Registro (foto realistica, slot riservato, 4:3, 1200x900). Didascalia EN: *International quality and design team reviewing PED classifications from the Registry*
+- Testi dentro le immagini in inglese (programma destinato a tutta Europa)
+*Prossimo progressivo da assegnare: `PEDFLOW-010`*
 
 ### Agenda Share (`/agenda-share`)
 - Cartella: `src/assets/agenda-share/`
