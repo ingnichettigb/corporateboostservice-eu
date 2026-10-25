@@ -178,6 +178,16 @@ export const pedflow = {
     ctaP: "Gruppo 1 o 2 della Direttiva PED in un click, con la sicurezza di un calcolo conforme.",
     ctaPrimary: "Prova ora",
     ctaSecondary: "Attiva per la tua azienda",
+    imgAlt: {
+      m002: "Tecnico che controlla la documentazione delle apparecchiature a pressione su un tablet in uno stabilimento di processo",
+      m003: "Recipienti a pressione e tubazioni in un impianto industriale soggetti alla Direttiva PED 2014/68/UE",
+      m004: "Tecnico che legge la Scheda di Sicurezza per individuare numero CAS e codici H",
+      m005: "Ricerca di una sostanza per nome o CAS nel database CLP integrato",
+      m006: "Tubazione isolata con termometro e manometro: condizioni operative Tmin e Tmax",
+      m007: "Risultato del calcolo con Gruppo base e Gruppo finale, applicando l'Art. 13",
+      m008: "Esempio di PDF di classificazione con motivazione testuale, archiviato nel Registro",
+      m009: "Team internazionale di qualità e progettazione che consulta le classificazioni PED dal Registro",
+    },
   },
 
   en: {
@@ -358,5 +368,15 @@ export const pedflow = {
     ctaP: "PED Group 1 or 2 in one click, with the confidence of a compliant calculation.",
     ctaPrimary: "Try now",
     ctaSecondary: "Activate for your company",
+    imgAlt: {
+      m002: "Engineer checking pressure equipment documentation on a tablet in a process plant",
+      m003: "Pressure vessels and piping in an industrial plant subject to PED 2014/68/EU",
+      m004: "Technician reading a Safety Data Sheet to identify CAS number and H statements",
+      m005: "Searching a substance by name or CAS in the integrated CLP database",
+      m006: "Insulated process pipe with temperature gauge showing operating conditions (Tmin/Tmax)",
+      m007: "Calculation result showing base Group and final Group with Art. 13 applied",
+      m008: "Sample classification PDF with written rationale, archived in the Registry",
+      m009: "International quality and design team reviewing PED classifications from the Registry",
+    },
   },
 } as const;

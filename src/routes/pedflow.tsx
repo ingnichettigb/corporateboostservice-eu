@@ -1,5 +1,6 @@
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import { MediaCode } from "@/components/MediaCode";
+import { MediaSlot } from "@/components/MediaSlot";
 import { Button } from "@/components/ui/button";
 import { buildMailto } from "@/lib/contact";
 import { useCart } from "@/lib/cart";
@@ -77,6 +78,28 @@ const securityIcons = [Lock, ShieldCheck, Users];
 const PEDFLOW_MONTHLY = getPedFlowMonthly();
 const PEDFLOW_ANNUAL = getPedFlowAnnual();
 const PEDFLOW_DOMAIN = "pedflow.corporateboostservice.eu";
+
+// Cartella e prompt AI degli slot immagine (codici registrati in docs/GEOGRAFIA-MEDIA.md).
+// PEDFLOW-001 è lo schema di processo già caricato (pedflow-process-en.png).
+const MEDIA_FOLDER = "src/assets/pedflow";
+
+const STYLE_PHOTO =
+  "Photorealistic documentary photograph, natural light, shallow depth of field, authentic industrial setting, people seen from a distance or from behind with no close-up faces, no watermarks, no logos. Any visible text must be correct English, spelled exactly as written, with no extra text.";
+const STYLE_INDUSTRIAL =
+  "Realistic industrial photography with a slightly technical look, steel, pipes and gauges, cool grey and blue tones with small yellow safety accents, sharp detail, no people, no watermarks, no logos. Any visible text must be correct English, spelled exactly as written, with no extra text.";
+const STYLE_UI =
+  "Clean modern software screenshot mockup on a laptop screen, palette of deep blue, white and light grey with yellow accents, soft depth and gentle shadows, professional mood, no watermarks. Every piece of visible text must be correct English, spelled exactly as written below, with no extra text.";
+
+const MEDIA_PROMPTS: Record<string, string> = {
+  "PEDFLOW-002": `Wide 16:9 (1600x900). A process engineer in a hard hat and hi-vis vest, seen from behind and slightly to the side, checks pressure equipment documentation on a tablet in front of pressure vessels and piping in a process plant at golden hour. ${STYLE_PHOTO}`,
+  "PEDFLOW-003": `4:3 (1200x900). Pressure vessels, heat exchangers and a dense network of steel piping with valves and flanges in an industrial plant, low angle, overcast sky, clean and orderly installation. ${STYLE_INDUSTRIAL}`,
+  "PEDFLOW-004": `4:3 (1200x900). A technician at a desk reading a printed Safety Data Sheet next to a laptop, a highlighter marking the lines 'CAS No.', 'EC No.' and 'H225 Highly flammable liquid and vapour'. Hard hat and notebook on the desk, industrial office with a window onto a plant. ${STYLE_PHOTO}`,
+  "PEDFLOW-005": `16:10 (1600x1000). A software screen with a search box containing 'Ethanol' and a tab bar 'SDS' and 'Substance name / CAS'. Below, a results table with the columns 'Index No', 'CAS', 'EC', 'Chemical name', 'H codes' and one highlighted row: '603-002-00-5', '64-17-5', '200-578-6', 'ethanol', 'H225'. A small counter reads '4,400+ substances'. ${STYLE_UI}`,
+  "PEDFLOW-006": `4:3 (1200x900). Close view of an insulated process pipe with a bimetal dial thermometer and a pressure gauge mounted on it, the thermometer needle in the middle of the scale, a yellow tag on the pipe reading 'Tmin / Tmax'. Blurred plant in the background. ${STYLE_INDUSTRIAL}`,
+  "PEDFLOW-007": `16:10 (1600x1000). A software result panel titled 'Classification result' with two clearly separated boxes: 'Base Group: 2' and 'Final Group: 1', a yellow notice 'Art. 13 applied: Tmax exceeds flash point', and below a short written rationale paragraph. A button 'Save and download PDF'. ${STYLE_UI}`,
+  "PEDFLOW-008": `4:3 (1200x900). A tidy A4 classification report on a desk, tilted slightly, with the heading 'PED Fluid Classification', rows 'Job no.', 'Customer', 'Project', 'Drawing no.', 'Tmin / Tmax', 'Substance, CAS, EC, H codes', 'Base Group', 'Final Group' and a boxed paragraph 'Rationale'. A small tab on the side reads 'Registry'. Blank placeholder values only, no real data. ${STYLE_UI}`,
+  "PEDFLOW-009": `4:3 (1200x900). Four colleagues of different backgrounds, seen from behind or in profile, gathered around a table in a bright engineering office reviewing PED classifications on a large monitor and a tablet, a plant model and rolled drawings on the table. ${STYLE_PHOTO}`,
+};
 
 function SingleUseButton({ className = "" }: { className?: string }) {
   return <PricingCartButton code="011PedFlow-002" index={7} full className={className} />;
@@ -196,6 +219,13 @@ function PedFlowPage() {
             <p className="mt-5 text-lg text-foreground/85 leading-relaxed">
               {t("whatP")}
             </p>
+            <MediaSlot
+              id="PEDFLOW-002"
+              alt={t("imgAlt.m002")}
+              prompt={MEDIA_PROMPTS["PEDFLOW-002"]}
+              folder={MEDIA_FOLDER}
+              className="mt-8"
+            />
             <div className="mt-8 flex flex-wrap justify-center gap-3">
               {badges.map((b) => (
                 <span
@@ -242,6 +272,13 @@ function PedFlowPage() {
                 );
               })}
             </div>
+            <MediaSlot
+              id="PEDFLOW-003"
+              alt={t("imgAlt.m003")}
+              prompt={MEDIA_PROMPTS["PEDFLOW-003"]}
+              folder={MEDIA_FOLDER}
+              className="mt-10 max-w-3xl mx-auto"
+            />
             <div className="mt-10 flex justify-center">
               <ActivateButtons />
             </div>
@@ -279,6 +316,36 @@ function PedFlowPage() {
                 );
               })}
             </div>
+            <div className="mt-12 grid sm:grid-cols-2 gap-6">
+              <MediaSlot
+                id="PEDFLOW-004"
+                alt={t("imgAlt.m004")}
+                prompt={MEDIA_PROMPTS["PEDFLOW-004"]}
+                folder={MEDIA_FOLDER}
+                className=""
+              />
+              <MediaSlot
+                id="PEDFLOW-005"
+                alt={t("imgAlt.m005")}
+                prompt={MEDIA_PROMPTS["PEDFLOW-005"]}
+                folder={MEDIA_FOLDER}
+                className=""
+              />
+              <MediaSlot
+                id="PEDFLOW-006"
+                alt={t("imgAlt.m006")}
+                prompt={MEDIA_PROMPTS["PEDFLOW-006"]}
+                folder={MEDIA_FOLDER}
+                className=""
+              />
+              <MediaSlot
+                id="PEDFLOW-007"
+                alt={t("imgAlt.m007")}
+                prompt={MEDIA_PROMPTS["PEDFLOW-007"]}
+                folder={MEDIA_FOLDER}
+                className=""
+              />
+            </div>
             <div className="mt-10 flex justify-center">
               <ActivateButtons />
             </div>
@@ -314,6 +381,13 @@ function PedFlowPage() {
                 );
               })}
             </div>
+            <MediaSlot
+              id="PEDFLOW-009"
+              alt={t("imgAlt.m009")}
+              prompt={MEDIA_PROMPTS["PEDFLOW-009"]}
+              folder={MEDIA_FOLDER}
+              className="mt-10 max-w-3xl mx-auto"
+            />
             <div className="mt-10 flex justify-center">
               <ActivateButtons />
             </div>
@@ -323,7 +397,14 @@ function PedFlowPage() {
         {/* PDF GENERATO */}
         <section className="py-20 bg-background">
           <div className="container mx-auto px-4 max-w-6xl grid lg:grid-cols-2 gap-10 items-center">
-            <div className="flex justify-center">
+            <div className="flex flex-col items-center gap-6">
+              <MediaSlot
+                id="PEDFLOW-008"
+                alt={t("imgAlt.m008")}
+                prompt={MEDIA_PROMPTS["PEDFLOW-008"]}
+                folder={MEDIA_FOLDER}
+                className="w-full"
+              />
               <div className="rounded-2xl border-2 border-primary/15 shadow-lg bg-white p-10 w-full max-w-md">
                 <FileDown className="h-16 w-16 text-primary mx-auto mb-6" aria-hidden />
                 <h3 className="text-xl font-bold text-center mb-2">{t("pdfCardH3")}</h3>
