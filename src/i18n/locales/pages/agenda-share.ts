@@ -1,3 +1,6 @@
+/**
+ * File: agenda-share.ts · Percorso: src/i18n/locales/pages/agenda-share.ts · Revisione: 2 · Data: 25/10/2026 · Ora: 10:10
+ */
 export const agendaShare = {
   it: {
     metaTitle: "Agenda Share — calendario in messaggio WhatsApp",
@@ -13,6 +16,15 @@ export const agendaShare = {
     heroSubtitle:
       "Collega Google Calendar o Outlook, scegli il periodo e ottieni un riepilogo ordinato da inviare subito. Senza copiare niente a mano.",
     heroTagline: "Meno copia-incolla, più appuntamenti confermati.",
+    imgAlt: {
+      m001: "Dal calendario sul computer (Google Calendar e Outlook) al messaggio WhatsApp sul telefono: Agenda Share in tre clic",
+      m002: "Gli appuntamenti del calendario trasformati in un messaggio di testo ordinato",
+      m003: "Collega il calendario: scelta tra Google Calendar e Outlook",
+      m004: "Scegli il periodo con un solo clic",
+      m005: "Pulisci l'elenco, poi copia il testo o aprilo in WhatsApp",
+      m006: "Righe oscurate con la parola Impegnato: il calendario è solo letto",
+      m007: "Studio professionale, artigiano, insegnante e famiglia usano Agenda Share",
+    },
     badges: [
       "Google Calendar",
       "Outlook / .ics",
@@ -95,6 +107,15 @@ export const agendaShare = {
     heroSubtitle:
       "Connect Google Calendar or Outlook, pick the period and get a tidy summary to send right away. No manual copying.",
     heroTagline: "Less copy-paste, more confirmed appointments.",
+    imgAlt: {
+      m001: "From the calendar on the computer (Google Calendar and Outlook) to the WhatsApp message on the phone: Agenda Share in three clicks",
+      m002: "Calendar appointments turned into a neat text message",
+      m003: "Connect the calendar: choose between Google Calendar and Outlook",
+      m004: "Choose the period with a single click",
+      m005: "Clean up the list, then copy the text or open it in WhatsApp",
+      m006: "Blurred rows showing the word Busy: the calendar is read-only",
+      m007: "Professional firm, craftsman, teacher and family using Agenda Share",
+    },
     badges: [
       "Google Calendar",
       "Outlook / .ics",

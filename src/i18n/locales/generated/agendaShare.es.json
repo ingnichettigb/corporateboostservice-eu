@@ -9,6 +9,15 @@
   "heroH1b": "en tres clics.",
   "heroSubtitle": "Conecte Google Calendar u Outlook, elija el período y obtenga un resumen claro para enviar de inmediato. Sin copiar y pegar manualmente.",
   "heroTagline": "Menos copiar y pegar, más citas confirmadas.",
+  "imgAlt": {
+    "m001": "Del calendario en el ordenador (Google Calendar y Outlook) al mensaje de WhatsApp en el teléfono: Agenda Share en tres clics",
+    "m002": "Las citas del calendario convertidas en un mensaje de texto ordenado",
+    "m003": "Conecta el calendario: elige entre Google Calendar y Outlook",
+    "m004": "Elige el periodo con un solo clic",
+    "m005": "Limpia la lista y luego copia el texto o ábrelo en WhatsApp",
+    "m006": "Filas ocultas con la palabra Ocupado: el calendario es solo de lectura",
+    "m007": "Despacho profesional, artesano, docente y familia usan Agenda Share"
+  },
   "badges": [
     "Google Calendar",
     "Outlook / .ics",

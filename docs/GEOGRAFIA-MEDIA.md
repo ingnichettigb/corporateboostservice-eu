@@ -1,3 +1,7 @@
+**File:** GEOGRAFIA-MEDIA.md · **Percorso:** docs/GEOGRAFIA-MEDIA.md · **Revisione:** 1 · **Data:** 25/10/2026 · **Ora:** 10:10
+
+---
+
 # Geografia Media e Registro Immagini (Stampone CBS)
 
 Registro ufficiale e univoco dei media, cartelle e codici per CorporateBoostService.eu.
@@ -16,6 +20,7 @@ Le icone e i loghi applicativi non portano codici MediaCode.
 | **miniFAT** (`/minifat`) | `src/assets/minifat/` | `MINFAT-` | `MINFAT-005` |
 | **Smart Maintenance** (`/smart-maintenance`) | `src/assets/smart-maintenance/` | `SMART-` | `SMART-003` |
 | **PEDFLOW** (`/pedflow`) | `src/assets/pedflow/` | `PEDFLOW-` | `PEDFLOW-001` |
+| **Agenda Share** (`/agenda-share`) | `src/assets/agenda-share/` | `AGENDASHARE-` | `AGENDASHARE-007` |
 | **Registro Credenziali** (`/registro-credenziali-fornitori`) | `src/assets/registro-credenziali/` | `REGWEB-` | `REGWEB-008` |
 | **Corso GDPR Incaricati** (`/corso-gdpr-incaricati`) | `src/assets/gdpr-incaricati/` | `CORSOGDPR-` | `CORSOGDPR-001` |
 | **Corso Privacy GDPR** (`/corso-privacy-gdpr`) | `src/assets/gdpr/` | `PRIVACYGDPR-` | *(in attesa contenuti)* |
@@ -63,6 +68,18 @@ Le icone e i loghi applicativi non portano codici MediaCode.
 - Cartella: `src/assets/pedflow/`
 - `PEDFLOW-001`: Diagramma di flusso classificazione apparecchi a pressione (Direttiva PED 2014/68/UE)
 *Prossimo progressivo da assegnare: `PEDFLOW-002`*
+
+### Agenda Share (`/agenda-share`)
+- Cartella: `src/assets/agenda-share/`
+- `AGENDASHARE-001`: Hero — dal calendario desktop (Google Calendar e Outlook) al messaggio WhatsApp sul telefono
+- `AGENDASHARE-002`: Che cos'è — gli appuntamenti diventano un messaggio di testo ordinato (slot riservato)
+- `AGENDASHARE-003`: Passaggio 1 — collegare il calendario (slot riservato)
+- `AGENDASHARE-004`: Passaggio 2 — scegliere il periodo (slot riservato)
+- `AGENDASHARE-005`: Passaggio 3 — pulire l'elenco, copiare o inviare su WhatsApp (slot riservato)
+- `AGENDASHARE-006`: Privacy — righe oscurate "Impegnato", calendario solo letto (slot riservato)
+- `AGENDASHARE-007`: Casi d'uso — studio professionale, artigiano, insegnante, famiglia (slot riservato)
+- *Icona dell'applicazione*: `src/assets/apps/agenda-share.jpeg.asset.json` (esente da codice)
+*Prossimo progressivo da assegnare: `AGENDASHARE-008`*
 
 ### Registro Credenziali Web (`/registro-credenziali-fornitori`)
 - Cartella: `src/assets/registro-credenziali/`

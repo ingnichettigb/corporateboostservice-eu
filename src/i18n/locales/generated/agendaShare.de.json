@@ -9,6 +9,15 @@
   "heroH1b": "in drei Klicks.",
   "heroSubtitle": "Verbinden Sie Google Kalender oder Outlook, wählen Sie den Zeitraum und erhalten Sie eine übersichtliche Zusammenfassung zum sofortigen Senden. Kein manuelles Kopieren.",
   "heroTagline": "Weniger Kopieren und Einfügen, mehr bestätigte Termine.",
+  "imgAlt": {
+    "m001": "Vom Kalender am Computer (Google Kalender und Outlook) zur WhatsApp-Nachricht auf dem Handy: Agenda Share in drei Klicks",
+    "m002": "Kalendertermine, umgewandelt in eine übersichtliche Textnachricht",
+    "m003": "Kalender verbinden: Auswahl zwischen Google Kalender und Outlook",
+    "m004": "Zeitraum mit einem einzigen Klick wählen",
+    "m005": "Liste bereinigen, dann Text kopieren oder in WhatsApp öffnen",
+    "m006": "Ausgeblendete Zeilen mit dem Wort Beschäftigt: Der Kalender wird nur gelesen",
+    "m007": "Kanzlei, Handwerker, Lehrkraft und Familie nutzen Agenda Share"
+  },
   "badges": [
     "Google Calendar",
     "Outlook / .ics",
