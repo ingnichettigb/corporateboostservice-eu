@@ -12,7 +12,7 @@ export const pedflow = {
     addedToast: "Aggiunto al carrello",
 
     heroBadge: "PedFlow · Classificazione fluidi PED",
-    heroH1a: "Gruppo 1 o 2 della PED,",
+    heroH1a: "FLUIDO Gruppo 1 o 2 della PED,",
     heroH1b: "in un click",
     heroP:
       "Lo strumento professionale per classificare i fluidi secondo la Direttiva PED 2014/68/UE: partendo dalla Scheda di Sicurezza o dal database CLP ufficiale ECHA, ottieni il Gruppo PED in modo rapido e tracciabile.",
