@@ -1,4 +1,4 @@
-**File:** GEOGRAFIA-MEDIA.md · **Percorso:** docs/GEOGRAFIA-MEDIA.md · **Revisione:** 1 · **Data:** 25/10/2026 · **Ora:** 10:10
+**File:** GEOGRAFIA-MEDIA.md · **Percorso:** docs/GEOGRAFIA-MEDIA.md · **Revisione:** 2 · **Data:** 25/10/2026 · **Ora:** 10:51
 
 ---
 
@@ -14,7 +14,7 @@ Le icone e i loghi applicativi non portano codici MediaCode.
 
 | Pagina / Sezione | Cartella Asset | Prefisso Codice | Ultimo Codice Assegnato |
 | :--- | :--- | :--- | :--- |
-| **Riutilizzabilità PPWR** (`/riuso-ppwr`) | `src/assets/riuso-ppwr/` | `RIUSOPPWR-` | `RIUSOPPWR-003` |
+| **Riutilizzabilità PPWR** (`/riuso-ppwr`) | `src/assets/riuso-ppwr/` | `RIUSOPPWR-` | `RIUSOPPWR-005` |
 | **Riciclabilità PPWR** (`/riciclo-ppwr`) | `src/assets/riciclo-ppwr/` | `RICICLOPPWR-` | *(in attesa contenuti)* |
 | **Taratura Serbatoi** (`/taratura-serbatoi`) | `src/assets/tarature/` | `TARATURE-` | `TARATURE-001` |
 | **miniFAT** (`/minifat`) | `src/assets/minifat/` | `MINFAT-` | `MINFAT-005` |
@@ -35,11 +35,12 @@ Le icone e i loghi applicativi non portano codici MediaCode.
 
 ### Riutilizzabilità PPWR (`/riuso-ppwr`)
 - Cartella: `src/assets/riuso-ppwr/`
-- `RIUSOPPWR-001`: Schema di flusso — Flusso decisionale conformità PPWR (slot riservato)
-- `RIUSOPPWR-002`: Fac-simile dichiarazione tecnica di riuso (slot riservato)
-- `RIUSOPPWR-003`: `RIUSOPPWR-003.jpg` — Ciclo di ricondizionamento e ispezione imballaggi
-- `RIUSOPPWR-004`: Interfaccia inserimento parametri ciclo (slot riservato)
-- `RIUSOPPWR-005`: Tabella tracciabilità e rotazioni (slot riservato)
+- `RIUSOPPWR-001`: Hero — piazzale logistico con contenitori riutilizzabili (IBC, fusti, cassette) in un circuito di riuso (slot riservato, formato 16:9, 1600x900)
+- `RIUSOPPWR-002`: Schema del circuito di riutilizzo — riempimento, trasporto, utilizzo, restituzione, ricondizionamento (slot riservato, 4:3, 1200x900)
+- `RIUSOPPWR-003`: `RIUSOPPWR-003.jpg` — Operatore che ispeziona un contenitore durante il ricondizionamento (caricata come riferimento Lovable `.asset.json`; 4:3, 1200x900)
+- `RIUSOPPWR-004`: Etichetta con QR code e DataMatrix su un contenitore riutilizzabile (slot riservato, 4:3, 1200x900)
+- `RIUSOPPWR-005`: Elenco delle valutazioni con esito idoneo, non idoneo, incompleto — dashboard (slot riservato, 16:10, 1600x1000)
+- Testi dentro le immagini in inglese (programma destinato a tutta Europa)
 *Prossimo progressivo da assegnare: `RIUSOPPWR-006`*
 
 ### Taratura Serbatoi (`/taratura-serbatoi`)

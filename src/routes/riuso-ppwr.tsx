@@ -1,8 +1,10 @@
 /**
  * File: riuso-ppwr.tsx
- * Revisione: 1
- * Data: 24/10/2026
- * Ora: 21:07
+ * Percorso: src/routes/riuso-ppwr.tsx
+ * Revisione: 2
+ * Data: 25/10/2026
+ * Ora: 10:51
+ * Modifica rev. 2: MediaImage cerca le immagini nella cartella src/assets/riuso-ppwr/ dal codice (RIUSOPPWR-00N).
  */
 
 import { createFileRoute, Link } from "@tanstack/react-router";
@@ -35,9 +37,12 @@ i18n.addResourceBundle("es", "riusoPpwr", locale.es, true, false);
 /* sotto l'immagine (componente MediaCode). MAI su icone o loghi.       */
 /*                                                                      */
 /* Come sostituire un riquadro con l'immagine reale:                    */
-/*   1. carica il file e ottieni l'URL (come per gli altri asset)       */
-/*   2. metti l'URL in `src` dello slot corrispondente                  */
-/*   3. la didascalia RIUSOPPWR-00N resta uguale, non va toccata        */
+/*   1. rinomina il file come il codice: RIUSOPPWR-00N.jpg              */
+/*      (vanno bene anche .jpeg, .png, .webp)                           */
+/*   2. caricalo in src/assets/riuso-ppwr/                              */
+/*   3. nessuna modifica al codice: il riquadro sparisce da solo        */
+/*   `src` di uno slot resta valido come ripiego; il file in cartella   */
+/*   ha la precedenza. La didascalia RIUSOPPWR-00N non si tocca.        */
 /* SHOW_PLACEHOLDERS = false nasconde i riquadri ancora vuoti.          */
 /* ------------------------------------------------------------------ */
 const MEDIA_PREFIX = "RIUSOPPWR";
@@ -67,16 +72,30 @@ const IMAGE_SLOTS: Slot[] = [
   },
 ];
 
+const folderImages = import.meta.glob("/src/assets/riuso-ppwr/*.{jpg,jpeg,png,webp}", {
+  eager: true,
+  query: "?url",
+  import: "default",
+}) as Record<string, string>;
+
+function folderImage(code: string): string | undefined {
+  const key = Object.keys(folderImages).find(
+    (p) => (p.split("/").pop() ?? "").replace(/\.[^.]+$/, "") === code,
+  );
+  return key ? folderImages[key] : undefined;
+}
+
 function MediaImage({ n, alt, className = "" }: { n: number; alt: string; className?: string }) {
   const { t } = useTranslation("riusoPpwr");
   const slot = IMAGE_SLOTS[n - 1];
   const code = `${MEDIA_PREFIX}-${String(n).padStart(3, "0")}`;
-  if (!slot.src && !SHOW_PLACEHOLDERS) return null;
+  const imgSrc = folderImage(code) ?? slot.src;
+  if (!imgSrc && !SHOW_PLACEHOLDERS) return null;
   return (
     <figure className={`w-full ${className}`}>
-      {slot.src ? (
+      {imgSrc ? (
         <img
-          src={slot.src}
+          src={imgSrc}
           alt={alt}
           loading="lazy"
           className="w-full rounded-xl border-2 border-primary/20 object-cover shadow-[var(--shadow-card)]"
