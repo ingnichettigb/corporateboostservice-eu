@@ -1,5 +1,5 @@
 /**
- * File: smart-maintenance.tsx · Percorso: src/routes/smart-maintenance.tsx · Revisione: 2 · Data: 25/10/2026 · Ora: 19:20
+ * File: smart-maintenance.tsx · Percorso: src/routes/smart-maintenance.tsx · Revisione: 3 · Data: 25/10/2026 · Ora: 19:18
  * Landing SmartMaintenance. Immagini: codici SMART-001..012 (registro docs/GEOGRAFIA-MEDIA.md).
  */
 import { createFileRoute, Link } from "@tanstack/react-router";
@@ -64,7 +64,12 @@ const MEDIA_PROMPTS: Record<string, string> = {
   "SMART-004": "Screenshot reale dal manuale d'uso: schermata Terms & Conditions al primo avvio.",
   "SMART-005": "Screenshot reale dal manuale d'uso: schermata Impostazioni.",
   "SMART-006": "Screenshot reale dal manuale d'uso: schermata Bozze report.",
-  "SMART-007": "Screenshot reale dal manuale d'uso: schermata Archivio invii.",
+  "SMART-007": "Screenshot reale dell'app: Archivio invii con report inviati (e-mail oscurate).",
+  "SMART-014": "Screenshot reale dell'app: passo 2/7, vista generale.",
+  "SMART-015": "Screenshot reale dell'app: passo 3/7, locale/macchina e commessa.",
+  "SMART-017": "Screenshot reale dell'app: passo 5/7, foto del guasto, filmato e vibrazioni.",
+  "SMART-018": "Screenshot reale dell'app: passo 6/7, descrizione con dettatura.",
+  "SMART-019": "Screenshot reale dell'app: passo 7/7, livello di urgenza.",
   "SMART-008": `Storyboard of 8 numbered panels (2 rows of 4) showing a friendly maintenance technician with a hard hat creating a fault report on a smartphone in a factory. Captions exactly: '1 Asset', '2 Work order', '3 Urgency', '4 Description & action', '5 Photos', '6 Video', '7 GPS', '8 Save & send'. Scenes: 1 scanning a machine nameplate; 2 a work-order tag; 3 four urgency chips 'Low', 'Medium', 'High', 'Urgent'; 4 speaking into the phone; 5 photographing a pump; 6 recording a short video; 7 a map pin; 8 a PDF and an envelope icon with a green check mark. ${VECTOR_STYLE}`,
   "SMART-009": `A maintenance technician in a hard hat and safety glasses, in a clean industrial plant, photographing the metal nameplate of an electric motor with a smartphone. The phone screen shows the camera view with a small overlay reading 'ASSET M-204'. Pipes and machinery softly blurred in the background. ${PHOTO_STYLE}`,
   "SMART-010": `Close-up industrial photograph of a smartphone resting flat on the housing of a running electric motor on a factory floor, measuring vibrations. Faint light blue vibration waves drawn around the motor, and the phone screen showing a simple three-line graph labelled 'X', 'Y', 'Z'. Steel, pipes and safety-yellow railings in the background. ${PHOTO_STYLE}`,
@@ -400,6 +405,53 @@ function SmartMaintenancePage() {
                   </CardContent>
                 </Card>
               ))}
+            </div>
+            <div className="mt-14">
+              <div className="text-center mb-6">
+                <p className="text-sm font-bold text-primary uppercase tracking-wider mb-1">
+                  {t("smartMaintenance.fieldLabel")}
+                </p>
+                <h3 className="text-2xl md:text-3xl font-bold">{t("smartMaintenance.fieldH2")}</h3>
+              </div>
+              <div className="grid md:grid-cols-3 gap-6 items-start max-w-5xl mx-auto">
+                <MediaSlot
+                  id="SMART-014"
+                  alt={t("smartMaintenance.imgAlt.m014")}
+                  prompt={MEDIA_PROMPTS["SMART-014"]}
+                  folder={MEDIA_FOLDER}
+                  className=""
+                />
+                <MediaSlot
+                  id="SMART-015"
+                  alt={t("smartMaintenance.imgAlt.m015")}
+                  prompt={MEDIA_PROMPTS["SMART-015"]}
+                  folder={MEDIA_FOLDER}
+                  className=""
+                />
+                <MediaSlot
+                  id="SMART-017"
+                  alt={t("smartMaintenance.imgAlt.m017")}
+                  prompt={MEDIA_PROMPTS["SMART-017"]}
+                  folder={MEDIA_FOLDER}
+                  className=""
+                />
+              </div>
+              <div className="grid grid-cols-2 gap-6 items-start max-w-xl mx-auto mt-6">
+                <MediaSlot
+                  id="SMART-018"
+                  alt={t("smartMaintenance.imgAlt.m018")}
+                  prompt={MEDIA_PROMPTS["SMART-018"]}
+                  folder={MEDIA_FOLDER}
+                  className=""
+                />
+                <MediaSlot
+                  id="SMART-019"
+                  alt={t("smartMaintenance.imgAlt.m019")}
+                  prompt={MEDIA_PROMPTS["SMART-019"]}
+                  folder={MEDIA_FOLDER}
+                  className=""
+                />
+              </div>
             </div>
             <div className="mt-10 flex justify-center">
               <ActivateButtons />

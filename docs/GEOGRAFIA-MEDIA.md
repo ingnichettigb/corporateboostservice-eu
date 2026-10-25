@@ -1,4 +1,4 @@
-**File:** GEOGRAFIA-MEDIA.md · **Percorso:** docs/GEOGRAFIA-MEDIA.md · **Revisione:** 3 · **Data:** 25/10/2026 · **Ora:** 19:20
+**File:** GEOGRAFIA-MEDIA.md · **Percorso:** docs/GEOGRAFIA-MEDIA.md · **Revisione:** 4 · **Data:** 25/10/2026 · **Ora:** 19:18
 
 ---
 
@@ -18,7 +18,7 @@ Le icone e i loghi applicativi non portano codici MediaCode.
 | **Riciclabilità PPWR** (`/riciclo-ppwr`) | `src/assets/riciclo-ppwr/` | `RICICLOPPWR-` | *(in attesa contenuti)* |
 | **Taratura Serbatoi** (`/taratura-serbatoi`) | `src/assets/tarature/` | `TARATURE-` | `TARATURE-001` |
 | **miniFAT** (`/minifat`) | `src/assets/minifat/` | `MINFAT-` | `MINFAT-005` |
-| **Smart Maintenance** (`/smart-maintenance`) | `src/assets/smart-maintenance/` | `SMART-` | `SMART-012` |
+| **Smart Maintenance** (`/smart-maintenance`) | `src/assets/smart-maintenance/` | `SMART-` | `SMART-020` |
 | **PEDFLOW** (`/pedflow`) | `src/assets/pedflow/` | `PEDFLOW-` | `PEDFLOW-009` |
 | **Agenda Share** (`/agenda-share`) | `src/assets/agenda-share/` | `AGENDASHARE-` | `AGENDASHARE-007` |
 | **Registro Credenziali** (`/registro-credenziali-fornitori`) | `src/assets/registro-credenziali/` | `REGWEB-` | `REGWEB-008` |
@@ -66,14 +66,22 @@ Le icone e i loghi applicativi non portano codici MediaCode.
 - `SMART-004`: `SMART-004.png` — screenshot reale dal manuale: Terms & Conditions al primo avvio
 - `SMART-005`: `SMART-005.png` — screenshot reale dal manuale: Impostazioni
 - `SMART-006`: `SMART-006.png` — screenshot reale dal manuale: Bozze report (ritagliato; da sostituire con uno con dati di esempio)
-- `SMART-007`: `SMART-007.png` — screenshot reale dal manuale: Archivio invii (ritagliato; da sostituire con uno con dati di esempio)
+- `SMART-007`: `SMART-007.jpg` — screenshot reale dell'app: Archivio invii con report inviati (e-mail oscurate)
 - `SMART-008`: Come funziona — storyboard vector comic degli 8 passi della segnalazione (slot riservato, 16:9, 1600x900)
 - `SMART-009`: Cos'è — foto: tecnico che fotografa la targa di un motore (OCR) (slot riservato, 16:9, 1600x900)
 - `SMART-010`: Perché — foto industriale: smartphone su un motore per misurare le vibrazioni (slot riservato, 16:9, 1600x900)
 - `SMART-011`: Perché — fumetto vector in 4 riquadri: funzionamento offline (slot riservato, 16:9, 1600x900)
 - `SMART-012`: Privacy — infografica vector: dati sul dispositivo, nessun invio automatico (slot riservato, 16:9, 1600x900)
-- Testi dentro le immagini in inglese
-*Prossimo progressivo da assegnare: `SMART-013`*
+- `SMART-013`: Passo 1/7 posizione GPS — riservato, da rigenerare (coordinate da non mostrare); non ancora in pagina
+- `SMART-014`: `SMART-014.jpg` — Come funziona, "Sul campo": passo 2/7, vista generale
+- `SMART-015`: `SMART-015.jpg` — Come funziona, "Sul campo": passo 3/7, locale/macchina e commessa
+- `SMART-016`: Passo 4/7 targhetta asset — riservato, da rigenerare (riquadro grigio difettoso); non ancora in pagina
+- `SMART-017`: `SMART-017.jpg` — Come funziona, "Sul campo": passo 5/7, foto del guasto, filmato, vibrazioni
+- `SMART-018`: `SMART-018.jpg` — Come funziona, "Sul campo": passo 6/7, descrizione con dettatura (verticale)
+- `SMART-019`: `SMART-019.jpg` — Come funziona, "Sul campo": passo 7/7, livello di urgenza (verticale)
+- `SMART-020`: Riepilogo e invio — riservato, da rigenerare (titolo storpiato, coordinate visibili); non ancora in pagina
+- Testi dentro le immagini in inglese per le immagini AI; gli screenshot mostrano l'interfaccia dell'app in italiano
+*Prossimo progressivo da assegnare: `SMART-021`*
 
 ### PEDFLOW (`/pedflow`)
 - Cartella: `src/assets/pedflow/`

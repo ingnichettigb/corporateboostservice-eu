@@ -1,5 +1,5 @@
 /**
- * File: smart-maintenance.ts · Percorso: src/i18n/locales/pages/smart-maintenance.ts · Revisione: 2 · Data: 25/10/2026 · Ora: 19:20
+ * File: smart-maintenance.ts · Percorso: src/i18n/locales/pages/smart-maintenance.ts · Revisione: 3 · Data: 25/10/2026 · Ora: 19:18
  */
 export const smartMaintenance = {
   it: {
@@ -26,16 +26,23 @@ export const smartMaintenance = {
     heroImgAlt: "App SmartMaintenance su smartphone con un report di manutenzione industriale",
     screensLabel: "Le schermate",
     screensH2: "L'app, passo dopo passo",
+    fieldLabel: "Sul campo",
+    fieldH2: "Le schermate durante la segnalazione",
     imgAlt: {
       m004: "Schermata dei termini e condizioni mostrata al primo avvio dell'app",
       m005: "Schermata Impostazioni con lingua e dati dell'azienda cliente",
       m006: "Schermata Bozze report",
-      m007: "Schermata Archivio invii",
+      m007: "Schermata Archivio invii con i report inviati",
       m008: "Storyboard degli 8 passi della segnalazione: dall'asset al salvataggio e invio",
       m009: "Tecnico di manutenzione che fotografa la targa di un motore elettrico con lo smartphone",
       m010: "Smartphone appoggiato su un motore elettrico per misurare le vibrazioni",
       m011: "Fumetto in 4 riquadri: senza segnale il report viene salvato sul dispositivo e inviato quando torna la connessione",
       m012: "Schema della privacy: dati salvati sul dispositivo e nessun invio automatico",
+      m014: "Passo 2 di 7: foto della vista generale dell'area",
+      m015: "Passo 3 di 7: locale, macchina e numero di commessa",
+      m017: "Passo 5 di 7: foto del guasto, filmato opzionale e rilevazione delle vibrazioni",
+      m018: "Passo 6 di 7: descrizione del guasto con dettatura vocale",
+      m019: "Passo 7 di 7: scelta del livello di urgenza",
     },
     heroFigcaption: "Home page Smart Maintenance",
 
@@ -211,16 +218,23 @@ export const smartMaintenance = {
     heroImgAlt: "SmartMaintenance app on a smartphone showing an industrial maintenance report",
     screensLabel: "Screens",
     screensH2: "The app at a glance",
+    fieldLabel: "In the field",
+    fieldH2: "The screens while reporting",
     imgAlt: {
       m004: "Terms and conditions screen shown at first launch of the app",
       m005: "Settings screen with language and client company data",
       m006: "Report drafts screen",
-      m007: "Sent reports archive screen",
+      m007: "Sent reports archive screen with sent reports",
       m008: "Storyboard of the 8 reporting steps, from asset to save and send",
       m009: "Maintenance technician photographing an electric motor nameplate with a smartphone",
       m010: "Smartphone resting on an electric motor to measure vibrations",
       m011: "Four-panel comic: with no signal the report is saved on the device and sent when the connection returns",
       m012: "Privacy diagram: data stored on the device and no automatic upload",
+      m014: "Step 2 of 7: photo of the general view of the area",
+      m015: "Step 3 of 7: room, machine and work order number",
+      m017: "Step 5 of 7: fault photo, optional video and vibration measurement",
+      m018: "Step 6 of 7: fault description with voice dictation",
+      m019: "Step 7 of 7: choosing the urgency level",
     },
     heroFigcaption: "SmartMaintenance home screen",
 
