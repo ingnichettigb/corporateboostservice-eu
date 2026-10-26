@@ -1,7 +1,11 @@
+/**
+ * File: riciclo-ppwr.ts · Percorso: src/i18n/locales/pages/riciclo-ppwr.ts · Revisione: 2 · Data: 25/10/2026 · Ora: 19:56
+ */
 type T = { title: string; desc: string };
 type Locale = {
   metaTitle: string; metaDescription: string; back: string;
   eyebrow: string; h1: string; heroP: string; keyPoints: string;
+  shotsLabel: string; shotsH2: string; imgAlt: Record<string, string>;
   whatLabel: string; whatH2: string; whatP: string; tags: string[];
   featLabel: string; featH2: string; features: T[];
   stepsLabel: string; stepsH2: string; steps: T[];
@@ -27,6 +31,8 @@ const it: Locale = {
   h1: "Riciclabilità PPWR, calcolata in un click",
   heroP: "Lo strumento professionale per calcolare la percentuale di riciclabilità di un imballaggio a partire dai suoi componenti, assegnare il grado e generare il PDF per il fascicolo tecnico.",
   keyPoints: "Calcolo ponderale automatico · Gradi A, B, C · PDF con logo aziendale · Multilingua",
+  shotsLabel: "Nell'app", shotsH2: "Le schermate principali",
+  imgAlt: { m001: "Imballaggi campione su un banco di laboratorio: bottiglia PET, vetro, tappo, tubetto e scatola", m002: "Come funziona il calcolo: componenti, calcolo ponderale e percentuale di riciclabilità", m003: "Scala dei gradi A, B, C con le soglie 95%, 80% e 70%", m004: "Linea di selezione di un impianto di riciclo con bottiglie PET e balle di plastica", m005: "Tappo su una bilancia analitica di precisione", m006: "Storyboard in quattro passi: dati del prodotto, componenti, calcolo, salvataggio e PDF", m007: "Editor della valutazione con bilancio di massa, risultato e soglie dell'Allegato II", m008: "Impostazioni: dati dell'azienda e logo da usare nei report", m009: "Archivio delle valutazioni con percentuale e grado", m010: "Anteprima del report PDF per il fascicolo tecnico", m011: "Accesso sicuro: verifica e-mail, licenza con codice PUK e quota di export PDF", m012: "Componenti di un imballaggio PET: corpo, tappo, etichetta e colla" },
   whatLabel: "Conformità europea",
   whatH2: "Il calcolo della riciclabilità, semplice e tracciabile",
   whatP: "L'app calcola la riciclabilità su base ponderale. Per ogni componente si inserisce peso e indice di riciclabilità (0-100%). L'app calcola massa totale, massa riciclabile e percentuale complessiva, poi assegna il grado.",
@@ -88,6 +94,8 @@ const en: Locale = {
   h1: "PPWR recyclability, calculated in one click",
   heroP: "The professional tool to calculate a packaging's recyclability percentage from its components, assign the grade and generate the PDF for the technical file.",
   keyPoints: "Automatic weight-based calculation · Grades A, B, C · PDF with company logo · Multilingual",
+  shotsLabel: "In the app", shotsH2: "The main screens",
+  imgAlt: { m001: "Packaging samples on a laboratory bench: PET bottle, glass, cap, tube and box", m002: "How the calculation works: components, weighted calculation and recyclability percentage", m003: "Scale of grades A, B, C with the 95%, 80% and 70% thresholds", m004: "Sorting line of a recycling plant with PET bottles and plastic bales", m005: "Cap on a precision analytical balance", m006: "Four-step storyboard: product data, components, calculation, save and PDF", m007: "Assessment editor with mass balance, result and Annex II thresholds", m008: "Settings: company data and logo used in reports", m009: "Assessment archive with percentage and grade", m010: "PDF report preview for the technical file", m011: "Secure access: email verification, licence with PUK code and PDF export quota", m012: "Components of a PET package: body, cap, label and glue" },
   whatLabel: "European compliance",
   whatH2: "Recyclability calculation, simple and traceable",
   whatP: "The app calculates recyclability on a weight basis. For each component you enter weight and recyclability index (0-100%). The app calculates total mass, recyclable mass and overall percentage, then assigns the grade.",
@@ -149,6 +157,8 @@ const de: Locale = {
   h1: "PPWR-Recyclingfähigkeit, mit einem Klick berechnet",
   heroP: "Das professionelle Werkzeug, um den Recyclingfähigkeitsanteil einer Verpackung aus ihren Komponenten zu berechnen, die Stufe zu vergeben und das PDF für die technischen Unterlagen zu erstellen.",
   keyPoints: "Automatische gewichtsbasierte Berechnung · Stufen A, B, C · PDF mit Firmenlogo · Mehrsprachig",
+  shotsLabel: "In der App", shotsH2: "Die wichtigsten Bildschirme",
+  imgAlt: { m001: "Verpackungsmuster auf einem Labortisch: PET-Flasche, Glas, Verschluss, Tube und Karton", m002: "So funktioniert die Berechnung: Komponenten, gewichtete Berechnung und Recyclingfähigkeit in Prozent", m003: "Skala der Stufen A, B, C mit den Schwellen 95 %, 80 % und 70 %", m004: "Sortieranlage eines Recyclingwerks mit PET-Flaschen und Kunststoffballen", m005: "Verschluss auf einer analytischen Präzisionswaage", m006: "Storyboard in vier Schritten: Produktdaten, Komponenten, Berechnung, Speichern und PDF", m007: "Bewertungseditor mit Massenbilanz, Ergebnis und Schwellen aus Anhang II", m008: "Einstellungen: Firmendaten und Logo für die Berichte", m009: "Archiv der Bewertungen mit Prozentsatz und Stufe", m010: "Vorschau des PDF-Berichts für die technischen Unterlagen", m011: "Sicherer Zugang: E-Mail-Bestätigung, Lizenz mit PUK-Code und PDF-Exportkontingent", m012: "Komponenten einer PET-Verpackung: Körper, Verschluss, Etikett und Klebstoff" },
   whatLabel: "Europäische Konformität",
   whatH2: "Die Berechnung der Recyclingfähigkeit, einfach und nachvollziehbar",
   whatP: "Die App berechnet die Recyclingfähigkeit auf Gewichtsbasis. Für jede Komponente geben Sie Gewicht und Recyclingfähigkeitsindex (0-100%) ein. Die App berechnet Gesamtmasse, recycelbare Masse und Gesamtanteil und vergibt anschließend die Stufe.",
@@ -210,6 +220,8 @@ const es: Locale = {
   h1: "Reciclabilidad PPWR, calculada en un clic",
   heroP: "La herramienta profesional para calcular el porcentaje de reciclabilidad de un envase a partir de sus componentes, asignar el grado y generar el PDF para el expediente técnico.",
   keyPoints: "Cálculo ponderal automático · Grados A, B, C · PDF con logotipo de empresa · Multilingüe",
+  shotsLabel: "En la app", shotsH2: "Las pantallas principales",
+  imgAlt: { m001: "Muestras de envases sobre una mesa de laboratorio: botella PET, vidrio, tapón, tubo y caja", m002: "Cómo funciona el cálculo: componentes, cálculo ponderal y porcentaje de reciclabilidad", m003: "Escala de grados A, B, C con los umbrales 95 %, 80 % y 70 %", m004: "Línea de clasificación de una planta de reciclaje con botellas PET y balas de plástico", m005: "Tapón sobre una balanza analítica de precisión", m006: "Storyboard en cuatro pasos: datos del producto, componentes, cálculo, guardado y PDF", m007: "Editor de la evaluación con balance de masa, resultado y umbrales del Anexo II", m008: "Ajustes: datos de la empresa y logotipo para los informes", m009: "Archivo de evaluaciones con porcentaje y grado", m010: "Vista previa del informe PDF para el expediente técnico", m011: "Acceso seguro: verificación de correo, licencia con código PUK y cuota de exportación de PDF", m012: "Componentes de un envase PET: cuerpo, tapón, etiqueta y cola" },
   whatLabel: "Conformidad europea",
   whatH2: "El cálculo de la reciclabilidad, sencillo y trazable",
   whatP: "La app calcula la reciclabilidad en base ponderal. Para cada componente se introduce el peso y el índice de reciclabilidad (0-100%). La app calcula masa total, masa reciclable y porcentaje global, y luego asigna el grado.",

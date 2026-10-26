@@ -1,4 +1,4 @@
-**File:** GEOGRAFIA-MEDIA.md · **Percorso:** docs/GEOGRAFIA-MEDIA.md · **Revisione:** 4 · **Data:** 25/10/2026 · **Ora:** 19:18
+**File:** GEOGRAFIA-MEDIA.md · **Percorso:** docs/GEOGRAFIA-MEDIA.md · **Revisione:** 5 · **Data:** 25/10/2026 · **Ora:** 19:56
 
 ---
 
@@ -15,7 +15,7 @@ Le icone e i loghi applicativi non portano codici MediaCode.
 | Pagina / Sezione | Cartella Asset | Prefisso Codice | Ultimo Codice Assegnato |
 | :--- | :--- | :--- | :--- |
 | **Riutilizzabilità PPWR** (`/riuso-ppwr`) | `src/assets/riuso-ppwr/` | `RIUSOPPWR-` | `RIUSOPPWR-005` |
-| **Riciclabilità PPWR** (`/riciclo-ppwr`) | `src/assets/riciclo-ppwr/` | `RICICLOPPWR-` | *(in attesa contenuti)* |
+| **Riciclabilità PPWR** (`/riciclo-ppwr`) | `src/assets/riciclo-ppwr/` | `RICICLOPPWR-` | `RICICLOPPWR-012` |
 | **Taratura Serbatoi** (`/taratura-serbatoi`) | `src/assets/tarature/` | `TARATURE-` | `TARATURE-001` |
 | **miniFAT** (`/minifat`) | `src/assets/minifat/` | `MINFAT-` | `MINFAT-005` |
 | **Smart Maintenance** (`/smart-maintenance`) | `src/assets/smart-maintenance/` | `SMART-` | `SMART-020` |
@@ -42,6 +42,23 @@ Le icone e i loghi applicativi non portano codici MediaCode.
 - `RIUSOPPWR-005`: Elenco delle valutazioni con esito idoneo, non idoneo, incompleto — dashboard (slot riservato, 16:10, 1600x1000)
 - Testi dentro le immagini in inglese (programma destinato a tutta Europa)
 *Prossimo progressivo da assegnare: `RIUSOPPWR-006`*
+
+### Riciclabilità PPWR (`/riciclo-ppwr`)
+- Cartella: `src/assets/riciclo-ppwr/`
+- `RICICLOPPWR-001`: Hero — foto: imballaggi campione su un banco di laboratorio (slot riservato, 16:9, 1600x900)
+- `RICICLOPPWR-002`: Cos'è — vector comic: come funziona il calcolo (slot riservato, 16:9, 1600x900)
+- `RICICLOPPWR-003`: Funzionalità — vector: scala dei gradi A, B, C con le soglie (slot riservato, 16:9, 1600x900)
+- `RICICLOPPWR-004`: Cos'è — industriale: linea di selezione di un impianto di riciclo (slot riservato, 16:9, 1600x900)
+- `RICICLOPPWR-005`: Perché — foto: tappo su una bilancia analitica di precisione (slot riservato, 16:9, 1600x900)
+- `RICICLOPPWR-006`: Come funziona — vector comic: storyboard dei 4 passi, dal prodotto al PDF (slot riservato, 16:9, 1600x900)
+- `RICICLOPPWR-007`: `RICICLOPPWR-007.jpg` — screenshot reale: editor della valutazione con bilancio di massa, risultato e soglie
+- `RICICLOPPWR-008`: `RICICLOPPWR-008.jpg` — screenshot reale: Impostazioni, dati azienda e logo (e-mail oscurata)
+- `RICICLOPPWR-009`: `RICICLOPPWR-009.jpg` — screenshot reale: archivio valutazioni (e-mail oscurata)
+- `RICICLOPPWR-010`: `RICICLOPPWR-010.jpg` — screenshot reale: anteprima report PDF (provvisoria, con azienda non impostata; e-mail oscurata)
+- `RICICLOPPWR-011`: Accesso e sicurezza — vector comic: verifica e-mail, licenza con PUK, quota export (slot riservato, 16:9, 1600x900)
+- `RICICLOPPWR-012`: Perché — industriale: componenti di un imballaggio PET (slot riservato, 16:9, 1600x900)
+- Testi dentro le immagini AI in inglese; gli screenshot mostrano l'interfaccia dell'app in italiano
+*Prossimo progressivo da assegnare: `RICICLOPPWR-013`*
 
 ### Taratura Serbatoi (`/taratura-serbatoi`)
 - Cartella: `src/assets/tarature/`
