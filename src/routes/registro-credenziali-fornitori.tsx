@@ -1,11 +1,12 @@
 /**
- * File: registro-credenziali-fornitori.tsx · Percorso: src/routes/registro-credenziali-fornitori.tsx · Revisione: 2 · Data: 26/10/2026 · Ora: 10:25
+ * File: registro-credenziali-fornitori.tsx · Percorso: src/routes/registro-credenziali-fornitori.tsx · Revisione: 3 · Data: 26/10/2026 · Ora: 10:32
  * Landing 040RegistroWEB. Immagini: REGWEB-001..008 esistenti in public/040registroweb/; REGWEB-009..012 slot in src/assets/registro-credenziali/ (registro docs/GEOGRAFIA-MEDIA.md).
  */
 import { useState, useEffect, useCallback } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { MediaCode } from "@/components/MediaCode";
 import { MediaSlot } from "@/components/MediaSlot";
+import registroLogo from "@/assets/apps/registro-credenziali.png";
 import { 
   ShieldCheck, 
   Layers, 
@@ -383,6 +384,13 @@ function RegistroSitiWebPage() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
               {/* Testi Hero */}
               <div className="lg:col-span-7 space-y-6 text-left">
+                <img
+                  src={registroLogo}
+                  alt="040RegistroWEB"
+                  width={80}
+                  height={80}
+                  className="h-20 w-20 rounded-2xl shadow-md"
+                />
                 <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-primary/10 text-primary border border-primary/20">
                   <ShieldCheck className="w-4 h-4 text-[#b4ff3c]" />
                   <span>Novità 2026 • Registro Siti Web Aziendali</span>

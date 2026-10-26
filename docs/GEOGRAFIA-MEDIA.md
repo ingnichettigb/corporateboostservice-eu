@@ -1,4 +1,4 @@
-**File:** GEOGRAFIA-MEDIA.md · **Percorso:** docs/GEOGRAFIA-MEDIA.md · **Revisione:** 6 · **Data:** 26/10/2026 · **Ora:** 10:25
+**File:** GEOGRAFIA-MEDIA.md · **Percorso:** docs/GEOGRAFIA-MEDIA.md · **Revisione:** 7 · **Data:** 26/10/2026 · **Ora:** 10:32
 
 ---
 
@@ -141,6 +141,7 @@ Le icone e i loghi applicativi non portano codici MediaCode.
 - `REGWEB-011`: Backup e report — vector: importazione CSV Unisci e Sostituisci (slot riservato, 16:9, 1600x900)
 - `REGWEB-012`: Lanciatore PWA — foto industriale: responsabile di magazzino con tablet (slot riservato, 16:9, 1600x900)
 - Non usate nella pagina: `040RegistroWEB-image09.jpg` (variante della gestione postazioni) e `040RegistroWEB-image10.jpg` (finestra in caricamento); senza codice.
+- *Icona dell'applicazione*: `src/assets/apps/registro-credenziali.png` (esente da codice; usata nella carta in /applicazioni e nell'intestazione della landing)
 - Testi dentro le nuove immagini in inglese
 *Prossimo progressivo da assegnare: `REGWEB-013`*
 
