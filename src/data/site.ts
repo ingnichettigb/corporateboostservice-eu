@@ -1,3 +1,7 @@
+/**
+ * File: site.ts · Percorso: src/data/site.ts · Revisione: 2 · Data: 26/10/2026 · Ora: 10:32
+ * Elenco di corsi e applicazioni; l'icona di ogni applicazione è nel campo image.
+ */
 import { ShieldCheck, FileLock, HardHat, Newspaper, Wrench, ClipboardCheck, FlaskConical, CalendarClock, KeyRound, Recycle } from "lucide-react";
 import taraturaLogo from "@/assets/apps/taratura-serbatoi.png.asset.json";
 import riusoPpwrLogo from "@/assets/apps/riuso-ppwr.jpeg.asset.json";
@@ -6,6 +10,7 @@ import smartMaintenanceLogo from "@/assets/apps/smartmaintenance.jpg.asset.json"
 import pedflowLogo from "@/assets/apps/pedflow.png.asset.json";
 import minifatLogo from "@/assets/apps/minifat.png.asset.json";
 import agendaShareLogo from "@/assets/apps/agenda-share.jpeg.asset.json";
+import registroCredenzialiLogo from "@/assets/apps/registro-credenziali.png";
 
 export const corsi = [
   { icon: ShieldCheck, key: "gdprAddetto", wip: false, hasSubtitle: true },
@@ -20,7 +25,7 @@ export const applicazioni = [
   { icon: ClipboardCheck, key: "miniFat", image: minifatLogo.url, wip: false },
   { icon: Wrench, key: "smartMaintenance", image: smartMaintenanceLogo.url, wip: false },
   { icon: CalendarClock, key: "agendaShare", image: agendaShareLogo.url, wip: false },
-  { icon: KeyRound, key: "registroCredenziali", wip: false },
+  { icon: KeyRound, key: "registroCredenziali", image: registroCredenzialiLogo, wip: false },
   { icon: Recycle, key: "ricicloPpwr", image: ricicloPpwrLogo.url, wip: false },
   { icon: Recycle, key: "riusoPpwr", image: riusoPpwrLogo.url, wip: false },
   { icon: Recycle, key: "taraturaSerbatoi", image: taraturaLogo.url, wip: false },
