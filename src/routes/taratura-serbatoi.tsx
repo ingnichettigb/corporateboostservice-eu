@@ -1,3 +1,7 @@
+/**
+ * File: taratura-serbatoi.tsx · Percorso: src/routes/taratura-serbatoi.tsx · Revisione: 2 · Data: 26/10/2026 · Ora: 10:43
+ * Landing Taratura Serbatoi. Immagini: TARATURE-001 (prima/dopo), TARATURE-002..024 icone di servizio, TARATURE-025..036 slot (registro docs/GEOGRAFIA-MEDIA.md).
+ */
 import { useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useTranslation } from "react-i18next";
@@ -7,6 +11,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { PricingCartButton } from "@/components/PricingCartButton";
+import { MediaSlot } from "@/components/MediaSlot";
 import { TaxNote } from "@/components/TaxDisclaimer";
 import i18n from "@/i18n";
 import { taraturaSerbatoi as locale } from "@/i18n/locales/pages/taratura-serbatoi";
@@ -34,6 +39,29 @@ const modules = CODES.map((code, i) => {
 });
 const FAMILIES = ["BOMB", "CON", "ORIZZ", "PIANO"] as const;
 const featIcons = [Ruler, Scale, ListOrdered, FileDown, ShieldCheck];
+
+const MEDIA_FOLDER = "src/assets/tarature";
+
+const PHOTO_STYLE =
+  `Photorealistic industrial photography, natural and workshop light, shallow depth of field, 16:9, steel blue, grey and warm orange tones, no brand logos, no watermark. Any visible text must be correct English, exactly as written, with no other text.`;
+const VECTOR_STYLE =
+  `Vector infographic comic style (flat vector art, clean sharp outlines, flat colours with very soft gradients), storyboard or technical-diagram layout, palette of steel blue, navy and white on a light background, 16:9, no photographic elements. All text must be correct English, exactly as written, with no other text.`;
+
+// Slot TARATURE-025..036 (testi nelle immagini in inglese). 031..035 sono screenshot reali dell'app da fornire.
+const MEDIA_PROMPTS: Record<string, string> = {
+  "TARATURE-025": `Stainless steel vertical process tank with a conical bottom in a clean fabrication workshop, a technician in a hard hat and gloves checking the level with a dip rod, other tanks and an overhead crane softly blurred. No text, no logos. ${PHOTO_STYLE}`,
+  "TARATURE-026": `Cross-section technical diagram of a vertical tank divided into seven numbered zones, 1 to 7, from the conical bottom up to the domed head, with a vertical ruler along the side labelled '1 mm step'. Callouts exactly: 'Head', 'Shell', 'Bottom'. ${VECTOR_STYLE}`,
+  "TARATURE-027": `Welder finishing a horizontal cylindrical tank with domed ends in a metal fabrication shop, welding glow, protective helmet, steel plates on racks behind. No text, no logos. ${PHOTO_STYLE}`,
+  "TARATURE-028": `Four numbered panels. Captions exactly: '1 Company data', '2 Choose the tank', '3 Enter the dimensions', '4 Table and PDF'. Scenes: a form with a logo, a grid of tank shapes with one highlighted, a tank drawing with dimension lines, a calibration table next to a PDF document. ${VECTOR_STYLE}`,
+  "TARATURE-029": `Inspector in a hi-vis vest and hard hat standing beside a large industrial tank, holding a tablet and a clipboard, a measuring tape on the ground, daylight in a plant yard. No text, no logos. ${PHOTO_STYLE}`,
+  "TARATURE-030": `Chart infographic of a tank calibration curve: a smooth S-shaped line, axes labelled exactly 'Level (mm)' and 'Volume (L)', one highlighted point, and a small table icon next to the chart labelled 'CSV'. ${VECTOR_STYLE}`,
+  "TARATURE-031": "Screenshot reale dell'app: menu principale con i dati comuni per l'intestazione dei report.",
+  "TARATURE-032": "Screenshot reale dell'app: elenco dei moduli di calcolo, con i moduli Attivo e In preparazione.",
+  "TARATURE-033": "Screenshot reale dell'app: un modulo di calcolo con geometria del serbatoio e risultati.",
+  "TARATURE-034": "Screenshot reale dell'app: tabella di taratura al millimetro.",
+  "TARATURE-035": "Screenshot reale dell'app: anteprima o PDF della dichiarazione di taratura.",
+  "TARATURE-036": `Three identical tanks side by side with plates exactly 'SN 001', 'SN 002', 'SN 003', each with its own PDF certificate below. A single setup panel above captioned 'One setup', and a caption below 'One report per serial number'. ${VECTOR_STYLE}`,
+};
 
 export const Route = createFileRoute("/taratura-serbatoi")({
   head: () => ({
@@ -121,6 +149,13 @@ function TaraturaPage() {
                 </div>
               ))}
             </div>
+            <MediaSlot
+              id="TARATURE-025"
+              alt={t("imgAlt.m025")}
+              prompt={MEDIA_PROMPTS["TARATURE-025"]}
+              folder={MEDIA_FOLDER}
+              className="mt-10"
+            />
             <PriceButtons />
           </div>
         </section>
@@ -149,6 +184,13 @@ function TaraturaPage() {
                 <ul className="space-y-3">{cmpRows.map((r) => (<li key={r[1]} className="flex gap-2"><Check className="h-5 w-5 text-primary shrink-0" aria-hidden />{r[1]}</li>))}</ul>
               </article>
             </div>
+            <MediaSlot
+              id="TARATURE-029"
+              alt={t("imgAlt.m029")}
+              prompt={MEDIA_PROMPTS["TARATURE-029"]}
+              folder={MEDIA_FOLDER}
+              className="mt-10"
+            />
           </div>
         </section>
 
@@ -159,6 +201,13 @@ function TaraturaPage() {
             <div className={cardCls}>
               <p className="text-foreground/85 leading-relaxed">{t("roiNote")}</p>
             </div>
+            <MediaSlot
+              id="TARATURE-026"
+              alt={t("imgAlt.m026")}
+              prompt={MEDIA_PROMPTS["TARATURE-026"]}
+              folder={MEDIA_FOLDER}
+              className="mt-10"
+            />
           </div>
         </section>
 
@@ -178,6 +227,67 @@ function TaraturaPage() {
                 );
               })}
             </div>
+            <div className="mt-10 grid md:grid-cols-2 gap-6 items-start">
+              <MediaSlot
+                id="TARATURE-030"
+                alt={t("imgAlt.m030")}
+                prompt={MEDIA_PROMPTS["TARATURE-030"]}
+                folder={MEDIA_FOLDER}
+                className=""
+              />
+              <MediaSlot
+                id="TARATURE-036"
+                alt={t("imgAlt.m036")}
+                prompt={MEDIA_PROMPTS["TARATURE-036"]}
+                folder={MEDIA_FOLDER}
+                className=""
+              />
+            </div>
+            <div className="mt-14">
+              <div className="text-center mb-6">
+                <p className="text-sm font-bold text-primary uppercase tracking-wider mb-1">{t("shotsLabel")}</p>
+                <h3 className="text-2xl md:text-3xl font-bold">{t("shotsH2")}</h3>
+              </div>
+              <div className="grid md:grid-cols-2 gap-6 items-start max-w-4xl mx-auto">
+                <MediaSlot
+                  id="TARATURE-031"
+                  alt={t("imgAlt.m031")}
+                  prompt={MEDIA_PROMPTS["TARATURE-031"]}
+                  folder={MEDIA_FOLDER}
+                  className=""
+                />
+                <MediaSlot
+                  id="TARATURE-032"
+                  alt={t("imgAlt.m032")}
+                  prompt={MEDIA_PROMPTS["TARATURE-032"]}
+                  folder={MEDIA_FOLDER}
+                  className=""
+                />
+              </div>
+              <MediaSlot
+                id="TARATURE-033"
+                alt={t("imgAlt.m033")}
+                prompt={MEDIA_PROMPTS["TARATURE-033"]}
+                folder={MEDIA_FOLDER}
+                className="mt-6 mx-auto max-w-4xl"
+              />
+              <div className="mt-6 grid md:grid-cols-2 gap-6 items-start max-w-4xl mx-auto">
+                <MediaSlot
+                  id="TARATURE-034"
+                  alt={t("imgAlt.m034")}
+                  prompt={MEDIA_PROMPTS["TARATURE-034"]}
+                  folder={MEDIA_FOLDER}
+                  className=""
+                />
+                <MediaSlot
+                  id="TARATURE-035"
+                  alt={t("imgAlt.m035")}
+                  prompt={MEDIA_PROMPTS["TARATURE-035"]}
+                  folder={MEDIA_FOLDER}
+                  className=""
+                />
+              </div>
+            </div>
             <PriceButtons />
           </div>
         </section>
@@ -187,6 +297,13 @@ function TaraturaPage() {
           <div className="container mx-auto px-4 max-w-6xl">
             <Heading label={t("modLabel")} h2={t("modH2")} />
             <p className="-mt-6 mb-8 text-center text-foreground/80 max-w-2xl mx-auto">{t("modP")}</p>
+            <MediaSlot
+              id="TARATURE-028"
+              alt={t("imgAlt.m028")}
+              prompt={MEDIA_PROMPTS["TARATURE-028"]}
+              folder={MEDIA_FOLDER}
+              className="mb-10 mx-auto max-w-4xl"
+            />
             <div className="flex flex-wrap justify-center gap-2 mb-10" role="group">
               {["ALL", ...FAMILIES].map((f) => (
                 <Button key={f} size="sm" variant={filter === f ? "default" : "outline"} onClick={() => setFilter(f)} aria-pressed={filter === f}>
@@ -210,6 +327,13 @@ function TaraturaPage() {
                 );
               })}
             </div>
+            <MediaSlot
+              id="TARATURE-027"
+              alt={t("imgAlt.m027")}
+              prompt={MEDIA_PROMPTS["TARATURE-027"]}
+              folder={MEDIA_FOLDER}
+              className="mt-12 mx-auto max-w-4xl"
+            />
           </div>
         </section>
 

@@ -1,4 +1,4 @@
-**File:** GEOGRAFIA-MEDIA.md · **Percorso:** docs/GEOGRAFIA-MEDIA.md · **Revisione:** 7 · **Data:** 26/10/2026 · **Ora:** 10:32
+**File:** GEOGRAFIA-MEDIA.md · **Percorso:** docs/GEOGRAFIA-MEDIA.md · **Revisione:** 8 · **Data:** 26/10/2026 · **Ora:** 10:43
 
 ---
 
@@ -16,7 +16,7 @@ Le icone e i loghi applicativi non portano codici MediaCode.
 | :--- | :--- | :--- | :--- |
 | **Riutilizzabilità PPWR** (`/riuso-ppwr`) | `src/assets/riuso-ppwr/` | `RIUSOPPWR-` | `RIUSOPPWR-005` |
 | **Riciclabilità PPWR** (`/riciclo-ppwr`) | `src/assets/riciclo-ppwr/` | `RICICLOPPWR-` | `RICICLOPPWR-012` |
-| **Taratura Serbatoi** (`/taratura-serbatoi`) | `src/assets/tarature/` | `TARATURE-` | `TARATURE-001` |
+| **Taratura Serbatoi** (`/taratura-serbatoi`) | `src/assets/tarature/` | `TARATURE-` | `TARATURE-036` |
 | **miniFAT** (`/minifat`) | `src/assets/minifat/` | `MINFAT-` | `MINFAT-005` |
 | **Smart Maintenance** (`/smart-maintenance`) | `src/assets/smart-maintenance/` | `SMART-` | `SMART-020` |
 | **PEDFLOW** (`/pedflow`) | `src/assets/pedflow/` | `PEDFLOW-` | `PEDFLOW-009` |
@@ -64,7 +64,21 @@ Le icone e i loghi applicativi non portano codici MediaCode.
 - Cartella: `src/assets/tarature/`
 - `TARATURE-001`: `TARATURE-001.png` — Immagine di confronto prima/dopo (calcolo manuale vs portale)
 - *Nota geometrie*: Le 22 icone dei moduli (`TARATURE-003`..`024`) sono icone di servizio e mostrano a video solo il numero geometrico della scheda (es. modulo 17), senza badge alfanumerico.
-*Prossimo progressivo immagini reali: `TARATURE-025`*
+- `TARATURE-002`: logo dell'applicazione (icona, esente da codice a video); `TARATURE-003`..`024` icone dei 22 moduli
+- `TARATURE-025`: Hero — industriale: serbatoio verticale con fondo conico in officina (slot riservato, 16:9, 1600x900)
+- `TARATURE-026`: Modello geometrico — vector: sezione di un serbatoio in 7 zone, passo 1 mm (slot riservato, 16:9, 1600x900)
+- `TARATURE-027`: 22 moduli — industriale: saldatore su un serbatoio orizzontale a testate bombate (slot riservato, 16:9, 1600x900)
+- `TARATURE-028`: 22 moduli — vector comic: flusso in 4 passi, dai dati azienda alla tabella e al PDF (slot riservato, 16:9, 1600x900)
+- `TARATURE-029`: Confronto — foto: collaudatore accanto a un grande serbatoio (slot riservato, 16:9, 1600x900)
+- `TARATURE-030`: Funzionalità — vector: curva di taratura livello/volume e tabella CSV (slot riservato, 16:9, 1600x900)
+- `TARATURE-031`: Funzionalità, galleria — screenshot reale: menu principale con dati comuni (slot riservato, da fornire)
+- `TARATURE-032`: Funzionalità, galleria — screenshot reale: elenco moduli Attivo / In preparazione (slot riservato, da fornire)
+- `TARATURE-033`: Funzionalità, galleria — screenshot reale: modulo di calcolo con geometria e risultati (slot riservato, da fornire)
+- `TARATURE-034`: Funzionalità, galleria — screenshot reale: tabella di taratura al millimetro (slot riservato, da fornire)
+- `TARATURE-035`: Funzionalità, galleria — screenshot reale: dichiarazione di taratura in PDF (slot riservato, da fornire)
+- `TARATURE-036`: Funzionalità — vector comic: più serbatoi uguali, una matricola per report (slot riservato, 16:9, 1600x900)
+- Testi dentro le nuove immagini AI in inglese; gli screenshot mostrano l'interfaccia dell'app
+*Prossimo progressivo immagini reali: `TARATURE-037`*
 
 ### miniFAT (`/minifat`)
 - Cartella: `src/assets/minifat/`
