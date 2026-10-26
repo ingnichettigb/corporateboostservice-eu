@@ -1,3 +1,7 @@
+/**
+ * File: riciclo-ppwr.tsx · Percorso: src/routes/riciclo-ppwr.tsx · Revisione: 2 · Data: 25/10/2026 · Ora: 19:56
+ * Landing Riciclabilità PPWR. Immagini: codici RICICLOPPWR-001..012 (registro docs/GEOGRAFIA-MEDIA.md).
+ */
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useTranslation } from "react-i18next";
 import {
@@ -12,6 +16,7 @@ import { PricingCartButton } from "@/components/PricingCartButton";
 import { TaxNote } from "@/components/TaxDisclaimer";
 import i18n from "@/i18n";
 import { ricicloPpwr as locale } from "@/i18n/locales/pages/riciclo-ppwr";
+import { MediaSlot } from "@/components/MediaSlot";
 import logoAsset from "@/assets/apps/riciclo-ppwr.png.asset.json";
 
 i18n.addResourceBundle("it", "ricicloPpwr", locale.it, true, false);
@@ -25,6 +30,29 @@ const URL_ = "https://corporateboostservice.eu/riciclo-ppwr";
 const featureIcons = [ListChecks, Calculator, Award, Building2, Sparkles, Archive, Languages];
 const whyIcons = [Gauge, History, Users, FileCheck2, BadgeCheck, Languages];
 const secIcons = [MailCheck, KeyRound, FileDown];
+
+const MEDIA_FOLDER = "src/assets/riciclo-ppwr";
+
+const PHOTO_STYLE =
+  `Photorealistic, natural soft daylight, shallow depth of field, professional photography, 16:9, light green, white and grey palette, no brand logos, no watermark. Any visible text must be correct English, exactly as written, with no other text.`;
+const VECTOR_STYLE =
+  `Vector infographic comic style (flat vector art, clean sharp outlines, flat colours with very soft gradients), storyboard layout with numbered panels, palette of green, teal and white on a light background, 16:9, no photographic elements. All text must be correct English, exactly as written, with no other text.`;
+
+// Prompt AI degli slot vuoti. 007..010 sono screenshot reali dell'app (e-mail oscurate).
+const MEDIA_PROMPTS: Record<string, string> = {
+  "RICICLOPPWR-001": `Wide shot of packaging samples on a clean stainless-steel laboratory bench: a clear PET bottle, a glass bottle, a white HDPE cap, a toothpaste tube and a small kraft box, with a precision scale softly blurred in the background. No people, no text, no logos. ${PHOTO_STYLE}`,
+  "RICICLOPPWR-002": `Three numbered panels showing how the calculation works. Panel 1: a PET bottle, a cap and a label, each with a weight tag '24.50 g', '2.10 g', '0.80 g'; caption '1 Components'. Panel 2: a small scale and a calculator with the formula 'weight x recyclable % / 100'; caption '2 Weighted calculation'. Panel 3: a round gauge showing '97.08 %' with a green badge 'A'; caption '3 Recyclability'. ${VECTOR_STYLE}`,
+  "RICICLOPPWR-003": `Infographic of the four recyclability grades as four horizontal bars of decreasing length with a vertical marker near the top bar. Labels exactly: 'Grade A >= 95%', 'Grade B >= 80%', 'Grade C >= 70%', 'Not compliant < 70%'. Bars in dark green, green, light green and red. ${VECTOR_STYLE}`,
+  "RICICLOPPWR-004": `Industrial recycling plant sorting line: conveyor belts carrying sorted clear PET bottles and white HDPE caps, compressed plastic bales in the background, safety-yellow railings, a few workers in hi-vis vests seen from far away, overhead industrial lighting. No text, no logos. ${PHOTO_STYLE}`,
+  "RICICLOPPWR-005": `Close-up laboratory photograph of a white HDPE bottle cap on a precision analytical balance with a glass draft shield, a clear PET bottle and a stainless-steel tray beside it. The balance display reads exactly '2.10 g'. ${PHOTO_STYLE}`,
+  "RICICLOPPWR-006": `Four numbered panels from product to PDF. Captions exactly: '1 Product data' (a form with name and revision), '2 Components' (a list of parts with weights), '3 Calculate' (a percentage gauge and a badge 'A'), '4 Save and download' (a PDF document with a download arrow). ${VECTOR_STYLE}`,
+  "RICICLOPPWR-007": "Screenshot reale dell'app: editor della valutazione con bilancio di massa, risultato e soglie.",
+  "RICICLOPPWR-008": "Screenshot reale dell'app: Impostazioni, dati dell'azienda e logo (e-mail oscurata).",
+  "RICICLOPPWR-009": "Screenshot reale dell'app: archivio delle valutazioni (e-mail oscurata).",
+  "RICICLOPPWR-010": "Screenshot reale dell'app: anteprima del report PDF (e-mail oscurata).",
+  "RICICLOPPWR-011": `Three numbered panels about secure access. Captions exactly: '1 Email verification' (an envelope with a six-digit code), '2 Licence with PUK code' (a key and a licence card), '3 PDF export quota' (a PDF icon with a counter '20'). ${VECTOR_STYLE}`,
+  "RICICLOPPWR-012": `Technical flat lay of the components of a PET bottle package neatly separated on a light grey surface with thin leader lines and labels exactly: 'Body', 'Cap', 'Label', 'Glue'. Clean industrial product-photography style, top-down view, soft shadows. ${PHOTO_STYLE}`,
+};
 
 export const Route = createFileRoute("/riciclo-ppwr")({
   head: () => ({
@@ -103,6 +131,13 @@ function RicicloPpwrPage() {
             <p className="mt-5 text-lg md:text-xl text-foreground/85 max-w-xl mx-auto">{t("heroP")}</p>
             <PriceButtons />
             <p className="mt-8 text-sm font-semibold text-foreground/75">{t("keyPoints")}</p>
+            <MediaSlot
+              id="RICICLOPPWR-001"
+              alt={t("imgAlt.m001")}
+              prompt={MEDIA_PROMPTS["RICICLOPPWR-001"]}
+              folder={MEDIA_FOLDER}
+              className="mt-10"
+            />
           </div>
         </section>
 
@@ -117,6 +152,22 @@ function RicicloPpwrPage() {
                   <CheckCircle2 className="h-4 w-4 text-primary" aria-hidden /> {b}
                 </span>
               ))}
+            </div>
+            <div className="mt-10 grid md:grid-cols-2 gap-6 items-start">
+              <MediaSlot
+                id="RICICLOPPWR-002"
+                alt={t("imgAlt.m002")}
+                prompt={MEDIA_PROMPTS["RICICLOPPWR-002"]}
+                folder={MEDIA_FOLDER}
+                className=""
+              />
+              <MediaSlot
+                id="RICICLOPPWR-004"
+                alt={t("imgAlt.m004")}
+                prompt={MEDIA_PROMPTS["RICICLOPPWR-004"]}
+                folder={MEDIA_FOLDER}
+                className=""
+              />
             </div>
             <PriceButtons />
           </div>
@@ -138,6 +189,42 @@ function RicicloPpwrPage() {
                 );
               })}
             </div>
+            <MediaSlot
+              id="RICICLOPPWR-003"
+              alt={t("imgAlt.m003")}
+              prompt={MEDIA_PROMPTS["RICICLOPPWR-003"]}
+              folder={MEDIA_FOLDER}
+              className="mt-10 mx-auto max-w-4xl"
+            />
+            <div className="mt-12">
+              <div className="text-center mb-6">
+                <p className="text-sm font-bold text-primary uppercase tracking-wider mb-1">{t("shotsLabel")}</p>
+                <h3 className="text-2xl md:text-3xl font-bold">{t("shotsH2")}</h3>
+              </div>
+              <MediaSlot
+                id="RICICLOPPWR-007"
+                alt={t("imgAlt.m007")}
+                prompt={MEDIA_PROMPTS["RICICLOPPWR-007"]}
+                folder={MEDIA_FOLDER}
+                className="mx-auto max-w-4xl"
+              />
+              <div className="mt-6 grid md:grid-cols-2 gap-6 items-start max-w-4xl mx-auto">
+                <MediaSlot
+                  id="RICICLOPPWR-008"
+                  alt={t("imgAlt.m008")}
+                  prompt={MEDIA_PROMPTS["RICICLOPPWR-008"]}
+                  folder={MEDIA_FOLDER}
+                  className=""
+                />
+                <MediaSlot
+                  id="RICICLOPPWR-009"
+                  alt={t("imgAlt.m009")}
+                  prompt={MEDIA_PROMPTS["RICICLOPPWR-009"]}
+                  folder={MEDIA_FOLDER}
+                  className=""
+                />
+              </div>
+            </div>
             <PriceButtons />
           </div>
         </section>
@@ -146,6 +233,13 @@ function RicicloPpwrPage() {
         <section className="py-20 bg-background">
           <div className="container mx-auto px-4 max-w-5xl">
             <Heading label={t("stepsLabel")} h2={t("stepsH2")} />
+            <MediaSlot
+              id="RICICLOPPWR-006"
+              alt={t("imgAlt.m006")}
+              prompt={MEDIA_PROMPTS["RICICLOPPWR-006"]}
+              folder={MEDIA_FOLDER}
+              className="mb-10 mx-auto max-w-4xl"
+            />
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
               {steps.map((s, i) => (
                 <article key={s.title} className={cardCls}>
@@ -174,6 +268,22 @@ function RicicloPpwrPage() {
                   </article>
                 );
               })}
+            </div>
+            <div className="mt-10 grid md:grid-cols-2 gap-6 items-start max-w-4xl mx-auto">
+              <MediaSlot
+                id="RICICLOPPWR-005"
+                alt={t("imgAlt.m005")}
+                prompt={MEDIA_PROMPTS["RICICLOPPWR-005"]}
+                folder={MEDIA_FOLDER}
+                className=""
+              />
+              <MediaSlot
+                id="RICICLOPPWR-012"
+                alt={t("imgAlt.m012")}
+                prompt={MEDIA_PROMPTS["RICICLOPPWR-012"]}
+                folder={MEDIA_FOLDER}
+                className=""
+              />
             </div>
             <PriceButtons />
           </div>
@@ -218,6 +328,13 @@ function RicicloPpwrPage() {
                 <p className="mt-6 text-sm text-foreground/70 italic">{t("pdfNote")}</p>
               </div>
             </div>
+            <MediaSlot
+              id="RICICLOPPWR-010"
+              alt={t("imgAlt.m010")}
+              prompt={MEDIA_PROMPTS["RICICLOPPWR-010"]}
+              folder={MEDIA_FOLDER}
+              className="mt-10 mx-auto max-w-4xl"
+            />
             <PriceButtons />
           </div>
         </section>
@@ -238,6 +355,13 @@ function RicicloPpwrPage() {
                 );
               })}
             </div>
+            <MediaSlot
+              id="RICICLOPPWR-011"
+              alt={t("imgAlt.m011")}
+              prompt={MEDIA_PROMPTS["RICICLOPPWR-011"]}
+              folder={MEDIA_FOLDER}
+              className="mt-10 mx-auto max-w-4xl"
+            />
             <PriceButtons />
           </div>
         </section>
