@@ -1,4 +1,4 @@
-**File:** GEOGRAFIA-MEDIA.md · **Percorso:** docs/GEOGRAFIA-MEDIA.md · **Revisione:** 5 · **Data:** 25/10/2026 · **Ora:** 19:56
+**File:** GEOGRAFIA-MEDIA.md · **Percorso:** docs/GEOGRAFIA-MEDIA.md · **Revisione:** 6 · **Data:** 26/10/2026 · **Ora:** 10:25
 
 ---
 
@@ -21,7 +21,7 @@ Le icone e i loghi applicativi non portano codici MediaCode.
 | **Smart Maintenance** (`/smart-maintenance`) | `src/assets/smart-maintenance/` | `SMART-` | `SMART-020` |
 | **PEDFLOW** (`/pedflow`) | `src/assets/pedflow/` | `PEDFLOW-` | `PEDFLOW-009` |
 | **Agenda Share** (`/agenda-share`) | `src/assets/agenda-share/` | `AGENDASHARE-` | `AGENDASHARE-007` |
-| **Registro Credenziali** (`/registro-credenziali-fornitori`) | `src/assets/registro-credenziali/` | `REGWEB-` | `REGWEB-008` |
+| **Registro Credenziali** (`/registro-credenziali-fornitori`) | `src/assets/registro-credenziali/` | `REGWEB-` | `REGWEB-012` |
 | **Corso GDPR Incaricati** (`/corso-gdpr-incaricati`) | `src/assets/gdpr-incaricati/` | `CORSOGDPR-` | `CORSOGDPR-001` |
 | **Corso Privacy GDPR** (`/corso-privacy-gdpr`) | `src/assets/gdpr/` | `PRIVACYGDPR-` | *(in attesa contenuti)* |
 | **Telecamere a Norma** (servizio Studio) | `src/assets/telecamere/` | `CAMERE-` | *(in attesa contenuti)* |
@@ -127,13 +127,22 @@ Le icone e i loghi applicativi non portano codici MediaCode.
 *Prossimo progressivo da assegnare: `AGENDASHARE-008`*
 
 ### Registro Credenziali Web (`/registro-credenziali-fornitori`)
-- Cartella: `src/assets/registro-credenziali/`
-- `REGWEB-001`: Cruscotto riepilogativo credenziali fornitori
-- `REGWEB-005`: Scheda dettaglio assegnazione account
-- `REGWEB-006`: Registro accessi e revoche
-- `REGWEB-007`: Report di conformità audit
-- `REGWEB-008`: Matrice permessi per fornitore
-*Prossimo progressivo da assegnare: `REGWEB-009`*
+- Cartella per le nuove immagini: `src/assets/registro-credenziali/`. Le prime 8 sono ancora in `public/040registroweb/` con il nome `040RegistroWEB-imageNN.jpg` (la pagina e `og:image` le richiamano da lì).
+- `REGWEB-001`: Hero — portatile con registro credenziali e scudo (`040RegistroWEB-image01.jpg`)
+- `REGWEB-002`: Carosello 1/3 — screenshot reale: vista Amministratore (`040RegistroWEB-image06.jpg`)
+- `REGWEB-003`: Carosello 2/3 — screenshot reale: Gestione postazioni e PUK (`040RegistroWEB-image08.jpg`)
+- `REGWEB-004`: Carosello 3/3 — screenshot reale: vista Collaboratore (`040RegistroWEB-image07.jpg`)
+- `REGWEB-005`: Prima e dopo — dal caos delle password al controllo (`040RegistroWEB-image05.jpg`)
+- `REGWEB-006`: Governance — gestione postazioni e PUK, rendering (`040RegistroWEB-image02.jpg`)
+- `REGWEB-007`: Backup e report — esportazione PDF e backup Excel, rendering (`040RegistroWEB-image03.jpg`)
+- `REGWEB-008`: Lanciatore Desktop PWA — icona sul desktop (`040RegistroWEB-image04.jpg`)
+- `REGWEB-009`: Governance — vector comic: prima attivazione, Amministratore, PUK, categorie (slot riservato, 16:9, 1600x900)
+- `REGWEB-010`: Prima e dopo — foto: team in ufficio ordinato (slot riservato, 16:9, 1600x900)
+- `REGWEB-011`: Backup e report — vector: importazione CSV Unisci e Sostituisci (slot riservato, 16:9, 1600x900)
+- `REGWEB-012`: Lanciatore PWA — foto industriale: responsabile di magazzino con tablet (slot riservato, 16:9, 1600x900)
+- Non usate nella pagina: `040RegistroWEB-image09.jpg` (variante della gestione postazioni) e `040RegistroWEB-image10.jpg` (finestra in caricamento); senza codice.
+- Testi dentro le nuove immagini in inglese
+*Prossimo progressivo da assegnare: `REGWEB-013`*
 
 ### Corso GDPR Incaricati (`/corso-gdpr-incaricati`)
 - Cartella: `src/assets/gdpr-incaricati/`
