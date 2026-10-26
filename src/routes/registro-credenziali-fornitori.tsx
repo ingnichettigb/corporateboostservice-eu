@@ -1,6 +1,11 @@
+/**
+ * File: registro-credenziali-fornitori.tsx · Percorso: src/routes/registro-credenziali-fornitori.tsx · Revisione: 2 · Data: 26/10/2026 · Ora: 10:25
+ * Landing 040RegistroWEB. Immagini: REGWEB-001..008 esistenti in public/040registroweb/; REGWEB-009..012 slot in src/assets/registro-credenziali/ (registro docs/GEOGRAFIA-MEDIA.md).
+ */
 import { useState, useEffect, useCallback } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { MediaCode } from "@/components/MediaCode";
+import { MediaSlot } from "@/components/MediaSlot";
 import { 
   ShieldCheck, 
   Layers, 
@@ -146,6 +151,21 @@ interface CarouselSlide {
   alt: string;
   icon: typeof Monitor;
 }
+
+const MEDIA_FOLDER = "src/assets/registro-credenziali";
+
+const PHOTO_STYLE =
+  `Photorealistic, natural light, shallow depth of field, professional photography, 16:9, navy blue, teal and white tones, no brand logos, no watermark. Any visible text must be correct English, exactly as written, with no other text.`;
+const VECTOR_STYLE =
+  `Vector infographic comic style (flat vector art, clean sharp outlines, flat colours with very soft gradients), storyboard layout with numbered panels, palette of navy blue, teal and white on a light background, 16:9, no photographic elements. All text must be correct English, exactly as written, with no other text.`;
+
+// Nuovi slot REGWEB-009..012 (testi nelle immagini in inglese).
+const MEDIA_PROMPTS: Record<string, string> = {
+  "REGWEB-009": `Four numbered panels. Captions exactly: '1 First activation', '2 Administrator', '3 Personal PUK', '4 Own categories only'. Scenes: 1 a licence card and a key unlocking a laptop; 2 a person with a crown badge in front of a dashboard with a gear icon; 3 a card marked 'PUK' handed to a colleague; 4 the colleague's screen showing only a 'Logistics' folder while other folders are greyed out. ${VECTOR_STYLE}`,
+  "REGWEB-010": `Bright modern office with a small team calmly working. One employee uses a laptop showing a tidy list of websites with a padlock icon; desks are clean, no sticky notes on the monitors. Side view, relaxed and organised mood. No readable text. ${PHOTO_STYLE}`,
+  "REGWEB-011": `Two side-by-side panels with CSV file icons. Left panel captioned 'Merge': a table receiving new rows highlighted in green, small caption 'Adds missing records'. Right panel captioned 'Replace': a backup file restoring a whole table, small caption 'Restores a full backup'. ${VECTOR_STYLE}`,
+  "REGWEB-012": `Industrial warehouse loading dock: a supervisor in a hi-vis vest holds a tablet showing a simple list-style web app with a padlock icon, pallets and parcels softly blurred behind, daylight from the dock door. No readable text. ${PHOTO_STYLE}`,
+};
 
 const carouselSlides: CarouselSlide[] = [
   {
@@ -515,6 +535,13 @@ function RegistroSitiWebPage() {
                 </Card>
               </div>
             </div>
+            <MediaSlot
+              id="REGWEB-010"
+              alt="Team in un ufficio luminoso che lavora con ordine: elenco dei siti protetto da lucchetto, scrivanie senza post-it"
+              prompt={MEDIA_PROMPTS["REGWEB-010"]}
+              folder={MEDIA_FOLDER}
+              className="mt-12 mx-auto max-w-4xl"
+            />
           </div>
         </section>
 
@@ -589,6 +616,13 @@ function RegistroSitiWebPage() {
               </div>
 
             </div>
+            <MediaSlot
+              id="REGWEB-009"
+              alt="Storyboard in quattro passi: prima attivazione, Amministratore, PUK personale, solo le proprie categorie"
+              prompt={MEDIA_PROMPTS["REGWEB-009"]}
+              folder={MEDIA_FOLDER}
+              className="mt-12 mx-auto max-w-4xl"
+            />
           </div>
         </section>
 
@@ -643,6 +677,13 @@ function RegistroSitiWebPage() {
               </div>
 
             </div>
+            <MediaSlot
+              id="REGWEB-011"
+              alt="Importazione da CSV: modalità Unisci per aggiungere i record mancanti, Sostituisci per ripristinare un backup completo"
+              prompt={MEDIA_PROMPTS["REGWEB-011"]}
+              folder={MEDIA_FOLDER}
+              className="mt-12 mx-auto max-w-4xl"
+            />
           </div>
         </section>
 
@@ -694,6 +735,13 @@ function RegistroSitiWebPage() {
               </div>
 
             </div>
+            <MediaSlot
+              id="REGWEB-012"
+              alt="Responsabile di magazzino che consulta il registro dei siti su un tablet alla baia di carico"
+              prompt={MEDIA_PROMPTS["REGWEB-012"]}
+              folder={MEDIA_FOLDER}
+              className="mt-12 mx-auto max-w-4xl"
+            />
           </div>
         </section>
 
