@@ -1,3 +1,6 @@
+/**
+ * File: taratura-serbatoi.ts · Percorso: src/i18n/locales/pages/taratura-serbatoi.ts · Revisione: 2 · Data: 26/10/2026 · Ora: 10:43
+ */
 // Testi della landing Taratura Serbatoi (IT/EN/DE/ES).
 // I 22 moduli sono composti da "coperchio" + "fondo": nome e descrizione derivano dalle parti.
 
@@ -8,6 +11,8 @@ const it = {
   eyebrow: "Per uffici tecnici, carpenterie e collaudatori",
   h1: "Tabelle di taratura dei serbatoi con passo di 1 mm: un grandissimo risparmio di tempo",
   heroP: "22 geometrie pronte, calcolo analitico al millimetro e dichiarazione di taratura in PDF da consegnare al cliente. Addio a sezionamenti CAD e fogli Excel fatti a mano.",
+  shotsLabel: "Nell'app", shotsH2: "Le schermate principali",
+  imgAlt: { m025: "Serbatoio verticale in acciaio inox con fondo conico in un'officina di carpenteria", m026: "Sezione tecnica di un serbatoio suddivisa in sette zone, con passo di calcolo di 1 mm", m027: "Saldatore al lavoro su un serbatoio orizzontale a testate bombate", m028: "Flusso in quattro passi: dati azienda, scelta del serbatoio, dimensioni, tabella e PDF", m029: "Collaudatore accanto a un grande serbatoio con tablet e metro", m030: "Curva di taratura: volume in litri in funzione del livello in millimetri, con tabella CSV", m031: "Menu principale: dati comuni per l'intestazione dei report", m032: "Elenco dei moduli di calcolo, attivi e in preparazione", m033: "Modulo di calcolo con geometria del serbatoio e risultati", m034: "Tabella di taratura al millimetro", m035: "Dichiarazione di taratura in PDF con spazio per timbro e firma", m036: "Tre serbatoi uguali con matricole diverse: una configurazione, un report per ogni matricola" },
   stats: [["7", "zone del modello"], ["1 mm", "passo della tabella"], ["22", "geometrie pronte"], ["N°", "matricole in serie"]],
   cmpLabel: "Il confronto",
   cmpH2: "Metodo tradizionale contro Taratura Serbatoi",
@@ -80,6 +85,8 @@ const en: T = {
   eyebrow: "For engineering offices, fabricators and inspectors",
   h1: "Tank calibration tables with a 1 mm step: a massive time saver",
   heroP: "22 ready-made geometries, exact millimetre calculation and a PDF calibration declaration for your customer. No more CAD slicing or hand-made spreadsheets.",
+  shotsLabel: "In the app", shotsH2: "The main screens",
+  imgAlt: { m025: "Stainless steel vertical tank with a conical bottom in a fabrication workshop", m026: "Technical cross-section of a tank divided into seven zones, with a 1 mm calculation step", m027: "Welder working on a horizontal tank with domed ends", m028: "Four-step flow: company data, tank choice, dimensions, table and PDF", m029: "Inspector beside a large tank with a tablet and a measuring tape", m030: "Calibration curve: volume in litres against level in millimetres, with CSV table", m031: "Main menu: common data for the report header", m032: "List of calculation modules, active and in preparation", m033: "Calculation module with tank geometry and results", m034: "Millimetre calibration table", m035: "PDF calibration declaration with space for stamp and signature", m036: "Three identical tanks with different serial numbers: one setup, one report per serial number" },
   stats: [["7", "model zones"], ["1 mm", "table step"], ["22", "ready geometries"], ["No.", "serial numbers"]],
   cmpLabel: "Comparison",
   cmpH2: "Traditional method versus Tank Calibration",
@@ -150,6 +157,8 @@ const de: T = {
   eyebrow: "Für Konstruktionsbüros, Behälterbauer und Prüfer",
   h1: "Peiltabellen für Tanks im 1-mm-Schritt: eine enorme Zeitersparnis",
   heroP: "22 fertige Geometrien, exakte Berechnung im Millimeterschritt und eine PDF-Kalibriererklärung für Ihren Kunden. Schluss mit CAD-Schnitten und selbstgebauten Tabellen.",
+  shotsLabel: "In der App", shotsH2: "Die wichtigsten Bildschirme",
+  imgAlt: { m025: "Senkrechter Edelstahlbehälter mit Kegelboden in einer Behälterbauwerkstatt", m026: "Technischer Schnitt eines Behälters in sieben Zonen mit 1-mm-Rechenschritt", m027: "Schweißer an einem liegenden Behälter mit gewölbten Böden", m028: "Ablauf in vier Schritten: Firmendaten, Behälterwahl, Maße, Tabelle und PDF", m029: "Prüfer neben einem großen Behälter mit Tablet und Maßband", m030: "Kalibrierkurve: Volumen in Litern über dem Füllstand in Millimetern, mit CSV-Tabelle", m031: "Hauptmenü: gemeinsame Daten für den Berichtskopf", m032: "Liste der Berechnungsmodule, aktiv und in Vorbereitung", m033: "Berechnungsmodul mit Behältergeometrie und Ergebnissen", m034: "Kalibriertabelle im Millimeterschritt", m035: "PDF-Kalibriererklärung mit Platz für Stempel und Unterschrift", m036: "Drei gleiche Behälter mit verschiedenen Seriennummern: eine Konfiguration, ein Bericht pro Seriennummer" },
   stats: [["7", "Modellzonen"], ["1 mm", "Tabellenschritt"], ["22", "fertige Geometrien"], ["Nr.", "Seriennummern"]],
   cmpLabel: "Vergleich",
   cmpH2: "Herkömmliche Methode gegen Tankkalibrierung",
@@ -220,6 +229,8 @@ const es: T = {
   eyebrow: "Para oficinas técnicas, calderería e inspectores",
   h1: "Tablas de calibración de depósitos con paso de 1 mm: un grandísimo ahorro de tiempo",
   heroP: "22 geometrías listas, cálculo exacto al milímetro y declaración de calibración en PDF para tu cliente. Adiós a los cortes en CAD y a las hojas de cálculo hechas a mano.",
+  shotsLabel: "En la app", shotsH2: "Las pantallas principales",
+  imgAlt: { m025: "Depósito vertical de acero inoxidable con fondo cónico en un taller de calderería", m026: "Sección técnica de un depósito dividida en siete zonas, con paso de cálculo de 1 mm", m027: "Soldador trabajando en un depósito horizontal con fondos abombados", m028: "Flujo en cuatro pasos: datos de la empresa, elección del depósito, dimensiones, tabla y PDF", m029: "Inspector junto a un depósito grande con tableta y cinta métrica", m030: "Curva de calibración: volumen en litros según el nivel en milímetros, con tabla CSV", m031: "Menú principal: datos comunes para la cabecera de los informes", m032: "Lista de módulos de cálculo, activos y en preparación", m033: "Módulo de cálculo con geometría del depósito y resultados", m034: "Tabla de calibración al milímetro", m035: "Declaración de calibración en PDF con espacio para sello y firma", m036: "Tres depósitos iguales con números de serie distintos: una configuración, un informe por número de serie" },
   stats: [["7", "zonas del modelo"], ["1 mm", "paso de la tabla"], ["22", "geometrías listas"], ["N.º", "números de serie"]],
   cmpLabel: "Comparación",
   cmpH2: "Método tradicional frente a Calibración de Depósitos",
