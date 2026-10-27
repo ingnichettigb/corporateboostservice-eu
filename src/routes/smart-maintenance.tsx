@@ -3,6 +3,7 @@
  * Landing SmartMaintenance. Immagini: codici SMART-001..012 (registro docs/GEOGRAFIA-MEDIA.md).
  */
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { landingHead } from "@/data/landing-seo-catalog";
 import { MediaCode } from "@/components/MediaCode";
 import { MediaSlot } from "@/components/MediaSlot";
 import { useTranslation } from "react-i18next";
@@ -78,27 +79,7 @@ const MEDIA_PROMPTS: Record<string, string> = {
 };
 
 export const Route = createFileRoute("/smart-maintenance")({
-  head: () => ({
-    meta: [
-      { title: i18n.t("smartMaintenance.metaTitle") },
-      {
-        name: "description",
-        content: i18n.t("smartMaintenance.metaDescription"),
-      },
-      {
-        property: "og:title",
-        content: i18n.t("smartMaintenance.ogTitle"),
-      },
-      {
-        property: "og:description",
-        content: i18n.t("smartMaintenance.ogDescription"),
-      },
-      { property: "og:image", content: heroImg },
-      { name: "twitter:image", content: heroImg },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
-  }),
+  head: () => landingHead("/smart-maintenance"),
   component: SmartMaintenancePage,
 });
 

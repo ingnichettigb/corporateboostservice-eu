@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { landingHead } from "@/data/landing-seo-catalog";
 import { MediaCode } from "@/components/MediaCode";
 import { useTranslation } from "react-i18next";
 import i18n from "@/i18n";
@@ -47,20 +48,7 @@ function FreeCourseButton({ className = "" }: { className?: string }) {
 
 
 export const Route = createFileRoute("/corso-gdpr-incaricati")({
-  head: () => ({
-    meta: [
-      { title: i18n.t("corsoIncaricati.metaTitle") },
-      { name: "description", content: i18n.t("corsoIncaricati.metaDesc") },
-      { property: "og:title", content: i18n.t("corsoIncaricati.metaTitle") },
-      { property: "og:description", content: i18n.t("corsoIncaricati.metaDesc") },
-      { property: "og:type", content: "website" },
-      { property: "og:image", content: heroImg },
-      { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: i18n.t("corsoIncaricati.metaTitle") },
-      { name: "twitter:description", content: i18n.t("corsoIncaricati.metaDesc") },
-      { name: "twitter:image", content: heroImg },
-    ],
-  }),
+  head: () => landingHead("/corso-gdpr-incaricati"),
   component: CorsoIncaricatiPage,
 });
 

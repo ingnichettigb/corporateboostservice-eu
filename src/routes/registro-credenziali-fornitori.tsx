@@ -4,6 +4,7 @@
  */
 import { useState, useEffect, useCallback } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { landingHead } from "@/data/landing-seo-catalog";
 import { MediaCode } from "@/components/MediaCode";
 import { MediaSlot } from "@/components/MediaSlot";
 import registroLogo from "@/assets/apps/registro-credenziali.png";
@@ -35,20 +36,7 @@ import { PricingCartButton } from "@/components/PricingCartButton";
 import { TaxNote } from "@/components/TaxDisclaimer";
 
 export const Route = createFileRoute("/registro-credenziali-fornitori")({
-  head: () => ({
-    meta: [
-      { title: "Registro Siti Web Aziendali e Credenziali | 040RegistroWEB" },
-      {
-        name: "description",
-        content: "Software SaaS per organizzare e proteggere tutti i siti web aziendali e le relative credenziali. Risparmia ore di lavoro: primo accesso Amministratore, permessi per categorie, backup Excel/PDF riservato e lanciatore Desktop PWA.",
-      },
-      { property: "og:title", content: "040RegistroWEB – Registro Siti Web Aziendali e Credenziali Protette" },
-      { property: "og:description", content: "Elimina il caos delle password, risparmia ore ogni mese e rimani padrone assoluto del sistema con il controllo centralizzato Amministratore." },
-      { property: "og:type", content: "website" },
-      { property: "og:image", content: "https://corporateboostservice.eu/040registroweb/040RegistroWEB-image01.jpg" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
-  }),
+  head: () => landingHead("/registro-credenziali-fornitori"),
   component: RegistroSitiWebPage,
 });
 

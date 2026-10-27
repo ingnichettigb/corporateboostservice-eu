@@ -8,6 +8,7 @@
  */
 
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { landingHead } from "@/data/landing-seo-catalog";
 import { useTranslation } from "react-i18next";
 import {
   ArrowLeft, ArrowRight, Recycle, ClipboardList, Gauge, QrCode, ListChecks, Building2, Archive,
@@ -130,16 +131,7 @@ const outcomeStyle = [
 ];
 
 export const Route = createFileRoute("/riuso-ppwr")({
-  head: () => ({
-    meta: [
-      { title: i18n.t("riusoPpwr:metaTitle") },
-      { name: "description", content: i18n.t("riusoPpwr:metaDescription") },
-      { property: "og:title", content: i18n.t("riusoPpwr:metaTitle") },
-      { property: "og:description", content: i18n.t("riusoPpwr:metaDescription") },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-    ],
-  }),
+  head: () => landingHead("/riuso-ppwr"),
   component: RiusoPpwrPage,
 });
 
