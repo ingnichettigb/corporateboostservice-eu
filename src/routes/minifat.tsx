@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { landingHead } from "@/data/landing-seo-catalog";
 import { MediaCode } from "@/components/MediaCode";
 import { useTranslation } from "react-i18next";
 import i18n from "@/i18n";
@@ -41,22 +42,7 @@ import screenPdf from "@/assets/minifat/screen-pdf.jpg";
 import screenArchive from "@/assets/minifat/screen-archive.jpg";
 
 export const Route = createFileRoute("/minifat")({
-  head: () => ({
-    meta: [
-      { title: i18n.t("minifat.metaTitle") },
-      {
-        name: "description",
-        content: i18n.t("minifat.metaDescription"),
-      },
-      { property: "og:title", content: i18n.t("minifat.ogTitle") },
-      {
-        property: "og:description",
-        content: i18n.t("minifat.ogDescription"),
-      },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
-  }),
+  head: () => landingHead("/minifat"),
   component: MiniFatPage,
 });
 

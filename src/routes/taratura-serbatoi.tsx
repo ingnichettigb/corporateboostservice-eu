@@ -4,6 +4,7 @@
  */
 import { useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { landingHead } from "@/data/landing-seo-catalog";
 import { useTranslation } from "react-i18next";
 import { ArrowLeft, Ruler, Scale, ListOrdered, FileDown, ShieldCheck, Construction, X, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -64,16 +65,7 @@ const MEDIA_PROMPTS: Record<string, string> = {
 };
 
 export const Route = createFileRoute("/taratura-serbatoi")({
-  head: () => ({
-    meta: [
-      { title: i18n.t("taratura:metaTitle") },
-      { name: "description", content: i18n.t("taratura:metaDescription") },
-      { property: "og:title", content: i18n.t("taratura:metaTitle") },
-      { property: "og:description", content: i18n.t("taratura:metaDescription") },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-    ],
-  }),
+  head: () => landingHead("/taratura-serbatoi"),
   component: TaraturaPage,
 });
 
