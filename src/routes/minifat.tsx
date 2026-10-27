@@ -41,22 +41,7 @@ import screenPdf from "@/assets/minifat/screen-pdf.jpg";
 import screenArchive from "@/assets/minifat/screen-archive.jpg";
 
 export const Route = createFileRoute("/minifat")({
-  head: () => ({
-    meta: [
-      { title: i18n.t("minifat.metaTitle") },
-      {
-        name: "description",
-        content: i18n.t("minifat.metaDescription"),
-      },
-      { property: "og:title", content: i18n.t("minifat.ogTitle") },
-      {
-        property: "og:description",
-        content: i18n.t("minifat.ogDescription"),
-      },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
-  }),
+  head: () => landingHead("/minifat"),
   component: MiniFatPage,
 });
 

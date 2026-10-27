@@ -125,27 +125,7 @@ function ActivateButtons({ className = "" }: { className?: string }) {
 
 
 export const Route = createFileRoute("/pedflow")({
-  head: () => ({
-    meta: [
-      { title: i18n.t("pedflow:metaTitle") },
-      {
-        name: "description",
-        content: i18n.t("pedflow:metaDescription"),
-      },
-      {
-        property: "og:title",
-        content: i18n.t("pedflow:ogTitle"),
-      },
-      {
-        property: "og:description",
-        content: i18n.t("pedflow:ogDescription"),
-      },
-      { property: "og:image", content: logoImg },
-      { name: "twitter:image", content: logoImg },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
-  }),
+  head: () => landingHead("/pedflow"),
   component: PedFlowPage,
 });
 

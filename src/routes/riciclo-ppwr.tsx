@@ -55,16 +55,7 @@ const MEDIA_PROMPTS: Record<string, string> = {
 };
 
 export const Route = createFileRoute("/riciclo-ppwr")({
-  head: () => ({
-    meta: [
-      { title: i18n.t("ricicloPpwr:metaTitle") },
-      { name: "description", content: i18n.t("ricicloPpwr:metaDescription") },
-      { property: "og:title", content: i18n.t("ricicloPpwr:metaTitle") },
-      { property: "og:description", content: i18n.t("ricicloPpwr:metaDescription") },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-    ],
-  }),
+  head: () => landingHead("/riciclo-ppwr"),
   component: RicicloPpwrPage,
 });
 
