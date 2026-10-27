@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { landingHead } from "@/data/landing-seo-catalog";
 import { MediaCode } from "@/components/MediaCode";
 import { useTranslation } from "react-i18next";
 import i18n from "@/i18n";

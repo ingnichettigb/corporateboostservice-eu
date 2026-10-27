@@ -4,6 +4,7 @@
  */
 import { useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { landingHead } from "@/data/landing-seo-catalog";
 import { useTranslation } from "react-i18next";
 import { ArrowLeft, Ruler, Scale, ListOrdered, FileDown, ShieldCheck, Construction, X, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";

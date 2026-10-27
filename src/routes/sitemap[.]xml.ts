@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import type {} from "@tanstack/react-start";
 import { articles } from "@/lib/blog";
+import { landingSeoCatalog } from "@/data/landing-seo-catalog";
 import { DEFAULT_LANG, LANGS, absoluteUrl, isItalianOnly } from "@/lib/locale";
 
 interface SitemapEntry {
@@ -47,7 +48,9 @@ export const Route = createFileRoute("/sitemap.xml")({
         // ogni versione è elencata come <url> e dichiara tutte le alternate (inclusa sé stessa).
         // Le pagine solo in italiano compaiono una volta sola, senza alternate.
         const urls = entries.flatMap((e) => {
+          const lastmod = landingSeoCatalog.find((l) => l.path === e.path)?.lastmod;
           const meta = [
+            lastmod ? `    <lastmod>${lastmod}</lastmod>` : null,
             e.changefreq ? `    <changefreq>${e.changefreq}</changefreq>` : null,
             e.priority ? `    <priority>${e.priority}</priority>` : null,
           ];

@@ -3,6 +3,7 @@
  * Landing Riciclabilità PPWR. Immagini: codici RICICLOPPWR-001..012 (registro docs/GEOGRAFIA-MEDIA.md).
  */
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { landingHead } from "@/data/landing-seo-catalog";
 import { useTranslation } from "react-i18next";
 import {
   ArrowLeft, ArrowRight, Recycle, ListChecks, Calculator, Award, Building2, Sparkles, Archive, Languages,

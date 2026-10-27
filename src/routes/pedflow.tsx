@@ -1,4 +1,5 @@
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
+import { landingHead } from "@/data/landing-seo-catalog";
 import { MediaCode } from "@/components/MediaCode";
 import { MediaSlot } from "@/components/MediaSlot";
 import { Button } from "@/components/ui/button";
