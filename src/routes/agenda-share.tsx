@@ -3,6 +3,7 @@
  * Landing Agenda Share. Immagini: codici AGENDASHARE-001..007 (registro docs/GEOGRAFIA-MEDIA.md).
  */
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { landingHead } from "@/data/landing-seo-catalog";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
@@ -97,29 +98,7 @@ function ActivateButtons({ className = "" }: { className?: string }) {
 }
 
 export const Route = createFileRoute("/agenda-share")({
-  head: () => ({
-    meta: [
-      { title: i18n.t("agendaShare:metaTitle") },
-      {
-        name: "description",
-        content: i18n.t("agendaShare:metaDescription"),
-      },
-      {
-        property: "og:title",
-        content: i18n.t("agendaShare:ogTitle"),
-      },
-      {
-        property: "og:description",
-        content: i18n.t("agendaShare:ogDescription"),
-      },
-      { property: "og:image", content: logoImg },
-      { name: "twitter:image", content: logoImg },
-      { name: "twitter:title", content: i18n.t("agendaShare:ogTitle") },
-      { name: "twitter:description", content: i18n.t("agendaShare:ogDescription") },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
-  }),
+  head: () => landingHead("/agenda-share"),
   component: AgendaSharePage,
 });
 

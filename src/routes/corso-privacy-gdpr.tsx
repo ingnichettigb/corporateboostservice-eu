@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { landingHead } from "@/data/landing-seo-catalog";
 import { useTranslation } from "react-i18next";
 import i18n from "@/i18n";
 import { Button } from "@/components/ui/button";
@@ -60,34 +61,7 @@ import { PricingCartButton } from "@/components/PricingCartButton";
 
 
 export const Route = createFileRoute("/corso-privacy-gdpr")({
-  head: () => ({
-    meta: [
-      { title: i18n.t("privacyGdpr.metaTitle") },
-      { name: "description", content: i18n.t("privacyGdpr.metaDesc") },
-      { property: "og:title", content: i18n.t("privacyGdpr.metaTitle") },
-      { property: "og:description", content: i18n.t("privacyGdpr.metaDesc") },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: i18n.t("privacyGdpr.metaTitle") },
-      { name: "twitter:description", content: i18n.t("privacyGdpr.metaDesc") },
-    ],
-    scripts: [
-      {
-        type: "application/ld+json",
-        children: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "Course",
-          name: "My Privacy — Formazione GDPR Professionale",
-          description: i18n.t("privacyGdpr.metaDesc"),
-          provider: {
-            "@type": "Organization",
-            name: "CorporateBoostService.eu",
-            url: "https://corporateboostservice.eu",
-          },
-        }),
-      },
-    ],
-  }),
+  head: () => landingHead("/corso-privacy-gdpr"),
   component: PrivacyGdprPage,
 });
 

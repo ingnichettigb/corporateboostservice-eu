@@ -1,5 +1,6 @@
 /**
- * File: landing-seo-catalog.ts · Percorso: src/data/landing-seo-catalog.ts · Ultima modifica: 27/10/2026
+ * File: landing-seo-catalog.ts · Percorso: src/data/landing-seo-catalog.ts · Revisione: 2 · Data: 27/10/2026 · Ora: 08:55
+ * Rev. 2: esteso a tutte le landing e ai corsi (schema Course, testi fissi per pagine solo italiane).
  * Scopo: registro SEO delle landing prioritarie. Contiene solo riferimenti (chiavi di traduzione,
  * immagine social, tipo di schema, lastmod): i testi restano nei file i18n.
  * lastmod (AAAA-MM-GG) si aggiorna a mano solo quando cambia davvero il contenuto della pagina.
@@ -10,11 +11,16 @@ import { LD_LANGUAGE, SITE_ORIGIN, absoluteUrl } from "@/lib/locale";
 
 export interface LandingSeoEntry {
   path: string;
-  titleKey: string;
-  descriptionKey: string;
+  titleKey?: string;
+  descriptionKey?: string;
+  /** Testi fissi (solo per pagine senza traduzioni, es. solo italiano). */
+  title?: string;
+  description?: string;
+  /** Immagine di ripiego specifica della pagina (URL assoluto) se manca il file in public/og/. */
+  fallbackImage?: string;
   /** Percorso pubblico dell'immagine social 1200x630 (cartella public/og/). */
   image: string;
-  schemaType: "SoftwareApplication";
+  schemaType: "SoftwareApplication" | "Course";
   lastmod: string;
 }
 
@@ -23,6 +29,20 @@ export const landingSeoCatalog: LandingSeoEntry[] = [
   { path: "/pedflow", titleKey: "pedflow:metaTitle", descriptionKey: "pedflow:metaDescription", image: "/og/pedflow.jpg", schemaType: "SoftwareApplication", lastmod: "2026-10-27" },
   { path: "/riciclo-ppwr", titleKey: "ricicloPpwr:metaTitle", descriptionKey: "ricicloPpwr:metaDescription", image: "/og/riciclo-ppwr.jpg", schemaType: "SoftwareApplication", lastmod: "2026-10-27" },
   { path: "/minifat", titleKey: "minifat.metaTitle", descriptionKey: "minifat.metaDescription", image: "/og/minifat.jpg", schemaType: "SoftwareApplication", lastmod: "2026-10-27" },
+  { path: "/riuso-ppwr", titleKey: "riusoPpwr:metaTitle", descriptionKey: "riusoPpwr:metaDescription", image: "/og/riuso-ppwr.jpg", schemaType: "SoftwareApplication", lastmod: "2026-10-27" },
+  { path: "/smart-maintenance", titleKey: "smartMaintenance.metaTitle", descriptionKey: "smartMaintenance.metaDescription", image: "/og/smart-maintenance.jpg", schemaType: "SoftwareApplication", lastmod: "2026-10-27" },
+  { path: "/agenda-share", titleKey: "agendaShare:metaTitle", descriptionKey: "agendaShare:metaDescription", image: "/og/agenda-share.jpg", schemaType: "SoftwareApplication", lastmod: "2026-10-27" },
+  {
+    path: "/registro-credenziali-fornitori",
+    title: "Registro Siti Web Aziendali e Credenziali | 040RegistroWEB",
+    description: "Software SaaS per organizzare e proteggere tutti i siti web aziendali e le relative credenziali. Risparmia ore di lavoro: primo accesso Amministratore, permessi per categorie, backup Excel/PDF riservato e lanciatore Desktop PWA.",
+    image: "/og/registro-credenziali-fornitori.jpg",
+    fallbackImage: "https://corporateboostservice.eu/040registroweb/040RegistroWEB-image01.jpg",
+    schemaType: "SoftwareApplication",
+    lastmod: "2026-10-26",
+  },
+  { path: "/corso-privacy-gdpr", titleKey: "privacyGdpr.metaTitle", descriptionKey: "privacyGdpr.metaDesc", image: "/og/corso-privacy-gdpr.jpg", schemaType: "Course", lastmod: "2026-10-27" },
+  { path: "/corso-gdpr-incaricati", titleKey: "corsoIncaricati.metaTitle", descriptionKey: "corsoIncaricati.metaDesc", image: "/og/corso-gdpr-incaricati.jpg", schemaType: "Course", lastmod: "2026-10-27" },
 ];
 
 /** Immagine social generica del sito (ripiego finché manca il file dedicato). */
@@ -46,33 +66,37 @@ export function getLandingSeo(path: string): LandingSeoEntry {
 export function landingHead(path: string) {
   const e = getLandingSeo(path);
   const lang = currentLang();
-  const title = i18n.t(e.titleKey);
-  const description = i18n.t(e.descriptionKey);
-  const image = ogFiles.has(e.image) ? `${SITE_ORIGIN}${e.image}` : FALLBACK_IMAGE;
+  const title = e.title ?? i18n.t(e.titleKey ?? "");
+  const description = e.description ?? i18n.t(e.descriptionKey ?? "");
+  const isDedicated = ogFiles.has(e.image);
+  const image = isDedicated ? `${SITE_ORIGIN}${e.image}` : (e.fallbackImage ?? FALLBACK_IMAGE);
+  const isCourse = e.schemaType === "Course";
+  const provider = { "@type": "Organization", name: "CorporateBoostService.eu", url: SITE_ORIGIN };
   const url = absoluteUrl(e.path, lang);
-  const isDedicated = image !== FALLBACK_IMAGE;
 
   const breadcrumb = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: i18n.t("nav.home"), item: absoluteUrl("/", lang) },
-      { "@type": "ListItem", position: 2, name: i18n.t("nav.applicazioni"), item: absoluteUrl("/applicazioni", lang) },
+      { "@type": "ListItem", position: 2, name: i18n.t(isCourse ? "nav.corsi" : "nav.applicazioni"), item: absoluteUrl(isCourse ? "/corsi" : "/applicazioni", lang) },
       { "@type": "ListItem", position: 3, name: title, item: url },
     ],
   };
-  const app = {
-    "@context": "https://schema.org",
-    "@type": e.schemaType,
-    name: title,
-    description,
-    url,
-    inLanguage: LD_LANGUAGE[lang],
-    applicationCategory: "BusinessApplication",
-    operatingSystem: "Web",
-    image,
-    provider: { "@type": "Organization", name: "CorporateBoostService.eu", url: SITE_ORIGIN },
-  };
+  const app = isCourse
+    ? { "@context": "https://schema.org", "@type": "Course", name: title, description, url, inLanguage: LD_LANGUAGE[lang], image, provider }
+    : {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        name: title,
+        description,
+        url,
+        inLanguage: LD_LANGUAGE[lang],
+        applicationCategory: "BusinessApplication",
+        operatingSystem: "Web",
+        image,
+        provider,
+      };
 
   return {
     meta: [
