@@ -1,5 +1,6 @@
 /**
- * File: landing-seo-catalog.ts · Percorso: src/data/landing-seo-catalog.ts · Revisione: 2 · Data: 27/10/2026 · Ora: 08:55
+ * File: landing-seo-catalog.ts · Percorso: src/data/landing-seo-catalog.ts · Revisione: 3 · Data: 02/11/2026 · Ora: 17:45
+ * Rev. 3: titoli/descrizioni SEO orientati al problema, nome prodotto tra parentesi (SEO_TEXTS, 4 lingue).
  * Rev. 2: esteso a tutte le landing e ai corsi (schema Course, testi fissi per pagine solo italiane).
  * Scopo: registro SEO delle landing prioritarie. Contiene solo riferimenti (chiavi di traduzione,
  * immagine social, tipo di schema, lastmod): i testi restano nei file i18n.
