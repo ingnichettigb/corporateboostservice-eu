@@ -8,7 +8,7 @@
   "translations": {
     "it": {
       "title": "Calcolo del volume interno di serbatoi",
-      "excerpt": "Il volume nei serbatoi orizzontali dipende dal livello e dalla geometria dei fondi. Una taratura a passi di 1 mm richiede calcoli accurati, senza.",
+      "excerpt": "Nei serbatoi orizzontali il volume dipende dal livello e dalla geometria dei fondi: ecco come costruire una tabella di taratura con passo di calcolo di 1 mm.",
       "readingTime": "6 min",
       "topics": [
         "Strumenti Amministrativi",
@@ -71,7 +71,7 @@
     },
     "es": {
       "title": "Cálculo del volumen interno de depósitos",
-      "excerpt": "El volumen en los depósitos horizontales depende del nivel y de la geometría de los fondos. Una calibración en pasos de 1 mm requiere cálculos precisos, sin.",
+      "excerpt": "En los depósitos horizontales el volumen depende del nivel y de la geometría de los fondos: cómo construir una tabla de calibración con paso de cálculo de 1 mm.",
       "readingTime": "7 min",
       "topics": [
         "Herramientas administrativas",
