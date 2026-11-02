@@ -1,4 +1,4 @@
-**File:** GEOGRAFIA-MEDIA.md · **Percorso:** docs/GEOGRAFIA-MEDIA.md · **Revisione:** 8 · **Data:** 26/10/2026 · **Ora:** 10:43
+**File:** GEOGRAFIA-MEDIA.md · **Percorso:** docs/GEOGRAFIA-MEDIA.md · **Revisione:** 9 · **Data:** 02/11/2026 · **Ora:** 18:05
 
 ---
 
@@ -168,6 +168,7 @@ Le icone e i loghi applicativi non portano codici MediaCode.
 - Convenzione: `BLOG-<NUMERO_ARTICOLO>-<PROGRESSIVO_3CIFRE>`
 - Articolo 001: `BLOG-001-001` (copertina credenziali), `BLOG-001-002` (figura 1)
 - Articolo 002: `BLOG-002-001` (copertina collaudo FAT)
+- Articolo 003: `BLOG-003-001` (copertina blueprint serbatoi), `BLOG-003-002` (figura 1, da TARATURE-026), `BLOG-003-003` (figura 2, da TARATURE-030) — prossimo libero `BLOG-003-004`
 
 ---
 
