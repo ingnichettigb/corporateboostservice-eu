@@ -1,4 +1,4 @@
-**File:** GEOGRAFIA-MEDIA.md · **Percorso:** docs/GEOGRAFIA-MEDIA.md · **Revisione:** 9 · **Data:** 02/11/2026 · **Ora:** 18:05
+**File:** GEOGRAFIA-MEDIA.md · **Percorso:** docs/GEOGRAFIA-MEDIA.md · **Revisione:** 10 · **Data:** 07/11/2026 · **Ora:** 20:55
 
 ---
 
