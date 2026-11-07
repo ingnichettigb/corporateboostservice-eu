@@ -169,6 +169,7 @@ Le icone e i loghi applicativi non portano codici MediaCode.
 - Articolo 001: `BLOG-001-001` (copertina credenziali), `BLOG-001-002` (figura 1)
 - Articolo 002: `BLOG-002-001` (copertina collaudo FAT)
 - Articolo 003: `BLOG-003-001` (copertina blueprint serbatoi), `BLOG-003-002` (figura 1, da TARATURE-026), `BLOG-003-003` (figura 2, da TARATURE-030) — prossimo libero `BLOG-003-004`
+- Articolo 004: `BLOG-004-001` (copertina imballaggio vino), `BLOG-004-002` (figura 1 bottiglie), `BLOG-004-003` (figura 2 scatola), `BLOG-004-004` (figura 3 flacone) — prossimo libero `BLOG-004-005`
 
 ---
 
