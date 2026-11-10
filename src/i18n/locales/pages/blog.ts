@@ -1,3 +1,5 @@
+import blogFr from "../generated/blogUi.fr.json";
+
 export const blog = {
   it: {
     metaTitle: "Blog — Approfondimenti per imprese | CorporateBoostService.eu",
@@ -83,4 +85,5 @@ export const blog = {
     notFoundTitle: "Artículo no disponible",
     notFoundText: "El artículo que buscas no existe o se ha movido.",
   },
+  fr: blogFr,
 };

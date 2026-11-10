@@ -1,0 +1,153 @@
+{
+ "metaTitle": "Agenda Share — votre calendrier dans un message WhatsApp",
+ "metaDescription": "Connectez Google Calendar ou Outlook, choisissez une période et obtenez un récapitulatif clair prêt à être envoyé sur WhatsApp. Fini le copier-coller manuel.",
+ "ogTitle": "Agenda Share — votre calendrier devient un message",
+ "ogDescription": "Trois clics : connectez le calendrier, choisissez la période, envoyez le récapitulatif sur WhatsApp. Le calendrier est uniquement lu.",
+ "backBtn": "Retour aux applications",
+ "heroBadge": "Du calendrier à WhatsApp",
+ "heroH1a": "Votre calendrier devient un message WhatsApp",
+ "heroH1b": "en trois clics.",
+ "heroSubtitle": "Connectez Google Calendar ou Outlook, choisissez la période et obtenez un récapitulatif clair à envoyer immédiatement. Fini le copier-coller manuel.",
+ "heroTagline": "Moins de copier-coller, plus de rendez-vous confirmés.",
+ "imgAlt": {
+  "m001": "Du calendrier sur l'ordinateur (Google Calendar et Outlook) au message WhatsApp sur le téléphone : Agenda Share en trois clics",
+  "m002": "Rendez-vous du calendrier transformés en un message texte soigné",
+  "m003": "Connecter le calendrier : choisir entre Google Calendar et Outlook",
+  "m004": "Choisir la période en un seul clic",
+  "m005": "Nettoyer la liste, puis copier le texte ou l'ouvrir dans WhatsApp",
+  "m006": "Lignes floutées affichant la mention Occupé : le calendrier est en lecture seule",
+  "m007": "Cabinet professionnel, artisan, enseignant et famille utilisant Agenda Share"
+ },
+ "badges": [
+  "Google Calendar",
+  "Outlook / .ics",
+  "Sans inscription",
+  "Mobile et bureau",
+  "4 langues"
+ ],
+ "whatLabel": "Présentation",
+ "whatH2": "Vos rendez-vous deviennent du texte, prêt à l'envoi",
+ "whatBody": "Agenda Share lit un calendrier (Google Calendar, ou un calendrier Outlook/Microsoft 365 publié au format .ics) et transforme les rendez-vous de la période sélectionnée en un texte clair et structuré, prêt à coller ou à envoyer sur WhatsApp. Partager vos disponibilités prend trois clics au lieu de dix minutes de copier-coller.",
+ "howLabel": "Fonctionnement",
+ "howH2": "Trois étapes",
+ "steps": [
+  {
+   "title": "Connecter le calendrier",
+   "desc": "Google Calendar principal ou secondaire, ou calendrier Outlook/Microsoft 365 publié. Les calendriers sont enregistrés et sélectionnés en un clic."
+  },
+  {
+   "title": "Choisir la période",
+   "desc": "Aujourd'hui, demain, fin de semaine, 7, 15 ou 30 prochains jours, ce mois-ci ou le mois prochain : un clic pour chaque option."
+  },
+  {
+   "title": "Ajuster et envoyer",
+   "desc": "Supprimez, modifiez ou masquez des lignes, puis copiez le texte ou ouvrez-le directement dans WhatsApp."
+  }
+ ],
+ "featuresLabel": "Fonctionnalités",
+ "featuresH2": "Tout ce dont vous avez besoin avant d'envoyer",
+ "features": [
+  {
+   "title": "Périodes rapides",
+   "desc": "Dix plages prédéfinies, d'aujourd'hui jusqu'au mois prochain, en un seul clic."
+  },
+  {
+   "title": "Supprimer une ligne",
+   "desc": "La corbeille supprime le rendez-vous du récapitulatif, jamais du calendrier."
+  },
+  {
+   "title": "Modifier à la volée",
+   "desc": "Modifiez le texte, l'heure de début et de fin, le lieu, ou définissez « toute la journée »."
+  },
+  {
+   "title": "Mode Occupé",
+   "desc": "Conserve le jour et l'heure et remplace le contenu par « Occupé »."
+  },
+  {
+   "title": "Sélection et confidentialité",
+   "desc": "Sélectionnez plusieurs lignes et masquez-les en bloc : une option réversible à tout moment."
+  },
+  {
+   "title": "Rendez-vous flash",
+   "desc": "Ajoutez manuellement un engagement absent du calendrier, uniquement pour ce récapitulatif."
+  },
+  {
+   "title": "Calendriers enregistrés",
+   "desc": "Renommez, modifiez ou supprimez des calendriers ; une coche indique celui qui est actif."
+  },
+  {
+   "title": "Quatre langues",
+   "desc": "Italiano, English, Español, Deutsch : votre choix est mémorisé."
+  },
+  {
+   "title": "Copier ou WhatsApp",
+   "desc": "Copiez le texte ou ouvrez WhatsApp : l'application installée en priorité, puis WhatsApp Web."
+  }
+ ],
+ "privacyLabel": "Confidentialité",
+ "privacyH2": "Montrez vos disponibilités, pas vos secrets.",
+ "privacy": [
+  {
+   "title": "Le calendrier est uniquement lu",
+   "desc": "Aucun droit d'écriture : les rendez-vous sont lus, rien de plus."
+  },
+  {
+   "title": "Aucune modification de vos événements",
+   "desc": "Les suppressions, modifications et lignes masquées restent à l'écran et s'effacent lors du rechargement."
+  },
+  {
+   "title": "Les données restent dans votre navigateur",
+   "desc": "Vos préférences sont stockées dans votre navigateur : le service ne conserve rien."
+  }
+ ],
+ "casesLabel": "Cas d'usage",
+ "casesH2": "Ils l'utilisent au quotidien",
+ "cases": [
+  {
+   "title": "Cabinet professionnel",
+   "desc": "Le secrétariat transmet aux clients les créneaux disponibles de la semaine sans divulguer d'autres noms."
+  },
+  {
+   "title": "Artisan",
+   "desc": "Envoie au client le planning des interventions des prochains jours, avec horaires et adresses."
+  },
+  {
+   "title": "Enseignant et tuteur",
+   "desc": "Partage les prochains cours avec les élèves et les familles, en masquant les engagements personnels."
+  },
+  {
+   "title": "Famille",
+   "desc": "Regroupe les plannings et rendez-vous des quinze prochains jours dans un seul message."
+  }
+ ],
+ "faqLabel": "FAQ",
+ "faqH2": "Réponses rapides",
+ "faq": [
+  {
+   "q": "Dois-je installer quelque chose ?",
+   "a": "Non : le service s'utilise dans le navigateur, sur mobile comme sur ordinateur."
+  },
+  {
+   "q": "Est-ce compatible avec Outlook ?",
+   "a": "Oui, avec les calendriers Outlook ou Microsoft 365 publiés (liens .ics ou /index.html) ainsi que tout calendrier .ics public."
+  },
+  {
+   "q": "Les modifications impactent-elles mon calendrier ?",
+   "a": "Non. Chaque modification n'apparaît qu'à l'écran et disparaît dès le rechargement de la période."
+  },
+  {
+   "q": "Faut-il créer un compte ?",
+   "a": "Aucune inscription requise : les préférences restent stockées dans votre navigateur."
+  },
+  {
+   "q": "L'outil fonctionne-t-il sur smartphone ?",
+   "a": "Oui, l'interface est conçue pour mobile et bascule directement vers WhatsApp."
+  },
+  {
+   "q": "Puis-je utiliser d'autres langues ?",
+   "a": "Oui : italien, anglais, espagnol et allemand, avec mémorisation de la langue choisie."
+  }
+ ],
+ "ctaH2": "Moins de copier-coller, plus de rendez-vous confirmés.",
+ "ctaBody": "Activez Agenda Share et envoyez votre premier récapitulatif en quelques instants."
+}

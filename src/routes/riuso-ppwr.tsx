@@ -31,6 +31,7 @@ i18n.addResourceBundle("it", "riusoPpwr", locale.it, true, false);
 i18n.addResourceBundle("en", "riusoPpwr", locale.en, true, false);
 i18n.addResourceBundle("de", "riusoPpwr", locale.de, true, false);
 i18n.addResourceBundle("es", "riusoPpwr", locale.es, true, false);
+i18n.addResourceBundle("fr", "riusoPpwr", locale.fr, true, false);
 
 /* ------------------------------------------------------------------ */
 /* IMMAGINI                                                            */

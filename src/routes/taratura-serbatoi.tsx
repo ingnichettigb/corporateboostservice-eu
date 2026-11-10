@@ -23,6 +23,7 @@ i18n.addResourceBundle("it", "taratura", locale.it, true, false);
 i18n.addResourceBundle("en", "taratura", locale.en, true, false);
 i18n.addResourceBundle("de", "taratura", locale.de, true, false);
 i18n.addResourceBundle("es", "taratura", locale.es, true, false);
+i18n.addResourceBundle("fr", "taratura", locale.fr, true, false);
 
 const icons = import.meta.glob<{ default: { url: string } }>("/src/assets/tarature/*.asset.json", { eager: true });
 

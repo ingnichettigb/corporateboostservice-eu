@@ -2,216 +2,259 @@
  "Chi sono": {
   "en": "About me",
   "de": "Über mich",
-  "es": "Quién soy"
+  "es": "Quién soy",
+  "fr": "À propos"
  },
  "Esperienza, normative e tecnologia.": {
   "en": "Experience, regulations and technology.",
   "de": "Erfahrung, Normen und Technologie.",
-  "es": "Experiencia, normativa y tecnología."
+  "es": "Experiencia, normativa y tecnología.",
+  "fr": "Expérience, réglementation et technologie."
  },
  "CorporateBoostService.eu è gestito da Gian Battista Nichetti, professionista attivo dal 1996 nel campo delle normative tecniche (Direttiva CE PED, saldatura, idoneità alimentare dei materiali, sicurezza sul lavoro come RSPP e formatore D.Lgs. 81/08, GDPR e privacy).": {
   "en": "CorporateBoostService.eu is run by Gian Battista Nichetti, a professional active since 1996 in technical regulations (EC PED Directive, welding, food-contact suitability of materials, workplace safety as RSPP and D.Lgs. 81/08 trainer, GDPR and privacy).",
   "de": "CorporateBoostService.eu wird von Gian Battista Nichetti betrieben, seit 1996 im Bereich technischer Normen tätig (EG-Druckgeräterichtlinie PED, Schweißen, Lebensmittelkonformität von Werkstoffen, Arbeitssicherheit als RSPP und Ausbilder nach D.Lgs. 81/08, DSGVO und Datenschutz).",
-  "es": "CorporateBoostService.eu está gestionado por Gian Battista Nichetti, profesional activo desde 1996 en normativa técnica (Directiva CE PED, soldadura, aptitud alimentaria de materiales, seguridad laboral como RSPP y formador D.Lgs. 81/08, RGPD y privacidad)."
+  "es": "CorporateBoostService.eu está gestionado por Gian Battista Nichetti, profesional activo desde 1996 en normativa técnica (Directiva CE PED, soldadura, aptitud alimentaria de materiales, seguridad laboral como RSPP y formador D.Lgs. 81/08, RGPD y privacidad).",
+  "fr": "CorporateBoostService.eu est dirigé par Gian Battista Nichetti, professionnel actif depuis 1996 dans le domaine des réglementations techniques (directive européenne PED, soudage, aptitude au contact alimentaire des matériaux, sécurité au travail en tant que RSPP et formateur D.Lgs. 81/08, RGPD et confidentialité)."
  },
  "Il doppio background": {
   "en": "A dual background",
   "de": "Der doppelte Hintergrund",
-  "es": "La doble formación"
+  "es": "La doble formación",
+  "fr": "Une double formation"
  },
  "— Perito Industriale in Meccanica e Informatica e Laurea in Ingegneria Industriale —": {
   "en": "— Industrial Technician in Mechanics and Computer Science and Degree in Industrial Engineering —",
   "de": "— Industrietechniker für Mechanik und Informatik sowie Abschluss in Wirtschaftsingenieurwesen —",
-  "es": "— Perito Industrial en Mecánica e Informática y Grado en Ingeniería Industrial —"
+  "es": "— Perito Industrial en Mecánica e Informática y Grado en Ingeniería Industrial —",
+  "fr": "— Technicien industriel en mécanique et informatique et diplôme en ingénierie industrielle —"
  },
  "ha permesso di unire competenza normativa e capacità tecnica digitale. Da questa esperienza nasce CorporateBoostService.eu: strumenti digitali e corsi online per aiutare imprese e professionisti a essere conformi, in autonomia.": {
   "en": "has made it possible to combine regulatory expertise with digital technical skills. From this experience CorporateBoostService.eu was born: digital tools and online courses that help companies and professionals stay compliant on their own.",
   "de": "ermöglicht es, Normenkompetenz und digitale technische Fähigkeiten zu verbinden. Aus dieser Erfahrung entstand CorporateBoostService.eu: digitale Werkzeuge und Online-Kurse, mit denen Unternehmen und Fachleute selbstständig konform arbeiten.",
-  "es": "ha permitido unir competencia normativa y capacidad técnica digital. De esta experiencia nace CorporateBoostService.eu: herramientas digitales y cursos online para ayudar a empresas y profesionales a cumplir la normativa de forma autónoma."
+  "es": "ha permitido unir competencia normativa y capacidad técnica digital. De esta experiencia nace CorporateBoostService.eu: herramientas digitales y cursos online para ayudar a empresas y profesionales a cumplir la normativa de forma autónoma.",
+  "fr": "a permis de combiner expertise réglementaire et compétences techniques numériques. C'est de cette expérience qu'est né CorporateBoostService.eu : des outils numériques et des formations en ligne pour aider les entreprises et les professionnels à assurer leur conformité en toute autonomie."
  },
  "Applicazioni disponibili:": {
   "en": "Available applications:",
   "de": "Verfügbare Anwendungen:",
-  "es": "Aplicaciones disponibles:"
+  "es": "Aplicaciones disponibles:",
+  "fr": "Applications disponibles :"
  },
  "PedFlow: classificazione automatica dei fluidi secondo la Direttiva PED.": {
   "en": "PedFlow: automatic fluid classification under the PED Directive.",
   "de": "PedFlow: automatische Fluidklassifizierung nach der Druckgeräterichtlinie PED.",
-  "es": "PedFlow: clasificación automática de fluidos según la Directiva PED."
+  "es": "PedFlow: clasificación automática de fluidos según la Directiva PED.",
+  "fr": "PedFlow : classification automatique des fluides selon la directive PED."
  },
  "MiniFAT: preparazione guidata della documentazione per sopralluoghi FAT.": {
   "en": "MiniFAT: guided preparation of documentation for FAT inspections.",
   "de": "MiniFAT: geführte Vorbereitung der Unterlagen für FAT-Abnahmen.",
-  "es": "MiniFAT: preparación guiada de la documentación para inspecciones FAT."
+  "es": "MiniFAT: preparación guiada de la documentación para inspecciones FAT.",
+  "fr": "miniFAT : préparation guidée de la documentation pour les inspections FAT."
  },
  "Smart Maintenance: report tecnici generati da foto, video e note vocali.": {
   "en": "Smart Maintenance: technical reports generated from photos, videos and voice notes.",
   "de": "Smart Maintenance: technische Berichte aus Fotos, Videos und Sprachnotizen.",
-  "es": "Smart Maintenance: informes técnicos generados a partir de fotos, vídeos y notas de voz."
+  "es": "Smart Maintenance: informes técnicos generados a partir de fotos, vídeos y notas de voz.",
+  "fr": "Smart Maintenance : rapports techniques générés à partir de photos, vidéos et notes vocales."
  },
  "Riciclabilità PPWR: calcolo della percentuale di riciclabilità degli imballaggi secondo il Reg. UE 2025/40.": {
   "en": "PPWR Recyclability: calculation of packaging recyclability percentage under EU Reg. 2025/40.",
   "de": "PPWR-Recyclingfähigkeit: Berechnung des Recyclinganteils von Verpackungen nach VO (EU) 2025/40.",
-  "es": "Reciclabilidad PPWR: cálculo del porcentaje de reciclabilidad de envases según el Reg. UE 2025/40."
+  "es": "Reciclabilidad PPWR: cálculo del porcentaje de reciclabilidad de envases según el Reg. UE 2025/40.",
+  "fr": "PPWR Recyclability : calcul du pourcentage de recyclabilité des emballages selon le Règl. UE 2025/40."
  },
  "Altre applicazioni (FAT, SAT, LP) sono in sviluppo secondo lo stesso principio: partire da esigenze reali verificate sul campo.": {
   "en": "Other applications (FAT, SAT, LP) are being developed on the same principle: starting from real needs verified in the field.",
   "de": "Weitere Anwendungen (FAT, SAT, LP) werden nach demselben Prinzip entwickelt: ausgehend von realen, in der Praxis geprüften Anforderungen.",
-  "es": "Otras aplicaciones (FAT, SAT, LP) están en desarrollo con el mismo principio: partir de necesidades reales verificadas sobre el terreno."
+  "es": "Otras aplicaciones (FAT, SAT, LP) están en desarrollo con el mismo principio: partir de necesidades reales verificadas sobre el terreno.",
+  "fr": "D'autres applications (FAT, SAT, LP) sont en cours de développement selon le même principe : partir de besoins réels constatés sur le terrain."
  },
  "Pagamenti gestiti da Paddle": {
   "en": "Payments handled by Paddle",
   "de": "Zahlungen über Paddle",
-  "es": "Pagos gestionados por Paddle"
+  "es": "Pagos gestionados por Paddle",
+  "fr": "Paiements gérés par Paddle"
  },
  "Paddle funge da Merchant of Record per tutti gli acquisti, gestendo fatturazione, IVA e pagamenti.": {
   "en": "Paddle acts as Merchant of Record for all purchases, handling invoicing, VAT and payments.",
   "de": "Paddle fungiert als Merchant of Record für alle Käufe und übernimmt Rechnungsstellung, Umsatzsteuer und Zahlungen.",
-  "es": "Paddle actúa como Merchant of Record en todas las compras, gestionando facturación, IVA y pagos."
+  "es": "Paddle actúa como Merchant of Record en todas las compras, gestionando facturación, IVA y pagos.",
+  "fr": "Paddle agit en tant que Merchant of Record pour tous les achats, prenant en charge la facturation, la TVA et les paiements."
  },
  "Dati del gestore:": {
   "en": "Operator details:",
   "de": "Angaben zum Betreiber:",
-  "es": "Datos del titular:"
+  "es": "Datos del titular:",
+  "fr": "Coordonnées de l'exploitant :"
  },
  "Gian Battista Nichetti – Soresina (CR), Italia": {
   "en": "Gian Battista Nichetti – Soresina (CR), Italy",
   "de": "Gian Battista Nichetti – Soresina (CR), Italien",
-  "es": "Gian Battista Nichetti – Soresina (CR), Italia"
+  "es": "Gian Battista Nichetti – Soresina (CR), Italia",
+  "fr": "Gian Battista Nichetti – Soresina (CR), Italie"
  },
  "Email di contatto:": {
   "en": "Contact email:",
   "de": "Kontakt-E-Mail:",
-  "es": "Email de contacto:"
+  "es": "Email de contacto:",
+  "fr": "E-mail de contact :"
  },
  "P.IVA: IT 01235350194": {
   "en": "VAT No.: IT 01235350194",
   "de": "USt-IdNr.: IT 01235350194",
-  "es": "NIF-IVA: IT 01235350194"
+  "es": "NIF-IVA: IT 01235350194",
+  "fr": "N° de TVA : IT 01235350194"
  },
  "Sito": {
   "en": "Site",
   "de": "Website",
-  "es": "Sitio"
+  "es": "Sitio",
+  "fr": "Site"
  },
  "Applicazioni per imprese": {
   "en": "Business applications",
   "de": "Anwendungen für Unternehmen",
-  "es": "Aplicaciones para empresas"
+  "es": "Aplicaciones para empresas",
+  "fr": "Applications professionnelles"
  },
  "Corsi online": {
   "en": "Online courses",
   "de": "Online-Kurse",
-  "es": "Cursos online"
+  "es": "Cursos online",
+  "fr": "Formations en ligne"
  },
  "Prezzi": {
   "en": "Pricing",
   "de": "Preise",
-  "es": "Precios"
+  "es": "Precios",
+  "fr": "Tarifs"
  },
  "Blog — Approfondimenti": {
   "en": "Blog — Insights",
   "de": "Blog — Fachbeiträge",
-  "es": "Blog — Artículos"
+  "es": "Blog — Artículos",
+  "fr": "Blog — Décryptages"
  },
  "Applicazioni": {
   "en": "Applications",
   "de": "Anwendungen",
-  "es": "Aplicaciones"
+  "es": "Aplicaciones",
+  "fr": "Applications"
  },
  "PedFlow — Direttiva PED": {
   "en": "PedFlow — PED Directive",
   "de": "PedFlow — Druckgeräterichtlinie",
-  "es": "PedFlow — Directiva PED"
+  "es": "PedFlow — Directiva PED",
+  "fr": "PedFlow — Directive PED"
  },
  "Smart Maintenance — Report tecnici": {
   "en": "Smart Maintenance — Technical reports",
   "de": "Smart Maintenance — Technische Berichte",
-  "es": "Smart Maintenance — Informes técnicos"
+  "es": "Smart Maintenance — Informes técnicos",
+  "fr": "Smart Maintenance — Rapports techniques"
  },
  "Agenda Share — Da calendario a WhatsApp": {
   "en": "Agenda Share — From calendar to WhatsApp",
   "de": "Agenda Share — Vom Kalender zu WhatsApp",
-  "es": "Agenda Share — Del calendario a WhatsApp"
+  "es": "Agenda Share — Del calendario a WhatsApp",
+  "fr": "Agenda Share — Du calendrier à WhatsApp"
  },
  "Registro Credenziali Fornitori": {
   "en": "Business Website Register",
   "de": "Unternehmenswebsite-Register",
-  "es": "Registro de Sitios Web Empresariales"
+  "es": "Registro de Sitios Web Empresariales",
+  "fr": "Registre des sites web professionnels"
  },
  "Riciclabilità PPWR — Reg. UE 2025/40": {
   "en": "PPWR Recyclability — EU Reg. 2025/40",
   "de": "PPWR-Recyclingfähigkeit — VO (EU) 2025/40",
-  "es": "Reciclabilidad PPWR — Reg. UE 2025/40"
+  "es": "Reciclabilidad PPWR — Reg. UE 2025/40",
+  "fr": "PPWR Recyclability — Règl. UE 2025/40"
  },
  "Corsi": {
   "en": "Courses",
   "de": "Kurse",
-  "es": "Cursos"
+  "es": "Cursos",
+  "fr": "Formations"
  },
  "Privacy & Protezione Dati": {
   "en": "Privacy & Data Protection",
   "de": "Datenschutz",
-  "es": "Privacidad y Protección de Datos"
+  "es": "Privacidad y Protección de Datos",
+  "fr": "Confidentialité et protection des données"
  },
  "GDPR — Guida pratica per l'addetto": {
   "en": "GDPR — Practical guide for staff",
   "de": "DSGVO — Praxisleitfaden für Mitarbeitende",
-  "es": "RGPD — Guía práctica para el personal"
+  "es": "RGPD — Guía práctica para el personal",
+  "fr": "RGPD — Guide pratique pour le personnel"
  },
  "Legale": {
   "en": "Legal",
   "de": "Rechtliches",
-  "es": "Legal"
+  "es": "Legal",
+  "fr": "Mentions légales"
  },
  "Informazioni legali": {
   "en": "Legal information",
   "de": "Rechtliche Hinweise",
-  "es": "Información legal"
+  "es": "Información legal",
+  "fr": "Informations juridiques"
  },
  "Termini e Condizioni": {
   "en": "Terms and Conditions",
   "de": "Allgemeine Bedingungen",
-  "es": "Términos y Condiciones"
+  "es": "Términos y Condiciones",
+  "fr": "Conditions générales"
  },
  "Termini di Servizio": {
   "en": "Terms of Service",
   "de": "Nutzungsbedingungen",
-  "es": "Términos de Servicio"
+  "es": "Términos de Servicio",
+  "fr": "Conditions d'utilisation"
  },
  "Politica di Rimborso": {
   "en": "Refund Policy",
   "de": "Rückerstattungsrichtlinie",
-  "es": "Política de Reembolso"
+  "es": "Política de Reembolso",
+  "fr": "Politique de remboursement"
  },
  "Pagamenti — Merchant of Record": {
   "en": "Payments — Merchant of Record",
   "de": "Zahlungen — Merchant of Record",
-  "es": "Pagos — Merchant of Record"
+  "es": "Pagos — Merchant of Record",
+  "fr": "Paiements — Merchant of Record"
  },
  "Mappa del sito": {
   "en": "Sitemap",
   "de": "Sitemap",
-  "es": "Mapa del sitio"
+  "es": "Mapa del sitio",
+  "fr": "Plan du site"
  },
  "Tutte le pagine pubbliche di CorporateBoostService.eu.": {
   "en": "All public pages of CorporateBoostService.eu.",
   "de": "Alle öffentlichen Seiten von CorporateBoostService.eu.",
-  "es": "Todas las páginas públicas de CorporateBoostService.eu."
+  "es": "Todas las páginas públicas de CorporateBoostService.eu.",
+  "fr": "Toutes les pages publiques de CorporateBoostService.eu."
  },
  "Dichiarazione riutilizzo imballaggi PPWR (uso singolo)": {
   "en": "PPWR packaging reuse declaration (single use)",
   "de": "PPWR-Erklärung zur Wiederverwendung von Verpackungen (Einzelnutzung)",
-  "es": "Declaración de reutilización de envases PPWR (uso único)"
+  "es": "Declaración de reutilización de envases PPWR (uso único)",
+  "fr": "Déclaration de réemploi des emballages PPWR (usage unique)"
  },
  "Dichiarazione riutilizzo imballaggi PPWR (mensile)": {
   "en": "PPWR packaging reuse declaration (monthly)",
   "de": "PPWR-Erklärung zur Wiederverwendung von Verpackungen (monatlich)",
-  "es": "Declaración de reutilización de envases PPWR (mensual)"
+  "es": "Declaración de reutilización de envases PPWR (mensual)",
+  "fr": "Déclaration de réemploi des emballages PPWR (mensuel)"
  },
  "Dichiarazione riutilizzo imballaggi PPWR (annuale)": {
   "en": "PPWR packaging reuse declaration (annual)",
   "de": "PPWR-Erklärung zur Wiederverwendung von Verpackungen (jährlich)",
-  "es": "Declaración de reutilización de envases PPWR (anual)"
+  "es": "Declaración de reutilización de envases PPWR (anual)",
+  "fr": "Déclaration de réemploi des emballages PPWR (annuel)"
  }
 }

@@ -24,6 +24,7 @@ i18n.addResourceBundle("it", "ricicloPpwr", locale.it, true, false);
 i18n.addResourceBundle("en", "ricicloPpwr", locale.en, true, false);
 i18n.addResourceBundle("de", "ricicloPpwr", locale.de, true, false);
 i18n.addResourceBundle("es", "ricicloPpwr", locale.es, true, false);
+i18n.addResourceBundle("fr", "ricicloPpwr", locale.fr, true, false);
 
 const logo = logoAsset.url;
 const URL_ = "https://corporateboostservice.eu/riciclo-ppwr";

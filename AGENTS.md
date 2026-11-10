@@ -1,4 +1,4 @@
-**File:** AGENTS.md · **Percorso:** AGENTS.md · **Revisione:** 1 · **Data:** 25/10/2026 · **Ora:** 10:45
+**File:** AGENTS.md · **Percorso:** AGENTS.md · **Revisione:** 2 · **Data:** 10/11/2026 · **Ora:** 17:55
 
 ---
 
@@ -14,3 +14,7 @@ Ogni file di documentazione o markdown (`.md`) creato o modificato nella cartell
 
 ```markdown
 **File:** <NOME_FILE> · **Percorso:** <PERCORSO_RELATIVO> · **Revisione:** <NUMERO> · **Data:** <GG/MM/AAAA> · **Ora:** <HH:MM>
+
+## Lingue
+
+- Le lingue del sito sono definite solo in `LANGS` di `src/lib/locale.ts` (italiano senza prefisso, le altre con prefisso URL): selettore, hreflang e sitemap la leggono da lì. Il francese vive in file `src/i18n/locales/generated/*.fr.json` importati dai moduli di pagina, così i file sorgente non crescono.

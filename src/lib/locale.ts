@@ -1,14 +1,14 @@
 // Lingue del sito e utilità per gli URL con prefisso di lingua.
 // Italiano = lingua di default, senza prefisso (/pedflow).
-// Le altre lingue usano un prefisso: /en/pedflow, /de/pedflow, /es/pedflow.
+// Le altre lingue usano un prefisso: /en/pedflow, /de/pedflow, /es/pedflow, /fr/pedflow.
 
-export const LANGS = ["it", "en", "de", "es"] as const;
+export const LANGS = ["it", "en", "de", "es", "fr"] as const;
 export type Lang = (typeof LANGS)[number];
 export const DEFAULT_LANG: Lang = "it";
 export const SITE_ORIGIN = "https://corporateboostservice.eu";
 
-export const OG_LOCALE: Record<Lang, string> = { it: "it_IT", en: "en_GB", de: "de_DE", es: "es_ES" };
-export const LD_LANGUAGE: Record<Lang, string> = { it: "it-IT", en: "en-GB", de: "de-DE", es: "es-ES" };
+export const OG_LOCALE: Record<Lang, string> = { it: "it_IT", en: "en_GB", de: "de_DE", es: "es_ES", fr: "fr_FR" };
+export const LD_LANGUAGE: Record<Lang, string> = { it: "it-IT", en: "en-GB", de: "de-DE", es: "es-ES", fr: "fr-FR" };
 
 export function isLang(value: unknown): value is Lang {
   return typeof value === "string" && (LANGS as readonly string[]).includes(value);
@@ -16,7 +16,7 @@ export function isLang(value: unknown): value is Lang {
 
 /** "/de/pedflow?x=1" -> { lang: "de", path: "/pedflow?x=1" }; "/de" -> { lang: "de", path: "/" } */
 export function splitLangPath(pathname: string): { lang: Lang; path: string } {
-  const m = /^\/(en|de|es)(?=[/?#]|$)(.*)$/.exec(pathname);
+  const m = /^\/(en|de|es|fr)(?=[/?#]|$)(.*)$/.exec(pathname);
   if (!m) return { lang: DEFAULT_LANG, path: pathname || "/" };
   const rest = m[2];
   return { lang: m[1] as Lang, path: !rest || rest[0] === "?" || rest[0] === "#" ? `/${rest}` : rest };

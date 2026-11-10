@@ -275,4 +275,7 @@ const es: Locale = {
   ctaP: "Porcentaje, grado y PDF para el expediente técnico, en pocos minutos.",
 };
 
-export const ricicloPpwr = { it, en, de, es };
+import frJson from "../generated/ricicloPpwr.fr.json";
+const fr = frJson as unknown as Locale;
+
+export const ricicloPpwr = { it, en, de, es, fr };

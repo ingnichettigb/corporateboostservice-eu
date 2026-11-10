@@ -143,11 +143,42 @@ const seo = {
       ogDescription: "Todas las páginas de CorporateBoostService.eu en un único listado.",
     },
   },
-} satisfies Record<string, Record<Lang, Seo>>;
+} satisfies Record<string, Record<Exclude<Lang, "fr">, Seo>>;
+
+const seoFr: Record<keyof typeof seo, Seo> = {
+  "root": {
+    "title": "Applications numériques et formations certifiées pour les entreprises",
+    "description": "Applications numériques et formations certifiées pour les entreprises et les professionnels."
+  },
+  "home": {
+    "title": "Applications numériques et formations certifiées RGPD | CorporateBoostService",
+    "description": "Logiciels pour la directive PED, les FAT et la maintenance, ainsi que des formations en ligne certifiées sur le RGPD et la confidentialité pour les entreprises et les professionnels."
+  },
+  "applicazioni": {
+    "title": "Applications pour les entreprises — CorporateBoostService.eu",
+    "description": "Applications professionnelles pour gérer la conformité, la formation et les processus d'entreprise."
+  },
+  "corsi": {
+    "title": "Formations en ligne — CorporateBoostService.eu",
+    "description": "Formations en ligne sur la confidentialité, le RGPD, la sécurité au travail et les évolutions réglementaires."
+  },
+  "blog": {
+    "title": "Blog — Éclairages pour les entreprises | CorporateBoostService.eu",
+    "description": "Articles et guides pratiques sur la digitalisation, la sécurité des accès, la maintenance et la conformité pour les entreprises et les professionnels.",
+    "ogTitle": "Blog — Éclairages pour les entreprises",
+    "ogDescription": "Guides pratiques sur la digitalisation, la sécurité des accès et la conformité en entreprise."
+  },
+  "sitemapPage": {
+    "title": "Plan du site — CorporateBoostService.eu",
+    "description": "Plan du site de CorporateBoostService.eu : applications numériques, formations en ligne, tarifs et informations légales.",
+    "ogDescription": "Toutes les pages de CorporateBoostService.eu réunies en une seule liste."
+  }
+};
 
 export type SeoKey = keyof typeof seo;
 
 /** Testi SEO della pagina nella lingua della richiesta corrente. */
 export function seoText(key: SeoKey): Seo {
-  return seo[key][currentLang()];
+  const lang = currentLang();
+  return lang === "fr" ? seoFr[key] : seo[key][lang];
 }

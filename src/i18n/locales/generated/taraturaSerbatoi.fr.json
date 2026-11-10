@@ -1,0 +1,161 @@
+{
+ "metaTitle": "Barémage de cuve — 22 géométries, tables millimétriques | CorporateBoostService",
+ "metaDescription": "Calculez les tables de barémage pour 22 types de cuves : volumes au millimètre, surfaces, poids et déclaration de barémage en PDF, avec un gain de temps considérable. Vos données restent sur votre ordinateur.",
+ "back": "Toutes les applications",
+ "eyebrow": "Pour les bureaux d'études, chaudronniers et inspecteurs",
+ "h1": "Tables de barémage de cuve au pas de 1 mm : un gain de temps considérable",
+ "heroP": "22 géométries prêtes à l'emploi, calcul exact au millimètre et déclaration de barémage en PDF pour votre client. Fini le découpage CAO ou les feuilles de calcul artisanales.",
+ "shotsLabel": "Dans l'application",
+ "shotsH2": "Les écrans principaux",
+ "imgAlt": {
+  "m025": "Cuve verticale en acier inoxydable à fond conique dans un atelier de fabrication",
+  "m026": "Coupe technique d'une cuve divisée en sept zones, avec un pas de calcul de 1 mm",
+  "m027": "Soudeur travaillant sur une cuve horizontale à fonds bombés",
+  "m028": "Flux en quatre étapes : données de l'entreprise, choix de la cuve, dimensions, table et PDF",
+  "m029": "Inspecteur à côté d'une grande cuve avec une tablette et un mètre ruban",
+  "m030": "Courbe de barémage : volume en litres en fonction du niveau en millimètres, avec table CSV",
+  "m031": "Menu principal : données communes pour l'en-tête du rapport",
+  "m032": "Liste des modules de calcul, actifs et en préparation",
+  "m033": "Module de calcul avec géométrie de la cuve et résultats",
+  "m034": "Table de barémage millimétrique",
+  "m035": "Déclaration de barémage en PDF avec emplacement pour cachet et signature",
+  "m036": "Trois cuves identiques avec différents numéros de série : une configuration, un rapport par numéro de série"
+ },
+ "stats": [
+  [
+   "7",
+   "zones de modélisation"
+  ],
+  [
+   "1 mm",
+   "pas de table"
+  ],
+  [
+   "22",
+   "géométries prêtes"
+  ],
+  [
+   "N°",
+   "numéros de série"
+  ]
+ ],
+ "cmpLabel": "Comparatif",
+ "cmpH2": "Méthode traditionnelle versus Tank Calibration",
+ "cmpOld": "Méthode traditionnelle (CAO 3D / Excel)",
+ "cmpNew": "Tank Calibration",
+ "cmpRows": [
+  [
+   "Découpage laborieux du modèle 3D",
+   "Calcul analytique immédiat, avec un gain de temps exceptionnel"
+  ],
+  [
+   "Formules de tableur à vérifier pour chaque projet",
+   "22 géométries déjà validées"
+  ],
+  [
+   "Poids et tôles calculés séparément",
+   "Surfaces et poids intégrés"
+  ],
+  [
+   "Mise en page de la table à la main",
+   "Déclaration PDF et CSV prêts à livrer"
+  ]
+ ],
+ "roiLabel": "Modèle géométrique",
+ "roiH2": "Architecture à 7 zones, pas de calcul de 1 mm",
+ "roiNote": "Le fond, le rayon de carre, la bride, la virole et le dôme sont modélisés comme des zones géométriques distinctes et intégrés en continu : à chaque millimètre de niveau, le volume est calculé analytiquement, sans interpolation. Le résultat est une table reproductible et un gain de temps considérable par rapport aux méthodes manuelles.",
+ "featLabel": "Fonctionnalités",
+ "featH2": "Cinq atouts majeurs",
+ "features": [
+  {
+   "title": "Pas de 1 mm, modèle à 7 zones",
+   "desc": "Fonds, rayons de carre, brides et virole sont calculés en continu : la table est exacte à chaque millimètre de niveau."
+  },
+  {
+   "title": "Surfaces et poids pour les devis",
+   "desc": "Surface des tôles, masse de la cuve et du liquide, immédiatement disponibles pour votre offre commerciale."
+  },
+  {
+   "title": "Production en série",
+   "desc": "Plusieurs cuves identiques avec des numéros de série distincts : une seule configuration, un rapport par numéro de série."
+  },
+  {
+   "title": "Déclaration PDF et tables CSV",
+   "desc": "Déclaration de barémage prête avec espace pour le cachet et la signature de l'inspecteur, plus table exportable pour les jauges."
+  },
+  {
+   "title": "Vos données restent chez vous",
+   "desc": "Rien n'est envoyé sur des serveurs externes : les projets restent sur votre ordinateur et peuvent être exportés en sauvegarde."
+  }
+ ],
+ "modLabel": "Les 22 barémages",
+ "modH2": "Toutes les cuves que vous pouvez barémer, une à une",
+ "modP": "Chaque configuration associe un type de dôme et un type de fond. Choisissez une famille pour filtrer la liste.",
+ "all": "Tout",
+ "families": {
+  "BOMB": "Dôme bombé",
+  "CON": "Dôme conique",
+  "ORIZZ": "Cuves horizontales",
+  "PIANO": "Dôme plat"
+ },
+ "top": {
+  "BOMB": "Dôme bombé",
+  "CON": "Dôme conique",
+  "PIANO": "Dôme plat"
+ },
+ "bottom": {
+  "BOMB": "fond bombé",
+  "CON": "fond conique",
+  "CON-BOCC": "fond conique avec tubulure",
+  "INCL": "fond incliné",
+  "PIANO": "fond plat",
+  "TRONCOCON": "fond tronconique",
+  "TRONCOCON-BOCC": "fond tronconique avec tubulure"
+ },
+ "topDesc": {
+  "BOMB": "Dôme bombé (torisphérique, Klöpper, Korbbogen ou semi-elliptique), adapté à la pression et au mélange.",
+  "CON": "Toit conique autoportant, pratique pour l'évacuation des condensats, des poussières et des eaux pluviales.",
+  "PIANO": "Toit plat ou bordé, caractéristique des cuves atmosphériques et ouvertes."
+ },
+ "bottomDesc": {
+  "BOMB": "Le fond bombé résiste à la pression et est calculé zone par zone jusqu'au rayon de carre.",
+  "CON": "Le fond conique permet une vidange intégrale par gravité.",
+  "CON-BOCC": "Le cône se termine par une sortie cylindrique pour vanne de vidange ou bride, intégrée à la table.",
+  "INCL": "Le fond incliné dirige le liquide vers une cuvette de vidange : idéal pour un nettoyage sans résidu.",
+  "PIANO": "Le fond plat repose sur un radier : la table est linéaire dès le premier millimètre.",
+  "TRONCOCON": "Le fond tronconique facilite l'évacuation des liquides denses ou visqueux.",
+  "TRONCOCON-BOCC": "Le tronc de cône se termine par une tubulure axiale, calculée avec le reste du volume."
+ },
+ "orizz": {
+  "BOMB": {
+   "name": "Cuve horizontale à fonds bombés",
+   "desc": "Cuve cylindrique horizontale avec deux fonds bombés : le volume est calculé par segments circulaires à partir du niveau sur le diamètre."
+  },
+  "CON": {
+   "name": "Cuve horizontale à fonds coniques",
+   "desc": "Cuve horizontale à fonds coniques, pouvant également intégrer une pente pour la vidange."
+  }
+ },
+ "priceLabel": "Licences",
+ "priceH2": "Choisissez la durée souhaitée",
+ "faqLabel": "FAQ",
+ "faqH2": "Réponses pour le bureau d'études",
+ "faq": [
+  {
+   "q": "Mes projets sont-ils transmis sur Internet ?",
+   "a": "Non. Les calculs sont exécutés dans le navigateur et les projets restent sur votre ordinateur ; vous pouvez les exporter dans un fichier de sauvegarde."
+  },
+  {
+   "q": "Puis-je intégrer mon logo et le cachet de l'inspecteur à la déclaration ?",
+   "a": "Oui : la déclaration intègre les coordonnées de votre entreprise et dispose d'un emplacement réservé au cachet et à la signature."
+  },
+  {
+   "q": "Comment traiter plusieurs cuves identiques ?",
+   "a": "Définissez la géométrie une seule fois et générez un rapport pour chaque numéro de série de la série."
+  },
+  {
+   "q": "Quelle est la précision de la table ?",
+   "a": "Le calcul est analytique, avec un pas de 1 mm sur la hauteur de liquide, sans les approximations d'un maillage 3D."
+  }
+ ]
+}

@@ -1246,4 +1246,7 @@ const es: Locale = {
   placeholderTitle: "Imagen por preparar",
 };
 
-export const riusoPpwr = { it, en, de, es };
+import frJson from "../generated/riusoPpwr.fr.json";
+const fr = frJson as unknown as Locale;
+
+export const riusoPpwr = { it, en, de, es, fr };

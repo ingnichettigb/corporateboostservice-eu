@@ -355,6 +355,99 @@
           "link": "/registro-credenziali-fornitori"
         }
       ]
+    },
+    "fr": {
+      "title": "Comment gérer en toute sécurité les identifiants des sites web d'entreprise",
+      "excerpt": "Un guide pratique pour centraliser les accès aux portails d'entreprise et éliminer les mots de passe des feuilles volantes, des messageries instantanées et des carnets personnels.",
+      "readingTime": "6 min",
+      "topics": [
+        "Sécurité d'entreprise",
+        "Gestion des identifiants",
+        "Organisation"
+      ],
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Chaque entreprise, même de petite taille, se connecte quotidiennement à des dizaines de sites web : le portail bancaire, l'espace comptable, les plateformes fournisseurs, les logiciels métier cloud, les services d'hébergement et les portails de l'administration publique. Chacun dispose d'une adresse, d'un identifiant, d'un mot de passe et souvent d'une adresse e-mail associée. Dans la pratique quotidienne, ces informations finissent dispersées : une feuille dans un tiroir, une note sur le smartphone d'un collaborateur, un message de chat datant de deux ans."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le résultat est systématiquement le même : lorsque l'identifiant est nécessaire, personne ne parvient à le trouver. Et lorsque la personne qui le conservait est absente ou a quitté l'entreprise, la seule option reste la réinitialisation du mot de passe et des heures de travail perdues."
+        },
+        {
+          "type": "heading2",
+          "text": "Pourquoi les carnets personnels représentent un risque et non une solution"
+        },
+        {
+          "type": "paragraph",
+          "text": "S'en remettre à la mémoire ou au carnet d'un collaborateur semble pratique, mais cela place un actif de l'entreprise hors de son contrôle. Les conséquences sont concrètes : dépendance vis-à-vis d'une seule personne, absence de traçabilité des accès, impossibilité de démontrer la protection des accès lors d'un audit, et risque réel de divulgation accidentelle lorsque les mots de passe transitent par des messageries."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Les mots de passe partagés dans les chats restent lisibles pendant des années sur l'appareil de chaque participant.",
+            "Un tableur partagé ne permet pas de segmenter les droits de consultation.",
+            "Sans journal d'activité, personne ne sait qui a modifié ou utilisé un compte.",
+            "Lorsqu'un collègue s'en va, la seule mesure corrective possible est de tout réinitialiser."
+          ]
+        },
+        {
+          "type": "heading2",
+          "text": "Ce qu'apporte réellement un registre centralisé"
+        },
+        {
+          "type": "paragraph",
+          "text": "Un registre d'accès d'entreprise est une archive unique où chaque entrée contient le site web, l'identifiant, le mot de passe chiffré, l'adresse e-mail associée, une description et les personnes autorisées à le consulter. Il ne s'agit pas d'une simple liste : c'est l'outil qui permet à l'entreprise de savoir, à tout moment, quels identifiants elle utilise et qui a le droit d'y accéder."
+        },
+        {
+          "type": "image",
+          "src": "figura-1.jpg",
+          "caption": "Un registre centralisé : des mots de passe toujours masqués, une recherche instantanée et une liste claire des personnes autorisées."
+        },
+        {
+          "type": "heading3",
+          "text": "Les quatre fonctionnalités essentielles"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Mots de passe chiffrés en base de données et masqués à l'écran, avec copie en un clic.",
+            "Visibilité contrôlée : chaque entrée n'est accessible que par son auteur et les personnes autorisées.",
+            "Journal d'activité enregistrant les connexions, les ouvertures de sites et les modifications, filtrable par personne et par site.",
+            "Export CSV et PDF, pour l'archivage interne et les contrôles externes."
+          ]
+        },
+        {
+          "type": "heading2",
+          "text": "Onboarding et offboarding sans interruption d'activité"
+        },
+        {
+          "type": "paragraph",
+          "text": "Le moment le plus délicat correspond aux mouvements de personnel. Avec un registre partagé, l'intégration d'un nouveau collaborateur s'effectue en lui accordant uniquement l'accès aux entrées nécessaires ; un départ est géré en révoquant cette autorisation unique, sans perturber les identifiants sur lesquels repose le reste de l'équipe."
+        },
+        {
+          "type": "quote",
+          "text": "La sécurité des accès ne dépend pas de mots de passe plus complexes, mais de l'ordre et de la traçabilité de ceux qui les utilisent."
+        },
+        {
+          "type": "heading2",
+          "text": "Comment démarrer concrètement"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Faire l'inventaire : recenser chaque site web et service en ligne réellement utilisé par l'entreprise.",
+            "Attribuer un responsable à chaque entrée et déterminer qui doit pouvoir la consulter.",
+            "Transférer les identifiants dans le registre et supprimer les feuilles, notes et messages qui les contiennent.",
+            "Consulter régulièrement le journal d'activité et mettre à jour les autorisations à chaque changement dans l'équipe."
+          ]
+        },
+        {
+          "type": "cta",
+          "text": "Découvrir le REGISTRE DES SITES WEB D'ENTREPRISE",
+          "link": "/registro-credenziali-fornitori"
+        }
+      ]
     }
   },
   "sponsored": [

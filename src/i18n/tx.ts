@@ -1,7 +1,7 @@
 import i18n from "@/i18n";
 import dict from "./locales/generated/static-texts.json";
 
-type Langs = { en?: string; de?: string; es?: string };
+type Langs = { en?: string; de?: string; es?: string; fr?: string };
 const d = dict as Record<string, Langs>;
 
 /** Translate a fixed Italian text; falls back to the Italian original. Call during render. */

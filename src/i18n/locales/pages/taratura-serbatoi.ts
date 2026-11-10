@@ -294,4 +294,7 @@ const es: T = {
   ],
 };
 
-export const taraturaSerbatoi = { it, en, de, es };
+import frJson from "../generated/taraturaSerbatoi.fr.json";
+const fr = frJson as unknown as typeof it;
+
+export const taraturaSerbatoi = { it, en, de, es, fr };

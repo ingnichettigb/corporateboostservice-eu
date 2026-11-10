@@ -23,6 +23,12 @@ import smartDe from "./locales/generated/smartMaintenance.de.json";
 import smartEs from "./locales/generated/smartMaintenance.es.json";
 import pedflowDe from "./locales/generated/pedflow.de.json";
 import pedflowEs from "./locales/generated/pedflow.es.json";
+import commonFr from "./locales/generated/common.fr.json";
+import legalFr from "./locales/generated/legal.fr.json";
+import corsoFr from "./locales/generated/corsoIncaricati.fr.json";
+import privacyFr from "./locales/generated/privacyGdpr.fr.json";
+import smartFr from "./locales/generated/smartMaintenance.fr.json";
+import pedflowFr from "./locales/generated/pedflow.fr.json";
 
 // Istanza reale di i18next (una sola, condivisa).
 const baseI18n = i18n;
@@ -72,9 +78,14 @@ if (!baseI18n.isInitialized) {
         pedflow: pedflowEs,
         blog: blog.es,
       },
+      fr: {
+        translation: merge(commonFr as Obj, { legal: legalFr, corsoIncaricati: corsoFr, privacyGdpr: privacyFr, smartMaintenance: smartFr }),
+        pedflow: pedflowFr,
+        blog: blog.fr,
+      },
     },
     lng: "it",
-    fallbackLng: { de: ["en"], es: ["en"], default: ["it"] },
+    fallbackLng: { de: ["en"], es: ["en"], fr: ["en"], default: ["it"] },
     ns: ["translation", "pedflow", "blog"],
     defaultNS: "translation",
     interpolation: { escapeValue: false },

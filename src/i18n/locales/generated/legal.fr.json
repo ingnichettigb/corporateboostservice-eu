@@ -1,0 +1,251 @@
+{
+ "backToLegal": "Retour aux mentions légales",
+ "backHome": "Retour à l'accueil",
+ "navLegal": "Mentions légales",
+ "navLegalMenu": "Informations légales",
+ "navPrezzi": "Tarifs",
+ "navTermini": "Conditions générales",
+ "navServizio": "Conditions d'utilisation",
+ "navPrivacy": "Politique de confidentialité",
+ "navRimborso": "Politique de remboursement",
+ "footerHeading": "Informations légales",
+ "paddleHeading": "Paiements et Merchant of Record",
+ "paddleBody": "Les paiements pour les services et formations achetés sur ce site sont traités par Paddle.com (Paddle.com, Inc. / Paddle Payments Ltd.), agissant en tant que Merchant of Record. Paddle est le vendeur officiel auprès du client final et prend en charge le traitement des paiements, l'émission des justificatifs fiscaux et la gestion des remboursements conformément à ses propres politiques. Pour toute question relative à un paiement, au montant débité ou à la facture reçue, vous pouvez contacter directement le support de Paddle sur paddle.com, ou écrire à team@corporateboostservice.eu.",
+ "paddleServizioHeading": "8. Paiements et Merchant of Record",
+ "paddleServizioBody": "Les paiements sont traités par Paddle.com, qui agit en tant que Merchant of Record pour l'ensemble des transactions effectuées sur ce site. Paddle émet les justificatifs fiscaux, gère les litiges de paiement (rétrofacturations) et applique ses propres conditions d'utilisation pour le service de paiement. En utilisant les services de ce site, l'utilisateur accepte également les conditions de Paddle.com applicables aux transactions.",
+ "comingSoonBadge": "Achats bientôt disponibles — ouverture prochaine",
+ "comingSoonNote": "Le système de paiement (Paddle) n'est pas encore opérationnel sur ce site. Aucune transaction ne peut être finalisée pour le moment. L'activation des achats sera annoncée sur cette page et sur la page des tarifs.",
+ "comingSoonCardNote": "Vous recevrez un e-mail contenant le lien et la licence immédiatement après votre achat.",
+ "navPagamenti": "Paiements & MoR",
+ "cart": {
+  "nav": "Panier",
+  "title": "Panier",
+  "subtitle": "Vérifiez vos produits sélectionnés avant de procéder à l'achat.",
+  "empty": "Votre panier est vide.",
+  "emptyCta": "Consulter les tarifs",
+  "add": "Ajouter au panier",
+  "added": "Dans le panier",
+  "addedToast": "Ajouté au panier",
+  "remove": "Supprimer",
+  "clear": "Vider le panier",
+  "colService": "Produit",
+  "colPrice": "Prix",
+  "colDuration": "Durée",
+  "colQty": "Quantité",
+  "colSubtotal": "Total ligne",
+  "qtyIncrease": "Augmenter la quantité",
+  "qtyDecrease": "Diminuer la quantité",
+  "total": "Total",
+  "checkout": "Passer commande",
+  "checkoutNote": "🚧 Les achats en ligne seront bientôt disponibles via Paddle (Merchant of Record). Vous recevrez un e-mail contenant le lien et la licence dès la finalisation de l'achat.",
+  "continueShopping": "Continuer vos achats"
+ },
+ "paddleRefPrivacy": "Les paiements sont gérés par Paddle.com en tant que Merchant of Record.",
+ "paddleRefServizio": "Les paiements sont traités par Paddle.com, Merchant of Record pour l'ensemble des transactions de ce site.",
+ "paddleRefLink": "Consultez la page Paiements & MoR pour plus de détails.",
+ "mor": {
+  "metaTitle": "Paiements et Merchant of Record | CorporateBoostService.eu",
+  "metaDesc": "Comment les paiements sont gérés via Paddle.com en tant que Merchant of Record : justificatifs, remboursements, litiges et contacts.",
+  "badge": "Paiements",
+  "title": "Paiements et Merchant of Record",
+  "subtitle": "Modalités de gestion des paiements pour les services et formations sur ce site.",
+  "s1Heading": "Qui gère les paiements",
+  "s1Body": "Les paiements pour les services et formations achetés sur ce site sont traités par Paddle.com (Paddle.com, Inc. / Paddle Payments Ltd.), agissant en tant que Merchant of Record. Paddle est le vendeur officiel auprès du client final pour toutes les transactions réalisées sur corporateboostservice.eu.",
+  "s2Heading": "Le rôle de Paddle",
+  "s2Body": "Paddle prend en charge : l'émission des reçus et factures fiscales, le traitement des paiements par carte, virement bancaire et autres méthodes, la gestion des remboursements conformément à la Politique de remboursement de ce site, ainsi que la gestion des litiges de paiement (rétrofacturations) selon ses propres conditions.",
+  "s3Heading": "Contacts en cas de problème de paiement",
+  "s3Body": "Pour tout problème relatif à un paiement, au montant débité ou à une facture, vous pouvez : contacter directement Paddle sur paddle.com/support, ou écrire à team@corporateboostservice.eu en indiquant la référence de la commande.",
+  "s4Heading": "Réglementation applicable",
+  "s4Body": "Paddle opère en conformité avec la réglementation européenne sur les services de paiement numérique (DSP2) et avec les lois en vigueur dans les pays où l'entreprise fournit ses services.",
+  "relatedHeading": "Autres pages légales"
+ },
+ "index": {
+  "metaTitle": "Mentions légales — Informations légales | CorporateBoostService.eu",
+  "metaDesc": "Index des informations légales : tarifs, conditions générales, conditions d'utilisation, politique de confidentialité et politique de remboursement.",
+  "badge": "Informations légales",
+  "title": "Mentions légales",
+  "subtitle": "Toutes les informations légales et contractuelles relatives au service. Sélectionnez la page de votre choix.",
+  "intro": "Cette page est un sommaire : elle contient uniquement des liens vers les pages juridiques. Accédez à la page souhaitée pour en consulter l'intégralité du contenu.",
+  "linksHeading": "Pages légales"
+ },
+ "prezzi": {
+  "metaTitle": "Tarifs — Services SaaS et Formations Numériques | CorporateBoostService.eu",
+  "metaDesc": "Grille tarifaire des services SaaS et des formations numériques : tarif, durée et code produit pour chaque application.",
+  "badge": "Grille tarifaire",
+  "title": "Tarifs",
+  "subtitle": "Tarif, durée et code produit pour chaque service SaaS et formation numérique.",
+  "colService": "Service",
+  "colPrice": "Prix",
+  "colDuration": "Durée",
+  "colCode": "Code produit",
+  "notesHeading": "Remarques importantes",
+  "note1": "Modification des tarifs : les prix peuvent être modifiés à tout moment. Les modifications ne s'appliquent pas aux abonnements déjà actifs jusqu'à leur échéance.",
+  "note2": "Facturation : tous les montants sont exprimés en euros. La facture est émise dès l'activation du service ou de la formation.",
+  "note3": "Renouvellement : les abonnements ne sont pas renouvelés automatiquement, sauf indication contraire. Le service peut être renouvelé à son expiration.",
+  "deliveryHeading": "Livraison des produits numériques",
+  "deliveryIntro": "Une fois le paiement effectué, vous recevrez immédiatement un e-mail automatique contenant :",
+  "deliveryItem1": "le lien de téléchargement de l'application CorporateBoostService ;",
+  "deliveryItem2": "votre clé de licence personnelle ;",
+  "deliveryItem3": "les instructions d'activation détaillées ;",
+  "deliveryItem4": "les contacts du support technique en cas de besoin.",
+  "deliveryP1": "La livraison est 100 % numérique et s'effectue sans délai : l'e-mail est envoyé quelques secondes après la confirmation du paiement.",
+  "deliveryP2": "La licence est immédiatement utilisable et peut être activée sur un appareil autorisé via la fonction « Activer la licence » de l'application.",
+  "deliveryP3": "Si vous ne recevez pas l'e-mail dans les 5 minutes, vous pouvez contacter notre support à team@corporateboostservice.eu : nous vous renverrons manuellement le lien et la licence.",
+  "relatedHeading": "Autres mentions légales",
+  "months": "mois",
+  "month": "mois",
+  "days": "jours",
+  "day": "jour",
+  "underConstruction": "En cours de maintenance"
+ },
+ "termini": {
+  "metaTitle": "Conditions Générales | CorporateBoostService.eu",
+  "metaDesc": "Conditions générales d'utilisation : usage professionnel exclusif, interdiction d'ingénierie inverse, propriété du logiciel, droit italien et tribunal de Crémone.",
+  "badge": "Conditions Générales",
+  "title": "Conditions Générales",
+  "subtitle": "Conditions générales d'utilisation des services et des logiciels.",
+  "sections": [
+   {
+    "heading": "1. Usage professionnel uniquement",
+    "body": "Les services et logiciels sont destinés exclusivement à un usage professionnel et commercial. Ils ne s'adressent pas aux consommateurs et ne peuvent pas être utilisés à des fins personnelles sans rapport avec une activité professionnelle."
+   },
+   {
+    "heading": "2. Interdiction d'ingénierie inverse",
+    "body": "Il est interdit de décompiler, désassembler, modifier, copier, reproduire ou tenter d'extraire le code source du logiciel, en tout ou en partie, par quelque moyen que ce soit."
+   },
+   {
+    "heading": "3. Propriété du logiciel",
+    "body": "Le logiciel, son contenu, ses marques et son code demeurent la propriété exclusive du prestataire. L'utilisateur acquiert uniquement un droit d'utilisation limité, non exclusif et non transférable pour la durée de l'abonnement."
+   },
+   {
+    "heading": "4. Absence de garantie de résultats",
+    "body": "Le prestataire ne garantit aucun résultat spécifique lié à l'utilisation des services. L'utilisateur demeure responsable de l'usage fait des outils et des informations obtenus."
+   },
+   {
+    "heading": "5. Droit applicable et juridiction compétente",
+    "body": "Les présentes Conditions sont régies par le droit italien. Le Tribunal de Crémone est exclusivement compétent pour tout litige."
+   },
+   {
+    "heading": "6. Mises à jour des Conditions",
+    "body": "Le prestataire peut modifier les présentes Conditions à tout moment, sous réserve d'un préavis. La poursuite de l'utilisation du service après l'entrée en vigueur des modifications vaut acceptation des nouvelles conditions."
+   }
+  ],
+  "relatedHeading": "Autres mentions légales"
+ },
+ "servizio": {
+  "metaTitle": "Conditions de Service | CorporateBoostService.eu",
+  "metaDesc": "Conditions de service : service fourni en l'état, modifications et interruptions possibles, prérequis techniques, assistance et limitations de responsabilité.",
+  "badge": "Conditions de Service",
+  "title": "Conditions de Service",
+  "subtitle": "Conditions de fourniture et de fonctionnement des services en ligne.",
+  "sections": [
+   {
+    "heading": "1. Service fourni « en l'état »",
+    "body": "Le service est fourni « en l'état » et « selon disponibilité », sans aucune garantie expresse ou implicite concernant sa continuité, son adéquation à un usage particulier ou l'absence d'erreurs."
+   },
+   {
+    "heading": "2. Modifications apportées au service",
+    "body": "Le prestataire peut modifier, mettre à jour ou suspendre tout ou partie des fonctionnalités du service à tout moment, y compris sans préavis."
+   },
+   {
+    "heading": "3. Interruptions éventuelles",
+    "body": "Le service peut être interrompu, y compris sans préavis, pour des raisons de maintenance, de mise à jour, des motifs techniques ou des événements échappant au contrôle du prestataire."
+   },
+   {
+    "heading": "4. Prérequis techniques",
+    "body": "L'utilisation correcte du service requiert un équipement à jour ainsi qu'une connexion Internet stable. Le prestataire décline toute responsabilité en cas de dysfonctionnements liés aux appareils ou aux réseaux de l'utilisateur."
+   },
+   {
+    "heading": "5. Support",
+    "body": "L'assistance est assurée exclusivement par e-mail, sans engagement de délai de réponse. Le prestataire s'engage à répondre dans les meilleurs délais."
+   },
+   {
+    "heading": "6. Suspension pour utilisation illicite",
+    "body": "Le prestataire peut suspendre ou résilier l'accès au service en cas d'utilisation illicite, abusive ou contraire aux présentes Conditions."
+   },
+   {
+    "heading": "7. Limitation de responsabilité",
+    "body": "Le prestataire ne peut être tenu responsable des dommages indirects, accessoires ou consécutifs, y compris les pertes de données, manques à gagner ou interruptions d'activité découlant de l'utilisation ou de l'impossibilité d'utiliser le service."
+   }
+  ],
+  "relatedHeading": "Autres mentions légales"
+ },
+ "privacy": {
+  "metaTitle": "Politique de confidentialité | CorporateBoostService.eu",
+  "metaDesc": "Notice d'information relative au traitement des données personnelles : responsable du traitement, finalités, base juridique, conservation, droits des utilisateurs, cookies et transferts.",
+  "badge": "Politique de confidentialité",
+  "title": "Politique de confidentialité",
+  "subtitle": "Information sur le traitement des données personnelles conformément au Règlement (UE) 2016/679 (RGPD).",
+  "titolareHeading": "Responsable du traitement",
+  "titolare": "Corporate Boost Service di Nichetti Gian Battista",
+  "indirizzoLabel": "Adresse",
+  "indirizzo": "Soresina (CR), Italie",
+  "telefonoLabel": "Téléphone",
+  "telefono": "339 634 4660",
+  "pivaLabel": "Numéro de TVA",
+  "piva": "IT 01235350194",
+  "emailLabel": "E-mail",
+  "email": "team@corporateboostservice.eu",
+  "sections": [
+   {
+    "heading": "Finalités du traitement",
+    "body": "Les données personnelles sont traitées pour la gestion du compte utilisateur, la fourniture des services et la facturation."
+   },
+   {
+    "heading": "Base juridique",
+    "body": "Le traitement est fondé sur l'exécution du contrat auquel l'utilisateur est partie et sur le respect des obligations légales auxquelles le responsable du traitement est soumis."
+   },
+   {
+    "heading": "Conservation des données",
+    "body": "Les données sont conservées pendant la durée nécessaire aux finalités indiquées et, pour les données comptables et fiscales, jusqu'à 10 ans conformément aux obligations légales."
+   },
+   {
+    "heading": "Droits de l'utilisateur",
+    "body": "L'utilisateur peut exercer ses droits d'accès, de rectification, d'effacement, de limitation, d'opposition et de portabilité des données en écrivant à l'adresse e-mail du responsable du traitement. L'utilisateur a également le droit d'introduire une réclamation auprès de l'autorité de protection des données compétente."
+   },
+   {
+    "heading": "Cookies",
+    "body": "Ce site utilise uniquement des cookies techniques strictement nécessaires à son fonctionnement (gestion de session, sécurité anti-bot Cloudflare, panier) et n'installe aucun cookie de profilage ou tiers à des fins statistiques ou publicitaires. Par conséquent, aucun consentement de l'utilisateur n'est requis pour les cookies utilisés sur ce site."
+   },
+   {
+    "heading": "Transfert de données et services basés aux États-Unis",
+    "body": "Pour certains services (ex. analyses statistiques et infrastructure), les données peuvent être traitées par l'intermédiaire de prestataires établis aux États-Unis, conformément aux garanties prévues par la législation applicable."
+   }
+  ],
+  "relatedHeading": "Autres mentions légales"
+ },
+ "rimborso": {
+  "metaTitle": "Politique de remboursement | CorporateBoostService.eu",
+  "metaDesc": "Politique de remboursement : remboursements uniquement en cas de double paiement ou d'erreur technique, aucun remboursement pour le contenu numérique déjà accessible ou les abonnements déjà utilisés.",
+  "badge": "Politique de remboursement",
+  "title": "Politique de remboursement",
+  "subtitle": "Conditions applicables aux demandes et au traitement des remboursements.",
+  "sections": [
+   {
+    "heading": "1. Cas de remboursement",
+    "body": "Un remboursement n'est accordé qu'en cas de double paiement ou d'erreur technique imputable au prestataire."
+   },
+   {
+    "heading": "2. Contenu numérique déjà accessible",
+    "body": "Aucun remboursement n'est accordé pour les contenus numériques, cours ou services déjà rendus accessibles ou téléchargés par l'utilisateur."
+   },
+   {
+    "heading": "3. Abonnements déjà utilisés",
+    "body": "Aucun remboursement n'est accordé pour les abonnements déjà utilisés, même partiellement, au cours de leur période de validité."
+   },
+   {
+    "heading": "4. Délais de remboursement",
+    "body": "Les remboursements éligibles sont traités dans un délai de 14 jours à compter de la confirmation de la demande, via le même moyen de paiement que celui utilisé."
+   },
+   {
+    "heading": "5. Demande de remboursement",
+    "body": "La demande doit être envoyée par e-mail à l'adresse officielle team@corporateboostservice.eu, en précisant les détails de la commande et le motif."
+   },
+   {
+    "heading": "6. Promotions",
+    "body": "Les achats effectués dans le cadre de promotions, remises ou offres spéciales ne sont pas remboursables."
+   }
+  ],
+  "relatedHeading": "Autres mentions légales"
+ }
+}

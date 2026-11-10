@@ -1,0 +1,300 @@
+{
+ "metaTitle": "Réemployabilité PPWR — Déclaration emballages réemployables, Règl. UE 2025/40",
+ "metaDescription": "Checklist guidée de 23 exigences, résultat automatique et rapport PDF A4 pour le dossier technique des emballages réemployables (Règl. UE 2025/40 PPWR).",
+ "back": "Retour aux applications",
+ "eyebrow": "Réemployabilité PPWR · Règlement UE 2025/40",
+ "h1": "Réemployabilité PPWR, déclarée étape par étape",
+ "heroP": "L'outil professionnel pour évaluer si un emballage est réemployable : complétez la fiche, répondez aux 23 exigences, obtenez le résultat automatique et générez le rapport PDF A4 pour le dossier technique.",
+ "keyPoints": "23 exigences · Résultat automatique · Rapport A4 avec logo et signature · Données conservées dans votre navigateur · IT, EN, DE, ES",
+ "whatLabel": "Conformité européenne",
+ "whatH2": "L'emballage n'est réemployable qu'au sein d'un système",
+ "whatP": "Le PPWR ne considère pas l'emballage comme réemployable dans l'abstrait : ce qui importe, c'est qu'il soit conçu pour de multiples rotations et qu'il s'inscrive dans un système de réemploi vérifiable, avec collecte, traçabilité et reconditionnement. L'application vous guide à travers chacun de ces aspects et les synthétise dans une déclaration technique unique.",
+ "tags": [
+  "Règl. UE 2025/40",
+  "23 exigences",
+  "Résultat automatique",
+  "Rapport PDF A4",
+  "Archive locale"
+ ],
+ "reqLabel": "Checklist de conformité",
+ "reqH2": "23 exigences, réparties en trois blocs",
+ "reqIntro": "Pour chaque exigence, choisissez Oui, Non ou N/A (non applicable). Pour les réponses Oui, vous pouvez citer la preuve technique ou l'essai ; pour N/A, la justification est obligatoire et apparaît dans le rapport.",
+ "reqBlocks": [
+  {
+   "title": "Exigences générales pour les emballages réemployables",
+   "sub": "Art. 11 · 9 exigences",
+   "items": [
+    "Conçu et fabriqué pour de multiples rotations dans des conditions d'utilisation prévisibles",
+    "Sécurité, hygiène et santé des travailleurs et des consommateurs",
+    "Vidange, lavage, désinfection et reconditionnement sans perte de fonction",
+    "Exigences spécifiques pour le contact alimentaire (FCM) ou les marchandises dangereuses (ADR)",
+    "Exigences de reconditionnement de l'Annexe VI",
+    "Recyclabilité en fin de vie",
+    "Identification en tant qu'emballage réemployable (marquage ou étiquette)",
+    "Participation à un système de réemploi opérationnel",
+    "Instructions de manutention, de transport et de retour"
+   ]
+  },
+  {
+   "title": "Étapes de reconditionnement",
+   "sub": "Annexe VI partie B · 8 exigences",
+   "items": [
+    "Inspection préliminaire et tri",
+    "Nettoyage, décontamination ou lavage",
+    "Réparation ou remplacement des pièces usées",
+    "Contrôles d'intégrité et essais d'étanchéité/pression",
+    "Rétablissement du marquage et de l'étiquetage",
+    "Contrôle final avant remise en circulation",
+    "Suivi des opérations sur chaque article ou lot",
+    "Le reconditionnement ne compromet pas la santé et la sécurité"
+   ]
+  },
+  {
+   "title": "Système de réemploi et logistique inverse",
+   "sub": "6 exigences opérationnelles",
+   "items": [
+    "Circuit de réemploi défini (boucle fermée ou mutualisation)",
+    "Réseau de collecte efficace et logistique inverse",
+    "Incitatifs au retour (consigne, frais de location, pénalités)",
+    "Identification unique et traçabilité sur le terrain",
+    "Registre à jour des cycles et rotations",
+    "Archivage des preuves pour les audits"
+   ]
+  }
+ ],
+ "featLabel": "Fonctionnalités",
+ "featH2": "Caractéristiques principales",
+ "features": [
+  {
+   "title": "Fiche emballage",
+   "desc": "Intitulé, type (GRV/IBC, fûts, palettes, caisses, big bags, jerricanes), modèle, matériau, dimensions et secteur : alimentaire, chimique/ADR, industriel, cosmétique et pharmaceutique."
+  },
+  {
+   "title": "Rotations et indice d'utilisation",
+   "desc": "Saisissez les rotations prévues et celles effectuées : l'application calcule la durée de vie utilisée et signale tout dépassement des 100 %, avec la nécessité d'un contrôle d'intégrité."
+  },
+  {
+   "title": "Système et traçabilité",
+   "desc": "Boucle fermée, mutualisation ou système mixte ; méthode d'identification (numéro de série, code-barres, QR, DataMatrix, RFID/NFC) et documents justificatifs."
+  },
+  {
+   "title": "Checklist guidée",
+   "desc": "Les 23 exigences avec réponses Oui, Non ou N/A et notes techniques pour chacune."
+  },
+  {
+   "title": "Données d'entreprise et logo",
+   "desc": "Raison sociale, numéro de TVA, coordonnées, signataire technique et logo figurent dans chaque rapport, sans resaisie."
+  },
+  {
+   "title": "Archive et duplication",
+   "desc": "Recherche rapide parmi les évaluations, duplication pour les variantes de modèles, sauvegarde et restauration JSON."
+  }
+ ],
+ "stepsLabel": "Fonctionnement",
+ "stepsH2": "De la fiche au rapport en 4 étapes",
+ "steps": [
+  {
+   "title": "Configurez votre entreprise",
+   "desc": "Données d'entreprise, signataire et logo, une seule fois."
+  },
+  {
+   "title": "Décrivez l'emballage",
+   "desc": "Fiche technique, rotations et système de réemploi."
+  },
+  {
+   "title": "Répondez aux 23 exigences",
+   "desc": "Oui, Non ou N/A avec notes et références."
+  },
+  {
+   "title": "Vérifiez et téléchargez",
+   "desc": "Modifiez les conclusions, apposez la signature et générez le PDF."
+  }
+ ],
+ "outcomeLabel": "Résultat automatique",
+ "outcomeH2": "Trois résultats, une règle claire",
+ "outcomeP": "L'application calcule le résultat en temps réel et applique systématiquement la même logique.",
+ "outcomes": [
+  {
+   "badge": "CONFORME",
+   "title": "Toutes les exigences sont satisfaites",
+   "desc": "Les 23 exigences sont renseignées par Oui ou N/A avec justification."
+  },
+  {
+   "badge": "NON CONFORME",
+   "title": "Au moins une exigence n'est pas satisfaite",
+   "desc": "Un seul Non parmi les exigences applicables suffit."
+  },
+  {
+   "badge": "INCOMPLET",
+   "title": "Évaluation encore au stade d'ébauche",
+   "desc": "Une ou plusieurs exigences n'ont pas encore de réponse."
+  }
+ ],
+ "pdfLabel": "Rapport de conformité",
+ "pdfH2": "Un rapport A4 prêt pour le dossier technique",
+ "pdfPoints": [
+  "En-tête avec logo et coordonnées de l'entreprise",
+  "Fiche technique de l'emballage et indice d'utilisation",
+  "Description du système de réemploi et éléments de preuve",
+  "Les trois tableaux avec les 23 exigences, le résultat et les notes",
+  "Encadré final avec l'évaluation d'aptitude",
+  "Conclusions modifiables et espace pour lieu, date, cachet et signature"
+ ],
+ "pdfNote": "Mise en page A4 sans coupure de lignes. Le nom du fichier respecte le modèle AAAAMMJJhhmm-RIUTILIZZO-PPWR-titre, optimisé pour la traçabilité documentaire. La responsabilité de la déclaration incombe à la personne qui la renseigne.",
+ "pdf": {
+  "company": "Exemple Entreprise SAS",
+  "program": "Réemployabilité PPWR · Règl. UE 2025/40",
+  "title": "Rapport de conformité — GRV 1000 L",
+  "rows": [
+   [
+    "Type",
+    "GRV 1000 L"
+   ],
+   [
+    "Secteur",
+    "Chimique / ADR"
+   ],
+   [
+    "Indice d'utilisation",
+    "70%"
+   ]
+  ],
+  "colReq": "Exigence",
+  "colOutcome": "Résultat",
+  "reqRows": [
+   [
+    "Art. 11 — Rotations multiples",
+    "OUI"
+   ],
+   [
+    "Annexe VI — Nettoyage et lavage",
+    "OUI"
+   ],
+   [
+    "Système — Traçabilité unique",
+    "OUI"
+   ]
+  ],
+  "result": "EMBALLAGE APTE AU RÉEMPLOI CONFORMÉMENT AU RÈGLEMENT PPWR (UE 2025/40)",
+  "place": "Lieu",
+  "date": "Date",
+  "sign": "Cachet et signature du responsable technique",
+  "footer": "Exemple illustratif",
+  "page": "Page 1 sur 3"
+ },
+ "traceLabel": "Système et traçabilité",
+ "traceH2": "De l'unité au lot, entièrement documenté",
+ "traceP": "Les emballages réutilisables doivent être identifiables, traçables et reconditionnés à chaque rotation. L'application rassemble ces informations dans la fiche et les intègre dans le rapport.",
+ "tracePoints": [
+  "Circuit fermé, ouvert (pooling ou location gérée) ou mixte",
+  "Identification unique : numéro de série, code-barres, code QR, DataMatrix, RFID/NFC",
+  "Reconditionnement : inspection, lavage, réparation, tests d'étanchéité, contrôle final",
+  "Éléments de preuve : rapports d'essais, homologation UN/ADR, fiche technique, conformité au contact alimentaire"
+ ],
+ "secLabel": "Archivage et accès",
+ "secH2": "Vos données restent les vôtres",
+ "security": [
+  {
+   "title": "Données dans votre navigateur",
+   "desc": "Les évaluations et les données de l'entreprise sont stockées localement sur votre ordinateur, et non dans une archive partagée."
+  },
+  {
+   "title": "Sauvegarde JSON",
+   "desc": "Exportez une copie de sauvegarde et importez-la sur un autre ordinateur : l'application n'accepte que les fichiers valides et vérifie leur intégrité."
+  },
+  {
+   "title": "Accès sans mot de passe",
+   "desc": "Un e-mail et un code unique à 6 chiffres valable 15 minutes : aucun mot de passe à mémoriser ou à perdre."
+  },
+  {
+   "title": "Licence et PUK",
+   "desc": "Chaque forfait comprend une licence et un code PUK personnel ; le nombre de PDF restants est toujours affiché en haut."
+  }
+ ],
+ "forLabel": "À qui s'adresse l'outil",
+ "forH2": "Pour tous les acteurs manipulant des emballages réutilisables",
+ "forList": [
+  {
+   "title": "Fabricants d'emballages",
+   "desc": "Déclarez la réemployabilité de votre modèle et préparez la documentation technique."
+  },
+  {
+   "title": "Utilisateurs et conditionneurs",
+   "desc": "Vérifiez les exigences applicables aux emballages que vous mettez en circulation."
+  },
+  {
+   "title": "Reconditionneurs",
+   "desc": "Documentez l'inspection, le nettoyage, la réparation et le contrôle final."
+  },
+  {
+   "title": "Consultants et responsables qualité",
+   "desc": "Gérez plusieurs évaluations, dupliquez les variantes et générez des rapports intégrant les coordonnées de l'entreprise."
+  }
+ ],
+ "plansLabel": "Forfaits",
+ "plansH2": "Combien de rapports vous faut-il ?",
+ "plansP": "Chaque forfait comprend un nombre défini d'exports PDF. Une fois épuisés, vous pouvez toujours consulter et modifier les évaluations et les exporter au format JSON.",
+ "plans": [
+  {
+   "name": "À l'acte",
+   "days": "2 jours",
+   "pdf": "1 PDF"
+  },
+  {
+   "name": "Mensuel",
+   "days": "30 jours",
+   "pdf": "20 PDF"
+  },
+  {
+   "name": "Annuel",
+   "days": "365 jours",
+   "pdf": "300 PDF"
+  }
+ ],
+ "plansNote": "Tarifs et achat via les boutons ci-dessous.",
+ "faqLabel": "FAQ",
+ "faqH2": "Foire aux questions",
+ "faq": [
+  {
+   "q": "L'application remplace-t-elle un examen technique ou juridique ?",
+   "a": "Non. Il s'agit d'un outil d'aide qui structure les exigences et génère le rapport. L'exactitude des réponses et la responsabilité de la déclaration incombent à la personne qui la renseigne et au responsable technique signataire."
+  },
+  {
+   "q": "Que signifie N/A ?",
+   "a": "Non applicable au cas d'espèce. Cela requiert systématiquement une justification technique dans les remarques, qui apparaît dans le rapport."
+  },
+  {
+   "q": "Où mes données sont-elles stockées ?",
+   "a": "Dans le navigateur de l'ordinateur que vous utilisez. Pour les transférer vers un autre ordinateur, exportez un fichier JSON puis importez-le. Sur un ordinateur partagé, utilisez « Se déconnecter et tout effacer »."
+  },
+  {
+   "q": "Que se passe-t-il lorsque le quota de PDF est épuisé ?",
+   "a": "Le téléchargement de PDF est bloqué, mais vous pouvez continuer à consulter et modifier les évaluations, ainsi qu'à utiliser l'export JSON."
+  },
+  {
+   "q": "Puis-je évaluer plusieurs emballages et variantes ?",
+   "a": "Oui. Les évaluations sont conservées dans une liste consultable et vous pouvez en dupliquer une pour créer une variante sans avoir à tout renseigner à nouveau."
+  },
+  {
+   "q": "Comment puis-je me connecter ?",
+   "a": "Avec votre adresse e-mail et un code à usage unique ; lors de votre première connexion, vous saisissez la licence et le code PUK reçus lors de l'achat et acceptez les conditions d'utilisation."
+  },
+  {
+   "q": "Quelles sont les langues disponibles ?",
+   "a": "L'interface est disponible en italien, anglais, allemand et espagnol et peut être modifiée à tout moment."
+  }
+ ],
+ "ctaH2": "Déclarez la réemployabilité de vos emballages",
+ "ctaP": "Choisissez le forfait qui répond à vos besoins.",
+ "crossLabel": "Besoin aussi de la recyclabilité ?",
+ "crossText": "L'application Recyclabilité PPWR calcule le pourcentage de recyclabilité et attribue la note A, B ou C.",
+ "crossBtn": "Découvrir Recyclabilité PPWR",
+ "imgAlt": [
+  "Emballages réutilisables (GRV, fûts, caisses) dans un circuit de réemploi",
+  "Schéma du circuit de réemploi : remplissage, transport, utilisation, retour, reconditionnement",
+  "Opérateur inspectant un contenant réutilisable pendant le reconditionnement",
+  "Étiquette avec code QR et DataMatrix sur un contenant réutilisable",
+  "Liste des évaluations avec résultats conforme, non conforme et incomplet"
+ ],
+ "placeholderTitle": "Image à préparer"
+}

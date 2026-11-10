@@ -1,0 +1,203 @@
+{
+ "metaTitle": "PPWR Recyclability — Calcul de recyclabilité des emballages Règl. UE 2025/40",
+ "metaDescription": "Calculez le pourcentage de recyclabilité des emballages selon le règlement UE 2025/40 (PPWR), attribuez la note A, B ou C et générez le PDF pour le dossier technique.",
+ "back": "Retour aux applications",
+ "eyebrow": "PPWR Recyclability · Règlement UE 2025/40",
+ "h1": "La recyclabilité PPWR, calculée en un clic",
+ "heroP": "L'outil professionnel pour calculer le pourcentage de recyclabilité d'un emballage à partir de ses composants, attribuer la note et générer le PDF pour le dossier technique.",
+ "keyPoints": "Calcul pondéré automatique · Notes A, B, C · PDF avec logo de l'entreprise · Multilingue",
+ "shotsLabel": "Dans l'application",
+ "shotsH2": "Les écrans principaux",
+ "imgAlt": {
+  "m001": "Échantillons d'emballages sur une paillasse de laboratoire : bouteille en PET, verre, bouchon, tube et boîte",
+  "m002": "Fonctionnement du calcul : composants, calcul pondéré et pourcentage de recyclabilité",
+  "m003": "Échelle des notes A, B, C avec les seuils de 95 %, 80 % et 70 %",
+  "m004": "Ligne de tri d'une usine de recyclage avec bouteilles en PET et balles de plastique",
+  "m005": "Bouchon sur une balance analytique de précision",
+  "m006": "Scénario en quatre étapes : données produit, composants, calcul, enregistrement et PDF",
+  "m007": "Éditeur d'évaluation avec bilan massique, résultat et seuils de l'annexe II",
+  "m008": "Paramètres : données de l'entreprise et logo utilisés dans les rapports",
+  "m009": "Archive des évaluations avec pourcentage et note",
+  "m010": "Aperçu du rapport PDF pour le dossier technique",
+  "m011": "Accès sécurisé : vérification par e-mail, licence avec code PUK et quota d'exportation PDF",
+  "m012": "Composants d'un emballage en PET : corps, bouchon, étiquette et colle"
+ },
+ "whatLabel": "Conformité européenne",
+ "whatH2": "Calcul de la recyclabilité, simple et traçable",
+ "whatP": "L'application calcule la recyclabilité sur une base massique. Pour chaque composant, vous saisissez le poids et l'indice de recyclabilité (0-100 %). L'application calcule la masse totale, la masse recyclable et le pourcentage global, puis attribue la note.",
+ "tags": [
+  "Règl. UE 2025/40",
+  "Calcul pondéré",
+  "Notes A/B/C",
+  "PDF pour dossier technique"
+ ],
+ "featLabel": "Fonctionnalités",
+ "featH2": "Fonctionnalités principales",
+ "features": [
+  {
+   "title": "Liste des composants",
+   "desc": "Nom, matériau, poids et indice de recyclabilité pour chaque partie : corps, bouchon, étiquette, couches, colle."
+  },
+  {
+   "title": "Calcul automatique",
+   "desc": "Masse totale, masse recyclable et pourcentage global en temps réel."
+  },
+  {
+   "title": "Notes PPWR",
+   "desc": "Note A « Excellence » (≥ 95 %), Note B « Haute recyclabilité » (≥ 80 %), Note C « Seuil minimal d'admissibilité » (≥ 70 %), inférieur à 70 % « Non conforme »."
+  },
+  {
+   "title": "Données et logo de l'entreprise",
+   "desc": "Raison sociale, adresse, numéro de TVA, contact et logo apparaissent dans les PDF."
+  },
+  {
+   "title": "Exemples prêts à l'emploi",
+   "desc": "Dès le premier accès, retrouvez trois évaluations types : Tube de dentifrice, Bouteille PET, Bouteille en VERRE."
+  },
+  {
+   "title": "Archive et import/export",
+   "desc": "Évaluations enregistrées et échangeables au format standard JSON PPWR-1.0."
+  },
+  {
+   "title": "Multilingue",
+   "desc": "Italien, anglais, allemand et espagnol."
+  }
+ ],
+ "stepsLabel": "Fonctionnement",
+ "stepsH2": "Quatre étapes, du produit au PDF",
+ "steps": [
+  {
+   "title": "Données du produit",
+   "desc": "Nom de l'emballage, révision, date et remarques."
+  },
+  {
+   "title": "Composants",
+   "desc": "Ajoutez chaque pièce avec son matériau, son poids et son indice de recyclabilité."
+  },
+  {
+   "title": "Calculer",
+   "desc": "L'application affiche le pourcentage et la note."
+  },
+  {
+   "title": "Enregistrer et télécharger",
+   "desc": "Archivez l'évaluation et générez le PDF."
+  }
+ ],
+ "whyLabel": "Avantages",
+ "whyH2": "Pourquoi choisir PPWR Recyclability",
+ "why": [
+  {
+   "title": "Calcul rapide",
+   "desc": "Le résultat en quelques minutes, sans feuilles de calcul."
+  },
+  {
+   "title": "Toujours traçable",
+   "desc": "Chaque évaluation comporte une révision, une date et des remarques."
+  },
+  {
+   "title": "Résultats cohérents entre services",
+   "desc": "Même méthode pour la qualité, les achats et la conception."
+  },
+  {
+   "title": "Prêt pour le dossier technique",
+   "desc": "PDF structuré à joindre à votre documentation."
+  },
+  {
+   "title": "Notes explicites",
+   "desc": "A, B, C ou non conforme : lisible au premier coup d'œil."
+  },
+  {
+   "title": "Quatre langues",
+   "desc": "Italien, anglais, allemand et espagnol."
+  }
+ ],
+ "pdfLabel": "Rapport",
+ "pdfH2": "Aperçu du PDF",
+ "pdfPoints": [
+  "Page de garde avec logo de l'entreprise et logo du programme",
+  "Tableau analytique des composants",
+  "Pourcentage et note clairement visibles",
+  "Champs Lieu, Date et Contact remplissables dans le PDF",
+  "Espace pour signature à compléter après téléchargement",
+  "Numérotation des pages"
+ ],
+ "pdfNote": "La signature s'appose après le téléchargement du PDF.",
+ "pdf": {
+  "company": "Raison sociale",
+  "program": "PPWR Recyclability",
+  "title": "Évaluation de recyclabilité",
+  "colComp": "Composant",
+  "colWeight": "Poids",
+  "colIdx": "Indice",
+  "rows": [
+   [
+    "Bouteille PET",
+    "24,50 g",
+    "100%"
+   ],
+   [
+    "Bouchon PEHD",
+    "2,10 g",
+    "100%"
+   ],
+   [
+    "Étiquette en papier métallisé",
+    "0,80 g",
+    "0%"
+   ]
+  ],
+  "result": "Note A — Excellence · 97,08 %",
+  "place": "Lieu",
+  "date": "Date",
+  "ref": "Contact",
+  "sign": "Signature",
+  "footer": "Document généré pour le dossier technique visé à l'annexe VII du Règl. (UE) 2025/40 — Raison sociale",
+  "page": "Page 1 sur 1"
+ },
+ "secLabel": "Accès et sécurité",
+ "secH2": "Accès sécurisé et licence contrôlée",
+ "security": [
+  {
+   "title": "Vérification par e-mail",
+   "desc": "Accès confirmé par un code à 6 chiffres."
+  },
+  {
+   "title": "Licence avec code PUK",
+   "desc": "Activation guidée de la licence."
+  },
+  {
+   "title": "Quota d'exportation PDF",
+   "desc": "Chaque licence comprend un quota d'exportation PDF."
+  }
+ ],
+ "faqLabel": "FAQ",
+ "faqH2": "Foire aux questions",
+ "faq": [
+  {
+   "q": "Qu'est-ce que le règlement UE 2025/40 (PPWR) ?",
+   "a": "Il s'agit du règlement européen sur les emballages et les déchets d'emballages (PPWR), qui instaure des exigences de recyclabilité et une évaluation par notes des emballages mis sur le marché de l'UE."
+  },
+  {
+   "q": "Comment les notes A, B et C sont-elles attribuées ?",
+   "a": "En fonction du pourcentage pondéré de recyclabilité : A ≥ 95 %, B ≥ 80 %, C ≥ 70 %. En dessous de 70 %, l'emballage est non conforme."
+  },
+  {
+   "q": "Puis-je intégrer le logo de mon entreprise aux PDF ?",
+   "a": "Oui. La raison sociale, l'adresse, le numéro de TVA, le contact et le logo figurent sur les PDF générés."
+  },
+  {
+   "q": "Comment la licence est-elle activée ?",
+   "a": "Après votre achat, vous recevez un code PUK : l'activation guidée vous accompagne étape par étape."
+  },
+  {
+   "q": "Puis-je importer et exporter mes évaluations ?",
+   "a": "Oui, au format standard JSON PPWR-1.0."
+  },
+  {
+   "q": "Le résultat a-t-il une valeur juridique ?",
+   "a": "Il constitue une aide technique ; la responsabilité de l'évaluation finale incombe au technicien ou à l'entreprise qui signe la documentation."
+  }
+ ],
+ "ctaH2": "Calculez la recyclabilité de vos emballages avec PPWR Recyclability",
+ "ctaP": "Pourcentage, note et PDF pour le dossier technique, en quelques minutes."
+}

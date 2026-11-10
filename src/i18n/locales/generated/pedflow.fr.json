@@ -1,0 +1,185 @@
+{
+ "metaTitle": "PedFlow — Classification des fluides selon la directive PED 2014/68/UE",
+ "metaDescription": "PedFlow : classez les fluides dans le Groupe 1 ou 2 de la directive PED 2014/68/UE en un clic. Base de données CLP ECHA de plus de 4 400 substances, calcul Art. 13, PDF traçable.",
+ "ogTitle": "PedFlow — Classification des fluides PED en un clic",
+ "ogDescription": "Déterminez rapidement et de manière traçable le Groupe PED d'une substance à partir de la FDS ou de la base officielle ECHA CLP. PDF de classification prêt à être classé.",
+ "backBtn": "Retour aux applications",
+ "activateCta": "Activez dès maintenant pour votre entreprise — Seulement {{price}}/mois",
+ "annualActivateCta": "Zéro souci : seulement {{price}}/an pour votre entreprise",
+ "addedToast": "Ajouté au panier",
+ "heroBadge": "PedFlow · Classification des fluides PED",
+ "heroH1a": "FLUIDE PED Groupe 1 ou 2,",
+ "heroH1b": "en un clic",
+ "heroP": "L'outil professionnel pour la classification des fluides selon la directive PED 2014/68/UE : à partir de la Fiche de Données de Sécurité ou de la base officielle ECHA CLP, obtenez le Groupe PED de façon rapide et traçable.",
+ "heroCtaPrimary": "Essayer maintenant",
+ "heroCtaSecondary": "Demander une démo",
+ "heroCaption": "Base de données CLP de plus de 4 400 substances · Calcul automatique Art. 13 · Multilingue",
+ "heroImgAlt": "PedFlow — application pour la classification des fluides selon la directive PED",
+ "processImgAlt": "Processus PedFlow en 6 étapes : introduction, saisie des données documentaires, conditions de service, identification du fluide, calcul automatique, PDF et registre",
+ "videoLabel": "Regardez PedFlow en action",
+ "videoH2": "Deux démos rapides pour découvrir le flux de travail",
+ "videoItTitle": "Démo en italien",
+ "videoItDesc": "Visite complète de l'interface : saisie des données, recherche de substance, calcul Art. 13 et génération du PDF.",
+ "videoEnTitle": "Démo en anglais",
+ "videoEnDesc": "Visite complète en anglais : données documentaires, recherche de substance, calcul automatique Art. 13 et export PDF.",
+ "whatLabel": "Qu'est-ce que PedFlow",
+ "whatH2": "La classification PED, simple et traçable",
+ "whatP": "PedFlow est un outil professionnel destiné à la classification des fluides selon la directive PED 2014/68/UE (Directive Équipements sous Pression). Il permet aux ingénieurs, concepteurs et responsables qualité de déterminer rapidement et de manière traçable le Groupe PED (1 ou 2) d'une substance, à partir de la Fiche de Données de Sécurité (FDS) ou de la base de données officielle ECHA CLP.",
+ "badges": [
+  "Directive PED 2014/68/UE",
+  "Base de données CLP ECHA",
+  "Art. 13 automatique",
+  "PDF traçable"
+ ],
+ "featLabel": "Fonctionnalités clés",
+ "featH2": "Tout ce dont vous avez besoin pour classifier",
+ "features": [
+  {
+   "title": "Données documentaires",
+   "desc": "Renseignez commande, client, projet et numéro de plan : chaque classification reste traçable."
+  },
+  {
+   "title": "Conditions de service",
+   "desc": "Saisissez les températures minimale et maximale de service pour un calcul précis."
+  },
+  {
+   "title": "Saisie depuis FDS",
+   "desc": "Saisissez le nom, CAS, CE, point d'éclair et mentions H directement depuis la fiche de données de sécurité."
+  },
+  {
+   "title": "Recherche par nom ou CAS",
+   "desc": "Recherchez la substance dans la base de données interne CLP comptant plus de 4 400 entrées."
+  },
+  {
+   "title": "Base de données CLP intégrée",
+   "desc": "Tableau 3 de l'Annexe VI du règlement CLP : Index, CAS, CE, mentions H et pictogrammes."
+  },
+  {
+   "title": "Calcul automatique Art. 13",
+   "desc": "Groupe de Base et Groupe Final avec application automatique des critères de l'Art. 13."
+  },
+  {
+   "title": "PDF de classification",
+   "desc": "Générez et téléchargez le PDF avec justification textuelle, archivé dans le Registre."
+  },
+  {
+   "title": "Multilingue",
+   "desc": "Interface en italien, anglais, espagnol et allemand, sélectionnable à tout moment."
+  }
+ ],
+ "howLabel": "Comment ça fonctionne",
+ "howH2": "Le flux de travail en 5 étapes",
+ "steps": [
+  {
+   "title": "Données documentaires",
+   "desc": "Renseignez la commande, le client, le projet et le numéro de plan."
+  },
+  {
+   "title": "Conditions de service",
+   "desc": "Saisissez les températures de service Tmin et Tmax."
+  },
+  {
+   "title": "Identifier le fluide",
+   "desc": "Saisissez depuis la FDS ou effectuez une recherche dans la base de données CLP."
+  },
+  {
+   "title": "Calculer",
+   "desc": "Obtenez le Groupe de Base et le Groupe Final selon l'Art. 13."
+  },
+  {
+   "title": "Enregistrer et télécharger",
+   "desc": "Enregistrez le résultat et téléchargez le PDF vers le Registre."
+  }
+ ],
+ "whyLabel": "Pourquoi choisir PedFlow",
+ "whyH2": "Plus de rapidité, plus de conformité",
+ "benefits": [
+  {
+   "title": "Classification rapide",
+   "desc": "Déterminez le Groupe PED 1 ou 2 en un clic, sans calculs manuels."
+  },
+  {
+   "title": "Toujours traçable",
+   "desc": "Chaque résultat est documenté avec justification et archivé dans le Registre."
+  },
+  {
+   "title": "Base de données officielle CLP",
+   "desc": "Plus de 4 400 substances issues du Tableau 3 de l'Annexe VI du règlement CLP."
+  },
+  {
+   "title": "Standardisation",
+   "desc": "Des résultats cohérents et reproductibles entre ingénieurs, concepteurs et responsables qualité."
+  },
+  {
+   "title": "Conformité réglementaire",
+   "desc": "Critères de l'Art. 13 de la directive 2014/68/UE appliqués automatiquement."
+  },
+  {
+   "title": "Prêt pour les équipes internationales",
+   "desc": "Quatre langues disponibles : italien, anglais, espagnol et allemand."
+  }
+ ],
+ "pdfLabel": "PDF généré",
+ "pdfH2": "Un document complet et traçable",
+ "pdfCardH3": "PDF de classification",
+ "pdfCardP": "Un document complet archivé dans le Registre, prêt à être joint au dossier technique.",
+ "pdfIntro": "Chaque classification génère un PDF clair et standardisé avec toutes les données requises :",
+ "pdfBlocks": [
+  "Données documentaires : commande, client, projet, numéro de plan",
+  "Conditions de service avec Tmin et Tmax",
+  "Substance identifiée avec CAS, CE et mentions H",
+  "Groupe de Base et Groupe PED Final",
+  "Justification textuelle générée automatiquement",
+  "Archivé dans le Registre pour consultation"
+ ],
+ "secLabel": "Sécurité & multi-entité",
+ "secH2": "Des données protégées pour chaque organisation",
+ "security": [
+  {
+   "title": "Multi-tenant avec RLS",
+   "desc": "Row Level Security au niveau de l'organisation : chaque équipe ne voit que ses propres données."
+  },
+  {
+   "title": "Authentification sécurisée",
+   "desc": "Accès via e-mail/mot de passe ou Google OAuth, avec gestion dédiée des rôles."
+  },
+  {
+   "title": "Gestion des rôles",
+   "desc": "Permissions gérées via une table user_roles distincte pour un contrôle total."
+  }
+ ],
+ "faqH2": "Foire aux questions",
+ "faqDisclaimer": "Les résultats fournis le sont uniquement à titre de support technique. La responsabilité de la classification finale incombe à l'ingénieur qualifié qui signe la documentation.",
+ "faq": [
+  {
+   "q": "Comment le groupe PED est-il déterminé ?",
+   "a": "PedFlow applique les critères de l'art. 13 de la directive 2014/68/UE : le fluide est classé dans le Groupe 1 s'il présente des mentions de danger H (ex. H224, H270, H300, H330, H340, H350, H360, H400, H410) ou si la température maximale de service dépasse le point d'éclair. Dans le cas contraire, il relève du Groupe 2."
+  },
+  {
+   "q": "Puis-je effectuer la classification à partir d'une fiche de données de sécurité ?",
+   "a": "Oui. Dans l'onglet FDS, saisissez manuellement le nom, le numéro CAS, CE, le point d'éclair et les codes H issus de la fiche de données de sécurité. Vous pouvez également rechercher la substance par son nom ou son numéro CAS dans la base de données interne CLP."
+  },
+  {
+   "q": "Combien de substances la base de données contient-elle ?",
+   "a": "La base de données CLP intégrée contient plus de 4 400 substances issues du tableau 3 de l'annexe VI du règlement CLP, avec le numéro d'index, CAS, CE, le nom chimique, les codes H et les pictogrammes."
+  },
+  {
+   "q": "Le résultat a-t-il une valeur juridique ?",
+   "a": "Les résultats obtenus sont fournis à titre de support technique uniquement. La responsabilité de la classification finale incombe à l'ingénieur qualifié qui signe la documentation."
+  }
+ ],
+ "ctaH2": "Classifiez vos fluides avec PedFlow",
+ "ctaP": "Groupe PED 1 ou 2 en un clic, avec la certitude d'un calcul conforme.",
+ "ctaPrimary": "Essayer maintenant",
+ "ctaSecondary": "Activer pour votre entreprise",
+ "imgAlt": {
+  "m002": "Ingénieur vérifiant la documentation des équipements sous pression sur une tablette dans une usine de procédés",
+  "m003": "Récipients sous pression et tuyauteries dans une installation industrielle soumise à la PED 2014/68/UE",
+  "m004": "Technicien consultant une fiche de données de sécurité pour identifier le numéro CAS et les mentions H",
+  "m005": "Recherche d'une substance par nom ou numéro CAS dans la base de données CLP intégrée",
+  "m006": "Tuyauterie industrielle isolée avec indicateur de température affichant les conditions de service (Tmin/Tmax)",
+  "m007": "Résultat du calcul affichant le groupe de base et le groupe final avec application de l'art. 13",
+  "m008": "Exemple de PDF de classification avec justification écrite, archivé dans le registre",
+  "m009": "Équipe internationale de conception et de qualité examinant les classifications PED depuis le registre"
+ }
+}

@@ -1,0 +1,204 @@
+{
+ "metaTitle": "SmartMaintenance — Application pour rapports de maintenance industrielle",
+ "metaDescription": "SmartMaintenance : application mobile-first pour le signalement guidé des pannes et interventions de maintenance. Photos géolocalisées, OCR, PDF professionnel et e-mail prérempli. Maintenance industrielle, rapports d'anomalies.",
+ "ogTitle": "SmartMaintenance — Rapports de maintenance, zéro erreur",
+ "ogDescription": "Signalement guidé des pannes industrielles : photos horodatées GPS, OCR de plaque, PDF professionnel et e-mail prérempli. Le tout depuis votre appareil.",
+ "backBtn": "Retour aux applications",
+ "heroBadge": "SmartMaintenance · Rapports de maintenance",
+ "heroH1a": "Des rapports impeccables,",
+ "heroH1b": "zéro erreur",
+ "heroSubtitle": "Signalement guidé des pannes et interventions de maintenance industrielle : photos géolocalisées, OCR, PDF professionnel et e-mail prérempli — le tout depuis votre appareil.",
+ "activateMonthly": "Activer maintenant pour votre entreprise — Seulement {{price}}/mois",
+ "activateYearly": "Zéro souci : seulement {{price}}/an pour votre entreprise",
+ "addedToast": "Ajouté au panier",
+ "heroFlowAlt": "Flux de travail SmartMaintenance : configuration, création du rapport sur site, génération du PDF, envoi, réception et archivage",
+ "heroTagline": "Mobile-first · Fonctionne hors ligne · Données enregistrées sur votre appareil",
+ "heroImgAlt": "Application SmartMaintenance sur un smartphone affichant un rapport de maintenance industrielle",
+ "screensLabel": "Écrans",
+ "screensH2": "L'application en un coup d'œil",
+ "fieldLabel": "Sur le terrain",
+ "fieldH2": "Les écrans lors de la saisie",
+ "imgAlt": {
+  "m004": "Écran des conditions générales affiché au premier lancement de l'application",
+  "m005": "Écran des paramètres avec la langue et les données de l'entreprise cliente",
+  "m006": "Écran des brouillons de rapports",
+  "m007": "Écran d'archivage des rapports envoyés",
+  "m008": "Storyboard des 8 étapes de signalement, de l'équipement à l'enregistrement et l'envoi",
+  "m009": "Technicien de maintenance photographiant la plaque signalétique d'un moteur électrique avec un smartphone",
+  "m010": "Smartphone posé sur un moteur électrique pour mesurer les vibrations",
+  "m011": "Bande dessinée en quatre cases : sans réseau, le rapport est enregistré sur l'appareil et envoyé dès le retour de la connexion",
+  "m012": "Schéma de confidentialité : données stockées sur l'appareil et aucun téléversement automatique",
+  "m014": "Étape 2 sur 7 : photo de la vue générale de la zone",
+  "m015": "Étape 3 sur 7 : local, machine et numéro d'ordre de travail",
+  "m017": "Étape 5 sur 7 : photo du défaut, vidéo facultative et mesure des vibrations",
+  "m018": "Étape 6 sur 7 : description du défaut avec dictée vocale",
+  "m019": "Étape 7 sur 7 : choix du niveau d'urgence"
+ },
+ "heroFigcaption": "Écran d'accueil de SmartMaintenance",
+ "whatLabel": "Qu'est-ce que SmartMaintenance",
+ "whatH2": "La maintenance devient intelligente",
+ "whatBody": "SmartMaintenance est une application mobile-first pour le signalement guidé des pannes et des interventions de maintenance industrielle. Le technicien de terrain rédige un rapport structuré comprenant les données de l'équipement, la description de la panne, l'action suggérée, des photos géolocalisées, une vidéo et les coordonnées GPS, générant ainsi un PDF professionnel et un e-mail prérempli prêt à l'envoi.",
+ "whatBadges": [
+  "Mobile-first",
+  "Fonctionne hors ligne",
+  "PDF professionnel",
+  "E-mail prérempli"
+ ],
+ "featuresLabel": "Fonctionnalités clés",
+ "featuresH2": "Tout ce dont vous avez besoin, dans une seule application",
+ "features": [
+  {
+   "title": "Activation et licence",
+   "desc": "Activez l'application avec votre licence et débloquez toutes les fonctionnalités en quelques secondes."
+  },
+  {
+   "title": "Configuration entreprise et opérateur",
+   "desc": "Saisissez les coordonnées de l'entreprise et de l'opérateur une seule fois — elles seront reprises à l'identique dans chaque rapport."
+  },
+  {
+   "title": "Création guidée de rapports",
+   "desc": "Un assistant pas à pas guide l'opérateur pour qu'aucune donnée ne soit oubliée."
+  },
+  {
+   "title": "Photos horodatées GPS",
+   "desc": "Capturez des photos géolocalisées avec incrustation de la date, de l'heure et des coordonnées — traçabilité garantie."
+  },
+  {
+   "title": "Vidéo facultative",
+   "desc": "Joignez une courte vidéo pour documenter la panne avec encore plus de précision."
+  },
+  {
+   "title": "OCR de plaque d'immatriculation",
+   "desc": "Reconnaissance automatique de la plaque de l'équipement : moins de saisie, moins d'erreurs."
+  },
+  {
+   "title": "Géolocalisation automatique",
+   "desc": "Les coordonnées GPS de l'intervention sont détectées et jointes automatiquement."
+  },
+  {
+   "title": "Brouillons et archives d'envoi",
+   "desc": "Enregistrez des brouillons et retrouvez chaque rapport envoyé dans une archive claire et consultable."
+  },
+  {
+   "title": "Génération de PDF professionnels",
+   "desc": "Générez un PDF soigné et standardisé, prêt à être partagé."
+  },
+  {
+   "title": "E-mail avec destinataires prédéfinis",
+   "desc": "E-mail prérempli avec pièces jointes et destinataires configurés : centre de service et responsables."
+  }
+ ],
+ "howLabel": "Comment ça marche",
+ "howH2": "Le signalement en 8 étapes",
+ "steps": [
+  {
+   "title": "Équipement",
+   "desc": "Identifiez la machine à l'aide de ses données signalétiques et de sa plaque."
+  },
+  {
+   "title": "Ordre de travail",
+   "desc": "Associez l'ordre de travail ou la référence de l'intervention."
+  },
+  {
+   "title": "Urgence",
+   "desc": "Définissez le niveau d'urgence du rapport."
+  },
+  {
+   "title": "Description et action",
+   "desc": "Décrivez la panne et l'action corrective suggérée."
+  },
+  {
+   "title": "Photos",
+   "desc": "Joignez des photos incrustées avec les coordonnées GPS."
+  },
+  {
+   "title": "Vidéo",
+   "desc": "Ajoutez une vidéo facultative de l'intervention."
+  },
+  {
+   "title": "GPS",
+   "desc": "Les coordonnées sont détectées automatiquement."
+  },
+  {
+   "title": "Enregistrement et envoi",
+   "desc": "Générez le PDF et envoyez l'e-mail prérempli."
+  }
+ ],
+ "whyLabel": "Pourquoi choisir SmartMaintenance",
+ "whyH2": "Gagnez du temps, améliorez la qualité",
+ "benefits": [
+  {
+   "title": "Fonctionne hors ligne",
+   "desc": "Remplissez et générez le rapport même sans connexion — envoyez-le quand vous le souhaitez."
+  },
+  {
+   "title": "Rapports zéro erreur",
+   "desc": "Le flux de travail guidé et l'OCR réduisent au minimum les oublis et les données incorrectes."
+  },
+  {
+   "title": "Standardisation à l'échelle de l'entreprise",
+   "desc": "Chaque technicien produit des documents identiques, professionnels et faciles à retrouver."
+  },
+  {
+   "title": "Rapidité opérationnelle",
+   "desc": "Du terrain au bureau en un clic : des rapports plus rapides pour des décisions immédiates."
+  },
+  {
+   "title": "Stockage local sécurisé",
+   "desc": "Les données restent sur votre appareil, avec un historique toujours à portée de main."
+  },
+  {
+   "title": "Fiable sur le terrain",
+   "desc": "Conçu pour le technicien d'intervention : simple, robuste et rapide à prendre en main."
+  }
+ ],
+ "pdfLabel": "PDF généré",
+ "pdfH2": "Un document professionnel et standardisé",
+ "pdfBody": "Chaque signalement génère un PDF soigné, identique pour chaque technicien et facile à consulter :",
+ "pdfImgAlt": "Exemple de rapport de maintenance PDF généré par SmartMaintenance",
+ "pdfBlocks": [
+  "En-tête sur fond bleu",
+  "Badge d'urgence bien visible",
+  "Bloc complet des données de l'équipement",
+  "Description de la panne et action suggérée",
+  "Photos avec reconnaissance OCR de la plaque",
+  "Page finale avec les données de l'opérateur et les coordonnées GPS"
+ ],
+ "privacyLabel": "Confidentialité et sécurité",
+ "privacyH2": "Tout sous votre contrôle",
+ "privacy": [
+  {
+   "title": "Données enregistrées uniquement en local",
+   "desc": "Les rapports et pièces jointes restent sur l'appareil — aucun archivage sur serveur externe."
+  },
+  {
+   "title": "Aucun envoi automatique",
+   "desc": "Vous décidez du moment et du destinataire de l'envoi : aucune transmission en arrière-plan."
+  },
+  {
+   "title": "Sauvegarde manuelle",
+   "desc": "Exportez et conservez vos rapports quand vous le souhaitez, en toute autonomie."
+  }
+ ],
+ "faqH2": "Foire aux questions",
+ "faq": [
+  {
+   "q": "Le GPS n'est pas détecté — que faire ?",
+   "a": "Vérifiez que la localisation est activée et que l'application dispose des autorisations nécessaires. En intérieur, le signal peut être faible : rapprochez-vous d'une fenêtre ou sortez à l'extérieur avant de réessayer. Les coordonnées peuvent également être saisies manuellement."
+  },
+  {
+   "q": "Comment fonctionne la reconnaissance vocale ?",
+   "a": "Dans les champs de description, vous pouvez utiliser la reconnaissance vocale de l'appareil pour dicter du texte — pratique pour renseigner le rapport rapidement lorsque vos mains sont occupées."
+  },
+  {
+   "q": "J'ai reçu l'e-mail sans pièce jointe — pourquoi ?",
+   "a": "Assurez-vous d'avoir généré le PDF avant l'envoi et que votre application de messagerie autorise les pièces jointes. Si la pièce jointe est trop volumineuse, réduisez la qualité des photos et vidéos, ou envoyez le PDF séparément de l'archive."
+  },
+  {
+   "q": "Où les rapports sont-ils enregistrés ?",
+   "a": "Les rapports sont enregistrés localement sur l'appareil, dans le dossier dédié de l'application. Vous pouvez les consulter, les exporter ou les sauvegarder manuellement à partir de cet emplacement."
+  }
+ ],
+ "ctaH2": "La maintenance industrielle, réinventée",
+ "ctaBody": "Un nouveau standard pour les techniciens et les entreprises : du terrain au bureau en un clic."
+}

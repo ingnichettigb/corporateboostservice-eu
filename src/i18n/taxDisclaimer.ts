@@ -1,7 +1,7 @@
 // Shared tax disclaimer copy (badge + extended note) for all portfolio apps.
 // Reusable across PedFlow, MiniFAT, Smart Maintenance, etc. — single source of truth.
 
-export type TaxDisclaimerLang = "it" | "en" | "es" | "de";
+export type TaxDisclaimerLang = "it" | "en" | "es" | "de" | "fr";
 
 export const taxDisclaimer: Record<TaxDisclaimerLang, { badge: string; note: string }> = {
   it: {
@@ -24,10 +24,15 @@ export const taxDisclaimer: Record<TaxDisclaimerLang, { badge: string; note: str
     note:
       "Die angezeigten Preise verstehen sich zzgl. Steuern. Der Endbetrag — inklusive MwSt., GST oder anderer anfallender Steuern je nach Rechnungsland des Kunden — wird automatisch von Paddle beim Checkout berechnet.",
   },
+  fr: {
+    badge: "+ TVA/taxes",
+    note:
+      "Les prix indiqués s'entendent hors taxes. Le montant final — TVA, GST ou autre taxe applicable selon le pays de facturation du client incluse — est calculé automatiquement par Paddle lors du paiement.",
+  },
 };
 
 export function resolveTaxLang(lang?: string): TaxDisclaimerLang {
   const base = (lang ?? "it").split("-")[0].toLowerCase();
-  if (base === "en" || base === "es" || base === "de") return base;
+  if (base === "en" || base === "es" || base === "de" || base === "fr") return base;
   return "it";
 }
