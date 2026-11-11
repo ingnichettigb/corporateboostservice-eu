@@ -120,12 +120,26 @@ function RootShell({ children }: { children: React.ReactNode }) {
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
               gtag('config', 'G-KG4HK1E2WQ');
+              window.dataLayer.push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
             `,
           }}
         />
+        <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-59KCW6TM"></script>
         <HeadContent />
       </head>
-      <body>{children}<Scripts /></body>
+      <body>
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-59KCW6TM"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+            title="Google Tag Manager"
+          />
+        </noscript>
+        {children}
+        <Scripts />
+      </body>
     </html>
   );
 }
